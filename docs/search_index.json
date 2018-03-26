@@ -1,5 +1,12 @@
 [
 ["index.html", "rOpenSci Packages: Development, Maintenance, and Peer Review Preface", " rOpenSci Packages: Development, Maintenance, and Peer Review rOpenSci onboarding editors 2018-03-26 Preface This is the very first part of the book. "],
-["introduction.html", "Chapter 1 Introduction", " Chapter 1 Introduction This is the first real chapter. "],
-["diving-in.html", "Chapter 2 Diving In", " Chapter 2 Diving In Now let’s talk details. "]
+["packaging-guide.html", "Chapter 1 Packaging Guide", " Chapter 1 Packaging Guide This is the first real chapter. "],
+["continuous-integration-best-practices.html", "Chapter 2 Continuous Integration Best Practices", " Chapter 2 Continuous Integration Best Practices Now I wonder if this is the best place since after onboarding things move. :thinking_face: That said the transfer will be part of the author guide. "],
+["package-development-security-best-practices.html", "Chapter 3 Package Development Security Best Practices", " Chapter 3 Package Development Security Best Practices Link out to the bookdown started at unconf, and try to get that book updated. "],
+["onboarding-why-what.html", "Chapter 4 Onboarding, Why? What?", " Chapter 4 Onboarding, Why? What? Intro to onboarding. Explain roles. Include links to talks, and link to the blog post tag corresponding to posts about onboarding. "],
+["onboarding-guide-for-authors.html", "Chapter 5 Onboarding Guide for Authors", " Chapter 5 Onboarding Guide for Authors "],
+["onboarding-guide-for-reviewers.html", "Chapter 6 Onboarding Guide for Reviewers", " Chapter 6 Onboarding Guide for Reviewers "],
+["onboarding-guide-for-editors.html", "Chapter 7 Onboarding Guide for Editors", " Chapter 7 Onboarding Guide for Editors "],
+["collaboration-guide.html", "Chapter 8 Collaboration Guide", " Chapter 8 Collaboration Guide Link to happygit. Standard files (COC, contributing, github) gitflow How to welcome new contributors, bus factor. "],
+["releasing-and-advertising-a-package.html", "Chapter 9 Releasing and advertising a package", " Chapter 9 Releasing and advertising a package Various things about releases. Recommend submitting use cases to the NEWSLETTER + keeping them in a part of the README. "]
 ]

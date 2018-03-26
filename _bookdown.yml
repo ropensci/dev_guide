@@ -2,6 +2,10 @@ book_filename: "bookdown-start"
 chapter_name: "Chapter "
 repo: https://github.com/seankross/bookdown-start
 output_dir: docs
-rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
+rmd_files: ["index.Rmd", "pkg_building.Rmd",
+           "pkg_ci.Rmd", "pkg_security.Rmd",
+           "onboarding_intro.Rmd", "onboarding_author.Rmd",
+           "onboarding_reviewer.Rmd", "onboarding_editor.Rmd",
+           "maintenance_collaboration.Rmd", "maintenance_marketing.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
