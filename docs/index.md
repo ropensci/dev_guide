@@ -1,6 +1,6 @@
 --- 
 title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
-author: "rOpenSci onboarding editors"
+author: "rOpenSci onboarding editorial team: Scott Chamberlain, Karthik Ram, Noam Ross, Maëlle Salmon"
 date: "2018-03-26"
 site: bookdown::bookdown_site
 documentclass: book
