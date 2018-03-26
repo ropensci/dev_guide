@@ -13,7 +13,7 @@ for our users. This process also allows us to ensure that any new package meets
 our guidelines and provides opportunity for discussion where exceptions are
 requested.
 
-# Why submit your package to rOpenSci?
+## Why submit your package to rOpenSci?
 
 -   First, and foremost, we hope you submit your package for review **because you
     value the feedback**.  We aim to provide useful feedback to package authors
