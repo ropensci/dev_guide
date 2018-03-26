@@ -5,28 +5,27 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>A Minimal Bookdown Book</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-  <meta name="description" content="Everything you need (and nothing more) to start a bookdown book.">
-  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+  <title>rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+  <meta name="description" content="Extended version of the onboarding packaging guide.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="A Minimal Bookdown Book" />
+  <meta property="og:title" content="rOpenSci Packages: Development, Maintenance, and Peer Review" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="http://seankross.com/bookdown-start/" />
+  <meta property="og:url" content="http://ropensci.github.io/dev_guide/" />
   
-  <meta property="og:description" content="Everything you need (and nothing more) to start a bookdown book." />
-  <meta name="github-repo" content="seankross/bookdown-start" />
+  <meta property="og:description" content="Extended version of the onboarding packaging guide." />
+  <meta name="github-repo" content="ropenscilabs/dev_guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A Minimal Bookdown Book" />
+  <meta name="twitter:title" content="rOpenSci Packages: Development, Maintenance, and Peer Review" />
   
-  <meta name="twitter:description" content="Everything you need (and nothing more) to start a bookdown book." />
+  <meta name="twitter:description" content="Extended version of the onboarding packaging guide." />
   
 
-<meta name="author" content="Sean Kross">
+<meta name="author" content="rOpenSci onboarding editors">
 
-<meta name="date" content="2016-12-09">
 
+<meta name="date" content="2018-03-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="index.html">
 <link rel="next" href="diving-in.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -58,13 +56,14 @@
 <body>
 
 
+
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Bookdown Book</a></li>
+<li><a href="./">rOpenSci Packages: Development, Maintenance, and Peer Review</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
@@ -82,7 +81,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Bookdown Book</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
           </h1>
         </div>
 
@@ -94,7 +93,6 @@
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
 <p>This is the first real chapter.</p>
 
-
 </div>
             </section>
 
@@ -102,8 +100,9 @@
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="diving-in.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="diving-in.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -112,16 +111,18 @@
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
+"linkedin": false,
 "weibo": false,
 "instapper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",

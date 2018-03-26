@@ -1,5 +1,15 @@
-require(["gitbook", "lodash"], function(gitbook, _) {
+gitbook.require(["gitbook", "lodash", "jQuery"], function(gitbook, _, $) {
     var SITES = {
+        'github': {
+            'label': 'Github',
+            'icon': 'fa fa-github',
+            'onClick': function(e) {
+                e.preventDefault();
+                var repo = $('meta[name="github-repo"]').attr('content');
+                if (typeof repo === 'undefined') throw("Github repo not defined");
+                window.open("https://github.com/"+repo);
+            }
+        },
         'facebook': {
             'label': 'Facebook',
             'icon': 'fa fa-facebook',
@@ -22,6 +32,14 @@ require(["gitbook", "lodash"], function(gitbook, _) {
             'onClick': function(e) {
                 e.preventDefault();
                 window.open("https://plus.google.com/share?url="+encodeURIComponent(location.href));
+            }
+        },
+        'linkedin': {
+            'label': 'LinkedIn',
+            'icon': 'fa fa-linkedin',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open("https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent(document.title));
             }
         },
         'weibo': {
