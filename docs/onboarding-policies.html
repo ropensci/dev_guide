@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+  <meta name="description" content="Extended version of the onboarding packaging guide.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="rOpenSci Packages: Development, Maintenance, and Peer Review" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://ropensci.github.io/dev_guide/" />
+  
+  <meta property="og:description" content="Extended version of the onboarding packaging guide." />
+  <meta name="github-repo" content="ropenscilabs/dev_guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="rOpenSci Packages: Development, Maintenance, and Peer Review" />
+  
+  <meta name="twitter:description" content="Extended version of the onboarding packaging guide." />
+  
+
+<meta name="author" content="rOpenSci onboarding editors">
+
+
+<meta name="date" content="2018-03-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="onboarding-why-what.html">
+<link rel="next" href="onboarding-guide-for-authors.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">rOpenSci Packages: Development, Maintenance, and Peer Review</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="part"><span><b>I Building Your Package</b></span></li>
+<li class="chapter" data-level="1" data-path="packaging-guide.html"><a href="packaging-guide.html"><i class="fa fa-check"></i><b>1</b> Packaging Guide</a><ul>
+<li class="chapter" data-level="1.1" data-path="packaging-guide.html"><a href="packaging-guide.html#package-naming"><i class="fa fa-check"></i><b>1.1</b> Package naming</a></li>
+<li class="chapter" data-level="1.2" data-path="packaging-guide.html"><a href="packaging-guide.html#functionvariable-naming-general-syntax"><i class="fa fa-check"></i><b>1.2</b> Function/variable naming &amp; general syntax</a></li>
+<li class="chapter" data-level="1.3" data-path="packaging-guide.html"><a href="packaging-guide.html#readme"><i class="fa fa-check"></i><b>1.3</b> README</a></li>
+<li class="chapter" data-level="1.4" data-path="packaging-guide.html"><a href="packaging-guide.html#documentation"><i class="fa fa-check"></i><b>1.4</b> Documentation</a></li>
+<li class="chapter" data-level="1.5" data-path="packaging-guide.html"><a href="packaging-guide.html#authorship"><i class="fa fa-check"></i><b>1.5</b> Authorship</a></li>
+<li class="chapter" data-level="1.6" data-path="packaging-guide.html"><a href="packaging-guide.html#testing"><i class="fa fa-check"></i><b>1.6</b> Testing</a></li>
+<li class="chapter" data-level="1.7" data-path="packaging-guide.html"><a href="packaging-guide.html#examples"><i class="fa fa-check"></i><b>1.7</b> Examples</a></li>
+<li class="chapter" data-level="1.8" data-path="packaging-guide.html"><a href="packaging-guide.html#package-dependencies"><i class="fa fa-check"></i><b>1.8</b> Package dependencies</a></li>
+<li class="chapter" data-level="1.9" data-path="packaging-guide.html"><a href="packaging-guide.html#recommended-scaffolding"><i class="fa fa-check"></i><b>1.9</b> Recommended scaffolding</a></li>
+<li class="chapter" data-level="1.10" data-path="packaging-guide.html"><a href="packaging-guide.html#console-messages"><i class="fa fa-check"></i><b>1.10</b> Console messages</a></li>
+<li class="chapter" data-level="1.11" data-path="packaging-guide.html"><a href="packaging-guide.html#miscellaneous-cran-gotchas"><i class="fa fa-check"></i><b>1.11</b> Miscellaneous CRAN gotchas</a></li>
+<li class="chapter" data-level="1.12" data-path="packaging-guide.html"><a href="packaging-guide.html#further-guidance"><i class="fa fa-check"></i><b>1.12</b> Further guidance</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html"><i class="fa fa-check"></i><b>2</b> Continuous Integration Best Practices</a><ul>
+<li class="chapter" data-level="2.1" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#continuous-integration"><i class="fa fa-check"></i><b>2.1</b> Continuous integration</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="package-development-security-best-practices.html"><a href="package-development-security-best-practices.html"><i class="fa fa-check"></i><b>3</b> Package Development Security Best Practices</a></li>
+<li class="part"><span><b>II Onboarding Packages</b></span></li>
+<li class="chapter" data-level="4" data-path="onboarding-why-what.html"><a href="onboarding-why-what.html"><i class="fa fa-check"></i><b>4</b> Onboarding, Why? What?</a></li>
+<li class="chapter" data-level="5" data-path="onboarding-policies.html"><a href="onboarding-policies.html"><i class="fa fa-check"></i><b>5</b> Onboarding policies</a><ul>
+<li class="chapter" data-level="5.1" data-path="onboarding-policies.html"><a href="onboarding-policies.html#package-submission"><i class="fa fa-check"></i><b>5.1</b> Package submission</a></li>
+<li class="chapter" data-level="5.2" data-path="onboarding-policies.html"><a href="onboarding-policies.html#aims-and-scope"><i class="fa fa-check"></i><b>5.2</b> Aims and Scope</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="onboarding-policies.html"><a href="onboarding-policies.html#package-categories"><i class="fa fa-check"></i><b>5.2.1</b> Package categories</a></li>
+<li class="chapter" data-level="5.2.2" data-path="onboarding-policies.html"><a href="onboarding-policies.html#other-scope-considerations"><i class="fa fa-check"></i><b>5.2.2</b> Other Scope Considerations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="onboarding-policies.html"><a href="onboarding-policies.html#package-overlap"><i class="fa fa-check"></i><b>5.3</b> Package overlap</a></li>
+<li class="chapter" data-level="5.4" data-path="onboarding-policies.html"><a href="onboarding-policies.html#role-of-the-ropensci-leadership-team"><i class="fa fa-check"></i><b>5.4</b> Role of the rOpenSci leadership team</a></li>
+<li class="chapter" data-level="5.5" data-path="onboarding-policies.html"><a href="onboarding-policies.html#ownership-of-packages"><i class="fa fa-check"></i><b>5.5</b> Ownership of packages</a></li>
+<li class="chapter" data-level="5.6" data-path="onboarding-policies.html"><a href="onboarding-policies.html#package-removal"><i class="fa fa-check"></i><b>5.6</b> Package removal</a></li>
+<li class="chapter" data-level="5.7" data-path="onboarding-policies.html"><a href="onboarding-policies.html#quality-commitment"><i class="fa fa-check"></i><b>5.7</b> Quality commitment</a></li>
+<li class="chapter" data-level="5.8" data-path="onboarding-policies.html"><a href="onboarding-policies.html#maintainer-responsiveness"><i class="fa fa-check"></i><b>5.8</b> Maintainer responsiveness</a></li>
+<li class="chapter" data-level="5.9" data-path="onboarding-policies.html"><a href="onboarding-policies.html#code-of-conduct"><i class="fa fa-check"></i><b>5.9</b> Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="onboarding-guide-for-authors.html"><a href="onboarding-guide-for-authors.html"><i class="fa fa-check"></i><b>6</b> Onboarding Guide for Authors</a></li>
+<li class="chapter" data-level="7" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html"><i class="fa fa-check"></i><b>7</b> Onboarding Guide for Reviewers</a></li>
+<li class="chapter" data-level="8" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html"><i class="fa fa-check"></i><b>8</b> Onboarding Guide for Editors</a></li>
+<li class="part"><span><b>III Maintaining Packages</b></span></li>
+<li class="chapter" data-level="9" data-path="collaboration-guide.html"><a href="collaboration-guide.html"><i class="fa fa-check"></i><b>9</b> Collaboration Guide</a><ul>
+<li class="chapter" data-level="9.1" data-path="collaboration-guide.html"><a href="collaboration-guide.html#code-of-conduct-1"><i class="fa fa-check"></i><b>9.1</b> Code of Conduct</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="releasing-and-advertising-a-package.html"><a href="releasing-and-advertising-a-package.html"><i class="fa fa-check"></i><b>10</b> Releasing and advertising a package</a><ul>
+<li class="chapter" data-level="10.1" data-path="releasing-and-advertising-a-package.html"><a href="releasing-and-advertising-a-package.html#news"><i class="fa fa-check"></i><b>10.1</b> News</a></li>
+<li class="chapter" data-level="10.2" data-path="releasing-and-advertising-a-package.html"><a href="releasing-and-advertising-a-package.html#versioning"><i class="fa fa-check"></i><b>10.2</b> Versioning</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="onboarding-policies" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Onboarding policies</h1>
+<div id="package-submission" class="section level2">
+<h2><span class="header-section-number">5.1</span> Package submission</h2>
+<ul>
+<li>For a package to be considered for the rOpenSci suite, package authors must initiate a request on the <a href="https://github.com/ropensci/onboarding">ropensci/onboarding</a> repository.</li>
+<li>Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our <a href="packaging_guide.md">packaging guide</a> and <a href="reviewing_guide.md">reviewing guide</a> for more details). Unlike a manuscript review, this process will be an ongoing conversation.</li>
+<li>Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins), but in rare cases a package may also be rejected after review &amp; revision.</li>
+</ul>
+</div>
+<div id="aims-and-scope" class="section level2">
+<h2><span class="header-section-number">5.2</span> Aims and Scope</h2>
+<p>rOpenSci aims to support packages that support reproducible research and
+managing the data lifecycle for scientists. Packages submitted to rOpenSci should fit into one or more of the following
+categories. If you are unsure whether your package fits into one of these
+categories, please open an issue as a pre-submission inquiry
+(<a href="https://github.com/ropensci/onboarding/issues?q=is%3Aissue+label%3A0%2Fpresubmission"><strong>Examples</strong></a>).</p>
+<p>As as this is a living document, these categories may change through
+time and not all previously onboarded packages would be in-scope today. While
+we strive to be consistent, we evaluate packages on a case-by-case basis and may
+make exceptions.</p>
+<div id="package-categories" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Package categories</h3>
+<ul>
+<li><p><strong>data retrieval</strong>: Packages for accessing and download data from online sources with
+scientific applications. Our definition of scientific applications is broad,
+including data storage services, journals, and other remote servers, as many data
+sources may be of interest to researchers. However, retrieval packages should
+be focused on data <em>sources</em> / <em>topics</em>, rather than <em>services</em>. For example
+a general client for Amazon Web Services data storage would not be in-scope.
+(Examples: <a href="https://github.com/ropensci/onboarding/issues/17"><strong>rotl</strong></a>,
+<a href="https://github.com/ropensci/onboarding/issues/41"><strong>gutenbergr</strong></a>)</p></li>
+<li><p><strong>data extraction</strong>: Packages that aid in retrieving data from unstructured
+sources such as text, images and PDFs, as well as parsing scientific data types and
+outputs from scientific equipment. Statistical/ML libraries for modeling or prediction
+are typically not included in this category, but trained models
+that act as utilities (e.g., for optical character recognition), may qualify.
+(Examples: <a href="https://github.com/ropensci/onboarding/issues/42"><strong>tabulizer</strong></a>,
+<a href="https://github.com/ropensci/onboarding/issues/25"><strong>robotstxt</strong></a>,
+<a href="https://github.com/ropensci/onboarding/issues/47"><strong>genbankr</strong></a>)</p></li>
+<li><p><strong>database access</strong>: Bindings and wrappers generic database APIs
+(Example: <a href="https://github.com/ropensci/onboarding/issues/6"><strong>rrlite</strong></a>)</p></li>
+<li><p><strong>data munging</strong>: Packages for processing data from formats above. This
+area does not include broad data manipulations tools such as <strong>reshape2</strong> or
+<strong>tidyr</strong>, but rather tools for handling data in specific scientific formats.
+(Example: <a href="https://github.com/ropensci/onboarding/issues/60"><strong>plateR</strong></a>)</p></li>
+<li><p><strong>data deposition</strong>*: Packages that support deposition of data into research
+repositories, including data formatting and metadata generation.
+(Examples <a href="https://github.com/ropensci/onboarding/issues/80"><strong>EML</strong></a>)</p></li>
+<li><p><strong>reproducibility</strong>*: Tools that facilitate reproducible research. This
+includes packages that facilitate use of version control, provenance tracking,
+automated testing of data inputs and statistical outputs, citation of software
+and scientific literature. It does not include general tools for literate
+programming (e.g., R markdown extensions not under the previous topics).
+(Example <a href="https://github.com/ropensci/onboarding/issues/23"><strong>assertr</strong></a>)</p></li>
+</ul>
+<p>In addition, we have some specialty <em>topics</em> with a slightly broader scope.</p>
+<ul>
+<li><p><strong>geospatial data</strong>: We accept packages focused on accessing geospatial data,
+manipulating geospatial data, and converting between geospatial data formats.
+(Example: <a href="https://github.com/ropensci/onboarding/issues/28"><strong>rgeospatialquality</strong></a>,
+<a href="https://github.com/ropensci/onboarding/issues/27"><strong>osmplotr</strong></a>).</p></li>
+<li><p><strong>text analysis</strong>: We are currently <em>piloting</em> a sub-specialty area for text
+analysis which includes implementation of statistical/ML methods for analyzing
+or extracting text data. This does not include packages with new methods, but
+only implementation or wrapping of previously published methods.
+As this is a pilot, the scope for this area is not fully
+defined and we are still developing a reviewer base and process for this area. Please open
+a pre-submission inquiry if you are considering submitting a package that falls under
+this topic.</p></li>
+</ul>
+</div>
+<div id="other-scope-considerations" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Other Scope Considerations</h3>
+<p>Packages should be <em>general</em> in that they should solve a problem as broadly as
+possible while maintaining a coherent user interface and code base. For instance
+if several data sources use an identical API, we prefer a package that provides
+access to all the data sources, rather than just one.</p>
+<p>Here are some types of packages we are unlikely to accept:</p>
+<ul>
+<li>Packages that wrap or implement statistical or machine learning methods. We
+are not organized so as to review the correctness of these methods. (But
+see “text analysis”, above)</li>
+<li>Exploratory data analysis packages that visualize or summarize data.</li>
+<li>General workflow or package development support packages</li>
+</ul>
+<p>We encourage submitting packages not accepted to rOpenSci to submit to CRAN,
+BioConductor, as well as
+other R package development initiatives (e.g., <a href="https://cloudyr.github.io/">cloudyr</a>),
+and software journals such as JOSS, JSS, or the R journal.</p>
+<p>Note that not all packages developed internally by rOpenSci or through our events
+or collaborations are in-scope for onboarding process.</p>
+</div>
+</div>
+<div id="package-overlap" class="section level2">
+<h2><span class="header-section-number">5.3</span> Package overlap</h2>
+<p>rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the ROpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:</p>
+<ul>
+<li>More open in licensing or development practices.</li>
+<li>Broader in functionality (e.g., providing access to more data sets, providing a greater suite of functions), but not only by duplicating additional packages</li>
+<li>Better in usability and performance</li>
+<li>Actively maintained while alternatives are poorly or no longer actively maintained</li>
+</ul>
+<p>These factors should be considered <em>as a whole</em> to determine if the package is a significant improvement. A new package would not meet this standard only by following our package guidelines while others do not, unless this leads to a significant difference in the areas above.</p>
+<p>We recommend that packages highlight differences from and improvements over
+overlapping packages in their README and/or vignettes.</p>
+<p>We encourage developers whose packages are not accepted due to overlap to still consider submittal to other repositories or journals.</p>
+</div>
+<div id="role-of-the-ropensci-leadership-team" class="section level2">
+<h2><span class="header-section-number">5.4</span> Role of the rOpenSci leadership team</h2>
+<p>Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, rOpenSci’s <a href="http://ropensci.org/about/#leadership">staff</a> will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner.</p>
+</div>
+<div id="ownership-of-packages" class="section level2">
+<h2><span class="header-section-number">5.5</span> Ownership of packages</h2>
+<p>Authors of contributed packages essentially maintain the same ownership they had prior to their package joining the rOpenSci suite. Contributors will have write access to their repositories, but will need an rOpenSci staff member to add any new contributors.</p>
+</div>
+<div id="package-removal" class="section level2">
+<h2><span class="header-section-number">5.6</span> Package removal</h2>
+<p>In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes.</p>
+</div>
+<div id="quality-commitment" class="section level2">
+<h2><span class="header-section-number">5.7</span> Quality commitment</h2>
+<p>rOpenSci strives to develop and promote high quality research software. To ensure that your software meets our criteria, we review all of our submissions as part of the onboarding process, and even after acceptance will continue to chime in with improvements and bug fixes.</p>
+<p>Despite our best efforts to support contributed software, errors are the responsibility of individual maintainers. Buggy, unmaintained software may be removed from our suite at any time.</p>
+</div>
+<div id="maintainer-responsiveness" class="section level2">
+<h2><span class="header-section-number">5.8</span> Maintainer responsiveness</h2>
+<p>If package maintainers do not respond in a timely manner to requests for
+package fixes from CRAN or from us, we will remind the maintainer a number
+of times, but after 3 months (or shorter time frame, depending on how
+critical the fix is) we will make the changes ourselves.</p>
+<p>The above is a bit vague, so the following are a few areas of consideration.</p>
+<ul>
+<li>Examples where we’d want to move quickly:
+<ul>
+<li>Package <code>foo</code> is depended on by 1 or more packages on CRAN, and <code>foo</code> is
+broken, and thus would break its reverse dependencies.</li>
+<li>Package <code>bar</code> may not have reverse dependencies on CRAN, but is widely used,
+thus quickly fixing problems is of greater importance.</li>
+</ul></li>
+<li>Examples where we can wait longer:
+<ul>
+<li>Package <code>hello</code> is not on CRAN, or on CRAN, but has no reverse dependencies.</li>
+<li>Package <code>world</code> needs some fixes. The maintainer has responded but is simply
+very busy with a new job, or other reason, and will attend to soon.</li>
+</ul></li>
+</ul>
+<p>We urge package maintainers to make sure they are receiving GitHub notifications, as
+well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their
+spam box. In addition, join the rOpenSci Slack <a href="https://ropensci.signup.team/" class="uri">https://ropensci.signup.team/</a> to
+chat to rOpenSci staff and the greater rOpenSci community.</p>
+<p>Should authors abandon the maintenance of an actively used package in our suite, we will
+consider petitioning CRAN to transfer package maintainer status to rOpenSci.</p>
+</div>
+<div id="code-of-conduct" class="section level2">
+<h2><span class="header-section-number">5.9</span> Code of Conduct</h2>
+<ul>
+<li>We are committed to providing a friendly, safe and welcoming
+environment for all, regardless of gender, sexual orientation,
+disability, ethnicity, religion, or similar personal characteristic.</li>
+<li>Please avoid using overtly sexual nicknames or other nicknames that
+might detract from a friendly, safe and welcoming environment for
+all.</li>
+<li>Please be kind and courteous. There’s no need to be mean or rude.</li>
+<li>Respect that people have differences of opinion and that every
+design or implementation choice carries a trade-off and numerous
+costs. There is seldom a right answer.</li>
+<li>Please keep unstructured critique to a minimum. If you have solid
+ideas you want to experiment with, make a fork and see how it works.</li>
+<li>We will exclude you from interaction if you insult, demean or harass
+anyone. That is not welcome behavior. We interpret the term
+“harassment” as including the definition in the <a href="http://citizencodeofconduct.org/">Citizen Code of
+Conduct</a>; if you have any lack of
+clarity about what might be included in that concept, please read
+their definition. In particular, we don’t tolerate behavior that
+excludes people in socially marginalized groups.</li>
+<li>Private harassment is also unacceptable. No matter who you are, if
+you feel you have been or are being harassed or made uncomfortable
+by a community member, please contact us at <a href="mailto:info@ropensci.org">info@ropensci.org</a>
+immediately with a capture (log, photo, email) of the harassment if possible.
+Whether you’re a regular contributor or a newcomer, we
+care about making this community a safe place for you and we’ve got
+your back.</li>
+<li>Likewise, any spamming, trolling, flaming, baiting or other
+attention-stealing behavior are not welcome.</li>
+<li>Avoid the use of personal pronouns in code comments or
+documentation. There is no need to address persons when explaining
+code (e.g. “When the developer”)</li>
+</ul>
+<p><em>This CoC adapted from the <a href="https://github.com/iojs/io.js/blob/v1.x/CONTRIBUTING.md#code-of-conduct">io.js CoC</a>, adapted from <a href="https://github.com/rust-lang/rust/wiki/Note-development-policy#conduct">Rust’s
+CoC</a>.</em></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="onboarding-why-what.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="onboarding-guide-for-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
