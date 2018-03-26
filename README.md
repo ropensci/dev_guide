@@ -5,6 +5,11 @@ rOpenSci Packages: Development, Maintenance, and Peer Review
 
 Extended version of the onboarding packaging guide.
 
+##Suggestions and updates
+
+These guidelines are a work in progress for packages contributed to the rOpenSci suite. Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropenscilabs/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/).
+
+
 
 # Meta
 
