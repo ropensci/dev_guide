@@ -103,7 +103,10 @@
 <li class="chapter" data-level="5.9" data-path="onboarding-policies.html"><a href="onboarding-policies.html#code-of-conduct"><i class="fa fa-check"></i><b>5.9</b> Code of Conduct</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="onboarding-guide-for-authors.html"><a href="onboarding-guide-for-authors.html"><i class="fa fa-check"></i><b>6</b> Onboarding Guide for Authors</a></li>
-<li class="chapter" data-level="7" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html"><i class="fa fa-check"></i><b>7</b> Onboarding Guide for Reviewers</a></li>
+<li class="chapter" data-level="7" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html"><i class="fa fa-check"></i><b>7</b> Onboarding Guide for Reviewers</a><ul>
+<li class="chapter" data-level="7.1" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html#submitting-the-review"><i class="fa fa-check"></i><b>7.1</b> Submitting the Review</a></li>
+<li class="chapter" data-level="7.2" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html#review-follow-up"><i class="fa fa-check"></i><b>7.2</b> Review follow-up</a></li>
+</ul></li>
 <li class="chapter" data-level="8" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html"><i class="fa fa-check"></i><b>8</b> Onboarding Guide for Editors</a><ul>
 <li class="chapter" data-level="8.1" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#eic-responsibilities"><i class="fa fa-check"></i><b>8.1</b> EiC Responsibilities</a></li>
 <li class="chapter" data-level="8.2" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#handling-editors-checklist"><i class="fa fa-check"></i><b>8.2</b> Handling Editor’s Checklist</a><ul>
@@ -146,7 +149,52 @@
             <section class="normal" id="section-">
 <div id="onboarding-guide-for-reviewers" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Onboarding Guide for Reviewers</h1>
+<p>To review a package, please begin by copying our <a href="reviewer_template.md">reviewer template</a>
+and using it as a high-level checklist. In addition to checking off the minimum criteria,
+we ask you provide general comments addressing the following:</p>
+<ul>
+<li>Does the code comply with general principles in the <a href="https://mozillascience.github.io/codeReview/review.html">Mozilla reviewing guide</a>?</li>
+<li>Does the package comply with the <a href="https://ropenscilabs.github.io/dev_guide/packaging-guide.html">rOpenSci packaging guide</a>?</li>
+<li>Are there improvements that could be made to the code style?</li>
+<li>Is there code duplication in the package that should be reduced?</li>
+<li>Are there user interface improvements that could be made?</li>
+<li>Are there performance improvements that could be made?</li>
+<li>Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?</li>
+</ul>
+<p>We encourage you to use automated tools to facilitate your reviewing. These
+include:</p>
+<ul>
+<li>Checking the package’s logs on its continuous integration services (Travs-CI, Codecov, etc.)</li>
+<li>Running <code>devtools::check()</code> and <code>devtools::test()</code> on the package to find any errors that may be missed on the author’s system.</li>
+<li>Using the <strong>covr</strong> package to examine the extent of test coverage.</li>
+<li>Using the <a href="https://github.com/MangoTheCat/goodpractice"><strong>goodpractice</strong></a> package (<code>goodpractice::gp()</code>) to identify likely sources of errors and style issues.</li>
+<li>Using <code>devtools::spell_check()</code> to find spelling errors in DESCRIPTION and
+manual files, and RStudio’s spellchecker to find spelling errors in vignettes and
+README files.</li>
+</ul>
+<p>Please be respectful and kind to the authors in your reviews. Our <a href="policies.md#code-of-conduct">code of conduct</a> is mandatory for everyone involved in our review process.</p>
+<p>First-time reviewers may find it helpful to read some previous reviews. Here are reviews of <a href="https://github.com/ropensci/onboarding/issues/18"><strong>rusda</strong></a>, <a href="https://github.com/ropensci/onboarding/issues/20"><strong>textreuse</strong></a>, and <a href="https://github.com/ropensci/onboarding/issues/24"><strong>Ropenaq</strong></a>. The review of <a href="https://github.com/ropensci/onboarding/issues/61"><strong>dbhydroR</strong></a> uses our up-to-date reviewer’s template.</p>
+<p>We encourage you to ask questions and provide feedback on the review process on our <a href="https://discuss.ropensci.org">forum</a>.</p>
+<div id="submitting-the-review" class="section level2">
+<h2><span class="header-section-number">7.1</span> Submitting the Review</h2>
+<ul>
+<li>When your review is complete, paste it as a comment into the package onboarding issue.</li>
+<li>Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign
+additional or alternate reviewers if a review is excessively late.</li>
+<li>Additional comments are welcome in the same issue as a package onboarding request. We hope that package reviews will work as an ongoing conversation with the authors as opposed to a single round of reviews typical of manuscripts.</li>
+<li>You may also submit issues or pull requests directly to the package repo if you choose, but if you do, please link to them in the onboarding repo comment thread so we have a centralized record of your review.</li>
+<li>Please include an estimate of how many hours you spent on your review at the end of your review.</li>
+</ul>
+</div>
+<div id="review-follow-up" class="section level2">
+<h2><span class="header-section-number">7.2</span> Review follow-up</h2>
+<p>Authors should respond to the review within 2 weeks with their changes to the package
+in response to your review. At this stage, we ask that you respond as to whether
+the change sufficiently address any issues raised in your review. We encourage
+ongoing discussion between package authors and reviewers, and you may ask editors
+to clarify issues in the review thread, as well.</p>
 
+</div>
 </div>
             </section>
 
