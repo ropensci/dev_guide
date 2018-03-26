@@ -104,7 +104,18 @@
 </ul></li>
 <li class="chapter" data-level="6" data-path="onboarding-guide-for-authors.html"><a href="onboarding-guide-for-authors.html"><i class="fa fa-check"></i><b>6</b> Onboarding Guide for Authors</a></li>
 <li class="chapter" data-level="7" data-path="onboarding-guide-for-reviewers.html"><a href="onboarding-guide-for-reviewers.html"><i class="fa fa-check"></i><b>7</b> Onboarding Guide for Reviewers</a></li>
-<li class="chapter" data-level="8" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html"><i class="fa fa-check"></i><b>8</b> Onboarding Guide for Editors</a></li>
+<li class="chapter" data-level="8" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html"><i class="fa fa-check"></i><b>8</b> Onboarding Guide for Editors</a><ul>
+<li class="chapter" data-level="8.1" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#eic-responsibilities"><i class="fa fa-check"></i><b>8.1</b> EiC Responsibilities</a></li>
+<li class="chapter" data-level="8.2" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#handling-editors-checklist"><i class="fa fa-check"></i><b>8.2</b> Handling Editor’s Checklist</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#upon-submission"><i class="fa fa-check"></i><b>8.2.1</b> Upon submission:</a></li>
+<li class="chapter" data-level="8.2.2" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#assign-reviewers"><i class="fa fa-check"></i><b>8.2.2</b> Assign reviewers:</a></li>
+<li class="chapter" data-level="8.2.3" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#during-review"><i class="fa fa-check"></i><b>8.2.3</b> During review:</a></li>
+<li class="chapter" data-level="8.2.4" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#after-review"><i class="fa fa-check"></i><b>8.2.4</b> After review:</a></li>
+<li class="chapter" data-level="8.2.5" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#for-joint-joss-submissions"><i class="fa fa-check"></i><b>8.2.5</b> For joint JOSS submissions:</a></li>
+<li class="chapter" data-level="8.2.6" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#package-promotion"><i class="fa fa-check"></i><b>8.2.6</b> Package promotion:</a></li>
+<li class="chapter" data-level="8.2.7" data-path="onboarding-guide-for-editors.html"><a href="onboarding-guide-for-editors.html#automated-reminders-currently-not-operational"><i class="fa fa-check"></i><b>8.2.7</b> Automated reminders (CURRENTLY NOT OPERATIONAL)</a></li>
+</ul></li>
+</ul></li>
 <li class="part"><span><b>III Maintaining Packages</b></span></li>
 <li class="chapter" data-level="9" data-path="collaboration-guide.html"><a href="collaboration-guide.html"><i class="fa fa-check"></i><b>9</b> Collaboration Guide</a><ul>
 <li class="chapter" data-level="9.1" data-path="collaboration-guide.html"><a href="collaboration-guide.html#code-of-conduct-1"><i class="fa fa-check"></i><b>9.1</b> Code of Conduct</a></li>
@@ -135,7 +146,169 @@
             <section class="normal" id="section-">
 <div id="onboarding-guide-for-editors" class="section level1">
 <h1><span class="header-section-number">Chapter 8</span> Onboarding Guide for Editors</h1>
+<p>Onboarding at rOpenSci is managed by a team of editors. We are piloting
+a system of a rotating Editor-in-Chief (EiC).</p>
+<div id="eic-responsibilities" class="section level2">
+<h2><span class="header-section-number">8.1</span> EiC Responsibilities</h2>
+<p>The EiC serves for 3 months or a time agreed to by all members of the editorial
+board. The EiC plays the following roles</p>
+<ul>
+<li>Watch all issues posted to the onboarding repo:</li>
+<li>Assigns packages to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor rejects due to being too busy/conflict of interest.</li>
+<li>Raises scope/overlap issue with all editors if they see an ambiguous case. This
+may also be done by handling editors (see below). To initiate discussion, this
+is posted to the rOpenSci Slack onboarding channel, tagging all editors.</li>
+<li>Responds to pre-submission inquiries and <code>meta</code> issues posted to the onboarding
+repo, similarly pinging channel if discussion needed. But editors should all feel free to chime in on these if they want.</li>
+<li>Responds to referrals from JOSS or other publication partners.</li>
+<li>Monitors pace of review process and reminds other editors to move packages
+along as needed.</li>
+</ul>
+</div>
+<div id="handling-editors-checklist" class="section level2">
+<h2><span class="header-section-number">8.2</span> Handling Editor’s Checklist</h2>
+<div id="upon-submission" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Upon submission:</h3>
+<ul>
+<li>Tag issue appropriately with <code>package</code>, <code>topic:</code>, etc. tags. Add <code>1/editor-checks</code> tag
+and assign a main editor if you haven’t already.</li>
+<li>Check that template has been properly filled out</li>
+<li>Check against policies for <a href="policies.md#fit">fit</a> and <a href="policies.md#fit">overlap</a>.
+Initiate discussion via slack #onboarding channel if needed for edge cases.
+If reject, close issue, direct authors to other groups/repos as appropriate.</li>
+<li>Check that mandatory parts of template are complete. If not, close issue,
+direct authors toward appropriate instructions.</li>
+<li>Run run automated tests: <code>devtools::check()</code>, <code>goodpractice::gp()</code>, <code>devtools::spell_check()</code>. Run
+<code>covr::package_coverage()</code> using <code>NOT_CRAN</code> if needed, as well. Report
+relevant outputs in the issue thread.
+<ul>
+<li>For packages with compiled code or linking to external libraries or languages,
+check on multiple platforms, using win-builder, r-hub, or other editors
+as needed.</li>
+</ul></li>
+<li>If initial checks show major gaps, request changes before assigning reviewers.</li>
+<li>If the package raises a new issue for rOpenSci policy, open a discussion on the
+<a href="https://discuss.ropensci.org/">rOpenSci forum</a> to discuss it with other
+editors (<a href="">example</a><a href="https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368" class="uri">https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368</a>)</li>
+</ul>
+</div>
+<div id="assign-reviewers" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Assign reviewers:</h3>
+<ul>
+<li>Switch numbered tag to <code>2/seeking-reviewers</code></li>
+<li>Ask author to add a rOpenSci review badge to their README. Badge URL is <code>https://badges.ropensci.org/&lt;issue_id&gt;_status.svg</code>. Full link should be:</li>
+</ul>
+<pre><code>[![](https://badges.ropensci.org/&lt;issue_id&gt;_status.svg)](https://github.com/ropensci/onboarding/issues/&lt;issue_id&gt;)</code></pre>
+<ul>
+<li>Use the #onboarding slack channel for discussion about potential reviewers.</li>
+<li>Use the <a href="https://github.com/ropensci/onboarding/blob/master/review_request_template.md">email template</a> if needed for inviting reviewers
+<ul>
+<li>When inviting reviewers, include something like “if I don’t hear from
+you in a week, I’ll assume you are unable to review,” so as to give a
+clear deadline when you’ll move on to looking for someone else.</li>
+</ul></li>
+<li>Assign a due date 3 weeks after all reviewers have been found.</li>
+<li><p>Once two or more reviewers are found, assign reviewer by tagging in the issue with the
+following format to activate the automated reminders bot:</p>
+<p>Reviewer: <span class="citation">(<span class="citeproc-not-found" data-reference-id="githubname1"><strong>???</strong></span>)</span>
+Reviewer: <span class="citation">(<span class="citeproc-not-found" data-reference-id="githubname2"><strong>???</strong></span>)</span>
+Due date: YYYY-MM-DD</p></li>
+<li>Switch numbered tag <code>to 3/reviewers-assigned</code> once reviewers are assigned.</li>
+<li><p>Invite authors and reviewers to rOpenSci Slack if they aren’t on already.</p></li>
+</ul>
+</div>
+<div id="during-review" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> During review:</h3>
+<ul>
+<li>Check in with reviewers and authors occasionally. Offer clarification and help as needed.</li>
+<li>In general aim for 3 weeks for review, 2 weeks for
+subsequent changes, and 1 week for reviewer approval of changes.</li>
+<li>Make sure ropensci-bot is pinging correctly. (currently defunct)</li>
+<li>Upon all reviews being submitted, change the review status tag to
+<code>4/review-in-awaiting-changes</code> to update the reminder bot.</li>
+<li>Upon changes being made, change the review status tag to <code>5/awaiting-reviewer-response</code>.</li>
+</ul>
+</div>
+<div id="after-review" class="section level3">
+<h3><span class="header-section-number">8.2.4</span> After review:</h3>
+<ul>
+<li>Change the status tag to <code>6/approved</code>.</li>
+<li>Add review/er information to the review database.</li>
+<li>If authors intend to submit to CRAN, check against CRAN gotchas and provide
+support through this process.</li>
+<li>Ask authors to migrate to <code>ropensci</code>
+<ul>
+<li>Create a two-person team in the ropensci organization, named for the
+package, with yourself and the package author as members.</li>
+<li>Have the author transfer the repository to <code>ropensci</code></li>
+<li>Go to the repository settings in the <code>ropensci</code> organization and give
+the two-person team “Write” access to the repository. (“Admin” access
+may be temporarily granted for purposes such as creating Zenodo releases,
+setting up package documentation options, etc.)</li>
+</ul></li>
+<li>Ask author to:
+<ul>
+<li>Add rOpenSci footer to README</li>
+<li>Change any needed links, such those for CI badges</li>
+<li>Re-activate CI services
+<ul>
+<li>For Travis, activating the project in the ropensci account should be
+sufficient</li>
+<li>For Appveyor, active the project in the ropensci account, then create
+a permission profile that gives access to that project, and link
+that profile to the two-person GitHub team.</li>
+<li>For CodeCov, the webhook may need to be reset by the author.</li>
+</ul></li>
+</ul></li>
+<li>Close the onboarding issue.</li>
+</ul>
+</div>
+<div id="for-joint-joss-submissions" class="section level3">
+<h3><span class="header-section-number">8.2.5</span> For joint JOSS submissions:</h3>
+<ul>
+<li>After repo is transferred and admin rights assigned, have author generate
+a new release with a DOI.</li>
+<li>Ask author to submit package via <a href="http://joss.theoj.org/papers/new" class="uri">http://joss.theoj.org/papers/new</a></li>
+<li><p>Watch for paper to pop up at <a href="http://joss.theoj.org/papers" class="uri">http://joss.theoj.org/papers</a>, then
+add the following comment to the submission thread:</p>
+<p><code>This submission has been accepted to rOpenSci. The review thread can be  found at [LINK TO ONBOARDING ISSUE]</code></p></li>
+</ul>
+</div>
+<div id="package-promotion" class="section level3">
+<h3><span class="header-section-number">8.2.6</span> Package promotion:</h3>
+<ul>
+<li>Ask authors to write either a blog post or a tech-notes post for the package,
+as appropriate.</li>
+<li>Write a short summary for a regular “new packages round-up” blog post.</li>
+<li>Alert maintainers of appropriate <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=user%3Aropensci+%22task+view%22&amp;type=Repositories&amp;ref=searchresults">task views</a></li>
+<li>Add package to <a href="https://github.com/ropensci/roweb">rOpenSci web site</a></li>
+<li>Tweet, etc.</li>
+</ul>
+</div>
+<div id="automated-reminders-currently-not-operational" class="section level3">
+<h3><span class="header-section-number">8.2.7</span> Automated reminders (CURRENTLY NOT OPERATIONAL)</h3>
+<p>Instead of manually reminding authors/reviewers to do X or Y, we thought we’d try to make a robot to do these reminders.</p>
+<p><strong>Heythere</strong> (<a href="https://github.com/ropenscilabs/heythere" class="uri">https://github.com/ropenscilabs/heythere</a>) is our Ruby application that runs on Heroku.</p>
+<p>the process heythere goes through each day at about 530 pm:</p>
+<ul>
+<li>Get all open issues in <code>onboarding</code></li>
+<li>Filter to only those issues with the <code>package</code> label</li>
+<li>If issue has label <code>holding</code>, skip (as we’re in a waiting state for somebody to get back to us)</li>
+<li>If editor assigned, proceed - if not, skip</li>
+<li>If reviews not in:
+<ul>
+<li>If before deadline and after half way mark, ping saying how many days are remaining until due</li>
+<li>If after deadline, ping reminding reviewer to get a review in soon</li>
+</ul></li>
+<li>If reviews in:
+<ul>
+<li>After X days, ping author and ask if there’s anything we can do to help</li>
+</ul></li>
+</ul>
+<p>We do our best to be humane, and nice. We’ll continue to improve the bot. Soon you may be able to talk back to the bot, and have it do useful things for you.</p>
 
+</div>
+</div>
 </div>
 
 
