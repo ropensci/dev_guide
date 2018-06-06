@@ -83,7 +83,13 @@
 <li class="chapter" data-level="1.12" data-path="packaging-guide.html"><a href="packaging-guide.html#further-guidance"><i class="fa fa-check"></i><b>1.12</b> Further guidance</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html"><i class="fa fa-check"></i><b>2</b> Continuous Integration Best Practices</a><ul>
-<li class="chapter" data-level="2.1" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#continuous-integration"><i class="fa fa-check"></i><b>2.1</b> Continuous integration</a></li>
+<li class="chapter" data-level="2.1" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#which-continuous-integration-service"><i class="fa fa-check"></i><b>2.1</b> Which continuous integration service?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#travis-ci-linux-and-mac-osx"><i class="fa fa-check"></i><b>2.1.1</b> Travis CI (Linux and Mac OSX)</a></li>
+<li class="chapter" data-level="2.1.2" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#appveyor-ci-windows"><i class="fa fa-check"></i><b>2.1.2</b> Appveyor CI (Windows)</a></li>
+<li class="chapter" data-level="2.1.3" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#circle-ci"><i class="fa fa-check"></i><b>2.1.3</b> Circle CI</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#test-coverage"><i class="fa fa-check"></i><b>2.2</b> Test coverage</a></li>
+<li class="chapter" data-level="2.3" data-path="continuous-integration-best-practices.html"><a href="continuous-integration-best-practices.html#continuous-integration-setup"><i class="fa fa-check"></i><b>2.3</b> Continuous integration setup</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="package-development-security-best-practices.html"><a href="package-development-security-best-practices.html"><i class="fa fa-check"></i><b>3</b> Package Development Security Best Practices</a><ul>
 <li class="chapter" data-level="3.1" data-path="package-development-security-best-practices.html"><a href="package-development-security-best-practices.html#misc"><i class="fa fa-check"></i><b>3.1</b> Misc</a></li>
@@ -166,16 +172,43 @@
             <section class="normal" id="section-">
 <div id="continuous-integration-best-practices" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Continuous Integration Best Practices</h1>
-<div id="continuous-integration" class="section level2">
-<h2><span class="header-section-number">2.1</span> Continuous integration</h2>
+<p>All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through <code>R CMD check</code>.</p>
+<div id="which-continuous-integration-service" class="section level2">
+<h2><span class="header-section-number">2.1</span> Which continuous integration service?</h2>
+<div id="travis-ci-linux-and-mac-osx" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Travis CI (Linux and Mac OSX)</h3>
+<p>Travis offers continuous integration for Linux and Mac OSX.</p>
+<p>R is now a <a href="http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/">natively supported language on Travis-CI</a>, making it easier than ever to do continuous integration. See <a href="http://marker.to/NEr8Bd">R Packages</a> and Julia Silge’s <a href="http://juliasilge.com/blog/Beginners-Guide-to-Travis/">Beginner’s Guide to Travis-CI for R</a> for more help.</p>
+</div>
+<div id="appveyor-ci-windows" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Appveyor CI (Windows)</h3>
+<p>For continuous integration on Windows, see <a href="https://github.com/krlmlr/r-appveyor">R + Appveyor</a>.</p>
+<p>R packages should have CI for all platforms when they contain:</p>
 <ul>
-<li><p>All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through <code>R CMD check</code>. R is now a <a href="http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/">natively supported language on Travis-CI</a>, making it easier than ever to do continuous integration. See <a href="http://marker.to/NEr8Bd">R Packages</a> and Julia Silge’s <a href="http://juliasilge.com/blog/Beginners-Guide-to-Travis/">Beginner’s Guide to Travis-CI for R</a> for more help. Travis offers continuous integration for Linux and Mac OSX. For continuous integration on Windows, see <a href="https://github.com/krlmlr/r-appveyor">R + Appveyor</a>. R packages that use compiled code or link
-to other libraries or languages should have CI for all platforms.</p></li>
-<li><p>R packages that use compiled code or link to other libraries or languages should have CI for all platforms.</p></li>
-<li><p>Continuous integration should also include reporting of test coverage via a testing service such as <a href="https://codecov.io/">CodeCov</a> or <a href="https://coveralls.io/">Coveralls</a>. See the <a href="https://github.com/jimhester/covr">README for the <strong>covr</strong> package</a> for instructions, as well
-as <code>devtools::use_coverage()</code>.</p></li>
-<li><p>Both test status and code coverage should be reported via a badge in your package README.</p></li>
+<li><p>Compiled code</p></li>
+<li><p>Java dependencies</p></li>
+<li><p>Dependencies on other languages</p></li>
+<li><p>Packages with system calls</p></li>
+<li><p>Text munging e.g. getting people’s names (in order to find encoding issues).</p></li>
+<li><p>Anything with file system / path calls</p></li>
 </ul>
+</div>
+<div id="circle-ci" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Circle CI</h3>
+<p><a href="https://circleci.com/">Circle CI</a> is e.g. used by rOpenSci package <a href="https://github.com/ropensci/bomrang"><code>bomrang</code></a> as an alternative to Travis CI.</p>
+</div>
+</div>
+<div id="test-coverage" class="section level2">
+<h2><span class="header-section-number">2.2</span> Test coverage</h2>
+<p>Continuous integration should also include reporting of test coverage via a testing service such as <a href="https://codecov.io/">CodeCov</a> or <a href="https://coveralls.io/">Coveralls</a>. See the <a href="https://github.com/jimhester/covr">README for the <strong>covr</strong> package</a> for instructions, as well
+as <code>devtools::use_coverage()</code>.</p>
+<ul>
+<li>Both test status and code coverage should be reported via a badge in your package README.</li>
+</ul>
+</div>
+<div id="continuous-integration-setup" class="section level2">
+<h2><span class="header-section-number">2.3</span> Continuous integration setup</h2>
+<p>The <code>usethis</code> package offers a few functions for continuous integration setup, see <a href="http://usethis.r-lib.org/reference/ci.html">the docs</a>.</p>
 
 </div>
 </div>
