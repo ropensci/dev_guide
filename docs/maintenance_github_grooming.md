@@ -1,0 +1,41 @@
+# GitHub Grooming
+
+rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform.
+
+## Make your repository more discoverable
+
+### GitHub repo topics
+
+GitHub [repo topics](https://help.github.com/articles/classifying-your-repository-with-topics/) help browsing and searching GitHub repos, and are digested by [`codemetar`](https://github.com/ropensci/codemetar) for rOpenSci registry keywords.
+
+We recommend:
+
+* Adding "r" and "rstats" as topics to your package repo.
+
+* Adding any other relevant topics to your package repo.
+
+We might make suggestions to you after your package is onboarded.
+
+### GitHub linguist
+
+[GitHub linguist](https://github.com/github/linguist) will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the "r" and "rstats" topics.
+
+We recommend overriding GitHub linguist by adding or modifying a .gitattributes to your repo in two cases:
+
+* If you store html files in non standard places (not in docs/, e.g. in vignettes/) use the documentation overrides. Add `*.html linguist-documentation=true` to .gitattributes ([Example in the wild](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
+
+* If your repo contains code you haven't authored, e.g. JavaScript code, add `inst/js/* linguist-vendored` to .gitattributes ([Example in the wild](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
+
+This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable.
+
+More info about GitHub linguist overrides [here](https://github.com/github/linguist#overrides).
+
+
+## Market your own account
+
+* As the author of an onboarded package, you are now a member of the ropensci GitHub organization. By default organization memberships are private, see [how to make it public in GitHub docs](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+
+* Even after that your package repo has been transferred to rOpenSci, you can [pin it under your own account](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+
+* In general we recommend adding at least an avatar (which doesn't need to be your face!) and your name [to your GitHub profile](https://help.github.com/articles/customizing-your-profile/).
+
