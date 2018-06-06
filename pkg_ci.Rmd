@@ -1,18 +1,20 @@
 # Continuous Integration Best Practices
 
-All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through `R CMD check`. 
+## Why use continuous integration?
 
-## Which continuous integration service?
+All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through `R CMD check`. rOpenSci packages continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
 
-### Travis CI (Linux and Mac OSX)
+Both test status and code coverage should be reported via badges in your package README.
 
-Travis offers continuous integration for Linux and Mac OSX.
+## How to use continuous integration?
 
-R is now a [natively supported language on Travis-CI](http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](http://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
+The `usethis` package offers a few functions for continuous integration setup, see [the docs](http://usethis.r-lib.org/reference/ci.html).
 
-### Appveyor CI (Windows)
+Details will be provided below for different services.
 
-For continuous integration on Windows, see [R + Appveyor](https://github.com/krlmlr/r-appveyor).
+## Which continuous integration service(s)?
+
+Different continuous integration services will support builds on different operating system.
 
 R packages should have CI for all platforms when they contain:
 
@@ -28,6 +30,16 @@ R packages should have CI for all platforms when they contain:
 
 * Anything with file system / path calls
 
+### Travis CI (Linux and Mac OSX)
+
+Travis offers continuous integration for Linux and Mac OSX.
+
+R is now a [natively supported language on Travis-CI](http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](http://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
+
+### Appveyor CI (Windows)
+
+For continuous integration on Windows, see [R + Appveyor](https://github.com/krlmlr/r-appveyor).
+
 ### Circle CI
 
 [Circle CI](https://circleci.com/) is e.g. used by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
@@ -35,10 +47,6 @@ R packages should have CI for all platforms when they contain:
 ## Test coverage
 
 Continuous integration should also include reporting of test coverage via a testing service such as [CodeCov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
-as `devtools::use_coverage()`. 
+as `usethis::use_coverage()`. 
 
-* Both test status and code coverage should be reported via a badge in your package README.
-
-## Continuous integration setup
-
-The `usethis` package offers a few functions for continuous integration setup, see [the docs](http://usethis.r-lib.org/reference/ci.html).
+If you use and several CI services, [code coverage reports will be merged](https://docs.codecov.io/docs/merging-reports).
