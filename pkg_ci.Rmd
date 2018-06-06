@@ -11,7 +11,7 @@ to other libraries or languages should have CI for all platforms.
 * R packages that use compiled code or link to other libraries or languages should have CI for all platforms.
 
 * Continuous integration should also include reporting of test coverage via
-a testing service such [CodeCov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
+a testing service such as [CodeCov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
 as `devtools::use_coverage()`. 
 
 * Both test status and code coverage should be reported via a badge in your

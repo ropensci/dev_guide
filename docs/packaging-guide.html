@@ -226,7 +226,7 @@ a the vignette intro or documentation should not merely read, “Provides access
 information about GooberDB, and documentation of database structure and metadata
 can be found at <em>link</em>.</p></li>
 <li><p>We strongly encourage all submissions to use <code>roxygen2</code> for documentation. <code>roxygen2</code> is <a href="http://cran.r-project.org/web/packages/roxygen2/index.html">an R package</a> that automatically compiles <code>.Rd</code> files to your <code>man</code> folder in your package from simple tags written above each function.</p></li>
-<li><p>More information on using roxygen2 <a href="http://r-pkgs.had.co.nz/man.html">documentation</a> is available on the R packages book.</p></li>
+<li><p>More information on using roxygen2 <a href="http://r-pkgs.had.co.nz/man.html">documentation</a> is available in the R packages book.</p></li>
 <li><p>One key advantage of using <code>roxygen2</code> is that your <code>NAMESPACE</code> will always be automatically generated and up to date.</p></li>
 <li><p>When using <code>roxygen2</code>, add <code>#' @noRd</code> to internal functions.</p></li>
 </ul>
@@ -250,7 +250,7 @@ the package.</p></li>
 <li><p>Check the extent of your test coverage using the <a href="https://github.com/jimhester/covr"><strong>covr</strong> package</a>. Including a coverage badge in your package’s README makes it easy for reviewers to see how well-tested your package is. 100% coverage is not required, but editors
 and reviewers will use coverage reports as a starting point to evaluate that
 your test suite covers the important functionality of your package.</p></li>
-<li><p>Even if your use <a href="#ci">continuous integration</a>, we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need
+<li><p>Even if youruse <a href="#ci">continuous integration</a>, we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need
 to set <code>Sys.setenv(NOT_CRAN=&quot;true&quot;)</code> in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use Gabor Csardi’s <a href="https://github.com/MangoTheCat/goodpractice/"><strong>goodpractice</strong></a> package to check your package for likely sources of errors, and run <code>devtools::spell_check()</code> to
 find spelling errors in documentation.</p></li>
 </ul>

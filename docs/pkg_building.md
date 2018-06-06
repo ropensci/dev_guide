@@ -88,7 +88,7 @@ can be found at *link*.
 
 * We strongly encourage all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
-* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available on the R packages book.
+* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
 
 * One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
 
@@ -124,7 +124,7 @@ and reviewers will use coverage reports as a starting point to evaluate that
 your test suite covers the important functionality of your package.
 
 
-* Even if your use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need
+* Even if youruse [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need
 to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use Gabor Csardi's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `devtools::spell_check()` to 
 find spelling errors in documentation.
 
