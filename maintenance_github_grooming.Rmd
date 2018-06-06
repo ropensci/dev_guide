@@ -1,4 +1,4 @@
-# GitHub Grooming
+# GitHub Grooming {#grooming}
 
 rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform.
 

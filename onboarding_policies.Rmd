@@ -6,7 +6,7 @@
 * Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](packaging_guide.md) and [reviewing guide](reviewing_guide.md) for more details). Unlike a manuscript review, this process will be an ongoing conversation.
 * Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins), but in rare cases a package may also be rejected after review & revision.
 
-## Aims and Scope
+## Aims and Scope {#aims-and-scope}
 
 rOpenSci aims to support packages that support reproducible research and
 managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the following
@@ -15,9 +15,9 @@ categories, please open an issue as a pre-submission inquiry
 ([**Examples**](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
 As as this is a living document, these categories may change through
-time and not all previously onboarded packages would be in-scope today.  While
-we strive to be consistent, we evaluate packages on a case-by-case basis and may
-make exceptions.
+time and not all previously onboarded packages would be in-scope today.  While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
+
+Please note that rOpenSci package development happen in different spaces: unconferences, internal development by [staff](https://ropensci.org/about/#team), and onboarding which can be confusing. The emphasis of the unconference is on experimentation, exploration and community-building - participants work on all kinds of things that wouldn't be in scope for onboarding. Similarly, some of the software developed by rOpenSci staff is focused on filling gaps in R infrastructure and wouldn't be in-scope. 
 
 ### Package categories
 

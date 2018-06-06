@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="onboarding-guide-for-authors.html">
-<link rel="next" href="onboarding-guide-for-editors.html">
+<link rel="prev" href="marketing.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -162,52 +162,40 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="onboarding-guide-for-reviewers" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Onboarding Guide for Reviewers</h1>
-<p>To review a package, please begin by copying our <a href="reviewer_template.md">reviewer template</a>
-and using it as a high-level checklist. In addition to checking off the minimum criteria,
-we ask you provide general comments addressing the following:</p>
+<div id="grooming" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> GitHub Grooming</h1>
+<p>rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform.</p>
+<div id="make-your-repository-more-discoverable" class="section level2">
+<h2><span class="header-section-number">12.1</span> Make your repository more discoverable</h2>
+<div id="github-repo-topics" class="section level3">
+<h3><span class="header-section-number">12.1.1</span> GitHub repo topics</h3>
+<p>GitHub <a href="https://help.github.com/articles/classifying-your-repository-with-topics/">repo topics</a> help browsing and searching GitHub repos, and are digested by <a href="https://github.com/ropensci/codemetar"><code>codemetar</code></a> for rOpenSci registry keywords.</p>
+<p>We recommend:</p>
 <ul>
-<li>Does the code comply with general principles in the <a href="https://mozillascience.github.io/codeReview/review.html">Mozilla reviewing guide</a>?</li>
-<li>Does the package comply with the <a href="https://ropenscilabs.github.io/dev_guide/packaging-guide.html">rOpenSci packaging guide</a>?</li>
-<li>Are there improvements that could be made to the code style?</li>
-<li>Is there code duplication in the package that should be reduced?</li>
-<li>Are there user interface improvements that could be made?</li>
-<li>Are there performance improvements that could be made?</li>
-<li>Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?</li>
+<li><p>Adding “r” and “rstats” as topics to your package repo.</p></li>
+<li><p>Adding any other relevant topics to your package repo.</p></li>
 </ul>
-<p>We encourage you to use automated tools to facilitate your reviewing. These
-include:</p>
-<ul>
-<li>Checking the package’s logs on its continuous integration services (Travs-CI, Codecov, etc.)</li>
-<li>Running <code>devtools::check()</code> and <code>devtools::test()</code> on the package to find any errors that may be missed on the author’s system.</li>
-<li>Using the <strong>covr</strong> package to examine the extent of test coverage.</li>
-<li>Using the <a href="https://github.com/MangoTheCat/goodpractice"><strong>goodpractice</strong></a> package (<code>goodpractice::gp()</code>) to identify likely sources of errors and style issues.</li>
-<li>Using <code>devtools::spell_check()</code> to find spelling errors in DESCRIPTION and
-manual files, and RStudio’s spellchecker to find spelling errors in vignettes and
-README files.</li>
-</ul>
-<p>Please be respectful and kind to the authors in your reviews. Our <a href="policies.html#code-of-conduct">code of conduct</a> is mandatory for everyone involved in our review process.</p>
-<p>First-time reviewers may find it helpful to read some previous reviews. Here are reviews of <a href="https://github.com/ropensci/onboarding/issues/18"><strong>rusda</strong></a>, <a href="https://github.com/ropensci/onboarding/issues/20"><strong>textreuse</strong></a>, and <a href="https://github.com/ropensci/onboarding/issues/24"><strong>Ropenaq</strong></a>. The review of <a href="https://github.com/ropensci/onboarding/issues/61"><strong>dbhydroR</strong></a> uses our up-to-date reviewer’s template.</p>
-<p>We encourage you to ask questions and provide feedback on the review process on our <a href="https://discuss.ropensci.org">forum</a>.</p>
-<div id="submitting-the-review" class="section level2">
-<h2><span class="header-section-number">7.1</span> Submitting the Review</h2>
-<ul>
-<li>When your review is complete, paste it as a comment into the package onboarding issue.</li>
-<li>Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign
-additional or alternate reviewers if a review is excessively late.</li>
-<li>Additional comments are welcome in the same issue as a package onboarding request. We hope that package reviews will work as an ongoing conversation with the authors as opposed to a single round of reviews typical of manuscripts.</li>
-<li>You may also submit issues or pull requests directly to the package repo if you choose, but if you do, please link to them in the onboarding repo comment thread so we have a centralized record of your review.</li>
-<li>Please include an estimate of how many hours you spent on your review at the end of your review.</li>
-</ul>
+<p>We might make suggestions to you after your package is onboarded.</p>
 </div>
-<div id="review-follow-up" class="section level2">
-<h2><span class="header-section-number">7.2</span> Review follow-up</h2>
-<p>Authors should respond to the review within 2 weeks with their changes to the package
-in response to your review. At this stage, we ask that you respond as to whether
-the change sufficiently address any issues raised in your review. We encourage
-ongoing discussion between package authors and reviewers, and you may ask editors
-to clarify issues in the review thread, as well.</p>
+<div id="github-linguist" class="section level3">
+<h3><span class="header-section-number">12.1.2</span> GitHub linguist</h3>
+<p><a href="https://github.com/github/linguist">GitHub linguist</a> will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the “r” and “rstats” topics.</p>
+<p>We recommend overriding GitHub linguist by adding or modifying a .gitattributes to your repo in two cases:</p>
+<ul>
+<li><p>If you store html files in non standard places (not in docs/, e.g. in vignettes/) use the documentation overrides. Add <code>*.html linguist-documentation=true</code> to .gitattributes (<a href="https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5">Example in the wild</a>)</p></li>
+<li><p>If your repo contains code you haven’t authored, e.g. JavaScript code, add <code>inst/js/* linguist-vendored</code> to .gitattributes (<a href="https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1">Example in the wild</a>)</p></li>
+</ul>
+<p>This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable.</p>
+<p>More info about GitHub linguist overrides <a href="https://github.com/github/linguist#overrides">here</a>.</p>
+</div>
+</div>
+<div id="market-your-own-account" class="section level2">
+<h2><span class="header-section-number">12.2</span> Market your own account</h2>
+<ul>
+<li><p>As the author of an onboarded package, you are now a member of the ropensci GitHub organization. By default organization memberships are private, see <a href="https://help.github.com/articles/publicizing-or-hiding-organization-membership/">how to make it public in GitHub docs</a>.</p></li>
+<li><p>Even after that your package repo has been transferred to rOpenSci, you can <a href="https://help.github.com/articles/pinning-repositories-to-your-profile/">pin it under your own account</a>.</p></li>
+<li><p>In general we recommend adding at least an avatar (which doesn’t need to be your face!) and your name <a href="https://help.github.com/articles/customizing-your-profile/">to your GitHub profile</a>.</p></li>
+</ul>
 
 </div>
 </div>
@@ -216,8 +204,8 @@ to clarify issues in the review thread, as well.</p>
           </div>
         </div>
       </div>
-<a href="onboarding-guide-for-authors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="onboarding-guide-for-editors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="marketing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="onboarding-guide-for-authors.html">
-<link rel="next" href="onboarding-guide-for-editors.html">
+<link rel="prev" href="releasing.html">
+<link rel="next" href="grooming.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -162,62 +162,36 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="onboarding-guide-for-reviewers" class="section level1">
-<h1><span class="header-section-number">Chapter 7</span> Onboarding Guide for Reviewers</h1>
-<p>To review a package, please begin by copying our <a href="reviewer_template.md">reviewer template</a>
-and using it as a high-level checklist. In addition to checking off the minimum criteria,
-we ask you provide general comments addressing the following:</p>
+<div id="marketing" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> Marketing your package</h1>
+<p>We will help you promoting your package but here are some more things to keep in mind.</p>
 <ul>
-<li>Does the code comply with general principles in the <a href="https://mozillascience.github.io/codeReview/review.html">Mozilla reviewing guide</a>?</li>
-<li>Does the package comply with the <a href="https://ropenscilabs.github.io/dev_guide/packaging-guide.html">rOpenSci packaging guide</a>?</li>
-<li>Are there improvements that could be made to the code style?</li>
-<li>Is there code duplication in the package that should be reduced?</li>
-<li>Are there user interface improvements that could be made?</li>
-<li>Are there performance improvements that could be made?</li>
-<li>Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?</li>
-</ul>
-<p>We encourage you to use automated tools to facilitate your reviewing. These
-include:</p>
+<li><p>If you hear of an use case of your package, please send the link to Scott Chamberlain (e.g. via Slack or <a href="mailto:scott@ropensci.org">scott@ropensci.org</a>) for inclusion in the <a href="https://ropensci.github.io/biweekly/">rOpenSci biweekly newsletter</a>. You can also add a link to the use case in an “use cases in the wild” section of your README.</p></li>
+<li><p>When you release a new version of your package or release it to CRAN for the first time,</p>
 <ul>
-<li>Checking the package’s logs on its continuous integration services (Travs-CI, Codecov, etc.)</li>
-<li>Running <code>devtools::check()</code> and <code>devtools::test()</code> on the package to find any errors that may be missed on the author’s system.</li>
-<li>Using the <strong>covr</strong> package to examine the extent of test coverage.</li>
-<li>Using the <a href="https://github.com/MangoTheCat/goodpractice"><strong>goodpractice</strong></a> package (<code>goodpractice::gp()</code>) to identify likely sources of errors and style issues.</li>
-<li>Using <code>devtools::spell_check()</code> to find spelling errors in DESCRIPTION and
-manual files, and RStudio’s spellchecker to find spelling errors in vignettes and
-README files.</li>
+<li><p>Make a pull request to <a href="https://github.com/rweekly/rweekly.org">R Weekly</a> with a line about the release under the “New Releases” section (or “New Packages” for the first GitHub/CRAN release).</p></li>
+<li><p>Tweet about it using the “#rstats” hashtag and tag rOpenSci! Example.</p></li>
 </ul>
-<p>Please be respectful and kind to the authors in your reviews. Our <a href="policies.html#code-of-conduct">code of conduct</a> is mandatory for everyone involved in our review process.</p>
-<p>First-time reviewers may find it helpful to read some previous reviews. Here are reviews of <a href="https://github.com/ropensci/onboarding/issues/18"><strong>rusda</strong></a>, <a href="https://github.com/ropensci/onboarding/issues/20"><strong>textreuse</strong></a>, and <a href="https://github.com/ropensci/onboarding/issues/24"><strong>Ropenaq</strong></a>. The review of <a href="https://github.com/ropensci/onboarding/issues/61"><strong>dbhydroR</strong></a> uses our up-to-date reviewer’s template.</p>
-<p>We encourage you to ask questions and provide feedback on the review process on our <a href="https://discuss.ropensci.org">forum</a>.</p>
-<div id="submitting-the-review" class="section level2">
-<h2><span class="header-section-number">7.1</span> Submitting the Review</h2>
+<blockquote class="twitter-tweet" data-lang="ca">
+<p lang="en" dir="ltr">
+First version of the <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="rOpenSci"><strong>???</strong></span>)</span></a> ‘ssh’ 📦is on <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> CRAN: <a href="https://t.co/eXlhXLnOzT">https://t.co/eXlhXLnOzT</a> Secure Shell (SSH) Client for R
+</p>
+— Jeroen Ooms (<span class="citation">(<span class="citeproc-not-found" data-reference-id="opencpu"><strong>???</strong></span>)</span>) <a href="https://twitter.com/opencpu/status/1003934871830622208?ref_src=twsrc%5Etfw">5 de juny de 2018</a>
+</blockquote>
 <ul>
-<li>When your review is complete, paste it as a comment into the package onboarding issue.</li>
-<li>Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign
-additional or alternate reviewers if a review is excessively late.</li>
-<li>Additional comments are welcome in the same issue as a package onboarding request. We hope that package reviews will work as an ongoing conversation with the authors as opposed to a single round of reviews typical of manuscripts.</li>
-<li>You may also submit issues or pull requests directly to the package repo if you choose, but if you do, please link to them in the onboarding repo comment thread so we have a centralized record of your review.</li>
-<li>Please include an estimate of how many hours you spent on your review at the end of your review.</li>
+<li><p>Consider submitting a technote about the release to <a href="https://ropensci.org/technotes/">rOpenSci technotes blog</a>. Contact Stefanie Butland, rOpenSci community manager, e(e.g. via Slack <a href="mailto:orstefanie@ropensci.org">orstefanie@ropensci.org</a> ). Te guidelines about bcontributing a log post are <a href="https://github.com/ropensci/roweb2#contributing-a-blog-post">here</a>).</p></li>
+<li><p>Submit your package to lists of packages such as <a href="https://cran.r-project.org/web/views/">CRAN Task Views</a>, and <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=user%3Aropensci+%22task+view%22&amp;type=Repositories&amp;ref=searchresults">rOpenSci non-CRAN Task Views</a>.</p></li>
+</ul></li>
 </ul>
-</div>
-<div id="review-follow-up" class="section level2">
-<h2><span class="header-section-number">7.2</span> Review follow-up</h2>
-<p>Authors should respond to the review within 2 weeks with their changes to the package
-in response to your review. At this stage, we ask that you respond as to whether
-the change sufficiently address any issues raised in your review. We encourage
-ongoing discussion between package authors and reviewers, and you may ask editors
-to clarify issues in the review thread, as well.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="onboarding-guide-for-authors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="onboarding-guide-for-editors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="releasing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="grooming.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

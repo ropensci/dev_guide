@@ -18,6 +18,13 @@ is posted to the rOpenSci Slack onboarding channel, tagging all editors.
  - Responds to referrals from JOSS or other publication partners.
  - Monitors pace of review process and reminds other editors to move packages
  along as needed.
+ 
+## Responding to out-of-scope submissions
+
+Thank authors for their submission, explain the reasons of the decision, and direct them to other publication venues if relevant, and to rOpenSci discuss forum. Use wording from [Aims and scope](#aims-and-scope) in particular regarding the evolution of scope over time, and the overlap and differences between unconf/staff/onboarding development.
+
+[Examples of out-of-scope submissions and responses](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
+
 
 ## Handling Editor's Checklist
 
@@ -115,30 +122,6 @@ is posted to the rOpenSci Slack onboarding channel, tagging all editors.
 
 ### Package promotion:
 
--  Ask authors to write either a blog post or a tech-notes post for the package,
-   as appropriate.
--   Write a short summary for a regular "new packages round-up" blog post.
+-  Ask authors to write either a blog post or a tech-notes post for the package, as appropriate, and ping [Stefanie Butland](https://github.com/stefaniebutland), rOpenSci community manager.
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
--   Add package to [rOpenSci web site](https://github.com/ropensci/roweb)
--   Tweet, etc.
-
-
-### Automated reminders (CURRENTLY NOT OPERATIONAL)
-
-Instead of manually reminding authors/reviewers to do X or Y, we thought we'd try to make a robot to do these reminders. 
-
-__Heythere__ ([https://github.com/ropenscilabs/heythere](https://github.com/ropenscilabs/heythere)) is our Ruby application that runs on Heroku. 
-
-the process heythere goes through each day at about 530 pm:
-
-* Get all open issues in `onboarding`
-* Filter to only those issues with the `package` label
-* If issue has label `holding`, skip (as we're in a waiting state for somebody to get back to us)
-* If editor assigned, proceed - if not, skip
-* If reviews not in:
-    * If before deadline and after half way mark, ping saying how many days are remaining until due
-    * If after deadline, ping reminding reviewer to get a review in soon
-* If reviews in:
-    * After X days, ping author and ask if there's anything we can do to help
-
-We do our best to be humane, and nice.  We'll continue to improve the bot. Soon you may be able to talk back to the bot, and have it do useful things for you.
+-   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).

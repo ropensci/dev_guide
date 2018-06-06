@@ -1,4 +1,4 @@
-# Releasing a package
+# Releasing a package {#releasing}
 
 ## News file
 
