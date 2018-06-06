@@ -1,6 +1,6 @@
-#  (PART) Building Your Package {#building}
+#  (PART) Building Your Package {-}
 
-# Packaging Guide
+# Packaging Guide {#building}
 
 rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding process](https://github.com/ropensci/onboarding). To ensure a consistent style across all of our tools we have developed this concise guide. We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)).
 
@@ -26,7 +26,7 @@ rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding
 
 ```
 * The package name
-* Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), and any other badges
+* Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
 * Short description of the package
 * Installation instructions
 * Brief demonstration usage
@@ -40,10 +40,9 @@ rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding
 [![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/onboarding/issues/<issue_id>)
 ```
 
-where issue_id is the number of the issue in the onboarding repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/onboarding/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded, and will link to the review issue.
+where issue_id is the number of the issue in the onboarding repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/onboarding/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded (issue labelled "approved" and closed), and will link to the review issue.
 
-* If your package connects to a data source or online service, or wraps other software,
-consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
+* If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
 a README should not merely read, "Provides access to GooberDB," but also include,
 "..., an online repository of Goober sightings in South America.  More
 information about GooberDB, and documentation of database structure and metadata
@@ -53,8 +52,7 @@ can be found at *link*.
 
 * Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest creating a website for your package with [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`.
 
-* Consider using `devtools::use_readme_rmd()` to get a template for a `README.Rmd` file
-and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
+* Consider using `devtools::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
 * _After_ a package is accepted, the rOpenSci footer should be added to the bottom of the README file with the following markdown line:
 
@@ -76,15 +74,13 @@ and to automatically set up a pre-commit hook to ensure that `README.md` is alwa
 	both `?foobar` and `?foobar-package` for the package level manual file,
 	using `@aliases` roxygen tag.
 
-* The package should contain at least one vignette providing an introduction to
-the primary package functions and use-cases.
+* The package should contain at least one vignette providing an introduction to the primary package functions and use cases.
 
 * As is the case for a README, top-level documentation or vignettes may
 be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
 a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include,
 "..., an online repository of Goober sightings in South America.  More
-information about GooberDB, and documentation of database structure and metadata
-can be found at *link*.
+information about GooberDB, and documentation of database structure and metadata can be found at *link*.
 
 * We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
@@ -106,29 +102,19 @@ The `DESCRIPTION` file of a package should list package authors and contributors
 
 Only include reviewers after asking for their consent.  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5 (r-devel as of 2017-09-21).
 
-Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough. 🙂
+Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
 ## Testing
 
 * All packages should pass `R CMD check`/`devtools::check()` on all major platforms.
 
-* All packages should have a test suite that covers major functionality of
-the package.
+* All packages should have a test suite that covers major functionality of the package.
 
 * We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](http://r-pkgs.had.co.nz/tests.html).
 
 * `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
 
-* Check the extent of your test coverage using the [**covr** package](https://github.com/jimhester/covr). Including a coverage badge in your package's README makes it easy for reviewers to see how well-tested your package is. 100% coverage is not required, but editors
-and reviewers will use coverage reports as a starting point to evaluate that
-your test suite covers the important functionality of your package.
-
-
-* Even if youruse [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need
-to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use Gabor Csardi's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `devtools::spell_check()` to 
-find spelling errors in documentation.
-
-
+* Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use MangTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `devtools::spell_check()` to find spelling errors in documentation.
 
 ## Examples
 
@@ -137,20 +123,16 @@ find spelling errors in documentation.
 
 ## Package dependencies
 
-* Use `Imports` instead of `Depends` for packages providing functions from other
-packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies. If you use any packages in your examples sections, make sure to list those, if not already listed elsewhere, in `Enhances` section of package dependencies.
+* Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies. If you use any packages in your examples sections, make sure to list those, if not already listed elsewhere, in `Enhances` section of package dependencies.
 
-* For most cases where you must expose functions from dependencies to the user,
-you should import and re-export those individual functions rather than listing
-them in the `Depends` fields.  For instance, if functions in your package produce
-`raster` objects, you might re-export only printing and plotting functions from the
-**raster** package.
+* For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
 ## Recommended scaffolding
 
-
 * For http requests we strongly recommend using `httr` over `RCurl`.
+
 * For parsing JSON, use `jsonlite` instead of `rjson` or `RJSONIO`.
+
 * For parsing, creating, and manipulating XML, we strongly recommend `xml2` for most cases.
 
 ## Console messages
@@ -170,7 +152,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 
 ## Further guidance
 
-* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development and is available a a [free book on the web](http://r-pkgs.had.co.nz/).
+* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 

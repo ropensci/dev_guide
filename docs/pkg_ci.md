@@ -1,4 +1,4 @@
-# Continuous Integration Best Practices
+# Continuous Integration Best Practices {#ci}
 
 ## Why use continuous integration?
 
@@ -49,4 +49,4 @@ For continuous integration on Windows, see [R + Appveyor](https://github.com/krl
 Continuous integration should also include reporting of test coverage via a testing service such as [CodeCov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
 as `usethis::use_coverage()`. 
 
-If you use and several CI services, [code coverage reports will be merged](https://docs.codecov.io/docs/merging-reports).
+If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).

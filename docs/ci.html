@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="marketing.html">
-
+<link rel="prev" href="building.html">
+<link rel="next" href="package-development-security-best-practices.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -171,40 +171,49 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="grooming" class="section level1">
-<h1><span class="header-section-number">Chapter 12</span> GitHub Grooming</h1>
-<p>rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform.</p>
-<div id="make-your-repository-more-discoverable" class="section level2">
-<h2><span class="header-section-number">12.1</span> Make your repository more discoverable</h2>
-<div id="github-repo-topics" class="section level3">
-<h3><span class="header-section-number">12.1.1</span> GitHub repo topics</h3>
-<p>GitHub <a href="https://help.github.com/articles/classifying-your-repository-with-topics/">repo topics</a> help browsing and searching GitHub repos, and are digested by <a href="https://github.com/ropensci/codemetar"><code>codemetar</code></a> for rOpenSci registry keywords.</p>
-<p>We recommend:</p>
-<ul>
-<li><p>Adding “r” and “rstats” as topics to your package repo.</p></li>
-<li><p>Adding any other relevant topics to your package repo.</p></li>
-</ul>
-<p>We might make suggestions to you after your package is onboarded.</p>
+<div id="ci" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Continuous Integration Best Practices</h1>
+<div id="why-use-continuous-integration" class="section level2">
+<h2><span class="header-section-number">2.1</span> Why use continuous integration?</h2>
+<p>All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through <code>R CMD check</code>. rOpenSci packages continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.</p>
+<p>Both test status and code coverage should be reported via badges in your package README.</p>
 </div>
-<div id="github-linguist" class="section level3">
-<h3><span class="header-section-number">12.1.2</span> GitHub linguist</h3>
-<p><a href="https://github.com/github/linguist">GitHub linguist</a> will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the “r” and “rstats” topics.</p>
-<p>We recommend overriding GitHub linguist by adding or modifying a .gitattributes to your repo in two cases:</p>
+<div id="how-to-use-continuous-integration" class="section level2">
+<h2><span class="header-section-number">2.2</span> How to use continuous integration?</h2>
+<p>The <code>usethis</code> package offers a few functions for continuous integration setup, see <a href="http://usethis.r-lib.org/reference/ci.html">the docs</a>.</p>
+<p>Details will be provided below for different services.</p>
+</div>
+<div id="which-continuous-integration-services" class="section level2">
+<h2><span class="header-section-number">2.3</span> Which continuous integration service(s)?</h2>
+<p>Different continuous integration services will support builds on different operating system.</p>
+<p>R packages should have CI for all platforms when they contain:</p>
 <ul>
-<li><p>If you store html files in non standard places (not in docs/, e.g. in vignettes/) use the documentation overrides. Add <code>*.html linguist-documentation=true</code> to .gitattributes (<a href="https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5">Example in the wild</a>)</p></li>
-<li><p>If your repo contains code you haven’t authored, e.g. JavaScript code, add <code>inst/js/* linguist-vendored</code> to .gitattributes (<a href="https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1">Example in the wild</a>)</p></li>
+<li><p>Compiled code</p></li>
+<li><p>Java dependencies</p></li>
+<li><p>Dependencies on other languages</p></li>
+<li><p>Packages with system calls</p></li>
+<li><p>Text munging e.g. getting people’s names (in order to find encoding issues).</p></li>
+<li><p>Anything with file system / path calls</p></li>
 </ul>
-<p>This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable.</p>
-<p>More info about GitHub linguist overrides <a href="https://github.com/github/linguist#overrides">here</a>.</p>
+<div id="travis-ci-linux-and-mac-osx" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Travis CI (Linux and Mac OSX)</h3>
+<p>Travis offers continuous integration for Linux and Mac OSX.</p>
+<p>R is now a <a href="http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/">natively supported language on Travis-CI</a>, making it easier than ever to do continuous integration. See <a href="http://marker.to/NEr8Bd">R Packages</a> and Julia Silge’s <a href="http://juliasilge.com/blog/Beginners-Guide-to-Travis/">Beginner’s Guide to Travis-CI for R</a> for more help.</p>
+</div>
+<div id="appveyor-ci-windows" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Appveyor CI (Windows)</h3>
+<p>For continuous integration on Windows, see <a href="https://github.com/krlmlr/r-appveyor">R + Appveyor</a>.</p>
+</div>
+<div id="circle-ci" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Circle CI</h3>
+<p><a href="https://circleci.com/">Circle CI</a> is e.g. used by rOpenSci package <a href="https://github.com/ropensci/bomrang"><code>bomrang</code></a> as an alternative to Travis CI.</p>
 </div>
 </div>
-<div id="market-your-own-account" class="section level2">
-<h2><span class="header-section-number">12.2</span> Market your own account</h2>
-<ul>
-<li><p>As the author of an onboarded package, you are now a member of the ropensci GitHub organization. By default organization memberships are private, see <a href="https://help.github.com/articles/publicizing-or-hiding-organization-membership/">how to make it public in GitHub docs</a>.</p></li>
-<li><p>Even after that your package repo has been transferred to rOpenSci, you can <a href="https://help.github.com/articles/pinning-repositories-to-your-profile/">pin it under your own account</a>.</p></li>
-<li><p>In general we recommend adding at least an avatar (which doesn’t need to be your face!) and your name <a href="https://help.github.com/articles/customizing-your-profile/">to your GitHub profile</a>.</p></li>
-</ul>
+<div id="test-coverage" class="section level2">
+<h2><span class="header-section-number">2.4</span> Test coverage</h2>
+<p>Continuous integration should also include reporting of test coverage via a testing service such as <a href="https://codecov.io/">CodeCov</a> or <a href="https://coveralls.io/">Coveralls</a>. See the <a href="https://github.com/jimhester/covr">README for the <strong>covr</strong> package</a> for instructions, as well
+as <code>usethis::use_coverage()</code>.</p>
+<p>If you run coverage on several CI services <a href="https://docs.codecov.io/docs/merging-reports">the results will be merged</a>.</p>
 
 </div>
 </div>
@@ -213,8 +222,8 @@
           </div>
         </div>
       </div>
-<a href="marketing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="building.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="package-development-security-best-practices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
