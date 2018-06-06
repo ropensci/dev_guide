@@ -98,9 +98,7 @@ is posted to the rOpenSci Slack onboarding channel, tagging all editors.
     -   Re-activate CI services
         -  For Travis, activating the project in the ropensci account should be
            sufficient
-        -  For Appveyor, active the project in the ropensci account, then create
-           a permission profile that gives access to that project, and link
-           that profile to the two-person GitHub team.
+        -  For Appveyor, tell the author to update the GitHub link in their badge, but do not transfer the project: Appveyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For CodeCov, the webhook may need to be reset by the author.
 -   Close the onboarding issue. 
 
