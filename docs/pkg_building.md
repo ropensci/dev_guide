@@ -69,6 +69,8 @@ and to automatically set up a pre-commit hook to ensure that `README.md` is alwa
 
 * All exported package functions should be fully documented with examples.
 
+* All functions should document the type of object returned under the `@return` heading.
+
 * The package should contain top-level documentation for `?foobar`, (or
 `?foobar-package` if there is a naming conflict). Optionally, you can use
 	both `?foobar` and `?foobar-package` for the package level manual file,
