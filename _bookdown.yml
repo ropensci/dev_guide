@@ -11,3 +11,4 @@ rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "maintenance_marketing.Rmd", "maintenance_github_grooming.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
+favicon: images/icon_short_color.png

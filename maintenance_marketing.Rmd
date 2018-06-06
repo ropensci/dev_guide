@@ -12,6 +12,6 @@ We will help you promoting your package but here are some more things to keep in
     
     <blockquote class="twitter-tweet" data-lang="ca"><p lang="en" dir="ltr">First version of the <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw">@rOpenSci</a> &#39;ssh&#39; 📦is on <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> CRAN: <a href="https://t.co/eXlhXLnOzT">https://t.co/eXlhXLnOzT</a> Secure Shell (SSH) Client for R</p>&mdash; Jeroen Ooms (@opencpu) <a href="https://twitter.com/opencpu/status/1003934871830622208?ref_src=twsrc%5Etfw">5 de juny de 2018</a></blockquote>
     
-    * Consider submitting a technote about the release to [rOpenSci technotes blog](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci community manager, e(e.g. via Slack orstefanie@ropensci.org ). Te guidelines about bcontributing a log post are [here](https://github.com/ropensci/roweb2#contributing-a-blog-post)).
+    * Consider submitting a technote about the release to [rOpenSci technotes blog](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci community manager, (e.g. via Slack or stefanie@ropensci.org ). The guidelines about contributing a blog post can be found [here](https://github.com/ropensci/roweb2#contributing-a-blog-post)).
     
     * Submit your package to lists of packages such as [CRAN Task Views](https://cran.r-project.org/web/views/), and [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
