@@ -1,4 +1,4 @@
-# Onboarding policies
+# Onboarding policies {#policies}
 
 ## Package submission
 
@@ -158,7 +158,7 @@ chat to rOpenSci staff and the greater rOpenSci community. Anyone can also discu
 Should authors abandon the maintenance of an actively used package in our suite, we will
 consider petitioning CRAN to transfer package maintainer status to rOpenSci.
 
-## Code of Conduct
+## Code of Conduct {#code-of-conduct}
 
 * We are committed to providing a friendly, safe and welcoming
   environment for all, regardless of gender, sexual orientation,

@@ -3,7 +3,7 @@
 Mention the possibility to add reviewers as "rev" here again.
 
 
--   Consult our [policies](https://ropenscilabs.github.io/dev_guide/onboarding-policies.html) see if your package meets our
+-   Consult our [policies](#policies) see if your package meets our
     criteria for fitting into our suite and not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open
          an issue as a pre-submission inquiry to ask if the package is appropriate.
@@ -29,5 +29,5 @@ this repository and fill out the template.
 -   Once your package is approved, we will provide further instructions on
     transferring your repository to the rOpenSci repository.
 
-Our [code of conduct](https://ropenscilabs.github.io/dev_guide/onboarding-policies.html#code-of-conduct) is mandatory for everyone
+Our [code of conduct](#code-of-conduct) is mandatory for everyone
 involved in our review process.
