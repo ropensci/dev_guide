@@ -1,10 +1,10 @@
-# Marketing a package
+# Marketing your package
 
 We will help you promoting your package but here are some more things to keep in mind.
 
-* If you hear of an use case of your package, please send the link to Scott Chamberlain (e.g. via Slack or scott@ropensci.org) for inclusion in the rOpenSci biweekly newsletter. You can also add a link to the use case in an "use cases in the wild" section of your README.
+* If you hear of an use case of your package, please send the link to Scott Chamberlain (e.g. via Slack or scott@ropensci.org) for inclusion in the [rOpenSci biweekly newsletter](https://ropensci.github.io/biweekly/). You can also add a link to the use case in an "use cases in the wild" section of your README.
 
-* When you release a package, 
+* When you release a new version of your package or release it to CRAN for the first time, 
 
     * Make a pull request to [R Weekly](https://github.com/rweekly/rweekly.org) with a line about the release under the "New Releases" section (or "New Packages" for the first GitHub/CRAN release).
     
@@ -12,4 +12,4 @@ We will help you promoting your package but here are some more things to keep in
     
     <blockquote class="twitter-tweet" data-lang="ca"><p lang="en" dir="ltr">First version of the <a href="https://twitter.com/rOpenSci?ref_src=twsrc%5Etfw">@rOpenSci</a> &#39;ssh&#39; 📦is on <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> CRAN: <a href="https://t.co/eXlhXLnOzT">https://t.co/eXlhXLnOzT</a> Secure Shell (SSH) Client for R</p>&mdash; Jeroen Ooms (@opencpu) <a href="https://twitter.com/opencpu/status/1003934871830622208?ref_src=twsrc%5Etfw">5 de juny de 2018</a></blockquote>
     
-    * Consider submitting a technote about the release to [rOpenSci technotes blog](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci community manager, e.g. via stefanie@ropensci.org (the guidelines about blog post are [here](https://github.com/ropensci/roweb2#contributing-a-blog-post))
+    * Consider submitting a technote about the release to [rOpenSci technotes blog](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci community manager, e(e.g. via Slack orstefanie@ropensci.org ). Te guidelines about bcontributing a log post are [here](https://github.com/ropensci/roweb2#contributing-a-blog-post)).
