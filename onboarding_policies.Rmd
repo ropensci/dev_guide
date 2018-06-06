@@ -152,8 +152,8 @@ The above is a bit vague, so the following are a few areas of consideration.
 
 We urge package maintainers to make sure they are receiving GitHub notifications, as
 well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their
-spam box. In addition, join the rOpenSci Slack <https://ropensci.signup.team/> to
-chat to rOpenSci staff and the greater rOpenSci community.
+spam box. Authors of onboarded packages will be invited to the rOpenSci Slack to
+chat to rOpenSci staff and the greater rOpenSci community. Anyone can also discuss with the rOpenSci community [on rOpenSci discussion forum](https://discuss.ropensci.org/).
 
 Should authors abandon the maintenance of an actively used package in our suite, we will
 consider petitioning CRAN to transfer package maintainer status to rOpenSci.
