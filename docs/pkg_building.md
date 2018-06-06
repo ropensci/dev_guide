@@ -1,4 +1,4 @@
-#  (PART) Building Your Package {-}
+#  (PART) Building Your Package {#building}
 
 # Packaging Guide
 
