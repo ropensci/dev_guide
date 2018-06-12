@@ -1,0 +1,18 @@
+language: r
+sudo: required
+pandoc_version: 1.19.2.1
+
+branches:
+  only:
+    - master
+
+cache:
+  packages: true
+
+before_script:
+  - git fetch --unshallow
+  - chmod +x ./_build.sh
+  - chmod +x ./_deploy.sh
+
+script:
+  - ./_build.sh  && ./_deploy.sh

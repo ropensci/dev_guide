@@ -1,0 +1,9 @@
+Package: dev_guide
+Type: Website
+Title: rOpenSci Packages: Development, Maintenance, and Peer Review
+Version: 0.0.1
+Imports:
+  airtabler,
+  bookdown,
+  purrr
+Remotes: bergant/airtabler
