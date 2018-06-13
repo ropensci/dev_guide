@@ -18,6 +18,8 @@ rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding
 
 * For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operator (`%>%`)
 
+* Package functions importing data should not import data to the global environment, but return objects (required). Assignments to the global environment are to be avoided in general.
+
 * For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](http://r-pkgs.had.co.nz/r.html).
 
 ## README
