@@ -18,4 +18,4 @@ This bookdown was started using [Sean Kross](https://github.com/seankross)' mini
 All of the content of this repository is licensed 
 [CC-BY-SA](https://creativecommons.org/publicdomain/zero/1.0/).
 
-Deployment is done using the rOpenSci the [`tic`](https://github.com/ropenscilabs/tic) and [`travis`](https://github.com/ropenscilabs/travis) packages.
+Deployment is done using the rOpenSci [`tic`](https://github.com/ropenscilabs/tic) and [`travis`](https://github.com/ropenscilabs/travis) packages.
