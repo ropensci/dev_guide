@@ -1,7 +1,7 @@
 book_filename: "ropensci-dev-guide"
 chapter_name: "Chapter "
 repo: https://github.com/ropenscilabs/dev_guide
-output_dir: _docs
+output_dir: _book
 rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "pkg_ci.Rmd", "pkg_security.Rmd",
            "onboarding_intro.Rmd", "onboarding_policies.Rmd",
