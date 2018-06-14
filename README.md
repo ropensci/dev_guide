@@ -1,15 +1,15 @@
 rOpenSci Packages: Development, Maintenance, and Peer Review
 =============================================================
 
-[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![Build Status](https://travis-ci.org/ropenscilabs/dev_guide.svg?branch=master)](https://travis-ci.org/ropenscilabs/dev_guide)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip) [![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
 
-Source of the extended version of the onboarding packaging guide. [Read it here](https://ropenscilabs.github.io/dev_guide/).
+Source of the extended version of the onboarding packaging guide. [Read it here](https://ropensci.github.io/dev_guide/).
 
 ## Contributing
 
 ### Suggestions and updates
 
-These guidelines are a work in progress for packages contributed to the rOpenSci suite. Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropenscilabs/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also make a pull request, please edit the .Rmd files that are at the root of this repository. The book will be built and automatically deployed when your PR is merged.
+These guidelines are a work in progress for packages contributed to the rOpenSci suite. Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also make a pull request, please edit the .Rmd files that are at the root of this repository. The book will be built and automatically deployed when your PR is merged.
 
 ### Technical details
 
