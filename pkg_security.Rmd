@@ -1,6 +1,12 @@
 # Package Development Security Best Practices
 
-Link out to the bookdown started at unconf17, and try to get that book updated. Also see the unconf18 security related projects.
+This chapter isn't written yet. It should mention the elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017, or have a link to this book/a similar book when written.
+
+Also interesting are these unconf projects:
+
+* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/)
+
+* [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/)
 
 ## Misc
 
