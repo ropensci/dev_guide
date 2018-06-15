@@ -60,7 +60,7 @@ Thank authors for their submission, explain the reasons of the decision, and dir
 ```
 
 -   Use the #onboarding slack channel for discussion about potential reviewers.
--   Use the [email template](https://github.com/ropensci/onboarding/blob/master/review_request_template.md) if needed for inviting reviewers
+-   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from
         you in a week, I'll assume you are unable to review," so as to give a
         clear deadline when you'll move on to looking for someone else.
