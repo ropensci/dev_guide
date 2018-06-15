@@ -92,6 +92,7 @@ information about GooberDB, and documentation of database structure and metadata
 
 * When using `roxygen2`, add `#' @noRd` to internal functions.
 
+* Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
 ## Authorship
 
