@@ -97,7 +97,7 @@ and software journals such as JOSS, JSS, or the R journal.
 Note that not all packages developed internally by rOpenSci or through our events
 or collaborations are in-scope for onboarding process.
 
-## Package overlap
+## Package overlap {#overlap}
 
 rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the ROpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:
 

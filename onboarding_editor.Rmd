@@ -32,9 +32,9 @@ Thank authors for their submission, explain the reasons of the decision, and dir
 
 -   Tag issue appropriately with `package`, `topic:`, etc. tags. Add `1/editor-checks` tag
     and assign a main editor if you haven't already.
--   Use the [editor template](https://github.com/ropensci/onboarding/blob/master/editor_template.md) to guide initial checks and record your respose to the submission.
+-   Use the [editor template](#editortemplate) to guide initial checks and record your respose to the submission.
 -   Check that template has been properly filled out
--   Check against policies for [fit](policies.md#fit) and [overlap](policies.md#fit).
+-   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
     Initiate discussion via slack #onboarding channel if needed for edge cases.
     If reject, close issue, direct authors to other groups/repos as appropriate.
 -   Check that mandatory parts of template are complete.  If not, close issue,

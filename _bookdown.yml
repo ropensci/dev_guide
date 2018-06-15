@@ -9,7 +9,7 @@ rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "onboarding_reviewer.Rmd", "onboarding_editor.Rmd",
            "maintenance_collaboration.Rmd","maintenance_releases.Rmd",
            "maintenance_marketing.Rmd", "maintenance_github_grooming.Rmd",
-           "maintenance_evolution.Rmd"]
+           "maintenance_evolution.Rmd", "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
 
