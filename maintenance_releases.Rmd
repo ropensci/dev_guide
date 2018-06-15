@@ -1,8 +1,8 @@
 # Releasing a package {#releasing}
 
-## News file
+## News file {#news}
 
-* It is mandatory to use a `NEWS` or `NEWS.md` file in the root of your package.
+* It is mandatory to use a `NEWS` or `NEWS.md` file in the root of your package. We recommend using `NEWS.md` to make the file [more browsable](http://happygitwithr.com/repo-browsability.html).
 See the sample [NEWS file](#newstemplate)
 * Update the news file before every CRAN release, with a section with the package name,
 version and date of release, like:
