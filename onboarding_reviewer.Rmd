@@ -1,6 +1,6 @@
 # Onboarding Guide for Reviewers
 
-To review a package, please begin by copying our [reviewer template](#reviewtemplate)
+To review a package, please begin by copying our [review template](#reviewtemplate)
 and using it as a high-level checklist.  In addition to checking off the minimum criteria,
 we ask you provide general comments addressing the following:
 
