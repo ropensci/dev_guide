@@ -22,7 +22,7 @@ Reviewers:
 Due date:
 ```
 
-# NEWS template {##newstemplate}
+# NEWS template {#newstemplate}
 
 ```
 foobar 0.2.0 (2016-04-01)
