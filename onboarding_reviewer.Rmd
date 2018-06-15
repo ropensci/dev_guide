@@ -1,11 +1,11 @@
 # Onboarding Guide for Reviewers
 
-To review a package, please begin by copying our [reviewer template](reviewer_template.md)
+To review a package, please begin by copying our [reviewer template](#reviewtemplate)
 and using it as a high-level checklist.  In addition to checking off the minimum criteria,
 we ask you provide general comments addressing the following:
 
 - Does the code comply with general principles in the [Mozilla reviewing guide](https://mozillascience.github.io/codeReview/review.html)?
-- Does the package comply with the [rOpenSci packaging guide](https://ropenscilabs.github.io/dev_guide/packaging-guide.html)?
+- Does the package comply with the [rOpenSci packaging guide](#building)?
 - Are there improvements that could be made to the code style?
 - Is there code duplication in the package that should be reduced?
 - Are there user interface improvements that could be made?
