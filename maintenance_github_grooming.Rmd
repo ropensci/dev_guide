@@ -10,7 +10,7 @@ GitHub [repo topics](https://help.github.com/articles/classifying-your-repositor
 
 We recommend:
 
-* Adding "r" and "rstats" as topics to your package repo.
+* Adding "r", "r-package" and "rstats" as topics to your package repo.
 
 * Adding any other relevant topics to your package repo.
 
@@ -18,7 +18,7 @@ We might make suggestions to you after your package is onboarded.
 
 ### GitHub linguist
 
-[GitHub linguist](https://github.com/github/linguist) will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the "r" and "rstats" topics.
+[GitHub linguist](https://github.com/github/linguist) will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the "r", "r-package" and "rstats" topics.
 
 We recommend overriding GitHub linguist by adding or modifying a .gitattributes to your repo in two cases:
 
