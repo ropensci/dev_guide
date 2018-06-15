@@ -56,7 +56,7 @@ can be found at *link*.
 
 * Consider using `devtools::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
-* _After_ a package is accepted, the rOpenSci footer should be added to the bottom of the README file with the following markdown line:
+* _After_ a package is accepted but before transfer, the rOpenSci footer should be added to the bottom of the README file with the following markdown line:
 
 ```
 [![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
