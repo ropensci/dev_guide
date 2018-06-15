@@ -113,9 +113,9 @@ overlapping packages in their README and/or vignettes.
 
 We encourage developers whose packages are not accepted due to overlap to still consider submittal to other repositories or journals.
 
-## Role of the rOpenSci leadership team
+## Role of the rOpenSci team
 
-Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, rOpenSci's [staff](http://ropensci.org/about/#leadership) will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner. 
+Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, the rOpenSci team will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner. 
 
 ## Ownership of packages
 
