@@ -8,11 +8,11 @@ Having contributors will improve your package, and if you onboard some of them a
 
 ### Code of conduct
 
-* We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You can document your code of conduct in a `CODE_OF_CONDUCT.md` or `CONDUCT.md` file in the package root directory, and linking to this file from the `README.md` file.  `devtools::use_code_of_conduct()` will add the Contributor Covenant template to your package.
+We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You can document your code of conduct in a `CODE_OF_CONDUCT.md` or `CONDUCT.md` file in the package root directory, and linking to this file from the `README.md` file.  `devtools::use_code_of_conduct()` will add the Contributor Covenant template to your package.
 
 ### Contributing guide
 
-* Please include contribution guidelines in the README or CONTRIBUTING.
+Please include contribution guidelines in the README or CONTRIBUTING.
 
 ### Issue labelling
 
@@ -28,4 +28,6 @@ Cf ["Explore and extend a pull request" in happygitwithr.com](http://happygitwit
 
 If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. Also consider adding their name near the feature/bug fix line in [NEWS.md](#news) We recommend your being generous with such acknowledgements.
 
-If you give someone access to the repository, please contact one of the editors or [Stefanie Butland](github.com/stefaniebutland) so that they might get invited to rOpenSci slack workspace.
+### Onboarding collaborators
+
+If you give someone access to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that they might get invited to rOpenSci slack workspace.

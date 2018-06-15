@@ -49,7 +49,7 @@ information and areas or expertise. We
 
 ## Editors and reviewers
 
-### Associate editors
+### Associate editors {#associateditors}
 
 rOpenSci's onboarding process is run by:
 
