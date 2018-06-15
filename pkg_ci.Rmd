@@ -50,3 +50,7 @@ Continuous integration should also include reporting of test coverage via a test
 as `usethis::use_coverage()`. 
 
 If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).
+
+## Even more CI: OpenCPU
+
+After transfer to the ropensci organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This allows an additional CI service for package authors that that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu api](https://www.opencpu.org/api.html#api-json). For more details about this service consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
