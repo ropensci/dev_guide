@@ -4,6 +4,9 @@ Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Version: 0.0.1
 Imports:
   airtabler,
+  htmltools,
   bookdown,
   purrr
-Remotes: bergant/airtabler
+Remotes: 
+  bergant/airtabler,
+  rstudio/htmltools
