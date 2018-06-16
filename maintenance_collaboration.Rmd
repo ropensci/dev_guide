@@ -2,7 +2,7 @@
 
 # Collaboration Guide
 
-Having contributors will improve your package, and if you onboard some of them as package authors with push right to the repo, your package will be more sustainably developed.
+Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
 
 ## Make your repo contribution- and collaboration- friendly
 
@@ -30,4 +30,8 @@ If someone contributes to your repository consider adding them in DESCRIPTION, a
 
 ### Onboarding collaborators
 
-If you give someone access to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that they might get invited to rOpenSci slack workspace.
+If you give someone write permissions to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that this new contributor might
+
+* get invited to ropensci GitHub organization (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
+
+* get invited to rOpenSci slack workspace.
