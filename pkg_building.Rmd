@@ -68,6 +68,8 @@ can be found at *link*.
 [![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](http://ropensci.org)
 ```
 
+* Add a code of conduct and contribution guidelines, cf [this section of the book](#friendlyfiles).
+
 * See the [gistr README](https://github.com/ropensci/gistr#gistr) for a good example README to follow.
 
 ## Documentation
