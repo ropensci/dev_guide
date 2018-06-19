@@ -1,6 +1,8 @@
 # Marketing your package {#marketing}
 
+```{block, type='summaryblock'}
 We will help you promoting your package but here are some more things to keep in mind.
+```
 
 * If you hear of an use case of your package, please send the link to Scott Chamberlain (e.g. via Slack or scott@ropensci.org) for inclusion in the [rOpenSci biweekly newsletter](https://ropensci.github.io/biweekly/). You can also add a link to the use case in an "use cases in the wild" section of your README.
 
