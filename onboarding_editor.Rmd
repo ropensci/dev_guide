@@ -39,9 +39,7 @@ Thank authors for their submission, explain the reasons of the decision, and dir
     If reject, close issue, direct authors to other groups/repos as appropriate.
 -   Check that mandatory parts of template are complete.  If not, close issue,
     direct authors toward appropriate instructions.
--   Run run automated tests: `devtools::check()`, `goodpractice::gp()`, `devtools::spell_check()`. Run
-    `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Report
-    relevant outputs in the issue thread.
+-   Run run automated tests: `devtools::check()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Report relevant outputs in the issue thread.
     -   For packages with compiled code or linking to external libraries or languages,
         check on multiple platforms, using win-builder, r-hub, or other editors
         as needed.
