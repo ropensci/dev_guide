@@ -132,6 +132,14 @@ foobar 0.2.0 (2016-04-01)
   * `hello_world()` now deprecated and will be removed in a
      future version, use `hello_mars()`
 
+### DOCUMENTATION FIXES
+
+  * Clarified the role of `hello_mars()` vs. `goodbye_mars()`
+
+
+### (a special: any heading grouping a large number of changes under one thing) 
+
+    * blablabla.  
 
 foobar 0.1.0 (2016-01-01)
 =========================
