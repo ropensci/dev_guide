@@ -1,6 +1,6 @@
 #  (PART) Maintaining Packages {-}
 
-# Collaboration Guide
+# Collaboration Guide {#collaboration}
 
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
 
