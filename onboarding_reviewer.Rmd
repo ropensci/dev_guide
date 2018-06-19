@@ -31,7 +31,7 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 -  Using the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) to identify likely sources of errors and style issues. Most exceptions will need to be justified by the author in the particular context of their package.
 -  Using `devtools::spell_check()` to find spelling errors in DESCRIPTION and manual files, and RStudio's spellchecker to find spelling errors in vignettes and README files.
 
-First-time reviewers may find it helpful to read some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples (note that your reviews do not need to be as long as examples):
+First-time reviewers may find it helpful to read (about) some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples of reviews (note that your reviews do not need to be as long as examples):
 
 * `rtika` [review 1](https://github.com/ropensci/onboarding/issues/191#issuecomment-367166658) and [review 2](https://github.com/ropensci/onboarding/issues/191#issuecomment-368254623)
 
@@ -40,6 +40,8 @@ First-time reviewers may find it helpful to read some previous reviews. In gener
 * `bowerbird` [pre-review comment](https://github.com/ropensci/onboarding/issues/139#issuecomment-322713737), [review 1](https://github.com/ropensci/onboarding/issues/139#issuecomment-342380870), [review 2](https://github.com/ropensci/onboarding/issues/139#issuecomment-342724843).
 
 * `rusda` [review](https://github.com/ropensci/onboarding/issues/18#issuecomment-120445737) (from before we had a review template)
+
+You can read blog posts written by reviewers on our blog [via this link](https://ropensci.org/tags/reviewer/). In particular, in [this blog post by Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) read her take about the "naïve user" role a reviewer can take to provide useful feedback even without being experts of the package's topic or implementation, by asking themselves _"What did I think this thing would do? Did it do it? What are things that scare me off?"_. In [another blog post](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explains how she alternated between using the package and checking its code.
 
 We encourage you to ask questions and provide feedback on the review process on our [forum](https://discuss.ropensci.org). 
 
