@@ -1,5 +1,9 @@
 # Onboarding Guide for Authors
 
+```{block, type='summaryblock'}
+This concise guide presents the onboarding process for you as a package author.
+```
+
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
 -   Read and follow [our packaging style guide](#building) to ensure your package
