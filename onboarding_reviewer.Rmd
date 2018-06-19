@@ -25,7 +25,15 @@ README files.
 
 Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process.
 
-First-time reviewers may find it helpful to read some previous reviews.  Here are reviews of [**rusda**](https://github.com/ropensci/onboarding/issues/18), [**textreuse**](https://github.com/ropensci/onboarding/issues/20), and [**Ropenaq**](https://github.com/ropensci/onboarding/issues/24).  The review of [**dbhydroR**](https://github.com/ropensci/onboarding/issues/61) uses our up-to-date reviewer's template.
+First-time reviewers may find it helpful to read some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples (note that your reviews do not need to be as long as examples):
+
+* `rtika` [review 1](https://github.com/ropensci/onboarding/issues/191#issuecomment-367166658) and [review 2](https://github.com/ropensci/onboarding/issues/191#issuecomment-368254623)
+
+* `NLMR` [review 1](https://github.com/ropensci/onboarding/issues/188#issuecomment-368042693) and [review 2](https://github.com/ropensci/onboarding/issues/188#issuecomment-369310831)
+
+* `bowerbird` [pre-review comment](https://github.com/ropensci/onboarding/issues/139#issuecomment-322713737), [review 1](https://github.com/ropensci/onboarding/issues/139#issuecomment-342380870), [review 2](https://github.com/ropensci/onboarding/issues/139#issuecomment-342724843).
+
+* `rusda` [review](https://github.com/ropensci/onboarding/issues/18#issuecomment-120445737) (from before we had a review template)
 
 We encourage you to ask questions and provide feedback on the review process on our [forum](https://discuss.ropensci.org). 
 
