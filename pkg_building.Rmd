@@ -36,6 +36,8 @@ rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding
 * Citation information
 ```
 
+If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](http://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
+
 * Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
 ```
