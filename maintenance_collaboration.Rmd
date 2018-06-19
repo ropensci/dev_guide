@@ -5,7 +5,7 @@
 ```{block, type='summaryblock'}
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
 
-This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration- friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and in[ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci organization.
+This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration- friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci organization.
 ```
 
 ## Make your repo contribution- and collaboration- friendly {#friendlyfiles}
