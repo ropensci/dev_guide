@@ -2,7 +2,11 @@
 
 # Collaboration Guide {#collaboration}
 
+```{block, type='summaryblock'}
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
+
+This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration- friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and in[ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci organization.
+```
 
 ## Make your repo contribution- and collaboration- friendly {#friendlyfiles}
 
@@ -18,7 +22,7 @@ Please include contribution guidelines in the README or CONTRIBUTING.
 
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/)
 
-## Working with collaborators
+## Working with collaborators {#workingcollaborators}
 
 ### Assessing a PR
 
