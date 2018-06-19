@@ -1,7 +1,6 @@
 # Onboarding Guide for Reviewers
 
-To review a package, please begin by copying our [review template](#reviewtemplate)
-and using it as a high-level checklist.  In addition to checking off the minimum criteria,
+To review a package, please begin by copying our [review template](#reviewtemplate) and using it as a high-level checklist.  In addition to checking off the minimum criteria,
 we ask you provide general comments addressing the following:
 
 - Does the code comply with general principles in the [Mozilla reviewing guide](https://mozillascience.github.io/codeReview/review.html)?
@@ -12,18 +11,15 @@ we ask you provide general comments addressing the following:
 - Are there performance improvements that could be made?
 - Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?
 
-We encourage you to use automated tools to facilitate your reviewing.  These
-include:
+Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review withing 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
+
+We encourage you to use automated tools to facilitate your reviewing.  These include:
 
 -  Checking the package's logs on its continuous integration services (Travs-CI, Codecov, etc.)
 -  Running `devtools::check()` and `devtools::test()` on the package to find any errors that may be missed on the author's system.
 -  Using the **covr** package to examine the extent of test coverage.
 -  Using the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) to identify likely sources of errors and style issues.
--  Using `devtools::spell_check()` to find spelling errors in DESCRIPTION and
-manual files, and RStudio's spellchecker to find spelling errors in vignettes and
-README files.
-
-Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process.
+-  Using `devtools::spell_check()` to find spelling errors in DESCRIPTION and manual files, and RStudio's spellchecker to find spelling errors in vignettes and README files.
 
 First-time reviewers may find it helpful to read some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples (note that your reviews do not need to be as long as examples):
 
