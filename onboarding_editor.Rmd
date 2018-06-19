@@ -1,9 +1,15 @@
 # Onboarding Guide for Editors
 
+```{block, type='summaryblock'}
 Onboarding at rOpenSci is managed by a team of editors.  We are piloting
 a system of a rotating Editor-in-Chief (EiC).
 
-## EiC Responsibilities
+This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), and [how to respond to an out-of-scope submission](#outofscoperesponse).
+
+If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
+```
+
+## EiC Responsibilities {#eicchecklist}
 
 The EiC serves for 3 months or a time agreed to by all members of the editorial
 board. The EiC plays the following roles
@@ -19,14 +25,14 @@ is posted to the rOpenSci Slack onboarding channel, tagging all editors.
  - Monitors pace of review process and reminds other editors to move packages
  along as needed.
  
-## Responding to out-of-scope submissions
+## Responding to out-of-scope submissions {#outofscoperesponse}
 
 Thank authors for their submission, explain the reasons of the decision, and direct them to other publication venues if relevant, and to rOpenSci discuss forum. Use wording from [Aims and scope](#aims-and-scope) in particular regarding the evolution of scope over time, and the overlap and differences between unconf/staff/onboarding development.
 
 [Examples of out-of-scope submissions and responses](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
 
-## Handling Editor's Checklist
+## Handling Editor's Checklist {#editorchecklist}
 
 ### Upon submission:
 
