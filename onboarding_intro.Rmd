@@ -1,6 +1,6 @@
 #  (PART) Onboarding Packages {-}
 
-# Onboarding, Why? What?
+# Onboarding, Why? What? {#onboardingintro}
 
 ```{block, type='summaryblock'}
 This chapter is a general intro to our onboarding system of packages.
