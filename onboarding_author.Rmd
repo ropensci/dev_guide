@@ -2,7 +2,7 @@
 
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
--   Follow our packaging style guide to ensure your package
+-   Read and follow [our packaging style guide](#building) to ensure your package
   meets our style and quality criteria.
     -   If you would like your package also submitted to
         [Journal of Open-Source Software](http://joss.theoj.org/) (JOSS), it should include a `paper.md` file describing the package. More detail on JOSS's requirements can be found [at their website](http://joss.theoj.org/about#author_guidelines).

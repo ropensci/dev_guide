@@ -6,6 +6,7 @@
 rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding process](https://github.com/ropensci/onboarding). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration](#ci). Further guidance for after onboarding is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
 We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)).
+
 ```
 
 ## Package naming
@@ -161,3 +162,4 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 
 * If you are submitting a package to rOpenSci via the [onboarding repo](https://github.com/ropensci/onboarding), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
 
+* Before submitting a package use the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of `foo` might be generally bad and therefore flagged by `goodpractice` but you had a good reason to use it in your package.
