@@ -26,7 +26,7 @@ Please include contribution guidelines in the README or a CONTRIBUTING.md. These
 
 * Whether potential contributors should open an issue proposing a substrantial change before opening a PR implementing it, to make sure you agree.
 
-You can have a look at the [tidyverse contributing.md template](https://github.com/r-lib/usethis/blob/8483d1edbec15e36ba72bf1f4fb5ab5dad44acf7/.github/CONTRIBUTING.md) for inspiration.
+You can have a look at the [tidyverse contributing.md template](https://github.com/r-lib/usethis/blob/8483d1edbec15e36ba72bf1f4fb5ab5dad44acf7/.github/CONTRIBUTING.md) for inspiration. It can be added to a package (and then modified) by using `usethis::use_tidy_contributing()`.
 
 ### Issue labelling
 
