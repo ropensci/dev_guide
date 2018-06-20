@@ -20,6 +20,7 @@ To review a package, please begin by copying our [review template](#reviewtempla
 - Are there user interface improvements that could be made?
 - Are there performance improvements that could be made?
 - Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?
+- If you you have your own relevant data/problem, work through it with the package. You'll find rough edges and use-cases the author didn't.
 
 Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review withing 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
 
