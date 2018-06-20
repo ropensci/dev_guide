@@ -24,11 +24,21 @@ You can use labels such as "help wanted" and "good first issue" to help potentia
 
 ## Working with collaborators {#workingcollaborators}
 
+### Onboarding collaborators
+
+There's no general rOpenSci rule as to how you should onboard collaborators. You should increase their rights to the repo as you gain trust, and you should definitely ackonwledge contributions (see[this section](#attributions)).
+
+You can ask a new collaborator to make PRs (see following section for assessing a PR locally, i.e. beyond CI checks) to dev/master and assess them before merging, and after a while let them push to master, although you might want to keep a system of PR reviews... even for yourself once you have team mates!
+
+A possible model for onboarding collaborators is provided by Jim Hester in [his `lintr` repo](https://github.com/jimhester/lintr/issues/318). 
+
+If your problem is _recruiting_ collaborators, you can post an open call like Jim Hester's [on Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub]((https://github.com/jimhester/lintr/issues/318)), and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.
+
 ### Assessing a PR
 
 Cf ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html)
 
-### Be generous with attributions
+### Be generous with attributions {#attributions}
 
 If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. Also consider adding their name near the feature/bug fix line in [NEWS.md](#news) We recommend your being generous with such acknowledgements.
 
@@ -40,7 +50,7 @@ As a reminder from [our packaging guidelines](#building) if your package was rev
 ```
 Only include reviewers after asking for their consent.  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5 (r-devel as of 2017-09-21). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
-### Onboarding collaborators
+### Welcoming collaborators to rOpenSci
 
 If you give someone write permissions to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that this new contributor might
 
