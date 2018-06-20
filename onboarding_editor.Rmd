@@ -77,20 +77,14 @@ board. The EiC plays the following roles
 -   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
 -   Ask authors to migrate to `ropensci`
-    -   Create a two-person team in the ropensci organization, named for the
-        package, with yourself and the package author as members.
+    -   Create a two-person team in the ropensci organization, named for the package, with yourself and the package author as members.
     -   Have the author transfer the repository to `ropensci`
-    -   Go to the repository settings in the `ropensci` organization and give
-        the two-person team "Write" access to the repository. ("Admin" access
-        may be temporarily granted for purposes such as creating Zenodo releases,
-        setting up package documentation options, etc.)
-
+    -   Go to the repository settings in the `ropensci` organization and give the author "Admin" access to the repository. 
 -   Ask author to:
     -   Add rOpenSci footer to README
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
-        -  For Travis, activating the project in the ropensci account should be
-           sufficient
+        -  For Travis, activating the project in the ropensci account should be sufficient
         -  For Appveyor, tell the author to update the GitHub link in their badge, but do not transfer the project: Appveyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For CodeCov, the webhook may need to be reset by the author.
 -   Close the onboarding issue. 
