@@ -149,7 +149,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` method, as these methods of printing messages are harder for the user to suppress.
 
-##  Miscellaneous CRAN gotchas
+##  Miscellaneous CRAN gotchas {#crangotchas}
 
 This is a collection of CRAN gotchas that are worth avoiding at the outset.
 

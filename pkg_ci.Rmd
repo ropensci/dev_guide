@@ -18,7 +18,7 @@ The `usethis` package offers a few functions for continuous integration setup, s
 
 Details will be provided below for different services.
 
-## Which continuous integration service(s)?
+## Which continuous integration service(s)? {#whichci}
 
 Different continuous integration services will support builds on different operating system.
 
