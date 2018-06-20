@@ -16,7 +16,17 @@ We require that you use a code of conduct such as the [Contributor Covenant](htt
 
 ### Contributing guide
 
-Please include contribution guidelines in the README or CONTRIBUTING.
+Please include contribution guidelines in the README or a CONTRIBUTING.md. These guidelines can indicate:
+
+* How to open issues (e.g. do you want bug reports to use [`reprex`](https://github.com/tidyverse/reprex)?)
+
+* How your package is built (`roxygen2`, `pkgdown` so that people know which files to edit to correct a typo for instance)
+
+* The coding style (see [the very brief style guide in `osmdata` README](https://github.com/ropensci/osmdata#style-guide)).
+
+* Whether potential contributors should open an issue proposing a substrantial change before opening a PR implementing it, to make sure you agree.
+
+You can have a look at the [tidyverse contributing.md template](https://github.com/r-lib/usethis/blob/8483d1edbec15e36ba72bf1f4fb5ab5dad44acf7/.github/CONTRIBUTING.md) for inspiration.
 
 ### Issue labelling
 
