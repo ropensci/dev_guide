@@ -60,7 +60,9 @@ As a reminder from [our packaging guidelines](#building) if your package was rev
     person("Bea", "Hernández", role = "rev",
     comment = "Bea reviewed the package for ropensci, see <https://github.com/ropensci/onboarding/issues/116>"),
 ```
-Only include reviewers after asking for their consent.  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5 (r-devel as of 2017-09-21). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
+Only include reviewers after asking for their consent.  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5. As of June 2018 you need to use [`roxygen2` dev version](https://github.com/klutometis/roxygen#installation) for the list of authors in the package-level documentation to be compiled properly with the "rev" role (because this is a MARC role not included yet in [`royxgen2` CRAN version from February 2017](https://cran.r-project.org/web/packages/roxygen2/index.html)).
+
+Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
 ### Welcoming collaborators to rOpenSci
 
