@@ -44,9 +44,11 @@ A possible model for onboarding collaborators is provided by Jim Hester in [his 
 
 If your problem is _recruiting_ collaborators, you can post an open call like Jim Hester's [on Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub]((https://github.com/jimhester/lintr/issues/318)), and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.
 
-### Assessing a PR
+### Working with collaborators (including yourself)
 
-Cf ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html)
+You could implement the [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/).
+
+To asses PR cf ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html)
 
 ### Be generous with attributions {#attributions}
 
