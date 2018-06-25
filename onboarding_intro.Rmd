@@ -49,7 +49,7 @@ editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon")
 reviewers <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
                                 table = "Reviewers")
 reviewers <- reviewers$Reviewers$select_all()
-reviewers <- reviewers[map_lgl(reviewers$Reviews, 
+reviewers <- reviewers[purrr::map_lgl(reviewers$Reviews, 
                                ~!is.null(.)) & 
                          !(reviewers$name %in% c(editors, "???")), ]
 # get last names
