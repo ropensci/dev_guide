@@ -6,7 +6,8 @@ Imports:
   airtabler,
   htmltools,
   bookdown,
-  purrr
+  purrr,
+  humaniformat
 Remotes: 
   bergant/airtabler,
   rstudio/htmltools

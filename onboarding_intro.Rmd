@@ -45,12 +45,15 @@ rOpenSci's onboarding process is run by:
 We are grateful to the following individuals who have offered up their time and expertise to review packages submitted to rOpenSci.
 
 ```{r reviewers, echo=FALSE, results='asis'}
-library("airtabler")
 editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon")
-reviewers <- air_get(base = "appZIB8hgtvjoV99D", table = "Reviewers", combined_result = FALSE)
-reviewers2 <- air_get(base = "appZIB8hgtvjoV99D", table = "Reviewers", combined_result = FALSE, offset=get_offset(reviewers))
-reviewers <- rbind(reviewers$fields[, c('name', 'github', 'Reviews')], reviewers2$fields[, c('name', 'github', 'Reviews')])
-reviewers <- reviewers[purrr::map_lgl(reviewers$Reviews, ~!is.null(.)) & !(reviewers$name %in% c(editors, "???")), ]
-reviewers <- reviewers[order(reviewers$name), ]
+reviewers <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
+                                table = "Reviewers")
+reviewers <- reviewers$Reviewers$select_all()
+reviewers <- reviewers[map_lgl(reviewers$Reviews, 
+                               ~!is.null(.)) & 
+                         !(reviewers$name %in% c(editors, "???")), ]
+# get last names
+last_names <- humaniformat::last_name(trimws(reviewers$name))
+reviewers <- reviewers[order(last_names), ]
 cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
 ```
