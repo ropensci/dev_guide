@@ -36,6 +36,7 @@ board. The EiC plays the following roles
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
 -   Run run automated tests: `devtools::check()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Report relevant outputs in the issue thread.
 -   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and Appveyor for instance).
+-   Wherever possible when asking for changes direct authors to automatic tools such as [`usethis`](http://usethis.r-lib.org/) and [`styler`](http://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](http://r-pkgs.had.co.nz/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/onboarding/issues/207#issuecomment-379909739).
 -   If initial checks show major gaps, request changes before assigning reviewers.
 -   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example]()https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)
     
