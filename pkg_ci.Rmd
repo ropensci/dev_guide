@@ -60,3 +60,7 @@ If you run coverage on several CI services [the results will be merged](https://
 ## Even more CI: OpenCPU
 
 After transfer to the ropensci organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This allows an additional CI service for package authors that that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu api](https://www.opencpu.org/api.html#api-json). For more details about this service consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
+
+## Make more of your CI builds: tic
+
+The [`tic` package](https://github.com/ropenscilabs/tic) facilitates deployment tasks for R packages tested by Travis CI, AppVeyor, or the CI tool of your choice, cf e.g. our [suggestion to build and deploy the documentation website of your package via Travis](#website).

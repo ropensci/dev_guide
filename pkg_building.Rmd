@@ -73,7 +73,7 @@ can be found at *link*.
 
 * We recommend not creating `README.md` directly, but from a `README.Rmd` file (an Rmarkdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
 
-* Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest creating a website for your package with [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`.
+* Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website)
 
 * Consider using `devtools::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
@@ -110,6 +110,12 @@ can be found at *link*.
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
 * You can choose to have a README section about use cases of your package (other packages, blog posts, etc), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
+
+## Documentation website {#website}
+
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`.
+
+You could use the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis.
 
 ## Authorship
 
