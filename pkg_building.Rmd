@@ -104,8 +104,8 @@ can be found at *link*.
 * The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
 
 * As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*. Any vignette should outline prerequisite knowledge to be able to understand vignette up front.
-💯
-* The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
+
+ The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
 
 * Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (i.e. programming/NSE with dplyr).
 
