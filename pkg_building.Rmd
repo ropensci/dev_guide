@@ -43,17 +43,17 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ## README
 
-* All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom (see [this example](https://github.com/karthik/badge-test/)):
+* All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
 
-```
-* The package name
-* Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
-* Short description of the package
-* Installation instructions
-* Brief demonstration usage
-* If applicable, how the package compares to other similar packages and/or how it relates to other packages
-* Citation information
-```
+    * The package name
+    * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
+    * Short description of goals of package, with descriptive links to all vignettes (renderred, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
+    * Installation instructions
+    * Any additional setup required (authentication tokens, etc)
+    * Brief demonstration usage
+    * If applicable, how the package compares to other similar packages and/or how it relates to other packages
+    * Citation information
+
 
 If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](http://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
 
@@ -91,7 +91,7 @@ can be found at *link*.
 
 * Add a code of conduct and contribution guidelines, cf [this section of the book](#friendlyfiles).
 
-* See the [gistr README](https://github.com/ropensci/gistr#gistr) for a good example README to follow.
+* See the [`gistr` README](https://github.com/ropensci/gistr#gistr) for a good example README to follow for a small package, and [`bowerbird` README](https://github.com/ropensci/bowerbird) for a good example README for a larger package.
 
 ## Documentation
 
@@ -101,9 +101,15 @@ can be found at *link*.
 
 * The package should contain top-level documentation for `?foobar`, (or `?foobar-package` if there is a naming conflict). Optionally, you can use	both `?foobar` and `?foobar-package` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
-* The package should contain at least one vignette providing an introduction to the primary package functions and use cases.
+* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
 
-* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*.
+* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*. Any vignette should outline prerequisite knowledge to be able to understand vignette up front.
+💯
+* The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
+
+* Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (i.e. programming/NSE with dplyr).
+
+* The vignette(s) should include citations to software and papers where appropriate.
 
 * We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
@@ -120,7 +126,8 @@ can be found at *link*.
 ## Documentation website {#website}
 
 We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`.
-
+ When your package has many functions, use grouping in the reference: see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
+](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 You could use the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis.
 
 ## Authorship
