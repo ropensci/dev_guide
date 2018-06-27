@@ -64,7 +64,7 @@ We no longer transfer Appveyor projects to ropensci Appveyor account so after tr
 
 [Circle CI](https://circleci.com/) is e.g. used by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
 
-## Test coverage
+## Test coverage {#coverage}
 
 Continuous integration should also include reporting of test coverage via a testing service such as [CodeCov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
 as `usethis::use_coverage()`. 

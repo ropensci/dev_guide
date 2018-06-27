@@ -134,9 +134,11 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * All packages should pass `R CMD check`/`devtools::check()` on all major platforms.
 
-* All packages should have a test suite that covers major functionality of the package.
+* All packages should have a test suite that covers major functionality of the package. The tests should also cover the behavior of the package in case of errors.
 
 * We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](http://r-pkgs.had.co.nz/tests.html).
+
+* Once you've set up CI, use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
 * `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
 
