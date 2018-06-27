@@ -65,6 +65,12 @@ If you use another repo status badge such as a [lifecycle](https://www.tidyverse
 
 where issue_id is the number of the issue in the onboarding repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/onboarding/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded (issue labelled "approved" and closed), and will link to the review issue.
 
+* If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake repo`](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are 
+    * Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
+    * Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge ](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
+    * Stats/usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
+  The table should be more wide than it is long in order to mask the rest of the README.
+
 * If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
 a README should not merely read, "Provides access to GooberDB," but also include,
 "..., an online repository of Goober sightings in South America.  More
