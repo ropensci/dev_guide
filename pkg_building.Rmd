@@ -9,9 +9,19 @@ We strongly recommend that package developers read Hadley Wickham's concise but 
 
 ```
 
-## Package naming
+## Package name and metadata
+
+### Naming your package
 
 * We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available).
+
+* A more unique package name might be easier to track (for you and us to assess package use) and search (for users to find it and to google their questions). Obviously a _too_ unique package name might make the package less discoverable (e.g. it might be an argument for naming your package [geojson](https://github.com/ropensci/geojson)).
+
+* Find other interesting aspects of naming your package [in this blog post by Nick Tierney](http://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](http://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+
+### Creating metadata for your package
+
+We recommend you to use the [`codemetar` package](https://github.com/ropensci/codemetar) for creating and updating a JSON [CodeMeta](https://codemeta.github.io/) metadata file for your package via `codemetar::write_codemeta()`. It will automatically include all useful information, including [GitHub rep keywords](#grooming). CodeMeta uses [Schema.org terms](https://schema.org/) so as it gains popularity the JSON metadata of your package might be used by third-party services, maybe even search engines. 
 
 ## Function/variable naming & general syntax
 
