@@ -75,6 +75,7 @@ board. The EiC plays the following roles
 ### After review:
 
 -  Change the status tag to `6/approved`.
+-  You can use the [comment template](#approvaltemplate)
 -   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
 -   Ask authors to migrate to `ropensci`
