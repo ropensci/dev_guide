@@ -26,6 +26,16 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   The open nature of our review process allows you to **network and meet colleagues and collaborators** through the review process.  Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.
 -   To volunteer to be one of our reviewers, just click [here](https://ropensci.org/onboarding/) to fill out a short form providing your contact information and areas or expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields packages are used for.
 
+
+## Why are reviews open? {#whyopen}
+
+Our reviewing threads are public. Authors, reviewers, and editors all know each other’s identities. The broader community can view or even participate in the conversation as it happens. This provides an incentive to be thorough and provide non-adversarial, constructive reviews. Both authors and reviewers report that they enjoy and learn more from this open and direct exchange. It also has the benefit of building community. Participants have the opportunity to meaningfully network with new peers, and new collaborations have emerged via ideas spawned during the review process.
+
+We are aware that open systems can have drawbacks. For instance, in traditional academic review, double-blind peer review can increase representation of female authors, suggesting bias in non-blind reviews. It is also possible reviewers are less critical in open review. However, we posit that the openness of the review conversation provides a check on review quality and bias; it’s harder to inject unsupported or subjective comments in public and without the cover of anonymity. Ultimately, we believe the ability of authors and reviewers to have direct but public communication improves quality and fairness.
+
+Furthermore, authors and reviewers have the ability to contact privately the editors for any doubt or question they might have.
+
+
 ## Editors and reviewers
 
 ### Associate editors {#associateditors}
