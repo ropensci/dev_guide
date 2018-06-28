@@ -20,7 +20,7 @@ The [first section of the book](#building) presents our guidelines for building 
 
 The [second section](#onboardingintro) is dedicated to onboarding: what it is, our policies, and specific guides for authors, editors and reviewers.
 
-The [third and last section](#collaboration) features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform.
+The [third and last section](#collaboration) features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a [chapter for anyone wishing to start contributing to rOpenSci packages](#contributingguide).
 
 We hope that you'll find the guide useful and clear, and welcome your suggestions in the [issue tracker of the book](https://github.com/ropenscilabs/dev_guide/issues). Happy R packaging!
 
