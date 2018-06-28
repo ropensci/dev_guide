@@ -40,6 +40,10 @@ See the whole first section, starting with the [chapter about building a package
 
 If you already have a package in mind, head to its issue tracker for reporting a bug or a feature request you might have. E.g. if you have a feature request for `magick`, the place to fill it is https://github.com/ropensci/magick/issues
 
+## Reporting use cases
+
+If you are the author, or the reader, of an use case of one of our packages, please send the link to Scott Chamberlain (scott@ropensci.org) for inclusion in the [rOpenSci biweekly newsletter](https://ropensci.github.io/biweekly/). If the package you used has an "use cases in the wild" section in its README you can make a Pull Request to the GitHub repository to suggest adding your use case.
+
 ## Finding where to contribute code or documentation
 
 Most our packages are developped on GitHub. We have two organizations:
