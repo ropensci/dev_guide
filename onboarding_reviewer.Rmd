@@ -32,7 +32,7 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 -  Running `devtools::check()` and `devtools::test()` on the package to find any errors that may be missed on the author's system.
 -  Using the **covr** package to examine the extent of test coverage.
 -  Using the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) to identify likely sources of errors and style issues. Most exceptions will need to be justified by the author in the particular context of their package.
--  Using `devtools::spell_check()` to find spelling errors in DESCRIPTION and manual files, and RStudio's spellchecker to find spelling errors in vignettes and README files.
+-  Using `spelling::spell_check_package()` (and `spelling::spell_check_files("README.Rmd")`) to find spelling errors. 
 
 ### Experience from past reviewers
 
