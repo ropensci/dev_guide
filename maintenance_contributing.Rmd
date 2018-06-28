@@ -2,6 +2,8 @@
 
 So you want to contribute to rOpenSci packages? Fantastic! First of all, maybe contributing to a package is not the (only) way you'll want to get involved with rOpenSci. Check out our [community page](https://ropensci.org/community/) to find out all the ways to participate in the project.
 
+Thanks for wanting to contribute to rOpenSci packages. We strive to make contributing to our suite a constructive and positive experience. See [our code of conduct](https://ropensci.org/coc/). Regarding this guide itself, please report any suggestion via [this GitHub repository](https://github.com/ropensci/dev_guide).
+
 ## Pre-requisities
 
 Before contributing to one of our packages, you might want to read a bit more about package development in general and our guidelines.
