@@ -6,6 +6,9 @@
 * Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](packaging_guide.md) and [reviewing guide](reviewing_guide.md) for more details). Unlike a manuscript review, this process will be an ongoing conversation.
 * Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins), but in rare cases a package may also be rejected after review & revision. It is ultimately editor's decision on whether or not to reject the package based on how the reviews are addressed.
 * Communication between submitters, reviewers and editors will first and foremost take place on GitHub, although you can choose to contact the editor by email or Slack for certain issues. When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.
+* The submitter can choose to have their submission put on hold (editor applies the holding label). The holding status will be revisited every 3 months, and after one year the issue will be closed.
+* If the submitter hasn't requested a holding label, but is simply not responding, we should close the issue within one month after the last contact intent. This intent will include a comment tagging the submitter, but also an email using the email address listed in the DESCRIPTION of the package which is one of the rare cases where the editor will try to contact the author by email.
+* If a submission was closed and the author wishes to re-submit, they'll have to start a new submission. If the package is still in scope, the author will have to respond to the initial reviews before the editor starts looking for new reviewers.
 
 ## Aims and Scope {#aims-and-scope}
 

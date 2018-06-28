@@ -67,9 +67,9 @@ board. The EiC plays the following roles
 -   Check in with reviewers and authors occasionally. Offer clarification and help as needed.
 -   In general aim for 3 weeks for review, 2 weeks for
     subsequent changes, and 1 week for reviewer approval of changes.
--   Make sure ropensci-bot is pinging correctly. (currently defunct)
 -   Upon all reviews being submitted, change the review status tag to
     `4/review-in-awaiting-changes` to update the reminder bot.
+- If the author stops responding, refers to [the policies](#package-submission) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain them the decision and thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth onboarding next time (e.g. a package author who has already submitted packages to us).
 -   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`.
     
 ### After review:
