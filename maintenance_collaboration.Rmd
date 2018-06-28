@@ -30,7 +30,7 @@ You can have a look at the [tidyverse contributing.md template](https://github.c
 
 ### Issue labelling
 
-You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/)
+You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
 
 ## Working with collaborators {#workingcollaborators}
 
