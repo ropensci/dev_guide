@@ -18,7 +18,7 @@ We require that you use a code of conduct such as the [Contributor Covenant](htt
 
 We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles#ropensci-github-files) along with some instructions to insert them into your repository.
 
-You can tweak them a bit depending on your workflow and package: e.g. in CONTRIBUTING.md make sure contributors have instructions for running local test if they are not trivial. CONTRIBUTING.md can also contain some details about how you'll acknowledge contributions, and the roadmap of your package, cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md).
+You can tweak them a bit depending on your workflow and package: e.g. in CONTRIBUTING.md make sure contributors have instructions for running local test if they are not trivial. CONTRIBUTING.md can also contain some details about how you'll acknowledge contributions (see [this section](#attributions)), and the roadmap of your package, cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md).
 
 ### Issue labelling
 
