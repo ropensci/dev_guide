@@ -2,9 +2,9 @@
 
 So you want to contribute to rOpenSci packages? Fantastic! First of all, maybe contributing to a package is not the (only) way you'll want to get involved with rOpenSci. Check out our [community page](https://ropensci.org/community/) to find out all the ways to participate in the project.
 
-Thanks for wanting to contribute to rOpenSci packages. We strive to make contributing to our suite a constructive and positive experience. See [our code of conduct](https://ropensci.org/coc/). Regarding this guide itself, please report any suggestion via [this GitHub repository](https://github.com/ropensci/dev_guide).
+Thanks for wanting to contribute to rOpenSci packages. We strive to make contributing to our suite a constructive and positive experience. See [our code of conduct](https://ropensci.org/coc/). Regarding this guide itself, please report any suggestions via [this GitHub repository](https://github.com/ropensci/dev_guide).
 
-## Pre-requisities
+## Pre-requisites
 
 Before contributing to one of our packages, you might want to read a bit more about package development in general and our guidelines.
 
@@ -42,11 +42,11 @@ If you already have a package in mind, head to its issue tracker for reporting a
 
 ## Reporting use cases
 
-If you are the author, or the reader, of an use case of one of our packages, please send the link to Scott Chamberlain (scott@ropensci.org) for inclusion in the [rOpenSci biweekly newsletter](https://ropensci.github.io/biweekly/). If the package you used has an "use cases in the wild" section in its README you can make a Pull Request to the GitHub repository to suggest adding your use case.
+If you are the author, or the reader, of a use case of one of our packages, please send the link to Scott Chamberlain (scott@ropensci.org) for inclusion in the [rOpenSci biweekly newsletter](https://news.ropensci.org/). If the package you used has a "use cases in the wild" section in its README you can make a Pull Request to the GitHub repository for that package to suggest adding your use case.
 
 ## Finding where to contribute code or documentation
 
-Most our packages are developped on GitHub. We have two organizations:
+Most our packages are developed on GitHub. We have two organizations:
 
 * https://github.com/ropensci for more mature packages,
 
