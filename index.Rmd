@@ -14,7 +14,7 @@ description: "Extended version of the onboarding packaging guide."
 
 # Preface {-}
 
-This book has the ambition to become a guide for maintainers of rOpenSci packages, in particular volunteers who submit a package to onboarding. 
+This book has the ambition to become a guide for maintainers of rOpenSci packages, in particular, people who volunteer to submit a package to onboarding. 
 
 The [first section of the book](#building) presents our guidelines for building and testing your package. 
 
