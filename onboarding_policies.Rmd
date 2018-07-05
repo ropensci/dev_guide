@@ -12,35 +12,35 @@
 
 ## Aims and Scope {#aims-and-scope}
 
-rOpenSci aims to support packages that support reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the following
-categories.  If you are unsure whether your package fits into one of these categories, please open an issue as a pre-submission inquiry
+rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the
+categories outlined below.  If you are unsure whether your package fits into one of these categories, please open an issue as a pre-submission inquiry
 ([**Examples**](https://github.com/ropensci/onboarding/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
 As as this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today.  While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
 
-Please note that rOpenSci package development happen in different spaces: unconferences, internal development by [staff](https://ropensci.org/about/#team), and onboarding which can be confusing. The emphasis of the unconference is on experimentation, exploration and community-building - participants work on all kinds of things that wouldn't be in scope for onboarding. Similarly, some of the software developed by rOpenSci staff is focused on filling gaps in R infrastructure and wouldn't be in-scope. 
+Please note that rOpenSci package development happens in several different spaces: unconferences, internal development by [staff](https://ropensci.org/about/#team), and onboarding, which can be confusing. The emphasis of the unconference is on experimentation, exploration and community-building - participants work on all kinds of things that wouldn't be in scope for onboarding. Similarly, some of the software developed by rOpenSci staff is focused on filling gaps in R infrastructure and wouldn't be in-scope. 
 
 ### Package categories
 
-* __data retrieval__: Packages for accessing and download data from online sources with scientific applications.  Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data _sources_ / _topics_, rather than _services_. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: [**rotl**](https://github.com/ropensci/onboarding/issues/17),
+* __data retrieval__: Packages for accessing and downloading data from online sources with scientific applications.  Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data _sources_ / _topics_, rather than _services_. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: [**rotl**](https://github.com/ropensci/onboarding/issues/17),
 [**gutenbergr**](https://github.com/ropensci/onboarding/issues/41))
 
 * __data extraction__: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, but trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/onboarding/issues/42), [**robotstxt**](https://github.com/ropensci/onboarding/issues/25), [**genbankr**](https://github.com/ropensci/onboarding/issues/47))
 
-* __database access__: Bindings and wrappers generic database APIs (Example: [**rrlite**](https://github.com/ropensci/onboarding/issues/6))
+* __database access__: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/onboarding/issues/6))
 
 * __data munging__: Packages for processing data from formats above. This area does not include broad data manipulations tools such as **reshape2** or **tidyr**, but rather tools for handling data in specific scientific formats. (Example: [**plateR**](https://github.com/ropensci/onboarding/issues/60))
 
 * __data deposition__: Packages that support deposition of data  into research repositories, including data formatting and metadata generation.
-(Examples [**EML**](https://github.com/ropensci/onboarding/issues/80))
+(Example: [**EML**](https://github.com/ropensci/onboarding/issues/80))
 
-* __reproducibility__: Tools that facilitate reproducible research. This includes packages that facilitate use of version control, provenance tracking,  automated testing of data inputs and statistical outputs, citation of software and scientific literature.  It does not include general tools for literate programming (e.g., R markdown extensions not under the previous topics). (Example [**assertr**](https://github.com/ropensci/onboarding/issues/23))
+* __reproducibility__: Tools that facilitate reproducible research. This includes packages that facilitate use of version control, provenance tracking,  automated testing of data inputs and statistical outputs, citation of software and scientific literature.  It does not include general tools for literate programming (e.g., R markdown extensions not under the previous topics). (Example: [**assertr**](https://github.com/ropensci/onboarding/issues/23))
 
-In addition, we have some specialty _topics_ with a slightly broader scope.
+In addition, we have some _specialty topics_ with a slightly broader scope.
 
-* __geospatial data__: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Example: [**rgeospatialquality**](https://github.com/ropensci/onboarding/issues/28), [**osmplotr**](https://github.com/ropensci/onboarding/issues/27)).
+* __geospatial data__: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Examples: [**rgeospatialquality**](https://github.com/ropensci/onboarding/issues/28), [**osmplotr**](https://github.com/ropensci/onboarding/issues/27)).
 
-* __text analysis__: We are currently _piloting_ a sub-specialty area for text analysis which includes implementation of statistical/ML methods for analyzing or extracting text data. This does not include packages with new methods, but only implementation or wrapping of previously published methods. As this is a pilot, the scope for this area is not fully defined and we are still developing a reviewer base and process for this area. Please open a pre-submission inquiry if you are considering submitting a package that falls under this topic.
+* __text analysis__: We are currently _piloting_ a sub-specialty area for text analysis which includes implementation of statistical/ML methods for analyzing or extracting text data. This does not include packages with new methods, but only implementation or wrapping of previously published methods. As this is a pilot, the scope for this topic is not fully defined and we are still developing a reviewer base and process for this area. Please open a pre-submission inquiry if you are considering submitting a package that falls under this topic.
 
 ### Other Scope Considerations
 
@@ -54,13 +54,13 @@ Here are some types of packages we are unlikely to accept:
 
 We encourage submitting packages not accepted to rOpenSci to submit to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal.
 
-Note that not all packages developed internally by rOpenSci or through our events or collaborations are in-scope for onboarding process.
+Note that not all packages developed internally by rOpenSci or through our events or collaborations are in-scope for our onboarding process.
 
 ## Package overlap {#overlap}
 
-rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the ROpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:
+rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the rOpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:
 
--   More open in licensing or development practices.
+-   More open in licensing or development practices
 -   Broader in functionality (e.g., providing access to more data sets, providing a greater suite of functions), but not only by duplicating additional packages
 -   Better in usability and performance
 -  Actively maintained while alternatives are poorly or no longer actively maintained
@@ -102,7 +102,7 @@ The above is a bit vague, so the following are a few areas of consideration.
     - Package `hello` is not on CRAN, or on CRAN, but has no reverse dependencies.
     - Package `world` needs some fixes. The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.
 
-We urge package maintainers to make sure they are receiving GitHub notifications, as well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their spam box. Authors of onboarded packages will be invited to the rOpenSci Slack to chat to the rOpenSci team and the greater rOpenSci community. Anyone can also discuss with the rOpenSci community [on rOpenSci discussion forum](https://discuss.ropensci.org/).
+We urge package maintainers to make sure they are receiving GitHub notifications, as well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their spam box. Authors of onboarded packages will be invited to the rOpenSci Slack to chat to the rOpenSci team and the greater rOpenSci community. Anyone can also discuss with the rOpenSci community on the [rOpenSci discussion forum](https://discuss.ropensci.org/).
 
 Should authors abandon the maintenance of an actively used package in our suite, we will consider petitioning CRAN to transfer package maintainer status to rOpenSci.
 
