@@ -1,14 +1,14 @@
 # Continuous Integration Best Practices {#ci}
 
 ```{block, type='summaryblock'}
-This chapter summarizes our guidelines about continuous integration after explaining what continuous integration.
+This chapter summarizes our guidelines about continuous integration after explaining what continuous integration is.
 
 Along with [last chapter](#building), it forms our guidelines for onboarding reviews.
 ```
 
 ## Why use continuous integration?
 
-All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through `R CMD check`. rOpenSci packages continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
+All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests, and new branches are run through `R CMD check`. rOpenSci packages' continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
 
 Both test status and code coverage should be reported via badges in your package README.
 
@@ -20,7 +20,7 @@ Details will be provided below for different services.
 
 ## Which continuous integration service(s)? {#whichci}
 
-Different continuous integration services will support builds on different operating system.
+Different continuous integration services will support builds on different operating systems.
 
 R packages should have CI for all platforms when they contain:
 
@@ -62,7 +62,7 @@ We no longer transfer Appveyor projects to ropensci Appveyor account so after tr
 
 ### Circle CI
 
-[Circle CI](https://circleci.com/) is e.g. used by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
+[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
 
 ## Test coverage {#coverage}
 

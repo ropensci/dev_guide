@@ -1,7 +1,7 @@
 # Package evolution - changing stuff in your package {#evolution}
 
 ```{block, type='summaryblock'}
-This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecting functions.
+This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions.
 
 _This chapter was initially contributed as a tech note on rOpenSci website by [Scott Chamberlain](https://github.com/sckott), read the original [here](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
