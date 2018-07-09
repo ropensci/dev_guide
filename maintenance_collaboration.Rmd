@@ -40,7 +40,7 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 You could implement the [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/).
 
-To asses PR cf ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html)
+One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html).
 
 ### Be generous with attributions {#attributions}
 
