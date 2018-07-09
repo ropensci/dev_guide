@@ -58,7 +58,7 @@ Here are tips to minimize Appveyor build time:
 
 * Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
-We no longer transfer Appveyor projects to ropensci Appveyor account so after transfer of your repo to the ropensci GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+We no longer transfer Appveyor projects to ropensci Appveyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
 ### Circle CI
 
@@ -73,7 +73,7 @@ If you run coverage on several CI services [the results will be merged](https://
 
 ## Even more CI: OpenCPU
 
-After transfer to the ropensci organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This allows an additional CI service for package authors that that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu api](https://www.opencpu.org/api.html#api-json). For more details about this service consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
+After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This allows an additional CI service for package authors that that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu api](https://www.opencpu.org/api.html#api-json). For more details about this service consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
 
 ## Make more of your CI builds: tic
 

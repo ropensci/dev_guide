@@ -36,7 +36,7 @@ More info about GitHub linguist overrides [here](https://github.com/github/lingu
 
 ## Market your own account {#marketown}
 
-* As the author of an onboarded package, you are now a member of the ropensci GitHub organization. By default, organization memberships are private; see [how to make it public in GitHub docs](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+* As the author of an onboarded package, you are now a member of rOpenSci's "ropensci" GitHub organization. By default, organization memberships are private; see [how to make it public in GitHub docs](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
 
 * Even after your package repo has been transferred to rOpenSci, you can [pin it under your own account](https://help.github.com/articles/pinning-repositories-to-your-profile/).
 

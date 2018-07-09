@@ -5,7 +5,7 @@
 ```{block, type='summaryblock'}
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
 
-This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration-friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci organization.
+This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration-friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci's "ropensci" GitHub organization.
 ```
 
 ## Make your repo contribution- and collaboration-friendly {#friendlyfiles}
@@ -60,6 +60,6 @@ Please do not list editors as contributors. Your participation in and contributi
 
 If you give someone write permissions to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that this new contributor might
 
-* get invited to ropensci GitHub organization (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
+* get invited to rOpenSci's "ropensci" GitHub organization (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
 * get invited to rOpenSci Slack workspace.
