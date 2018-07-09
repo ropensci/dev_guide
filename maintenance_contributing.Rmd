@@ -54,5 +54,5 @@ Most our packages are developed on GitHub. We have two organizations:
 
 If you already use one of our packages, you can have a look at its issue tracker and comment in one of the issues to ask the maintainer whether they'd be interested in your help. E.g. if you like `taxize`, the place to look is https://github.com/ropensci/taxize/issues
 
-If you're not a passionate user of one of our packages yet, you can find one to contribute to by browsing https://github.com/ropensci for instance. In particular, you could browse issues targeted at beginner by using [the `contributr` Shiny app by Lucy D'Agostino McGowan](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues)
+If you're not a passionate user of one of our packages yet, you can find one to contribute to by browsing [our packages page](https://ropensci.org/packages/). In particular, you could browse issues targeted at beginner by using [the `contributr` Shiny app by Lucy D'Agostino McGowan](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues)
  or by an advanced GitHub search such as [this one](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
