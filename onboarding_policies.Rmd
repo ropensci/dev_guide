@@ -19,6 +19,18 @@ Last but not least, you'll find the code of conduct of rOpenSci onboarding [here
 * If the author hasn't requested a holding label, but is simply not responding, we should close the issue within one month after the last contact intent. This intent will include a comment tagging the author, but also an email using the email address listed in the DESCRIPTION of the package which is one of the rare cases where the editor will try to contact the author by email.
 * If a submission was closed and the author wishes to re-submit, they'll have to start a new submission. If the package is still in scope, the author will have to respond to the initial reviews before the editor starts looking for new reviewers.
 
+### Publishing in other Venues
+
+-   We strongly suggest submitting your package for review _before_ publishing
+    on CRAN or submitting a software paper describing the package to a journal.
+    Review feedback may result in major improvements and updates to your package,
+    including renaming and breaking changes to functions.  We do not consider
+    previous publication on CRAN or in other venues sufficient reason to
+    not adopt reviewer or editor recommendations.
+-   Do not submit your package for review while it or an associated manuscript
+    is also under review at another venue, as this may result on conflicting
+    requests for changes.
+
 ## Aims and Scope {#aims-and-scope}
 
 rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the
