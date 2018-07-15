@@ -17,3 +17,6 @@ We will help you promoting your package but here are some more things to keep in
     * Consider submitting a technote about the release to [rOpenSci technotes blog](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci community manager, (e.g. via Slack or stefanie@ropensci.org ). The guidelines about contributing a blog post can be found [here](https://github.com/ropensci/roweb2#contributing-a-blog-post)).
     
     * Submit your package to lists of packages such as [CRAN Task Views](https://cran.r-project.org/web/views/), and [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
+    
+* If you choose to market your package by giving a talk about it at a meetup or conference (excellent idea!)
+ read [this article of Jenny Bryan's and Mara Averick's](https://www.tidyverse.org/articles/2018/07/carpe-talk/).

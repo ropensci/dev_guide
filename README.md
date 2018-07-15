@@ -9,7 +9,7 @@ Source of the extended version of the onboarding packaging guide. [Read it here]
 
 ### Suggestions and updates
 
-These guidelines are a work in progress for packages contributed to the rOpenSci suite. Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also make a pull request, please edit the .Rmd files that are at the root of this repository. The book will be built and automatically deployed when your PR is merged.
+These guidelines are a work in progress for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also make a pull request, please edit the .Rmd files that are at the root of this repository. The book will be built and automatically deployed when your PR is merged.
 
 ### Technical details
 

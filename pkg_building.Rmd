@@ -99,6 +99,8 @@ can be found at *link*.
 
 * All functions should document the type of object returned under the `@return` heading.
 
+* We recommend using the "@family" tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) [this section of this chapter](#function-grouping) for more details.
+
 * The package should contain top-level documentation for `?foobar`, (or `?foobar-package` if there is a naming conflict). Optionally, you can use	both `?foobar` and `?foobar-package` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
 * The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
@@ -125,10 +127,26 @@ can be found at *link*.
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`.
- When your package has many functions, use grouping in the reference: see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has a [its own documentation website](http://pkgdown.r-lib.org/).
+
+There are a few tips we'd like to underline here.
+
+### Grouping functions in the reference {#function-grouping}
+
+ When your package has many functions, use grouping in the reference, which you can do more or less automatically.
+ 
+ If you use `roxygen` above version 6.0.1.9000 (as of July 2018, development version to be installed via `remotes::install_github("klutometis/roxygen")`) you should use the family tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) _and_ allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
+ 
+ Less automatically, see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
+
+### Automatic deployment of the documentation website
+
 You could use the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis.
+
+### Branding of authors
+
+You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](http://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropenscilabs/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://ropenscilabs.github.io/rodev/).
 
 ## Authorship
 
@@ -155,7 +173,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
 
-* Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use MangTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
+* Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
 
 ## Examples
 
@@ -168,7 +186,10 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
-* If your package uses a system dependency, you should indicate it in DESCRIPTION and check for it in the configure script and give a helpful error message if it cannot be found. [Example of a line indicating a system dependency in DESCRIPTION](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19), [example of how a configure script checks for the dependency](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/configure#L72). You should also check the dependency is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) in order to ensure automatic tools building packages don't have a hard time with your package. See [`sysreqsdb` contributing guidelines](https://github.com/r-hub/sysreqsdb#contributing).
+* If your package uses a system dependency, you should 
+    * indicate it in DESCRIPTION
+    * and check for it in the configure script and give a helpful error message if it cannot be found. [Example of a line indicating a system dependency in DESCRIPTION](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19), [example of a configure script that checks for the dependency](https://github.com/cran/webp/blob/master/configure). You can have a look at [more configure scripts](https://github.com/search?q=org%3Acran+anticonf&type=Code). Your configure script might need to do some hacky things since the config script is where you put all the hacks needed to make a particular library work. Use examples as a starting point but make sure you understand what you are doing because small bugs in the configure script can lead to bad things and can even get your package kicked from CRAN. Do not hesitate to [ask for help](https://discuss.ropensci.org/).
+    * You should also check the dependency is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) in order to ensure automatic tools building packages don't have a hard time with your package. See [`sysreqsdb` contributing guidelines](https://github.com/r-hub/sysreqsdb#contributing).
 
 ## Recommended scaffolding
 
