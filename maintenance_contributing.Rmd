@@ -57,7 +57,7 @@ See the whole first section of this book: [Building Your Package](#building)
 
 ## Finding where to contribute code or documentation
 
-Most our packages are developed on GitHub. We have two organizations:
+Our packages are developed on GitHub. We have two organizations:
 
 * https://github.com/ropensci for more mature packages, , including some developed by rOpenSci staff and some developed by community members where the package has gone through [review and onboarding](#onboardingintro)
 
