@@ -11,6 +11,12 @@ We strive to make contributing to our suite a constructive and positive experien
 
 If you wish to contribute to this guide itself, please report any suggestions via [this GitHub repository](https://github.com/ropensci/dev_guide).
 
+## Why contributing to rOpenSci packages?
+
+In general, contributing to R packages allows, [as explained by Kara Woo in her talk at the CascadiaR conference](https://github.com/karawoo/2018-06-02-cascadiarconf/blob/master/cascadiarconf.pdf), to make things work the way you want (by adding some functionality to your favorite package), can lead to opportunities and allows you to learn about package development.
+
+Contributing to _rOpenSci_ packages is great if you believe in [rOpenSci's mission](https://ropensci.org/about/), and also because of our efforts striving to make contribution a good experience.
+
 ## Reporting use cases
 
 It’s valuable to both users and developers of a package to see how it has been used “in the wild”. If you see a use case of one of our packages, please post the link to our [discussion forum in the Use Cases category](https://discuss.ropensci.org/c/usecases) and tag Scott Chamberlain (`@sckott`) for inclusion in the [rOpenSci biweekly newsletter](https://news.ropensci.org/). Let the package author know by opening an issue in the GitHub repository for that package, perhaps suggesting they create a “use cases in the wild” section in the README, and maybe even tag them in a tweet about the use case. This goes a long way to encouraging people to keep up development knowing there are others who appreciate and build on their work.
