@@ -47,7 +47,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
     * The package name
     * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
-    * Short description of goals of package, with descriptive links to all vignettes (renderred, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
+    * Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
     * Installation instructions
     * Any additional setup required (authentication tokens, etc)
     * Brief demonstration usage
@@ -77,7 +77,7 @@ a README should not merely read, "Provides access to GooberDB," but also include
 information about GooberDB, and documentation of database structure and metadata
 can be found at *link*".
 
-* We recommend not creating `README.md` directly, but from a `README.Rmd` file (an Rmarkdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
+* We recommend not creating `README.md` directly, but from a `README.Rmd` file (an R Markdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
 
 * Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website)
 
