@@ -8,17 +8,17 @@ Having contributors will improve your package, and if you onboard some of them a
 This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration-friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci's "ropensci" GitHub organization.
 ```
 
-## Make your repo contribution- and collaboration-friendly {#friendlyfiles}
+## Make your repo contribution and collaboration friendly {#friendlyfiles}
 
 ### Code of conduct
 
-We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You can document your code of conduct in a `CODE_OF_CONDUCT.md` or `CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `devtools::use_code_of_conduct()` will add the Contributor Covenant template to your package.
+We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You can document your code of conduct in a `CODE_OF_CONDUCT.md` or `CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package.
 
 ### Contributing guide
 
 We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles#ropensci-github-files) along with some instructions to insert them into your repository.
 
-You can tweak them a bit depending on your workflow and package: e.g. in CONTRIBUTING.md make sure contributors have instructions for running local tests if they are not trivial. CONTRIBUTING.md can also contain some details about how you'll acknowledge contributions (see [this section](#attributions)), and the roadmap of your package, cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md).
+You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
 
 ### Issue labelling
 

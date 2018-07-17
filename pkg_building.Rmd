@@ -3,7 +3,7 @@
 # Packaging Guide {#building}
 
 ```{block, type='summaryblock'}
-rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding process](https://github.com/ropensci/onboarding). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration](#ci). Further guidance for after onboarding is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
+rOpenSci accepts packages that meet our guidelines via a streamlined [onboarding process](https://github.com/ropensci/onboarding). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after onboarding is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
 We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)).
 
@@ -29,7 +29,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 * Avoid function name conflicts with base packages or other popular ones (e.g. `ggplot2`, `dplyr`, `magrittr`, `data.table`)
 
-* Functions and arguments naming should be chosen work together to form a common, logical programming API that is easy to read, and autocomplete. 
+* Functions and arguments naming should be chosen to work together to form a common, logical programming API that is easy to read, and auto-complete. 
 
     * Consider an `object_verb()` naming scheme for functions in your package that take a common data type or interact with a common API. `object` refers to the data/API and `verb` the primary action.  This scheme helps avoid namespace conflicts with packages that may have similar verbs, and makes code readable and easy to auto-complete.  For instance, in **stringi**, functions starting with `stri_` manipulate strings (`stri_join()`, `stri_sort()`, and in **googlesheets** functions starting with `gs_` are calls to the Google Sheets API (`gs_auth()`, `gs_user()`, `gs_download()`).
     
@@ -47,7 +47,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
     * The package name
     * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
-    * Short description of goals of package, with descriptive links to all vignettes (renderred, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
+    * Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
     * Installation instructions
     * Any additional setup required (authentication tokens, etc)
     * Brief demonstration usage
@@ -68,20 +68,20 @@ where issue_id is the number of the issue in the onboarding repository. For inst
 * If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake repo`](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are 
     * Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
     * Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge ](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
-    * Stats/usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
+    * Stats/Usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
   The table should be more wide than it is long in order to mask the rest of the README.
 
 * If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
 a README should not merely read, "Provides access to GooberDB," but also include,
 "..., an online repository of Goober sightings in South America.  More
 information about GooberDB, and documentation of database structure and metadata
-can be found at *link*.
+can be found at *link*".
 
-* We recommend not creating `README.md` directly, but from a `README.Rmd` file (an Rmarkdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
+* We recommend not creating `README.md` directly, but from a `README.Rmd` file (an R Markdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
 
 * Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website)
 
-* Consider using `devtools::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
+* Consider using `usethis::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
 * _After_ a package is accepted but before transfer, the rOpenSci footer should be added to the bottom of the README file with the following markdown line:
 
@@ -99,13 +99,13 @@ can be found at *link*.
 
 * All functions should document the type of object returned under the `@return` heading.
 
-* We recommend using the "@family" tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) [this section of this chapter](#function-grouping) for more details.
+* We recommend using the "@family" tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) and [this section of the present chapter](#function-grouping) for more details.
 
 * The package should contain top-level documentation for `?foobar`, (or `?foobar-package` if there is a naming conflict). Optionally, you can use	both `?foobar` and `?foobar-package` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
 * The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
 
-* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*. Any vignette should outline prerequisite knowledge to be able to understand vignette up front.
+* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a the vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*". Any vignette should outline prerequisite knowledge to be able to understand vignette upfront.
 
  The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
 
@@ -173,7 +173,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
 
-* Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped. (You may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run.) In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
+* Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
 
 ## Examples
 
@@ -182,7 +182,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ## Package dependencies
 
-* Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies. If you use any packages in your examples sections, make sure to list those, if not already listed elsewhere, in `Suggests` section of package dependencies.
+* Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies. If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
@@ -208,9 +208,9 @@ Please do not list editors as contributors. Your participation in and contributi
 This is a collection of CRAN gotchas that are worth avoiding at the outset.
 
 * Make sure your package title is in Title Case.
-* Do not put a period on the end of your title
-* Avoid starting the description with the package name or This package ...
-* Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file
+* Do not put a period on the end of your title.
+* Avoid starting the description with the package name or "This package ...".
+* Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file.
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
 * Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
 

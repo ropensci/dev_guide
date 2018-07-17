@@ -14,11 +14,10 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 The EiC serves for 3 months or a time agreed to by all members of the editorial
 board. The EiC plays the following roles
 
-- Watch all issues posted to the onboarding repo.
--  Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor rejects due to being too busy/conflict of interest.
+- Watches all issues posted to the onboarding repo.
+-  Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor rejects due to being too busy or because of conflicting interests.
 - Raises scope/overlap issue with all editors if they see an ambiguous case.  This may also be done by handling editors (see below). To initiate discussion, this is posted to the rOpenSci Slack onboarding channel, tagging all editors.
- - Responds to pre-submission inquiries and `meta` issues posted to the onboarding repo, similarly pinging channel if discussion is needed. Any editor should feel free to chime in on these.
- - See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+ - Responds to pre-submission inquiries and `meta` issues posted to the onboarding repo, similarly pinging channel if discussion is needed. Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
  - Responds to referrals from JOSS or other publication partners.
  - Monitors pace of review process and reminds other editors to move packages along as needed.
  
@@ -28,17 +27,17 @@ board. The EiC plays the following roles
 ### Upon submission:
 
 -   Tag issue with `1/editor-checks` tag and assign a main editor. Please strive to finish the checks and start looking for reviewers within 5 working days.
--   Use the [editor template](#editortemplate) to guide initial checks and record your respose to the submission.
+-   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission.
 -   Check that template has been properly filled out.
 -   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
     Initiate discussion via Slack #onboarding channel if needed for edge cases that haven't been caught by previous checks by the EiC.
     If reject, see [this section](#outofscoperesponse) about how to respond.
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
 -   Run automated tests: `spelling::spell_check_package()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Check that documentation is generated using `roxygen2`, not by hand (this isn't part of automatic tests [yet](https://github.com/MangoTheCat/goodpractice/issues/116)). Report relevant outputs in the issue thread.
--   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and Appveyor for instance).
+-   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and AppVeyor for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](http://usethis.r-lib.org/) and [`styler`](http://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](http://r-pkgs.had.co.nz/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/onboarding/issues/207#issuecomment-379909739).
 -   If initial checks show major gaps, request changes before assigning reviewers.
--   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors [Example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)
+-   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
     
 ### Assign reviewers:
 
@@ -53,14 +52,14 @@ board. The EiC plays the following roles
 -   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
 -   Assign a due date 3 weeks after all reviewers have been found.
--   Once two or more reviewers are found, assign reviewer by tagging in the issue with the following format:
+-   Once two or more reviewers are found, assign reviewers by tagging in the issue with the following format:
    
       Reviewer: @githubname1 
       Reviewer: @githubname2
       Due date: YYYY-MM-DD
 
 -   Switch numbered tag `to 3/reviewers-assigned` once reviewers are assigned.
--   Invite authors and reviewers to rOpenSci Slack if they aren't on already.
+-   Invite authors and reviewers to rOpenSci Slack if they aren't on this Slack already.
 
 ### During review:
 
@@ -88,8 +87,8 @@ board. The EiC plays the following roles
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
         -  For Travis, activating the project in the ropensci account should be sufficient
-        -  For Appveyor, tell the author to update the GitHub link in their badge, but do not transfer the project: Appveyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
-        -  For CodeCov, the webhook may need to be reset by the author.
+        -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+        -  For Codecov, the webhook may need to be reset by the author.
 -   Close the onboarding issue. 
 
 ### For joint JOSS submissions:
