@@ -6,8 +6,7 @@ This concise guide presents the onboarding process for you as a package author.
 
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and is not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
--   Read and follow [our packaging style guide](#building) to ensure your package
-  meets our style and quality criteria.
+-   Read and follow [our packaging style guide](#building) and [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
     -   If you would like your package to also be submitted to
         [Journal of Open-Source Software](http://joss.theoj.org/) (JOSS), it should include a `paper.md` file describing the package. More detail on JOSS's requirements can be found [at their website](http://joss.theoj.org/about#author_guidelines).
     -   If you choose this option you should *not* submit your package to JOSS separately. It will be evaluated by JOSS based on the rOpenSci review.
