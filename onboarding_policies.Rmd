@@ -67,6 +67,8 @@ In addition, we have some _specialty topics_ with a slightly broader scope.
 
 Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one. 
 
+Pacakages that include interactive tools to facilitate researcher workflows (e.g., shiny apps) must have a mechanism to make the interactive workflow reproducible, such as code generation or a scriptable API.
+
 Here are some types of packages we are unlikely to accept:
 
 -  Packages that wrap or implement statistical or machine learning methods.  We are not organized so as to review the correctness of these methods. (But see "text analysis", above)
