@@ -51,7 +51,9 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Interactive/Graphical Interfaces
 
-* If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow , include a mechanism to automatically reproduce steps taken in the GUI.  This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
+If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow , include a mechanism to automatically reproduce steps taken in the GUI.  This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
+
+The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are https://gdancik.shinyapps.io/shinyGEO/, and https://github.com/wallaceEcoMod/wallace/
 
 ## Code Style
 
