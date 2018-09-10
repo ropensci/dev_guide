@@ -89,6 +89,7 @@ board. The EiC plays the following roles
         -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
+-   Add a "peer-reviewed" topic to the repo.
 -   Close the onboarding issue. 
 
 ### For joint JOSS submissions:
