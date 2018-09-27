@@ -17,7 +17,7 @@ Deployment is done via Travis CI using the rOpenSci [`tic`](https://github.com/r
 
 * whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed from Travis to the gh-pages branch.
 
-* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed from Travis to the dev-site branch that gets deployed to Netlify.
+* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed from Travis to the dev-site branch that gets deployed to Netlify at [this address](https://devdevguide.netlify.com/).
 
 We copied this setup from [this Data Carpentry repo](https://github.com/datacarpentry/R-ecology-lesson).
 
