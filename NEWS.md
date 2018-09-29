@@ -1,3 +1,1 @@
-# place-holder 0.0.1
-
-* Added a `NEWS.md` file to track changes to the book.
+https://github.com/ropensci/dev_guide/blob/master/appendix.Rmd#news

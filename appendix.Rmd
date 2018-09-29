@@ -1,5 +1,10 @@
 # (APPENDIX) Appendix {-}
 
+# NEWS {#booknews}
+## place-holder 0.0.1
+
+* Added a `NEWS.md` file to track changes to the book.
+
 # Review template {#reviewtemplate}
 
 ```
