@@ -14,9 +14,9 @@ bookdown::gitbook:
     edit:
       link: https://github.com/ropensci/dev_guide/edit/master/%s
       text: "Edit this chapter"
-    history:
-      link: https://github.com/ropensci/dev_guide/commits/master/%s
-      text: "Chapter edit history"
+#    history:
+#      link: https://github.com/ropensci/dev_guide/commits/master/%s
+#      text: "Chapter edit history"
   favicon: images/icon_short_color.png
 bookdown::pdf_book:
   includes:
