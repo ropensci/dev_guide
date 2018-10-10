@@ -213,6 +213,8 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * When considering depending on a new package think about whether you really need to use the package. First, if you can easily write the code yourself to do what the package does, and it's relatively simple, you probably don't need to import a package. Second, consider "how heavy" the package is that you would import to your package. A "heavy" package is one with a lot of dependencies itself and/or with one or more dependencies that are hard to install. The more dependencies required means more possible problems users will have either with installation or breaking changes.
 
+* Consider if any dependencies have overlapping functionality, and if so, if either of the dependencies can be removed.
+
 ## Recommended scaffolding
 
 * For http requests we strongly recommend using `httr` over `RCurl`.
