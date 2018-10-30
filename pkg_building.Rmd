@@ -115,6 +115,12 @@ can be found at *link*".
 
 * All exported package functions should be fully documented with examples.
 
+* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+
+* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
+
+* One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
+
 * All functions should document the type of object returned under the `@return` heading.
 
 * We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) and [this section of the present chapter](#function-grouping) for more details.
@@ -131,17 +137,18 @@ can be found at *link*".
 
 * The vignette(s) should include citations to software and papers where appropriate.
 
-* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
-
-* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
-
-* One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
-
-* When using `roxygen2`, add `#' @noRd` to internal functions.
+* Add `#' @noRd` to internal functions.
 
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
 * You can choose to have a README section about use cases of your package (other packages, blog posts, etc), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
+
+* If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
+    * Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function. 
+    * Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
+    * In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help: 
+        1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
+        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces deplicated text, and helps prevent mistakingly updating documentation for one function but not the other.
 
 ## Documentation website {#website}
 
@@ -197,8 +204,10 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ## Examples
 
-* Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example. You can run examples with `devtools::run_examples()`.
+* Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. 
 
+* You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run.
+* In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the CI systems, e.g. Travis-CI. Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can add `r_check_args: "--run-dontrun"` to run examples wrapped in `\dontrun{}` in your `.travis.yml` (and/or `--run-donttest` if you want to run examples wrapped in `\donttest{}`).
 
 ## Package dependencies
 
