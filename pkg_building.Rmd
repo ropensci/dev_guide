@@ -192,6 +192,8 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * All packages should have a test suite that covers major functionality of the package. The tests should also cover the behavior of the package in case of errors.
 
+* It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. Test coverage below 75% will likely require additional tests or explanation before being sent for review.
+
 * We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](http://r-pkgs.had.co.nz/tests.html).
 
 * Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
