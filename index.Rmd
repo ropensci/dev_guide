@@ -10,6 +10,7 @@ link-citations: yes
 github-repo: ropenscilabs/dev_guide
 url: 'http\://ropensci.github.io/dev_guide/'
 description: "Extended version of the onboarding packaging guide."
+cover-image: images/icon_short_color.png
 ---
 
 # Preface {-}
