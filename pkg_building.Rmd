@@ -115,6 +115,12 @@ can be found at *link*".
 
 * All exported package functions should be fully documented with examples.
 
+* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+
+* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
+
+* One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
+
 * All functions should document the type of object returned under the `@return` heading.
 
 * We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) and [this section of the present chapter](#function-grouping) for more details.
@@ -131,17 +137,18 @@ can be found at *link*".
 
 * The vignette(s) should include citations to software and papers where appropriate.
 
-* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
-
-* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
-
-* One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
-
-* When using `roxygen2`, add `#' @noRd` to internal functions.
+* Add `#' @noRd` to internal functions.
 
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
 * You can choose to have a README section about use cases of your package (other packages, blog posts, etc), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
+
+* If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
+    * Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function. 
+    * Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
+    * In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help: 
+        1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
+        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces deplicated text, and helps prevent mistakingly updating documentation for one function but not the other.
 
 ## Documentation website {#website}
 
@@ -185,6 +192,8 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * All packages should have a test suite that covers major functionality of the package. The tests should also cover the behavior of the package in case of errors.
 
+* It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. Test coverage below 75% will likely require additional tests or explanation before being sent for review.
+
 * We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](http://r-pkgs.had.co.nz/tests.html).
 
 * Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
@@ -197,8 +206,10 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ## Examples
 
-* Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example. You can run examples with `devtools::run_examples()`.
+* Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. 
 
+* You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run.
+* In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the CI systems, e.g. Travis-CI. Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can add `r_check_args: "--run-dontrun"` to run examples wrapped in `\dontrun{}` in your `.travis.yml` (and/or `--run-donttest` if you want to run examples wrapped in `\donttest{}`).
 
 ## Package dependencies
 
@@ -210,6 +221,10 @@ Please do not list editors as contributors. Your participation in and contributi
     * indicate it in DESCRIPTION
     * and check for it in the configure script and give a helpful error message if it cannot be found. [Example of a line indicating a system dependency in DESCRIPTION](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19), [example of a configure script that checks for the dependency](https://github.com/cran/webp/blob/master/configure). You can have a look at [more configure scripts](https://github.com/search?q=org%3Acran+anticonf&type=Code). Your configure script might need to do some hacky things since the config script is where you put all the hacks needed to make a particular library work. Use examples as a starting point but make sure you understand what you are doing because small bugs in the configure script can lead to bad things and can even get your package kicked from CRAN. Do not hesitate to [ask for help](https://discuss.ropensci.org/).
     * You should also check the dependency is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) in order to ensure automatic tools building packages don't have a hard time with your package. See [`sysreqsdb` contributing guidelines](https://github.com/r-hub/sysreqsdb#contributing).
+
+* When considering depending on a new package think about whether you really need to use the package. First, if you can easily write the code yourself to do what the package does, and it's relatively simple, you probably don't need to import a package. Second, consider "how heavy" the package is that you would import to your package. A "heavy" package is one with a lot of dependencies itself and/or with one or more dependencies that are hard to install. The more dependencies required means more possible problems users will have either with installation or breaking changes.
+
+* Consider if any dependencies have overlapping functionality, and if so, if either of the dependencies can be removed.
 
 ## Recommended scaffolding
 
