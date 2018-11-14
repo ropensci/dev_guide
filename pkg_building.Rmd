@@ -83,9 +83,9 @@ If you use another repo status badge such as a [lifecycle](https://www.tidyverse
 
 where issue_id is the number of the issue in the onboarding repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/onboarding/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded (issue labelled "approved" and closed), and will link to the review issue.
 
-* If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake repo`](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are 
+* If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake` repo](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are 
     * Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
-    * Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge ](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
+    * Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
     * Stats/Usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
   The table should be more wide than it is long in order to mask the rest of the README.
 
@@ -141,14 +141,14 @@ can be found at *link*".
 
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
-* You can choose to have a README section about use cases of your package (other packages, blog posts, etc), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
+* You can choose to have a README section about use cases of your package (other packages, blog posts, etc.), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
 * If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
     * Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function. 
     * Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
     * In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help: 
         1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
-        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces deplicated text, and helps prevent mistakingly updating documentation for one function but not the other.
+        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakingly updating documentation for one function but not the other.
 
 ## Documentation website {#website}
 
