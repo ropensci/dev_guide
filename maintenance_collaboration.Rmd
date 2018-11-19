@@ -20,6 +20,8 @@ We have templates for issue, pull request and contributing guidelines that you c
 
 You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
 
+You can use the `lintr` package's own bot, lintr-bot, via continuous integration, to get comments if a commit or PR deteriorates the code style of your package. See [this link for guidance](https://github.com/jimhester/lintr#continuous-integration).
+
 ### Issue labelling
 
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
