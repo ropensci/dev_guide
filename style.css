@@ -21,17 +21,12 @@ pre code {
 }
 
 .summaryblock .a {
-    color: #6faef5;
-}
+    color: #d8dfee;
+
 
 h1, h2, h3, h4, h5, h6 {
   color: #5c677e;
 }
-
-.summaryblock > p > a {
-    color: #d8dfee;
-}
-
 
 
 body {
