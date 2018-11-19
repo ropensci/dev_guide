@@ -13,15 +13,17 @@ pre code {
   white-space: inherit;
 }
 
-a {
+.book .book-body .page-wrapper .page-inner section.normal a {
   color: #6faef5;
 }
 
 .summaryblock{
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
-  color: #ffffff;
-  background: #6faef5 5px center/3em no-repeat;
+  color: #333E50;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #6faef5;
 }
 
 .summaryblock > a {
@@ -32,15 +34,26 @@ h1, h2, h3, h4, h5, h6 {
   color: #5c677e;
 }
 
+.book .book-summary ul.summary li span b {
+  color: #5c677e;
+}
 
 body {
   color: #333E50;
 }
 
-code {
-  background: #d8dfee;
+.book .book-body .page-wrapper .page-inner section.normal code {
+  background: #dfe3eb;
 }
 
-.book-summary {
-  background: #d8dfee;
+div.book-header.fixed[style] {
+  background-color: #6faef5 !important;
+}
+
+.book .book-header .btn {
+  color: #c6deff;
+}
+
+.book .book-header h1 a, .book .book-header h1 a:hover {
+  color: #c6deff;
 }
