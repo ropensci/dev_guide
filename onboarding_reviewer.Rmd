@@ -21,7 +21,8 @@ To review a package, please begin by copying our [review template](#reviewtempla
 - Is there code duplication in the package that should be reduced?
 - Are there user interface improvements that could be made?
 - Are there performance improvements that could be made?
-- Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient?
+- Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient? Does it use the principle of *multiple points of entry* i.e. takes into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps?
+- Were functions and arguments named to work together to form a common, logical programming API that is easy to read, and autocomplete?
 - If you have your own relevant data/problem, work through it with the package. You may find rough edges and use-cases the author didn't think about.
 
 Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review withing 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
