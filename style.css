@@ -18,11 +18,10 @@ pre code {
   margin-bottom: 10px;
   color: #ffffff;
   background: #6faef5 5px center/3em no-repeat;
-  .p {
-    .a {
-    color: #6faef5;
-  }
 }
+
+.summaryblock .a {
+    color: #6faef5;
 }
 
 h1, h2, h3, h4, h5, h6 {
