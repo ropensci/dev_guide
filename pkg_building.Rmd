@@ -64,7 +64,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 * All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
 
     * The package name
-    * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges
+    * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges. If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table shoud be more wide than high.
     * Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
     * Installation instructions
     * Any additional setup required (authentication tokens, etc)
