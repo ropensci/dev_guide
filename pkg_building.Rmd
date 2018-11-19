@@ -137,6 +137,8 @@ can be found at *link*".
 
 * The vignette(s) should include citations to software and papers where appropriate.
 
+* The README, the top-level package docs, vignettes, websites, etc., should all have enough information at the beginning to get a high-level overview of the package and the services/data it connects to, and provides navigation to all the other relevant pieces of documentation. This is to follow the principle of *multiple points of entry* i.e. to take into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps.
+
 * Add `#' @noRd` to internal functions.
 
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
