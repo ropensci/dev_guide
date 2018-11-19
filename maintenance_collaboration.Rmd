@@ -12,7 +12,7 @@ This chapter contains our guidance for collaboration, in a [section about making
 
 ### Code of conduct
 
-We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You can document your code of conduct in a `CODE_OF_CONDUCT.md` or `CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package.
+We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You should document your code of conduct in a `CODE_OF_CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package. Use `usethis` > 1.3.1.
 
 ### Contributing guide
 
