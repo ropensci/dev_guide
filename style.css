@@ -13,6 +13,10 @@ pre code {
   white-space: inherit;
 }
 
+a {
+  color: #6faef5;
+}
+
 .summaryblock{
   padding: 1em 1em 1em 4em;
   margin-bottom: 10px;
@@ -20,8 +24,8 @@ pre code {
   background: #6faef5 5px center/3em no-repeat;
 }
 
-.summaryblock .a {
-    color: #d8dfee;
+.summaryblock > a {
+  color: #d8dfee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,4 +35,12 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   color: #333E50;
+}
+
+code {
+  background: #d8dfee;
+}
+
+.book-summary {
+  background: #d8dfee;
 }
