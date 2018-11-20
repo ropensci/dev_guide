@@ -3,13 +3,13 @@ rOpenSci Packages: Development, Maintenance, and Peer Review
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
 
-Source of the extended version of the onboarding packaging guide. [Read it here](https://ropensci.github.io/dev_guide/).
+rOpenSci's guide for packages in our suite. [Read it here](https://ropensci.github.io/dev_guide/).
 
 ## Contributing
 
 ### Suggestions and updates
 
-These guidelines are a work in progress for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). Corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also make a pull request for typos, please edit the .Rmd files that are at the root of this repository. The book will be built and automatically deployed when your PR is merged.
+This book contains our guidelines for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). They are always a work in progress - corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also suggest changes by editing the .Rmd files that are at the root of this repository and submitting a pull request.  An "edit" button at the top of all book chapters will take you directly to the relevant page on GitHub to make such changes. Please target your pull requests to the `dev` branch.
 
 ### Technical details
 
@@ -29,7 +29,7 @@ If you're an associate editor and you want to render the book locally you need t
 
 # Meta
 
-This bookdown was started using [Sean Kross](https://github.com/seankross)' minimal bookdown example that you can find [here](https://github.com/seankross/bookdown-start).
+This book was started using [Sean Kross](https://github.com/seankross)' minimal bookdown example that you can find [here](https://github.com/seankross/bookdown-start).
 
 All of the content of this repository is licensed 
 [CC-BY-SA](https://creativecommons.org/publicdomain/zero/1.0/).
