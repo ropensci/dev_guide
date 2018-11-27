@@ -125,7 +125,7 @@ can be found at *link*".
 
 * We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) and [this section of the present chapter](#function-grouping) for more details.
 
-* The package should contain top-level documentation for `?foobar`, (or `?foobar-package` if there is a naming conflict). Optionally, you can use	both `?foobar` and `?foobar-package` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
+* The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
 * The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
 
