@@ -131,7 +131,7 @@ Make a man page for deprecated functions like:
 NULL
 ```
 
-This creates a man page that users can access like `?helloworld-deprecated` and they'll see in the documentation index. Add any functions to this page as needed, and take away as a function moves to defunct (see below).
+This creates a man page that users can access like ``?`helloworld-deprecated` `` and they'll see in the documentation index. Add any functions to this page as needed, and take away as a function moves to defunct (see below).
 
 * In the next version (`v0.3.0`) you can make the function defunct (that is, completely gone from the package, except for a man page with a note about it).
 
@@ -182,4 +182,4 @@ Make a man page for defunct functions like:
 NULL
 ```
 
-This creates a man page that users can access like `?helloworld-defunct` and they'll see in the documentation index. Add any functions to this page as needed. You'll likely want to keep this man page indefinitely.
+This creates a man page that users can access like ``?`helloworld-defunct` `` and they'll see in the documentation index. Add any functions to this page as needed. You'll likely want to keep this man page indefinitely.
