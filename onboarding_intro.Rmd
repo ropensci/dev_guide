@@ -1,16 +1,16 @@
-#  (PART) Onboarding Packages {-}
+#  (PART) Software Peer Review of Packages {-}
 
-# Onboarding, Why? What? {#onboardingintro}
+# Software Peer Review, Why? What? {#onboardingintro}
 
 ```{block, type='summaryblock'}
-This chapter contains a [general intro](#whatisonboarding) to our onboarding system for packages, [reasons to submit a package](#whysubmit), [reasons to volunteer as a reviewer](#whyreview), [why our reviews are open](#whyopen), and acknowledgements of [actors of the system](#editors-and-reviewers).
+This chapter contains a [general intro](#whatisonboarding) to our software peer review system for packages, [reasons to submit a package](#whysubmit), [reasons to volunteer as a reviewer](#whyreview), [why our reviews are open](#whyopen), and acknowledgements of [actors of the system](#editors-and-reviewers).
 ```
 
-## What is rOpenSci onboarding? {#whatisonboarding}
+## What is rOpenSci Software Peer Review? {#whatisonboarding}
 
-rOpenSci's [suite of packages](https://ropensci.org/packages/) is partly contributed by staff members and partly contributed by community members, which means the suite stems from a great diversity of skills and experience of developers. How to ensure quality for the whole set? That's where onboarding comes into play: packages contributed by the community undergo a transparent, constructive, non adversarial and open review process. For that process relying mostly on volunteer work, [associate editors](https://github.com/ropensci/onboarding#associate-editors) manage the incoming flow and ensure progress of submissions; authors create, submit and improve their package; [reviewers](https://github.com/ropensci/onboarding#reviewers), two per submission, examine the software code and user experience. [This blog post](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/) written by rOpenSci onboarding editors is a good introduction to rOpenSci onboarding. Other blog posts about onboarding itself and onboarded packages can be find [via the "onboarding" tag on rOpenSci blog](https://ropensci.org/tags/onboarding/).
+rOpenSci's [suite of packages](https://ropensci.org/packages/) is partly contributed by staff members and partly contributed by community members, which means the suite stems from a great diversity of skills and experience of developers. How to ensure quality for the whole set? That's where onboarding comes into play: packages contributed by the community undergo a transparent, constructive, non adversarial and open review process. For that process relying mostly on volunteer work, [associate editors](#associateditors) manage the incoming flow and ensure progress of submissions; authors create, submit and improve their package; [reviewers](#reviewers), two per submission, examine the software code and user experience. [This blog post](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/) written by rOpenSci onboarding editors is a good introduction to rOpenSci onboarding. Other blog posts about onboarding itself and onboarded packages can be find [via the "software-peer-review" tag on rOpenSci blog](https://ropensci.org/tags/software-peer-review/).
 
-Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package onboarding process is an issue in the [ropensci/onboarding GitHub repository](https://github.com/ropensci/onboarding/). For instance, click [here](https://github.com/ropensci/onboarding/issues/24) to read the onboarding review thread of the `ropenaq` package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
+Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package review process is an issue in the [ropensci/software-review GitHub repository](https://github.com/ropensci/software-review/). For instance, click [here](https://github.com/ropensci/software-review/issues/24) to read the onboarding review thread of the `ropenaq` package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
 
 ## Why submit your package to rOpenSci? {#whysubmit}
 
@@ -41,7 +41,7 @@ Furthermore, authors and reviewers have the ability to contact privately the edi
 
 ### Associate editors {#associateditors}
 
-rOpenSci's onboarding process is run by:
+rOpenSci's Software Peer Review process is run by:
 
 * [Noam Ross](https://github.com/noamross), EcoHealth Alliance
 * [Scott Chamberlain](https://github.com/sckott), rOpenSci

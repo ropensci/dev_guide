@@ -3,7 +3,7 @@
 ```{block, type='summaryblock'}
 This chapter summarizes our guidelines about continuous integration after explaining what continuous integration is.
 
-Along with [last chapter](#building), it forms our guidelines for onboarding reviews.
+Along with [last chapter](#building), it forms our guidelines for Software Peer Review.
 ```
 
 ## Why use continuous integration (CI)?
