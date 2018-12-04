@@ -1,6 +1,9 @@
 # (APPENDIX) Appendix {-}
 
 # NEWS {#booknews}
+
+* 2018-12-04, onboarding was renamed Software Peer Review.
+
 ## place-holder 0.0.1
 
 * Added a `NEWS.md` file to track changes to the book.
