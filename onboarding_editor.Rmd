@@ -1,7 +1,7 @@
-# Onboarding Guide for Editors
+# Software Peer Review Guide for Editors {#editorguide}
 
 ```{block, type='summaryblock'}
-Onboarding at rOpenSci is managed by a team of editors.  We are piloting
+Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
 a system of a rotating Editor-in-Chief (EiC).
 
 This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), and [how to respond to an out-of-scope submission](#outofscoperesponse).
@@ -101,7 +101,7 @@ board. The EiC plays the following roles
    add the following comment to the submission thread:
    
    `This submission has been accepted to rOpenSci. The review thread can be
-    found at [LINK TO ONBOARDING ISSUE]`
+    found at [LINK TO SOFTWARE REVIEW ISSUE]`
 
 ### Package promotion:
 
