@@ -19,7 +19,7 @@ Sincerely,
 
 [EDITOR]
 
-[reviewers guide]: https://ropensci.github.io/dev_guide/onboarding-guide-for-reviewers.html
-[packaging guide]: https://ropensci.github.io/dev_guide/https://ropensci.github.io/dev_guide/building.html
+[reviewers guide]: https://ropensci.github.io/dev_guide/reviewerguide.html
+[packaging guide]: https://ropensci.github.io/dev_guide/building.html
 [template]: https://ropensci.github.io/dev_guide/reviewtemplate.html
 [rOpenSci forum]: https://discuss.ropensci.org/
