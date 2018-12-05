@@ -230,7 +230,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ## Recommended scaffolding
 
-* For http requests we strongly recommend using `httr` over `RCurl`.
+* For HTTP requests we recommend using `curl`, `crul`, or `httr` over `RCurl`. If you like low level clients for HTTP, `curl` is best, whereas `crul` or `httr` are better for higher level access. `crul` is maintained by rOpenSci. We recommend `webmockr` for mocking HTTP requests, and `vcr` for caching HTTP requests in package tests.
 
 * For parsing JSON, use `jsonlite` instead of `rjson` or `RJSONIO`.
 
