@@ -37,9 +37,9 @@ rOpenSci aims to support packages that enable reproducible research and managing
 categories outlined below.  If you are unsure whether your package fits into one of these categories, please open an issue as a pre-submission inquiry
 ([**Examples**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
-As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today.  While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
+As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today. For instance, data visualization packages are no longer in-scope. While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
 
-Please note that rOpenSci package development happens in several different spaces: unconferences, internal development by [staff](https://ropensci.org/about/#team) and software review, which can be confusing. The emphasis of the unconference is on experimentation, exploration and community-building -- participants work on all kinds of things that wouldn't be in scope for Software Peer Review. Similarly, some of the software developed by rOpenSci staff is focused on filling gaps in R infrastructure and wouldn't be in-scope for Software Peer Review.
+Note that not all rOpenSci projects and packages are in-scope or go through peer review.  Projects developed by [staff](https://ropensci.org/about/#team) or at conferences may be experimental, exploratory, address core infrastructure priorities and thus not fall into these categories. Look for the peer-review badge -  ![](https://badges.ropensci.org/231_status.svg) -  to identify peer-reviewed packages in the rOpenSci repository.
 
 ### Package categories
 
