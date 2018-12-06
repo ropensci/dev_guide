@@ -219,14 +219,56 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
-* If your package uses a system dependency, you should 
+* If your package uses a _system_ dependency, you should 
+    
     * indicate it in DESCRIPTION
-    * and check for it in the configure script and give a helpful error message if it cannot be found. [Example of a line indicating a system dependency in DESCRIPTION](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19), [example of a configure script that checks for the dependency](https://github.com/cran/webp/blob/master/configure). You can have a look at [more configure scripts](https://github.com/search?q=org%3Acran+anticonf&type=Code). Your configure script might need to do some hacky things since the config script is where you put all the hacks needed to make a particular library work. Use examples as a starting point but make sure you understand what you are doing because small bugs in the configure script can lead to bad things and can even get your package kicked from CRAN. Do not hesitate to [ask for help](https://discuss.ropensci.org/).
-    * You should also check the dependency is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) in order to ensure automatic tools building packages don't have a hard time with your package. See [`sysreqsdb` contributing guidelines](https://github.com/r-hub/sysreqsdb#contributing).
+    
+    * Check that it is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) to allow automatic tools to install it, and [submit a contribution](https://github.com/r-hub/sysreqsdb#contributing) if not.
+    
+    * check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)). 
+  `configure` scripts can be challenging as they often require hacky solutions
+  to make diverse system dependencies work across systems. Use examples ([more here]((https://github.com/search?q=org%3Acran+anticonf&type=Code))) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
 
-* When considering depending on a new package think about whether you really need to use the package. First, if you can easily write the code yourself to do what the package does, and it's relatively simple, you probably don't need to import a package. Second, consider "how heavy" the package is that you would import to your package. A "heavy" package is one with a lot of dependencies itself and/or with one or more dependencies that are hard to install. The more dependencies required means more possible problems users will have either with installation or breaking changes.
 
-* Consider if any dependencies have overlapping functionality, and if so, if either of the dependencies can be removed.
+* Consider the trade-offs involved in relying on a package as a dependency. On one hand,
+  using dependencies reduces coding effort, and can build on useful functionality developed by
+  others, especially if the dependency performs complex tasks, is high-performance,
+  and/or is well vetted and tested. On the other hand, having many dependencies
+  places a burden on the maintainer to keep up with changes in those packages, at risk
+  to your package's long-term sustainability.  It also 
+  increases installation time and size, primarily a consideration on your and others' development cycle, and in automated build systems. "Heavy" packages - those with many dependencies themselves, and those with large amounts of compiled code - increase this cost. Here are some approaches to reducing
+  dependencies:
+
+    * Small, simple functions from a dependency package may be better copied into
+      your own package if the dependency if you are using only a few functions
+      in an otherwise large or heavy dependency.  On the other hand, complex functions
+      with many edge cases (e.g. parsers) require considerable testing and vetting.
+    
+        * An common example of this is in returning tidyverse-style "tibbles" from package
+          functions that provide data.
+          One can avoid the modestly heavy **tibble** package dependency by returning
+          a tibble created by modifying a data frame like so:
+    
+          ```
+          class(df) <- c("tbl_df", "tbl", "data.frame") 
+          ```
+   
+          (Note that this approach is [not universally endorsed](https://twitter.com/krlmlr/status/1067856118385381377).)
+  
+    * Ensure that you are using the package where the function is defined,
+rather than one where it is re-exported. For instance many functions in **devtools** can be found in smaller specialty packages such as **sessioninfo**. The `%>%` function
+  should be imported from **magrittr**, where it is defined, rather than the heavier
+  **dplyr**, which re-exports it.
+  
+    * Some dependencies are preferred because they provide easier to interpret
+      function names and syntax than base R solutions. If this is the primary
+      reason for using a function in a heavy dependency, consider wrapping
+      the base R approach in a nicely-named internal function in your package.
+
+    * If dependencies that overlapping functionality, see if you can rely on only one.
+    
+    * More dependency-management tips can be found [in this post by 
+      Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
 ## Recommended scaffolding
 
