@@ -19,7 +19,7 @@ Welcome! This book is a guide for authors, maintainers, reviewers and editors of
 
 The [first section of the book](#building) contains our guidelines for creating and testing R packages. 
 
-The [second section](#softwarereviewintro) is dedicated to rOpenSci's onboarding process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process.
+The [second section](#softwarereviewintro) is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process.
 
 The [third and last section](#collaboration) features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a [chapter for anyone wishing to start contributing to rOpenSci packages](#contributingguide).
 

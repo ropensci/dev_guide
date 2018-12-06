@@ -3,7 +3,7 @@
 # Packaging Guide {#building}
 
 ```{block, type='summaryblock'}
-rOpenSci accepts packages that meet our guidelines via a streamlined [Software Peer Review process](#whatisonboarding). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after onboarding is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
+rOpenSci accepts packages that meet our guidelines via a streamlined [Software Peer Review process](#whatissoftwarereview). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after the review process is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
 We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
 

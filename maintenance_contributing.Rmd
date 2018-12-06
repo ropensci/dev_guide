@@ -75,7 +75,7 @@ See the whole first section of this book: [Building Your Package](#building)
 
 Our packages are developed on GitHub. We have two organizations:
 
-* https://github.com/ropensci for more mature packages, including some developed by rOpenSci staff and some developed by community members whose packages have gone through [software peer review](#onboardingintro)
+* https://github.com/ropensci for more mature packages, including some developed by rOpenSci staff and some developed by community members whose packages have gone through [software peer review](#softwarereviewintro)
 
 * https://github.com/ropenscilabs for experiments and packages that are not ready for release yet.
 
