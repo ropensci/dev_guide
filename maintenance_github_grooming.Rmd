@@ -1,7 +1,7 @@
 # GitHub Grooming {#grooming}
 
 ```{block, type='summaryblock'}
-rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform in a section about [making your repo more discoverable](#repodiscoverability) and a section about [marketing your own GitHub account after onboarding your package](#marketown).
+rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform in a section about [making your repo more discoverable](#repodiscoverability) and a section about [marketing your own GitHub account after going through peer review](#marketown).
 
 ```
 

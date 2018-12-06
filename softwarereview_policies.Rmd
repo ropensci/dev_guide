@@ -3,7 +3,7 @@
 ```{block, type='summaryblock'}
 This chapter contains the policies of rOpenSci Software Peer Review. 
 
-In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-onboarding).  
+In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
 
 Last but not least, you'll find the code of conduct of rOpenSci Software Peer Review [here](#code-of-conduct).
 ```
@@ -95,7 +95,7 @@ We recommend that packages highlight differences from and improvements over over
 We encourage developers whose packages are not accepted due to overlap to still consider submittal to other repositories or journals.
 
 
-## Package ownership and maintenance {#ownership-after-onboarding}
+## Package ownership and maintenance {#ownership-after-softwarereview}
 
 ### Role of the rOpenSci team
 
