@@ -4,9 +4,9 @@ repo: https://github.com/ropenscilabs/dev_guide
 output_dir: _book
 rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "pkg_ci.Rmd", "pkg_security.Rmd",
-           "onboarding_intro.Rmd", "onboarding_policies.Rmd",
-           "onboarding_author.Rmd",
-           "onboarding_reviewer.Rmd", "onboarding_editor.Rmd",
+           "softwarereview_intro.Rmd", "softwarereview_policies.Rmd",
+           "softwarereview_author.Rmd",
+           "softwarereview_reviewer.Rmd", "softwarereview_editor.Rmd",
            "maintenance_collaboration.Rmd","maintenance_releases.Rmd",
            "maintenance_marketing.Rmd", "maintenance_github_grooming.Rmd",
            "maintenance_evolution.Rmd",
