@@ -1,4 +1,4 @@
-# Software Peer Review Guide for Reviewers {#reviewerguide}
+# Guide for Reviewers {#reviewerguide}
 
 ```{block, type='summaryblock'}
 Thanks for accepting to review a package for rOpenSci! This chapter consists of our guidelines to [prepare](#preparereview), [submit](#submitreview) and [follow up](#followupreviewer) on your review.

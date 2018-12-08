@@ -1,4 +1,4 @@
-# Software Peer Review Guide for Editors {#editorguide}
+# Guide for Editors {#editorguide}
 
 ```{block, type='summaryblock'}
 Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
