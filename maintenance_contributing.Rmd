@@ -47,7 +47,9 @@ Before contributing to one of our packages, you might want to read a bit more ab
 
 ##### Tutorials
 
-* [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
+* [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
+
+* [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/2018/09/usethis-workflow-for-package-development/)
 
 * [This pictorial by Matthew J Denny](http://www.mjdenny.com/R_Package_Pictorial.html)
 
