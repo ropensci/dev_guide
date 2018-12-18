@@ -2,6 +2,8 @@
 
 # NEWS {#booknews}
 
+* 2018-12-18, inclusion of an explicity policy for conflict of interest (for reviewers and editors).
+
 * 2018-12-04, onboarding was renamed Software Peer Review.
 
 ## place-holder 0.0.1
