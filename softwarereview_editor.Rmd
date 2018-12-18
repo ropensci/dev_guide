@@ -92,7 +92,7 @@ Here are criteria to keep in mind when choosing a reviewer. You might need to pi
 * Diversity - with two reviewers both shouldn’t be cis white males.
 * Some evidence that they are interested in openness or R community activities, although blind emailing is fine.
 
-Each submission should be reviewed by _two_ package reviewers. Although it is fine for one of them to have very little package development experience and more domain knowledge, the review should not be split in two, both reviewers need to review the package comprehensively, though from their particular perspective.
+Each submission should be reviewed by _two_ package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two.  Both reviewers need to review the package comprehensively, though from their particular perspective.  In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
 
 ### During review:
 
