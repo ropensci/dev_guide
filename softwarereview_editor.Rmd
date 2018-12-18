@@ -90,7 +90,7 @@ Here are criteria to keep in mind when choosing a reviewer. You might need to pi
 * No [conflicts of interest](#coi).
 * Try to balance your sense of the potential reviewer’s experience against the complexity of the package.
 * Diversity - with two reviewers both shouldn’t be cis white males.
-* Some evidence that they are interested in openness or R community activities although blind emailing is fine.
+* Some evidence that they are interested in openness or R community activities, although blind emailing is fine.
 
 Each submission should be reviewed by _two_ package reviewers. Although it is fine for one of them to have very little package development experience and more domain knowledge, the review should not be split in two, both reviewers need to review the package comprehensively, though from their particular perspective.
 
