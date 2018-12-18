@@ -2,6 +2,8 @@
 
 # NEWS {#booknews}
 
+* 2018-12-18, added more guidance for editor on how to look for reviewers.
+
 * 2018-12-04, onboarding was renamed Software Peer Review.
 
 ## place-holder 0.0.1
