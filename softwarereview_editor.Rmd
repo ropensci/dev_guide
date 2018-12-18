@@ -76,7 +76,7 @@ As a (guest) editor, use
 
 When these sources of information are not enough, 
 * ping other editors in Slack for ideas, 
-* look for users of the package (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter). 
+* look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter). 
 * You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
 * R-Ladies has a [directory](http://rladies.org/directory/) specifying skills and interests of people listed.
 
