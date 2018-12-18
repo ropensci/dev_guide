@@ -3,7 +3,7 @@
 ```{block, type='summaryblock'}
 This chapter contains the policies of rOpenSci Software Peer Review. 
 
-In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
+In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission) including our [conflict of interest policies](#coi), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
 
 Last but not least, you'll find the code of conduct of rOpenSci Software Peer Review [here](#code-of-conduct).
 ```
@@ -30,6 +30,19 @@ Last but not least, you'll find the code of conduct of rOpenSci Software Peer Re
 -   Do not submit your package for review while it or an associated manuscript
     is also under review at another venue, as this may result on conflicting
     requests for changes.
+
+### Conflict of interest for reviewers/editors {#coi}
+
+Following criteria define people who cannot serve as an editor or reviewer for a submission.
+
+* The authors with a major role are from the potential reviewer/editor's institution or institutional component (e.g., department)
+* Within in the past three years, the potential reviewer/editor has been a collaborator or has had any other professional relationship (e.g., served as a mentor) with any person on the package who has a major role
+* The potential reviewer/editor serves as a member of the advisory board for the project under review
+*  The potential reviewer/editor (or close family member) would receive a direct financial benefit if the package is accepted 
+* The potential reviewer/editor has an indirect financial interest from the applicant institution.
+* The potential reviewer/editor has significantly contributed to a competitor project.
+
+In the case where none of the [associate editors](#associateditors) can serve as editor, an external guest editor will be recruited.
 
 ## Aims and Scope {#aims-and-scope}
 
