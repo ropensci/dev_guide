@@ -70,7 +70,7 @@ Due date: YYYY-MM-DD
 
 As a (guest) editor, use 
 
-* the potential suggestions made by the submitter(s), 
+* the potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed.  We suggest not using more than one of suggested reviewers)
 * the Airtable database of reviewers and volunteers 
 * and the authors of [rOpenSci packages](https://ropensci.org/packages/). 
 
