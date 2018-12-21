@@ -33,7 +33,7 @@ Last but not least, you'll find the code of conduct of rOpenSci Software Peer Re
 
 ### Conflict of interest for reviewers/editors {#coi}
 
-Following criteria are meant to be a guide for what constitutes a conflict of interest for an editor or reviewer. You have COI if:
+Following criteria are meant to be a guide for what constitutes a conflict of interest for an editor or reviewer. The potential editor or reviewer has a conflict of interest if:
 
 * The authors with a major role are from the potential reviewer/editor's institution or institutional component (e.g., department)
 * Within in the past three years, the potential reviewer/editor has been a collaborator or has had any other professional relationship with any person on the package who has a major role
