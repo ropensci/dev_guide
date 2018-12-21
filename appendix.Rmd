@@ -2,7 +2,9 @@
 
 # NEWS {#booknews}
 
-* 2018-12-18, inclusion of an explicity policy for conflict of interest (for reviewers and editors).
+* 2018-12-21, inclusion of an explicity policy for conflict of interest (for reviewers and editors).
+
+* 2018-12-18, added more guidance for editor on how to look for reviewers.
 
 * 2018-12-04, onboarding was renamed Software Peer Review.
 
