@@ -63,6 +63,7 @@ Due date: YYYY-MM-DD
 
 -   Switch numbered tag `to 3/reviewers-assigned` once reviewers are assigned.
 -   Invite authors and reviewers to rOpenSci Slack if they aren't on this Slack already.
+-   Update Airtable database: Add one of the review record numbers associated with the package to the `Reviews` field of each reviewer's record. Insert new `Reviewers` record if required.  
 
 #### How to look for reviewers
 
@@ -101,6 +102,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     subsequent changes, and 1 week for reviewer approval of changes.
 -   Upon all reviews being submitted, change the review status tag to
     `4/review-in-awaiting-changes` to update the reminder bot.
+-   Update Airtable database: Add the link to the review comment to the `review_url` field and the number of review hours to the `review_hours` field of each review record. 
 - If the author stops responding, refer to [the policies](#package-submission) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
 -   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`.
     
