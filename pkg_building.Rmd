@@ -57,7 +57,9 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 ## Code Style
 
-* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](http://r-pkgs.had.co.nz/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling. You can choose to use `=` over `<-` as long you are consistent with one choice within your package. 
+* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](http://r-pkgs.had.co.nz/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling. 
+
+* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package.
 
 ## README
 
