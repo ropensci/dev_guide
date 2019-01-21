@@ -28,7 +28,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ## Platforms
 
-* Packages should run on all major platforms (Windows, macOS, Linux).  Exceptions may be granted packages that interact with system-specific functions, or wrappers for utilties that only operate on limited platforms, but authors should make every effort for cross-platform compatibility, including system-specific compilation, or containerization of external utilities.
+* Packages should run on all major platforms (Windows, macOS, Linux).  Exceptions may be granted packages that interact with system-specific functions, or wrappers for utilities that only operate on limited platforms, but authors should make every effort for cross-platform compatibility, including system-specific compilation, or containerization of external utilities.
 
 
 ## Package API
