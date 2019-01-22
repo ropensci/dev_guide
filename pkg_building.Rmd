@@ -200,6 +200,8 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
+* For testing your functions creating plots, we recommend using [`vdiffr`](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the `testthat` package.
+
 * Once you've set up CI, use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
 * `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
