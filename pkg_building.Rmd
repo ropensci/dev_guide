@@ -200,7 +200,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
-* For testing your functions creating plots, we recommend using [`vdiffr`](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the `testthat` package.
+* For testing your functions creating plots, we suggest using [`vdiffr`](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the `testthat` package.
 
 * Once you've set up CI, use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
