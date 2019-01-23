@@ -1,7 +1,7 @@
 # Software Peer Review policies {#policies}
 
 ```{block, type='summaryblock'}
-This chapter contains the policies of rOpenSci Software Peer Review. 
+This chapter contains the policies of rOpenSci Software Peer Review.
 
 In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission) including our [conflict of interest policies](#coi), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
 
@@ -38,7 +38,7 @@ Following criteria are meant to be a guide for what constitutes a conflict of in
 * The authors with a major role are from the potential reviewer/editor's institution or institutional component (e.g., department)
 * Within in the past three years, the potential reviewer/editor has been a collaborator or has had any other professional relationship with any person on the package who has a major role
 * The potential reviewer/editor serves as a member of the advisory board for the project under review
-*  The potential reviewer/editor would receive a direct or indirect financial benefit if the package is accepted 
+*  The potential reviewer/editor would receive a direct or indirect financial benefit if the package is accepted
 * The potential reviewer/editor has significantly contributed to a competitor project.
 * There is also a lifetime COI for the family members, business partners, and thesis student/advisor or mentor.
 
@@ -81,14 +81,14 @@ In addition, we have some _specialty topics_ with a slightly broader scope.
 
 ### Other scope considerations
 
-Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one. 
+Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.
 
 Packages that include interactive tools to facilitate researcher workflows (e.g., shiny apps) must have a mechanism to make the interactive workflow reproducible, such as code generation or a scriptable API.
 
 Here are some types of packages we are unlikely to accept:
 
 -  Packages that wrap or implement statistical or machine learning methods.  We are not organized so as to review the correctness of these methods. (But see "text analysis", above)
--  Exploratory data analysis packages that visualize or summarize data. 
+-  Exploratory data analysis packages that visualize or summarize data.
 -  General workflow or package development support packages
 
 For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal.
@@ -115,7 +115,7 @@ We encourage developers whose packages are not accepted due to overlap to still 
 
 ### Role of the rOpenSci team
 
-Authors of contributed packages essentially maintain the same ownership they had prior to their package joining the rOpenSci suite. Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, the rOpenSci team will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner (see [the section about maintainer responsiveness](#maintainer-responsiveness)). 
+Authors of contributed packages essentially maintain the same ownership they had prior to their package joining the rOpenSci suite. Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, the rOpenSci team will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner (see [the section about maintainer responsiveness](#maintainer-responsiveness)).
 
 ### Maintainer responsiveness
 
@@ -134,49 +134,17 @@ We urge package maintainers to make sure they are receiving GitHub notifications
 
 Should authors abandon the maintenance of an actively used package in our suite, we will consider petitioning CRAN to transfer package maintainer status to rOpenSci.
 
-### Quality commitment 
+### Quality commitment
 
-rOpenSci strives to develop and promote high quality research software. To ensure that your software meets our criteria, we review all of our submissions as part of the Software Peer Review process, and even after acceptance will continue to step in with improvements and bug fixes. 
+rOpenSci strives to develop and promote high quality research software. To ensure that your software meets our criteria, we review all of our submissions as part of the Software Peer Review process, and even after acceptance will continue to step in with improvements and bug fixes.
 
 Despite our best efforts to support contributed software, errors are the responsibility of individual maintainers. Buggy, unmaintained software may be removed from our suite at any time.
 
 
 ### Package removal
 
-In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes. 
+In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes.
 
 ## Code of Conduct {#code-of-conduct}
 
-* We are committed to providing a friendly, safe and welcoming
-  environment for all, regardless of gender, sexual orientation,
-  disability, ethnicity, religion, or similar personal characteristic.
-* Please avoid using openly sexual nicknames or other nicknames that
-  might detract from a friendly, safe and welcoming environment for
-  all.
-* Please be kind and courteous. There's no need to be mean or rude.
-* Respect that people have differences of opinion and that every
-  design or implementation choice carries a trade-off and numerous
-  costs. There is seldom a right answer.
-* Please keep unstructured critique to a minimum. If you have solid
-  ideas you want to experiment with, make a fork and see how it works.
-* We will exclude you from interaction if you insult, demean or harass
-  anyone.  That is not welcome behavior. We interpret the term
-  "harassment" as including the definition in the [Citizen Code of
-  Conduct](http://citizencodeofconduct.org/); if you have any lack of
-  clarity about what might be included in that concept, please read
-  their definition. In particular, we don't tolerate behavior that
-  excludes people in socially marginalized groups.
-* Private harassment is also unacceptable. No matter who you are, if
-  you feel you have been or are being harassed or made uncomfortable
-  by a community member, please contact us at info@ropensci.org 
-  immediately with a capture (log, photo, email) of the harassment if possible. 
-  Whether you're a regular contributor or a newcomer, we 
-  care about making this community a safe place for you and we've got
-  your back.
-* Likewise, any spamming, trolling, flaming, baiting or other
-  attention-stealing behavior are not welcome.
-* Avoid the use of personal pronouns in code comments or
-  documentation. There is no need to address persons when explaining
-  code (e.g. "When the developer")
-
-_This CoC adapted from the [io.js CoC](https://github.com/iojs/io.js/blob/v1.x/CONTRIBUTING.md#code-of-conduct), adapted from [Rust's CoC](https://github.com/rust-lang/rust/wiki/Note-development-policy#conduct)._
+rOpenSci’s community is our best asset. Whether you’re a regular contributor or a newcomer, we care about making this a safe place for you and we’ve got your back. We have a Code of Conduct that applies to all people participating in the rOpenSci community, including rOpenSci staff and leadership and to all modes of interaction online or in person. The [Code of Conduct](https://ropensci.org/code-of-conduct/) is maintained on the rOpenSci website.
