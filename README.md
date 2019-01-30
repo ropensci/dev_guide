@@ -1,7 +1,9 @@
 rOpenSci Packages: Development, Maintenance, and Peer Review
 =============================================================
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) [![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
+[![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
+[![DOI](https://zenodo.org/badge/126815002.svg)](https://zenodo.org/badge/latestdoi/126815002)
 
 rOpenSci's guide for packages in our suite. [Read it here](https://ropensci.github.io/dev_guide/).
 
