@@ -26,6 +26,11 @@ We strongly recommend that package developers read Hadley Wickham's concise but 
 We recommend you to use the [`codemetar` package](https://github.com/ropensci/codemetar) for creating and updating a JSON [CodeMeta](https://codemeta.github.io/) metadata file for your package via `codemetar::write_codemeta()`. It will automatically include all useful information, including [GitHub topics](#grooming). CodeMeta uses [Schema.org terms](https://schema.org/) so as it gains popularity the JSON metadata of your package might be used by third-party services, maybe even search engines. 
 
 
+## Platforms
+
+* Packages should run on all major platforms (Windows, macOS, Linux).  Exceptions may be granted packages that interact with system-specific functions, or wrappers for utilities that only operate on limited platforms, but authors should make every effort for cross-platform compatibility, including system-specific compilation, or containerization of external utilities.
+
+
 ## Package API
 
 ## Function and argument naming
