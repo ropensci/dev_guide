@@ -9,7 +9,9 @@ Please strive to complete your review within 3 weeks of accepting a review reque
 additional or alternate reviewers if a review is excessively late.
 ```
 
-## Preparing your review 
+## Preparing your review
+
+Note that when installing the package to review it, you should use the `dependencies = TRUE` argument of `devtools::install()` to make sure you have all dependencies available.
 
 ### General guidelines
 
