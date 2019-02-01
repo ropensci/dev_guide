@@ -2,6 +2,10 @@
 
 # NEWS {#booknews}
 
+## 0.1.1
+
+* 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
+
 ## First release 0.1.0
 
 * 2019-01-23, add details about requirements for packges running on all major platforms and added new section to package categories.
