@@ -1,5 +1,5 @@
 {
-    "description": "<ul>\n<li><p>2019-01-23, add details about requirements for packges running on all major platforms and added new section to package categories.</p>\n</li>\n<li><p>2019-01-22, add details to the guide for authors about the development stage at which to submit a package.</p>\n</li>\n<li><p>2018-12-21, inclusion of an explicity policy for conflict of interest (for reviewers and editors).</p>\n</li>\n<li><p>2018-12-18, added more guidance for editor on how to look for reviewers.</p>\n</li>\n<li><p>2018-12-04, onboarding was renamed Software Peer Review.</p>\n</li>\n</ul>", 
+    "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
     "license": "other-open", 
     "title": "ropensci/dev_guide: First release", 
     "version": "0.1.0", 
@@ -10,41 +10,44 @@
             "name": "rOpenSci"
         },
         {
-            "name": "Brooke Anderson"
+            "name": "Brooke Anderson",
+            "affiliation": "Colorado State University",
         }, 
         {
-            "name": "Scott Chamberlain"
+            "name": "Scott Chamberlain",
+            "affiliation": "rOpenSci"
         }, 
         {
-            "name": "Anna Krystalli"
+            "name": "Anna Krystalli",
+            "affiliation": "University of Sheffield RSE"
         }, 
         {
-            "name": "Lincoln Mullen"
+            "name": "Lincoln Mullen",
+            "affiliation": "George Mason University"
         }, 
         {
-            "name": "Karthik Ram"
+            "name": "Karthik Ram",
+            "affiliation": "rOpenSci"
         }, 
         {
-            "name": "Noam Ross"
+            "name": "Noam Ross",
+            "affiliation": "EcoHealth Alliance"
         },
         {
-            "name": "Ma\u00eblle Salmon"
+            "name": "Ma\u00eblle Salmon",
+            "affiliation": "rOpenSci"
         }, 
         {
-            "name": "Melina Vidoni"
+            "name": "Melina Vidoni",
+            "affiliation": "INGAR CONICET-UTN"
         }
     ], 
     "access_right": "open", 
     "related_identifiers": [
         {
             "scheme": "url", 
-            "identifier": "https://github.com/ropensci/dev_guide/tree/0.1.0", 
+            "identifier": "https://github.com/ropensci/dev_guide/tree/0.1.1", 
             "relation": "isSupplementTo"
-        }, 
-        {
-            "scheme": "doi", 
-            "identifier": "10.5281/zenodo.2553043", 
-            "relation": "isVersionOf"
         }
     ]
 }
