@@ -2,7 +2,7 @@
 
 # NEWS {#booknews}
 
-## 0.1.1
+## 0.1.5
 
 * 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
 
