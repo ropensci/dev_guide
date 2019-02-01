@@ -1,6 +1,6 @@
 {
     "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
-    "license": "other-open", 
+    "license": "CC-BY SA", 
     "title": "ropensci/dev_guide: First release", 
     "version": "0.1.0", 
     "upload_type": "software", 
