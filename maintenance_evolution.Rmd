@@ -14,12 +14,11 @@ Everyone's free to have their own opinion about how freely parameters/functions/
 
 Sometimes parameter names must be changed for clarity, or some other reason. 
 
-A possible approach is to catch all parameters passed in to the function and check against some list of parameters, and stop or warn with a meaningful message.
+A possible approach is check if deprecated arguments are not missing, and stop a meaningful message.
 
 ```r
 foo_bar <- function(x, y) {
-    calls <- names(sapply(match.call(), deparse))[-1]
-    if(any("x" %in% calls)) {
+    if (!missing(x)) {
         stop("use 'y' instead of 'x'")
     }
     y^2
@@ -29,12 +28,12 @@ foo_bar(x = 5)
 #> Error in foo_bar(x = 5) : use 'y' instead of 'x' 
 ```
 
-Or instead of stopping with error, you could check for use of `x` parameter and set it to `y` internally. 
+If you want to be more helpful, you could emit a warning but automatically take the necessary action:
 
 ```r
 foo_bar <- function(x, y) {
-    calls <- names(sapply(match.call(), deparse))[-1]
-    if(any("x" %in% calls)) {
+    if (!missing(x)) {
+        warning("use 'y' instead of 'x'")
         y <- x
     }
     y^2
@@ -44,7 +43,7 @@ foo_bar(x = 5)
 #> 25
 ```
 
-Be aware of the parameter `...`. If your function has `...`, and you have already removed a parameter (lets call it `z`), a user may have older code that uses `z`. When they pass in `z`, it's not a parameter in the function definition, and will likely be silently ignored -- not what you want. So, do make sure to always check for removed parameters moving forward since you can't force users to upgrade.
+Be aware of the parameter `...`. If your function has `...`, and you have already removed a parameter (lets call it `z`), a user may have older code that uses `z`. When they pass in `z`, it's not a parameter in the function definition, and will likely be silently ignored -- not what you want. Instead, leave the argument around, throwing an error if it used.
 
 ## Functions: changing function names
 
@@ -72,21 +71,19 @@ bar <- foo
 
 With the above solution, the user can use either `foo()` or `bar()` -- either will do the same thing, as they are the same function.
 
-It's also useful to have a message but then you'll only want to throw that message when they use the old function name, e.g.,
+It's also useful to have a message but then you'll only want to throw that message when they use the old function, e.g.,
 
 ```r
 #' foo - add 1 to an input
 #' @export
 foo <- function(x) {
-    if (as.character(match.call()[[1]]) == "foo") {
-        warning("please use bar() instead of foo()", call. = FALSE)
-    }
-    x + 1
+    warning("please use bar() instead of foo()", call. = FALSE)
+    bar(x)
 }
 
 #' @export
 #' @rdname foo
-bar <- foo
+bar <- function(x) x + 1
 ```
 
 After users have used the package version for a while (with both `foo` and `bar`), in the next version you can remove the old function name (`foo`), and only have `bar`.
@@ -103,11 +100,11 @@ To remove a function from a package (let's say your package name is `helloworld`
 
 * Mark the function as deprecated in package version `x` (e.g., `v0.2.0`)
 
-In the function itself, use `.Deprecated()` like:
+In the function itself, use `.Deprecated()` to point to the replacement function:
 
 ```r
 foo <- function() {
-    .Deprecated(msg = "'foo' will be removed in the next version")
+    .Deprecated("bar")
 }
 ```
 
@@ -139,7 +136,7 @@ In the function itself, use `.Defunct()` like:
 
 ```r
 foo <- function() {
-    .Defunct(msg = "'foo' has been removed from this package")
+    .Defunct("bar")
 }
 ```
 
@@ -149,7 +146,7 @@ In addition, it's good to add `...` to all defunct functions so that if users pa
 
 ```r
 foo <- function(...) {
-    .Defunct(msg = "'foo' has been removed from this package")
+    .Defunct("bar")
 }
 ```
 
