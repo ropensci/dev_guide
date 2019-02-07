@@ -1,11 +1,16 @@
 \usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{roblue}{HTML}{6FAEF5}
+\hypersetup
+    {colorlinks=true,
+    linkcolor=roblue,
+urlcolor=roblue,
+filecolor=roblue,
+citecolor=roblue,
+allcolors=roblue
+    }
 \newenvironment{summaryblock}
-    {\begin{center}
-    \begin{tabular}{|p{0.9\textwidth}|}
-    \hline\\
-    }
-    {
-    \\\\\hline
-    \end{tabular}
-    \end{center}
-    }
+    {\begin{mdframed}[linecolor=roblue,linewidth=2pt]}
+    {\end{mdframed}}
