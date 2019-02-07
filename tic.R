@@ -8,6 +8,9 @@ get_stage("deploy") %>%
   add_code_step(
     bookdown::render_book('index.Rmd', 'bookdown::gitbook'),
     prepare_call = remotes::install_github("rstudio/bookdown")
+  ) %>%
+  add_code_step(
+    bookdown::render_book('index.Rmd', 'bookdown::pdf_book')
   )
 
 if (Sys.getenv("id_rsa") != "") {
