@@ -4,8 +4,13 @@
 
 # DO NOT CHANGE THE CODE BELOW
 before_install:
-- R -q -e 'install.packages("remotes"); remotes::install_github("ropenscilabs/tic"); tic::prepare_all_stages(); tic::before_install()'
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+- R -q -e 'install.packages("remotes"); install.packages("tinytex"); remotes::install_github("ropenscilabs/tic"); tic::prepare_all_stages(); tic::before_install()'
+- R 'tinytex::install_tinytex()'
+- tlmgr install booktabs
+- tlmgr install mdframed
+- tlmgr install xcolor
+- tlmgr install hyperref
+- tlmgr install fontspec
 install: R -q -e 'tic::install()'
 after_install: R -q -e 'tic::after_install()'
 before_script: R -q -e 'tic::before_script()'
