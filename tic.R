@@ -16,6 +16,9 @@ get_stage("deploy") %>%
   add_code_step(
     file.copy(from = "pdfbook/ropensci-dev-guide.pdf",
               to = "_book/ropensci-dev-guide.pdf")
+  ) %>%
+  add_code_step(
+    tinytex::install_tinytex()
   )
 
 if (Sys.getenv("id_rsa") != "") {
