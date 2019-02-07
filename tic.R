@@ -10,7 +10,12 @@ get_stage("deploy") %>%
     prepare_call = remotes::install_github("rstudio/bookdown")
   ) %>%
   add_code_step(
-    bookdown::render_book('index.Rmd', 'bookdown::pdf_book')
+    bookdown::render_book('index.Rmd', 'bookdown::pdf_book',
+                          output_dir = "pdfbook")
+  ) %>%
+  add_code_step(
+    file.copy(from = "pdfbook/ropensci-dev-guide.pdf",
+              to = "_book/ropensci-dev-guide.pdf")
   )
 
 if (Sys.getenv("id_rsa") != "") {
