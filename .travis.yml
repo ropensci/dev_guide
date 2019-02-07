@@ -5,7 +5,7 @@
 # DO NOT CHANGE THE CODE BELOW
 before_install:
 - R -q -e 'install.packages("remotes"); install.packages("tinytex"); remotes::install_github("ropenscilabs/tic"); tic::prepare_all_stages(); tic::before_install()'
-- R 'tinytex::install_tinytex()'
+- R -q -e 'tinytex::install_tinytex()'
 - tlmgr install booktabs
 - tlmgr install mdframed
 - tlmgr install xcolor
