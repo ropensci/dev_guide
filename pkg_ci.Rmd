@@ -52,6 +52,8 @@ Please use these tips to minimize build time on Travis especially after your pac
 
 * [Enable auto-cancellation of builds](https://blog.travis-ci.com/2017-03-22-introducing-auto-cancellation).
 
+* If you have a matrix to test your package on several Travis systems, place any `after_success` or `before_deploy` commands within one single matrix build to avoid them being executed on every matrix build.
+
 ### AppVeyor CI (Windows)
 
 For continuous integration on Windows, see [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Set it up using `usethis::use_appveyor()`.
@@ -82,3 +84,7 @@ After transfer to rOpenSci's "ropensci" GitHub organization, each push to the re
 ## Make more of your CI builds: tic
 
 The [`tic` package](https://github.com/ropenscilabs/tic) facilitates deployment tasks for R packages tested by Travis CI, AppVeyor, or any other CI tool of your choice, cf e.g. our [suggestion to build and deploy the documentation website of your package via Travis](#website). Actually this book [uses `tic` for deployment](https://github.com/ropensci/dev_guide#technical-details).
+
+## Make more of your CI builds: Use Travis to deploy websites
+
+If your package has a website built by [`pkgdown`](https://github.com/r-lib/pkgdown), you can use Travis to update and deploy the website on each build. See the help on [`pkgdown::deploy_site_github()`](https://pkgdown.r-lib.org/reference/deploy_site_github.html).  If your `.travis.yml` has a matrix specifying multiple Travis builds, you should put the `before_deploy` and `deploy` commands within a single matrix entry to avoid all of them rebuilding and deploying your website. See an example [here](https://github.com/ropensci/osmdata/blob/master/.travis.yml).
