@@ -17,7 +17,6 @@ bookdown::gitbook:
     history:
       link: https://github.com/ropensci/dev_guide/commits/master/%s
       text: "Chapter edit history"
-  favicon: images/icon_short_color.png
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
