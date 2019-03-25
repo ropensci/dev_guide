@@ -13,7 +13,7 @@ get_stage("deploy") %>%
     purrr::walk(
       list.files("images", full.names = TRUE),
       file.copy,
-      to = "_book"
+      to = "_book/images"
     )
   )
 
