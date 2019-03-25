@@ -11,6 +11,9 @@ github-repo: ropenscilabs/dev_guide
 url: 'http\://ropensci.github.io/dev_guide/'
 description: "Extended version of the rOpenSci packaging guide."
 cover-image: images/icon_short_color.png
+apple-touch-icon: "images/apple-touch-icon.png"
+apple-touch-icon-size: 120
+favicon: "images/favicon.ico"
 ---
 
 # Preface {-}

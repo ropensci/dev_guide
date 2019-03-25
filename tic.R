@@ -8,6 +8,13 @@ get_stage("deploy") %>%
   add_code_step(
     bookdown::render_book('index.Rmd', 'bookdown::gitbook'),
     prepare_call = remotes::install_github("rstudio/bookdown")
+  ) %>%
+  add_code_step(
+    purrr::walk(
+      list.files("images", full.names = TRUE),
+      file.copy,
+      to = "_book/images"
+    )
   )
 
 if (Sys.getenv("id_rsa") != "") {
