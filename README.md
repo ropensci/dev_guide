@@ -9,23 +9,23 @@ rOpenSci's guide for packages in our suite. [Read it here](https://ropensci.gith
 
 ### Suggestions and updates
 
-This book contains our guidelines for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). They are always a work in progress - corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also suggest changes by editing the .Rmd files that are at the root of this repository and submitting a pull request.  An "edit" button at the top of all book chapters will take you directly to the relevant page on GitHub to make such changes. Please target your pull requests to the `dev` branch.
+This book contains our guidelines for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). They are always a work in progress - corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). Open discussions are welcome in our [forum](https://discuss.ropensci.org/). You can also suggest changes by editing the `.Rmd` files that are at the root of this repository and submitting a pull request.  An "edit" button at the top of all book chapters will take you directly to the relevant page on GitHub to make such changes. Please target your pull requests to the `dev` branch.
 
 ### Technical details
 
 Deployment is done via Travis CI using the rOpenSci [`tic`](https://github.com/ropenscilabs/tic) and [`travis`](https://github.com/ropenscilabs/travis) packages: 
 
-* whenever there's a push to master, the book is built on Travis to a _book folder whose content is then pushed from Travis to the gh-pages branch.
+* whenever there's a push to `master`, the book is built on Travis to a `_book` folder whose content is then pushed from Travis to the `gh-pages` branch.
 
-* whenever there's a push to dev, the book is built on Travis to a _book folder whose content is then pushed from Travis to the dev-site branch that gets deployed to Netlify at [this address](https://devdevguide.netlify.com/).
+* whenever there's a push to `dev`, the book is built on Travis to a `_book` folder whose content is then pushed from Travis to the `dev-site` branch that gets deployed to Netlify at [this address](https://devdevguide.netlify.com/).
 
 We copied this setup from [this Data Carpentry repo](https://github.com/datacarpentry/R-ecology-lesson).
 
 ### Notes for associate editors
 
-If you're an associate editor, you can also push directly to master for small fixes. We shall use PRs to dev for discussing larger updates, and PR from dev to master for each release.
+If you're an associate editor, you can also push directly to `master` for small fixes. We shall use PRs to `dev` for discussing larger updates, and PR from `dev` to `master` for each release.
 
-If you're an associate editor and you want to render the book locally you need to install `bookdown` and the other dependencies stated in [DESCRIPTION](DESCRIPTION) in particular use `devtools::install_github("bergant/airtabler")`, and get and store an Airtable API key following [there instructions](https://github.com/bergant/airtabler#get-and-store-the-api-key) (if you're not an editor, you don't have access to our Airtable base). Then use `bookdown::render_book('index.Rmd', 'bookdown::gitbook')` and the book will be generated in an _output folder.
+If you're an associate editor and you want to render the book locally you need to install `bookdown` and the other dependencies stated in [DESCRIPTION](DESCRIPTION) in particular use `devtools::install_github("bergant/airtabler")`, and get and store an Airtable API key following [there instructions](https://github.com/bergant/airtabler#get-and-store-the-api-key) (if you're not an editor, you don't have access to our Airtable base). Then use `bookdown::render_book('index.Rmd', 'bookdown::gitbook')` and the book will be generated in an `_output` folder.
 
 # Meta
 
