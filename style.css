@@ -13,6 +13,13 @@ pre code {
   white-space: inherit;
 }
 
+.book .book-summary ul.summary li span {
+
+    cursor: not-allowed;
+    opacity: 1;
+
+}
+
 .book .book-summary ul.summary li.active > a {
   color: #1f58a3;
   font-weight: bold;
