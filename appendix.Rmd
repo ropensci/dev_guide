@@ -4,6 +4,8 @@
 
 ## 0.1.5
 
+* 2019-04-22, add use of rOpenSci forum to maintenance section.
+
 * 2019-04-22, use a darker blue for links (feedback by [`@kwstat
 `](https://github.com/kwstat), #138).
 
