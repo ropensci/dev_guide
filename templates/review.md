@@ -41,6 +41,8 @@ The package includes all the following forms of documentation:
 
 Estimated hours spent reviewing:
 
+- [ ] Should the author(s) deem it appropriate, I agree to be acknowledged as a package reviewer ("rev" role) in the package DESCRIPTION file.
+
 ---
 
 ### Review Comments
