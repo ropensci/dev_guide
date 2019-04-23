@@ -16,7 +16,8 @@ get_stage("deploy") %>%
   add_code_step(
     file.copy(from = "pdfbook/ropensci-dev-guide.pdf",
               to = "_book/ropensci-dev-guide.pdf")
-
+  ) %>%
+  add_code_step(
     purrr::walk(
       list.files("images", full.names = TRUE),
       file.copy,
