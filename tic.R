@@ -16,6 +16,12 @@ get_stage("deploy") %>%
   add_code_step(
     file.copy(from = "pdfbook/ropensci-dev-guide.pdf",
               to = "_book/ropensci-dev-guide.pdf")
+
+    purrr::walk(
+      list.files("images", full.names = TRUE),
+      file.copy,
+      to = "_book/images"
+    )
   )
 
 if (Sys.getenv("id_rsa") != "") {

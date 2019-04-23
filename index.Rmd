@@ -11,9 +11,14 @@ github-repo: ropenscilabs/dev_guide
 url: 'http\://ropensci.github.io/dev_guide/'
 description: "Extended version of the rOpenSci packaging guide."
 cover-image: images/icon_short_color.png
+apple-touch-icon: "images/apple-touch-icon.png"
+apple-touch-icon-size: 120
+favicon: "images/favicon.ico"
 ---
 
 # Preface {-}
+
+[![DOI](https://zenodo.org/badge/126815002.svg)](https://zenodo.org/badge/latestdoi/126815002)
 
 Welcome! This book is a guide for authors, maintainers, reviewers and editors of rOpenSci.
 
