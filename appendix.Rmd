@@ -4,7 +4,8 @@
 
 ## 0.1.5
 
-* 2019-04-22, use a darker blue for links.
+* 2019-04-22, use a darker blue for links (feedback by [`@kwstat
+`](https://github.com/kwstat), #138).
 
 * 2019-04-22, add book cover.
 
@@ -16,7 +17,7 @@
 
 * 2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file) ([`@hadley`](https://github.com/hadley), #129).
 
-* 2019-02-07, added a PDF file to export.
+* 2019-02-07, added a PDF file to export (request by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #131).
 
 * 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
 
