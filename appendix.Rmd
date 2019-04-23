@@ -4,7 +4,17 @@
 
 ## 0.1.5
 
-* 2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file)
+* 2019-04-22, use a darker blue for links.
+
+* 2019-04-08, improve formatting and link text in README (@katrinleinweber, #137)
+
+* 2019-03-25, add favicon (@wlandau, #136).
+
+* 2019-03-21, improve Travis CI guidance, including link to examples. (@mpadge, #135)
+
+* 2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file) (@hadley, #129).
+
+* 2019-02-07, added a PDF file to export.
 
 * 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
 
