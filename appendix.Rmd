@@ -4,6 +4,8 @@
 
 ## 0.2.0
 
+* 2019-04-23, add a sentence about why being generous with attributions.
+
 * 2019-04-23, add link to Daniel Nüst's notes about migration from XML to xml2.
 
 * 2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.
