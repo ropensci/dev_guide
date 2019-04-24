@@ -4,6 +4,8 @@
 
 ## 0.1.5
 
+* 2019-04-23, add link to Daniel Nüst's notes about migration from XML to xml2.
+
 * 2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.
 
 * 2019-04-22, use a darker blue for links (feedback by [`@kwstat

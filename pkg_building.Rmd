@@ -283,7 +283,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 * For parsing JSON, use [jsonlite][] instead of [rjson][] or [RJSONIO][].
 
-* For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases.
+* For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
 ##  Miscellaneous CRAN gotchas {#crangotchas}
 
