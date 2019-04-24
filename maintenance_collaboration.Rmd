@@ -16,9 +16,11 @@ We require that you use a code of conduct such as the [Contributor Covenant](htt
 
 ### Contributing guide
 
-We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles#ropensci-github-files) along with some instructions to insert them into your repository.
+We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropenscilabs/rodev/tree/master/inst/templates) along with [a helper function to insert them into your repository](https://ropenscilabs.github.io/rodev/reference/use_ro_github.html).
 
 You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
+
+We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/). Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
 You can use the `lintr` package's own bot, lintr-bot, via continuous integration, to get comments if a commit or PR deteriorates the code style of your package. See [this link for guidance](https://github.com/jimhester/lintr#continuous-integration).
 
