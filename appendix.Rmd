@@ -4,6 +4,8 @@
 
 ## 0.1.5
 
+* 2019-03-29, added requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
+
 * 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
 
 ## First release 0.1.0
