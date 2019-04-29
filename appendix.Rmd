@@ -4,7 +4,7 @@
 
 ## 0.2.0
 
-* 2019-04-29, added requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
+* 2019-04-29, add requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
 
 * 2019-04-23, add link to Daniel Nüst's notes about migration from XML to xml2.
 
