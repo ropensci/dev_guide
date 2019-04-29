@@ -56,7 +56,9 @@ r:
   - release
   - devel
 ```
-Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
+Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html). 
+
+You can fine tune the deployment of tests with each versions by using a testing matrix. See this [more complex example](https://github.com/r-hub/rhub/blob/master/.travis.yml#L5) of a Travis configuration where pkgdown documentation is built during the release R version testing only.
 
 #### Minimizing build times on Travis
 
