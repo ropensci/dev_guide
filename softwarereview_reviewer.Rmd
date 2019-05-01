@@ -7,6 +7,8 @@ You might contact the editor in charge of the submission for any question you mi
 
 Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign
 additional or alternate reviewers if a review is excessively late.
+
+_If you use our standards/checklists etc. when reviewing software elsewhere, do tell your editors where they came from, and [tell us](https://ropensci.org/contact/) if it's allowed._
 ```
 
 ## Preparing your review
