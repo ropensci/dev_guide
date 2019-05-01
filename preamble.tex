@@ -1,1 +1,18 @@
 \usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[default]{sourcesanspro}
+\definecolor{roblue}{HTML}{6FAEF5}
+\definecolor{rolink}{HTML}{1F58A3}
+\hypersetup
+    {colorlinks=true,
+    linkcolor=rolink,
+urlcolor=rolink,
+filecolor=rolink,
+citecolor=rolink,
+allcolors=rolink
+    }
+\newenvironment{summaryblock}
+    {\begin{mdframed}[linecolor=roblue,linewidth=2pt]}
+    {\end{mdframed}}

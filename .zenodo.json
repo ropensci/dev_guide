@@ -1,0 +1,46 @@
+{
+    "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
+    "license": "CC-BY SA", 
+    "title": "ropensci/dev_guide: First release", 
+    "version": "0.1.0", 
+    "upload_type": "software", 
+    "publication_date": "2019-01-30", 
+    "creators": [
+        {
+            "name": "rOpenSci"
+        },
+        {
+            "name": "Brooke Anderson",
+            "affiliation": "Colorado State University"
+        }, 
+        {
+            "name": "Scott Chamberlain",
+            "affiliation": "rOpenSci"
+        }, 
+        {
+            "name": "Anna Krystalli",
+            "affiliation": "University of Sheffield RSE"
+        }, 
+        {
+            "name": "Lincoln Mullen",
+            "affiliation": "George Mason University"
+        }, 
+        {
+            "name": "Karthik Ram",
+            "affiliation": "rOpenSci"
+        }, 
+        {
+            "name": "Noam Ross",
+            "affiliation": "EcoHealth Alliance"
+        },
+        {
+            "name": "Ma\u00eblle Salmon",
+            "affiliation": "rOpenSci"
+        }, 
+        {
+            "name": "Melina Vidoni",
+            "affiliation": "INGAR CONICET-UTN"
+        }
+    ], 
+    "access_right": "open"
+}

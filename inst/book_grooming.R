@@ -18,6 +18,7 @@ find_urls <- function(Rmd){
   urls <- stringr::str_replace_all(urls, "\\)$", "")
   urls <- stringr::str_replace_all(urls, "\\)$", "")
   urls <- stringr::str_replace_all(urls, "\\>$", "")
+  urls <- stringr::str_replace_all(urls, "\\).*", "")
 
   if(length(urls) > 1){
     tibble::tibble(url = urls, Rmd = Rmd)
@@ -26,7 +27,12 @@ find_urls <- function(Rmd){
   }
 }
 
+ok <- function(url){
+  resp <- httr::GET(url)
+  httr::status_code(resp) == 200
+}
+
 all_urls <- purrr::map_df(Rmds, find_urls)
 all_urls <- all_urls[!grepl("<issue_id>", all_urls$url),]
-all_urls$ok <- purrr::map_lgl(all_urls$url, crul::ok)
+all_urls$ok <- purrr::map_lgl(all_urls$url, ok)
 View(all_urls[!all_urls$ok,])
