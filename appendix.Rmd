@@ -2,6 +2,8 @@
 
 # NEWS {#booknews}
 
+* 2019-05-01, add policies allowing using either `<-` or `=` within a package as long as the whole package is consistent.
+
 * 2019-01-23, add details about requirements for packges running on all major platforms and added new section to package categories.
 
 * 2019-01-22, add details to the guide for authors about the development stage at which to submit a package.
