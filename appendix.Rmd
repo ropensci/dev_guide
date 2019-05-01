@@ -4,6 +4,8 @@
 
 ## 0.2.0
 
+* 2019-05-01, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.
+
 * 2019-04-29, add requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
 
 * 2019-04-23, add a sentence about why being generous with attributions and more info about ctb vs aut.
