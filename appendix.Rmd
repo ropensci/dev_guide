@@ -4,6 +4,8 @@
 
 ## 0.2.0
 
+* 2019-05-13, add more precise instructions about blog posts to approval template for editors.
+
 * 2019-05-13, add policies allowing using either `<-` or `=` within a package as long as the whole package is consistent.
 
 * 2019-05-13, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.

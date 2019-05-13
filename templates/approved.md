@@ -13,8 +13,8 @@ To-dos:
 - [ ] Submit to JOSS using the Zenodo DOI.  We will tag it for expedited review.
 <IF JOSS/>
 
-Should you want to awknowledge your reviewers in your package DESCRIPTION, you can do so by making them `"rev"`-type contributors in the `Authors@R` field (with their consent).  More info on this [here](https://ropensci.github.io/dev_guide/building.html#authorship).
+Should you want to acknowledge your reviewers in your package DESCRIPTION, you can do so by making them `"rev"`-type contributors in the `Authors@R` field (with their consent).  More info on this [here](https://ropensci.github.io/dev_guide/building.html#authorship).
 
-Welcome aboard! We'd also love a blog post about your package, either a short-form intro to it (https://ropensci.org/tech-notes/) or long-form post with more narrative about its development. (https://ropensci.org/blog/). If you are interested, @stefaniebutland will be in touch about content and timing.
+Welcome aboard! We'd love to host a blog post about your package - either a [short introduction to it with one example](https://ropensci.org/tech-notes/) or [a longer post with some narrative about its development or something you learned, and an example of its use](https://ropensci.org/blog/). If you are interested, review [the instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post), and tag @stefaniebutland in your reply. She will get in touch about timing and can answer any questions.
 
 We've started putting together a gitbook with our best practice and tips, [this chapter](https://ropensci.github.io/dev_guide/collaboration.html) starts the 3d section that's about guidance for after onboarding. Please tell us what could be improved, the corresponding repo is [here](https://github.com/ropensci/dev_guide).
