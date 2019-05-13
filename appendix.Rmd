@@ -4,7 +4,9 @@
 
 ## 0.2.0
 
-* 2019-05-01, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.
+* 2019-05-13, add policies allowing using either `<-` or `=` within a package as long as the whole package is consistent.
+
+* 2019-05-13, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.
 
 * 2019-04-29, add requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
 
