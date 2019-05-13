@@ -7,7 +7,7 @@ This chapter outlines how you can contribute to the rOpenSci project as a user o
 
 So you want to contribute to rOpenSci? Fantastic! First of all, maybe contributing code or documentation to a package is not the (only) way you’ll want to get involved. Check out our [community page](https://ropensci.org/community/) to find out all the ways to participate in the project, from reading about our packages to volunteering to review them.
 
-We strive to make contributing to our suite a constructive and positive experience and we welcome participation that adheres to [our code of conduct](https://ropensci.org/coc/). 
+We strive to make contributing to our suite a constructive and positive experience and we welcome participation that adheres to [our code of conduct](https://ropensci.org/code-of-conduct). 
 
 If you wish to contribute to this guide itself, please report any suggestions via [this GitHub repository](https://github.com/ropensci/dev_guide).
 
