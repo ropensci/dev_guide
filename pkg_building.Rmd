@@ -64,12 +64,14 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 * For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](http://r-pkgs.had.co.nz/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
 
+* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered inconsistency beause you can't use `<-` in this case. 
+
 ## README
 
 * All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
 
     * The package name
-    * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges. If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table shoud be more wide than high.
+    * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges. If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table should be more wide than high.
     * Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
     * Installation instructions
     * Any additional setup required (authentication tokens, etc)
@@ -155,7 +157,7 @@ can be found at *link*".
     * Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
     * In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help: 
         1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
-        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakingly updating documentation for one function but not the other.
+        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other.
 
 ## Documentation website {#website}
 
@@ -283,7 +285,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 * For parsing JSON, use [jsonlite][] instead of [rjson][] or [RJSONIO][].
 
-* For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases.
+* For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
 ##  Miscellaneous CRAN gotchas {#crangotchas}
 

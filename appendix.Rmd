@@ -2,17 +2,52 @@
 
 # NEWS {#booknews}
 
+## 0.2.0
+
+* 2019-05-13, add more content to the chapter about contributing.
+
+* 2019-05-13, add more precise instructions about blog posts to approval template for editors.
+
+* 2019-05-13, add policies allowing using either `<-` or `=` within a package as long as the whole package is consistent.
+
+* 2019-05-13, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.
+
+* 2019-04-29, add requirement and advice on testing packages using `devel` and `oldrel` R versions on Travis.
+
+* 2019-04-23, add a sentence about why being generous with attributions and more info about ctb vs aut.
+
+* 2019-04-23, add link to Daniel Nüst's notes about migration from XML to xml2.
+
+* 2019-04-22, add use of rOpenSci forum to maintenance section.
+
+* 2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.
+
+* 2019-04-22, use a darker blue for links (feedback by [`@kwstat
+`](https://github.com/kwstat), #138).
+
+* 2019-04-22, add book cover.
+
+* 2019-04-08, improve formatting and link text in README ([`@katrinleinweber`](https://github.com/katrinleinweber), #137)
+
+* 2019-03-25, add favicon ([`@wlandau`](https://github.com/wlandau), #136).
+
+* 2019-03-21, improve Travis CI guidance, including link to examples. ([`@mpadge`](https://github.com/mpadge), #135)
+
+* 2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file) ([`@hadley`](https://github.com/hadley), #129).
+
+* 2019-02-07, added a PDF file to export (request by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #131).
+
 ## 0.1.5
 
-* 2019-02-01, created a .zenodo.json to explicitely set editors as authors.
+* 2019-02-01, created a .zenodo.json to explicitly set editors as authors.
 
 ## First release 0.1.0
 
-* 2019-01-23, add details about requirements for packges running on all major platforms and added new section to package categories.
+* 2019-01-23, add details about requirements for packages running on all major platforms and added new section to package categories.
 
 * 2019-01-22, add details to the guide for authors about the development stage at which to submit a package.
 
-* 2018-12-21, inclusion of an explicity policy for conflict of interest (for reviewers and editors).
+* 2018-12-21, inclusion of an explicit policy for conflict of interest (for reviewers and editors).
 
 * 2018-12-18, added more guidance for editor on how to look for reviewers.
 

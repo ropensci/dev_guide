@@ -7,22 +7,24 @@ This chapter outlines how you can contribute to the rOpenSci project as a user o
 
 So you want to contribute to rOpenSci? Fantastic! First of all, maybe contributing code or documentation to a package is not the (only) way you’ll want to get involved. Check out our [community page](https://ropensci.org/community/) to find out all the ways to participate in the project, from reading about our packages to volunteering to review them.
 
-We strive to make contributing to our suite a constructive and positive experience and we welcome participation that adheres to [our code of conduct](https://ropensci.org/coc/). 
+We strive to make contributing to our suite a constructive and positive experience and we welcome participation that adheres to [our code of conduct](https://ropensci.org/code-of-conduct). 
 
 If you wish to contribute to this guide itself, please report any suggestions via [this GitHub repository](https://github.com/ropensci/dev_guide).
 
-## Why contributing to rOpenSci packages?
+## Why contribute to rOpenSci packages?
 
-In general, [as explained by Kara Woo in her talk at the CascadiaR conference](https://github.com/karawoo/2018-06-02-cascadiarconf/blob/master/cascadiarconf.pdf), contributing to R packages allows to make things work the way you want (by adding some functionality to your favorite package), can lead to opportunities and allows you to learn about package development.
+In general, [as explained by Kara Woo in her talk at the CascadiaR conference](https://github.com/karawoo/2018-06-02-cascadiarconf/blob/master/cascadiarconf.pdf), contributing to R packages allows you to make things work the way you want (by adding some functionality to your favorite package), can lead to opportunities and allows you to learn about package development.
 
-Contributing to _rOpenSci_ packages is great if you believe in [rOpenSci's mission](https://ropensci.org/about/), and also because of our efforts striving to make contribution a good experience.
+Specifically at rOpenSci, we strive to make contributing a good experience. This is embedded in [our mission](https://ropensci.org/about/): we are creating social infrastructure through a welcoming and diverse community and building capacity of software users and developers and fostering a sense of pride in their work.
 
 ## Non code contributions
-### Reporting use cases
 
-It’s valuable to both users and developers of a package to see how it has been used “in the wild”. If you see a use case of one of our packages, please post the link to our [discussion forum in the Use Cases category](https://discuss.ropensci.org/c/usecases) and tag Scott Chamberlain (`@sckott`) for inclusion in the [rOpenSci biweekly newsletter](https://news.ropensci.org/). Let the package author know by opening an issue in the GitHub repository for that package, perhaps suggesting they create a “use cases in the wild” section in the README, and maybe even tag them in a tweet about the use case. This goes a long way to encouraging people to keep up development knowing there are others who appreciate and build on their work.
+### Reporting use cases for our packages or guidelines
 
-See examples of README's listing use cases in the wild [here](https://github.com/ropenscilabs/ghrecipes/blob/master/README.md#use-cases-in-the-wild) and [here](https://github.com/ropensci/riem/blob/master/README.md#use-cases-in-the-wild).
+It’s valuable to both users and developers of a package to see how it has been used “in the wild”. If you see a use case of one of our packages, please add it  to our [public  forum in the Use Cases category](https://discuss.ropensci.org/c/usecases). We’ve created a template to help. We’ll tweet about it, and might add it to the [rOpenSci biweekly newsletter](https://news.ropensci.org/). You might also let the package author know by opening an issue in the GitHub repository for that package, perhaps suggesting they create a “use cases in the wild” section in the README, and maybe even tag them in a tweet about the use case. This goes a long way to encouraging people to keep up development knowing there are others who appreciate and build on their work.
+See examples of README's listing use cases in the wild [here](https://github.com/ropenscilabs/ghrecipes/blob/master/README.md#use-cases-in-the-wild) and [here](https://github.com/ropensci/riem/blob/master/README.md#use-cases-in-the-wild)
+
+We would also love to hear about examples in which rOpenSci resources or guidelines have been used. Have you implemented better security practices, like signing your commits, based on recommendations in a [Community Call](https://ropensci.org/commcalls/), or used our standards/checklists etc. when reviewing software elsewhere? Do tell people (e.g. journal editors, students, internal code review group, users) that they came from rOpenSci, and tell us in [our public forum](https://discuss.ropensci.org/c/usecases), or [privately by email](https://ropensci.org/contact/). 
 
 ### Reporting issues or Requesting features
 
@@ -33,7 +35,7 @@ When reporting a bug try to include a reproducible example ("[reprex](https://ww
 
 ### Asking other questions
 
-You can use our [discussion forum](https://discuss.ropensci.org/) about questions related to the usage of our packages, even when you don't know yet which of our packages could help you.
+You can use our [discussion forum](https://discuss.ropensci.org/) to ask questions related to the usage of our packages, even when you don't know yet which of our packages could help you.
 
 For more guidance about where to ask questions related to rOpenSci packages, refer to Scott Chamberlain's talk in this [community call](https://ropensci.org/commcalls/2017-03-07/) or the [corresponding slidedeck](https://scotttalks.info/qropensci/).
 

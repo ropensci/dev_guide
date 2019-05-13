@@ -7,3 +7,5 @@ rsconnect
 /.Rbuildignore 
 /packages.bib
 .Rproj.user
+_book
+pdfbook
