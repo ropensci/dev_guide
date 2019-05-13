@@ -8,7 +8,7 @@ bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: ropenscilabs/dev_guide
-url: 'http\://ropensci.github.io/dev_guide/'
+url: 'https\://ropensci.github.io/dev_guide/'
 description: "Extended version of the rOpenSci packaging guide."
 cover-image: images/cover.png
 apple-touch-icon: "images/apple-touch-icon.png"
