@@ -165,7 +165,7 @@ We recommend creating a documentation website for your package using [`pkgdown`]
 
 There are a few elements we'd like to underline here.
 
-### Automatic deployment of the documentation website
+### Automatic deployment of the documentation website {docsropensci}
 
 You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package at each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/job/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/).
 
