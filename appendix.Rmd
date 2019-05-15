@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-05-15, add mention of central building of documentation websites.
+
 * 2019-05-15, add book release guidance for editors.
 
 ## 0.2.0
