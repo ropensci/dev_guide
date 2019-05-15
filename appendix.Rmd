@@ -2,6 +2,10 @@
 
 # NEWS {#booknews}
 
+## dev
+
+* 2019-05-15, add book release guidance for editors.
+
 ## 0.2.0
 
 * 2019-05-13, add more content to the chapter about contributing.
