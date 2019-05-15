@@ -152,6 +152,6 @@ Thank authors for their submission, explain the reasons for the decision, and di
 [Examples of out-of-scope submissions and responses](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
 
-## Managing a dev guide release
+## Managing a dev guide release {#bookrelease}
 
-If you are in charge of managing a release of the very book you are reading, refer to [the book release guidance](#bookrelease) and do not hesitate to ask questions to other editors.
+If you are in charge of managing a release of the very book you are reading, use [the book release guidance](#bookreleaseissue) as an issue template to be posted [in the dev guide issue tracker](https://github.com/ropensci/dev_guide/issues), and do not hesitate to ask questions to other editors.

@@ -99,7 +99,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ```
 ```
 
-# Book release guidance {#bookrelease}
+# Book release guidance {#bookreleaseissue}
 
 ```
 ```{r, child="templates/book-release.md"}
