@@ -29,7 +29,7 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   As in any peer-review process, we hope you choose to review **to give back to the rOpenSci and scientific communities.**  Our mission to expand access to scientific data and promote a culture of reproducible research is only possible through the volunteer efforts of community members like you.
 -   Review is a two-way conversation. By reviewing packages, you'll have the chance to **continue to learn development practices from authors and other reviewers**.
 -   The open nature of our review process allows you to **network and meet colleagues and collaborators** through the review process. Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.
--   To volunteer to be one of our reviewers, click [here](https://ropensci.org/onboarding/) to fill out a short form providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
+-   To volunteer to be one of our reviewers, fill out [this short form](https://ropensci.org/onboarding/) providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
 
 
 ## Why are reviews open? {#whyopen}
