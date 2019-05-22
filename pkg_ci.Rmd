@@ -14,7 +14,7 @@ Both test status and code coverage should be reported via badges in your package
 
 ## How to use continuous integration?
 
-The `usethis` package offers a few functions for continuous integration setup, see [the documentation](http://usethis.r-lib.org/reference/ci.html).
+The `usethis` package offers a few functions for continuous integration setup, see [the documentation](https://usethis.r-lib.org/reference/ci.html).
 
 Details will be provided below for different services.
 
@@ -42,7 +42,7 @@ In case of any doubt regarding the applicability of these criteria to your packa
 
 Travis offers continuous integration for Linux and Mac OSX. Set it up using `usethis::use_travis()`.
 
-R is now a [natively supported language on Travis-CI](http://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](http://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
+R is now a [natively supported language on Travis-CI](https://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](https://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
 
 To customize your build, have a look at [Travis' docs](https://docs.travis-ci.com/user/languages/r/) and at existing Travis config files over rOpenSci's ropensci GitHub organization, e.g. [this one for the `spelling` package](https://github.com/ropensci/spelling/blob/master/.travis.yml).
 

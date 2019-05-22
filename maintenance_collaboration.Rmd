@@ -12,7 +12,7 @@ This chapter contains our guidance for collaboration, in a [section about making
 
 ### Code of conduct
 
-We require that you use a code of conduct such as the [Contributor Covenant](http://contributor-covenant.org/) in developing your package.  You should document your code of conduct in a `CODE_OF_CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package. Use `usethis` > 1.3.1.
+We require that you use a code of conduct such as the [Contributor Covenant](https://contributor-covenant.org/) in developing your package.  You should document your code of conduct in a `CODE_OF_CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package. Use `usethis` > 1.3.1.
 
 ### Contributing guide
 
@@ -44,7 +44,7 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/).
 
-One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](http://happygitwithr.com/pr-extend.html).
+One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](https://happygitwithr.com/pr-extend.html).
 
 ### Be generous with attributions {#attributions}
 
@@ -66,7 +66,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ### Welcoming collaborators to rOpenSci
 
-If you give someone write permissions to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](github.com/stefaniebutland) so that this new contributor might
+If you give someone write permissions to the repository, please contact one of [the editors](#associateditors) or [Stefanie Butland](https://github.com/stefaniebutland) so that this new contributor might
 
 * get invited to rOpenSci's "ropensci" GitHub organization (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
