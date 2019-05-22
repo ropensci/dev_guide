@@ -8,7 +8,7 @@ Note that you could streamline the process of updating NEWS and versioning your 
 
 ## Versioning
 
-* We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [description chapter](http://r-pkgs.had.co.nz/description.html#version).
+* We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [description chapter](https://r-pkgs.org/description.html#version).
 
 ## Releasing
 
