@@ -10,6 +10,8 @@
 
 ## 0.2.0
 
+* 2019-05-23, add CRAN gotcha: in the Description field of your DESCRIPTION file, enclose URLs in angle brackets.
+
 * 2019-05-13, add more content to the chapter about contributing.
 
 * 2019-05-13, add more precise instructions about blog posts to approval template for editors.
