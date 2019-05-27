@@ -29,7 +29,7 @@ We recommend overriding GitHub linguist by adding or modifying a .gitattributes 
 
 * If your repo contains code you haven't authored, e.g. JavaScript code, add `inst/js/* linguist-vendored` to .gitattributes ([Example in the wild](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
 
-This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable.
+This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable. Notably, if linguist does not correctly recognize your repo as containing mainly R code, your package won't appear in search results with the `language:R` filter. Similarly, your repo cannot be listed among the [trending R repos](https://github.com/trending/r).
 
 More info about GitHub linguist overrides [here](https://github.com/github/linguist#overrides).
 
