@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-06-10, use the new URL for the dev guide, https://devguide.ropensci.org/
+
 * 2019-05-27, add more info about the importance of the repo being recognised as a R package by linguist ([`@bisaloo`](https://github.com/bisaloo/), #172)
 
 * 2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan's books ([`@bisaloo`](https://github.com/bisaloo/), #167)

@@ -5,7 +5,7 @@ rOpenSci Packages: Development, Maintenance, and Peer Review
 [![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
 [![DOI](https://zenodo.org/badge/126815002.svg)](https://zenodo.org/badge/latestdoi/126815002)
 
-rOpenSci's guide for packages in our suite. [Read it here](https://ropensci.github.io/dev_guide/).
+rOpenSci's guide for packages in our suite. [Read it here](https://devguide.ropensci.org/).
 
 ## Contributing
 
