@@ -1,3 +1,5 @@
+library("magrittr")
+
 get_stage("before_install") %>%
   add_code_step(update.packages(ask = FALSE))
 
