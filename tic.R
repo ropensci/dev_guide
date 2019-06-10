@@ -22,7 +22,11 @@ get_stage("deploy") %>%
       list.files("images", full.names = TRUE),
       file.copy,
       to = "_book/images"
-    )
+    ) %>%
+      add_code_step(
+        file.copy("CNAME",
+          to = "_book/CNAME")
+        )
   )
 
 if (Sys.getenv("id_rsa") != "") {
