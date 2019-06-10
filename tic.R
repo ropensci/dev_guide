@@ -25,12 +25,15 @@ get_stage("deploy") %>%
       list.files("images", full.names = TRUE),
       file.copy,
       to = "_book/images"
-    )) %>%
-      add_code_step(
-        file.copy("CNAME",
-          to = "_book/CNAME")
-        )
+    ))
 
+if (ci()$get_branch() == "master" || ci()$is_tag()) {
+  get_stage("deploy") %>%
+    add_code_step(
+      file.copy("CNAME",
+                to = "_book/CNAME")
+    )
+}
 
 if (Sys.getenv("id_rsa") != "") {
   # pkgdown documentation can be built optionally. Other example criteria:
