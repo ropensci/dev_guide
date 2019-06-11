@@ -224,7 +224,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 ## Package dependencies
 
-* Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies. If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+* Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
