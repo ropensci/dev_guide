@@ -22,14 +22,14 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   Once aboard, your package will continue to receive **support from rOpenSci members**.  You'll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.
 -   rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and [social media](https://twitter.com/ropensci). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 -   rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
--   rOpenSci packages that contain a short accompanying paper can, after review, be automatically submitted to the [Journal of Open-Source Software](http://joss.theoj.org/) for fast-tracked publication.
+-   rOpenSci packages that contain a short accompanying paper can, after review, be automatically submitted to the [Journal of Open-Source Software](https://joss.theoj.org/) for fast-tracked publication.
 
 ## Why review packages for rOpenSci? {#whyreview}
 
 -   As in any peer-review process, we hope you choose to review **to give back to the rOpenSci and scientific communities.**  Our mission to expand access to scientific data and promote a culture of reproducible research is only possible through the volunteer efforts of community members like you.
 -   Review is a two-way conversation. By reviewing packages, you'll have the chance to **continue to learn development practices from authors and other reviewers**.
 -   The open nature of our review process allows you to **network and meet colleagues and collaborators** through the review process. Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.
--   To volunteer to be one of our reviewers, click [here](https://ropensci.org/onboarding/) to fill out a short form providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
+-   To volunteer to be one of our reviewers, fill out [this short form](https://ropensci.org/onboarding/) providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
 
 
 ## Why are reviews open? {#whyopen}
@@ -53,7 +53,7 @@ rOpenSci's Software Peer Review process is run by:
 * [Maëlle Salmon](https://github.com/maelle), rOpenSci
 * [Lincoln Mullen](https://github.com/lmullen), George Mason University
 * [Anna Krystalli](https://github.com/annakrystalli), University of Sheffield RSE
-* [Melina Vidoni](https://github.com/melvidoni), INGAR CONICET-UTN
+* [Melina Vidoni](https://github.com/melvidoni), RMIT University (School of Science)
 * [Brooke Anderson](https://github.com/geanders), Colorado State University
 
 

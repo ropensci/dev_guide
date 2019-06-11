@@ -5,7 +5,7 @@
 ```{block, type='summaryblock'}
 rOpenSci accepts packages that meet our guidelines via a streamlined [Software Peer Review process](#whatissoftwarereview). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after the review process is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
-We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
+We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
 
  To read why submitting a package to rOpenSci is worth the effort to meet guidelines, have a look at [reasons to submit](#whysubmit). 
 
@@ -19,7 +19,7 @@ We strongly recommend that package developers read Hadley Wickham's concise but 
 
 * A more unique package name might be easier to track (for you and us to assess package use) and search (for users to find it and to google their questions). Obviously a _too_ unique package name might make the package less discoverable (e.g. it might be an argument for naming your package [geojson](https://github.com/ropensci/geojson)).
 
-* Find other interesting aspects of naming your package [in this blog post by Nick Tierney](http://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](http://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+* Find other interesting aspects of naming your package [in this blog post by Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
 ### Creating metadata for your package
 
@@ -62,7 +62,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 ## Code Style
 
-* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](http://r-pkgs.had.co.nz/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
+* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](https://r-pkgs.org/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
 
 * You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered inconsistency beause you can't use `<-` in this case. 
 
@@ -80,7 +80,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
     * Citation information
 
 
-If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](http://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
+If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](https://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
 
 * Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
@@ -111,7 +111,7 @@ can be found at *link*".
 * _After_ a package is accepted but before transfer, the rOpenSci footer should be added to the bottom of the README file with the following markdown line:
 
 ```
-[![ropensci_footer](http://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
+[![ropensci_footer](https://ropensci.org/public_images/github_footer.png)](https://ropensci.org)
 ```
 
 * Add a code of conduct and contribution guidelines, cf [this section of the book](#friendlyfiles).
@@ -122,15 +122,15 @@ can be found at *link*".
 
 * All exported package functions should be fully documented with examples.
 
-* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](http://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+* We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](https://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
-* More information on using roxygen2 [documentation](http://r-pkgs.had.co.nz/man.html) is available in the R packages book.
+* More information on using roxygen2 [documentation](https://r-pkgs.org/man.html) is available in the R packages book.
 
 * One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
 
 * All functions should document the type of object returned under the `@return` heading.
 
-* We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](http://r-pkgs.had.co.nz/man.html) and [this section of the present chapter](#function-grouping) for more details.
+* We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](https://r-pkgs.org/man.html) and [this section of the present chapter](#function-grouping) for more details.
 
 * The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
@@ -161,7 +161,7 @@ can be found at *link*".
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](http://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has a [its own documentation website](http://pkgdown.r-lib.org/).
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has a [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
 
@@ -183,7 +183,7 @@ Before submission and before transfer, you could use the [approach documented by
 
 ### Branding of authors
 
-You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](http://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropenscilabs/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://ropenscilabs.github.io/rodev/).
+You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropenscilabs/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://ropenscilabs.github.io/rodev/).
 
 ## Authorship
 
@@ -206,7 +206,7 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. Test coverage below 75% will likely require additional tests or explanation before being sent for review.
 
-* We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](http://r-pkgs.had.co.nz/tests.html).
+* We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](https://r-pkgs.org/tests.html).
 
 * Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
@@ -297,13 +297,13 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 * Make sure your package title is in Title Case.
 * Do not put a period on the end of your title.
 * Avoid starting the description with the package name or "This package ...".
-* Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file.
+* Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
 * Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
 
 ## Further guidance
 
-* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](http://r-pkgs.had.co.nz/) (and [print](http://amzn.com/1491910593?tag=r-pkgs-20)).
+* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
