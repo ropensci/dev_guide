@@ -42,7 +42,7 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 ### Working with collaborators (including yourself)
 
-You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/). In a nutshell,
+You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow). In a nutshell,
 
 * Keep master shippable as much as possible
 
