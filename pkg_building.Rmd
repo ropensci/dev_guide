@@ -82,6 +82,8 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](https://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
 
+In all cases, for adding repostatus.org badges you can use the [`rodev::use_repostatus_badge()`](https://docs.ropensci.org/rodev/reference/use_repostatus_badge.html) function.
+
 * Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
 ```

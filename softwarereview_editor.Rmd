@@ -44,7 +44,7 @@ board. The EiC plays the following roles
 #### Tasks
 
 -   Switch numbered tag to `2/seeking-reviewers`.
--   Ask author to add a rOpenSci review badge to their README. Badge URL is `https://badges.ropensci.org/<issue_id>_status.svg`. Full link should be:
+-   Ask author to add a rOpenSci review badge to their README, via [`rodev::use_review_badge()`](https://docs.ropensci.org/rodev/reference/use_review_badge.html), `rodev::use_review_badge(<issue_number>)`. Badge URL is `https://badges.ropensci.org/<issue_id>_status.svg`. Full link should be:
 
 ```
 [![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
@@ -112,6 +112,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 -  You can use the [comment template](#approvaltemplate).
 -   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
+-   Ask authors to add a mention of the review in `DESCRIPTION` via [`rodev::add_ro_desc()`](https://docs.ropensci.org/rodev/reference/add_ro_desc.html).
 -   Ask authors to migrate to `ropensci`
     -   Create a two-person team in rOpenSci's "ropensci" GitHub organization, named for the package, with yourself and the package author as members.
     -   Have the author transfer the repository to `ropensci`
