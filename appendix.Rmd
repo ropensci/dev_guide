@@ -4,7 +4,11 @@
 
 ## dev
 
-* 2019-06-11, add mention of central building of documentation websites.
+* 2019-06-12, add mention of central building of documentation websites.
+
+* 2019-06-12, remove recommendation about `roxygen2` dev version since the latest stable version has what is needed. ([`@bisaloo`](https://github.com/bisaloo/), #165)
+
+* 2019-06-11, add mention of usethis functions for adding testing or vignette infrastructure in the part about dependencies in the package building guide.
 
 * 2019-06-10, use the new URL for the dev guide, https://devguide.ropensci.org/
 
