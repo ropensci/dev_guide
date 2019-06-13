@@ -298,6 +298,14 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
 * Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
 
+### CRAN checks {#cranchecks}
+
+Once your package is on CRAN, it will be [regularly checked on different platforms](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Failures of such checks, when not false positives, can lead to the CRAN team's reaching out. You can monitor the state of the CRAN checks via
+
+* the [`foghorn` package](https://fmichonneau.github.io/foghorn/)
+
+* the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi), that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges). You can add one of them to the README of your package via [`rodev::use_cchecks_badge()`](https://docs.ropensci.org/rodev/reference/use_cchecks_badge.html).
+
 ## Further guidance
 
 * Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)).
