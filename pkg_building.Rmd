@@ -52,7 +52,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Console messages
 
-* Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` method, as these methods of printing messages are harder for the user to suppress.
+* Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for the user to suppress.
 
 ### Interactive/Graphical Interfaces
 
@@ -302,7 +302,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 
 ## Further guidance
 
-* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)).
+* _R Packages_ by Hadley Wickham and Jenny Bryan is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
