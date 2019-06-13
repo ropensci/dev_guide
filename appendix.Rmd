@@ -6,6 +6,10 @@
 
 * 019-06-13, add explanations of CRAN checks.
 
+* 2019-06-13, add mentions of the `rodev` helper functions where relevant.
+
+* 2019-06-13, add recommendation about using `cat` for `str.*()` methods.  Rstudio assumes that `str` uses `cat`, if not when loading an R object the `str` prints to the console in Rstudio and doesn't show the correct object structure in the properties. ([`@mattfidler`] (https://github.com/mattfidler/) #178)
+
 * 2019-06-12, remove recommendation about `roxygen2` dev version since the latest stable version has what is needed. ([`@bisaloo`](https://github.com/bisaloo/), #165)
 
 * 2019-06-11, add mention of usethis functions for adding testing or vignette infrastructure in the part about dependencies in the package building guide.
