@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #179)
+
 * 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content.
 
 * 2019-06-17, add mention of central building of documentation websites.
@@ -86,17 +88,26 @@
 # Review template {#reviewtemplate}
 
 ```
-```{r, child="templates/review.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/review.md"}
+
 ```
 
 
 
 # Editor's template {#editortemplate}
 
+
 ```
-```{r, child="templates/editor.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/editor.md"}
+
 ```
 
 # Review request template {#reviewrequesttemplate}
@@ -104,26 +115,48 @@
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```
-```{r, child="templates/request.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
-# Approval comment template {#approvaltemplate}
+
+```{r eval = knitr::is_latex_output(), child="templates/request.md"}
 
 ```
-```{r, child="templates/approved.md"}
+
+# Approval comment template {#approvaltemplate}
+
+
+```
+```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
+
+```{r eval = knitr::is_latex_output(), child="templates/approved.md"}
+
+```
+
 
 # NEWS template {#newstemplate}
 
+
 ```
-```{r, child="templates/news.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/news.md"}
 ```
 ```
+
+```{r eval = knitr::is_latex_output(), child="templates/news.md"}
+
+```
+
 
 # Book release guidance {#bookreleaseissue}
 
+
 ```
-```{r, child="templates/book-release.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
+
 ```
