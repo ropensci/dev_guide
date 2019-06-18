@@ -140,12 +140,8 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```
-```{r eval = !knitr::is_latex_output(), child="templates/news.md"}
+```{r child="templates/news.md"}
 ```
-```
-
-```{r eval = knitr::is_latex_output(), child="templates/news.md"}
-
 ```
 
 
