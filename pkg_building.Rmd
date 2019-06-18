@@ -165,7 +165,14 @@ can be found at *link*".
 
 We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has a [its own documentation website](https://pkgdown.r-lib.org/).
 
-There are a few tips we'd like to underline here.
+There are a few elements we'd like to underline here.
+
+### Automatic deployment of the documentation website {docsropensci}
+
+You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
+
+Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
+
 
 ### Grouping functions in the reference {#function-grouping}
 
@@ -175,10 +182,6 @@ There are a few tips we'd like to underline here.
  
  Less automatically, see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
-
-### Automatic deployment of the documentation website
-
-You could use the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis.
 
 ### Branding of authors
 
