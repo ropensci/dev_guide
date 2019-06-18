@@ -57,7 +57,7 @@ Before contributing to one of our packages, you might want to read a bit more ab
 
 ##### Books
 
-* [Hadley Wickham's *R packages* book](https://r-pkgs.org/)
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/)
 
 * [*Writing R extensions*, the official CRAN guide](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)
 
