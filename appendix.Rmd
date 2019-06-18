@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content.
+
 * 2019-06-17, add mention of central building of documentation websites.
 
 * 019-06-13, add explanations of CRAN checks.
