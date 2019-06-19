@@ -4,11 +4,13 @@
 This chapter isn't written yet. It should mention the elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017, or have a link to this book/a similar book when written.
 ```
 
-Also interesting are these unconf projects:
+In the meantime, here are useful security resources:
 
-* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/)
+* [rOpenSci community call "Security for R"](https://ropensci.org/commcalls/2019-05-07/) (recording, slides, etc. see in particular [the list of resources](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources));
 
-* [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/)
+* [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
+
+* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/).
 
 ## Misc
 
