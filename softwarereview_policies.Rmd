@@ -66,16 +66,22 @@ knitr::include_graphics("images/status.png")
 
 * __data extraction__: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, but trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/software-review/issues/42), [**robotstxt**](https://github.com/ropensci/software-review/issues/25), [**genbankr**](https://github.com/ropensci/software-review/issues/47))
 
-* __scientific software wrappers__: Packages that wrap utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple `system()` call or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
-
-* __database access__: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
-
 * __data munging__: Packages for processing data from formats above. This area does not include broad data manipulations tools such as **reshape2** or **tidyr**, but rather tools for handling data in specific scientific formats. (Example: [**plateR**](https://github.com/ropensci/software-review/issues/60))
 
 * __data deposition__: Packages that support deposition of data  into research repositories, including data formatting and metadata generation.
 (Example: [**EML**](https://github.com/ropensci/software-review/issues/80))
 
-* __reproducibility__: Tools that facilitate reproducible research. This includes packages that facilitate use of version control, provenance tracking,  automated testing of data inputs and statistical outputs, citation of software and scientific literature.  It does not include general tools for literate programming (e.g., R markdown extensions not under the previous topics). (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
+* __data validation and testing__: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
+
+* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
+
+* __version control__: Tools that facilitate the use of version control in scientific workflows.  Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category.  (Example: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
+
+* __citation management and bibliometrics__: Tools that facilitate managing references, such as for writing manuscripts, creating CVs or otherwise attributing scientific contributions, or accessing, manipulating or otherwise working with bibliometric data. (Example: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
+
+* __scientific software wrappers__: Packages that wrap non-R utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple `system()` call or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex.  This does not include wrappers of other R packages or C/C++ libraries that can be included in R packages. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
+
+* __database software bindings__: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
 
 In addition, we have some _specialty topics_ with a slightly broader scope.
 
@@ -91,9 +97,9 @@ Packages that include interactive tools to facilitate researcher workflows (e.g.
 
 Here are some types of packages we are unlikely to accept:
 
--  Packages that wrap or implement statistical or machine learning methods.  We are not organized so as to review the correctness of these methods. (But see "text analysis", above)
+-  Packages that wrap or implement statistical or machine learning methods.  We are not organized so as to review the correctness of these methods (But see "text analysis", above).
 -  Exploratory data analysis packages that visualize or summarize data.
--  General workflow or package development support packages
+-  General workflow or package development support packages.
 
 For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal.
 
