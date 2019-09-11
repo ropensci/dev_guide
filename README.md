@@ -27,7 +27,7 @@ We copied this [setup from Data Carpentry](https://github.com/datacarpentry/R-ec
 
 If you're an associate editor, you can also push directly to `master` for small fixes. We shall use PRs to `dev` for discussing larger updates, and PR from `dev` to `master` for each release.
 
-If you're an associate editor and you want to render the book locally you need to install `bookdown` and the other dependencies stated in [DESCRIPTION](DESCRIPTION) in particular use `devtools::install_github("bergant/airtabler")`, and [get and store an Airtable API key following their instructions](https://github.com/bergant/airtabler#get-and-store-the-api-key) (if you're not an editor, you don't have access to our Airtable base). Then use `bookdown::render_book('index.Rmd', 'bookdown::gitbook')` and the book will be generated in an `_output` folder.
+If you're an associate editor and you want to render the book locally you need to install `bookdown` and the other dependencies stated in [DESCRIPTION](DESCRIPTION) in particular use `devtools::install_github("bergant/airtabler")`, and [get and store an Airtable API key following their instructions](https://github.com/bergant/airtabler#get-and-store-the-api-key) (if you're not an editor, you don't have access to our Airtable base). Then use `bookdown::render_book('index.Rmd', 'bookdown::gitbook')` and the book will be generated in the `_book` folder; you can open the book on the command line by doing `open _book/index.html`.
 
 # Meta
 

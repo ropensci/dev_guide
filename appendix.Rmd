@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-09-11, update instructions in README for rendering the book locally (ropensci/software-review-meta#192)
+
 * 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
 
 * 2019-06-18, add link to rOpenSci community call "Security for R" to security chapter.
