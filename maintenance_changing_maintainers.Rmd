@@ -28,10 +28,10 @@ We have a call for contributors section in our newsletter that comes out every t
   It depends; here's what to do in different scenarios:
 
     - if the old maintainer can be contacted: reach out to them, and ask for help
-    - ropensci slack: good for getting help on specific or general problems, the #general room is where many ask questions
-    - ropensci discussion forum: this forum is a good option, feel free to ask any questions here
-    - ropensci staff: feel free to get in touch with one of us via slack/email/pinging us on github issues, we'll be happy to help
-    - of course there's general R help too if that suits your needs: Stackoverflow, Twitter #rstats, etc.
+    - rOpenSci slack: good for getting help on specific or general problems, the #general room is where many ask questions
+    - rOpenSci discussion forum: this forum is a good option, feel free to ask any questions here
+    - rOpenSci staff: feel free to get in touch with one of us via slack/email/pinging us on GitHub issues, we'll be happy to help
+    - of course there's general R help too if that suits your needs: StackOverflow, Twitter #rstats, etc.
 
 * How much can/should you change in the package?
 
@@ -49,7 +49,7 @@ We have a call for contributors section in our newsletter that comes out every t
 As an organization, rOpenSci is interested in making sure packages in our suite are available as long as they are useful to the community. As maintainers need to move on, we will in most cases try to get a new maintainer for each package. To these ends, the following tasks are the responsibility of rOpenSci staff.
 
 * If a repository hasn’t seen any activity (commits, issues, PR's) in quite a long time it may simply be a mature package with little need for changes/etc., so take this into account.
-* Current maintainer has not responded to issues/PR’s in many months, via any of emails, Github issues, or Slack messages:
+* Current maintainer has not responded to issues/PR’s in many months, via any of emails, GitHub issues, or Slack messages:
   * Make contact and see what the situation is. They may say they’d like to step down as maintainer, in which case look for a new maintainer
 * Current maintainer is completely missing/not responding
   * If this happens we will try to contact the maintainer for up to one month. However, if updating the package is urgent, we may use our admin access to make changes on their behalf.
