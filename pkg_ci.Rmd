@@ -40,7 +40,7 @@ In case of any doubt regarding the applicability of these criteria to your packa
 
 ### Travis CI (Linux and Mac OSX)
 
-Travis offers continuous integration for Linux and Mac OSX. Set it up using `usethis::use_travis()`.
+Travis offers continuous integration for Linux and Mac OSX. Set it up using [`rodev::use_ro_travis()`](https://docs.ropensci.org/rodev/reference/use_ro_travis.html) or `usethis::use_travis()`.
 
 R is now a [natively supported language on Travis-CI](https://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](https://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
 
@@ -97,10 +97,6 @@ If you run coverage on several CI services [the results will be merged](https://
 
 After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
 
-## Make more of your CI builds: tic
+## Even more CI: rOpenSci docs
 
-The [`tic` package](https://github.com/ropenscilabs/tic) facilitates deployment tasks for R packages tested by Travis CI, AppVeyor, or any other CI tool of your choice, cf e.g. our [suggestion to build and deploy the documentation website of your package via Travis](#website). Actually this book [uses `tic` for deployment](https://github.com/ropensci/dev_guide#technical-details).
-
-## Make more of your CI builds: Use Travis to deploy websites
-
-If your package has a website built by [`pkgdown`](https://github.com/r-lib/pkgdown), you can use Travis to update and deploy the website on each build. See the help on [`pkgdown::deploy_site_github()`](https://pkgdown.r-lib.org/reference/deploy_site_github.html).  If your `.travis.yml` has a matrix specifying multiple Travis builds, you should put the `before_deploy` and `deploy` commands within a single matrix entry to avoid all of them rebuilding and deploying your website. See an example [here](https://github.com/ropensci/osmdata/blob/master/.travis.yml).
+After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.

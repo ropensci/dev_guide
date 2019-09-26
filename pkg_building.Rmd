@@ -52,7 +52,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Console messages
 
-* Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` method, as these methods of printing messages are harder for the user to suppress.
+* Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for the user to suppress.
 
 ### Interactive/Graphical Interfaces
 
@@ -81,6 +81,8 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 
 If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](https://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
+
+In all cases, for adding repostatus.org badges you can use the [`rodev::use_repostatus_badge()`](https://docs.ropensci.org/rodev/reference/use_repostatus_badge.html) function.
 
 * Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
@@ -134,7 +136,7 @@ can be found at *link*".
 
 * The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
-* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README can have the same content. 
+* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content. In that case, instead of maintaining these separately, we suggest an approach such as [using R Markdown hunks, relying on knitr use of child documents so you can store the re-used parts in a folder in vignettes/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/). 
 
 * As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*". Any vignette should outline prerequisite knowledge to be able to understand the vignette upfront.
 
@@ -161,9 +163,16 @@ can be found at *link*".
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/hadley/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has a [its own documentation website](https://pkgdown.r-lib.org/).
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
-There are a few tips we'd like to underline here.
+There are a few elements we'd like to underline here.
+
+### Automatic deployment of the documentation website {docsropensci}
+
+You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
+
+Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
+
 
 ### Grouping functions in the reference {#function-grouping}
 
@@ -174,13 +183,13 @@ There are a few tips we'd like to underline here.
  Less automatically, see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
-### Automatic deployment of the documentation website
-
-You could use the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis.
-
 ### Branding of authors
 
-You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropenscilabs/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://ropenscilabs.github.io/rodev/).
+You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropensci/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://docs.ropensci.org/rodev/).
+
+### Tweaking the navbar
+
+You can make your website content easier to browse by tweaking the navbar, refer to [`pkgdown` documentation](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). In particular, note that if you name the main vignette of your package "pkg-name.Rmd", it'll be accessible from the navbar as a `Get started` link instead of via `Articles > Vignette Title`.
 
 ## Authorship
 
@@ -298,9 +307,17 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
 * Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
 
+### CRAN checks {#cranchecks}
+
+Once your package is on CRAN, it will be [regularly checked on different platforms](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Failures of such checks, when not false positives, can lead to the CRAN team's reaching out. You can monitor the state of the CRAN checks via
+
+* the [`foghorn` package](https://fmichonneau.github.io/foghorn/)
+
+* the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges). You can add one of them to the README of your package via [`rodev::use_cchecks_badge()`](https://docs.ropensci.org/rodev/reference/use_cchecks_badge.html).
+
 ## Further guidance
 
-* Hadley Wickham's _R Packages_ is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)).
+* _R Packages_ by Hadley Wickham and Jenny Bryan is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 

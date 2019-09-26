@@ -4,6 +4,24 @@
 
 ## dev
 
+* 2019-09-11, update instructions in README for rendering the book locally (ropensci/software-review-meta#192)
+
+* 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
+
+* 2019-06-18, add link to rOpenSci community call "Security for R" to security chapter.
+
+* 2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #179)
+
+* 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content.
+
+* 2019-06-17, add mention of central building of documentation websites.
+
+* 019-06-13, add explanations of CRAN checks.
+
+* 2019-06-13, add mentions of the `rodev` helper functions where relevant.
+
+* 2019-06-13, add recommendation about using `cat` for `str.*()` methods.  Rstudio assumes that `str` uses `cat`, if not when loading an R object the `str` prints to the console in Rstudio and doesn't show the correct object structure in the properties. ([`@mattfidler`] (https://github.com/mattfidler/) #178)
+
 * 2019-06-12, add more details about git flow.
 
 * 2019-06-12, remove recommendation about `roxygen2` dev version since the latest stable version has what is needed. ([`@bisaloo`](https://github.com/bisaloo/), #165)
@@ -78,17 +96,26 @@
 # Review template {#reviewtemplate}
 
 ```
-```{r, child="templates/review.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/review.md"}
+
 ```
 
 
 
 # Editor's template {#editortemplate}
 
+
 ```
-```{r, child="templates/editor.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/editor.md"}
+
 ```
 
 # Review request template {#reviewrequesttemplate}
@@ -96,26 +123,44 @@
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```
-```{r, child="templates/request.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
-# Approval comment template {#approvaltemplate}
+
+```{r eval = knitr::is_latex_output(), child="templates/request.md"}
 
 ```
-```{r, child="templates/approved.md"}
+
+# Approval comment template {#approvaltemplate}
+
+
+```
+```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
+
+```{r eval = knitr::is_latex_output(), child="templates/approved.md"}
+
+```
+
 
 # NEWS template {#newstemplate}
 
+
 ```
-```{r, child="templates/news.md"}
+```{r child="templates/news.md"}
 ```
 ```
+
 
 # Book release guidance {#bookreleaseissue}
 
+
 ```
-```{r, child="templates/book-release.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
+
 ```
