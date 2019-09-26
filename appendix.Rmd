@@ -4,11 +4,15 @@
 
 ## dev
 
+* 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/software-review-meta#180)
+
 * 2019-09-26, add chapter on changing package maintainers (ropensci/software-review-meta#128)
 
 * 2019-09-26, update Slack room to use for editors (ropensci/software-review-meta#193)
 
 * 2019-09-11, update instructions in README for rendering the book locally (ropensci/software-review-meta#192)
+
+* 2019-08-05, udpate JOSS submission instructions (ropensci/software-review-meta#187)
 
 * 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
 
