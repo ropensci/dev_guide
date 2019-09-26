@@ -64,7 +64,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 * For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](https://r-pkgs.org/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
 
-* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered inconsistency beause you can't use `<-` in this case. 
+* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case. 
 
 ## README
 
