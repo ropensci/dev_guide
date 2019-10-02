@@ -4,15 +4,15 @@
 
 ## dev
 
-* 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/software-review-meta#180)
+* 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)
 
-* 2019-09-26, add chapter on changing package maintainers (ropensci/software-review-meta#128)
+* 2019-09-26, add chapter on changing package maintainers (ropensci/dev_guide#128) (ropensci/dev_guide#194)
 
-* 2019-09-26, update Slack room to use for editors (ropensci/software-review-meta#193)
+* 2019-09-26, update Slack room to use for editors (ropensci/dev_guide#193)
 
-* 2019-09-11, update instructions in README for rendering the book locally (ropensci/software-review-meta#192)
+* 2019-09-11, update instructions in README for rendering the book locally (ropensci/dev_guide#192)
 
-* 2019-08-05, udpate JOSS submission instructions (ropensci/software-review-meta#187)
+* 2019-08-05, udpate JOSS submission instructions (ropensci/dev_guide#187)
 
 * 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
 
@@ -20,11 +20,11 @@
 
 * 2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #179)
 
-* 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content.
+* 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content. (ropensci/dev_guide#161)
 
 * 2019-06-17, add mention of central building of documentation websites.
 
-* 019-06-13, add explanations of CRAN checks.
+* 2019-06-13, add explanations of CRAN checks. (ropensci/dev_guide#177)
 
 * 2019-06-13, add mentions of the `rodev` helper functions where relevant.
 
@@ -42,7 +42,7 @@
 
 * 2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan's books ([`@bisaloo`](https://github.com/bisaloo/), #167)
 
-* 2019-05-15, add book release guidance for editors.
+* 2019-05-15, add book release guidance for editors. (ropensci/dev_guide#152)
 
 ## 0.2.0
 
