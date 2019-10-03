@@ -180,7 +180,7 @@ Before submission and before transfer, you could use the [approach documented by
  
  If you use `roxygen2` above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) _and_ allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
  
- Less automatically, see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
+ Less automatically, see the example of [`drake` website](https://docs.ropensci.org/drake/) and [associated config file
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
 ### Branding of authors
