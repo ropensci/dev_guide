@@ -27,7 +27,7 @@ board. The EiC plays the following roles
 ### Upon submission:
 
 -   Tag issue with `1/editor-checks` tag and assign a main editor. Please strive to finish the checks and start looking for reviewers within 5 working days.
--   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associated editor Anna Krystalli](https://ropenscilabs.github.io/pkgreviewr/articles/editors.html)
+-   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropenscilabs.github.io/pkgreviewr/articles/editors.html)
 -   Check that template has been properly filled out.
 -   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
     Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
