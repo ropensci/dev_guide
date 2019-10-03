@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)
+
 * 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)
 
 * 2019-09-26, add chapter on changing package maintainers (ropensci/dev_guide#128) (ropensci/dev_guide#194)
