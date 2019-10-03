@@ -14,7 +14,7 @@
 
 * 2019-09-11, update instructions in README for rendering the book locally (ropensci/dev_guide#192)
 
-* 2019-08-05, udpate JOSS submission instructions (ropensci/dev_guide#187)
+* 2019-08-05, update JOSS submission instructions (ropensci/dev_guide#187)
 
 * 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
 
@@ -30,7 +30,7 @@
 
 * 2019-06-13, add mentions of the `rodev` helper functions where relevant.
 
-* 2019-06-13, add recommendation about using `cat` for `str.*()` methods.  Rstudio assumes that `str` uses `cat`, if not when loading an R object the `str` prints to the console in Rstudio and doesn't show the correct object structure in the properties. ([`@mattfidler`] (https://github.com/mattfidler/) #178)
+* 2019-06-13, add recommendation about using `cat` for `str.*()` methods.  RStudio assumes that `str` uses `cat`, if not when loading an R object the `str` prints to the console in RStudio and doesn't show the correct object structure in the properties. ([`@mattfidler`] (https://github.com/mattfidler/) #178)
 
 * 2019-06-12, add more details about git flow.
 
@@ -40,7 +40,7 @@
 
 * 2019-06-10, use the new URL for the dev guide, https://devguide.ropensci.org/
 
-* 2019-05-27, add more info about the importance of the repo being recognised as a R package by linguist ([`@bisaloo`](https://github.com/bisaloo/), #172)
+* 2019-05-27, add more info about the importance of the repo being recognized as a R package by linguist ([`@bisaloo`](https://github.com/bisaloo/), #172)
 
 * 2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan's books ([`@bisaloo`](https://github.com/bisaloo/), #167)
 
