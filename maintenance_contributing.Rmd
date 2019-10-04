@@ -53,17 +53,17 @@ Before contributing to one of our packages, you might want to read a bit more ab
 
 * [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/2018/09/usethis-workflow-for-package-development/)
 
-* [This pictorial by Matthew J Denny](http://www.mjdenny.com/R_Package_Pictorial.html)
+* [This pictorial by Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html)
 
 ##### Books
 
-* [Hadley Wickham's *R packages* book](http://r-pkgs.had.co.nz/)
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/)
 
-* [*Writing R extensions*, the official CRAN guide](http://cran.r-project.org/doc/manuals/r-release/R-exts.html)
+* [*Writing R extensions*, the official CRAN guide](https://cran.r-project.org/doc/manuals/r-release/R-exts.html)
 
 * [*Mastering Software Development in R* by Roger D. Peng, Sean Kross, and Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/)
 
-* [*Advanced R* by Hadley Wickham](http://adv-r.had.co.nz/)
+* [*Advanced R* by Hadley Wickham](https://adv-r.hadley.nz/)
 
 * [*Testing R code* by Richard Cotton](https://www.crcpress.com/Testing-R-Code/Cotton/p/book/9781498763653)
 

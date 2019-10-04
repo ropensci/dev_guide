@@ -2,7 +2,53 @@
 
 # NEWS {#booknews}
 
+## dev
+
+* 2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)
+
+* 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)
+
+* 2019-09-26, add chapter on changing package maintainers (ropensci/dev_guide#128) (ropensci/dev_guide#194)
+
+* 2019-09-26, update Slack room to use for editors (ropensci/dev_guide#193)
+
+* 2019-09-11, update instructions in README for rendering the book locally (ropensci/dev_guide#192)
+
+* 2019-08-05, update JOSS submission instructions (ropensci/dev_guide#187)
+
+* 2019-07-22, break "reproducibility" category in policies into component parts. (ropensci/software-review-meta#81)
+
+* 2019-06-18, add link to rOpenSci community call "Security for R" to security chapter.
+
+* 2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by [`@IndrajeetPatil`](https://github.com/IndrajeetPatil), #179)
+
+* 2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content. (ropensci/dev_guide#161)
+
+* 2019-06-17, add mention of central building of documentation websites.
+
+* 2019-06-13, add explanations of CRAN checks. (ropensci/dev_guide#177)
+
+* 2019-06-13, add mentions of the `rodev` helper functions where relevant.
+
+* 2019-06-13, add recommendation about using `cat` for `str.*()` methods.  RStudio assumes that `str` uses `cat`, if not when loading an R object the `str` prints to the console in RStudio and doesn't show the correct object structure in the properties. ([`@mattfidler`] (https://github.com/mattfidler/) #178)
+
+* 2019-06-12, add more details about git flow.
+
+* 2019-06-12, remove recommendation about `roxygen2` dev version since the latest stable version has what is needed. ([`@bisaloo`](https://github.com/bisaloo/), #165)
+
+* 2019-06-11, add mention of usethis functions for adding testing or vignette infrastructure in the part about dependencies in the package building guide.
+
+* 2019-06-10, use the new URL for the dev guide, https://devguide.ropensci.org/
+
+* 2019-05-27, add more info about the importance of the repo being recognized as a R package by linguist ([`@bisaloo`](https://github.com/bisaloo/), #172)
+
+* 2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan's books ([`@bisaloo`](https://github.com/bisaloo/), #167)
+
+* 2019-05-15, add book release guidance for editors. (ropensci/dev_guide#152)
+
 ## 0.2.0
+
+* 2019-05-23, add CRAN gotcha: in the Description field of your DESCRIPTION file, enclose URLs in angle brackets.
 
 * 2019-05-13, add more content to the chapter about contributing.
 
@@ -60,17 +106,26 @@
 # Review template {#reviewtemplate}
 
 ```
-```{r, child="templates/review.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/review.md"}
+
 ```
 
 
 
 # Editor's template {#editortemplate}
 
+
 ```
-```{r, child="templates/editor.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/editor.md"}
+
 ```
 
 # Review request template {#reviewrequesttemplate}
@@ -78,19 +133,44 @@
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```
-```{r, child="templates/request.md"}
+```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
-# Approval comment template {#approvaltemplate}
+
+```{r eval = knitr::is_latex_output(), child="templates/request.md"}
 
 ```
-```{r, child="templates/approved.md"}
+
+# Approval comment template {#approvaltemplate}
+
+
+```
+```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
+
+```{r eval = knitr::is_latex_output(), child="templates/approved.md"}
+
+```
+
 
 # NEWS template {#newstemplate}
 
+
 ```
-```{r, child="templates/news.md"}
+```{r child="templates/news.md"}
 ```
+```
+
+
+# Book release guidance {#bookreleaseissue}
+
+
+```
+```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
+```
+```
+
+```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
+
 ```
