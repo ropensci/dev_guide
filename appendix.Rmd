@@ -2,7 +2,7 @@
 
 # NEWS {#booknews}
 
-## dev
+## 0.3.0
 
 * 2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)
 
