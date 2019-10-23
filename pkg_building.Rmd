@@ -33,7 +33,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ## Package API
 
-## Function and argument naming
+### Function and argument naming
 
 * Functions and arguments naming should be chosen to work together to form a common, logical programming API that is easy to read, and auto-complete. 
 
