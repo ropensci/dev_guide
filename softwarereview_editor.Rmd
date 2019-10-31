@@ -27,10 +27,10 @@ board. The EiC plays the following roles
 ### Upon submission:
 
 -   Tag issue with `1/editor-checks` tag and assign a main editor. Please strive to finish the checks and start looking for reviewers within 5 working days.
--   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associated editor Anna Krystalli](https://ropenscilabs.github.io/pkgreviewr/articles/editors.html)
+-   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropenscilabs.github.io/pkgreviewr/articles/editors.html)
 -   Check that template has been properly filled out.
 -   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
-    Initiate discussion via Slack #onboarding channel if needed for edge cases that haven't been caught by previous checks by the EiC.
+    Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
     If reject, see [this section](#outofscoperesponse) about how to respond.
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
 -   Run automated tests: `spelling::spell_check_package()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Check that documentation is generated using `roxygen2`, not by hand (this isn't part of automatic tests [yet](https://github.com/MangoTheCat/goodpractice/issues/116)). Report relevant outputs in the issue thread.
@@ -125,6 +125,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
         -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
+-   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@stefaniebutland` for follow-up.
 -   Add a "peer-reviewed" topic to the repo.
 -   Close the software-review issue. 
 

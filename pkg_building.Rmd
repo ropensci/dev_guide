@@ -64,7 +64,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 * For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in Hadley's book](https://r-pkgs.org/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
 
-* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered inconsistency beause you can't use `<-` in this case. 
+* You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case. 
 
 ## README
 
@@ -167,7 +167,7 @@ We recommend creating a documentation website for your package using [`pkgdown`]
 
 There are a few elements we'd like to underline here.
 
-### Automatic deployment of the documentation website {docsropensci}
+### Automatic deployment of the documentation website {#docsropensci}
 
 You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
 
@@ -180,7 +180,7 @@ Before submission and before transfer, you could use the [approach documented by
  
  If you use `roxygen2` above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) _and_ allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
  
- Less automatically, see the example of [`drake` website](https://ropensci.github.io/drake/reference/index.html) and [associated config file
+ Less automatically, see the example of [`drake` website](https://docs.ropensci.org/drake/) and [associated config file
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
 ### Branding of authors
