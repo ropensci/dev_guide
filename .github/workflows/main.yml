@@ -1,9 +1,5 @@
 on: push
 
-on:
-  schedule:
-    - cron:  '0 12 * * *'
-
 name: Render book
 
 jobs:
