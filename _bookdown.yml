@@ -13,5 +13,4 @@ rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "maintenance_evolution.Rmd",
            "maintenance_contributing.Rmd", "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
-new_session: yes
 
