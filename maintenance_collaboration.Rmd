@@ -48,7 +48,7 @@ You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/compa
 
 * [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
-One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](https://happygitwithr.com/pr-extend.html).
+One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed. Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](https://happygitwithr.com/pr-extend.html).
 
 ### Be generous with attributions {#attributions}
 
