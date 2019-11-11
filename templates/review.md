@@ -17,9 +17,9 @@ The package includes all the following forms of documentation:
 
 >##### For packages co-submitting to JOSS
 >
->- [ ] The package has an **obvious research application** according to [JOSS's definition](http://joss.theoj.org/about#submission_requirements)
+>- [ ] The package has an **obvious research application** according to [JOSS's definition](https://joss.theoj.org/about#submission_requirements)
 >
->The package contains a `paper.md` matching [JOSS's requirements](http://joss.theoj.org/about#paper_structure) with:
+>The package contains a `paper.md` matching [JOSS's requirements](https://joss.theoj.org/about#paper_structure) with:
 >
 >- [ ] **A short summary** describing the high-level functionality of the software
 >- [ ] **Authors:**  A list of authors with their affiliations
