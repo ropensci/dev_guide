@@ -73,7 +73,7 @@ knitr::include_graphics("images/status.png")
 
 * __data validation and testing__: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
 
-* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
+* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
 
 * __version control__: Tools that facilitate the use of version control in scientific workflows.  Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category.  (Example: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
 

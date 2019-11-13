@@ -29,7 +29,7 @@ To review a package, please begin by copying our [review template](#reviewtempla
 - Were functions and arguments named to work together to form a common, logical programming API that is easy to read, and autocomplete?
 - If you have your own relevant data/problem, work through it with the package. You may find rough edges and use-cases the author didn't think about.
 
-Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review withing 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
+Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review within 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
 
 We encourage you to use automated tools to facilitate your reviewing.  These include:
 
