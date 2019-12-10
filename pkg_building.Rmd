@@ -302,6 +302,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 
 * Make sure your package title is in Title Case.
 * Do not put a period on the end of your title.
+* Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this.
 * Avoid starting the description with the package name or "This package ...".
 * Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
