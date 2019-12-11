@@ -161,6 +161,8 @@ can be found at *link*".
         1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
         2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other.
 
+* Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
+
 ## Documentation website {#website}
 
 We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
