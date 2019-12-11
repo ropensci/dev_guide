@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2019-12-11, add new CRAN gotcha about having 'in R' or 'with R' in your package title ([`@bisaloo`](https://github.com/Bisaloo), ropensci/dev_guide#221)
+
 * 2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)
 
 * 2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)
