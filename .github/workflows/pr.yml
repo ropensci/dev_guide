@@ -34,6 +34,7 @@ jobs:
         uses: peter-evans/commit-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          sha: ${{ github.sha }} 
           body: |
             You can go look at [the preview][1].
 
