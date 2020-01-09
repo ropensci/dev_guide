@@ -1,0 +1,31 @@
+on: pull_request
+  
+name: Render-Book-from-PR
+
+jobs:
+  bookdown:
+    name: Render-Book
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
+      - name: Render Book
+        run: Rscript -e 'bookdown::render_book("index.Rmd")'
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Install Netlify CLI
+        run: npm install netlify-cli -g
+      - name: Deploy to Netlify (test)
+        run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            You can go look at [the preview][1].
+
+            [1]: ${process.env.DEPLOY_URL}
