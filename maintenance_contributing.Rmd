@@ -85,6 +85,6 @@ Our packages are developed on GitHub. We have two organizations:
 
 If you already know what package you’d like to contribute to, have a look at its issue tracker and comment in one of the issues to ask the maintainer whether they'd be interested in your help. E.g. if you like `taxize`, the place to look is https://github.com/ropensci/taxize/issues
 
-If you’re not sure which package you’d like to contribute to, you can start by browsing [our packages page](https://ropensci.org/packages/). To browse issues targeted at beginners you could try [the `contributr` Shiny app by Lucy D'Agostino McGowan](https://ropensci.shinyapps.io/contributr/) or use an advanced GitHub search such as [this one](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues) that gets all issues from "ropensci" or "ropenscilabs" organizations that are open and labelled "beginner".
+If you’re not sure which package you’d like to contribute to, you can start by browsing [our packages page](https://ropensci.org/packages/). To browse issues targeted at beginners you could use an advanced GitHub search such as [this one](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues) that gets all issues from "ropensci" or "ropenscilabs" organizations that are open and labelled "beginner".
 
  Still not sure how you can contribute? [Tell us about your expertise and interests](https://discuss.ropensci.org/c/contributing) and we’ll try to match you with a package that could use your help.
