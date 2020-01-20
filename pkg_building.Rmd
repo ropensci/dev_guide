@@ -252,7 +252,7 @@ An example of bad practice would be for a developer to consider the versions of 
     
     * check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)). 
   `configure` scripts can be challenging as they often require hacky solutions
-  to make diverse system dependencies work across systems. Use examples ([more here]((https://github.com/search?q=org%3Acran+anticonf&type=Code))) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
+  to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
 
 * Consider the trade-offs involved in relying on a package as a dependency. On one hand,
   using dependencies reduces coding effort, and can build on useful functionality developed by
