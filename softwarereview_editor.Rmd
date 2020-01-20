@@ -164,7 +164,7 @@ For very small amendments to the dev guide, no PR review is needed. For larger a
 
 Two weeks before a dev guide release, once the PR from dev to master **and the release blog post** are ready for review, all editors should be pinged by GitHub ("review request" on the PR from dev to master) and Slack, but the release doesn't need all of them to explicitely approve the release.
 
-### Blog post about a release
+### Blog post about a release {#releaseblogpost}
 
 The blog post about a release will be reviewed [by editors](#devguidegov), and `@stefaniebutland`.
 

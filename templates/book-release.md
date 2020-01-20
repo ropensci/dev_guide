@@ -14,7 +14,7 @@
 
 - [ ] Plan a date for release in communication with `@stefaniebutland` who will give you a date for publishing a blog post / tech note.
 
-- [ ] Draft a blog post / tech note about the release with enough advance for Stef to review it (1.5 weeks). [Example](https://github.com/ropensci/roweb2/pull/452), [General blog post instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post). The editor writing the post is first author, other authors are listed by alphabetical order.
+- [ ] Draft a blog post / tech note about the release with enough advance for the editors and rOpenSci community manager Stefanie Butland to review it (2 weeks). [Example](https://github.com/ropensci/roweb2/pull/452), [General blog post instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post), [specific instructions for release posts](#releaseblogpost).
 
 ### Release
 
