@@ -39,6 +39,10 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 -  Using the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) to identify likely sources of errors and style issues. Most exceptions will need to be justified by the author in the particular context of their package.
 -  Using `spelling::spell_check_package()` (and `spelling::spell_check_files("README.Rmd")`) to find spelling errors. 
 
+### Off-thread interactions
+
+If you interact with the package authors and talked about the review outside a review thread (in chats, DMs, in-person), please make sure that your review capture elements from these conversations that are relevant to the process.
+
 ### Experience from past reviewers
 
 First-time reviewers may find it helpful to read (about) some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples of reviews (note that your reviews do not need to be as long as these examples):
