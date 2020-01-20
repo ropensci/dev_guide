@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-20, add more guidance for the editor in charge of a dev guide release (#196, #205).
+
 * 2020-01-20, add advice on specifying dependency minimum versions (@karthik, @annakrystalli, #185).
 
 * 2020-01-09, start using GitHub actions instead of Travis for deployment.
