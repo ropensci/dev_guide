@@ -237,6 +237,11 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
+* Specifying minimum dependencies (e.g. `glue (>= 1.3.0)` instead of just `glue`) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
+But if you don't, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
+An example of bad practice would be for a developer to consider the versions of their current state of dependencies to be the minimal version. That would needlessly force everyone to upgrade (causing issues with other packages) when there is no good reason behind that version choice.
+
+
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
 * If your package uses a _system_ dependency, you should 
@@ -248,7 +253,6 @@ Please do not list editors as contributors. Your participation in and contributi
     * check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)). 
   `configure` scripts can be challenging as they often require hacky solutions
   to make diverse system dependencies work across systems. Use examples ([more here]((https://github.com/search?q=org%3Acran+anticonf&type=Code))) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
-
 
 * Consider the trade-offs involved in relying on a package as a dependency. On one hand,
   using dependencies reduces coding effort, and can build on useful functionality developed by
@@ -285,7 +289,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
       reason for using a function in a heavy dependency, consider wrapping
       the base R approach in a nicely-named internal function in your package.
 
-    * If dependencies that overlapping functionality, see if you can rely on only one.
+    * If dependencies have overlapping functionality, see if you can rely on only one.
     
     * More dependency-management tips can be found [in this post by 
       Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
