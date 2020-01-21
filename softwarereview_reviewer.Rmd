@@ -41,7 +41,7 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 
 ### Off-thread interactions
 
-If you interact with the package authors and talked about the review outside a review thread (in chats, DMs, in-person), please make sure that your review capture elements from these conversations that are relevant to the process.
+If you interact with the package authors and talked about the review outside a review thread (in chats, DMs, in-person, issues in the project repository), please make sure that your review captures and/or links to elements from these conversations that are relevant to the process.
 
 ### Experience from past reviewers
 
