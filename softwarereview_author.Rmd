@@ -18,7 +18,7 @@ This concise guide presents the software peer review process for you as a packag
 -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result on conflicting requests for changes.
 -   Next, [open a new issue](https://github.com/ropensci/software-review/issues/new) in
 the software review repository and fill out the template.
--   Communication between authors, reviewers and editors will first and foremost take place on GitHub, although you can choose to contact the editor by email or Slack for certain issues. Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
+-   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 -   An [editor](#editors) will review your submission within 5 business days and respond with next steps. The editor may assign the package to reviewers, request that the package be updated to meet minimal criteria before review, or reject the package due to lack of fit or overlap.
 -   If your package meets minimal criteria, the editor will assign  1-3 reviewers. They will be asked to provide reviews as comments on your issue within 3 weeks.
