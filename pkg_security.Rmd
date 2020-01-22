@@ -52,7 +52,7 @@ What about pull requests from external contributors? Tests using your secrets wi
 
 You could also choose [a more complicated setup](https://blog.algolia.com/travis-encrypted-variables-external-contributions/).
 
-Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles).
+Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles) for the sake of people making PRs and of people reviewing them (you in a few weeks, and other authors of the package).
 
 ### Secrets and CRAN
 
