@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-22, document the use of mathjax with rotemplate (@Bisaloo, #199).
+
 * 2020-01-20, add guidance for off-thread interaction and COIs (@noamross, #197).
 
 * 2020-01-20, add advice on specifying dependency minimum versions (@karthik, @annakrystalli, #185).
