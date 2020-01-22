@@ -21,12 +21,18 @@ Say your package needs an API key for making requests on behalf of your user.
     * encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
     
     * you could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
+    
+    * Do not print the API key even in verbose mode.
 
 * In the GitHub issue template, it should be stated not to share any credentials. If your user accidentally shares credentials in an issue, make sure they're aware of that so they can't revoke the key.
 
 ### Secrets in packages and development
 
 You'll need to protect your secrets as you protect your users' secrets.
+
+#### Secrets and recorded requests in tests
+
+If you use `vcr` or `httptest` in tests for caching API responses, you need to make sure the fixtures you save do not contain secrets. Refer to [`vcr` guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html).
 
 #### Share secrets with CI services
 
@@ -41,6 +47,8 @@ Now, you might need to share secrets with CI services.
 What about pull requests from external contributors? Tests using your secrets will fail, so you might want to skip them depending on the context. For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
 
 You could also choose [a more complicated setup](https://blog.algolia.com/travis-encrypted-variables-external-contributions/).
+
+Note that you don't have to skip tests that use recorded requests (with e.g. `vcr` cassettes).
 
 ### Secrets and CRAN
 
