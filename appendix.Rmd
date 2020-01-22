@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-22, clarify forum guidance (for use cases and in general).
+
 * 2020-01-22, mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.
 
 * 2020-01-22, document the use of mathjax with rotemplate (@Bisaloo, #199).
