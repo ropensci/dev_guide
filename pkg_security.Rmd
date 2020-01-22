@@ -56,7 +56,7 @@ Document the behavior of your package for external PRs in [CONTRIBUTING.md](#fri
 
 ### Secrets and CRAN
 
-Skip any tests requiring credentials on CRAN.
+Skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring credentials on CRAN.
 
 [Precompute vignettes](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) requiring credentials.
 
