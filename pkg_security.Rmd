@@ -8,6 +8,8 @@ This chapter isn't complete yet. It includes [guidance about managing secrets in
 
 We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
 
+If the web service your package wraps has either https or http, opt for https.
+
 ## Secrets in package {#pkgsecrets}
 
 Guidance for when you develop a package interacting with a web resources asking for credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articlaes/secrets.html).
