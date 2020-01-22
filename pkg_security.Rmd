@@ -1,10 +1,56 @@
 # Package Development Security Best Practices
 
 ```{block, type='summaryblock'}
-This chapter isn't written yet. It should mention the elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017, or have a link to this book/a similar book when written.
+This chapter isn't complete yet. It includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
 ```
 
-In the meantime, here are useful security resources:
+## Misc
+
+We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+
+## Secrets in package {#pkgsecrets}
+
+Guidance for when you develop a package interacting with a web resources asking for credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articlaes/secrets.html).
+
+### Secrets in packages and user protection
+
+Say your package needs an API key for making requests on behalf of your user.
+
+* In your package documentation, try to make sure the API key won't end up in the .Rhistory/script of your user.
+
+    * encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+    
+    * you could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
+
+* In the GitHub issue template, it should be stated not to share any credentials. If your user accidentally shares credentials in an issue, make sure they're aware of that so they can't revoke the key.
+
+### Secrets in packages and development
+
+You'll need to protect your secrets as you protect your users' secrets.
+
+#### Share secrets with CI services
+
+Now, you might need to share secrets with CI services.
+
+* You could store API keys as environment variables on Travis and on GitHub.
+
+* For bigger secrets like tokens, refer [to the googlesheets guidance](https://cran.r-project.org/web/packages/googlesheets/vignettes/managing-auth-tokens.html#the-making-of-googlesheets.tar.gz-for-cran) that involves in particular the encryption of tokens for sharing them with Travis.
+
+#### Secrets and collaborations
+
+What about pull requests from external contributors? Tests using your secrets will fail, so you might want to skip them depending on the context. For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
+
+You could also choose [a more complicated setup](https://blog.algolia.com/travis-encrypted-variables-external-contributions/).
+
+### Secrets and CRAN
+
+Skip any tests requiring credentials on CRAN.
+
+[Precompute vignettes](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) requiring credentials.
+
+## Further reading {#furthersecreading}
+
+Useful security resources:
 
 * [rOpenSci community call "Security for R"](https://ropensci.org/commcalls/2019-05-07/) (recording, slides, etc. see in particular [the list of resources](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources));
 
@@ -12,8 +58,4 @@ In the meantime, here are useful security resources:
 
 * [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/).
 
-## Misc
-
-We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
-
-
+* elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017
