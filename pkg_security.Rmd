@@ -26,7 +26,7 @@ Say your package needs an API key for making requests on behalf of your user.
     
     * Do not print the API key even in verbose mode.
 
-* In the GitHub issue template, it should be stated not to share any credentials. If your user accidentally shares credentials in an issue, make sure they're aware of that so they can't revoke the key.
+* In the GitHub issue template, it should be stated not to share any credentials (it's the case of [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If your user accidentally shares credentials in an issue, make sure they're aware of that so they can't revoke the key.
 
 ### Secrets in packages and development
 
