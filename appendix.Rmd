@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-22, add mentions of the ropensci-books GitHub organisation and associated subdomain.
+
 * 2020-01-22, document the use of mathjax with rotemplate (@Bisaloo, #199).
 
 * 2020-01-20, add guidance for off-thread interaction and COIs (@noamross, #197).
