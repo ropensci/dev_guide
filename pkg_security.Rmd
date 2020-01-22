@@ -12,7 +12,7 @@ If the web service your package wraps has either https or http, opt for https.
 
 ## Secrets in package {#pkgsecrets}
 
-Guidance for when you develop a package interacting with a web resources asking for credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articlaes/secrets.html).
+Guidance for when you develop a package interacting with a web resources asking for credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
 
 ### Secrets in packages and user protection
 
@@ -30,19 +30,21 @@ Say your package needs an API key for making requests on behalf of your user.
 
 ### Secrets in packages and development
 
-You'll need to protect your secrets as you protect your users' secrets.
+You'll need to protect your secrets as you protect your users' secrets, but there's more to take into account and keep in mind.
 
 #### Secrets and recorded requests in tests
 
-If you use `vcr` or `httptest` in tests for caching API responses, you need to make sure the fixtures you save do not contain secrets. Refer to [`vcr` guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html).
+If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
+
+`vcr` being an rOpenSci package, you can post any question you might have to [rOpenSci forum](https://discuss.ropensci.org/)
 
 #### Share secrets with CI services
 
-Now, you might need to share secrets with CI services.
+Now, you might need to share secrets with CI services such as Travis or GitHub Actions.
 
-* You could store API keys as environment variables on Travis and on GitHub.
+* You could store API keys as environment variables / secrets, referring to the docs of the CI service.
 
-* For bigger secrets like tokens, refer [to the googlesheets guidance](https://cran.r-project.org/web/packages/googlesheets/vignettes/managing-auth-tokens.html#the-making-of-googlesheets.tar.gz-for-cran) that involves in particular the encryption of tokens for sharing them with Travis.
+* For bigger secrets like tokens, refer [to the googlesheets guidance](https://cran.r-project.org/web/packages/googlesheets/vignettes/managing-auth-tokens.html#the-making-of-googlesheets.tar.gz-for-cran) that involves in particular the encryption of tokens for sharing them with Travis. Document the steps you made in a Markdown file so you, or say a new maintainer, can remember how to do that next time.
 
 #### Secrets and collaborations
 
@@ -50,7 +52,7 @@ What about pull requests from external contributors? Tests using your secrets wi
 
 You could also choose [a more complicated setup](https://blog.algolia.com/travis-encrypted-variables-external-contributions/).
 
-Note that you don't have to skip tests that use recorded requests (with e.g. `vcr` cassettes).
+Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles).
 
 ### Secrets and CRAN
 
