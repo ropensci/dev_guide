@@ -12,21 +12,21 @@ If the web service your package wraps has either https or http, opt for https.
 
 ## Secrets in packages {#pkgsecrets}
 
-Guidance for when you develop a package interacting with a web resources asking for credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
+Guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
 
 ### Secrets in packages and user protection
 
 Say your package needs an API key for making requests on behalf of your user.
 
-* In your package documentation, try to make sure the API key won't end up in the .Rhistory/script of your user.
+* In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of your user.
 
     * encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
     
     * you could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
     
-    * Do not print the API key even in verbose mode.
+    * Do not print the API key even in verbose mode in any message, warning, error.
 
-* In the GitHub issue template, it should be stated not to share any credentials (it's the case of [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If your user accidentally shares credentials in an issue, make sure they're aware of that so they can't revoke the key.
+* In the GitHub issue template, it should be stated not to share any credentials (it's the case for [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If your user accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitely in an answer whether they realized they shared their key).
 
 ### Secrets in packages and development
 
