@@ -4,7 +4,6 @@ name: Render-Book-from-PR
 
 jobs:
   bookdown:
-    if: github.repository == 'ropensci/dev_guide'
     name: Render-Book
     runs-on: macOS-latest
     steps:
@@ -17,25 +16,32 @@ jobs:
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ hashFiles('DESCRIPTION') }}
+        if: github.repository == 'ropensci/dev_guide'
       - name: Install dependencies
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
+        if: github.repository == 'ropensci/dev_guide'
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        if: github.repository == 'ropensci/dev_guide'
       - name: Render book PDF
         run: Rscript -e 'bookdown::render_book("index.Rmd", new_session = FALSE, "bookdown::pdf_book", output_dir = "pdfbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        if: github.repository == 'ropensci/dev_guide'
       - name: Move files around
         run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
+        if: github.repository == 'ropensci/dev_guide'
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
       - name: Install Netlify CLI
         run: npm install netlify-cli -g
+        if: github.repository == 'ropensci/dev_guide'
       - name: Deploy to Netlify (test)
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=_book --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
+        if: github.repository == 'ropensci/dev_guide'
       - name: Create commit comment
         uses: peter-evans/commit-comment@v1
         with:
@@ -43,5 +49,5 @@ jobs:
           sha: ${{ github.event.pull_request.head.sha }}
           body: |
             You can go look at [the preview][1]. :smile_cat:
-
+        if: github.repository == 'ropensci/dev_guide'
             [1]: ${process.env.DEPLOY_URL}
