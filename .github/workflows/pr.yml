@@ -8,9 +8,13 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
+        if: github.repository == 'ropensci/dev_guide'
       - uses: r-lib/actions/setup-r@v1
+        if: github.repository == 'ropensci/dev_guide'
       - uses: r-lib/actions/setup-pandoc@v1
+        if: github.repository == 'ropensci/dev_guide'
       - uses: r-lib/actions/setup-tinytex@v1
+        if: github.repository == 'ropensci/dev_guide'
       - name: Cache R packages
         uses: actions/cache@v1
         with:
@@ -36,6 +40,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+        if: github.repository == 'ropensci/dev_guide'
       - name: Install Netlify CLI
         run: npm install netlify-cli -g
         if: github.repository == 'ropensci/dev_guide'
