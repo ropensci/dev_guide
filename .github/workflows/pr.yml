@@ -4,6 +4,7 @@ name: Render-Book-from-PR
 
 jobs:
   bookdown:
+    if: github.repository == 'ropensci/dev_guide'
     name: Render-Book
     runs-on: macOS-latest
     steps:
