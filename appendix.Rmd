@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-29, remove the recommendation to add a review mention to DESCRIPTION but recommends mentioning the package version when reviewers are added as "rev" authors.
+
 * 2020-01-22, add guidance in the editor guide about not transferred repositories.
 
 * 2020-01-22, clarify forum guidance (for use cases and in general).

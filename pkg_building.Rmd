@@ -210,7 +210,7 @@ The `DESCRIPTION` file of a package should list package authors and contributors
 
 ```
     person("Bea", "Hernández", role = "rev",
-    comment = "Bea reviewed the package for ropensci, see <https://github.com/ropensci/software-review/issues/116>"),
+    comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
 Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5. Make sure you use `roxygen2`'s latest CRAN version.
