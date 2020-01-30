@@ -16,7 +16,7 @@
 
 ### 2 weeks prior to release
 
-- [ ] Draft a blog post / tech note about the release with enough advance for Stef to review it (2 weeks). [Example](https://github.com/ropensci/roweb2/pull/452), [General blog post instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post), [specific instructions for release posts](#releaseblogpost). 
+- [ ] Draft a blog post / tech note about the release with enough advance for editors and then Stef to review it (2 weeks). [Example](https://github.com/ropensci/roweb2/pull/452), [General blog post instructions](https://github.com/ropensci/roweb2#contributing-a-blog-post), [specific instructions for release posts](#releaseblogpost). 
 
 - [ ] Make a PR from the dev branch to the master branch, ping editors on GitHub and Slack. Mention the blog post draft in a comment on this PR.
 
