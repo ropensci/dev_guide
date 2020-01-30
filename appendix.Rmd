@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-01-30, slightly changes the advice on documentation re-use: add a con; mention `@includeRmd` and `@example`; correct the location of Rmd fragments (#230).
+
 * 2020-01-30, add more guidance for the editor in charge of a dev guide release (#196, #205).
 
 * 2020-01-22, add guidance in the editor guide about not transferred repositories.
