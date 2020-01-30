@@ -4,7 +4,7 @@
 Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
 a system of a rotating Editor-in-Chief (EiC).
 
-This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), and [how to respond to an out-of-scope submission](#outofscoperesponse).
+This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
 
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
@@ -158,3 +158,34 @@ Thank authors for their submission, explain the reasons for the decision, and di
 ## Managing a dev guide release {#bookrelease}
 
 If you are in charge of managing a release of the very book you are reading, use [the book release guidance](#bookreleaseissue) as an issue template to be posted [in the dev guide issue tracker](https://github.com/ropensci/dev_guide/issues), and do not hesitate to ask questions to other editors.
+
+### Dev guide governance {#devguidegov}
+
+For very small amendments to the dev guide, no PR review is needed. For larger amendments, request review from at least a few editors (if none participated in the discussion related to the amendment, request a review from all of them on GitHub, and in the absence of any reaction merge after a week).
+
+Two weeks before a dev guide release, once the PR from dev to master **and the release blog post** are ready for review, all editors should be pinged by GitHub ("review request" on the PR from dev to master) and Slack, but the release doesn't need all of them to explicitely approve the release.
+
+### Blog post about a release {#releaseblogpost}
+
+The blog post about a release will be reviewed [by editors](#devguidegov), and `@stefaniebutland`.
+
+#### Content
+
+Refer to the [general rOpenSci blogging guidance](https://github.com/ropensci/roweb2#contributing-a-blog-post), and the more specific guidance below.
+
+[First example of such a post](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [second example](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+
+The blog post should mention all important items from the [changelog](#booknews) organized in (sub)sections: e.g. a section about big change A, another one about big change B, and one about smaller changes lumped together. Mention the most important changes first.
+
+For each change made by an external contributor, thank them explicitely using the information from the changelog. E.g. `[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+
+At the end of the post, mention upcoming changes by linking to open issues in the issue tracker, and invite readers to contribute to the dev guide by opening issues and participating in open discussions. Conclusion template:
+
+```markdown
+In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. We are grateful for all contributions that made this release possible. If _you_ have any feedback about the book, head to [the issue tracker](https://github.com/ropensci/dev_guide/issues/)!  We are already working on updates for our next version, such as ISSUE1, ISSUE2. Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+```
+
+#### Authorship
+
+The editor writing the post is first author, other editors are listed by alphabetical order.
+
