@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-02-06, improve guidance regarding the replacement of "older" pkgdown website links and source (#241, @cboettig)
+
 * 2020-02-06, rephrase the EiC role (#244).
 
 * 2020-02-06, remove the recommendation to add rOpenSci footer (https://github.com/ropensci/software-review-meta/issues/79).
@@ -202,3 +204,19 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
 ```
+
+# How to set a redirect {#redirect}
+
+Replace the content of the current website with
+
+```html
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/" />  
+<script language="javascript">
+  window.location.href = "https://docs.ropensci.org/<pkgname>"
+</script>
+</head>
+</html>
+```
+    
