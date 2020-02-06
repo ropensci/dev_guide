@@ -41,7 +41,9 @@ We hope that you'll find the guide useful and clear, and welcome your suggestion
 
 The rOpenSci editorial team.
 
-This book is a living document. You can view updates to our best practices and policies via the [release notes](#booknews).  
+This book is a living document. 
+You can view updates to our best practices and policies via the [release notes](#booknews).  
+You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.5281/zenodo.2553043).
 
 _If you want to contribute to this book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_
 
