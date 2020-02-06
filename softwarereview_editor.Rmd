@@ -118,7 +118,6 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     -   Go to the repository settings in rOpenSci's "ropensci" GitHub organization and give the author "Admin" access to the repository. 
 - *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt) to ensure the package gets included in rOpenSci package registry.*
 -   Ask author to:
-    -   Add rOpenSci footer to README `[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)`
     -   Add a CodeMeta file by running `codemetar::write_codemeta()` ([`codemetar` GitHub repo](https://github.com/ropensci/codemetar))
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
