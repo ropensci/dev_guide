@@ -255,10 +255,17 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
+* If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough.
+    
+    * Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet. 
+    
+    * Should the user use [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall)? Document this.
+    
+    * If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.
+
 * Specifying minimum dependencies (e.g. `glue (>= 1.3.0)` instead of just `glue`) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
 But if you don't, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
 An example of bad practice would be for a developer to consider the versions of their current state of dependencies to be the minimal version. That would needlessly force everyone to upgrade (causing issues with other packages) when there is no good reason behind that version choice.
-
 
 * For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
 
@@ -340,6 +347,10 @@ Once your package is on CRAN, it will be [regularly checked on different platfor
 * the [`foghorn` package](https://fmichonneau.github.io/foghorn/)
 
 * the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges). You can add one of them to the README of your package via [`rodev::use_cchecks_badge()`](https://docs.ropensci.org/rodev/reference/use_cchecks_badge.html).
+
+## Bioconductor gotchas
+
+If you intend your package to be submitted to, or if your package is on, Bioconductor, refer to [Bioconductor packaging guidelines](https://www.bioconductor.org/developers/package-guidelines/).
 
 ## Further guidance
 
