@@ -1,40 +1,40 @@
 # Package Development Security Best Practices
 
 ```{block, type='summaryblock'}
-This chapter isn't complete yet. It includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
+This work-in-progress chapter includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
 ```
 
-## Misc
+## Miscellaneous
 
-We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+* We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
 
-If the web service your package wraps has either https or http, opt for https.
+* If the web service your package wraps has either https or http, opt for https.
 
 ## Secrets in packages {#pkgsecrets}
 
-Guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
+This section contains guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
 
 ### Secrets in packages and user protection
 
-Say your package needs an API key for making requests on behalf of your user.
+Say your package needs an API key for making requests on behalf of users of your package.
 
-* In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of your user.
+* In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of users of your package.
 
-    * encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+    * Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
     
-    * you could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
+    * You could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
     
     * Do not print the API key even in verbose mode in any message, warning, error.
 
-* In the GitHub issue template, it should be stated not to share any credentials (it's the case for [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If your user accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitely in an answer whether they realized they shared their key).
+* In the GitHub issue template, it should be stated not to share any credentials (it's the case for [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitely in an answer whether they realized they shared their key).
 
 ### Secrets in packages and development
 
-You'll need to protect your secrets as you protect your users' secrets, but there's more to take into account and keep in mind.
+You'll need to protect your secrets as you protect secrets of users, but there's more to take into account and keep in mind.
 
 #### Secrets and recorded requests in tests
 
-If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
+If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
 
 `vcr` being an rOpenSci package, you can post any question you might have to [rOpenSci forum](https://discuss.ropensci.org/)
 
@@ -44,7 +44,7 @@ Now, you might need to share secrets with CI services such as Travis or GitHub A
 
 * You could store API keys as environment variables / secrets, referring to the docs of the CI service.
 
-* For bigger secrets like tokens, refer [to the googlesheets guidance](https://cran.r-project.org/web/packages/googlesheets/vignettes/managing-auth-tokens.html#the-making-of-googlesheets.tar.gz-for-cran) that involves in particular the encryption of tokens for sharing them with Travis. Document the steps you made in a Markdown file so you, or say a new maintainer, can remember how to do that next time.
+* For bigger secrets like tokens, refer [to the gargle guidance](gargle.r-lib.org/articles/articles/managing-tokens-securely.html) that involves in particular the encryption of tokens for sharing them with Travis. Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
 
 #### Secrets and collaborations
 
@@ -56,7 +56,7 @@ Document the behavior of your package for external PRs in [CONTRIBUTING.md](#fri
 
 ### Secrets and CRAN
 
-Skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring credentials on CRAN.
+On CRAN, skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring credentials.
 
 [Precompute vignettes](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) requiring credentials.
 
@@ -68,6 +68,8 @@ Useful security resources:
 
 * [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
 
-* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/).
+* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/);
 
-* elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017
+* [`gargle` article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+
+* elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017.
