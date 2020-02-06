@@ -18,7 +18,7 @@ In details, the EiC plays the following roles
 - Watches all issues posted to the software-review repo.
 - Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
 - Monitors pace of review process and reminds other editors to move packages along as needed.
-- Responds to issues posted to the software-review-meta repos
+- Responds to issues posted to the software-review-meta repo
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submited/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
  
