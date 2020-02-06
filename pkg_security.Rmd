@@ -42,9 +42,11 @@ If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpia
 
 Now, you might need to share secrets with CI services such as Travis or GitHub Actions.
 
-* You could store API keys as environment variables / secrets, referring to the docs of the CI service.
+You could store API keys as environment variables / secrets, referring to the docs of the CI service.
 
-* For bigger secrets like tokens, refer [to the gargle guidance](gargle.r-lib.org/articles/articles/managing-tokens-securely.html) that involves in particular the encryption of tokens for sharing them with Travis. Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
+For more details and workflow advice, refer [to the gargle article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html).
+
+Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
 
 #### Secrets and collaborations
 
