@@ -177,7 +177,7 @@ You only need to worry about automatic deployment of your website until approval
 
 *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
-Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) or the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
+Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) or the [`tic` package](https://docs.ropensci.org/tic/) for automatic deployment of the package's website. This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
 
 ### Grouping functions in the reference {#function-grouping}
 
