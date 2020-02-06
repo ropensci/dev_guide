@@ -48,11 +48,10 @@ jobs:
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=_book --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
         if: github.repository == 'ropensci/dev_guide'
       - name: Create commit comment
+        if: github.repository == 'ropensci/dev_guide'
         uses: peter-evans/commit-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           sha: ${{ github.event.pull_request.head.sha }}
           body: |
-            You can go look at [the preview][1]. :smile_cat:
-        if: github.repository == 'ropensci/dev_guide'
-            [1]: ${process.env.DEPLOY_URL}
+            You can go look at [the preview](${process.env.DEPLOY_URL}). :smile_cat:
