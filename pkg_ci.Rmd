@@ -60,6 +60,8 @@ Details of how to run tests/checks using different versions of R locally can be 
 
 You can fine tune the deployment of tests with each versions by using a testing matrix. See this [more complex example](https://github.com/r-hub/rhub/blob/master/.travis.yml#L5) of a Travis configuration where pkgdown documentation is built during the release R version testing only.
 
+For a package depending on Bioconductor packages, or a Bioconductor package, using `r: bioc-release` is the most appropriate but it will not flag issues with dependencies that won't install properly from the source code (which is the review scenario). Therefore, one should still also use `r: release` which can catch such problems. Including any setup instructions in the `script: filed` for that job then also allows testing the suitability of [given instructions](#pkgdependencies). 
+
 #### Minimizing build times on Travis
 
 Please use these tips to minimize build time on Travis especially after your package project gets transferred to ropensci Travis account:
