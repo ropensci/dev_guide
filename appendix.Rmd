@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-02-10, add more guidance about secrets and package development in the security chapter.
+
 * 2020-01-22, clarify forum guidance (for use cases and in general).
 
 * 2020-01-22, mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.
