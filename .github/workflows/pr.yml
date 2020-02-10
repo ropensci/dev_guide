@@ -40,15 +40,23 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-        if: github.repository == 'ropensci/dev_guide'
+        env: # Set the secret as an input
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        if: env.NETLIFY_SITE_ID != ''
       - name: Install Netlify CLI
         run: npm install netlify-cli -g
-        if: github.repository == 'ropensci/dev_guide'
+        env: # Set the secret as an input
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        if: env.NETLIFY_SITE_ID != ''
       - name: Deploy to Netlify (test)
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=_book --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
-        if: github.repository == 'ropensci/dev_guide'
+        env: # Set the secret as an input
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        if: env.NETLIFY_SITE_ID != ''
       - name: Create commit comment
-        if: github.repository == 'ropensci/dev_guide'
+        env: # Set the secret as an input
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        if: env.NETLIFY_SITE_ID != ''
         uses: peter-evans/commit-comment@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
