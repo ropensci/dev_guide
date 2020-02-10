@@ -181,7 +181,10 @@ For each change made by an external contributor, thank them explicitely using th
 At the end of the post, mention upcoming changes by linking to open issues in the issue tracker, and invite readers to contribute to the dev guide by opening issues and participating in open discussions. Conclusion template:
 
 ```markdown
-In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. We are grateful for all contributions that made this release possible. If _you_ have any feedback about the book, head to [the issue tracker](https://github.com/ropensci/dev_guide/issues/)!  We are already working on updates for our next version, such as ISSUE1, ISSUE2. Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. 
+We are grateful for all contributions that made this release possible. 
+We are already working on updates for our next version, such as ISSUE1, ISSUE2. 
+Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
 ```
 
 #### Authorship
