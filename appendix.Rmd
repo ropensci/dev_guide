@@ -4,6 +4,8 @@
 
 ## 0.3.0
 
+* 2020-02-10, add field and laboratory reproducibility tools as a category in scope.
+
 * 2020-02-10, add more guidance about secrets and package development in the security chapter.
 
 * 2020-02-06, add package logo guidance (#217).
