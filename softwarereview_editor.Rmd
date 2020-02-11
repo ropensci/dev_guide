@@ -125,7 +125,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
         -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
--   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@stefaniebutland` for follow-up.
+-   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 -   Add a "peer-reviewed" topic to the repo.
 -   Close the software-review issue. 
 
@@ -142,7 +142,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 
 ### Package promotion:
 
--  Ask authors to write either a blog post or a tech-notes post for the package, as appropriate, and ping [Stefanie Butland](https://github.com/stefaniebutland), rOpenSci community manager.
+-  Ask authors to write either a blog post or a tech-notes post for the package, as appropriate, and ping [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors), rOpenSci blog editors.
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
 -   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
 
@@ -166,7 +166,7 @@ Two weeks before a dev guide release, once the PR from dev to master **and the r
 
 ### Blog post about a release {#releaseblogpost}
 
-The blog post about a release will be reviewed [by editors](#devguidegov), and `@stefaniebutland`.
+The blog post about a release will be reviewed [by editors](#devguidegov), and one of `@ropensci/blog-editors`.
 
 #### Content
 
