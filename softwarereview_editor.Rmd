@@ -142,7 +142,6 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 
 ### Package promotion:
 
--  Ask authors to write either a blog post or a tech-notes post for the package, as appropriate, and ping [`@ropensci/blog-editors`](https://github.com/orgs/ropensci/teams/blog-editors), rOpenSci blog editors.
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
 -   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
 
