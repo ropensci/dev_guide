@@ -170,7 +170,7 @@ The blog post about a release will be reviewed [by editors](#devguidegov), and o
 
 #### Content
 
-Refer to the [general rOpenSci blogging guidance](https://github.com/ropensci/roweb2#contributing-a-blog-post), and the more specific guidance below.
+Refer to the [general rOpenSci blogging guidance](https://blogguide.ropensci.org/), and the more specific guidance below.
 
 [First example of such a post](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [second example](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
 
