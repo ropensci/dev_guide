@@ -4,6 +4,8 @@
 
 ## 0.4.0 dev
 
+* 2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.
+
 * 2020-02-10, add field and laboratory reproducibility tools as a category in scope.
 
 * 2020-02-10, add more guidance about secrets and package development in the security chapter.

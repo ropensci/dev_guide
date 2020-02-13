@@ -23,6 +23,7 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and [social media](https://twitter.com/ropensci). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 -   rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
 -   rOpenSci packages that contain a short accompanying paper can, after review, be automatically submitted to the [Journal of Open-Source Software](https://joss.theoj.org/) for fast-tracked publication.
+-   If you write one, rOpenSci will **promote gitbooks related to your package**: the source of such books can be transferred to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books) for books to be listed [at books.ropensci.org](https://books.ropensci.org/).
 
 ## Why review packages for rOpenSci? {#whyreview}
 
