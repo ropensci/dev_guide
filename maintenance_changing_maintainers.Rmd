@@ -27,10 +27,10 @@ We have a call for contributors section in our newsletter that comes out every t
 
   It depends; here's what to do in different scenarios:
 
-    - if the old maintainer can be contacted: reach out to them, and ask for help
-    - rOpenSci slack: good for getting help on specific or general problems, the #general room is where many ask questions
-    - rOpenSci discussion forum: this forum is a good option, feel free to ask any questions here
-    - rOpenSci staff: feel free to get in touch with one of us via slack/email/pinging us on GitHub issues, we'll be happy to help
+    - if the old maintainer can be contacted: reach out to them, and ask for help;
+    - rOpenSci slack: good for getting help on specific or general problems, the #general room is where many ask questions;
+    - rOpenSci discussion forum: this forum is a good option, feel free to ask any questions there;
+    - rOpenSci staff: feel free to get in touch with one of us via slack/email/pinging us on GitHub issues, we'll be happy to help;
     - of course there's general R help too if that suits your needs: StackOverflow, Twitter #rstats, etc.
 
 * How much can/should you change in the package?

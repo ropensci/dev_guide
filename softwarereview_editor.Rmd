@@ -4,22 +4,23 @@
 Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
 a system of a rotating Editor-in-Chief (EiC).
 
-This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), and [how to respond to an out-of-scope submission](#outofscoperesponse).
+This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
 
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
 
 ## EiC Responsibilities {#eicchecklist}
 
-The EiC serves for 3 months or a time agreed to by all members of the editorial
-board. The EiC plays the following roles
+The EiC serves for 3 months or a time agreed to by all members of the editorial board. 
+The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
+In details, the EiC plays the following roles
 
 - Watches all issues posted to the software-review repo.
--  Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor rejects due to being too busy or because of conflicting interests.
-- Raises scope/overlap issue with all editors if they see an ambiguous case.  This may also be done by handling editors (see below). To initiate discussion, this is posted to the rOpenSci Slack software review channel, tagging all editors.
- - Responds to pre-submission inquiries and `meta` issues posted to the software-review and software-review-meta repos, similarly pinging channel if discussion is needed. Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
- - Responds to referrals from JOSS or other publication partners.
- - Monitors pace of review process and reminds other editors to move packages along as needed.
+- Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
+- Monitors pace of review process and reminds other editors to move packages along as needed.
+- Responds to issues posted to the software-review-meta repo
+- Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submited/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
+ - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
  
 
 ## Handling Editor's Checklist {#editorchecklist}
@@ -115,20 +116,19 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 -   If authors maintain a gitbook that is at least partly about their 
 package, contact an rOpenSci staff member so they might contact the authors 
 about transfer to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books).
--   Ask authors to add a mention of the review in `DESCRIPTION` via [`rodev::add_ro_desc()`](https://docs.ropensci.org/rodev/reference/add_ro_desc.html).
 -   Ask authors to migrate to `ropensci`
     -   Create a two-person team in rOpenSci's "ropensci" GitHub organization, named for the package, with yourself and the package author as members.
     -   Have the author transfer the repository to `ropensci`
     -   Go to the repository settings in rOpenSci's "ropensci" GitHub organization and give the author "Admin" access to the repository. 
+- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt) to ensure the package gets included in rOpenSci package registry.*
 -   Ask author to:
-    -   Add rOpenSci footer to README `[![ropensci_footer](https://ropensci.org/public_images/ropensci_footer.png)](https://ropensci.org)`
     -   Add a CodeMeta file by running `codemetar::write_codemeta()` ([`codemetar` GitHub repo](https://github.com/ropensci/codemetar))
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
         -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
--   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@stefaniebutland` for follow-up.
+-   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 -   Add a "peer-reviewed" topic to the repo.
 -   Close the software-review issue. 
 
@@ -145,7 +145,6 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 
 ### Package promotion:
 
--  Ask authors to write either a blog post or a tech-notes post for the package, as appropriate, and ping [Stefanie Butland](https://github.com/stefaniebutland), rOpenSci community manager.
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
 -   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
 
@@ -160,3 +159,37 @@ Thank authors for their submission, explain the reasons for the decision, and di
 ## Managing a dev guide release {#bookrelease}
 
 If you are in charge of managing a release of the very book you are reading, use [the book release guidance](#bookreleaseissue) as an issue template to be posted [in the dev guide issue tracker](https://github.com/ropensci/dev_guide/issues), and do not hesitate to ask questions to other editors.
+
+### Dev guide governance {#devguidegov}
+
+For very small amendments to the dev guide, no PR review is needed. For larger amendments, request review from at least a few editors (if none participated in the discussion related to the amendment, request a review from all of them on GitHub, and in the absence of any reaction merge after a week).
+
+Two weeks before a dev guide release, once the PR from dev to master **and the release blog post** are ready for review, all editors should be pinged by GitHub ("review request" on the PR from dev to master) and Slack, but the release doesn't need all of them to explicitely approve the release.
+
+### Blog post about a release {#releaseblogpost}
+
+The blog post about a release will be reviewed [by editors](#devguidegov), and one of `@ropensci/blog-editors`.
+
+#### Content
+
+Refer to the [general rOpenSci blogging guidance](https://blogguide.ropensci.org/), and the more specific guidance below.
+
+[First example of such a post](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [second example](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+
+The blog post should mention all important items from the [changelog](#booknews) organized in (sub)sections: e.g. a section about big change A, another one about big change B, and one about smaller changes lumped together. Mention the most important changes first.
+
+For each change made by an external contributor, thank them explicitely using the information from the changelog. E.g. `[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+
+At the end of the post, mention upcoming changes by linking to open issues in the issue tracker, and invite readers to contribute to the dev guide by opening issues and participating in open discussions. Conclusion template:
+
+```markdown
+In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. 
+We are grateful for all contributions that made this release possible. 
+We are already working on updates for our next version, such as ISSUE1, ISSUE2. 
+Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+```
+
+#### Authorship
+
+The editor writing the post is first author, other editors are listed by alphabetical order.
+

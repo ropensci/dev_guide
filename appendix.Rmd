@@ -2,21 +2,49 @@
 
 # NEWS {#booknews}
 
-## 0.3.0
+## 0.4.0 dev
 
-* 2020-01-22, add mentions of the ropensci-books GitHub organisation and associated subdomain.
+* 2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.
 
-* 2020-01-22, document the use of mathjax with rotemplate (@Bisaloo, #199).
+* 2020-02-10, add field and laboratory reproducibility tools as a category in scope.
 
-* 2020-01-20, add guidance for off-thread interaction and COIs (@noamross, #197).
+* 2020-02-10, add more guidance about secrets and package development in the security chapter.
 
-* 2020-01-20, add advice on specifying dependency minimum versions (@karthik, @annakrystalli, #185).
+* 2020-02-06, add package logo guidance (#217).
+
+* 2020-02-06, add one CRAN gotcha: single quoting software names(#245, [`@aaronwolen`](https://github.com/aaronwolen))
+
+* 2020-02-06, improve guidance regarding the replacement of "older" pkgdown website links and source (#241, [`@cboettig`](https://github.com/cboettig))
+
+* 2020-02-06, rephrase the EiC role (#244).
+
+* 2020-02-06, remove the recommendation to add rOpenSci footer (https://github.com/ropensci/software-review-meta/issues/79).
+
+* 2020-02-06, remove the recommendation to add a review mention to DESCRIPTION but recommends mentioning the package version when reviewers are added as "rev" authors.
+
+* 2020-01-30, slightly changes the advice on documentation re-use: add a con; mention `@includeRmd` and `@example`; correct the location of Rmd fragments (#230).
+
+* 2020-01-30, add more guidance for the editor in charge of a dev guide release (#196, #205).
+
+* 2020-01-22, add guidance in the editor guide about not transferred repositories.
+
+* 2020-01-22, clarify forum guidance (for use cases and in general).
+
+* 2020-01-22, mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.
+
+* 2020-01-22, document the use of mathjax with rotemplate ([`@Bisaloo`](https://github.com/Bisaloo), #199).
+
+* 2020-01-20, add guidance for off-thread interaction and COIs ([`@noamross`](https://github.com/noamross), #197).
+
+* 2020-01-20, add advice on specifying dependency minimum versions ([`@karthik`](https://github.com/karthik), [`@annakrystalli`](https://github.com/annakrystalli), #185).
 
 * 2020-01-09, start using GitHub actions instead of Travis for deployment.
 
 * -2019-12-11, add note in Documentation sub-section of Packaging Guide section about referencing the new R6 support in roxygen2 (ropensci/dev_guide#189)
 
 * 2019-12-11, add new CRAN gotcha about having 'in R' or 'with R' in your package title ([`@bisaloo`](https://github.com/Bisaloo), ropensci/dev_guide#221)
+
+## 0.3.0
 
 * 2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)
 
@@ -119,7 +147,7 @@
 
 # Review template {#reviewtemplate}
 
-```
+```markdown
 ```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
 ```
@@ -133,7 +161,7 @@
 # Editor's template {#editortemplate}
 
 
-```
+```markdown
 ```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
 ```
@@ -146,7 +174,7 @@
 
 Editors may make use of the e-mail template below in recruiting reviewers.
 
-```
+```markdown
 ```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
@@ -158,7 +186,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 # Approval comment template {#approvaltemplate}
 
 
-```
+```markdown
 ```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
@@ -171,7 +199,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 # NEWS template {#newstemplate}
 
 
-```
+```markdown
 ```{r child="templates/news.md"}
 ```
 ```
@@ -180,7 +208,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 # Book release guidance {#bookreleaseissue}
 
 
-```
+```markdown
 ```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
 ```
 ```
@@ -188,3 +216,19 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
 ```
+
+# How to set a redirect {#redirect}
+
+Replace the content of the current website with
+
+```html
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/" />  
+<script language="javascript">
+  window.location.href = "https://docs.ropensci.org/<pkgname>"
+</script>
+</head>
+</html>
+```
+    

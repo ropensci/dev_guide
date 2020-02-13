@@ -136,13 +136,15 @@ can be found at *link*".
 
 * The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
-* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content. In that case, instead of maintaining these separately, we suggest an approach such as [using R Markdown hunks, relying on knitr use of child documents so you can store the re-used parts in a folder in vignettes/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/). 
+* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content. 
+
+* You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
 
 * As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*". Any vignette should outline prerequisite knowledge to be able to understand the vignette upfront.
 
  The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
 
-* Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (i.e. programming/NSE with dplyr).
+* Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (e.g. programming/NSE with dplyr).
 
 * The vignette(s) should include citations to software and papers where appropriate.
 
@@ -154,12 +156,12 @@ can be found at *link*".
 
 * You can choose to have a README section about use cases of your package (other packages, blog posts, etc.), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
-* If you prefer not to clutter up code with extensive documentation, place further documentation/examples in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
+* If you prefer not to clutter up code with extensive documentation, you can place further examples outside of the R script and use the `@example` tag; and you place further documentation in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
     * Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function. 
     * Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
     * In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help: 
-        1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file.
-        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other.
+        1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file. On the other hand, it means the docs are not readable "in-source" since they're in another file.
+        2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other. Using a template file for a parameter documentation is an alternative to defining the parameter for one function and using `@inheritParams` for other functions using the same parameter.
 
 * Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
 
@@ -173,7 +175,9 @@ There are a few elements we'd like to underline here.
 
 You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
 
-Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) or the [`tic` package](https://github.com/ropenscilabs/tic) for automatic deployment of the package's website, see [this example repo](https://github.com/krlmlr/tic.package). This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration/Travis. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
+*If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
+
+Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) or the [`tic` package](https://docs.ropensci.org/tic/) for automatic deployment of the package's website. This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
 
 ### Grouping functions in the reference {#function-grouping}
 
@@ -202,13 +206,18 @@ template:
     mathjax: true
 ```
 
-## Authorship
+### Package logo
+
+To use your package logo in the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use rOpenSci logo instead.
+
+## Authorship {#authorship}
 
 The `DESCRIPTION` file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
 ```
     person("Bea", "Hernández", role = "rev",
-    comment = "Bea reviewed the package for ropensci, see <https://github.com/ropensci/software-review/issues/116>"),
+    comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
 Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5. Make sure you use `roxygen2`'s latest CRAN version.
@@ -320,6 +329,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 * Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this.
 * Avoid starting the description with the package name or "This package ...".
 * Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
+* In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*). 
 * Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
 * Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
 
