@@ -9,40 +9,6 @@ This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklis
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
 
-## EiC Responsibilities {#eicchecklist}
-
-The EiC serves for 3 months or a time agreed to by all members of the editorial board. 
-The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
-In details, the EiC plays the following roles
-
-- Watches all issues posted to the software-review repo.
-- Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
-- Monitors pace of review process and reminds other editors to move packages along as needed.
-- Responds to issues posted to the software-review-meta repo
-- Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submited/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
- - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
- 
-### Inviting a guest editor
-
-After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if all editors have a conflict of interest).
-
-When inviting a guest editor,
-
-- Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
-- Give a link to the [guide for editors](#editorchecklist).
- 
-If the person said yes (yay!),
-
-- Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
-- Give them write access to the software-review repository,
-- Once they've accepted this repo invitation, assign the issue to them,
-- Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
-
-After the review process is finished (package approved, issue closed), 
-
-- Thank the guest editor again,
-- Remove their write access from the software-review repository.
-
 ## Handling Editor's Checklist {#editorchecklist}
 
 ### Upon submission:
@@ -168,6 +134,43 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
 -   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
+
+
+
+
+## EiC Responsibilities {#eicchecklist}
+
+The EiC serves for 3 months or a time agreed to by all members of the editorial board. 
+The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
+In details, the EiC plays the following roles
+
+- Watches all issues posted to the software-review repo.
+- Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
+- Monitors pace of review process and reminds other editors to move packages along as needed.
+- Responds to issues posted to the software-review-meta repo
+- Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submited/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
+ - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+ 
+### Inviting a guest editor
+
+After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if all editors have a conflict of interest).
+
+When inviting a guest editor,
+
+- Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
+- Give a link to the [guide for editors](#editorchecklist).
+ 
+If the person said yes (yay!),
+
+- Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
+- Give them write access to the software-review repository,
+- Once they've accepted this repo invitation, assign the issue to them,
+- Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
+
+After the review process is finished (package approved, issue closed), 
+
+- Thank the guest editor again,
+- Remove their write access from the software-review repository.
 
 
 ## Responding to out-of-scope submissions {#outofscoperesponse}
