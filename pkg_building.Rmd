@@ -257,9 +257,9 @@ Please do not list editors as contributors. Your participation in and contributi
 
 * If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bionconductor release cycle.
     
-    * Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention that the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet. 
+    * Should the user use [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recommended)? Document this.
     
-    * Should the user use [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall)? Document this.
+    * Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention that the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet. 
     
     * If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.
 
