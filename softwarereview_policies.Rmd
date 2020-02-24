@@ -9,7 +9,7 @@ Last but not least, you'll find the code of conduct of rOpenSci Software Peer Re
 ```
 
 
-## Review process
+## Review process {#policiesreviewprocess}
 
 * For a package to be considered for the rOpenSci suite, package authors must initiate a request on the [ropensci/software-review](https://github.com/ropensci/software-review) repository.
 * Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](#building) and [reviewing guide](#reviewerguide) for more details). Unlike a manuscript review, this process will be an ongoing conversation.

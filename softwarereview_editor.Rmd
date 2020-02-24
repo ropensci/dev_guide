@@ -22,6 +22,26 @@ In details, the EiC plays the following roles
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submited/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
  
+### Inviting a guest editor
+
+After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if all editors have a conflict of interest).
+
+When inviting a guest editor,
+
+- Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
+- Give a link to the [guide for editors](#editorchecklist).
+ 
+If the person said yes (yay!),
+
+- Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
+- Give them write access to the software-review repository,
+- Once they've accepted this repo invitation, assign the issue to them,
+- Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
+
+After the review process is finished (package approved, issue closed), 
+
+- Thank the guest editor again,
+- Remove their write access from the software-review repository.
 
 ## Handling Editor's Checklist {#editorchecklist}
 
@@ -37,7 +57,8 @@ In details, the EiC plays the following roles
 -   Run automated tests: `spelling::spell_check_package()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Check that documentation is generated using `roxygen2`, not by hand (this isn't part of automatic tests [yet](https://github.com/MangoTheCat/goodpractice/issues/116)). Report relevant outputs in the issue thread.
 -   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and AppVeyor for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
--   If initial checks show major gaps, request changes before assigning reviewers.
+-   Ideally, the remarks you make should be tackled before reviewers start reviewing.
+-   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label](#policiesreviewprocess).
 -   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
     
 ### Look for and assign reviewers:
