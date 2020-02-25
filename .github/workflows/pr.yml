@@ -1,4 +1,6 @@
 on: pull_request
+   branches-ignore:
+      - dev
 
 name: PR-workflow
 
