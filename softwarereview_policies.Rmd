@@ -169,7 +169,8 @@ Researchers bear responsibility for their use of software, but software
 developers must consider the ethical use of their products, and developers
 themselves adhere to ethical codes for computer professionals such as those
 expressed by [IEEE](https://www.computer.org/education/code-of-ethics) and
-[ACM](https://ethics.acm.org/). rOpenSci contributors often play both roles.
+[ACM](https://ethics.acm.org/). rOpenSci contributors often play both the role
+of both researcher and developer.
 
 We ask that software developers place themselves in researchers' role and
 consider the requirements of an ethical workflow using authors' software.
@@ -186,23 +187,18 @@ Some packages, due to the nature of data they handle, may be determined by edito
 documentation, defaults, and warnings to direct users to relevant ethical
 practices. The following topics may merit enhanced scrutiny:
 
--   *Vulnerable populations*: Authors of packages and workflows that deal with
+-   ***Vulnerable populations***: Authors of packages and workflows that deal with
     information related to vulnerable populations bear responsibility to protect
     them from likely harms.
 
--   *Personally identifiable or sensitive data*: The release of personally
-    identifiable or sensitive data is potentially harmful, and data may be
-    re-identifiable even if anonymized. Packages that access or manage data
-    sources that include personally-identifiable information should include
-    functionality, documentation, and demonstrations of workflows to minimize
-    risk of harm.
-
--   *Informed Consent*: The above issues commonly require researchers to acquire
-    informed consent from persons studied.
-
-Some packages may be deemed to be out of scope if these ethical challenges can not
-be addressed.
-
+-   ***Personally identifiable or sensitive data***: The release of personally
+    identifiable or sensitive data is potentially harmful. This includes "reasonably
+    re-identifiable" data - which a motivated indiviudal could trace back to the
+    owner or creator even if the data are anonymized. This includes both cases where identifiers
+    (e.g., name, date of birth) are available as part of data, and also if unique
+    pseudonyms/screen names are linked with full-text posts, through which one
+    can link back individuals through cross-reference with other data sets.
+    
 While the best response to ethical concerns will be context-specific, these
 general guidelines should be followed by packages where the challenges above arise:
 
@@ -215,19 +211,31 @@ general guidelines should be followed by packages where the challenges above ari
     and Conditions, Privacy Policies, etc., may not provide sufficient bounds on
     ethical usage, they can provide an outer bound.
 
--   Accessible data is not necessarily public, as different persons and context
+-   A key tool in addressing the risks posed in studying vulnerable populations or
+    using personally identifiable data is ***informed consent***.  Package authors
+    should support users' acquisition of informed consent when relevant. This may
+    include providing links to data source's preferred method of acquiring consent,
+    contact information of data providers (e.g. forum moderators), documentation
+    of informed consent protocols, or getting pre-approval for general uses of a
+    package.
+   
+    Note that consent is not implicitly granted just because data are accessible.
+    Accessible data are not necessarily public, as different persons and contexts
     have different normative expectations of privacy (see work by [Social Data
-    Lab](http://socialdatalab.net/ethics-resources)). Package documentation
-    should provide information, such contacts for forum moderators, to determine
-    expectations of privacy and aid in obtaining informed consent.
+    Lab](http://socialdatalab.net/ethics-resources)).
 
 -   Packages accessing personally identifiable information should take special
-    care to follow security best practices (e.g., exclusive use of secure
-    internet protocols, strong mechanisms for storing credentials, etc.).
+    care to follow [security best practices][Package Development Security Best Practices]
+    (e.g., exclusive use of secure internet protocols, strong mechanisms for
+    storing credentials, etc.).
 
 -   Packages that access or handle personally identifiable or sensitive data
     should enable, document, and demonstrate workflows for de-identification,
     secure storage, other best practices to minimize risk of harm.
+
+As standards for data privacy and research continue to evolve, we welcome input
+from authors on considerations specific to their software and supplemental
+documentation such as approval from university ethics review boards.
 
 ### Resources
 
