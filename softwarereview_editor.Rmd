@@ -100,9 +100,6 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 -  You can use the [comment template](#approvaltemplate).
 -   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
--   If authors maintain a gitbook that is at least partly about their 
-package, contact an rOpenSci staff member so they might contact the authors 
-about transfer to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books).
 -   Ask authors to migrate to `ropensci`
     -   Create a two-person team in rOpenSci's "ropensci" GitHub organization, named for the package, with yourself and the package author as members.
     -   Have the author transfer the repository to `ropensci`
