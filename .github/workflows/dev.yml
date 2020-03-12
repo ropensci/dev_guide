@@ -13,26 +13,35 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
+
       - uses: r-lib/actions/setup-r@v1
+
       - uses: r-lib/actions/setup-pandoc@v1
+
       - uses: r-lib/actions/setup-tinytex@v1
+
       - name: Cache R packages
         uses: actions/cache@v1
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ hashFiles('DESCRIPTION') }}
+
       - name: Install dependencies
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
+
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+
       - name: Render book PDF
         run: Rscript -e 'bookdown::render_book("index.Rmd", new_session = FALSE, "bookdown::pdf_book", output_dir = "pdfbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+
       - name: Move files around
         run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
+
       - name: Commit results
         env: # Set the secret as an input
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
