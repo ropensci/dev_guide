@@ -12,6 +12,8 @@
 
 * 2020-02-10, add more guidance about secrets and package development in the security chapter.
 
+* 2020-02-06, add guidance about Bioconductor dependencies (#246).
+
 * 2020-02-06, add package logo guidance (#217).
 
 * 2020-02-06, add one CRAN gotcha: single quoting software names(#245, [`@aaronwolen`](https://github.com/aaronwolen))
