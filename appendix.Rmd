@@ -4,6 +4,8 @@
 
 ## 0.4.0 dev
 
+* 2020-03-12, mention GitHub Actions as a CI provider.
+
 * 2020-02-24, add guide for inviting a guest editor.
 
 * 2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.

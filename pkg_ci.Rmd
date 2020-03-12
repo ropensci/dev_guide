@@ -84,9 +84,13 @@ Here are tips to minimize AppVeyor build time:
 
 We no longer transfer AppVeyor projects to ropensci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
-### Circle CI
+### Circle CI (Linux and Mac OSX)
 
 [Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
+
+### GitHub Actions (Linux, Mac OSX, Windows)
+
+[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/).
 
 ## Test coverage {#coverage}
 
