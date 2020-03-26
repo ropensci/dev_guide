@@ -159,7 +159,7 @@ In the unlikely scenario that a contributor of a package requests removal of the
 
 ## Ethics, Data Privacy and Human Subjects Research
 
-rOpenSci tools are used for a variety of purposes, but our focus is on
+rOpenSci packages and other tools are used for a variety of purposes, but our focus is on
 tools for research. We expect that tools will enable ethical use by research
 practitioners, who are obligated to adhere to ethical codes such [Declaration of
 Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
@@ -235,7 +235,10 @@ general guidelines should be followed by packages where the challenges above ari
 
 As standards for data privacy and research continue to evolve, we welcome input
 from authors on considerations specific to their software and supplemental
-documentation such as approval from university ethics review boards.
+documentation such as approval from university ethics review boards. These
+may be attached to issue threads of package submissions or pre-submission inquiries,
+or conveyed directly to editors if needed. General
+suggestions may be filed as [issues in this book's repository](https://github.com/ropensci/dev_guide/issues).
 
 ### Resources
 
