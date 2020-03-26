@@ -203,7 +203,7 @@ While the best response to ethical concerns will be context-specific, these
 general guidelines should be followed by packages where the challenges above arise:
 
 -   Packages should adhere to data source's terms of use, as expressed in
-    website Terms and Conditions, "robots.txt" files, privacy policies, and
+    website Terms and Conditions, ["robots.txt"](https://docs.ropensci.org/robotstxt/) files, privacy policies, and
     other relevant restrictions, and link to them prominently in package
     documentation. Packages should provide or document functionality to adhere
     to such restrictions (e.g., scrape from only allowed endpoints, use
