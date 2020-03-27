@@ -50,7 +50,6 @@ Due date: YYYY-MM-DD
 ```
 
 -   Switch numbered tag `to 3/reviewers-assigned` once reviewers are assigned.
--   Invite authors and reviewers to rOpenSci Slack if they aren't on this Slack already.
 -   Update Airtable database: Add one of the review record numbers associated with the package to the `Reviews` field of each reviewer's record. Insert new `Reviewers` record if required.  
 
 #### How to look for reviewers

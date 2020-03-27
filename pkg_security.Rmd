@@ -22,7 +22,7 @@ Say your package needs an API key for making requests on behalf of users of your
 
     * Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
     
-    * You could depend on packages such as [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme): i.e. you'd create a function for setting the key, and have another one for retrieving the key.
+    * Or your package could depend on, or encourage the use of, [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme) in the specific OS' credential stores (more secure than .Renviron): i.e. you'd create a function for setting the key, and have another one for retrieving the key; or the user would write `Sys.setenv(SUPERSECRETKEY = keyring::key_get("myservice"))` at the beginning of their script.
     
     * Do not print the API key even in verbose mode in any message, warning, error.
 

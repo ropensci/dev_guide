@@ -6,6 +6,8 @@
 
 * 2020-03-10, add section on Ethics, Data Privacy and Human Subjects Research to Policies chapter
 
+* 2020-03-12, mention GitHub Actions as a CI provider.
+
 * 2020-02-24, add guide for inviting a guest editor.
 
 * 2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.
@@ -13,6 +15,8 @@
 * 2020-02-10, add field and laboratory reproducibility tools as a category in scope.
 
 * 2020-02-10, add more guidance about secrets and package development in the security chapter.
+
+* 2020-02-06, add guidance about Bioconductor dependencies (#246).
 
 * 2020-02-06, add package logo guidance (#217).
 
