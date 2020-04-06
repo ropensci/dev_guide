@@ -12,7 +12,17 @@ This chapter contains our guidance for collaboration, in a [section about making
 
 ### Code of conduct
 
-We require that you use a code of conduct such as the [Contributor Covenant](https://contributor-covenant.org/) in developing your package.  You should document your code of conduct in a `CODE_OF_CONDUCT.md` file in the package root directory, and link to this file from the `README.md` file.  `usethis::use_code_of_conduct()` will add the Contributor Covenant template to your package. Use `usethis` > 1.3.1.
+After transfer to our GitHub organization, [rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/) will apply to your project.
+Please add this text to the README
+
+```markdown
+Please note that this package is released with a [Contributor
+Code of Conduct](https://ropensci.org/code-of-conduct/). 
+By
+contributing to this project, you agree to abide by its terms.
+```
+
+And delete the package current code of conduct if there was one.
 
 ### Contributing guide
 
