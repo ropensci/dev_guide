@@ -4,7 +4,7 @@
 
 ## 0.4.0 dev
 
-* 2020-04-02, give less confusing code of conduct guidance: the reviewed packages' COC is rOpenSci COC (@Bisaloo, @cboettig, #240)
+* 2020-04-02, give less confusing code of conduct guidance: the reviewed packages' COC is rOpenSci COC (`@Bisaloo`, `@cboettig`, #240)
 
 * 2020-03-27, add section on Ethics, Data Privacy and Human Subjects Research to Policies chapter
 
