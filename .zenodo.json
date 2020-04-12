@@ -1,6 +1,6 @@
 {
     "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
-    "license": "creative-commons-attribution-4.0-international",
+    "license": "other-open",
     "title": "ropensci/dev_guide: Fourth release",
     "version": "0.4.0",
     "upload_type": "software",
