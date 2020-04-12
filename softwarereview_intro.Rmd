@@ -23,6 +23,7 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and [social media](https://twitter.com/ropensci). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 -   rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
 -   rOpenSci packages that contain a short accompanying paper can, after review, be automatically submitted to the [Journal of Open-Source Software](https://joss.theoj.org/) for fast-tracked publication.
+-   If you write one, rOpenSci will **promote gitbooks related to your package**: the source of such books can be transferred to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books) for books to be listed [at books.ropensci.org](https://books.ropensci.org/).
 
 ## Why review packages for rOpenSci? {#whyreview}
 
@@ -39,6 +40,13 @@ Our reviewing threads are public. Authors, reviewers, and editors all know each 
 We are aware that open systems can have drawbacks. For instance, in traditional academic review, [double-blind peer review can increase representation of female authors](https://www.sciencedirect.com/science/article/pii/S0169534707002704), suggesting bias in non-blind reviews. It is also possible reviewers are less critical in open review. However, we posit that the openness of the review conversation provides a check on review quality and bias; it’s harder to inject unsupported or subjective comments in public and without the cover of anonymity. Ultimately, we believe that having direct and public communication between authors and reviewers improves quality and fairness of reviews.
 
 Furthermore, authors and reviewers have the ability to contact privately the editors if they have any doubt or question.
+
+## How will users know a package has been reviewed?
+
+* Your package README will feature a peer-review badge linking to the software review thread.
+* Your package will get a [`docs.ropensci.org` docs website](#rodocsci) that you can link from DESCRIPTION.
+* Your package repo will be transferred to the rOpenSci organization.
+* If reviewers [agree to be listed in DESCRIPTION](#authorship), their metadata will mention the review.
 
 
 ## Editors and reviewers
@@ -62,7 +70,11 @@ rOpenSci's Software Peer Review process is run by:
 We are grateful to the following individuals who have offered up their time and expertise to review packages submitted to rOpenSci.
 
 ```{r reviewers, echo=FALSE, results='asis'}
-editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson", "Melina Vidoni")
+if (Sys.getenv("AIRTABLE_API_KEY") == ""){
+  Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
+}
+editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson",
+    "Melina Vidoni", "Lincoln Mullen", "Anna Krystalli")
 reviewers <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
                                 table = "Reviewers")
 reviewers <- reviewers$Reviewers$select_all()
@@ -73,4 +85,17 @@ reviewers <- reviewers[purrr::map_lgl(reviewers$Reviews,
 last_names <- humaniformat::last_name(trimws(reviewers$name))
 reviewers <- reviewers[order(last_names), ]
 cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
+```
+
+We are also grateful to the following individuals who have served as guest editors.
+
+```{r guesteditors, echo=FALSE, results='asis'}
+guest_editors <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
+                                table = "guest-editors")
+guest_editors <- guest_editors$`guest-editors`$select_all()
+guest_editors <- guest_editors[!(guest_editors$name %in% c(editors, "???")), ]
+# get last names
+last_names <- humaniformat::last_name(trimws(guest_editors$name))
+guest_editors <- guest_editors[order(last_names), ]
+cat(paste0("[", guest_editors$name, "](https://github.com/", guest_editors$github, ")", collapse = " \U00B7 "))
 ```

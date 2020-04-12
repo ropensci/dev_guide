@@ -36,3 +36,5 @@ This book was started using [Sean Kross](https://github.com/seankross)' [minimal
 All of the content of this repository is licensed 
 [CC-BY-SA](https://creativecommons.org/publicdomain/zero/1.0/).
 
+You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.5281/zenodo.2553043).
+

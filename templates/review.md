@@ -2,7 +2,8 @@
 
 *Please check off boxes as applicable, and elaborate in comments below.  Your review is not limited to these topics, as described in the reviewer guide*
 
-- [ ] As the reviewer I confirm that there are no [conflicts of interest](#coi) for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
+- **Briefly describe any working relationship you have (had) with the package authors.**
+- [ ] As the reviewer I confirm that there are no [conflicts of interest](https://devguide.ropensci.org/policies.html#coi) for me to review this work (If you are unsure whether you are in conflict, please speak to your editor _before_ starting your review).
 
 #### Documentation
 
@@ -17,9 +18,9 @@ The package includes all the following forms of documentation:
 
 >##### For packages co-submitting to JOSS
 >
->- [ ] The package has an **obvious research application** according to [JOSS's definition](http://joss.theoj.org/about#submission_requirements)
+>- [ ] The package has an **obvious research application** according to [JOSS's definition](https://joss.theoj.org/about#submission_requirements)
 >
->The package contains a `paper.md` matching [JOSS's requirements](http://joss.theoj.org/about#paper_structure) with:
+>The package contains a `paper.md` matching [JOSS's requirements](https://joss.theoj.org/about#paper_structure) with:
 >
 >- [ ] **A short summary** describing the high-level functionality of the software
 >- [ ] **Authors:**  A list of authors with their affiliations

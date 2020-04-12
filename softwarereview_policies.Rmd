@@ -9,7 +9,7 @@ Last but not least, you'll find the code of conduct of rOpenSci Software Peer Re
 ```
 
 
-## Review process
+## Review process {#policiesreviewprocess}
 
 * For a package to be considered for the rOpenSci suite, package authors must initiate a request on the [ropensci/software-review](https://github.com/ropensci/software-review) repository.
 * Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](#building) and [reviewing guide](#reviewerguide) for more details). Unlike a manuscript review, this process will be an ongoing conversation.
@@ -73,13 +73,15 @@ knitr::include_graphics("images/status.png")
 
 * __data validation and testing__: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
 
-* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
+* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
 
 * __version control__: Tools that facilitate the use of version control in scientific workflows.  Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category.  (Example: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
 
 * __citation management and bibliometrics__: Tools that facilitate managing references, such as for writing manuscripts, creating CVs or otherwise attributing scientific contributions, or accessing, manipulating or otherwise working with bibliometric data. (Example: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
 
 * __scientific software wrappers__: Packages that wrap non-R utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple `system()` call or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex.  This does not include wrappers of other R packages or C/C++ libraries that can be included in R packages. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
+
+* __field and laboratory reproducibility tools__: Packages that improve reproducibility of real-world workflows through standardization and automation of field and lab protocols, such as sample tracking and tagging, form and data sheet generation, interfacing with laboratory equipment or information systems, and executing experimental designs. (Example: [**baRcodeR**](https://github.com/ropensci/software-review/issues/336))
 
 * __database software bindings__: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
 
@@ -154,6 +156,131 @@ Despite our best efforts to support contributed software, errors are the respons
 ### Package removal
 
 In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes.
+
+## Ethics, Data Privacy and Human Subjects Research
+
+rOpenSci packages and other tools are used for a variety of purposes, but our focus is on
+tools for research. We expect that tools will enable ethical use by research
+practitioners, who are obligated to adhere to ethical codes such [Declaration of
+Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
+and [The Belmont
+Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
+Researchers bear responsibility for their use of software, but software
+developers must consider the ethical use of their products, and developers
+themselves adhere to ethical codes for computer professionals such as those
+expressed by [IEEE](https://www.computer.org/education/code-of-ethics) and
+[ACM](https://ethics.acm.org/). rOpenSci contributors often play both the role
+of both researcher and developer.
+
+We ask that software developers place themselves in researchers' role and
+consider the requirements of an ethical workflow using authors' software.
+Given the variation and degree of flux of ethical approaches for Internet-based
+analyses, judgement calls rather than recipes are required. The [Ethical
+Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/)
+provides a robust framework and we encourage authors, editors, and reviewers to use
+this in evaluating their work. In general, adherence to legal or regulatory
+minimum requirements may not be sufficient, though these (e.g.,
+[GPDR](https://ico-gdpr.com/)), may be relevant. Package authors should direct
+users to relevant resources for the ethical use of the software.
+
+Some packages, due to the nature of data they handle, may be determined by editors to require enhanced scrutiny. For these, editors may require additional (or reduced) functionality, and robust
+documentation, defaults, and warnings to direct users to relevant ethical
+practices. The following topics may merit enhanced scrutiny:
+
+-   ***Vulnerable populations***: Authors of packages and workflows that deal with
+    information related to vulnerable populations bear responsibility to protect
+    them from likely harms.
+
+-   ***Personally identifiable or sensitive data***: The release of personally
+    identifiable or sensitive data is potentially harmful. This includes "reasonably
+    re-identifiable" data - which a motivated indiviudal could trace back to the
+    owner or creator even if the data are anonymized. This includes both cases where identifiers
+    (e.g., name, date of birth) are available as part of data, and also if unique
+    pseudonyms/screen names are linked with full-text posts, through which one
+    can link back individuals through cross-reference with other data sets.
+    
+While the best response to ethical concerns will be context-specific, these
+general guidelines should be followed by packages where the challenges above arise:
+
+-   Packages should adhere to data source's terms of use, as expressed in
+    website Terms and Conditions, ["robots.txt"](https://docs.ropensci.org/robotstxt/) files, privacy policies, and
+    other relevant restrictions, and link to them prominently in package
+    documentation. Packages should provide or document functionality to adhere
+    to such restrictions (e.g., scrape from only allowed endpoints, use
+    appropriate rate limiting in code, examples, or vignettes). Note that while Terms
+    and Conditions, Privacy Policies, etc., may not provide sufficient bounds on
+    ethical usage, they can provide an outer bound.
+
+-   A key tool in addressing the risks posed in studying vulnerable populations or
+    using personally identifiable data is ***informed consent***.  Package authors
+    should support users' acquisition of informed consent when relevant. This may
+    include providing links to data source's preferred method of acquiring consent,
+    contact information of data providers (e.g. forum moderators), documentation
+    of informed consent protocols, or getting pre-approval for general uses of a
+    package.
+   
+    Note that consent is not implicitly granted just because data are accessible.
+    Accessible data are not necessarily public, as different persons and contexts
+    have different normative expectations of privacy (see work by [Social Data
+    Lab](http://socialdatalab.net/ethics-resources)).
+
+-   Packages accessing personally identifiable information should take special
+    care to follow [security best practices][Package Development Security Best Practices]
+    (e.g., exclusive use of secure internet protocols, strong mechanisms for
+    storing credentials, etc.).
+
+-   Packages that access or handle personally identifiable or sensitive data
+    should enable, document, and demonstrate workflows for de-identification,
+    secure storage, other best practices to minimize risk of harm.
+
+As standards for data privacy and research continue to evolve, we welcome input
+from authors on considerations specific to their software and supplemental
+documentation such as approval from university ethics review boards. These
+may be attached to issue threads of package submissions or pre-submission inquiries,
+or conveyed directly to editors if needed. General
+suggestions may be filed as [issues in this book's repository](https://github.com/ropensci/dev_guide/issues).
+
+### Resources
+
+The following resources may be helpful for researchers, package authors, editors
+and reviewers in addressing ethical questions related to privacy and research software.
+
+-   The [Declaration of
+    Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
+    and [The Belmont
+    Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
+    provide fundamental principles for ethical practice by researchers.
+-   Several organizations provide guidance on how to translate these principles
+    into the the context of internet research. These include the [Ethical
+    Guidelines of The Association of Internet
+    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet Research
+    Ethics](https://www.etikkom.no/en/ethical-guidelines-for-research/ethical-guidelines-for-internet-research/),
+    and [BPS' Ethics Guidelines for Internet-Mediated
+    Research](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
+    [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) provide a
+    helpful overview of these.
+-   The Social Media Lab provides a [high-level
+    overview](http://socialdatalab.net/ethics-resources) with data on normative
+    expectations of privacy and use on social forums.
+-   Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
+    Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
+    Integrity. <https://doi.org/10.1007/978-3-319-76040-7_18-1>
+-   Lomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social
+    Media. The Information Society, 30(4), 256--265. 
+    <https://dx.doi.org/10.1080/01972243.2014.915276>
+-   Flick, C. (2016). Informed consent and the Facebook emotional manipulation
+    study. *Research Ethics*, *12*(1), 14--28.
+    <https://doi.org/10.1177/1747016115599568>
+-   Sugiura, L., Wiles, R., & Pope, C. (2017). Ethical challenges in online
+    research: Public/private perceptions. *Research Ethics*, *13*(3--4),
+    184--199. <https://doi.org/10.1177/1747016116650720>
+-   Taylor, J., & Pagliari, C. (2018). Mining social media data: How are
+    research sponsors and researchers addressing the ethical challenges?
+    Research Ethics, 14(2), 1--39. <https://doi.org/10.1177/1747016117738559>
+-   Zimmer, M. (2010). "But the data is already public": on the ethics of
+    research in Facebook. Ethics and Information Technology, 12(4), 313--325.
+    <https://dx.doi.org/10.1007/s10676-010-9227-5>
+
 
 ## Code of Conduct {#code-of-conduct}
 

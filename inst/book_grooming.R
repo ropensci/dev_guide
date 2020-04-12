@@ -1,38 +1,44 @@
 # find all URLs
-# https://stackoverflow.com/questions/26496538/extract-urls-with-regex-into-a-new-data-frame-column
+library("magrittr")
 
 Rmds <- fs::dir_ls(getwd(), regexp =" *.Rmd")
 
-find_urls <- function(Rmd){
-  content <- readLines(Rmd)
+find_urls <- function(filepath){
+  readLines(filepath) %>%
+    glue::glue_collapse(sep = "\n") %>%
+    commonmark::markdown_html(normalize = TRUE,
+                              extensions = TRUE) %>%
+    xml2::read_html() %>%
+    xml2::xml_find_all("//a") %>%
+    xml2::xml_attr("href") -> urls
 
-  url_pattern <- "http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+  urls <- urls[!grepl("^\\#", urls)]
 
-  urls <- unlist(stringr::str_extract_all(content, url_pattern))
-
-  urls <- stringr::str_replace_all(urls, "\\.$", "")
-  urls <- stringr::str_replace_all(urls, "\\,$", "")
-  urls <- stringr::str_replace_all(urls, "\\:$", "")
-  urls <- stringr::str_replace_all(urls, "\\?$", "")
-  urls <- stringr::str_replace_all(urls, "\\]$", "")
-  urls <- stringr::str_replace_all(urls, "\\)$", "")
-  urls <- stringr::str_replace_all(urls, "\\)$", "")
-  urls <- stringr::str_replace_all(urls, "\\>$", "")
-  urls <- stringr::str_replace_all(urls, "\\).*", "")
-
-  if(length(urls) > 1){
-    tibble::tibble(url = urls, Rmd = Rmd)
-  }else{
-    NULL
-  }
+  tibble::tibble(filepath = filepath,
+                 url = urls)
 }
 
-ok <- function(url){
-  resp <- httr::GET(url)
-  httr::status_code(resp) == 200
+.ok <- function(url) {
+  message(url)
+  crul::ok(
+    url,
+    verb = "get",
+    useragent = "Maëlle Salmon"
+    )
 }
+
+ok <- memoise::memoise(
+  ratelimitr::limit_rate(
+    .ok,
+    ratelimitr::rate(1, 1)
+  )
+)
 
 all_urls <- purrr::map_df(Rmds, find_urls)
 all_urls <- all_urls[!grepl("<issue_id>", all_urls$url),]
-all_urls$ok <- purrr::map_lgl(all_urls$url, ok)
+all_urls$ok <- purrr::map_lgl(
+  all_urls$url,
+  ok
+  )
+
 View(all_urls[!all_urls$ok,])

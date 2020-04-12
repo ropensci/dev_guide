@@ -60,6 +60,8 @@ Details of how to run tests/checks using different versions of R locally can be 
 
 You can fine tune the deployment of tests with each versions by using a testing matrix. See this [more complex example](https://github.com/r-hub/rhub/blob/master/.travis.yml#L5) of a Travis configuration where pkgdown documentation is built during the release R version testing only.
 
+For a package depending on Bioconductor packages, or a Bioconductor package, [Travis options allow to test on either Bioconductor release or devel (or both)](https://docs.travis-ci.com/user/languages/r/#bioconductor).
+
 #### Minimizing build times on Travis
 
 Please use these tips to minimize build time on Travis especially after your package project gets transferred to ropensci Travis account:
@@ -82,9 +84,13 @@ Here are tips to minimize AppVeyor build time:
 
 We no longer transfer AppVeyor projects to ropensci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
-### Circle CI
+### Circle CI (Linux and Mac OSX)
 
 [Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
+
+### GitHub Actions (Linux, Mac OSX, Windows)
+
+[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/).
 
 ## Test coverage {#coverage}
 
@@ -97,6 +103,6 @@ If you run coverage on several CI services [the results will be merged](https://
 
 After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
 
-## Even more CI: rOpenSci docs
+## Even more CI: rOpenSci docs {#rodocsci}
 
 After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.

@@ -10,5 +10,4 @@ Imports:
   humaniformat
 Remotes: 
   bergant/airtabler,
-  rstudio/htmltools,
-  rstudio/bookdown
+  rstudio/htmltools

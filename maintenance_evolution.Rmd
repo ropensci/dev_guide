@@ -14,7 +14,7 @@ Everyone's free to have their own opinion about how freely parameters/functions/
 
 Sometimes parameter names must be changed for clarity, or some other reason. 
 
-A possible approach is check if deprecated arguments are not missing, and stop a meaningful message.
+A possible approach is check if deprecated arguments are not missing, and stop providing a meaningful message.
 
 ```r
 foo_bar <- function(x, y) {
