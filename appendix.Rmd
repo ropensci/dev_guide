@@ -2,7 +2,9 @@
 
 # NEWS {#booknews}
 
-## 0.4.0 dev
+## dev
+
+## 0.4.0
 
 * 2020-04-02, give less confusing code of conduct guidance: the reviewed packages' COC is rOpenSci COC (`@Bisaloo`, `@cboettig`, #240)
 

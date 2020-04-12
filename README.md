@@ -2,7 +2,7 @@ rOpenSci Packages: Development, Maintenance, and Peer Review
 =============================================================
 
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
-[![Build Status](https://travis-ci.org/ropensci/dev_guide.svg?branch=master)](https://travis-ci.org/ropensci/dev_guide)
+[![GitHub Actions Workflow for commits to master](https://github.com/ropensci/dev_guide/workflows/Render-Book-from-master/badge.svg)](https://github.com/ropensci/dev_guide/actions?query=workflow%3ARender-Book-from-master)
 [![DOI](https://zenodo.org/badge/126815002.svg)](https://zenodo.org/badge/latestdoi/126815002)
 
 rOpenSci's guide for packages in our suite. [Read it here](https://devguide.ropensci.org/).
@@ -15,13 +15,13 @@ This book contains our guidelines for packages contributed to [the rOpenSci suit
 
 ### Technical details
 
-Deployment is done via Travis CI using the rOpenSci [`tic`](https://github.com/ropenscilabs/tic) and [`travis`](https://github.com/ropenscilabs/travis) packages: 
+Deployment is done via GitHub Actions: 
 
-* whenever there's a push to `master`, the book is built on Travis to a `_book` folder whose content is then pushed from Travis to the `gh-pages` branch.
+* whenever there's a push to `master`, the book is built and its content is then pushed from Travis to the `gh-pages` branch.
 
-* whenever there's a push to `dev`, the book is built on Travis to a `_book` folder whose content is then pushed from Travis to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
+* whenever there's a push to `dev`, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
 
-We copied this [setup from Data Carpentry](https://github.com/datacarpentry/R-ecology-lesson/).
+Refer to [this blog post for more details and resources about bookdown deployment on GitHub Actions](https://ropensci.org/blog/2020/04/07/bookdown-learnings/#5-how-to-deploy-a-preview-of-the-book-for-pull-requests).
 
 ### Notes for associate editors
 
