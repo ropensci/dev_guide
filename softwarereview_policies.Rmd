@@ -180,7 +180,7 @@ Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/)
 provides a robust framework and we encourage authors, editors, and reviewers to use
 this in evaluating their work. In general, adherence to legal or regulatory
 minimum requirements may not be sufficient, though these (e.g.,
-[GPDR](https://ico-gdpr.com/)), may be relevant. Package authors should direct
+[GDPR](https://ico-gdpr.com/)), may be relevant. Package authors should direct
 users to relevant resources for the ethical use of the software.
 
 Some packages, due to the nature of data they handle, may be determined by editors to require enhanced scrutiny. For these, editors may require additional (or reduced) functionality, and robust
@@ -193,7 +193,7 @@ practices. The following topics may merit enhanced scrutiny:
 
 -   ***Personally identifiable or sensitive data***: The release of personally
     identifiable or sensitive data is potentially harmful. This includes "reasonably
-    re-identifiable" data - which a motivated indiviudal could trace back to the
+    re-identifiable" data - which a motivated individual could trace back to the
     owner or creator even if the data are anonymized. This includes both cases where identifiers
     (e.g., name, date of birth) are available as part of data, and also if unique
     pseudonyms/screen names are linked with full-text posts, through which one
