@@ -33,6 +33,11 @@ jobs:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
       - name: Move files around
         run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
+      
+      - name: git config
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "gh-pages committer"
       - name: Commit results
         env: # Set the secret as an input
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
