@@ -43,14 +43,14 @@ packages, but are not necessarily peer reviewed. Many are infrastructure
 packages that fall out of scope for peer review.
 
 -   Staff-maintained packages will be listed in the registry with tag
-    "staff" and listed on rOpenSci\'s packages web page or similar
+    "staff" and listed on rOpenSci's packages web page or similar
     venues with tag "staff"
 
 -   These packages will be stored in the "ropensci" GitHub
     organization
 
--   Staff-maintained packages will be checked via rOpenSci\'s custom CI
-    system to test that they build and test successfully across
+-   Staff-maintained packages will be checked via rOpenSci's [custom CI
+    system](https://status.ropensci.org/) to test that they build and test successfully across
     systems and that their documentation build correctly.
 
 -   When the packages fail checks, rOpenSci staff will endeavour to fix
@@ -82,15 +82,15 @@ community and have passed through peer review. They need to be
 at the time of submission to be reviewed.
 
 -   Upon acceptance, these peer-reviewed packages are transferred from
-    the author\'s GitHub to the "ropensci" GitHub organization
+    the author's GitHub to the "ropensci" GitHub organization
 
 -   Peer-reviewed packages will be in the registry tagged as
     "peer-reviewed" and have a peer-reviewed badge in their README.
 
--   Peer-reviewed packages will be listed on rOpenSci\'s web page or
+-   Peer-reviewed packages will be listed on rOpenSci's web page or
     similar venues with tag "peer-reviewed"
 
--   Peer-reviewed packages will be checked via rOpenSci\'s CI that they
+-   Peer-reviewed packages will be checked via rOpenSci's CI that they
     build and test successfully across systems and that their docs
     build correctly.
 
@@ -103,7 +103,7 @@ at the time of submission to be reviewed.
     failing state or have been failing for extended periods, and
     contact the authors to determine ongoing maintenance status and
     expected updates. Based on this exchange, rOpenSci may opt to
-    retain the package\'s current status with the expectation of an
+    retain the package's current status with the expectation of an
     updates, contribute support or seek a new maintainer, or transfer
     the package to "archived" status.
 
@@ -114,7 +114,7 @@ at the time of submission to be reviewed.
     will also provide support to package authors on request, both by
     staff and community volunteers, based on time available. We
 
--   At the author\'s request, or if authors are unresponsive to
+-   At the author's request, or if authors are unresponsive to
     inquiries for approximately a month, rOpenSci may seek a new
     maintainer for select peer-reviewed packages it deems have high
     community value based on user base/downloads, reverse
@@ -132,7 +132,7 @@ at the time of submission to be reviewed.
     "show archived packages" will display these with an "archived"
     tag.
 
--   Archived packages may be un-archived at authors\' request if authors
+-   Archived packages may be un-archived at authors' request if authors
     opt to resume maintenance.
 
 ## Legacy acquired packages
