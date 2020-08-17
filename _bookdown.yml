@@ -11,6 +11,7 @@ rmd_files: ["index.Rmd", "pkg_building.Rmd",
            "maintenance_changing_maintainers.Rmd","maintenance_releases.Rmd",
            "maintenance_marketing.Rmd", "maintenance_github_grooming.Rmd",
            "maintenance_evolution.Rmd",
+           "maintenance_curation.Rmd",
            "maintenance_contributing.Rmd", "appendix.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 
