@@ -58,7 +58,7 @@ packages that fall out of scope for peer review.
     reverse dependencies, or strategic goals.
 
 -   On a biannual or annual basis, rOpenSci will review all packages
-    that have been failing for over a month to determine whether to transfer them to "archived" status.
+    that have been failing for over a month to determine whether to transfer them to the ["ropensci-archive" GitHub organization](https://github.com/ropensci-archive).
 
 -   Packages consistently failing and without an ongoing plan to return
     to active maintenance will move to "archive" status. When
