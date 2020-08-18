@@ -97,7 +97,7 @@ at the time of submission to be reviewed.
 -   When packages fail on CI, rOpenSci's build system will notify the
     authors automatically. If on CRAN, it will also notify them of
     additional issues raised, opting peer-reviewed package authors in
-    to this service by default (see [issue](https://github.com/ropenscilabs/cchecksapi/issues/13)).
+    to this service by default (see [issue](https://github.com/ropenscilabs/cchecksapi/issues/72)).
 
 -   Annually or bi-annually, rOpenSci staff will review packages in a
     failing state or have been failing for extended periods, and
