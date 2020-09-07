@@ -6,7 +6,7 @@ To-dos:
 - [ ] If you already had a `pkgdown` website **and are ok relying only on [rOpenSci central docs building and branding](https://devguide.ropensci.org/ci.html#even-more-ci-ropensci-docs)**,
     * deactivate the automatic deployment you might have set up
     * remove styling tweaks from your pkgdown config but keep that config file
-    * replace the whole current `pkgdown` website with a [redirecting page](https://devguide.ropensci.org/#redirect)
+    * replace the whole current `pkgdown` website with a [redirecting page](https://devguide.ropensci.org/redirect.html)
     * replace your package docs URL with `https://docs.ropensci.org/package_name`
     * In addition, in your DESCRIPTION file, include the docs link in the `URL` field alongside the link to the GitHub repository, e.g.: `URL: https://docs.ropensci.org/foobar (website) https://github.com/ropensci/foobar`
 - [ ] Fix any links in badges for CI and coverage to point to the ropensci URL. We no longer transfer Appveyor projects to ropensci Appveyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge should be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
