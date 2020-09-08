@@ -160,11 +160,11 @@
 # Review template {#reviewtemplate}
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
 
 ```
 
@@ -174,11 +174,11 @@
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
 
 ```
 
@@ -187,11 +187,11 @@
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/request.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/request.md"}
 
 ```
 
@@ -199,11 +199,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/approved.md"}
 
 ```
 
@@ -212,7 +212,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r child="templates/news.md"}
+```{r, child="templates/news.md"}
 ```
 ```
 
@@ -221,11 +221,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/book-release.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
 ```
 
