@@ -3,7 +3,7 @@ Approved! Thanks <author(s) GitHub username(s)> for submitting and <reviewers' G
 To-dos:
 - [ ] Transfer the repo to rOpenSci's "ropensci" GitHub organization under "Settings" in your repo.  I have invited you to a team that should allow you to do so.  You'll be made admin once you do.
 - [ ] Fix all links to the GitHub repo to point to the repo under the ropensci organization.
-- [ ] If you already had a `pkgdown` website **and are ok relying only on [rOpenSci central docs building and branding](https://devguide.ropensci.org/ci.html#even-more-ci-ropensci-docs)**,
+- [ ] If you already had a `pkgdown` website **and are ok relying only on [rOpenSci central docs building and branding](https://devguide.ropensci.org/redirect.html)**,
     * deactivate the automatic deployment you might have set up
     * remove styling tweaks from your pkgdown config but keep that config file
     * replace the whole current `pkgdown` website with a [redirecting page](https://devguide.ropensci.org/#redirect)
