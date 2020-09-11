@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2020-09-11, improve the redirect guidance (@jeroen, @mcguinlu, #269)
+
 ## 0.4.0
 
 * 2020-04-02, give less confusing code of conduct guidance: the reviewed packages' COC is rOpenSci COC (`@Bisaloo`, `@cboettig`, #240)
@@ -231,6 +233,8 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 # How to set a redirect {#redirect}
 
+## Non GitHub pages site (e.g. Netlify)
+
 Replace the content of the current website with
 
 ```html
@@ -244,3 +248,11 @@ Replace the content of the current website with
 </html>
 ```
     
+## GitHub pages
+
+You can setup the redirect from your main user gh-pages repository:
+
+ - create a new repository (if you don't have one yet): `https://github.com/<username>/<username>.github.io`
+ - In this repository create a directory `<pkgname>` containing the file `index.html` that redirects to the new location (see previous subsection)
+ - Test that https://<username>.github.io/<pkgname>/index.html now redirects
+ - Optional: you could even create a `404.html` file in your `<username>.github.io` repo to redirect arbitrary pages, like here: https://github.com/ropensci/ropensci.github.io.
