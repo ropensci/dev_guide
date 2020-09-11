@@ -112,7 +112,7 @@ at the time of submission to be reviewed.
     packages via PRs reviewed by package authors, or direct changes
     (if authors are unresponsive for approximately a month). rOpenSci
     will also provide support to package authors on request, both by
-    staff and community volunteers, based on time available. We
+    staff and community volunteers, based on time available.
 
 -   At the author's request, or if authors are unresponsive to
     inquiries for approximately a month, rOpenSci may seek a new
