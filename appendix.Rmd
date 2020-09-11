@@ -213,6 +213,17 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```
 
+# Reviewer approval comment template {#approval2template}
+
+
+```markdown
+```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```
+```
+
+```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+
+```
 
 # NEWS template {#newstemplate}
 

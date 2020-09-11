@@ -90,3 +90,5 @@ We encourage you to ask questions and provide feedback on the review process on 
 ## Review follow-up {#followupreviewer}
 
 Authors should respond within 2 weeks with their changes to the package in response to your review.  At this stage, we ask that you respond as to whether the changes sufficiently address any issues raised in your review. We encourage ongoing discussion between package authors and reviewers, and you may ask editors to clarify issues in the review thread as well.
+
+You'll use the [approval template](#approval2template).
