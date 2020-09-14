@@ -4,11 +4,11 @@
 
 ## dev
 
-* 2020-09-14, add more guidance on describing data source in DESCRIPTION (@mpadge, #260)
+* 2020-09-14, add more guidance on describing data source in DESCRIPTION (`@mpadge`, #260)
 
-* 2020-09-11, update the CI guidance (@bisaloo, @mcguinlu, #269)
+* 2020-09-11, update the CI guidance (`@bisaloo`, `@mcguinlu`, #269)
 
-* 2020-09-11, improve the redirect guidance (@jeroen, @mcguinlu, #269)
+* 2020-09-11, improve the redirect guidance (`@jeroen`, `@mcguinlu`, #269)
 
 ## 0.4.0
 
