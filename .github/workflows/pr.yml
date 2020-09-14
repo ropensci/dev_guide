@@ -52,25 +52,17 @@ jobs:
       - name: Deploy to Netlify (test)
         if: env.fork == 'false'
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=_book --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
-
-      - name: Create check
+      - name: Update commit status
         if: env.fork == 'false'
         run: |
           curl --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/check-runs \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.pull_request.head.sha }} \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'Accept: application/vnd.github.antiope-preview+json' \
           --header 'content-type: application/json' \
           --data '{
-            "name": "Preview Book",
-            "external_id": "42",
-            "head_sha": "${{ github.event.pull_request.head.sha }}",
-            "conclusion": "success",
-            "html_url": "${{ env.DEPLOY_URL }}",
-            "details_url": "${{ env.DEPLOY_URL }}",
-            "output": {
-                "title": "Preview link",
-                "summary": "[Preview link](${{ env.DEPLOY_URL }}) :rocket:"
-            }
+            "state": "success",
+            "target_url": "${{ env.DEPLOY_URL }}",
+            "context": "Netlify"
             }'
 
