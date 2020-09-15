@@ -140,7 +140,7 @@ can be found at *link*".
 
 * The vignette(s) should include citations to software and papers where appropriate.
 
-* If your package provides access to a data source, we require that DESCRIPTION contains (1) Identification and/or description of the organisation responsible for issuing data; and (2) URL linking to public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).
+* If your package provides access to a data source, we require that DESCRIPTION contains both (1) A brief identification and/or description of the organisation responsible for issuing data; and (2) The URL linking to public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).
 
 * Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
 
