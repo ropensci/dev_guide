@@ -207,7 +207,7 @@ at unconferences
 
 -   If archived, non-R-packages will move to "ropensci-archive"
 
-### General guidance for transfer to ropensci-org
+### General guidance for transfer to ropensci-archive
 
 - Update the README (remove installation instructions, add reason for archival,
   link to this guidance).
