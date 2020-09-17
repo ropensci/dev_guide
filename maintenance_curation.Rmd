@@ -207,6 +207,15 @@ at unconferences
 
 -   If archived, non-R-packages will move to "ropensci-archive"
 
+### General guidance for transfer to ropensci-org
+
+- Update the README (remove installation instructions, add reason for archival,
+  link to this guidance).
+- Add a repostatus.org badge to the README (unsupported for former released packages, 
+  or abandoned if the package always only was a concept or WIP).
+- Close issues with a sentence explaining the situation and linking to this guidance.
+- Disable issues (under repo settings).
+
 ## Books
 
 rOpenSci books are long-form documentation, often bookdown-formatted,
