@@ -43,8 +43,8 @@ packages, but are not necessarily peer reviewed. Many are infrastructure
 packages that fall out of scope for peer review.
 
 -   Staff-maintained packages will be listed in the registry with tag
-    "staff" and listed on rOpenSci's packages web page or similar
-    venues with tag "staff"
+    "staff_maintained" and listed on rOpenSci's packages web page or similar
+    venues with tag "staff-maintained"
 
 -   These packages will be stored in the "ropensci" GitHub
     organization
