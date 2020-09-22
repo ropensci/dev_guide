@@ -67,7 +67,7 @@ packages that fall out of scope for peer review.
     the registry. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default on the packages
-    web page. An option to "show archived packages" will display
+    web page. A special tab of packages pages will display
     these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
 
@@ -127,8 +127,8 @@ at the time of submission to be reviewed.
     location if needed. They will retain "peer-reviewed" tags and
     badges. They will not be built on rOpenSci system.
 
--   Archived packages will not be displayed by default. An option to
-    "show archived packages" will display these with `"type": "archived"`
+-   Archived packages will not be displayed by default. A special tab of packages
+   pages will `display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
 -   Archived packages may be un-archived at authors' request if authors
