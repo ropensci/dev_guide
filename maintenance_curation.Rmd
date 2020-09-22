@@ -73,7 +73,7 @@ packages that fall out of scope for peer review.
 
 -   Archived packages can be unarchived when the old or a new maintainer
     is willing to address the problems and wants to revive the
-    package.
+    package. They are transferred to the ropenscilabs organization.
 
 ## Peer-reviewed packages
 
