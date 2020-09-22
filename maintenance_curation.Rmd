@@ -131,8 +131,8 @@ at the time of submission to be reviewed.
    pages will `display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
--   Archived packages may be un-archived at authors' request if authors
-    opt to resume maintenance.
+-   Archived packages may be un-archived if authors or a new person
+    opt to resume maintenance. They are transferred to the ropenscilabs organization.
 
 ## Legacy acquired packages
 
