@@ -6,6 +6,16 @@
 
 * 2020-09-22, add package curation policy (`@noamross`, #263)
 
+* 2020-09-11, add more guidance and requirements for docs at submission (`@annakrystalli`, #261)
+
+* 2020-09-14, add more guidance on describing data source in DESCRIPTION (`@mpadge`, #260)
+
+* 2020-09-14, add more guidance about tests of deprecrated functions (`@sckott`, #213)
+
+* 2020-09-11, update the CI guidance (`@bisaloo`, `@mcguinlu`, #269)
+
+* 2020-09-11, improve the redirect guidance (`@jeroen`, `@mcguinlu`, #269)
+
 ## 0.4.0
 
 * 2020-04-02, give less confusing code of conduct guidance: the reviewed packages' COC is rOpenSci COC (`@Bisaloo`, `@cboettig`, #240)
@@ -162,11 +172,11 @@
 # Review template {#reviewtemplate}
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/review.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
 
 ```
 
@@ -176,11 +186,11 @@
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
 
 ```
 
@@ -189,11 +199,11 @@
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/request.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/request.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/request.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/request.md"}
 
 ```
 
@@ -201,11 +211,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/approved.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/approved.md"}
 
 ```
 
@@ -214,7 +224,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r child="templates/news.md"}
+```{r, child="templates/news.md"}
 ```
 ```
 
@@ -223,15 +233,17 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r eval = !knitr::is_latex_output(), child="templates/book-release.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/book-release.md"}
 ```
 ```
 
-```{r eval = knitr::is_latex_output(), child="templates/book-release.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
 ```
 
 # How to set a redirect {#redirect}
+
+## Non GitHub pages site (e.g. Netlify)
 
 Replace the content of the current website with
 
@@ -246,3 +258,11 @@ Replace the content of the current website with
 </html>
 ```
     
+## GitHub pages
+
+You can setup the redirect from your main user gh-pages repository:
+
+ - create a new repository (if you don't have one yet): `https://github.com/<username>/<username>.github.io`
+ - In this repository create a directory `<pkgname>` containing the file `index.html` that redirects to the new location (see previous subsection)
+ - Test that https://<username>.github.io/<pkgname>/index.html now redirects
+ - Optional: you could even create a `404.html` file in your `<username>.github.io` repo to redirect arbitrary pages, like here: https://github.com/ropensci/ropensci.github.io.

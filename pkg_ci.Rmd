@@ -38,6 +38,11 @@ R packages should have CI for all platforms when they contain:
 
 In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all platforms, and most often not too much hassle.
 
+### GitHub Actions (Linux, Mac OSX, Windows)
+
+[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/).
+It is gaining popularity.
+
 ### Travis CI (Linux and Mac OSX)
 
 Travis offers continuous integration for Linux and Mac OSX. Set it up using [`rodev::use_ro_travis()`](https://docs.ropensci.org/rodev/reference/use_ro_travis.html) or `usethis::use_travis()`.
@@ -88,9 +93,6 @@ We no longer transfer AppVeyor projects to ropensci AppVeyor account so after tr
 
 [Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
 
-### GitHub Actions (Linux, Mac OSX, Windows)
-
-[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/).
 
 ## Test coverage {#coverage}
 
