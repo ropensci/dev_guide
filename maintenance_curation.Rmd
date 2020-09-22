@@ -68,7 +68,8 @@ packages that fall out of scope for peer review.
 
 -   Archived packages will not be displayed by default on the packages
     web page. An option to "show archived packages" will display
-    these with an "archived" type.
+    these with `"type": "archived"`
+     that were either peer-reviewed or staff-maintained.
 
 -   Archived packages can be unarchived when the old or a new maintainer
     is willing to address the problems and wants to revive the
@@ -123,11 +124,12 @@ at the time of submission to be reviewed.
     GitHub accounts if desired). They will gain the "archived" type
     in the registry, and a "migrated" tag and "migrated-date"
     field indicating the date of migration and a URL for a new
-    location if needed.. They will retain "peer-reviewed" tags and
+    location if needed. They will retain "peer-reviewed" tags and
     badges. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default. An option to
-    "show archived packages" will display these with `"type": "archived"`.
+    "show archived packages" will display these with `"type": "archived"`
+     that were either peer-reviewed or staff-maintained.
     
 -   Archived packages may be un-archived at authors' request if authors
     opt to resume maintenance.
@@ -143,15 +145,11 @@ various developers without well-defined criteria.)
 -   rOpenSci will transfer legacy packages back to author organizations
     and repositories. If authors are uninterested, we will transfer
     them to the "ropensci-archive" repository. If packages are
-    [[in-scope]{.underline}](https://devguide.ropensci.org/policies.html#aims-and-scope),
+    [in-scope](https://devguide.ropensci.org/policies.html#aims-and-scope),
     rOpenSci will inquire if authors would like to submit them to the
     Software Review process.
 
--   Legacy packages transferred out to author organizations will not be
-    listed in the package registry.
-
--   Legacy packages will be tagged "archived" in the package registry
-    if they are in the ropensci-archive repository and unmaintained.
+-   Legacy packages will not be listed in the package registry.
 
 ## Incubator packages
 
@@ -159,8 +157,7 @@ various developers without well-defined criteria.)
 community members as part of community projects, such as those created
 at unconferences
 
--   Incubator packages will live in the "ropensci-incubator"
-    repository (to be renamed from "ropenscilabs")
+-   Incubator packages will live in the "ropenscilabs"
 
 -   Incubator packages will appear in the package registry with the
     "incubator" tag
@@ -182,8 +179,7 @@ at unconferences
     review. Incubator packages will be migrated to ropensci-archive by
     default after one year.
 
--   Archived incubator packages will gain the "archived" tag and
-    retain the "incubator" tag in the registry
+-   Archived incubator packages will gain the "archived" type.
 
 -   Packages migrated to author organizations will remain in the
     registry with the "incubator" tag and a "migrated" tag, with a
@@ -224,7 +220,7 @@ rOpenSci staff and community members.
 
 -   Books may be mature or in-development, but must have minimal
     outlines/content before migrating into "ropensci-books" (e.g.
-    from "ropensci-incubator").
+    from "ropenscilabs").
 
 -   The authorship and development status of a book should be clearly
     described on its home page and README.
