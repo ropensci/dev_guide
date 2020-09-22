@@ -157,7 +157,7 @@ various developers without well-defined criteria.)
 community members as part of community projects, such as those created
 at unconferences
 
--   Incubator packages will live in the "ropenscilabs"
+-   Incubator packages will live in the "ropenscilabs" organization.
 
 -   Incubator packages will appear in the package registry with the
     "incubator" tag
