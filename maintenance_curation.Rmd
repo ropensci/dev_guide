@@ -73,7 +73,8 @@ packages that fall out of scope for peer review.
 
 -   Archived packages can be unarchived when the old or a new maintainer
     is willing to address the problems and wants to revive the
-    package. They are transferred to the ropenscilabs organization.
+    package. For that please [contact rOpenSci](https://ropensci.org/contact/).
+    They are transferred to the ropenscilabs organization.
 
 ## Peer-reviewed packages
 
@@ -129,8 +130,9 @@ at the time of submission to be reviewed.
    pages will `display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
--   Archived packages may be un-archived if authors or a new person
-    opt to resume maintenance. They are transferred to the ropenscilabs organization.
+-   Archived packages may be unarchived if authors or a new person
+    opt to resume maintenance.  For that please [contact rOpenSci](https://ropensci.org/contact/).
+    They are transferred to the ropenscilabs organization.
 
 ## Legacy acquired packages
 
