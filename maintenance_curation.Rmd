@@ -122,7 +122,7 @@ at the time of submission to be reviewed.
 
 -   When archived, these packages will move from the "ropensci" GitHub
     organization to the "ropensci-archive" organization (or author
-    GitHub accounts if desired). They will gain the "archived" type
+    GitHub accounts if desired), following [transfer guidance](#archivalguidance). They will gain the "archived" type
     in the registry. They will retain "peer-reviewed" tags and
     badges. They will not be built on rOpenSci system.
 
@@ -144,7 +144,7 @@ various developers without well-defined criteria.)
 
 -   rOpenSci will transfer legacy packages back to author organizations
     and repositories. If authors are uninterested, we will transfer
-    them to the "ropensci-archive" repository. If packages are
+    them to the "ropensci-archive" repository following [transfer guidance](#archivalguidance). If packages are
     [in-scope](https://devguide.ropensci.org/policies.html#aims-and-scope),
     rOpenSci will inquire if authors would like to submit them to the
     Software Review process.
@@ -177,7 +177,7 @@ at unconferences
     on response, package will be migrated immediately, peer review
     will be initiated, or migration will be deferred to the next
     review. Incubator packages will be migrated to ropensci-archive by
-    default after one year.
+    default after one year, following [transfer guidance](#archivalguidance).
 
 -   Archived incubator packages will gain the "archived" type.
 
@@ -192,9 +192,9 @@ at unconferences
 -   Migration policy will be the same as for R packages, with
     appropriate migration locations (e.g., ropenci-books)
 
--   If archived, non-R-packages will move to "ropensci-archive"
+-   If archived, non-R-packages will move to "ropensci-archive" following [transfer guidance](#archivalguidance).
 
-### General guidance for transfer to ropensci-archive or authors account
+### General guidance for transfer to ropensci-archive or authors account {#archivalguidance}
 
 - Update the README (remove installation instructions, add reason for archival,
   link to this guidance).
