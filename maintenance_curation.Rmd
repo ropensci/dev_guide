@@ -163,8 +163,8 @@ at unconferences
     "incubator" tag
 
 -   Incubator packages will not appear on the website by default, but
-    only if a "include incubator packages" option is checked.
-
+    packages pages will include an "experimental packages" tab.
+    
 -   Incubator packages and their docs will be built by rOpenSci 
     [system](https://status.ropensci.org/). This system does not send notifications 
     but it outputs results as GitHub commit status (red check mark or red cross).
