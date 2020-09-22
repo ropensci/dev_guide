@@ -118,17 +118,6 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 -   Add a "peer-reviewed" topic to the repo.
 -   Close the software-review issue. 
 
-### For joint JOSS submissions:
-
--  After repo is transferred to ropensci and admin rights assigned, have author generate
-   a new release with a DOI.
--  Ask author to submit package via https://joss.theoj.org/papers/new
--  Watch for paper to pop up at https://joss.theoj.org/papers, then
-   add the following comment to the submission thread:
-   
-   `This submission has been accepted to rOpenSci. The review thread can be
-    found at [LINK TO SOFTWARE REVIEW ISSUE]`
-
 ### Package promotion:
 
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)

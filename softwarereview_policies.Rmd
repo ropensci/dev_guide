@@ -103,7 +103,7 @@ Here are some types of packages we are unlikely to accept:
 -  Exploratory data analysis packages that visualize or summarize data.
 -  General workflow or package development support packages.
 
-For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal.
+For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal, depending on the current scopes of those journals.
 
 Note that the packages developed internally by rOpenSci, through our events or through collaborations are not all in-scope for our Software Peer Review process.
 
