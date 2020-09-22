@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2020-09-11, add more guidance and requirements for docs at submission (`@annakrystalli`, #261)
+
 * 2020-09-14, add more guidance on describing data source in DESCRIPTION (`@mpadge`, #260)
 
 * 2020-09-14, add more guidance about tests of deprecrated functions (`@sckott`, #213)
