@@ -63,12 +63,12 @@ packages that fall out of scope for peer review.
 -   Packages consistently failing and without an ongoing plan to return
     to active maintenance will move to "archive" status. When
     archived, staff packages will move to the "ropensci-archive"
-    repository (to be created) and and gain the "archived" tag in
+    repository (to be created) and and gain the "archived" type in
     the registry. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default on the packages
     web page. An option to "show archived packages" will display
-    these with an "archived" tag.
+    these with an "archived" type.
 
 -   Archived packages can be unarchived when the old or a new maintainer
     is willing to address the problems and wants to revive the
@@ -120,16 +120,15 @@ at the time of submission to be reviewed.
 
 -   When archived, these packages will move from the "ropensci" GitHub
     organization to the "ropensci-archive" organization (or author
-    GitHub accounts if desired). They will gain the "archived" tag
+    GitHub accounts if desired). They will gain the "archived" type
     in the registry, and a "migrated" tag and "migrated-date"
     field indicating the date of migration and a URL for a new
     location if needed.. They will retain "peer-reviewed" tags and
     badges. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default. An option to
-    "show archived packages" will display these with an "archived"
-    tag.
-
+    "show archived packages" will display these with `"type": "archived"`.
+    
 -   Archived packages may be un-archived at authors' request if authors
     opt to resume maintenance.
 
