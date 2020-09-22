@@ -162,7 +162,7 @@ Hello <username> and many thanks for your submission.
 
 We are discussing whether the package is in scope and need a bit more information.
 
-Would you mind add more details and context to the README?
+Would you mind adding more details and context to the README?
 After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
 
 <optional>
