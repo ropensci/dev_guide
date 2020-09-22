@@ -4,9 +4,7 @@
 
 ## dev
 
-* 2020-09-11, add more guidance and requirements for docs at submission (@annakrystalli, #261)
-
-* 2020-09-11, update the CI guidance (@bisaloo, @mcguinlu, #269)
+* 2020-09-11, add more guidance and requirements for docs at submission (`@annakrystalli`, #261)
 
 * 2020-09-14, add more guidance on describing data source in DESCRIPTION (`@mpadge`, #260)
 
