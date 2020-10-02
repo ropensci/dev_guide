@@ -62,6 +62,7 @@ rOpenSci's Software Peer Review process is run by:
 * [Melina Vidoni](https://github.com/melvidoni), RMIT University (School of Science)
 * [Brooke Anderson](https://github.com/geanders), Colorado State University
 * [Mauro Lepore](https://github.com/maurolepore), 2 Degrees Investing Initiative
+* [Laura DeCicco](https://github.com/ldecicco-USGS), USGS
 
 ### Reviewers
 
@@ -71,8 +72,8 @@ We are grateful to the following individuals who have offered up their time and 
 if (Sys.getenv("AIRTABLE_API_KEY") == ""){
   Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
 }
-editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson",
-    "Melina Vidoni", "Lincoln Mullen", "Anna Krystalli")
+editors <- c("Noam Ross", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson",
+    "Melina Vidoni", "Anna Krystalli", "Mauro Lepore", "Laura DeCicco")
 reviewers <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
                                 table = "Reviewers")
 reviewers <- reviewers$Reviewers$select_all()
