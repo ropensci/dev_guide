@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2020-10-05, add links to licence resources (`@annakrystalli`, #279)
+
 * 2020-10-05, update information about the contributing guide (`@stefaniebutland`, #280)
 
 * 2020-09-11, make reviewer approval a separate template (`@bisaloo`, #264)
