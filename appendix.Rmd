@@ -4,7 +4,16 @@
 
 ## dev
 
+
 * 2020-09-22, update JOSS instructions (`@karthik`, #276)
+
+* 2020-10-05, add links to licence resources (`@annakrystalli`, #279)
+
+* 2020-10-05, update information about the contributing guide (`@stefaniebutland`, #280)
+
+* 2020-09-11, make reviewer approval a separate template (`@bisaloo`, #264)
+
+* 2020-09-22, add package curation policy (`@noamross`, #263)
 
 * 2020-09-11, add more guidance and requirements for docs at submission (`@annakrystalli`, #261)
 
@@ -219,6 +228,17 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```
 
+# Reviewer approval comment template {#approval2template}
+
+
+```markdown
+```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```
+```
+
+```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+
+```
 
 # NEWS template {#newstemplate}
 

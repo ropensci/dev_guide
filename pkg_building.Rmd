@@ -230,6 +230,11 @@ Only include reviewers after asking for their consent. Read more in [this blog p
 
 Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
+## Licence
+
+The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
+For more explanations around licensing, refer to the [R packages book](https://r-pkgs.org/license.html).
+
 ## Testing
 
 * All packages should pass `R CMD check`/`devtools::check()` on all major platforms.
@@ -360,13 +365,33 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 ## Further guidance
 
-* _R Packages_ by Hadley Wickham and Jenny Bryan is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
-
-* [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
-
 * If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
 
 * Before submitting a package use the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of `foo` might be generally bad and therefore flagged by `goodpractice` but you had a good reason to use it in your package.
+
+### Learning about package development
+
+#### Books
+
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
+
+* [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
+
+* [*Mastering Software Development in R* by Roger D. Peng, Sean Kross, and Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/)
+
+* [*Advanced R* by Hadley Wickham](https://adv-r.hadley.nz/)
+
+#### Tutorials
+
+* [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
+
+* [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/2018/09/usethis-workflow-for-package-development/)
+
+* [This pictorial by Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html)
+
+#### MOOCs
+
+There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.
 
 
 [curl]: https://github.com/jeroen/curl/

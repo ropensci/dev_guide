@@ -26,7 +26,7 @@ jobs:
           key: ${{ hashFiles('DESCRIPTION') }}
 
       - name: Install dependencies
-        run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
+        run: Rscript -e 'install.packages("remotes")' -e 'options(install.packages.check.source = "both")' -e 'remotes::install_deps(dependencies = TRUE)'
 
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
