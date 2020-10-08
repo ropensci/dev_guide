@@ -4,6 +4,9 @@
 
 ## dev
 
+
+* 2020-09-22, update JOSS instructions (`@karthik`, #276)
+
 * 2020-10-05, add links to licence resources (`@annakrystalli`, #279)
 
 * 2020-10-05, update information about the contributing guide (`@stefaniebutland`, #280)
