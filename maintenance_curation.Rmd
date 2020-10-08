@@ -53,7 +53,7 @@ packages that fall out of scope for peer review.
     [system](https://status.ropensci.org/). This system does not send notifications 
     but it outputs results as GitHub commit status (red check mark or red cross).
 
--   When the packages fail checks, rOpenSci staff will endeavour to fix
+-   When the packages fail checks, rOpenSci staff will endeavor to fix
     changes, prioritizing packages based on user base (downloads),
     reverse dependencies, or strategic goals.
 
@@ -190,7 +190,7 @@ at unconferences
     page, and will not be automatically built.
 
 -   Migration policy will be the same as for R packages, with
-    appropriate migration locations (e.g., ropenci-books)
+    appropriate migration locations (e.g., ropensci-books)
 
 -   If archived, non-R-packages will move to "ropensci-archive" following [transfer guidance](#archivalguidance).
 
