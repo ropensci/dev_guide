@@ -1,10 +1,10 @@
 {
     "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
-    "license": "other-open",
+    "license": {"id":"CC-BY-4.0"},
     "title": "ropensci/dev_guide: Fourth release",
     "version": "0.4.0",
     "upload_type": "software",
-    "publication_date": "2020-04-12",
+    "publication_date": "2020-10-12",
     "creators": [
         {
             "name": "rOpenSci"
@@ -38,8 +38,16 @@
             "affiliation": "rOpenSci"
         },
         {
-            "name": "Melina Vidoni",
-            "affiliation": "RMIT University (School of Science)"
+            "name": "Laura DeCicco",
+            "affiliation": "USGS"
+        },
+        {
+            "name": "Mauro Lepore",
+            "affiliation": "2 Degrees Investing Initiative"
+        },
+        {
+            "name": "Julia Gustavsen",
+            "affiliation": "SOPHiA GENETICS"
         }
     ],
     "access_right": "open"
