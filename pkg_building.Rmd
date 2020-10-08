@@ -171,6 +171,13 @@ can be found at *link*".
 
 * Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
 
+### URLs in documentation
+
+This subsection is particularly relevant to authors wishing to submit their package to CRAN.
+CRAN will check URLs in your documentation and does not allow redirect status codes such as 301.
+You can use the [urlchecker](https://github.com/r-lib/urlchecker) package to reproduce these checks and, in particular, replace URLs with the URLs they redirect to.
+Others have used the option to escape some URLs (change `<https://ropensci.org/>` to `https://ropensci.org/`, or `\url{https://ropensci.org/}` to `https://ropensci.org/`.), but if you do so, you will need to implement some sort of URL checking yourself to prevent them from getting broken without your noticing. Furthermore, links would not be clickable from local docs.
+
 ## Documentation website {#website}
 
 We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).

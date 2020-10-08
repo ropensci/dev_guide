@@ -4,8 +4,9 @@
 
 ## dev
 
+* 2020-10-08, add help about link checking (`@sckott`, #281)
 
-* 2020-09-22, update JOSS instructions (`@karthik`, #276)
+* 2020-10-08, update JOSS instructions (`@karthik`, #276)
 
 * 2020-10-05, add links to licence resources (`@annakrystalli`, #279)
 
