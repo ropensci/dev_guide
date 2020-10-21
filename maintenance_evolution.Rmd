@@ -180,3 +180,14 @@ NULL
 ```
 
 This creates a man page that users can access like ``?`helloworld-defunct` `` and they'll see in the documentation index. Add any functions to this page as needed. You'll likely want to keep this man page indefinitely.
+
+### Testing deprecated functions
+
+You don't have to change the tests of deprecated functions until they are made defunct.
+
+* Consider any changes made to a deprecated function. Along with using `.Deprecated` inside the function, did you change the parameters at all in the deprecated function, or create a new function that replaces the deprecated function, etc. Those changes should be tested if any made.
+* Related to above, if the deprecated function is simply getting a name change, perhaps test that the old and new functions return identical results.
+* [`suppressWarnings()` could be used](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) to suppress the warning thrown from `.Deprecated`, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.
+
+Once a function is made defunct, its tests are simply removed.
+

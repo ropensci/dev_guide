@@ -122,7 +122,31 @@ can be found at *link*".
 
 ## Documentation
 
+### General
+
 * All exported package functions should be fully documented with examples.
+
+* The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
+
+* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content. 
+
+* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*". Any vignette should outline prerequisite knowledge to be able to understand the vignette upfront.
+
+ The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
+
+* Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (e.g. programming/NSE with dplyr).
+
+* The README, the top-level package docs, vignettes, websites, etc., should all have enough information at the beginning to get a high-level overview of the package and the services/data it connects to, and provide navigation to other relevant pieces of documentation. This is to follow the principle of *multiple points of entry* i.e. to take into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps.
+
+* The vignette(s) should include citations to software and papers where appropriate.
+
+* If your package provides access to a data source, we require that DESCRIPTION contains both (1) A brief identification and/or description of the organisation responsible for issuing data; and (2) The URL linking to public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).
+
+* Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
+
+* You can choose to have a README section about use cases of your package (other packages, blog posts, etc.), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
+
+### roxygen2 use
 
 * We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](https://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
@@ -134,27 +158,9 @@ can be found at *link*".
 
 * We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](https://r-pkgs.org/man.html) and [this section of the present chapter](#function-grouping) for more details.
 
-* The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
-
-* The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content. 
-
 * You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
 
-* As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance, a vignette intro or documentation should not merely read, "Provides access to GooberDB," but also include, "..., an online repository of Goober sightings in South America.  More information about GooberDB, and documentation of database structure and metadata can be found at *link*". Any vignette should outline prerequisite knowledge to be able to understand the vignette upfront.
-
- The general vignette should present a series of examples progressing in complexity from basic to advanced usage.
-
-* Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (e.g. programming/NSE with dplyr).
-
-* The vignette(s) should include citations to software and papers where appropriate.
-
-* The README, the top-level package docs, vignettes, websites, etc., should all have enough information at the beginning to get a high-level overview of the package and the services/data it connects to, and provide navigation to other relevant pieces of documentation. This is to follow the principle of *multiple points of entry* i.e. to take into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps.
-
 * Add `#' @noRd` to internal functions.
-
-* Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance. 
-
-* You can choose to have a README section about use cases of your package (other packages, blog posts, etc.), [example](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
 * If you prefer not to clutter up code with extensive documentation, you can place further examples outside of the R script and use the `@example` tag; and you place further documentation in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
     * Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function. 
@@ -165,6 +171,13 @@ can be found at *link*".
 
 * Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
 
+### URLs in documentation
+
+This subsection is particularly relevant to authors wishing to submit their package to CRAN.
+CRAN will check URLs in your documentation and does not allow redirect status codes such as 301.
+You can use the [urlchecker](https://github.com/r-lib/urlchecker) package to reproduce these checks and, in particular, replace URLs with the URLs they redirect to.
+Others have used the option to escape some URLs (change `<https://ropensci.org/>` to `https://ropensci.org/`, or `\url{https://ropensci.org/}` to `https://ropensci.org/`.), but if you do so, you will need to implement some sort of URL checking yourself to prevent them from getting broken without your noticing. Furthermore, links would not be clickable from local docs.
+
 ## Documentation website {#website}
 
 We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
@@ -173,7 +186,7 @@ There are a few elements we'd like to underline here.
 
 ### Automatic deployment of the documentation website {#docsropensci}
 
-You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://docs.ropensci.org/rotemplate/). The resulting website will have search enabled by Algolia. Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
+You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). The resulting website will have search enabled by Algolia. Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci/rotemplate/.
 
 *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
@@ -223,6 +236,11 @@ The `DESCRIPTION` file of a package should list package authors and contributors
 Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).  Note that 'rev' will raise a CRAN NOTE unless the package is built using R v3.5. Make sure you use `roxygen2`'s latest CRAN version.
 
 Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
+
+## Licence
+
+The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
+For more explanations around licensing, refer to the [R packages book](https://r-pkgs.org/license.html).
 
 ## Testing
 
@@ -354,13 +372,33 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 ## Further guidance
 
-* _R Packages_ by Hadley Wickham and Jenny Bryan is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
-
-* [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
-
 * If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
 
 * Before submitting a package use the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of `foo` might be generally bad and therefore flagged by `goodpractice` but you had a good reason to use it in your package.
+
+### Learning about package development
+
+#### Books
+
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
+
+* [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
+
+* [*Mastering Software Development in R* by Roger D. Peng, Sean Kross, and Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/)
+
+* [*Advanced R* by Hadley Wickham](https://adv-r.hadley.nz/)
+
+#### Tutorials
+
+* [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
+
+* [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/)
+
+* [This pictorial by Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html)
+
+#### MOOCs
+
+There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.
 
 
 [curl]: https://github.com/jeroen/curl/

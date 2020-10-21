@@ -5,7 +5,7 @@ This chapter contains the policies of rOpenSci Software Peer Review.
 
 In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission) including our [conflict of interest policies](#coi), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
 
-Last but not least, you'll find the code of conduct of rOpenSci Software Peer Review [here](#code-of-conduct).
+Last but not least, you'll find the [code of conduct of rOpenSci Software Peer Review](#code-of-conduct).
 ```
 
 
@@ -103,7 +103,7 @@ Here are some types of packages we are unlikely to accept:
 -  Exploratory data analysis packages that visualize or summarize data.
 -  General workflow or package development support packages.
 
-For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal.
+For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal, depending on the current scopes of those journals.
 
 Note that the packages developed internally by rOpenSci, through our events or through collaborations are not all in-scope for our Software Peer Review process.
 
@@ -180,7 +180,7 @@ Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/)
 provides a robust framework and we encourage authors, editors, and reviewers to use
 this in evaluating their work. In general, adherence to legal or regulatory
 minimum requirements may not be sufficient, though these (e.g.,
-[GDPR](https://ico-gdpr.com/)), may be relevant. Package authors should direct
+GDPR), may be relevant. Package authors should direct
 users to relevant resources for the ethical use of the software.
 
 Some packages, due to the nature of data they handle, may be determined by editors to require enhanced scrutiny. For these, editors may require additional (or reduced) functionality, and robust

@@ -36,10 +36,6 @@ The package includes all the following forms of documentation:
    and a reasonable range of inputs and conditions. All tests pass on the local machine.
 - [ ] **Packaging guidelines**: The package conforms to the rOpenSci packaging guidelines
 
-#### Final approval (post-review)
-
-- [ ] **The author has responded to my review and made changes to my satisfaction. I recommend approving this package.**
-
 Estimated hours spent reviewing:
 
 - [ ] Should the author(s) deem it appropriate, I agree to be acknowledged as a package reviewer ("rev" role) in the package DESCRIPTION file.

@@ -22,7 +22,7 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 -   Once aboard, your package will continue to receive **support from rOpenSci members**.  You'll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.
 -   rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and [social media](https://twitter.com/ropensci). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 -   rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
--   rOpenSci packages that contain a short accompanying paper can, after review, be automatically submitted to the [Journal of Open-Source Software](https://joss.theoj.org/) for fast-tracked publication.
+-   rOpenSci packages that are in scope for the [Journal of Open-Source Software](https://joss.theoj.org/) and add the necessary accompanying short paper, would, at the discretion of JOSS editors, benefit from a fast-tracked review process.
 -   If you write one, rOpenSci will **promote gitbooks related to your package**: the source of such books can be transferred to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books) for books to be listed [at books.ropensci.org](https://books.ropensci.org/).
 
 ## Why review packages for rOpenSci? {#whyreview}
@@ -56,14 +56,14 @@ Furthermore, authors and reviewers have the ability to contact privately the edi
 rOpenSci's Software Peer Review process is run by:
 
 * [Noam Ross](https://github.com/noamross), EcoHealth Alliance
-* [Scott Chamberlain](https://github.com/sckott), rOpenSci
 * [Karthik Ram](https://github.com/karthik), rOpenSci
 * [Maëlle Salmon](https://github.com/maelle), rOpenSci
-* [Lincoln Mullen](https://github.com/lmullen), George Mason University
 * [Anna Krystalli](https://github.com/annakrystalli), University of Sheffield RSE
 * [Melina Vidoni](https://github.com/melvidoni), RMIT University (School of Science)
 * [Brooke Anderson](https://github.com/geanders), Colorado State University
-
+* [Mauro Lepore](https://github.com/maurolepore), 2 Degrees Investing Initiative
+* [Laura DeCicco](https://github.com/ldecicco-USGS), USGS
+* [Julia Gustavsen](https://github.com/jooolia), SOPHiA GENETICS 
 
 ### Reviewers
 
@@ -73,8 +73,8 @@ We are grateful to the following individuals who have offered up their time and 
 if (Sys.getenv("AIRTABLE_API_KEY") == ""){
   Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
 }
-editors <- c("Noam Ross", "Scott Chamberlain", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson",
-    "Melina Vidoni", "Lincoln Mullen", "Anna Krystalli")
+editors <- c("Noam Ross", "Karthik Ram", "Maëlle Salmon", "Brooke Anderson",
+    "Melina Vidoni", "Anna Krystalli", "Mauro Lepore", "Laura DeCicco")
 reviewers <- airtabler::airtable(base = "appZIB8hgtvjoV99D", 
                                 table = "Reviewers")
 reviewers <- reviewers$Reviewers$select_all()

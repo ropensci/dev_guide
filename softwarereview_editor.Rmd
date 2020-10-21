@@ -91,7 +91,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     `4/review-in-awaiting-changes` to update the reminder bot.
 -   Update Airtable database: Add the link to the review comment to the `review_url` field and the number of review hours to the `review_hours` field of each review record. 
 - If the author stops responding, refer to [the policies](#package-submission) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
--   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`.
+-   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template]{#approval2template}.
     
 ### After review:
 
@@ -118,17 +118,6 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 -   Add a "peer-reviewed" topic to the repo.
 -   Close the software-review issue. 
 
-### For joint JOSS submissions:
-
--  After repo is transferred to ropensci and admin rights assigned, have author generate
-   a new release with a DOI.
--  Ask author to submit package via https://joss.theoj.org/papers/new
--  Watch for paper to pop up at https://joss.theoj.org/papers, then
-   add the following comment to the submission thread:
-   
-   `This submission has been accepted to rOpenSci. The review thread can be
-    found at [LINK TO SOFTWARE REVIEW ISSUE]`
-
 ### Package promotion:
 
 -   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
@@ -149,6 +138,27 @@ In details, the EiC plays the following roles
 - Responds to issues posted to the software-review-meta repo
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+ 
+### Asking for more details
+
+In some cases online documentation is sparse. Minimal README, no pkgdown website make assessment harder.
+In that case please ask for more details: even if the package is deemed out-of-scope, the package docs will have gotten better so we are fine asking for these efforts.
+
+Example text
+
+```markdown
+Hello <username> and many thanks for your submission.
+
+We are discussing whether the package is in scope and need a bit more information.
+
+Would you mind adding more details and context to the README?
+After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
+
+<optional>
+If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is best in class](https://devguide.ropensci.org/policies.html#overlap). Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
+</optional>
+
+```
  
 ### Inviting a guest editor
 
