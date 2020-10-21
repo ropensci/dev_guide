@@ -4,6 +4,8 @@
 
 ## dev
 
+## 0.5.0
+
 * 2020-10-08, add help about link checking (`@sckott`, #281)
 
 * 2020-10-08, update JOSS instructions (`@karthik`, #276)
