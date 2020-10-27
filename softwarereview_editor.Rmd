@@ -62,7 +62,8 @@ As a (guest) editor, use
 * the Airtable database of reviewers and volunteers 
 * and the authors of [rOpenSci packages](https://ropensci.org/packages/). 
 
-When these sources of information are not enough, 
+When these sources of information are not enough,
+
 * ping other editors in Slack for ideas, 
 * look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter). 
 * You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
