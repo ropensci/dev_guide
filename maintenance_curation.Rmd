@@ -151,6 +151,8 @@ various developers without well-defined criteria.)
 
 -   Legacy packages will not be listed in the package registry.
 
+-   Exceptions may be made for packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff.
+
 ## Incubator packages
 
 "Incubator" packages are in-development packages created by staff or
