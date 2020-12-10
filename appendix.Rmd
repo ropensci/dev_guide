@@ -146,8 +146,7 @@
 
 * 2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.
 
-* 2019-04-22, use a darker blue for links (feedback by [`@kwstat
-`](https://github.com/kwstat), #138).
+* 2019-04-22, use a darker blue for links (feedback by [`@kwstat`](https://github.com/kwstat), #138).
 
 * 2019-04-22, add book cover.
 
