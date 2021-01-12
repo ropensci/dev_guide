@@ -9,7 +9,8 @@ Imports:
   purrr,
   humaniformat,
   bslib,
-  downlit
+  downlit,
+  xml2
 Remotes: 
   bergant/airtabler,
   rstudio/htmltools,
