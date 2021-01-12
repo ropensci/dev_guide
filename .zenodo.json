@@ -20,9 +20,24 @@
             "orcid": "0000-0003-1444-9135"
         },
         {
+            "name": "Laura DeCicco",
+            "affiliation": "USGS",
+            "orcid": ""
+        },
+        {
+            "name": "Julia Gustavsen",
+            "affiliation": "SOPHiA GENETICS",
+            "orcid": "0000-0002-4764-4802"
+        },
+        {
             "name": "Anna Krystalli",
             "affiliation": "University of Sheffield RSE",
             "orcid": "0000-0002-2378-4915"
+        },
+        {
+            "name": "Mauro Lepore",
+            "affiliation": "2 Degrees Investing Initiative",
+            "orcid": "0000-0002-1986-7988"
         },
         {
             "name": "Lincoln Mullen",
@@ -43,21 +58,6 @@
             "name": "Ma\u00eblle Salmon",
             "affiliation": "rOpenSci",
             "orcid": "0000-0002-2815-0399"
-        },
-        {
-            "name": "Laura DeCicco",
-            "affiliation": "USGS",
-            "orcid": ""
-        },
-        {
-            "name": "Mauro Lepore",
-            "affiliation": "2 Degrees Investing Initiative",
-            "orcid": "0000-0002-1986-7988"
-        },
-        {
-            "name": "Julia Gustavsen",
-            "affiliation": "SOPHiA GENETICS",
-            "orcid": "0000-0002-4764-4802"
         },
         {
             "name": "Melina Vidoni",
