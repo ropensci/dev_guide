@@ -51,7 +51,7 @@ jobs:
 
       - name: Deploy to Netlify (test)
         if: env.fork == 'false'
-        run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=_book --json | jq '.deploy_url' --raw-output);echo "::set-env name=DEPLOY_URL::$DEPLOY_URL"
+        run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
       - name: Update commit status
         if: env.fork == 'false'
         run: |
