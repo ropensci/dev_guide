@@ -32,7 +32,7 @@ jobs:
         run: Rscript -e 'install.packages("remotes")' -e 'remotes::install_deps(dependencies = TRUE)'
 
       - name: Render book html
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
+        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
 
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "gh-pages committer"
-          
+
       - name: Commit results
         env: # Set the secret as an input
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
