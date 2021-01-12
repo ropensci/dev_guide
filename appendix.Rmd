@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (@noamross, #293)
+
 ## 0.5.0
 
 * 2020-10-08, add help about link checking (`@sckott`, #281)
