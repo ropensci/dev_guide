@@ -11,43 +11,53 @@
         },
         {
             "name": "Brooke Anderson",
-            "affiliation": "Colorado State University"
+            "affiliation": "Colorado State University",
+            "orcid": ""
         },
         {
             "name": "Scott Chamberlain",
-            "affiliation": "rOpenSci"
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0003-1444-9135"
         },
         {
             "name": "Anna Krystalli",
-            "affiliation": "University of Sheffield RSE"
+            "affiliation": "University of Sheffield RSE",
+            "orcid": "0000-0002-2378-4915"
         },
         {
             "name": "Lincoln Mullen",
-            "affiliation": "George Mason University"
+            "affiliation": "George Mason University",
+            "orcid": "0000-0001-5103-6917"
         },
         {
             "name": "Karthik Ram",
-            "affiliation": "rOpenSci"
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-0233-1757"
         },
         {
             "name": "Noam Ross",
-            "affiliation": "EcoHealth Alliance"
+            "affiliation": "EcoHealth Alliance",
+            "orcid": "0000-0002-2136-0000"
         },
         {
             "name": "Ma\u00eblle Salmon",
-            "affiliation": "rOpenSci"
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-2815-0399"
         },
         {
             "name": "Laura DeCicco",
-            "affiliation": "USGS"
+            "affiliation": "USGS",
+            "orcid": ""
         },
         {
             "name": "Mauro Lepore",
-            "affiliation": "2 Degrees Investing Initiative"
+            "affiliation": "2 Degrees Investing Initiative",
+            "orcid": "0000-0002-1986-7988"
         },
         {
             "name": "Julia Gustavsen",
-            "affiliation": "SOPHiA GENETICS"
+            "affiliation": "SOPHiA GENETICS",
+            "orcid": "0000-0002-4764-4802"
         }
     ],
     "access_right": "open"
