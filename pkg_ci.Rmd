@@ -40,42 +40,28 @@ In case of any doubt regarding the applicability of these criteria to your packa
 
 ### GitHub Actions (Linux, Mac OSX, Windows)
 
-[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/).
+[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/), as well as [usethis support](https://usethis.r-lib.org/reference/use_github_action.html).
 It is gaining popularity.
 
 ### Travis CI (Linux and Mac OSX)
 
-Travis offers continuous integration for Linux and Mac OSX. Set it up using [`rodev::use_ro_travis()`](https://docs.ropensci.org/rodev/reference/use_ro_travis.html) or `usethis::use_travis()`.
-
-R is now a [natively supported language on Travis-CI](https://blog.travis-ci.com/2015-02-26-test-your-r-applications-on-travis-ci/), making it easier than ever to do continuous integration. See [R Packages](http://marker.to/NEr8Bd) and Julia Silge's [Beginner's Guide to Travis-CI for R](https://juliasilge.com/blog/Beginners-Guide-to-Travis/) for more help.
-
-To customize your build, have a look at [Travis' docs](https://docs.travis-ci.com/user/languages/r/) and at existing Travis config files over rOpenSci's ropensci GitHub organization, e.g. [this one for the `spelling` package](https://github.com/ropensci/spelling/blob/master/.travis.yml).
+We recommend [moving away from Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
 
 #### Testing using different versions of R
 
-We require that rOpenSci packages are tested against the latest, previous and development versions of R to ensure both backwards and forwards compatibility with base R. You can enable this on Travis by adding the following to your `.travis.yml` configuration file:
+We require that rOpenSci packages are tested against the latest, previous and development versions of R to ensure both backwards and forwards compatibility with base R. 
 
-```
-r:
-  - oldrel
-  - release
-  - devel
-```
 Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html). 
 
-You can fine tune the deployment of tests with each versions by using a testing matrix. See this [more complex example](https://github.com/r-hub/rhub/blob/master/.travis.yml#L5) of a Travis configuration where pkgdown documentation is built during the release R version testing only.
+You can fine tune the deployment of tests with each versions by using a testing matrix.
 
-For a package depending on Bioconductor packages, or a Bioconductor package, [Travis options allow to test on either Bioconductor release or devel (or both)](https://docs.travis-ci.com/user/languages/r/#bioconductor).
+If you develop a package depending on or intended for Bioconductor, you might find [biocthis](https://lcolladotor.github.io/biocthis/index.html) relevant.
 
-#### Minimizing build times on Travis
+#### Minimizing build times on CI
 
-Please use these tips to minimize build time on Travis especially after your package project gets transferred to ropensci Travis account:
+You can use these tips to minimize build time on CI:
 
-* Cache installation of packages. Add `cache: packages` at the beginning of the config file. [Example in the wild](https://github.com/ropensci/crul/blob/ee31c0128fd3279165360ef5ee2a1775ab00c82f/.travis.yml#L3). It'll already be in the config file if you set Travis up using `usethis::use_travis()`.
-
-* [Enable auto-cancellation of builds](https://blog.travis-ci.com/2017-03-22-introducing-auto-cancellation).
-
-* If you have a matrix to test your package on several Travis systems, place any `after_success` or `before_deploy` commands within one single matrix build to avoid them being executed on every matrix build.
+* Cache installation of packages. The default [r-lib/actions](https://github.com/r-lib/actions) do this.
 
 ### AppVeyor CI (Windows)
 
@@ -91,7 +77,7 @@ We no longer transfer AppVeyor projects to ropensci AppVeyor account so after tr
 
 ### Circle CI (Linux and Mac OSX)
 
-[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as an alternative to Travis CI.
+[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as continuous integration service.
 
 
 ## Test coverage {#coverage}

@@ -21,7 +21,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
     If reject, see [this section](#outofscoperesponse) about how to respond.
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
 -   Run automated tests: `spelling::spell_check_package()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Check that documentation is generated using `roxygen2`, not by hand (this isn't part of automatic tests [yet](https://github.com/MangoTheCat/goodpractice/issues/116)). Report relevant outputs in the issue thread.
--   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and AppVeyor for instance).
+-   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 -   Ideally, the remarks you make should be tackled before reviewers start reviewing.
 -   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label](#policiesreviewprocess).
@@ -109,7 +109,6 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     -   Add a CodeMeta file by running `codemetar::write_codemeta()` ([`codemetar` GitHub repo](https://github.com/ropensci/codemetar))
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
-        -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
 -   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
