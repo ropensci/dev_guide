@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2021-01-12, add a sentence about whether it is acceptable to push a new version of a package to CRAN within two weeks of the most recent version if you have just been made aware of, and fixed, a major bug (`@sckott`, #283)
+
 * 2021-01-12, mention the HTTP testing in R book.
 
 * 2021-01-12, mention testthat snapshot tests.
