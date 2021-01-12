@@ -252,7 +252,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * Once you've set up CI, use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
-* `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests will still run on Travis.
+* `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration.
 
 * Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
 
@@ -261,7 +261,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 * Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. 
 
 * You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run.
-* In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the CI systems, e.g. Travis-CI. Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can add `r_check_args: "--run-dontrun"` to run examples wrapped in `\dontrun{}` in your `.travis.yml` (and/or `--run-donttest` if you want to run examples wrapped in `\donttest{}`).
+* In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the [continuous integration systems](#ci). Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can configure your continuous integration builds to run them via R CMD check arguments `--run-dontrun` and/or `--run-donttest`.
 
 ## Package dependencies {#pkgdependencies}
 
@@ -349,8 +349,8 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 * Avoid starting the description with the package name or "This package ...".
 * Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
 * In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*). 
-* Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on Travis.
-* Include top-level files such as `paper.md`, `.travis.yml` in your `.Rbuildignore` file.
+* Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
+* Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.
 
 ### CRAN checks {#cranchecks}
 
