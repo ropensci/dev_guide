@@ -4,6 +4,10 @@
 
 ## dev
 
+* 2021-01-12, mention the HTTP testing in R book.
+
+* 2021-01-12, mention testthat snapshot tests.
+
 * 2021-01-12, remove mentions of Travis CI and link to Jeroen Ooms' blog post about moving away from Travis.
 
 * 2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (@noamross, #293)
