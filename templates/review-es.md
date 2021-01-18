@@ -4,7 +4,7 @@
 
 **Por favor describe cualquier relación de trabajo que tienes/has tenido con los autores del paquete)**
 
-- [ ] Como revisor confirmo que no tengo [conflictos de interés](https://devguide.ropensci.org/policies.html#coi) para poder hacer la revisión de este trabajo (si no estas seguro si tienes un conflicto por favor entra en contacto con tu editor _antes_ de arrancar con la revisión.
+- [ ] Como revisor confirmo que no tengo [conflictos de interés](https://devguide.ropensci.org/policies.html#coi) para poder hacer la revisión de este trabajo (si no estas segura si tienes un conflicto por favor entra en contacto con tu editor _antes_ de arrancar con la revisión.
 
 #### Documentación
 
