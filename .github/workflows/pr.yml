@@ -6,7 +6,7 @@ jobs:
   bookdown:
     name: Render Book
     runs-on: macOS-latest
-    if: github.repository == "ropensci/dev_guide"
+    if: github.repository == 'ropensci/dev_guide'
     steps:
       - name: Is this a fork
         run: |
