@@ -1,8 +1,8 @@
 ## Revisión de un paquete
 
-*Por favor trata de marcar tantas casillas como te es posible y elabora tus argumentos en comentarios abajo de cada uno. Tu revisión no se necesita listar a estos temas, tal como se describe en la guia para revisores (Reviewer Guide)*
+*Por favor trata de marcar tantas casillas como te sea posible y elabora tus argumentos en comentarios abajo de cada una. Tu revisión no esta limitada a estos temas, tal como se describe en la guia para revisores (Reviewer Guide)*
 
-**Por favor describe cualquier relación de trabajo que tienes/has tenido con los autores del paquete)**
+**Por favor describe cualquier relación de trabajo que tengas/hayas tenido con los autores del paquete)**
 
 - [ ] Como revisor confirmo que no tengo [conflictos de interés](https://devguide.ropensci.org/policies.html#coi) para poder hacer la revisión de este trabajo (si no estas segura si tienes un conflicto por favor entra en contacto con tu editor _antes_ de arrancar con la revisión.
 
