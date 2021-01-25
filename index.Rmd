@@ -59,7 +59,7 @@ This book is a living document.
 You can view updates to our best practices and policies via the [release notes](#booknews).  
 You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.5281/zenodo.2553043).
 
-```{r zenodo2, results = 'asis', warning=FALSE}
+```{r zenodo2, echo=FALSE, results = 'asis', warning=FALSE}
 cat("\n```bibtex\n")
 cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
 cat("\n```\n")
