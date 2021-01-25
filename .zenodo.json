@@ -5,6 +5,7 @@
     "version": "0.6.0",
     "upload_type": "software",
     "publication_date": "2021-03-01",
+    "publication_type": "book",
     "creators": [
         {
             "name": "rOpenSci"
