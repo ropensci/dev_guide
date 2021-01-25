@@ -11,10 +11,10 @@
 El paquete incluye todos los siguiente tipos de documentación:
 
 - [ ] **Una declaración de necesidades** que claramente describe las necesidades que el software esta diseñado a resolver y el public meta que busca atender en el archivo README
-- [ ] **Instrucciones de instalación** tanto para la versión en desarrollo incluyendo cualquier dependencia no-estándar en el archivo README
-- [ ] **Vignette(s)** demostrando la funcionalidad principal que ademas corren localmente
-- [ ] **Documentación de las funciones** en la ayuda de R para todas la funciones exportadas
-- [ ] **Ejemplos** para todas las funciones exportadas que corren localmente
+- [ ] **Instrucciones de instalación** de la versión en desarrollo del paquete incluyendo cualquier dependencia no-estándar en el archivo README
+- [ ] **Viñeta(s)** demostrando la funcionalidad principal que ademas corren localmente
+- [ ] **Documentación de las funciones** exportadas
+- [ ] **Ejemplos** (que corren localmente) para todas las funciones exportadas 
 - [ ] **Directrices comunitarias** incluyendo una guia de contribución en el archivo README o el archivo CONTRIBUTING y un archivo DESCRIPTION que incluye `URL`, `BugReports` and `Maintainer` (todas en inglés por concenvión y para que puedan ser autogeneradas con `Authors@R`).
 
 >##### For packages co-submitting to JOSS
@@ -30,8 +30,8 @@ El paquete incluye todos los siguiente tipos de documentación:
 
 #### Funcionalidad
 
-- [ ] **Instalación:** La instalación se completa con éxito tal como fue documentado.
-- [ ] **Funcionalidad:** Todo afirmación de funcionalidad del software se confirma como existente.
+- [ ] **Instalación:** La instalación se completa con éxito tal como fue documentada.
+- [ ] **Funcionalidad:** Toda afirmación de funcionalidad del software se confirma como existente.
 - [ ] **Desempeño:** Toda afirmación de desempeño del software se confirma como alcanzada.
 - [ ] **Pruebas automáticas:** Hay pruebas unitarias que cubren las funciones esenciales dentro del paquete con un rango razonable de entradas y condiciones. Todas las pruebas corren en la maquina local.
 - [ ] **Directrices de empaque**: El paquete cumple con las directrices de empaque de rOpenSci.
