@@ -4,7 +4,9 @@
 
 ## dev
 
-* 2020-01-25, the book has now better citation guidance in case you want to cite this very guide (`@Bisaloo`, #304).
+* 2021-01-25, add a translation of the review template in Spanish (`@Fvd`, `@maurolepore`, #303)
+
+* 2021-01-25, the book has now better citation guidance in case you want to cite this very guide (`@Bisaloo`, #304).
 
 * 2021-01-12, add some more guidance on escaping examples (#290).
 
@@ -208,6 +210,17 @@
 ```
 
 ```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
+
+```
+
+# Review template in Spanish {#reviewtemplatees}
+
+```markdown
+```{r, eval = !knitr::is_latex_output(), child="templates/review-es.md"}
+```
+```
+
+```{r, eval = knitr::is_latex_output(), child="templates/review-es.md"}
 
 ```
 
