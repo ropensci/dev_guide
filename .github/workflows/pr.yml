@@ -6,6 +6,7 @@ jobs:
   bookdown:
     name: Render Book
     runs-on: macOS-latest
+    if: github.repository == "ropensci/dev_guide"
     steps:
       - name: Is this a fork
         run: |
@@ -32,28 +33,26 @@ jobs:
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
       - name: Render book PDF
         run: Rscript -e 'bookdown::render_book("index.Rmd", new_session = FALSE, "bookdown::pdf_book", output_dir = "pdfbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
       - name: Move files around
-        if: env.fork == 'false'
         run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
 
       - uses: actions/setup-node@v1
-        if: env.fork == 'false'
 
       - name: Install Netlify CLI
-        if: env.fork == 'false'
         run: npm install netlify-cli -g
 
       - name: Deploy to Netlify (test)
-        if: env.fork == 'false'
         run: DEPLOY_URL=$(netlify deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --dir=docs --json | jq '.deploy_url' --raw-output);echo "DEPLOY_URL=${DEPLOY_URL}" >> $GITHUB_ENV
+
       - name: Update commit status
-        if: env.fork == 'false'
         run: |
           curl --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.pull_request.head.sha }} \

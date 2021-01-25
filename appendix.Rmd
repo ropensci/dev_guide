@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2020-01-25, the book has now better citation guidance in case you want to cite this very guide (`@Bisaloo`, #304).
+
 * 2021-01-12, add some more guidance on escaping examples (#290).
 
 * 2021-01-12, mention the lifecycle package in the chapter about package evolution (#287).

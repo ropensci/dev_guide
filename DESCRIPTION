@@ -10,7 +10,8 @@ Imports:
   humaniformat,
   bslib,
   downlit,
-  xml2
+  xml2,
+  zen4R
 Remotes: 
   bergant/airtabler,
   rstudio/htmltools,
