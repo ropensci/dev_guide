@@ -11,12 +11,8 @@ To-dos:
     * replace your package docs URL with `https://docs.ropensci.org/package_name`
     * In addition, in your DESCRIPTION file, include the docs link in the `URL` field alongside the link to the GitHub repository, e.g.: `URL: https://docs.ropensci.org/foobar (website) https://github.com/ropensci/foobar`
 - [ ] Fix any links in badges for CI and coverage to point to the ropensci URL. We no longer transfer Appveyor projects to ropensci Appveyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge should be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`. If Appveyor does not pick up new commits after transfer, you might need to delete and re-create the Appveyor project. (Repo transfers are smoother with GitHub Actions)
+- [ ] Please check you updated the package version post-review version updated and that you documented all changes in NEWS.md
 - [ ] We're starting to roll out software metadata files to all ropensci packages via the Codemeta initiative, see https://github.com/ropensci/codemetar/#codemetar for how to include it in your package, after installing the package - should be easy as running codemetar::write_codemeta() in the root of your package.
-<IF JOSS>
-- [ ] Activate Zenodo watching the repo
-- [ ] Tag and create a release so as to create a Zenodo version and DOI
-- [ ] Submit to JOSS at <https://joss.theoj.org/papers/new>, using the rOpenSci GitHub repo URL. When a JOSS "PRE REVIEW" issue is generated for your paper, add the comment: `This package has been reviewed by rOpenSci: https://LINK.TO/THE/REVIEW/ISSUE, @ropensci/editors`
-<IF JOSS/>
 
 Should you want to acknowledge your reviewers in your package DESCRIPTION, you can do so by making them `"rev"`-type contributors in the `Authors@R` field (with their consent).  More info on this [here](https://devguide.ropensci.org/building.html#authorship).
 
