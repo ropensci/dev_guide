@@ -44,7 +44,7 @@ Now, you might need to share secrets with [continuous integration services](#ci)
 
 You could store API keys as environment variables / secrets, referring to the docs of the CI service.
 
-For more details and workflow advice, refer [to the gargle article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html) and the [security chapter of the HTTP testing in R book](https://books.ropensci.org/http-testing/security-chapter.html).
+For more details and workflow advice, refer [to the gargle article "Managing tokens securely"](https://gargle.r-lib.org/articles/articles/managing-tokens-securely.html) and the [security chapter of the HTTP testing in R book](https://books.ropensci.org/http-testing/security-chapter.html).
 
 Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
 
