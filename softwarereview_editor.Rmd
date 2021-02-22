@@ -21,7 +21,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
     If reject, see [this section](#outofscoperesponse) about how to respond.
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
 -   Run automated tests: `spelling::spell_check_package()`, `goodpractice::gp()` (most exceptions will need to be justified by the author in the particular context of their package.), `devtools::spell_check()`. Run `covr::package_coverage()` using `NOT_CRAN` if needed, as well. Check that documentation is generated using `roxygen2`, not by hand (this isn't part of automatic tests [yet](https://github.com/MangoTheCat/goodpractice/issues/116)). Report relevant outputs in the issue thread.
--   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on both Travis and AppVeyor for instance).
+-   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 -   Ideally, the remarks you make should be tackled before reviewers start reviewing.
 -   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label](#policiesreviewprocess).
@@ -37,6 +37,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 ```
 [![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
+-   Also ask the authors to add a NEWS file to their package if there's none yet.
 
 -   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
@@ -62,7 +63,7 @@ As a (guest) editor, use
 * the Airtable database of reviewers and volunteers 
 * and the authors of [rOpenSci packages](https://ropensci.org/packages/). 
 
-When these sources of information are not enough,
+When these sources of information are not enough, 
 
 * ping other editors in Slack for ideas, 
 * look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter). 
@@ -89,7 +90,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 -   In general aim for 3 weeks for review, 2 weeks for
     subsequent changes, and 1 week for reviewer approval of changes.
 -   Upon all reviews being submitted, change the review status tag to
-    `4/review-in-awaiting-changes` to update the reminder bot.
+    `4/review-in-awaiting-changes`.
 -   Update Airtable database: Add the link to the review comment to the `review_url` field and the number of review hours to the `review_hours` field of each review record. 
 - If the author stops responding, refer to [the policies](#package-submission) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
 -   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template]{#approval2template}.
@@ -109,7 +110,6 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     -   Add a CodeMeta file by running `codemetar::write_codemeta()` ([`codemetar` GitHub repo](https://github.com/ropensci/codemetar))
     -   Change any needed links, such those for CI badges
     -   Re-activate CI services
-        -  For Travis, activating the project in the ropensci account should be sufficient
         -  For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors' account. The badge is `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
         -  For Codecov, the webhook may need to be reset by the author.
 -   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.

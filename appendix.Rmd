@@ -4,6 +4,30 @@
 
 ## dev
 
+* 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (`@annakrystalli`, #305)
+
+* 2021-01-25, add a translation of the review template in Spanish (`@Fvd`, `@maurolepore`, #303)
+
+* 2021-01-25, the book has now better citation guidance in case you want to cite this very guide (`@Bisaloo`, #304).
+
+* 2021-01-12, add some more guidance on escaping examples (#290).
+
+* 2021-01-12, mention the lifecycle package in the chapter about package evolution (#287).
+
+* 2021-01-12, require overlap information is put in documentation (#292).
+
+* 2021-01-12, start using the bookdown::bs4_book() template.
+
+* 2021-01-12, add a sentence about whether it is acceptable to push a new version of a package to CRAN within two weeks of the most recent version if you have just been made aware of, and fixed, a major bug (`@sckott`, #283)
+
+* 2021-01-12, mention the HTTP testing in R book.
+
+* 2021-01-12, mention testthat snapshot tests.
+
+* 2021-01-12, remove mentions of Travis CI and link to Jeroen Ooms' blog post about moving away from Travis.
+
+* 2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (`@noamross`, #293)
+
 ## 0.5.0
 
 * 2020-10-08, add help about link checking (`@sckott`, #281)
@@ -146,8 +170,7 @@
 
 * 2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.
 
-* 2019-04-22, use a darker blue for links (feedback by [`@kwstat
-`](https://github.com/kwstat), #138).
+* 2019-04-22, use a darker blue for links (feedback by [`@kwstat`](https://github.com/kwstat), #138).
 
 * 2019-04-22, add book cover.
 
@@ -189,6 +212,17 @@
 ```
 
 ```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
+
+```
+
+# Review template in Spanish {#reviewtemplatees}
+
+```markdown
+```{r, eval = !knitr::is_latex_output(), child="templates/review-es.md"}
+```
+```
+
+```{r, eval = knitr::is_latex_output(), child="templates/review-es.md"}
 
 ```
 

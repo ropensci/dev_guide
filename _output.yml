@@ -1,25 +1,12 @@
-bookdown::gitbook:
-  css: style.css
+bookdown::bs4_book:
+  theme:
+    primary: "#1f58a3"
+    yellow: "#804600"
+    h4-font-size: "1.1rem"
+  repo: https://github.com/ropensci/dev_guide
   includes:
     in_header: matomo.html
-  split_by: chapter
-  config:
-    sharing:
-      github: yes
-      facebook: false
-    toc:
-      collapse: subsection
-      before: |
-        <li><a href="./">rOpenSci Packages: Development, Maintenance, and Peer Review</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    download: [pdf]
-    edit:
-      link: https://github.com/ropensci/dev_guide/edit/dev/%s
-      text: "Edit this chapter"
-    history:
-      link: https://github.com/ropensci/dev_guide/commits/master/%s
-      text: "Chapter edit history"
+
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
