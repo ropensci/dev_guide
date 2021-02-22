@@ -3,7 +3,7 @@
     "license": {"id":"CC-BY-4.0"},
     "title": "rOpenSci Packages: Development, Maintenance, and Peer Review",
     "version": "0.6.0",
-    "upload_type": "book",
+    "upload_type": "software",
     "publication_date": "2021-02-22",
     "publication_type": "book",
     "creators": [
