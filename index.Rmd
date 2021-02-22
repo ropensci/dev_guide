@@ -20,7 +20,7 @@ favicon: "images/favicon.ico"
 
 # {-}
 
-```{r, echo = FALSE, fig.cap="cover image"}
+```{r, echo = FALSE, fig.cap="cover image", out.width="100%"}
 knitr::include_graphics("images/cover.png")
 ```
 
