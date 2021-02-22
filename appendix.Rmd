@@ -2,7 +2,7 @@
 
 # NEWS {#booknews}
 
-## dev
+## 0.6.0
 
 * 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (`@annakrystalli`, #305)
 
