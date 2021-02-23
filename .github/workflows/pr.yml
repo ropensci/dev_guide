@@ -21,7 +21,7 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v1
 
       - name: Cache R packages
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ hashFiles('DESCRIPTION') }}
