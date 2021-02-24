@@ -2,6 +2,10 @@
 
 # NEWS {#booknews}
 
+## dev
+
+* 2021-02-24, add guidance around the use of `@ropensci-review-bot`.
+
 ## 0.6.0
 
 * 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (`@annakrystalli`, #305)
