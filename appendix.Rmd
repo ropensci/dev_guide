@@ -2,6 +2,10 @@
 
 # NEWS {#booknews}
 
+## dev
+
+* 2021-02-24, add guidance around the use of `@ropensci-review-bot`.
+
 ## 0.6.0
 
 * 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (`@annakrystalli`, #305)
@@ -204,25 +208,40 @@
 
 * Added a `NEWS.md` file to track changes to the book.
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+fs::dir_create("templaaates")
+save_one <- function(file) {
+  download.file(
+    sprintf("https://raw.githubusercontent.com/ropensci/software-review/master/.buffy/templates/%s", file),
+    file.path("templaaates", file)
+  )
+}
+
+lapply(
+  c("approved.md", "editor.md", "review-es.md", "review.md", "reviewer-approval.md"),
+  save_one
+)
+```
+
 # Review template {#reviewtemplate}
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/review.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/review.md"}
 
 ```
 
 # Review template in Spanish {#reviewtemplatees}
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/review-es.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/review-es.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/review-es.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/review-es.md"}
 
 ```
 
@@ -232,11 +251,11 @@
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/editor.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/editor.md"}
 
 ```
 
@@ -257,11 +276,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/approved.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/approved.md"}
 
 ```
 
@@ -269,11 +288,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
 
 ```
 
@@ -296,6 +315,10 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+fs::dir_delete("templaaates")
 ```
 
 # How to set a redirect {#redirect}
