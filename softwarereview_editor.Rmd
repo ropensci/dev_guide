@@ -155,7 +155,7 @@ When inviting a guest editor,
 If the person said yes (yay!),
 
 - Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
-- Give them write access to the software-review repository,
+- Invite them to the `ropensci/editors` team and to the ropensci organization,
 - Once they've accepted this repo invitation, assign the issue to them,
 - Ensure they're (already) invited to rOpenSci Slack workspace,
 - Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
@@ -163,7 +163,7 @@ If the person said yes (yay!),
 After the review process is finished (package approved, issue closed), 
 
 - Thank the guest editor again,
-- Remove their write access from the software-review repository.
+- Remove them from the `ropensci/editors` team (but not from the ropensci organization).
 
 
 ## Responding to out-of-scope submissions {#outofscoperesponse}
