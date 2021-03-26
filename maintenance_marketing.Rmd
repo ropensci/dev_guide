@@ -10,9 +10,9 @@ We will help you promoting your package but here are some more things to keep in
 
     * Make a pull request to [R Weekly](https://github.com/rweekly/rweekly.org) with a line about the release under the "New Releases" section (or "New Packages" for the first GitHub/CRAN release).
     
-    * Tweet about it using the "#rstats" hashtag and tag rOpenSci! [Example](https://twitter.com/opencpu/status/1003934871830622208?ref_src=twsrc%5Etfw).
+    * Tweet about it using the "#rstats" hashtag and tag rOpenSci! [Example](https://twitter.com/opencpu/status/1003934871830622208).
 
-    * Consider submitting a short post about the release to [rOpenSci tech notes](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci Community Manager, (e.g. via Slack or stefaniebutland@gmail.com). Refer to [the guidelines about contributing a blog post](https://blogguide.ropensci.org)).
+    * Consider submitting a short post about the release to [rOpenSci tech notes](https://ropensci.org/technotes/). Contact Stefanie Butland, rOpenSci Community Manager, (e.g. via Slack or stefanie@ropensci.org). Refer to [the guidelines about contributing a blog post](https://blogguide.ropensci.org)).
     
     * Submit your package to lists of packages such as [CRAN Task Views](https://cran.r-project.org/web/views/), and [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
     

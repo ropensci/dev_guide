@@ -7,7 +7,8 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: ropenscilabs/dev_guide
+github-repo: ropensci/dev_guide
+twitter-handle: ropensci
 url: 'https\://devguide.ropensci.org/'
 description: "Extended version of the rOpenSci packaging guide. This book is a guide for authors, maintainers, reviewers and editors of rOpenSci. The first section of the book contains our guidelines for creating and testing R packages. The second section is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. The third and last section features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a chapter for anyone wishing to start contributing to rOpenSci packages."
 cover-image: images/cover.png
@@ -19,13 +20,26 @@ favicon: "images/favicon.ico"
 
 # {-}
 
-```{r, echo = FALSE, fig.cap="cover image"}
+```{r, echo = FALSE, fig.cap="cover image", out.width="100%"}
 knitr::include_graphics("images/cover.png")
 ```
 
 <a href="https://doi.org/10.5281/zenodo.2553043"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2553043.svg?branch=master" alt="DOI"></a>
 
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> This work is licensed under [a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Refer to [its Zenodo DOI](https://doi.org/10.5281/zenodo.2553043) to cite it.
+
+```{r zenodo, echo=FALSE, results = 'asis', warning=FALSE}
+cat("\n```bibtex\n")
+zenodo <- zen4R::ZenodoManager$new(
+  token = Sys.getenv("ZENODO_TOKEN")
+)
+guide <- zenodo$getDepositionByConceptDOI("10.5281/zenodo.2553043")
+guide$exportAsBibTeX("dev_citation")
+cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
+cat("\n```\n")
+```
+
+You can also read the [PDF version](/ropensci-dev-guide.pdf) of this book.
 
 # Preface {-}
 
@@ -44,6 +58,13 @@ The rOpenSci editorial team.
 This book is a living document. 
 You can view updates to our best practices and policies via the [release notes](#booknews).  
 You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.5281/zenodo.2553043).
+
+```{r zenodo2, echo=FALSE, results = 'asis', warning=FALSE}
+cat("\n```bibtex\n")
+cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
+cat("\n```\n")
+done <- file.remove("dev_citation_BibTeX.bib")
+```
 
 _If you want to contribute to this book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_
 

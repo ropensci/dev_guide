@@ -1,13 +1,21 @@
 Package: placeholder
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
+Description: rOpenSci Packages: Development, Maintenance, and Peer Review
 Version: 0.0.1
 Imports:
   airtabler,
   htmltools,
   bookdown,
   purrr,
-  humaniformat
+  humaniformat,
+  bslib,
+  downlit,
+  xml2,
+  zen4R
 Remotes: 
   bergant/airtabler,
-  rstudio/htmltools
+  rstudio/htmltools,
+  rstudio/bookdown,
+  rstudio/bslib,
+  r-lib/downlit

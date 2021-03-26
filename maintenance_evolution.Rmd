@@ -10,6 +10,11 @@ _This chapter was initially contributed as a tech note on rOpenSci website by [S
 
 Everyone's free to have their own opinion about how freely parameters/functions/etc. are changed in a library - rules about package changes are not enforced by CRAN or otherwise. Generally, as a library gets more mature, changes to user facing methods (i.e., exported functions in an R package) should become very rare. Libraries that are dependencies of many other libraries are likely to be more careful about changes, and should be. 
 
+## The lifecycle package
+
+This chapter presents solutions that do not require the lifecycle package but you might still find it useful.
+We recommend [reading the lifecycle documentation](https://lifecycle.r-lib.org/articles/lifecycle.html).
+
 ## Parameters: changing parameter names
 
 Sometimes parameter names must be changed for clarity, or some other reason. 

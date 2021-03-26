@@ -17,7 +17,7 @@ This book contains our guidelines for packages contributed to [the rOpenSci suit
 
 Deployment is done via GitHub Actions: 
 
-* whenever there's a push to `master`, the book is built and its content is then pushed from Travis to the `gh-pages` branch.
+* whenever there's a push to `master`, the book is built and its content is then pushed to the `gh-pages` branch.
 
 * whenever there's a push to `dev`, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
 

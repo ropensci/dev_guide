@@ -17,7 +17,7 @@ Note that when installing the package to review it, you should use the `dependen
 
 ### General guidelines
 
-To review a package, please begin by copying our [review template](#reviewtemplate) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
+To review a package, please begin by copying our [review template](#reviewtemplate) (or our [review template in Spanish](#reviewtemplatees)) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the code comply with general principles in the [Mozilla reviewing guide](https://mozillascience.github.io/codeReview/review.html)?
 - Does the package comply with the [rOpenSci packaging guide](#building)?
@@ -33,7 +33,7 @@ Please be respectful and kind to the authors in your reviews. Our [code of condu
 
 We encourage you to use automated tools to facilitate your reviewing.  These include:
 
--  Checking the package's logs on its continuous integration services (Travis-CI, Codecov, etc.)
+-  Checking the package's logs on its continuous integration services (GitHub Actions, Codecov, etc.)
 -  Running `devtools::check()` and `devtools::test()` on the package to find any errors that may be missed on the author's system.
 -  Using the **covr** package to examine the extent of test coverage.
 -  Using the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) to identify likely sources of errors and style issues. Most exceptions will need to be justified by the author in the particular context of their package.
@@ -57,15 +57,15 @@ First-time reviewers may find it helpful to read (about) some previous reviews. 
 
 You can read blog posts written by reviewers about their experiences [via this link](https://ropensci.org/tags/reviewer/). In particular, in [this blog post by Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) read about the "naive user" role a reviewer can take to provide useful feedback even without being experts of the package's topic or implementation, by asking themselves _"What did I think this thing would do? Does it do it? What are things that scare me off?"_. In [another blog post](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explains how she alternated between using the package and checking its code.
 
-As both a former reviewer and package author [Adam Sparks](https://adamhsparks.github.io/) [wrote this](https://twitter.com/adamhsparks/status/898132036451303425) "[write] a good critique of the package structure and best coding practices. If you know how to do something better, tell me. It’s easy to miss documentation opportunities as a developer, as a reviewer, you have a different view. You’re a user that can give feedback. What’s not clear in the package? How can it be made more clear? If you’re using it for the first time, is it easy? Do you know another R package that maybe I should be using? Or is there one I’m using that perhaps I shouldn’t be? If you can contribute to the package, offer."
+As both a former reviewer and package author [Adam Sparks](https://adamhsparks.com/) [wrote this](https://twitter.com/adamhsparks/status/898132036451303425) "[write] a good critique of the package structure and best coding practices. If you know how to do something better, tell me. It’s easy to miss documentation opportunities as a developer, as a reviewer, you have a different view. You’re a user that can give feedback. What’s not clear in the package? How can it be made more clear? If you’re using it for the first time, is it easy? Do you know another R package that maybe I should be using? Or is there one I’m using that perhaps I shouldn’t be? If you can contribute to the package, offer."
 
 
 ### Helper package for reviewers
 
-If working in RStudio, you can streamline your review workflow by using the [`pkgreviewr` package](https://github.com/ropenscilabs/pkgreviewr) created by associated editor Anna Krystalli. Say you accepted to review the `refnet` package, you'd write
+If working in RStudio, you can streamline your review workflow by using the [`pkgreviewr` package](https://github.com/ropensci-org/pkgreviewr) created by associated editor Anna Krystalli. Say you accepted to review the `refnet` package, you'd write
 
 ```r
-remotes::install_github("ropenscilabs/pkgreviewr")
+remotes::install_github("ropensci-org/pkgreviewr")
 library(pkgreviewr)
 pkgreview_create(pkg_repo = "embruna/refnet", 
                  review_parent = "~/Documents/workflows/rOpenSci/reviews/")

@@ -4,6 +4,34 @@
 
 ## dev
 
+* 2021-02-24, add guidance around the use of `@ropensci-review-bot`.
+
+## 0.6.0
+
+* 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (`@annakrystalli`, #305)
+
+* 2021-01-25, add a translation of the review template in Spanish (`@Fvd`, `@maurolepore`, #303)
+
+* 2021-01-25, the book has now better citation guidance in case you want to cite this very guide (`@Bisaloo`, #304).
+
+* 2021-01-12, add some more guidance on escaping examples (#290).
+
+* 2021-01-12, mention the lifecycle package in the chapter about package evolution (#287).
+
+* 2021-01-12, require overlap information is put in documentation (#292).
+
+* 2021-01-12, start using the bookdown::bs4_book() template.
+
+* 2021-01-12, add a sentence about whether it is acceptable to push a new version of a package to CRAN within two weeks of the most recent version if you have just been made aware of, and fixed, a major bug (`@sckott`, #283)
+
+* 2021-01-12, mention the HTTP testing in R book.
+
+* 2021-01-12, mention testthat snapshot tests.
+
+* 2021-01-12, remove mentions of Travis CI and link to Jeroen Ooms' blog post about moving away from Travis.
+
+* 2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (`@noamross`, #293)
+
 ## 0.5.0
 
 * 2020-10-08, add help about link checking (`@sckott`, #281)
@@ -180,14 +208,40 @@
 
 * Added a `NEWS.md` file to track changes to the book.
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+fs::dir_create("templaaates")
+save_one <- function(file) {
+  download.file(
+    sprintf("https://raw.githubusercontent.com/ropensci/software-review/master/.buffy/templates/%s", file),
+    file.path("templaaates", file)
+  )
+}
+
+lapply(
+  c("approved.md", "editor.md", "review-es.md", "review.md", "reviewer-approval.md"),
+  save_one
+)
+```
+
 # Review template {#reviewtemplate}
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/review.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/review.md"}
+
+```
+
+# Review template in Spanish {#reviewtemplatees}
+
+```markdown
+```{r, eval = !knitr::is_latex_output(), child="templaaates/review-es.md"}
+```
+```
+
+```{r, eval = knitr::is_latex_output(), child="templaaates/review-es.md"}
 
 ```
 
@@ -197,11 +251,11 @@
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/editor.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/editor.md"}
 
 ```
 
@@ -222,11 +276,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/approved.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/approved.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/approved.md"}
 
 ```
 
@@ -234,11 +288,11 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```{r, eval = !knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+```{r, eval = knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
 
 ```
 
@@ -261,6 +315,10 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+fs::dir_delete("templaaates")
 ```
 
 # How to set a redirect {#redirect}
@@ -287,4 +345,4 @@ You can setup the redirect from your main user gh-pages repository:
  - create a new repository (if you don't have one yet): `https://github.com/<username>/<username>.github.io`
  - In this repository create a directory `<pkgname>` containing the file `index.html` that redirects to the new location (see previous subsection)
  - Test that https://<username>.github.io/<pkgname>/index.html now redirects
- - Optional: you could even create a `404.html` file in your `<username>.github.io` repo to redirect arbitrary pages, like here: https://github.com/ropensci/ropensci.github.io.
+ - Optional: you could even create a `404.html` file in your `<username>.github.io` repo to redirect arbitrary pages.

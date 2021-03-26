@@ -12,9 +12,11 @@ Note that you could streamline the process of updating NEWS and versioning your 
 
 ## Releasing
 
-* Using `devtools::release()` will help you remember about more checks. See [this issue](https://github.com/r-lib/usethis/issues/338) for a more thorough checklist to go through when releasing a new package version.
+* Using `usethis::use_release_issue()` and `devtools::release()` will help you remember about more checks.
 
 * Git tag each release after every submission to CRAN. [more info](https://help.github.com/articles/creating-releases/)
+
+* CRAN does not like too frequent updates. That said, if you notice a major problem one week after a CRAN release, explain it in cran-comments.md and try releasing a newer version.
 
 
 ## News file {#news}

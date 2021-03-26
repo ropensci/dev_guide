@@ -23,7 +23,7 @@ the software review repository and fill out the template.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 -   An [editor](#editors) will review your submission within 5 business days and respond with next steps. The editor may assign the package to reviewers, request that the package be updated to meet minimal criteria before review, or reject the package due to lack of fit or overlap.
 -   If your package meets minimal criteria, the editor will assign  1-3 reviewers. They will be asked to provide reviews as comments on your issue within 3 weeks.
--   We ask that you respond to reviewers' comments within 2 weeks of the last-submitted review, but you may make updates to your package or respond at any time. Here is [an author response example](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  We encourage ongoing conversations between authors and reviewers. See the [reviewing guide](#reviewerguide) for more details.
+-   We ask that you respond to reviewers' comments within 2 weeks of the last-submitted review, but you may make updates to your package or respond at any time. Your response should include a link to the updated [NEWS.md](#news) of your package. Here is [an author response example](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  We encourage ongoing conversations between authors and reviewers. See the [reviewing guide](#reviewerguide) for more details.
 -   Once your package is approved, we will provide further instructions about the transfer of your repository to the rOpenSci repository.
 
 Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process.

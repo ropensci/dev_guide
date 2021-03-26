@@ -10,7 +10,7 @@ We have a call for contributors section in our newsletter that comes out every t
 
 ## Do you want to take over maintenance of a package?
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called _Call For Contributors_. In that section we highlight packages looking for new maintainers. If you are not subscribed to the newsletter already, it's a good idea to subscribe to get notified when there's a package looking for a new maintainer.
+We have a call for contributors section in our newsletter that comes out every two weeks. The section is called _Call For Contributors_. In that section we highlight packages looking for new maintainers. If you are not subscribed to the newsletter already, it's a good idea to [subscribe](https://news.ropensci.org/) to get notified when there's a package looking for a new maintainer.
 
 ## Taking over maintenance of a package
 

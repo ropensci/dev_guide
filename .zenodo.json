@@ -1,10 +1,11 @@
 {
-    "description": "rOpenSci Packages: Development, Maintenance, and Peer Review",
+    "description": "Extended version of the rOpenSci packaging guide. This book is a guide for authors, maintainers, reviewers and editors of rOpenSci. The first section of the book contains our guidelines for creating and testing R packages. The second section is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. The third and last section features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a chapter for anyone wishing to start contributing to rOpenSci packages.",
     "license": {"id":"CC-BY-4.0"},
-    "title": "ropensci/dev_guide: Fourth release",
-    "version": "0.4.0",
+    "title": "rOpenSci Packages: Development, Maintenance, and Peer Review",
+    "version": "0.6.0",
     "upload_type": "software",
-    "publication_date": "2020-10-12",
+    "publication_date": "2021-02-22",
+    "publication_type": "book",
     "creators": [
         {
             "name": "rOpenSci"
@@ -15,39 +16,53 @@
         },
         {
             "name": "Scott Chamberlain",
-            "affiliation": "rOpenSci"
-        },
-        {
-            "name": "Anna Krystalli",
-            "affiliation": "University of Sheffield RSE"
-        },
-        {
-            "name": "Lincoln Mullen",
-            "affiliation": "George Mason University"
-        },
-        {
-            "name": "Karthik Ram",
-            "affiliation": "rOpenSci"
-        },
-        {
-            "name": "Noam Ross",
-            "affiliation": "EcoHealth Alliance"
-        },
-        {
-            "name": "Ma\u00eblle Salmon",
-            "affiliation": "rOpenSci"
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0003-1444-9135"
         },
         {
             "name": "Laura DeCicco",
-            "affiliation": "USGS"
-        },
-        {
-            "name": "Mauro Lepore",
-            "affiliation": "2 Degrees Investing Initiative"
+            "affiliation": "USGS",
+            "orcid": "0000-0002-3915-9487"
         },
         {
             "name": "Julia Gustavsen",
-            "affiliation": "SOPHiA GENETICS"
+            "affiliation": "SOPHiA GENETICS",
+            "orcid": "0000-0002-4764-4802"
+        },
+        {
+            "name": "Anna Krystalli",
+            "affiliation": "University of Sheffield RSE",
+            "orcid": "0000-0002-2378-4915"
+        },
+        {
+            "name": "Mauro Lepore",
+            "affiliation": "2 Degrees Investing Initiative",
+            "orcid": "0000-0002-1986-7988"
+        },
+        {
+            "name": "Lincoln Mullen",
+            "affiliation": "George Mason University",
+            "orcid": "0000-0001-5103-6917"
+        },
+        {
+            "name": "Karthik Ram",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-0233-1757"
+        },
+        {
+            "name": "Noam Ross",
+            "affiliation": "EcoHealth Alliance",
+            "orcid": "0000-0002-2136-0000"
+        },
+        {
+            "name": "Ma\u00eblle Salmon",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-2815-0399"
+        },
+        {
+            "name": "Melina Vidoni",
+            "affiliation": "RMIT University (School of Science)",
+            "orcid": "0000-0002-4099-1430"
         }
     ],
     "access_right": "open"

@@ -34,25 +34,23 @@ You'll need to protect your secrets as you protect secrets of users, but there's
 
 #### Secrets and recorded requests in tests
 
-If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
+If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security-chapter.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
 
 `vcr` being an rOpenSci package, you can post any question you might have to [rOpenSci forum](https://discuss.ropensci.org/)
 
 #### Share secrets with CI services
 
-Now, you might need to share secrets with CI services such as Travis or GitHub Actions.
+Now, you might need to share secrets with [continuous integration services](#ci).
 
 You could store API keys as environment variables / secrets, referring to the docs of the CI service.
 
-For more details and workflow advice, refer [to the gargle article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html).
+For more details and workflow advice, refer [to the gargle article "Managing tokens securely"](https://gargle.r-lib.org/articles/articles/managing-tokens-securely.html) and the [security chapter of the HTTP testing in R book](https://books.ropensci.org/http-testing/security-chapter.html).
 
 Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
 
 #### Secrets and collaborations
 
-What about pull requests from external contributors? Tests using your secrets will fail, so you might want to skip them depending on the context. For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
-
-You could also choose [a more complicated setup](https://blog.algolia.com/travis-encrypted-variables-external-contributions/).
+What about pull requests from external contributors? Tests using your secrets will fail unless you use some sort of mocked/cached response, so you might want to skip them depending on the context. For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
 
 Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles) for the sake of people making PRs and of people reviewing them (you in a few weeks, and other authors of the package).
 
