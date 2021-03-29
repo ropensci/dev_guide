@@ -17,7 +17,7 @@ Note that when installing the package to review it, you should use the `dependen
 
 ### General guidelines
 
-To review a package, please begin by copying our [review template](#reviewtemplate) (or our [review template in Spanish](#reviewtemplatees)) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
+To review a package, please begin by copying our [review template](https://github.com/ropensci/dev_guide/blob/master/templates/review.md) (or our [review template in Spanish](https://github.com/ropensci/dev_guide/blob/master/templates/review-es.md)) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the code comply with general principles in the [Mozilla reviewing guide](https://mozillascience.github.io/codeReview/review.html)?
 - Does the package comply with the [rOpenSci packaging guide](#building)?
