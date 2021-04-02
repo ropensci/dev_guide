@@ -66,6 +66,57 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 * You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case. 
 
+## CITATION file
+
+* Create and populate the CITATION file. It's easy to create a boilerplate with `usethis::use_citation()`.
+* Archive each release of your GitHub repo on Zenodo and add the [Zenodo top-level DOI](https://help.zenodo.org/#versioning) to the CITATION file.
+* If one day **after** review at rOpenSci you publish a software publication about your package, add it to the CITATION file.
+* Less related to your package itself but to what supports it: if your package wraps a particular resource such as data source or, say, statistical algorithm, remind users of how to cite that resource via e.g. `citHeader()`. [Maybe even add the reference for the resource](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312). 
+
+As an example see [nasapower CITATION file](https://github.com/ropensci/nasapower/blob/master/inst/CITATION) that refers to both the manual and a paper.
+All it lacks is a [Zenodo DOI](https://discuss.ropensci.org/t/should-the-ropensci-dev-guide-include-package-citation-best-practices/1551/15) for the manual -- although most users would probably end up citing the JOSS paper.
+
+```r
+citHeader("While nasapower does not redistribute the data in any way,\n",
+          "we encourage users to follow the requests of the POWER\n",
+          "Project Team:\n",
+          "\n",
+          "'When POWER data products are used in a publication, we\n",
+          "request the following acknowledgment be included:\n",
+          "These data were obtained from the NASA Langley Research\n",
+          "Center POWER Project funded through the NASA Earth Science\n",
+          "Directorate Applied Science Program.'\n",
+          "\n",
+          "To cite nasapower in publications, please use:")
+citEntry(
+  entry = "Article",
+  author = as.person("Adam H Sparks"),
+  title = "nasapower: A NASA POWER Global Meteorology, Surface Solar Energy and Climatology Data Client for R",
+  doi = "10.21105/joss.01035",
+  year = 2018,
+  month = "oct",
+  publisher = "The Open Journal",
+  volume = 3,
+  number = 30,
+  pages = 1035,
+  journal = "The Journal of Open Source Software",
+  textVersion = paste("Sparks, Adam (2018). nasapower: A NASA POWER Global Meteorology, Surface Solar Energy and Climatology Data Client for R. Journal of Open Source Software, 3(30), 1035, https://doi.org/10.21105/joss.01035"))
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+bibentry(bibtype = "Manual",
+         title = "{nasapower}: NASA-POWER Data from R",
+         author = c(person("Adam", "Sparks")),
+         year = year,
+         note = note,
+	 url = "https://CRAN.R-project.org/package=nasapower")
+ textVersion = paste0("Adam H Sparks, (", year, ").",
+  " nasapower: A NASA POWER Global Meteorology, Surface Solar Energy and Climatology Data Client for R. ",
+  note, ".",
+  " https://CRAN.R-project.org/package=nasapower")
+```
+
+
+
 ## README
 
 * All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
@@ -77,7 +128,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
     * Any additional setup required (authentication tokens, etc)
     * Brief demonstration usage
     * If applicable, how the package compares to other similar packages and/or how it relates to other packages
-    * Citation information
+    * Citation information i.e. Direct users to the preferred citation in the README by adding boilerplate text "here's how to cite my package". See e.g. [ecmwfr README](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
 
 
 If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](https://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
