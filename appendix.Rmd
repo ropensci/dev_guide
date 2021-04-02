@@ -8,6 +8,8 @@
 
 * 2021-04-02, stop asking reviewers to run goodpractice as this is part of editorial checks.
 
+* 2021-03-23, launched a new form for reviewer volunteering.
+
 * 2021-02-24, add guidance around the use of `@ropensci-review-bot`.
 
 ## 0.6.0
