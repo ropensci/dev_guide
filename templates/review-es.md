@@ -16,6 +16,9 @@ El paquete incluye todos los siguiente tipos de documentación:
 - [ ] **Documentación de las funciones** exportadas
 - [ ] **Ejemplos** (que corren localmente) para todas las funciones exportadas 
 - [ ] **Directrices comunitarias** incluyendo una guia de contribución en el archivo README o el archivo CONTRIBUTING y un archivo DESCRIPTION que incluye `URL`, `BugReports` and `Maintainer` (todas en inglés por concenvión y para que puedan ser autogeneradas con `Authors@R`).
+
+#### Functionality
+
 - [ ] **Instalación:** La instalación se completa con éxito tal como fue documentada.
 - [ ] **Funcionalidad:** Toda afirmación de funcionalidad del software se confirma como existente.
 - [ ] **Desempeño:** Toda afirmación de desempeño del software se confirma como alcanzada.
