@@ -9,7 +9,7 @@ Imports:
   bookdown,
   purrr,
   humaniformat,
-  bslib (>= 0.2.4.9002),
+  bslib,
   downlit,
   xml2,
   zen4R
@@ -17,5 +17,4 @@ Remotes:
   bergant/airtabler,
   rstudio/htmltools,
   rstudio/bookdown,
-  rstudio/bslib,
   r-lib/downlit
