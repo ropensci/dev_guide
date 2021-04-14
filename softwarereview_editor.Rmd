@@ -96,7 +96,6 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 
 ### Package promotion:
 
--   Alert maintainers of appropriate [task views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults)
 -   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
 
 
