@@ -9,7 +9,7 @@ Imports:
   bookdown,
   purrr,
   humaniformat,
-  bslib,
+  bslib (>= 0.2.4.9002),
   downlit,
   xml2,
   zen4R
