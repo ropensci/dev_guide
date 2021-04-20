@@ -1,3 +1,7 @@
+p {
+  text-align: justify;
+}
+
 p.caption {
   color: #777;
   margin-top: 10px;
