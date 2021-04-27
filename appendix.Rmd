@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2021-04-27, no longer ask reviewers to ask covr as it'll be done by automatic tools, but ask them to pay attention to tests skipped.
+
 * 2021-04-02, add citation guidance.
 
 * 2021-04-02, stop asking reviewers to run goodpractice as this is part of editorial checks.

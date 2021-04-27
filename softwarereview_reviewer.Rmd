@@ -13,7 +13,7 @@ _If you use our standards/checklists etc. when reviewing software elsewhere, do 
 
 ## Preparing your review
 
-Note that when installing the package to review it, you should use the `dependencies = TRUE` argument of `devtools::install()` to make sure you have all dependencies available.
+Note that when installing the package to review it, you should use the `dependencies = TRUE` argument of `remotes::install()` to make sure you have all dependencies available.
 
 ### General guidelines
 
@@ -35,7 +35,7 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 
 -  Checking the package's logs on its continuous integration services (GitHub Actions, Codecov, etc.)
 -  Running `devtools::check()` and `devtools::test()` on the package to find any errors that may be missed on the author's system.
--  Using the **covr** package to examine the extent of test coverage.
+-  Seeing whether tests' skipping is justified (e.g. `skip_on_cran()` tests that do real API requests vs. skipping all tests on one operating system).
 
 ### Off-thread interactions
 
