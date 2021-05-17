@@ -121,13 +121,13 @@ bibentry(bibtype = "Manual",
 
 * All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
 
-    * The package name
+    * The package name.
     * Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges. If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table should be more wide than high.
     * Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
-    * Installation instructions
-    * Any additional setup required (authentication tokens, etc)
-    * Brief demonstration usage
-    * If applicable, how the package compares to other similar packages and/or how it relates to other packages
+    * Installation instructions.
+    * Any additional setup required (authentication tokens, etc).
+    * Brief demonstration usage.
+    * If applicable, how the package compares to other similar packages and/or how it relates to other packages.
     * Citation information i.e. Direct users to the preferred citation in the README by adding boilerplate text "here's how to cite my package". See e.g. [ecmwfr README](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
 
 
@@ -157,11 +157,11 @@ can be found at *link*".
 
 * We recommend not creating `README.md` directly, but from a `README.Rmd` file (an R Markdown file) if you have any demonstration code. The advantage of the `.Rmd` file is you can combine text with code that can be easily updated whenever your package is updated.
 
-* Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website)
-
 * Consider using `usethis::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
-* Add a code of conduct and contribution guidelines, cf [this section of the book](#friendlyfiles).
+* Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website).
+
+* Add a [code of conduct and contribution guidelines](#friendlyfiles).
 
 * See the [`gistr` README](https://github.com/ropensci/gistr#gistr) for a good example README to follow for a small package, and [`bowerbird` README](https://github.com/ropensci/bowerbird) for a good example README for a larger package.
 
@@ -203,7 +203,7 @@ can be found at *link*".
 
 * All functions should document the type of object returned under the `@return` heading.
 
-* We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [this section of Hadley Wickham's book](https://r-pkgs.org/man.html) and [this section of the present chapter](#function-grouping) for more details.
+* We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
 
 * You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
 
@@ -227,7 +227,7 @@ Others have used the option to escape some URLs (change `<https://ropensci.org/>
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). [Here](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) is a good tutorial to get started with `pkgdown`, and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). Neal Richardson wrote [a good tutorial to get started with `pkgdown`](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/), and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
 

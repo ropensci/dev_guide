@@ -12,7 +12,8 @@ Imports:
   bslib,
   downlit,
   xml2,
-  zen4R
+  zen4R,
+  usethis
 Remotes: 
   bergant/airtabler,
   rstudio/htmltools,
