@@ -341,11 +341,11 @@ An example of bad practice would be for a developer to consider the versions of 
 
 * If your package uses a _system_ dependency, you should 
     
-    * indicate it in DESCRIPTION
+    * Indicate it in DESCRIPTION;
     
-    * Check that it is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) to allow automatic tools to install it, and [submit a contribution](https://github.com/r-hub/sysreqsdb#contributing) if not.
+    * Check that it is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) to allow automatic tools to install it, and [submit a contribution](https://github.com/r-hub/sysreqsdb#contributing) if not;
     
-    * check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)). 
+    * Check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)). 
   `configure` scripts can be challenging as they often require hacky solutions
   to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
 
@@ -382,7 +382,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
     * Some dependencies are preferred because they provide easier to interpret
       function names and syntax than base R solutions. If this is the primary
       reason for using a function in a heavy dependency, consider wrapping
-      the base R approach in a nicely-named internal function in your package.
+      the base R approach in a nicely-named internal function in your package. See e.g. the [rlang R script providing functions with a syntax similar to purrr functions](https://github.com/r-lib/rlang/blob/master/R/compat-purrr.R).
 
     * If dependencies have overlapping functionality, see if you can rely on only one.
     
