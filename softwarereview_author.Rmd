@@ -1,4 +1,4 @@
-# Guide for Authors
+# Guide for Authors {#authors-guide}
 
 ```{block, type='summaryblock'}
 This concise guide presents the software peer review process for you as a package author.

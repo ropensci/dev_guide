@@ -39,14 +39,14 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
     * Consider an `object_verb()` naming scheme for functions in your package that take a common data type or interact with a common API. `object` refers to the data/API and `verb` the primary action.  This scheme helps avoid namespace conflicts with packages that may have similar verbs, and makes code readable and easy to auto-complete.  For instance, in **stringi**, functions starting with `stri_` manipulate strings (`stri_join()`, `stri_sort()`, and in **googlesheets** functions starting with `gs_` are calls to the Google Sheets API (`gs_auth()`, `gs_user()`, `gs_download()`).
 
-* For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operator (`%>%`)
+* For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operator (`%>%`).
 
 
 * We strongly recommend `snake_case` over all other styles unless you are porting over a package that is already in wide use.
 
 * Avoid function name conflicts with base packages or other popular ones (e.g. `ggplot2`, `dplyr`, `magrittr`, `data.table`)
 
-    * Argument naming and order should be consistent across functions that use similar inputs.
+* Argument naming and order should be consistent across functions that use similar inputs.
 
 * Package functions importing data should not import data to the global environment, but instead must return objects. Assignments to the global environment are to be avoided in general.
 
@@ -56,13 +56,13 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Interactive/Graphical Interfaces
 
-If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow , include a mechanism to automatically reproduce steps taken in the GUI.  This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
+If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow, include a mechanism to automatically reproduce steps taken in the GUI.  This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
 
-The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are https://gdancik.shinyapps.io/shinyGEO/, and https://github.com/wallaceEcoMod/wallace/
+The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are https://gdancik.shinyapps.io/shinyGEO/, and https://github.com/wallaceEcoMod/wallace/.
 
 ## Code Style
 
-* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in The R Packages book](https://r-pkgs.org/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling.
+* For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in The R Packages book](https://r-pkgs.org/r.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling. We suggest reading the [Tidyverse style guide](https://style.tidyverse.org/).
 
 * You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case. 
 
@@ -70,7 +70,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 * Create and populate the CITATION file. It's easy to create a boilerplate with `usethis::use_citation()`.
 * Archive each release of your GitHub repo on Zenodo and add the [Zenodo top-level DOI](https://help.zenodo.org/#versioning) to the CITATION file.
-* If one day **after** review at rOpenSci you publish a software publication about your package, add it to the CITATION file.
+* If one day [**after** review at rOpenSci](#authors-guide) you publish a software publication about your package, add it to the CITATION file.
 * Less related to your package itself but to what supports it: if your package wraps a particular resource such as data source or, say, statistical algorithm, remind users of how to cite that resource via e.g. `citHeader()`. [Maybe even add the reference for the resource](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312). 
 
 As an example see [nasapower CITATION file](https://github.com/ropensci/nasapower/blob/master/inst/CITATION) that refers to both the manual and a paper.
