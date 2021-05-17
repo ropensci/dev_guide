@@ -299,7 +299,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](https://r-pkgs.org/tests.html).
 
-* Packages with shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
+* Packages with Shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
 * For testing your functions creating plots, we suggest using [`vdiffr`](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the `testthat` package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
 
@@ -315,7 +315,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages. 
 
-* You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run.
+* You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run. Refer to the [summary table](https://roxygen2.r-lib.org/articles/rd.html#functions) in roxygen2 docs.
 
 * To safe-guard examples (e.g. requiring authentication) to be run on CRAN you need to use `\dontrun{}`. However, for a first submission CRAN won't let you have all examples escaped so. In this case you might add some small toy examples, or wrap example code in `try()`. Also refer to the `@exampleIf` tag present, at the time of writing, in roxygen2 development version.
 
