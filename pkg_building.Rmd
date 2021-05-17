@@ -5,7 +5,7 @@
 ```{block, type='summaryblock'}
 rOpenSci accepts packages that meet our guidelines via a streamlined [Software Peer Review process](#whatissoftwarereview). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after the review process is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
-We strongly recommend that package developers read Hadley Wickham's concise but thorough book on package development which is available for [free online](https://r-pkgs.org/) (and [print](https://amzn.com/1491910593?tag=r-pkgs-20)). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
+We strongly recommend that package developers read Hadley Wickham and Jenny Bryan's concise but thorough book on package development which is available for [free online](https://r-pkgs.org/). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
 
  To read why submitting a package to rOpenSci is worth the effort to meet guidelines, have a look at [reasons to submit](#whysubmit). 
 
