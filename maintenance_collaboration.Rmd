@@ -4,8 +4,11 @@
 
 ```{block, type='summaryblock'}
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
+It can also be very enjoyable to work as a team!
 
 This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration-friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci's "ropensci" GitHub organization.
+
+Besides these mostly technical tips, it is important to remember to be kind, and to take others' perspective into account especially when their priorities differ from yours.
 ```
 
 ## Make your repo contribution and collaboration friendly {#friendlyfiles}
@@ -28,7 +31,23 @@ And delete the package current code of conduct if there was one.
 
 We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles/). There is also [a helper function to insert them into your repository](https://docs.ropensci.org/rodev/reference/use_ro_github.html).
 
-You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
+You can tweak them a bit depending on your workflow and package. 
+
+Example of useful content:
+
+* Style preferences? You might however prefer to make style a configuration (of [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
+
+* Infrastructure like roxygen2?
+
+* Process preferences? Issue before a PR?
+
+* Scope? E.g. in skimr.
+
+* Sandbox account creation? Mocking in tests? Use links to external docs.
+
+Example: [contributing guide template by Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c).
+
+CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
 
 We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
@@ -39,6 +58,12 @@ You can use the `lintr` package's own bot, lintr-bot, via continuous integration
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
 
 ## Working with collaborators {#workingcollaborators}
+
+First thing first: keep in touch with your GitHub repository!
+
+* do not forget to [**watch your GitHub repository**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) to be notified of issues or pull requests.
+
+* do not forget to push updates you have locally.
 
 ### Onboarding collaborators
 
@@ -85,3 +110,8 @@ If you give someone write permissions to the repository,
 * please contact one of [the editors](#associateditors) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
 * please contact rOpenSci community manager [Stefanie Butland](https://github.com/stefaniebutland) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
+
+## Further resources
+
+* rOpenSci community call [Set Up Your Package to Foster a Community](https://ropensci.org/commcalls/apr2021-pkg-community/).
+* For re-using kind and usual answers, consider GitHub's
