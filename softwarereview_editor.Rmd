@@ -74,7 +74,7 @@ If someone recently refused because they were busy, it might be best to abstain,
 
 For people listed in the Airtable, if you contact them about a review please update the `last_time_contacted` column, and enter the category corresponding to their answer in `last_answer`.
 
-Only add people to Airtable if they accept to review (otherwise, people should volunteer themselves by filling the Airtable).
+Only add people to Airtable if they accept to review (otherwise, people should volunteer themselves by filling the Airtable form).
 Do not enter any information other than GitHub username, name and email address yourself.
 Point reviewers to the [Airtable form](https://ropensci.org/software-reviewer).
 
