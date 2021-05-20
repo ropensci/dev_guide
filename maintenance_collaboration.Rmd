@@ -47,15 +47,30 @@ Example of useful content:
 
 Example: [contributing guide template by Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c).
 
+Adding a personal touch to your contributing guide might make it look less generic and therefore more sincere.
+
 CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
 
 We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
 You can use the `lintr` package's own bot, lintr-bot, via continuous integration, to get comments if a commit or PR deteriorates the code style of your package. See [this link for guidance](https://github.com/jimhester/lintr#continuous-integration).
 
-### Issue labelling
+### Issue management
+
+By using GitHub features around issues you can help potential contributors find them, and make your roadmap public.
+
+#### Issue labelling
 
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
+
+#### Pinning issues
+
+You can [pin up to 3 issues by repository](https://docs.github.com/en/articles/pinning-an-issue-to-your-repository) that will then appear at the top of your issue tracker as nice issue cards.
+It can help advertise what your priorities are.
+
+#### Milestones
+
+You can [create milestones](milest) and assign issues to them, which help see what you plan for the next version of your package for instance.
 
 ## Working with collaborators {#workingcollaborators}
 
