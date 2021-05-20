@@ -131,4 +131,4 @@ If you give someone write permissions to the repository,
 ## Further resources
 
 * rOpenSci community call [Set Up Your Package to Foster a Community](https://ropensci.org/commcalls/apr2021-pkg-community/).
-* For re-using kind and usual answers, consider GitHub's
+* For re-using kind and usual answers, consider GitHub's [saved replies](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/using-saved-replies).
