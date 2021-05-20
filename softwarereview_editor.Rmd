@@ -35,7 +35,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 -   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
 -   Assign reviewers with `@ropensci-review-bot add @username to reviewers` (one comment per reviewer). If needed later remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
--   Update Airtable database: Add one of the review record numbers associated with the package to the `Reviews` field of each reviewer's record. Insert new `Reviewers` record if required.  
+-   Update Airtable database: Add one of the review record numbers associated with the package to the `Reviews` field of each reviewer's record. Insert new `Reviewers` record if required: add the reviewer's GitHub username, email and name, the last time you contacted them and their answer (positive in this case); and ask them to fill the [volunteering form](https://ropensci.org/software-reviewer). See the [guidance for storing information in Airtable](#airtable-info).
 
 #### How to look for reviewers
 
@@ -70,7 +70,7 @@ knitr::include_graphics("images/airtable.png")
 Have a look at the `last_time_contacted` and `last_answer` columns before contacting someone!
 If someone recently refused because they were busy, it might be best to abstain, whereas someone who refused because of a COI could be contacted again without waiting too long.
 
-##### Storing information from the reviewer search in Airtable
+##### Storing information from the reviewer search in Airtable {#airtable-info}
 
 For people listed in the Airtable, if you contact them about a review please update the `last_time_contacted` column, and enter the category corresponding to their answer in `last_answer`.
 
