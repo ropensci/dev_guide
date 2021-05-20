@@ -80,6 +80,8 @@ First thing first: keep in touch with your GitHub repository!
 
 * do not forget to push updates you have locally.
 
+* disable failing tests if you cannot fix them as they create noise in PRs that can puzzle new contributors.
+
 ### Onboarding collaborators
 
 There's no general rOpenSci rule as to how you should onboard collaborators. You should increase their rights to the repo as you gain trust, and you should definitely acknowledge contributions (see [this section](#attributions)).
