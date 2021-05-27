@@ -6,7 +6,7 @@ We will help you promoting your package but here are some more things to keep in
 
 * If you hear of an use case of your package, please encourage its author to post the link to our [discussion forum in the Use Cases category](https://discuss.ropensci.org/c/usecases), [for a tweet from rOpenSci and possible inclusion in the rOpenSci biweekly newsletter](https://discuss.ropensci.org/t/about-the-usecases-category/33). We also recommend you to add a link to the use case in a "use cases in the wild" section of your README.
 
-* When you release a new version of your package or release it to CRAN for the first time, 
+* When you [release](#releasing) a new version of your package or release it to CRAN for the first time, 
 
     * Make a pull request to [R Weekly](https://github.com/rweekly/rweekly.org) with a line about the release under the "New Releases" section (or "New Packages" for the first GitHub/CRAN release).
     
