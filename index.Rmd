@@ -1,6 +1,6 @@
 --- 
 title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
-author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, Melina Vidoni"
+author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
