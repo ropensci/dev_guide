@@ -34,7 +34,7 @@ jobs:
             ${{ env.R_LIBS_USER }}/*
             !${{ env.R_LIBS_USER }}/pak
           key: macOS-${{ steps.install-r.outputs.installed-r-version }}-1-${{ hashFiles('.github/r-depends.rds') }}
-          restore-keys: ubuntu-18.04-${{ steps.install-r.outputs.installed-r-version }}-1-
+          restore-keys: macOS-${{ steps.install-r.outputs.installed-r-version }}-1-
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
