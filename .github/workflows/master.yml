@@ -23,7 +23,7 @@ jobs:
       - name: Install pak and query dependencies
         run: |
           install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
-          saveRDS(pak::pkg_deps("local::.", dependencies = TRUE), ".github/r-depends.rds")
+          saveRDS(pak::local_dev_deps_tree(), ".github/r-depends.rds")
         shell: Rscript {0}
 
       - name: Restore R package cache
@@ -32,7 +32,17 @@ jobs:
           path: |
             ${{ env.R_LIBS_USER }}
             !${{ env.R_LIBS_USER }}/pak
-          key: ${{ runner.os }}-${{ steps.get-r-version.outputs.version }}-4-
+          key: ${{ runner.os }}-${{ steps.get-r-version.outputs.version }}-3-
+          
+      - name: Install macOS system dependencies
+        if: runner.os == 'macOS'
+        run: |
+          brew install libgit2
+          
+      - name: Install dependencies
+        run: |
+          pak::local_install_dev_deps(upgrade = TRUE)
+        shell: Rscript {0}
           
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
