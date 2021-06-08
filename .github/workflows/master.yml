@@ -30,10 +30,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            ${{ env.R_LIBS_USER }}/*
+            ${{ env.R_LIBS_USER }}
             !${{ env.R_LIBS_USER }}/pak
-          key: macOS-${{ steps.install-r.outputs.installed-r-version }}-2-${{ hashFiles('.github/r-depends.rds') }}
-          restore-keys: macOS-${{ steps.install-r.outputs.installed-r-version }}-2-
+          key: ${{ runner.os }}-${{ steps.get-r-version.outputs.version }}-4-
           
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
