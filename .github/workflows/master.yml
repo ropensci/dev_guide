@@ -13,9 +13,13 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
+      
       - uses: r-lib/actions/setup-r@v1
+      
       - uses: r-lib/actions/setup-pandoc@v1
+      
       - uses: r-lib/actions/setup-tinytex@v1
+      
       - name: Install pak and query dependencies
         run: |
           install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
@@ -30,16 +34,19 @@ jobs:
             !${{ env.R_LIBS_USER }}/pak
           key: macOS-${{ steps.install-r.outputs.installed-r-version }}-1-${{ hashFiles('.github/r-depends.rds') }}
           restore-keys: macOS-${{ steps.install-r.outputs.installed-r-version }}-1-
+          
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          
       - name: Render book PDF
         run: Rscript -e 'bookdown::render_book("index.Rmd", new_session = FALSE, "bookdown::pdf_book", output_dir = "pdfbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          
       - name: Move files around
         run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
 
@@ -47,6 +54,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "gh-pages committer"
+          
       - name: Commit results
         run: |
           cp ghpagescname _book/CNAME
