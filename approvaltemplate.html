@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>F Approval comment template | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="authors-guide.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="active" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="approvaltemplate" class="section level1">
+<h1>
+<span class="header-section-number">F</span> Approval comment template<a class="anchor" aria-label="anchor" href="#approvaltemplate"><i class="fas fa-link"></i></a>
+</h1>
+<div class="sourceCode" id="cb33"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb33-1"><a href="approvaltemplate.html#cb33-1"></a></span>
+<span id="cb33-2"><a href="approvaltemplate.html#cb33-2"></a>Approved! Thanks @{{issue_author}} for submitting and {{reviewers-list}} for your reviews! :grin:</span>
+<span id="cb33-3"><a href="approvaltemplate.html#cb33-3"></a></span>
+<span id="cb33-4"><a href="approvaltemplate.html#cb33-4"></a>To-dos:</span>
+<span id="cb33-5"><a href="approvaltemplate.html#cb33-5"></a>- <span class="st">[ ] Transfer the repo to rOpenSci's "ropensci" GitHub organization under "Settings" in your repo.  I have invited you to a team that should allow you to do so.  You'll be made admin once you do.</span></span>
+<span id="cb33-6"><a href="approvaltemplate.html#cb33-6"></a><span class="st">- [ ] Fix all links to the GitHub repo to point to the repo under the ropensci organization.</span></span>
+<span id="cb33-7"><a href="approvaltemplate.html#cb33-7"></a><span class="st">- [ ] Delete your current code of conduct file if you had one since rOpenSci's default one will apply, see https://devguide.ropensci.org/collaboration.html#coc-file</span></span>
+<span id="cb33-8"><a href="approvaltemplate.html#cb33-8"></a><span class="st">- [ ] If you already had a </span><span class="bn">`pkgdown`</span><span class="st"> website **and are ok relying only on [rOpenSci central docs building and branding](https://devguide.ropensci.org/ci.html#even-more-ci-ropensci-docs)**,</span></span>
+<span id="cb33-9"><a href="approvaltemplate.html#cb33-9"></a><span class="st">    * deactivate the automatic deployment you might have set up</span></span>
+<span id="cb33-10"><a href="approvaltemplate.html#cb33-10"></a><span class="st">    * remove styling tweaks from your pkgdown config but keep that config file</span></span>
+<span id="cb33-11"><a href="approvaltemplate.html#cb33-11"></a><span class="st">    * replace the whole current </span><span class="bn">`pkgdown`</span><span class="st"> website with a </span><span class="ot">[redirecting page](https://devguide.ropensci.org/redirect.html)</span></span>
+<span id="cb33-12"><a href="approvaltemplate.html#cb33-12"></a><span class="st">    * replace your package docs URL with </span><span class="bn">`https://docs.ropensci.org/package_name`</span></span>
+<span id="cb33-13"><a href="approvaltemplate.html#cb33-13"></a><span class="st">    * In addition, in your DESCRIPTION file, include the docs link in the </span><span class="bn">`URL`</span><span class="st"> field alongside the link to the GitHub repository, e.g.: </span><span class="bn">`URL: https://docs.ropensci.org/foobar (website) https://github.com/ropensci/foobar`</span></span>
+<span id="cb33-14"><a href="approvaltemplate.html#cb33-14"></a><span class="st">- [ ] Fix any links in badges for CI and coverage to point to the ropensci URL. We no longer transfer Appveyor projects to ropensci Appveyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge should be </span><span class="bn">`[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&amp;svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`</span><span class="st">. If Appveyor does not pick up new commits after transfer, you might need to delete and re-create the Appveyor project. (Repo transfers are smoother with GitHub Actions)</span></span>
+<span id="cb33-15"><a href="approvaltemplate.html#cb33-15"></a><span class="st">- [ ] Please check you have updated the package version to a post-review version and that you documented all changes in NEWS.md</span></span>
+<span id="cb33-16"><a href="approvaltemplate.html#cb33-16"></a><span class="st">- [ ] We're starting to roll out software metadata files to all ropensci packages via the Codemeta initiative, see https://github.com/ropensci/codemetar/#codemetar for how to include it in your package, after installing the package - should be easy as running </span><span class="bn">`codemetar::write_codemeta()`</span><span class="st"> in the root of your package.</span></span>
+<span id="cb33-17"><a href="approvaltemplate.html#cb33-17"></a></span>
+<span id="cb33-18"><a href="approvaltemplate.html#cb33-18"></a>Should you want to acknowledge your reviewers in your package DESCRIPTION, you can do so by making them <span class="bn">`"rev"`</span>-type contributors in the <span class="bn">`Authors@R`</span> field (with their consent).  More info on this <span class="ot">[here](https://devguide.ropensci.org/building.html#authorship)</span>.</span>
+<span id="cb33-19"><a href="approvaltemplate.html#cb33-19"></a></span>
+<span id="cb33-20"><a href="approvaltemplate.html#cb33-20"></a></span>
+<span id="cb33-21"><a href="approvaltemplate.html#cb33-21"></a>Welcome aboard! We'd love to host a post about your package - either a <span class="ot">[short introduction to it with an example](https://ropensci.org/tech-notes/)</span> for a technical audience or <span class="ot">[a longer post with some narrative about its development or something you learned, and an example of its use](https://ropensci.org/blog/)</span> for a broader readership. If you are interested, consult <span class="ot">[the blog guide](https://blogguide.ropensci.org/)</span>, and tag @stefaniebutland in your reply. She will get in touch about timing and can answer any questions.</span>
+<span id="cb33-22"><a href="approvaltemplate.html#cb33-22"></a></span>
+<span id="cb33-23"><a href="approvaltemplate.html#cb33-23"></a>We've put together an online book with our best practice and tips, <span class="ot">[this chapter](https://devguide.ropensci.org/collaboration.html)</span> starts the 3d section that's about guidance for after onboarding. Please tell us what could be improved, the corresponding repo is <span class="ot">[here](https://github.com/ropensci/dev_guide)</span>.</span>
+<span id="cb33-24"><a href="approvaltemplate.html#cb33-24"></a></span>
+<span id="cb33-25"><a href="approvaltemplate.html#cb33-25"></a>Last but not least, you can volunteer as a reviewer via filling a <span class="ot">[short form](https://airtable.com/shrnfDI2S9uuyxtDw)</span>.</span></code></pre></div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></div>
+<div class="next"><a href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#approvaltemplate"><span class="header-section-number">F</span> Approval comment template</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/appendix.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/appendix.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-06-29.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

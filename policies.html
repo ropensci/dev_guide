@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 5 Software Peer Review policies | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="active" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="authors-guide.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="policies" class="section level1">
+<h1>
+<span class="header-section-number">5</span> Software Peer Review policies<a class="anchor" aria-label="anchor" href="#policies"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+This chapter contains the policies of rOpenSci Software Peer Review.
+</p>
+<p>
+In particular, you’ll read our policies regarding software peer review itself: the <a href="#review-submission">review submission process</a> including our <a href="policies.html#coi">conflict of interest policies</a>, and the <a href="policies.html#aims-and-scope">aims and scope of the Software Peer Review system</a>. This chapter also features our policies regarding <a href="policies.html#ownership-after-softwarereview">package ownership and maintenance</a>.
+</p>
+<p>
+Last but not least, you’ll find the <a href="policies.html#code-of-conduct">code of conduct of rOpenSci Software Peer Review</a>.
+</p>
+</div>
+<div id="policiesreviewprocess" class="section level2">
+<h2>
+<span class="header-section-number">5.1</span> Review process<a class="anchor" aria-label="anchor" href="#policiesreviewprocess"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>For a package to be considered for the rOpenSci suite, package authors must initiate a request on the <a href="https://github.com/ropensci/software-review">ropensci/software-review</a> repository.</li>
+<li>Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our <a href="building.html#building">packaging guide</a> and <a href="reviewerguide.html#reviewerguide">reviewing guide</a> for more details). Unlike a manuscript review, this process will be an ongoing conversation.</li>
+<li>Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins, see <a href="policies.html#aims-and-scope">the aims and scope section</a>), but in rare cases a package may also be not onboarded after review &amp; revision. It is ultimately editor’s decision on whether or not to reject the package based on how the reviews are addressed.</li>
+<li>Communication between authors, reviewers and editors will first and foremost take place on GitHub, although you can choose to contact the editor by email or Slack for some issues. When submitting a package, please make sure your GitHub notification settings make it unlikely you will miss a comment.</li>
+<li>The author can choose to have their submission put on hold (editor applies the holding label). The holding status will be revisited every 3 months, and after one year the issue will be closed.</li>
+<li>If the author hasn’t requested a holding label, but is simply not responding, we should close the issue within one month after the last contact intent. This intent will include a comment tagging the author, but also an email using the email address listed in the DESCRIPTION of the package which is one of the rare cases where the editor will try to contact the author by email.</li>
+<li>If a submission is closed and the author wishes to re-submit, they’ll have to start a new submission. If the package is still in scope, the author will have to respond to the initial reviews before the editor starts looking for new reviewers.</li>
+</ul>
+<div id="publishing-in-other-venues" class="section level3">
+<h3>
+<span class="header-section-number">5.1.1</span> Publishing in other Venues<a class="anchor" aria-label="anchor" href="#publishing-in-other-venues"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>We strongly suggest submitting your package for review <em>before</em> publishing
+on CRAN or submitting a software paper describing the package to a journal.
+Review feedback may result in major improvements and updates to your package,
+including renaming and breaking changes to functions. We do not consider
+previous publication on CRAN or in other venues sufficient reason to
+not adopt reviewer or editor recommendations.</li>
+<li>Do not submit your package for review while it or an associated manuscript
+is also under review at another venue, as this may result on conflicting
+requests for changes.</li>
+</ul>
+</div>
+<div id="coi" class="section level3">
+<h3>
+<span class="header-section-number">5.1.2</span> Conflict of interest for reviewers/editors<a class="anchor" aria-label="anchor" href="#coi"><i class="fas fa-link"></i></a>
+</h3>
+<p>Following criteria are meant to be a guide for what constitutes a conflict of interest for an editor or reviewer. The potential editor or reviewer has a conflict of interest if:</p>
+<ul>
+<li>The authors with a major role are from the potential reviewer/editor’s institution or institutional component (e.g., department)</li>
+<li>Within in the past three years, the potential reviewer/editor has been a collaborator or has had any other professional relationship with any person on the package who has a major role</li>
+<li>The potential reviewer/editor serves as a member of the advisory board for the project under review</li>
+<li>The potential reviewer/editor would receive a direct or indirect financial benefit if the package is accepted</li>
+<li>The potential reviewer/editor has significantly contributed to a competitor project.</li>
+<li>There is also a lifetime COI for the family members, business partners, and thesis student/advisor or mentor.</li>
+</ul>
+<p>In the case where none of the <a href="softwarereviewintro.html#associateditors">associate editors</a> can serve as editor, an external guest editor will be recruited.</p>
+</div>
+</div>
+<div id="aims-and-scope" class="section level2">
+<h2>
+<span class="header-section-number">5.2</span> Aims and Scope<a class="anchor" aria-label="anchor" href="#aims-and-scope"><i class="fas fa-link"></i></a>
+</h2>
+<p>rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists. Packages submitted to rOpenSci should fit into one or more of the
+categories outlined below. If you are unsure whether your package fits into one of these categories, please open an issue as a pre-submission inquiry
+(<a href="https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission"><strong>Examples</strong></a>).</p>
+<p>As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today. For instance, data visualization packages are no longer in-scope. While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.</p>
+<p>Note that not all rOpenSci projects and packages are in-scope or go through peer review. Projects developed by <a href="https://ropensci.org/about/#team">staff</a> or at conferences may be experimental, exploratory, address core infrastructure priorities and thus not fall into these categories. Look for the peer-review badge - see below - to identify peer-reviewed packages in the rOpenSci repository.</p>
+<div class="inline-figure">
+<img src="images/status.png"><!-- -->
+</div>
+<div id="package-categories" class="section level3">
+<h3>
+<span class="header-section-number">5.2.1</span> Package categories<a class="anchor" aria-label="anchor" href="#package-categories"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p><strong>data retrieval</strong>: Packages for accessing and downloading data from online sources with scientific applications. Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data <em>sources</em> / <em>topics</em>, rather than <em>services</em>. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: <a href="https://github.com/ropensci/software-review/issues/17"><strong>rotl</strong></a>,
+<a href="https://github.com/ropensci/software-review/issues/41"><strong>gutenbergr</strong></a>)</p></li>
+<li><p><strong>data extraction</strong>: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, nor are code parsers. Trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: <a href="https://github.com/ropensci/software-review/issues/42"><strong>tabulizer</strong></a> for extracting tables from PDF documents, <a href="https://github.com/ropensci/software-review/issues/47"><strong>genbankr</strong></a> for parsing files from GenBank, <a href="https://github.com/ropensci/software-review/issues/179"><strong>treeio</strong></a> for phylogentic reading in phylogentic tree files, <a href="https://github.com/ropensci/software-review/issues/267"><strong>lightr</strong></a> for parsing files from spectroscopic instruments))</p></li>
+<li><p><strong>data munging</strong>: Packages for processing data from formats above. This area does not include broad data manipulations tools such as <strong>reshape2</strong> or <strong>tidyr</strong>, or tools for extracting data from R code itself. Rather, it focuses on tools for handling data in specific scientific formats generated from scientific workflows or exported from scientific instruments. (Examples: <a href="https://github.com/ropensci/software-review/issues/60"><strong>plateR</strong></a> for reading in data structured as plate maps for scientific instruments, or <a href="https://github.com/ropensci/software-review/issues/385"><strong>phonfieldwork</strong></a> for processing annotated audio files for phonics research)</p></li>
+<li><p><strong>data deposition</strong>: Packages that support deposition of data into research repositories, including data formatting and metadata generation.
+(Example: <a href="https://github.com/ropensci/software-review/issues/80"><strong>EML</strong></a>)</p></li>
+<li><p><strong>data validation and testing</strong>: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: <a href="https://github.com/ropensci/software-review/issues/23"><strong>assertr</strong></a>)</p></li>
+<li><p><strong>workflow automation</strong>: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: <a href="https://github.com/ropensci/software-review/issues/156"><strong>drake</strong></a>)</p></li>
+<li><p><strong>version control</strong>: Tools that facilitate the use of version control in scientific workflows. Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category. (Example: <a href="https://github.com/ropensci/software-review/issues/263"><strong>git2rdata</strong></a>)</p></li>
+<li><p><strong>citation management and bibliometrics</strong>: Tools that facilitate managing references, such as for writing manuscripts, creating CVs or otherwise attributing scientific contributions, or accessing, manipulating or otherwise working with bibliometric data. (Example: <a href="https://github.com/ropensci/software-review/issues/119"><strong>RefManageR</strong></a>)</p></li>
+<li><p><strong>scientific software wrappers</strong>: Packages that wrap non-R utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple <code><a href="https://rdrr.io/r/base/system.html">system()</a></code> call or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex. This does not include wrappers of other R packages or C/C++ libraries that can be included in R packages. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: <a href="https://github.com/ropensci/software-review/issues/208"><strong>babette</strong></a>, <a href="https://github.com/ropensci/software-review/issues/262"><strong>nlrx</strong></a>)</p></li>
+<li><p><strong>field and laboratory reproducibility tools</strong>: Packages that improve reproducibility of real-world workflows through standardization and automation of field and lab protocols, such as sample tracking and tagging, form and data sheet generation, interfacing with laboratory equipment or information systems, and executing experimental designs. (Example: <a href="https://github.com/ropensci/software-review/issues/336"><strong>baRcodeR</strong></a>)</p></li>
+<li><p><strong>database software bindings</strong>: Bindings and wrappers for generic database APIs (Example: <a href="https://github.com/ropensci/software-review/issues/6"><strong>rrlite</strong></a>)</p></li>
+</ul>
+<p>In addition, we have some <em>specialty topics</em> with a slightly broader scope.</p>
+<ul>
+<li><p><strong>geospatial data</strong>: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Examples: <a href="https://github.com/ropensci/software-review/issues/27"><strong>osmplotr</strong></a>, <a href="https://github.com/ropensci/software-review/issues/174"><strong>tidync</strong></a>).</p></li>
+<li><p><strong>text analysis</strong>: We are currently <em>piloting</em> a sub-specialty area for text analysis that includes implementation of statistical/ML methods for analyzing or extracting text data. This does not include packages with new methods, but only implementation or wrapping of previously published methods. As this is a pilot, the scope for this topic is not fully defined and we are still developing a reviewer base and process for this area. Please open a pre-submission inquiry if you are considering submitting a package that falls under this topic. (Example: <a href="https://github.com/ropensci/software-review/issues/20"><strong>textreuse</strong></a>)</p></li>
+</ul>
+</div>
+<div id="other-scope-considerations" class="section level3">
+<h3>
+<span class="header-section-number">5.2.2</span> Other scope considerations<a class="anchor" aria-label="anchor" href="#other-scope-considerations"><i class="fas fa-link"></i></a>
+</h3>
+<p>Packages should be <em>general</em> in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.</p>
+<p>Packages that include interactive tools to facilitate researcher workflows (e.g., shiny apps) must have a mechanism to make the interactive workflow reproducible, such as code generation or a scriptable API.</p>
+<p>Here are some types of packages we are unlikely to accept:</p>
+<ul>
+<li>Packages that wrap or implement statistical or machine learning methods. We are not organized so as to review the correctness of these methods (But see “text analysis”, above).</li>
+<li>Exploratory data analysis packages that visualize or summarize data.</li>
+<li>General workflow or package development support packages.</li>
+</ul>
+<p>For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., <a href="https://cloudyr.github.io/">cloudyr</a>), and software journals such as JOSS, JSS, or the R journal, depending on the current scopes of those journals.</p>
+<p>Note that the packages developed internally by rOpenSci, through our events or through collaborations are not all in-scope for our Software Peer Review process.</p>
+</div>
+<div id="overlap" class="section level3">
+<h3>
+<span class="header-section-number">5.2.3</span> Package overlap<a class="anchor" aria-label="anchor" href="#overlap"><i class="fas fa-link"></i></a>
+</h3>
+<p>rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the rOpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:</p>
+<ul>
+<li>More open in licensing or development practices</li>
+<li>Broader in functionality (e.g., providing access to more data sets, providing a greater suite of functions), but not only by duplicating additional packages</li>
+<li>Better in usability and performance</li>
+<li>Actively maintained while alternatives are poorly or no longer actively maintained</li>
+</ul>
+<p>These factors should be considered <em>as a whole</em> to determine if the package is a significant improvement. A new package would not meet this standard only by following our package guidelines while others do not, unless this leads to a significant difference in the areas above.</p>
+<p>We recommend that packages highlight differences from and improvements over overlapping packages in their README and/or vignettes.</p>
+<p>We encourage developers whose packages are not accepted due to overlap to still consider submittal to other repositories or journals.</p>
+</div>
+</div>
+<div id="ownership-after-softwarereview" class="section level2">
+<h2>
+<span class="header-section-number">5.3</span> Package ownership and maintenance<a class="anchor" aria-label="anchor" href="#ownership-after-softwarereview"><i class="fas fa-link"></i></a>
+</h2>
+<div id="role-of-the-ropensci-team" class="section level3">
+<h3>
+<span class="header-section-number">5.3.1</span> Role of the rOpenSci team<a class="anchor" aria-label="anchor" href="#role-of-the-ropensci-team"><i class="fas fa-link"></i></a>
+</h3>
+<p>Authors of contributed packages essentially maintain the same ownership they had prior to their package joining the rOpenSci suite. Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, the rOpenSci team will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner (see <a href="policies.html#maintainer-responsiveness">the section about maintainer responsiveness</a>).</p>
+</div>
+<div id="maintainer-responsiveness" class="section level3">
+<h3>
+<span class="header-section-number">5.3.2</span> Maintainer responsiveness<a class="anchor" aria-label="anchor" href="#maintainer-responsiveness"><i class="fas fa-link"></i></a>
+</h3>
+<p>If package maintainers do not respond in a timely manner to requests for package fixes from CRAN or from us, we will remind the maintainer a number of times, but after 3 months (or shorter time frame, depending on how critical the fix is) we will make the changes ourselves.</p>
+<p>The above is a bit vague, so the following are a few areas of consideration.</p>
+<ul>
+<li>Examples where we’d want to move quickly:
+<ul>
+<li>Package <code>foo</code> is imported by one or more packages on CRAN, and <code>foo</code> is broken, and thus would break its reverse dependencies.</li>
+<li>Package <code>bar</code> may not have reverse dependencies on CRAN, but is widely used, thus quickly fixing problems is of greater importance.</li>
+</ul>
+</li>
+<li>Examples where we can wait longer:
+<ul>
+<li>Package <code>hello</code> is not on CRAN, or on CRAN, but has no reverse dependencies.</li>
+<li>Package <code>world</code> needs some fixes. The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.</li>
+</ul>
+</li>
+</ul>
+<p>We urge package maintainers to make sure they are receiving GitHub notifications, as well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their spam box. Authors of onboarded packages will be invited to the rOpenSci Slack to chat with the rOpenSci team and the greater rOpenSci community. Anyone can also discuss with the rOpenSci community on the <a href="https://discuss.ropensci.org/">rOpenSci discussion forum</a>.</p>
+<p>Should authors abandon the maintenance of an actively used package in our suite, we will consider petitioning CRAN to transfer package maintainer status to rOpenSci.</p>
+</div>
+<div id="quality-commitment" class="section level3">
+<h3>
+<span class="header-section-number">5.3.3</span> Quality commitment<a class="anchor" aria-label="anchor" href="#quality-commitment"><i class="fas fa-link"></i></a>
+</h3>
+<p>rOpenSci strives to develop and promote high quality research software. To ensure that your software meets our criteria, we review all of our submissions as part of the Software Peer Review process, and even after acceptance will continue to step in with improvements and bug fixes.</p>
+<p>Despite our best efforts to support contributed software, errors are the responsibility of individual maintainers. Buggy, unmaintained software may be removed from our suite at any time.</p>
+</div>
+<div id="package-removal" class="section level3">
+<h3>
+<span class="header-section-number">5.3.4</span> Package removal<a class="anchor" aria-label="anchor" href="#package-removal"><i class="fas fa-link"></i></a>
+</h3>
+<p>In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes.</p>
+</div>
+</div>
+<div id="ethics-data-privacy-and-human-subjects-research" class="section level2">
+<h2>
+<span class="header-section-number">5.4</span> Ethics, Data Privacy and Human Subjects Research<a class="anchor" aria-label="anchor" href="#ethics-data-privacy-and-human-subjects-research"><i class="fas fa-link"></i></a>
+</h2>
+<p>rOpenSci packages and other tools are used for a variety of purposes, but our focus is on
+tools for research. We expect that tools will enable ethical use by research
+practitioners, who are obligated to adhere to ethical codes such <a href="https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/">Declaration of
+Helsinki</a>
+and <a href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html">The Belmont
+Report</a>.
+Researchers bear responsibility for their use of software, but software
+developers must consider the ethical use of their products, and developers
+themselves adhere to ethical codes for computer professionals such as those
+expressed by <a href="https://www.computer.org/education/code-of-ethics">IEEE</a> and
+<a href="https://ethics.acm.org/">ACM</a>. rOpenSci contributors often play both the role
+of both researcher and developer.</p>
+<p>We ask that software developers place themselves in researchers’ role and
+consider the requirements of an ethical workflow using authors’ software.
+Given the variation and degree of flux of ethical approaches for Internet-based
+analyses, judgement calls rather than recipes are required. The <a href="https://aoir.org/ethics/">Ethical
+Guidelines of The Association of Internet Researchers</a>
+provides a robust framework and we encourage authors, editors, and reviewers to use
+this in evaluating their work. In general, adherence to legal or regulatory
+minimum requirements may not be sufficient, though these (e.g.,
+GDPR), may be relevant. Package authors should direct
+users to relevant resources for the ethical use of the software.</p>
+<p>Some packages, due to the nature of data they handle, may be determined by editors to require enhanced scrutiny. For these, editors may require additional (or reduced) functionality, and robust
+documentation, defaults, and warnings to direct users to relevant ethical
+practices. The following topics may merit enhanced scrutiny:</p>
+<ul>
+<li><p><strong><em>Vulnerable populations</em></strong>: Authors of packages and workflows that deal with
+information related to vulnerable populations bear responsibility to protect
+them from likely harms.</p></li>
+<li><p><strong><em>Personally identifiable or sensitive data</em></strong>: The release of personally
+identifiable or sensitive data is potentially harmful. This includes “reasonably
+re-identifiable” data - which a motivated individual could trace back to the
+owner or creator even if the data are anonymized. This includes both cases where identifiers
+(e.g., name, date of birth) are available as part of data, and also if unique
+pseudonyms/screen names are linked with full-text posts, through which one
+can link back individuals through cross-reference with other data sets.</p></li>
+</ul>
+<p>While the best response to ethical concerns will be context-specific, these
+general guidelines should be followed by packages where the challenges above arise:</p>
+<ul>
+<li><p>Packages should adhere to data source’s terms of use, as expressed in
+website Terms and Conditions, <a href="https://docs.ropensci.org/robotstxt/">“robots.txt”</a> files, privacy policies, and
+other relevant restrictions, and link to them prominently in package
+documentation. Packages should provide or document functionality to adhere
+to such restrictions (e.g., scrape from only allowed endpoints, use
+appropriate rate limiting in code, examples, or vignettes). Note that while Terms
+and Conditions, Privacy Policies, etc., may not provide sufficient bounds on
+ethical usage, they can provide an outer bound.</p></li>
+<li>
+<p>A key tool in addressing the risks posed in studying vulnerable populations or
+using personally identifiable data is <strong><em>informed consent</em></strong>. Package authors
+should support users’ acquisition of informed consent when relevant. This may
+include providing links to data source’s preferred method of acquiring consent,
+contact information of data providers (e.g. forum moderators), documentation
+of informed consent protocols, or getting pre-approval for general uses of a
+package.</p>
+<p>Note that consent is not implicitly granted just because data are accessible.
+Accessible data are not necessarily public, as different persons and contexts
+have different normative expectations of privacy (see work by <a href="http://socialdatalab.net/ethics-resources">Social Data
+Lab</a>).</p>
+</li>
+<li><p>Packages accessing personally identifiable information should take special
+care to follow <a href="package-development-security-best-practices.html#package-development-security-best-practices">security best practices</a>
+(e.g., exclusive use of secure internet protocols, strong mechanisms for
+storing credentials, etc.).</p></li>
+<li><p>Packages that access or handle personally identifiable or sensitive data
+should enable, document, and demonstrate workflows for de-identification,
+secure storage, other best practices to minimize risk of harm.</p></li>
+</ul>
+<p>As standards for data privacy and research continue to evolve, we welcome input
+from authors on considerations specific to their software and supplemental
+documentation such as approval from university ethics review boards. These
+may be attached to issue threads of package submissions or pre-submission inquiries,
+or conveyed directly to editors if needed. General
+suggestions may be filed as <a href="https://github.com/ropensci/dev_guide/issues">issues in this book’s repository</a>.</p>
+<div id="resources" class="section level3">
+<h3>
+<span class="header-section-number">5.4.1</span> Resources<a class="anchor" aria-label="anchor" href="#resources"><i class="fas fa-link"></i></a>
+</h3>
+<p>The following resources may be helpful for researchers, package authors, editors
+and reviewers in addressing ethical questions related to privacy and research software.</p>
+<ul>
+<li>The <a href="https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/">Declaration of
+Helsinki</a>
+and <a href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html">The Belmont
+Report</a>
+provide fundamental principles for ethical practice by researchers.</li>
+<li>Several organizations provide guidance on how to translate these principles
+into the the context of internet research. These include the <a href="https://aoir.org/ethics/">Ethical
+Guidelines of The Association of Internet
+Researchers</a>, the <a href="https://www.etikkom.no/en/ethical-guidelines-for-research/ethical-guidelines-for-internet-research/">NESH Guide to Internet Research
+Ethics</a>,
+and <a href="https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017">BPS’ Ethics Guidelines for Internet-Mediated
+Research</a>.
+<a href="https://doi.org/10.1007/s10676-018-9495-z">Anabo et al (2019)</a> provide a
+helpful overview of these.</li>
+<li>The Social Media Lab provides a <a href="http://socialdatalab.net/ethics-resources">high-level
+overview</a> with data on normative
+expectations of privacy and use on social forums.</li>
+<li>Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
+Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
+Integrity. <a href="https://doi.org/10.1007/978-3-319-76040-7_18-1" class="uri">https://doi.org/10.1007/978-3-319-76040-7_18-1</a>
+</li>
+<li>Lomborg, S., &amp; Bechmann, A. (2014). Using APIs for Data Collection on Social
+Media. The Information Society, 30(4), 256–265.
+<a href="https://dx.doi.org/10.1080/01972243.2014.915276" class="uri">https://dx.doi.org/10.1080/01972243.2014.915276</a>
+</li>
+<li>Flick, C. (2016). Informed consent and the Facebook emotional manipulation
+study. <em>Research Ethics</em>, <em>12</em>(1), 14–28.
+<a href="https://doi.org/10.1177/1747016115599568" class="uri">https://doi.org/10.1177/1747016115599568</a>
+</li>
+<li>Sugiura, L., Wiles, R., &amp; Pope, C. (2017). Ethical challenges in online
+research: Public/private perceptions. <em>Research Ethics</em>, <em>13</em>(3–4),
+184–199. <a href="https://doi.org/10.1177/1747016116650720" class="uri">https://doi.org/10.1177/1747016116650720</a>
+</li>
+<li>Taylor, J., &amp; Pagliari, C. (2018). Mining social media data: How are
+research sponsors and researchers addressing the ethical challenges?
+Research Ethics, 14(2), 1–39. <a href="https://doi.org/10.1177/1747016117738559" class="uri">https://doi.org/10.1177/1747016117738559</a>
+</li>
+<li>Zimmer, M. (2010). “But the data is already public”: on the ethics of
+research in Facebook. Ethics and Information Technology, 12(4), 313–325.
+<a href="https://dx.doi.org/10.1007/s10676-010-9227-5" class="uri">https://dx.doi.org/10.1007/s10676-010-9227-5</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="code-of-conduct" class="section level2">
+<h2>
+<span class="header-section-number">5.5</span> Code of Conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"><i class="fas fa-link"></i></a>
+</h2>
+<p>rOpenSci’s community is our best asset. Whether you’re a regular contributor or a newcomer, we care about making this a safe place for you and we’ve got your back. We have a Code of Conduct that applies to all people participating in the rOpenSci community, including rOpenSci staff and leadership and to all modes of interaction online or in person. The <a href="https://ropensci.org/code-of-conduct/">Code of Conduct</a> is maintained on the rOpenSci website.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></div>
+<div class="next"><a href="authors-guide.html"><span class="header-section-number">6</span> Guide for Authors</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#policies"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li>
+<a class="nav-link" href="#policiesreviewprocess"><span class="header-section-number">5.1</span> Review process</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#publishing-in-other-venues"><span class="header-section-number">5.1.1</span> Publishing in other Venues</a></li>
+<li><a class="nav-link" href="#coi"><span class="header-section-number">5.1.2</span> Conflict of interest for reviewers/editors</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#aims-and-scope"><span class="header-section-number">5.2</span> Aims and Scope</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#package-categories"><span class="header-section-number">5.2.1</span> Package categories</a></li>
+<li><a class="nav-link" href="#other-scope-considerations"><span class="header-section-number">5.2.2</span> Other scope considerations</a></li>
+<li><a class="nav-link" href="#overlap"><span class="header-section-number">5.2.3</span> Package overlap</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#ownership-after-softwarereview"><span class="header-section-number">5.3</span> Package ownership and maintenance</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#role-of-the-ropensci-team"><span class="header-section-number">5.3.1</span> Role of the rOpenSci team</a></li>
+<li><a class="nav-link" href="#maintainer-responsiveness"><span class="header-section-number">5.3.2</span> Maintainer responsiveness</a></li>
+<li><a class="nav-link" href="#quality-commitment"><span class="header-section-number">5.3.3</span> Quality commitment</a></li>
+<li><a class="nav-link" href="#package-removal"><span class="header-section-number">5.3.4</span> Package removal</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#ethics-data-privacy-and-human-subjects-research"><span class="header-section-number">5.4</span> Ethics, Data Privacy and Human Subjects Research</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#resources"><span class="header-section-number">5.4.1</span> Resources</a></li></ul>
+</li>
+<li><a class="nav-link" href="#code-of-conduct"><span class="header-section-number">5.5</span> Code of Conduct</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/softwarereview_policies.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/softwarereview_policies.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-06-29.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
