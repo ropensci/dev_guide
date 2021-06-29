@@ -35,7 +35,6 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 -   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
 -   Assign reviewers with `@ropensci-review-bot add @username to reviewers` (one comment per reviewer). If needed later remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
--   Update Airtable database: Add one of the review record numbers associated with the package to the `Reviews` field of each reviewer's record. Insert new `Reviewers` record if required: add the reviewer's GitHub username, email and name, the last time you contacted them and their answer (positive in this case); and ask them to fill the [volunteering form](https://ropensci.org/software-reviewer). See the [guidance for storing information in Airtable](#airtable-info).
 
 #### How to look for reviewers
 
