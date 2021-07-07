@@ -89,6 +89,8 @@ In addition, we have some _specialty topics_ with a slightly broader scope.
 
 * __geospatial data__: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Examples: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
 
+* __text data__: We include packages that process and manage text and language data. This is limited to text processing/munging/management (e.g., tokenization, stemming, conversion to and between structured text formats, text metadata and repository access, etc. ).  Machine-learning and packages implementing NLP analysis algorithms should be submitted under [_statistical_ software peer review](https://stats-devguide.ropensci.org/). The scope for this topic is not fully defined, please open a pre-submission inquiry if you are considering submitting a package that falls under this topic. (Example: [**tokenizers**](https://github.com/ropensci/software-review/issues/33))
+
 ### Other scope considerations
 
 Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.
