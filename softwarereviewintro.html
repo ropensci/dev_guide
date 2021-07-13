@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 4 Software Peer Review, Why? What? | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="This chapter contains a general intro to our software peer review system for packages, reasons to submit a package, reasons to volunteer as a reviewer, why our reviews are open, and...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 4 Software Peer Review, Why? What? | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/softwarereviewintro.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="This chapter contains a general intro to our software peer review system for packages, reasons to submit a package, reasons to volunteer as a reviewer, why our reviews are open, and...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4 Software Peer Review, Why? What? | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="This chapter contains a general intro to our software peer review system for packages, reasons to submit a package, reasons to volunteer as a reviewer, why our reviews are open, and...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="active" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="softwarereviewintro" class="section level1">
+<h1>
+<span class="header-section-number">4</span> Software Peer Review, Why? What?<a class="anchor" aria-label="anchor" href="#softwarereviewintro"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+This chapter contains a <a href="softwarereviewintro.html#whatissoftwarereview">general intro</a> to our software peer review system for packages, <a href="softwarereviewintro.html#whysubmit">reasons to submit a package</a>, <a href="softwarereviewintro.html#whyreview">reasons to volunteer as a reviewer</a>, <a href="softwarereviewintro.html#whyopen">why our reviews are open</a>, and acknowledgements of <a href="softwarereviewintro.html#editors-and-reviewers">actors of the system</a>.
+</p>
+<p>
+<em>If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in <a href="https://discuss.ropensci.org/c/usecases">our public forum</a>, or <a href="https://ropensci.org/contact/">privately by email</a>.</em>
+</p>
+</div>
+<div id="whatissoftwarereview" class="section level2">
+<h2>
+<span class="header-section-number">4.1</span> What is rOpenSci Software Peer Review?<a class="anchor" aria-label="anchor" href="#whatissoftwarereview"><i class="fas fa-link"></i></a>
+</h2>
+<p>rOpenSci’s <a href="https://ropensci.org/packages/">suite of packages</a> is partly contributed by staff members and partly contributed by community members, which means the suite stems from a great diversity of skills and experience of developers. How to ensure quality for the whole set? That’s where software peer review comes into play: packages contributed by the community undergo a transparent, constructive, non adversarial and open review process. For that process relying mostly on volunteer work, <a href="softwarereviewintro.html#associateditors">associate editors</a> manage the incoming flow and ensure progress of submissions; authors create, submit and improve their package; <a href="softwarereviewintro.html#reviewers">reviewers</a>, two per submission, examine the software code and user experience. <a href="https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/">This blog post</a> written by rOpenSci editors is a good introduction to rOpenSci software peer review Other blog posts about review itself and reviewed packages can be find <a href="https://ropensci.org/tags/software-peer-review/">via the “software-peer-review” tag on rOpenSci blog</a>.</p>
+<p>You can recognize rOpenSci packages that have been peer-reviewed via a green “peer-reviewed” badge in their README, linking to their reviews (cf <a href="https://github.com/ropensci/restez#locally-query-genbank-">this example</a>); and via a blue comment icon near their description on <a href="https://ropensci.org/packages/">rOpenSci packages page</a>, also linking to the reviews.</p>
+<p>Technically, we make the most of <a href="https://github.com/">GitHub</a> infrastructure: each package review process is an issue in the <a href="https://github.com/ropensci/software-review/">ropensci/software-review GitHub repository</a>. For instance, click <a href="https://github.com/ropensci/software-review/issues/24">here</a> to read the review thread of the <code>ropenaq</code> package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).</p>
+</div>
+<div id="whysubmit" class="section level2">
+<h2>
+<span class="header-section-number">4.2</span> Why submit your package to rOpenSci?<a class="anchor" aria-label="anchor" href="#whysubmit"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>First, and foremost, we hope you submit your package for review <strong>because you value the feedback</strong>. We aim to provide useful feedback to package authors and for our review process to be open, non-adversarial, and focused on improving software quality.</li>
+<li>Once aboard, your package will continue to receive <strong>support from rOpenSci members</strong>. You’ll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.</li>
+<li>rOpenSci will <strong>promote your package</strong> through our <a href="https://ropensci.org/packages/">webpage</a>, <a href="https://ropensci.org/blog/">blog</a>, and <a href="https://twitter.com/ropensci">social media</a>. Packages in our suite also get a <a href="building.html#docsropensci">documentation website that is automatically built and deployed after each push</a>.</li>
+<li>rOpenSci <strong>packages can be cross-listed</strong> with other repositories such as CRAN and BioConductor.</li>
+<li>rOpenSci packages that are in scope for the <a href="https://joss.theoj.org/">Journal of Open-Source Software</a> and add the necessary accompanying short paper, would, at the discretion of JOSS editors, benefit from a fast-tracked review process.</li>
+<li>If you write one, rOpenSci will <strong>promote gitbooks related to your package</strong>: the source of such books can be transferred to <a href="https://github.com/ropensci-books">the <code>ropensci-books</code> GitHub organisation</a> for books to be listed <a href="https://books.ropensci.org/">at books.ropensci.org</a>.</li>
+</ul>
+</div>
+<div id="whyreview" class="section level2">
+<h2>
+<span class="header-section-number">4.3</span> Why review packages for rOpenSci?<a class="anchor" aria-label="anchor" href="#whyreview"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>As in any peer-review process, we hope you choose to review <strong>to give back to the rOpenSci and scientific communities.</strong> Our mission to expand access to scientific data and promote a culture of reproducible research is only possible through the volunteer efforts of community members like you.</li>
+<li>Review is a two-way conversation. By reviewing packages, you’ll have the chance to <strong>continue to learn development practices from authors and other reviewers</strong>.</li>
+<li>The open nature of our review process allows you to <strong>network and meet colleagues and collaborators</strong> through the review process. Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.</li>
+<li>To volunteer to be one of our reviewers, fill out <a href="https://airtable.com/shrnfDI2S9uuyxtDw">this short form</a> providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.</li>
+</ul>
+</div>
+<div id="whyopen" class="section level2">
+<h2>
+<span class="header-section-number">4.4</span> Why are reviews open?<a class="anchor" aria-label="anchor" href="#whyopen"><i class="fas fa-link"></i></a>
+</h2>
+<p>Our reviewing threads are public. Authors, reviewers, and editors all know each other’s identities. The broader community can view or even participate in the conversation as it happens. This provides an incentive to be thorough and provide non-adversarial, constructive reviews. Both authors and <a href="https://ropensci.org/tags/reviewer/">reviewers report</a> that they enjoy and learn more from this open and direct exchange. It also has the benefit of building a community. Participants have the opportunity to meaningfully network with new peers, and new collaborations have emerged via ideas spawned during the review process.</p>
+<p>We are aware that open systems can have drawbacks. For instance, in traditional academic review, <a href="https://www.sciencedirect.com/science/article/pii/S0169534707002704">double-blind peer review can increase representation of female authors</a>, suggesting bias in non-blind reviews. It is also possible reviewers are less critical in open review. However, we posit that the openness of the review conversation provides a check on review quality and bias; it’s harder to inject unsupported or subjective comments in public and without the cover of anonymity. Ultimately, we believe that having direct and public communication between authors and reviewers improves quality and fairness of reviews.</p>
+<p>Furthermore, authors and reviewers have the ability to contact privately the editors if they have any doubt or question.</p>
+</div>
+<div id="how-will-users-know-a-package-has-been-reviewed" class="section level2">
+<h2>
+<span class="header-section-number">4.5</span> How will users know a package has been reviewed?<a class="anchor" aria-label="anchor" href="#how-will-users-know-a-package-has-been-reviewed"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Your package README will feature a peer-review badge linking to the software review thread.</li>
+<li>Your package will get a <a href="ci.html#rodocsci"><code>docs.ropensci.org</code> docs website</a> that you can link from DESCRIPTION.</li>
+<li>Your package repo will be transferred to the rOpenSci organization.</li>
+<li>If reviewers <a href="building.html#authorship">agree to be listed in DESCRIPTION</a>, their metadata will mention the review.</li>
+</ul>
+</div>
+<div id="editors-and-reviewers" class="section level2">
+<h2>
+<span class="header-section-number">4.6</span> Editors and reviewers<a class="anchor" aria-label="anchor" href="#editors-and-reviewers"><i class="fas fa-link"></i></a>
+</h2>
+<div id="associateditors" class="section level3">
+<h3>
+<span class="header-section-number">4.6.1</span> Associate editors<a class="anchor" aria-label="anchor" href="#associateditors"><i class="fas fa-link"></i></a>
+</h3>
+<p>rOpenSci’s Software Peer Review process is run by:</p>
+<ul>
+<li>
+<a href="https://github.com/noamross">Noam Ross</a>, EcoHealth Alliance</li>
+<li>
+<a href="https://github.com/karthik">Karthik Ram</a>, rOpenSci</li>
+<li>
+<a href="https://github.com/maelle">Maëlle Salmon</a>, rOpenSci</li>
+<li>
+<a href="https://github.com/annakrystalli">Anna Krystalli</a>, University of Sheffield RSE</li>
+<li>
+<a href="https://github.com/melvidoni">Melina Vidoni</a>, RMIT University (School of Science)</li>
+<li>
+<a href="https://github.com/geanders">Brooke Anderson</a>, Colorado State University</li>
+<li>
+<a href="https://github.com/maurolepore">Mauro Lepore</a>, 2 Degrees Investing Initiative</li>
+<li>
+<a href="https://github.com/ldecicco-USGS">Laura DeCicco</a>, USGS</li>
+<li>
+<a href="https://github.com/jooolia">Julia Gustavsen</a>, SOPHiA GENETICS</li>
+<li>
+<a href="https://github.com/emilyriederer">Emily Riederer</a>, Capital One</li>
+</ul>
+</div>
+<div id="reviewers" class="section level3">
+<h3>
+<span class="header-section-number">4.6.2</span> Reviewers<a class="anchor" aria-label="anchor" href="#reviewers"><i class="fas fa-link"></i></a>
+</h3>
+<p>We are grateful to the following individuals who have offered up their time and expertise to review packages submitted to rOpenSci.</p>
+<p><a href="https://github.com/boshek">Sam Albers</a> · <a href="https://github.com/toph-allen">Toph Allen</a> · <a href="https://github.com/geanders">Brooke Anderson</a> · <a href="https://github.com/aappling-usgs">Alison Appling</a> · <a href="https://github.com/arendsee">Zebulun Arendsee</a> · <a href="https://github.com/statsmaths">Taylor Arnold</a> · <a href="https://github.com/daattali">Dean Attali</a> · <a href="https://github.com/batpigandme">Mara Averick</a> · <a href="https://github.com/suzanbaert">Suzan Baert</a> · <a href="https://github.com/coatless">James Balamuta</a> · <a href="https://github.com/vbaliga">Vikram Baliga</a> · <a href="https://github.com/dwbapst">David Bapst</a> · <a href="https://github.com/bjoelle">Joëlle Barido-Sottani</a> · <a href="https://github.com/abarner">Allison Barner</a> · <a href="https://github.com/calebasaraba">Cale Basaraba</a> · <a href="https://github.com/johnbaums">John Baumgartner</a> · <a href="https://github.com/fawda123">Marcus Beck</a> · <a href="https://github.com/gmbecker">Gabriel Becker</a> · <a href="https://github.com/jsonbecker">Jason Becker</a> · <a href="https://github.com/DomBennett">Dom Bennett</a> · <a href="https://github.com/kbenoit">Ken Benoit</a> · <a href="https://github.com/berdaniera">Aaron Berdanier</a> · <a href="https://github.com/fboehm">Fred Boehm</a> · <a href="https://github.com/cboettig">Carl Boettiger</a> · <a href="https://github.com/bpbond">Ben Bond-Lamberty</a> · <a href="https://github.com/asbonnetlebrun">Anne-Sophie Bonnet-Lebrun</a> · <a href="https://github.com/alisonboyer">Alison Boyer</a> · <a href="https://github.com/aebratt">Abby Bratt</a> · <a href="https://github.com/briatte">François Briatte</a> · <a href="https://github.com/eebrown">Eric Brown</a> · <a href="https://github.com/brunj7">Julien Brun</a> · <a href="https://github.com/jennybc">Jenny Bryan</a> · <a href="https://github.com/lbusett">Lorenzo Busetto</a> · <a href="https://github.com/sckott">Scott Chamberlain</a> · <a href="https://github.com/j23414">Jennifer Chang</a> · <a href="https://github.com/cimentadaj">Jorge Cimentada</a> · <a href="https://github.com/chasemc">Chase Clark</a> · <a href="https://github.com/jonclayden">Jon Clayden</a> · <a href="https://github.com/wcornwell">Will Cornwell</a> · <a href="https://github.com/ercrema">Enrico Crema</a> · <a href="https://github.com/czeildi">Ildiko Czeller</a> · <a href="https://github.com/cderv">Christophe Dervieux</a> · <a href="https://github.com/aedobbyn">Amanda Dobbyn</a> · <a href="https://github.com/jasdumas">Jasmine Dumas</a> · <a href="https://github.com/RemkoDuursma">Remko Duursma</a> · <a href="https://github.com/MarkEdmondson1234">Mark Edmondson</a> · <a href="https://github.com/pegeler">Paul Egeler</a> · <a href="https://github.com/eveskew">Evan Eskew</a> · <a href="https://github.com/salvafern">Salvador Fernandez</a> · <a href="https://github.com/kimnewzealand">Kim Fitter</a> · <a href="https://github.com/rmflight">Robert M Flight</a> · <a href="https://github.com/sfoks">Sydney Foks</a> · <a href="https://github.com/zachary-foster">Zachary Stephen Longiaru Foster</a> · <a href="https://github.com/aurielfournier">Auriel Fournier</a> · <a href="https://github.com/carlganz">Carl Ganz</a> · <a href="https://github.com/nacnudus">Duncan Garmonsway</a> · <a href="https://github.com/sharlagelfand">Sharla Gelfand</a> · <a href="https://github.com/monicagerber">Monica Gerber</a> · <a href="https://github.com/dosgillespie">Duncan Gillespie</a> · <a href="https://github.com/davidgohel">David Gohel</a> · <a href="https://github.com/laurajanegraham">Laura Graham</a> · <a href="https://github.com/softloud">Charles Gray</a> · <a href="https://github.com/cgries">Corinna Gries</a> · <a href="https://github.com/bisaloo">Hugo Gruson</a> · <a href="https://github.com/kylehamilton">W Kyle Hamilton</a> · <a href="https://github.com/ivanhanigan">Ivan Hanigan</a> · <a href="https://github.com/jeffreyhanson">Jeffrey Hanson</a> · <a href="https://github.com/raynamharris">Rayna Harris</a> · <a href="https://github.com/emhart">Ted Hart</a> · <a href="https://github.com/nujcharee">Nujcharee Haswell</a> · <a href="https://github.com/expectopatronum">Verena Haunschmid</a> · <a href="https://github.com/andrewheiss">Andrew Heiss</a> · <a href="https://github.com/maxheld83">Max Held</a> · <a href="https://github.com/chucheria">Bea Hernandez</a> · <a href="https://github.com/jimhester">Jim Hester</a> · <a href="https://github.com/PeteHaitch">Peter Hickey</a> · <a href="https://github.com/rmhogervorst">Roel Hogervorst</a> · <a href="https://github.com/jhollist">Jeff Hollister</a> · <a href="https://github.com/khondula">Kelly Hondula</a> · <a href="https://github.com/seaaan">Sean Hughes</a> · <a href="https://github.com/bhive01">Brandon Hurr</a> · <a href="https://github.com/njahn82">Najko Jahn</a> · <a href="https://github.com/tdjames1">Tamora D James</a> · <a href="https://github.com/mikejohnson51">Mike Johnson</a> · <a href="https://github.com/mbjoseph">Max Joseph</a> · <a href="https://github.com/kjuraic">Krunoslav Juraic</a> · <a href="https://github.com/sokal1456">Soumya Kalra</a> · <a href="https://github.com/zkamvar">Zhian N. Kamvar</a> · <a href="https://github.com/kaneplusplus">Michael Kane</a> · <a href="https://github.com/andeek">Andee Kaplan</a> · <a href="https://github.com/UniversalTourist">Hazel Kavılı</a> · <a href="https://github.com/Ironholds">Os Keyes</a> · <a href="https://github.com/mikoontz">Michael Koontz</a> · <a href="https://github.com/bmkramer">Bianca Kramer</a> · <a href="https://github.com/wlandau">Will Landau</a> · <a href="https://github.com/ledell">Erin LeDell</a> · <a href="https://github.com/leeper">Thomas Leeper</a> · <a href="https://github.com/levisc8">Sam Levin</a> · <a href="https://github.com/stephlocke">Stephanie Locke</a> · <a href="https://github.com/marionlouveaux">Marion Louveaux</a> · <a href="https://github.com/robinlovelace">Robin Lovelace</a> · <a href="https://github.com/jules32">Julia Stewart Lowndes</a> · <a href="https://github.com/timcdlucas">Tim Lucas</a> · <a href="https://github.com/aammd">Andrew MacDonald</a> · <a href="https://github.com/kierisi">Jesse Maegan</a> · <a href="https://github.com/tjmahr">Tristan Mahr</a> · <a href="https://github.com/zambujo">Joao Martins</a> · <a href="https://github.com/benmarwick">Ben Marwick</a> · <a href="https://github.com/milesmcbain">Miles McBain</a> · <a href="https://github.com/LucyMcGowan">Lucy D’Agostino McGowan</a> · <a href="https://github.com/AmeliaMN">Amelia McNamara</a> · <a href="https://github.com/eamcvey">Elaine McVey</a> · <a href="https://github.com/amoeba">Bryce Mecum</a> · <a href="https://github.com/fmichonneau">François Michonneau</a> · <a href="https://github.com/helenmiller16">Helen Miller</a> · <a href="https://github.com/jminnier">Jessica Minnier</a> · <a href="https://github.com/pmnatural">Priscilla Minotti</a> · <a href="https://github.com/nmonhait">Nichole Monhait</a> · <a href="https://github.com/Paula-Moraga">Paula Moraga</a> · <a href="https://github.com/rossmounce">Ross Mounce</a> · <a href="https://github.com/lmullen">Lincoln Mullen</a> · <a href="https://github.com/mmulvahill">Matt Mulvahill</a> · <a href="https://github.com/mvickm">Maria Victoria Munafó</a> · <a href="https://github.com/deniederhut">Dillon Niederhut</a> · <a href="https://github.com/rorynolan">Rory Nolan</a> · <a href="https://github.com/karinorman">Kari Norman</a> · <a href="https://github.com/Nowosad">Jakub Nowosad</a> · <a href="https://github.com/nuest">Daniel Nüst</a> · <a href="https://github.com/poldham">Paul Oldham</a> · <a href="https://github.com/limnoliver">Samantha Oliver</a> · <a href="https://github.com/DanOlner">Dan Olner</a> · <a href="https://github.com/jeroen">Jeroen Ooms</a> · <a href="https://github.com/ottlngr">Philipp Ottolinger</a> · <a href="https://github.com/mpadge">Mark Padgham</a> · <a href="https://github.com/marinapapa">Marina Papadopoulou</a> · <a href="https://github.com/edzer">Edzer Pebesma</a> · <a href="https://github.com/thomasp85">Thomas Lin Pedersen</a> · <a href="https://github.com/rtaph">Rafael Pilliard-Hellwig</a> · <a href="https://github.com/lindsayplatt">Lindsay Platt</a> · <a href="https://github.com/potterzot">Nicholas Potter</a> · <a href="https://github.com/etiennebr">Etienne Racine</a> · <a href="https://github.com/nistara">Nistara Randhawa</a> · <a href="https://github.com/daranzolin">David Ranzolin</a> · <a href="https://github.com/qdread">Quentin Read</a> · <a href="https://github.com/nealrichardson">Neal Richardson</a> · <a href="https://github.com/emilyriederer">Emily Riederer</a> · <a href="https://github.com/trinker">tyler rinker</a> · <a href="https://github.com/robinsones">Emily Robinson</a> · <a href="https://github.com/dgrtwo">David Robinson</a> · <a href="https://github.com/Pakillo">Francisco Rodriguez-Sanchez</a> · <a href="https://github.com/jromanowska">Julia Romanowska</a> · <a href="https://github.com/xavi-rp">Xavier Rotllan-Puig</a> · <a href="https://github.com/hrbrmstr">Bob Rudis</a> · <a href="https://github.com/edgararuiz">Edgar Ruiz</a> · <a href="https://github.com/timelyportfolio">Kent Russel</a> · <a href="https://github.com/AliciaSchep">Alicia Schep</a> · <a href="https://github.com/nevrome">Clemens Schmid</a> · <a href="https://github.com/marcosci">Marco Sciaini</a> · <a href="https://github.com/HeidiSeibold">Heidi Seibold</a> · <a href="https://github.com/juliasilge">Julia Silge</a> · <a href="https://github.com/mcsiple">Margaret Siple</a> · <a href="https://github.com/gothub">Peter Slaughter</a> · <a href="https://github.com/grimbough">Mike Smith</a> · <a href="https://github.com/tts">Tuija Sonkkila</a> · <a href="https://github.com/Adamhsparks">Adam Sparks</a> · <a href="https://github.com/jsta">Joseph Stachelek</a> · <a href="https://github.com/ChristineStawitz-NOAA">Christine Stawitz</a> · <a href="https://github.com/isteves">Irene Steves</a> · <a href="https://github.com/mdsumner">Michael Sumner</a> · <a href="https://github.com/cksun-usc">Chung-Kai Sun</a> · <a href="https://github.com/sarahsupp">Sarah Supp</a> · <a href="https://github.com/jmt2080ad">Jason Taylor</a> · <a href="https://github.com/FilipeamTeixeira">Filipe Teixeira</a> · <a href="https://github.com/ateucher">Andy Teucher</a> · <a href="https://github.com/jenniferthompson">Jennifer Thompson</a> · <a href="https://github.com/joethorley">Joe Thorley</a> · <a href="https://github.com/ttimbers">Tiffany Timbers</a> · <a href="https://github.com/timtrice">Tim Trice</a> · <a href="https://github.com/tedunderwood">Ted Underwood</a> · <a href="https://github.com/kevinushey">Kevin Ushey</a> · <a href="https://github.com/uyedaj">Josef Uyeda</a> · <a href="https://github.com/FvD">Frans van Dunné</a> · <a href="https://github.com/pachamaltese">Mauricio Vargas</a> · <a href="https://github.com/remsamp">Remi Vergnon</a> · <a href="https://github.com/jacobpwagner">Jake Wagner</a> · <a href="https://github.com/BenJWard">Ben Ward</a> · <a href="https://github.com/elinw">Elin Waring</a> · <a href="https://github.com/rachelwarnock">Rachel Warnock</a> · <a href="https://github.com/lwasser">Leah Wasser</a> · <a href="https://github.com/lmweber">Lukas Weber</a> · <a href="https://github.com/mhweber">Marc Weber</a> · <a href="https://github.com/karissawhiting">Karissa Whiting</a> · <a href="https://github.com/stewid">Stefan Widgren</a> · <a href="https://github.com/arw36">Anna Willoughby</a> · <a href="https://github.com/lawinslow">Luke Winslow</a> · <a href="https://github.com/dwinter">David Winter</a> · <a href="https://github.com/karawoo">Kara Woo</a> · <a href="https://github.com/brunaw">Bruna Wundervald</a> · <a href="https://github.com/layamane">Lauren Yamane</a> · <a href="https://github.com/zabore">Emily C. Zabor</a> · <a href="https://github.com/tzakharko">Taras Zakharko</a> · <a href="https://github.com/haozhu233">Hao Zhu</a> · <a href="https://github.com/czibman">Chava Zibman</a> · <a href="https://github.com/naupaka">Naupaka Zimmerman</a> · <a href="https://github.com/jzwart">Jake Zwart</a> · <a href="https://github.com/manuramon">Manuel</a> · <a href="https://github.com/richfitz">Rich</a> · <a href="https://github.com/cvitolo">Claudia</a> · <a href="https://github.com/llrs">Lluís</a> · <a href="https://github.com/soodoku">gaurav</a></p>
+<p>We are also grateful to the following individuals who have served as guest editors.</p>
+<p><a href="https://github.com/anadiedrichs">Ana Laura Diedrichs</a> · <a href="https://github.com/jhollist">Jeff Hollister</a> · <a href="https://github.com/emilyriederer">Emily Riederer</a> · <a href="https://github.com/Adamhsparks">Adam Sparks</a> · <a href="https://github.com/haozhu233">Hao Zhu</a></p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></div>
+<div class="next"><a href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#softwarereviewintro"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="nav-link" href="#whatissoftwarereview"><span class="header-section-number">4.1</span> What is rOpenSci Software Peer Review?</a></li>
+<li><a class="nav-link" href="#whysubmit"><span class="header-section-number">4.2</span> Why submit your package to rOpenSci?</a></li>
+<li><a class="nav-link" href="#whyreview"><span class="header-section-number">4.3</span> Why review packages for rOpenSci?</a></li>
+<li><a class="nav-link" href="#whyopen"><span class="header-section-number">4.4</span> Why are reviews open?</a></li>
+<li><a class="nav-link" href="#how-will-users-know-a-package-has-been-reviewed"><span class="header-section-number">4.5</span> How will users know a package has been reviewed?</a></li>
+<li>
+<a class="nav-link" href="#editors-and-reviewers"><span class="header-section-number">4.6</span> Editors and reviewers</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#associateditors"><span class="header-section-number">4.6.1</span> Associate editors</a></li>
+<li><a class="nav-link" href="#reviewers"><span class="header-section-number">4.6.2</span> Reviewers</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/softwarereview_intro.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/softwarereview_intro.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

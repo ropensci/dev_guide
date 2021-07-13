@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 1 Packaging Guide | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="rOpenSci accepts packages that meet our guidelines via a streamlined Software Peer Review process. To ensure a consistent style across all of our tools we have written this chapter highlighting...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 1 Packaging Guide | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/building.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="rOpenSci accepts packages that meet our guidelines via a streamlined Software Peer Review process. To ensure a consistent style across all of our tools we have written this chapter highlighting...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 1 Packaging Guide | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="rOpenSci accepts packages that meet our guidelines via a streamlined Software Peer Review process. To ensure a consistent style across all of our tools we have written this chapter highlighting...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="active" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="building" class="section level1">
+<h1>
+<span class="header-section-number">1</span> Packaging Guide<a class="anchor" aria-label="anchor" href="#building"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+rOpenSci accepts packages that meet our guidelines via a streamlined <a href="softwarereviewintro.html#whatissoftwarereview">Software Peer Review process</a>. To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our <a href="ci.html#ci">chapter about continuous integration (CI)</a>. Further guidance for after the review process is provided in the third section of this book starting with <a href="collaboration.html#collaboration">a chapter about collaboration</a>.
+</p>
+<p>
+We strongly recommend that package developers read Hadley Wickham’s concise but thorough book on package development which is available for <a href="https://r-pkgs.org/">free online</a> (and <a href="https://amzn.com/1491910593?tag=r-pkgs-20">print</a>). Our guide is partially redundant with other resources but highlights rOpenSci’s guidelines.
+</p>
+<p>
+To read why submitting a package to rOpenSci is worth the effort to meet guidelines, have a look at <a href="softwarereviewintro.html#whysubmit">reasons to submit</a>.
+</p>
+</div>
+<div id="package-name-and-metadata" class="section level2">
+<h2>
+<span class="header-section-number">1.1</span> Package name and metadata<a class="anchor" aria-label="anchor" href="#package-name-and-metadata"><i class="fas fa-link"></i></a>
+</h2>
+<div id="naming-your-package" class="section level3">
+<h3>
+<span class="header-section-number">1.1.1</span> Naming your package<a class="anchor" aria-label="anchor" href="#naming-your-package"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the <a href="https://github.com/ropenscilabs/available"><code>available</code> package</a>. In particular, do <em>not</em> choose a package name that’s already used on CRAN or Bioconductor.</p></li>
+<li><p>A more unique package name might be easier to track (for you and us to assess package use) and search (for users to find it and to google their questions). Obviously a <em>too</em> unique package name might make the package less discoverable (e.g. it might be an argument for naming your package <a href="https://github.com/ropensci/geojson">geojson</a>).</p></li>
+<li><p>Find other interesting aspects of naming your package <a href="https://www.njtierney.com/post/2018/06/20/naming-things/">in this blog post by Nick Tierney</a>, and in case you change your mind, find out <a href="https://www.njtierney.com/post/2017/10/27/change-pkg-name/">how to rename your package in this other blog post of Nick’s</a>.</p></li>
+</ul>
+</div>
+<div id="creating-metadata-for-your-package" class="section level3">
+<h3>
+<span class="header-section-number">1.1.2</span> Creating metadata for your package<a class="anchor" aria-label="anchor" href="#creating-metadata-for-your-package"><i class="fas fa-link"></i></a>
+</h3>
+<p>We recommend you to use the <a href="https://github.com/ropensci/codemetar"><code>codemetar</code> package</a> for creating and updating a JSON <a href="https://codemeta.github.io/">CodeMeta</a> metadata file for your package via <code>codemetar::write_codemeta()</code>. It will automatically include all useful information, including <a href="grooming.html#grooming">GitHub topics</a>. CodeMeta uses <a href="https://schema.org/">Schema.org terms</a> so as it gains popularity the JSON metadata of your package might be used by third-party services, maybe even search engines.</p>
+</div>
+</div>
+<div id="platforms" class="section level2">
+<h2>
+<span class="header-section-number">1.2</span> Platforms<a class="anchor" aria-label="anchor" href="#platforms"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Packages should run on all major platforms (Windows, macOS, Linux). Exceptions may be granted packages that interact with system-specific functions, or wrappers for utilities that only operate on limited platforms, but authors should make every effort for cross-platform compatibility, including system-specific compilation, or containerization of external utilities.</li>
+</ul>
+</div>
+<div id="package-api" class="section level2">
+<h2>
+<span class="header-section-number">1.3</span> Package API<a class="anchor" aria-label="anchor" href="#package-api"><i class="fas fa-link"></i></a>
+</h2>
+<div id="function-and-argument-naming" class="section level3">
+<h3>
+<span class="header-section-number">1.3.1</span> Function and argument naming<a class="anchor" aria-label="anchor" href="#function-and-argument-naming"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>
+<p>Functions and arguments naming should be chosen to work together to form a common, logical programming API that is easy to read, and auto-complete.</p>
+<ul>
+<li>Consider an <code>object_verb()</code> naming scheme for functions in your package that take a common data type or interact with a common API. <code>object</code> refers to the data/API and <code>verb</code> the primary action. This scheme helps avoid namespace conflicts with packages that may have similar verbs, and makes code readable and easy to auto-complete. For instance, in <strong>stringi</strong>, functions starting with <code>stri_</code> manipulate strings (<code>stri_join()</code>, <code>stri_sort()</code>, and in <strong>googlesheets</strong> functions starting with <code>gs_</code> are calls to the Google Sheets API (<code>gs_auth()</code>, <code>gs_user()</code>, <code>gs_download()</code>).</li>
+</ul>
+</li>
+<li><p>For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operator (<code>%&gt;%</code>)</p></li>
+<li><p>We strongly recommend <code>snake_case</code> over all other styles unless you are porting over a package that is already in wide use.</p></li>
+<li>
+<p>Avoid function name conflicts with base packages or other popular ones (e.g. <code>ggplot2</code>, <code>dplyr</code>, <code>magrittr</code>, <code>data.table</code>)</p>
+<ul>
+<li>Argument naming and order should be consistent across functions that use similar inputs.</li>
+</ul>
+</li>
+<li><p>Package functions importing data should not import data to the global environment, but instead must return objects. Assignments to the global environment are to be avoided in general.</p></li>
+</ul>
+</div>
+<div id="console-messages" class="section level3">
+<h3>
+<span class="header-section-number">1.3.2</span> Console messages<a class="anchor" aria-label="anchor" href="#console-messages"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Use <code><a href="https://rdrr.io/r/base/message.html">message()</a></code> and <code><a href="https://rdrr.io/r/base/warning.html">warning()</a></code> to communicate with the user in your functions. Please do not use <code><a href="https://rdrr.io/r/base/print.html">print()</a></code> or <code><a href="https://rdrr.io/r/base/cat.html">cat()</a></code> unless it’s for a <code>print.*()</code> or <code>str.*()</code> methods, as these methods of printing messages are harder for the user to suppress.</li>
+</ul>
+</div>
+<div id="interactivegraphical-interfaces" class="section level3">
+<h3>
+<span class="header-section-number">1.3.3</span> Interactive/Graphical Interfaces<a class="anchor" aria-label="anchor" href="#interactivegraphical-interfaces"><i class="fas fa-link"></i></a>
+</h3>
+<p>If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow , include a mechanism to automatically reproduce steps taken in the GUI. This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also <a href="building.html#testing">“Testing”</a> below.)</p>
+<p>The <a href="https://github.com/ropensci/tabulizer"><code>tabulizer</code> package</a> e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are <a href="https://gdancik.shinyapps.io/shinyGEO/" class="uri">https://gdancik.shinyapps.io/shinyGEO/</a>, and <a href="https://github.com/wallaceEcoMod/wallace/" class="uri">https://github.com/wallaceEcoMod/wallace/</a></p>
+</div>
+</div>
+<div id="code-style" class="section level2">
+<h2>
+<span class="header-section-number">1.4</span> Code Style<a class="anchor" aria-label="anchor" href="#code-style"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>For more information on how to style your code, name functions, and R scripts inside the <code>R/</code> folder, we recommend reading the <a href="https://r-pkgs.org/r.html">code chapter in The R Packages book</a>. We recommend the <a href="https://github.com/r-lib/styler"><code>styler</code> package</a> for automating part of the code styling.</p></li>
+<li><p>You can choose to use <code>=</code> over <code>&lt;-</code> as long you are consistent with one choice within your package. We recommend avoiding the use of <code>-&gt;</code> for assignment within a package. If you do use <code>&lt;-</code> throughout your package, and you also use <code>R6</code> in that package, you’ll be forced to use <code>=</code> for assignment within your <code>R6Class</code> construction - this is not considered an inconsistency because you can’t use <code>&lt;-</code> in this case.</p></li>
+</ul>
+</div>
+<div id="readme" class="section level2">
+<h2>
+<span class="header-section-number">1.5</span> README<a class="anchor" aria-label="anchor" href="#readme"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>
+<p>All packages should have a README file, named <code>README.md</code>, in the root of the repository. The README should include, from top to bottom:</p>
+<ul>
+<li>The package name</li>
+<li>Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges. If the README has many more badges, you might want to consider using a table for badges, see <a href="https://github.com/ropensci/ijtiff#ijtiff-">this example</a>, <a href="https://github.com/ropensci/drake">that one</a> and <a href="https://github.com/ropensci/qualtRics/">that one</a>. Such a table should be more wide than high.</li>
+<li>Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf <a href="building.html#website">the documentation website section</a>) unless the package is small and there’s only one vignette repeating the README.</li>
+<li>Installation instructions</li>
+<li>Any additional setup required (authentication tokens, etc)</li>
+<li>Brief demonstration usage</li>
+<li>If applicable, how the package compares to other similar packages and/or how it relates to other packages</li>
+<li>Citation information</li>
+</ul>
+</li>
+</ul>
+<p>If you use another repo status badge such as a <a href="https://www.tidyverse.org/lifecycle/">lifecycle</a> badge, please also add a <a href="https://www.repostatus.org/">repostatus.org</a> badge. <a href="https://github.com/ropensci/ijtiff#ijtiff-">Example of a repo README with two repo status badges</a>.</p>
+<p>In all cases, for adding repostatus.org badges you can use the <a href="https://docs.ropensci.org/rodev/reference/use_repostatus_badge.html"><code>rodev::use_repostatus_badge()</code></a> function.</p>
+<ul>
+<li>Once you have submitted a package and it has passed editor checks, add a peer-review badge via</li>
+</ul>
+<pre><code>[![](https://badges.ropensci.org/&lt;issue_id&gt;_status.svg)](https://github.com/ropensci/software-review/issues/&lt;issue_id&gt;)</code></pre>
+<p>where issue_id is the number of the issue in the software-review repository. For instance, the badge for <a href="https://github.com/ropensci/rtimicropem"><code>rtimicropem</code></a> review uses the number 126 since it’s the <a href="https://github.com/ropensci/software-review/issues/126">review issue number</a>. The badge will first indicated “under review” and then “peer-reviewed” once your package has been onboarded (issue labelled “approved” and closed), and will link to the review issue.</p>
+<ul>
+<li>
+<p>If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in <a href="https://github.com/ropensci/drake"><code>drake</code> repo</a> and in <a href="https://github.com/ropensci/qualtRics/"><code>qualtRics</code> repo</a>. Possible sections are</p>
+<ul>
+<li>Development (CI statuses cf <a href="ci.html#ci">CI chapter</a>, Slack channel for discussion, repostatus)</li>
+<li>Release/Published (<a href="https://www.r-pkg.org/services#badges">CRAN version and release date badges from METACRAN</a>, <a href="https://github.com/ropensci/cchecksapi#badges">CRAN checks API badge</a>, Zenodo badge)</li>
+<li>Stats/Usage (downloads e.g. <a href="https://www.r-pkg.org/services#badges">download badges from METACRAN</a>)
+The table should be more wide than it is long in order to mask the rest of the README.</li>
+</ul>
+</li>
+<li><p>If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users. It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation. For instance,
+a README should not merely read, “Provides access to GooberDB,” but also include,
+“…, an online repository of Goober sightings in South America. More
+information about GooberDB, and documentation of database structure and metadata
+can be found at <em>link</em>”.</p></li>
+<li><p>We recommend not creating <code>README.md</code> directly, but from a <code>README.Rmd</code> file (an R Markdown file) if you have any demonstration code. The advantage of the <code>.Rmd</code> file is you can combine text with code that can be easily updated whenever your package is updated.</p></li>
+<li><p>Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest <a href="building.html#website">creating a website for your package</a></p></li>
+<li><p>Consider using <code>usethis::use_readme_rmd()</code> to get a template for a <code>README.Rmd</code> file and to automatically set up a pre-commit hook to ensure that <code>README.md</code> is always newer than <code>README.Rmd</code>.</p></li>
+<li><p>Add a code of conduct and contribution guidelines, cf <a href="collaboration.html#friendlyfiles">this section of the book</a>.</p></li>
+<li><p>See the <a href="https://github.com/ropensci/gistr#gistr"><code>gistr</code> README</a> for a good example README to follow for a small package, and <a href="https://github.com/ropensci/bowerbird"><code>bowerbird</code> README</a> for a good example README for a larger package.</p></li>
+</ul>
+</div>
+<div id="documentation" class="section level2">
+<h2>
+<span class="header-section-number">1.6</span> Documentation<a class="anchor" aria-label="anchor" href="#documentation"><i class="fas fa-link"></i></a>
+</h2>
+<div id="general" class="section level3">
+<h3>
+<span class="header-section-number">1.6.1</span> General<a class="anchor" aria-label="anchor" href="#general"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>All exported package functions should be fully documented with examples.</p></li>
+<li><p>If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Example in <a href="https://docs.ropensci.org/rtweet/">rtweet README</a>, <a href="https://docs.ropensci.org/rebird/#auk-vs-rebird">rebird README</a>.</p></li>
+<li><p>The package should contain top-level documentation for <code>?foobar</code>, (or <code>?`foobar-package`</code> if there is a naming conflict). Optionally, you can use both <code>?foobar</code> and <code>?`foobar-package`</code> for the package level manual file, using <code>@aliases</code> roxygen tag. <code>usethis::use_package_doc()</code> adds the template for the top-level documentation.</p></li>
+<li><p>The package should contain at least one vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content.</p></li>
+<li><p>As is the case for a README, top-level documentation or vignettes may be the first point of entry for users. If your package connects to a data source or online service, or wraps other software, it should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation. For instance, a vignette intro or documentation should not merely read, “Provides access to GooberDB,” but also include, “…, an online repository of Goober sightings in South America. More information about GooberDB, and documentation of database structure and metadata can be found at <em>link</em>”. Any vignette should outline prerequisite knowledge to be able to understand the vignette upfront.</p></li>
+</ul>
+<p>The general vignette should present a series of examples progressing in complexity from basic to advanced usage.</p>
+<ul>
+<li><p>Functionality likely to be used by only more advanced users or developers might be better put in a separate vignette (e.g. programming/NSE with dplyr).</p></li>
+<li><p>The README, the top-level package docs, vignettes, websites, etc., should all have enough information at the beginning to get a high-level overview of the package and the services/data it connects to, and provide navigation to other relevant pieces of documentation. This is to follow the principle of <em>multiple points of entry</em> i.e. to take into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps.</p></li>
+<li><p>The vignette(s) should include citations to software and papers where appropriate.</p></li>
+<li><p>If your package provides access to a data source, we require that DESCRIPTION contains both (1) A brief identification and/or description of the organisation responsible for issuing data; and (2) The URL linking to public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).</p></li>
+<li><p>Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like “This is foobar 2.4-0” or citation guidance because they can be annoying to the user. Rely on documentation for such guidance.</p></li>
+<li><p>You can choose to have a README section about use cases of your package (other packages, blog posts, etc.), <a href="https://github.com/ropensci/vcr#example-packages-using-vcr">example</a>.</p></li>
+</ul>
+</div>
+<div id="roxygen2-use" class="section level3">
+<h3>
+<span class="header-section-number">1.6.2</span> roxygen2 use<a class="anchor" aria-label="anchor" href="#roxygen2-use"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>We request all submissions to use <code>roxygen2</code> for documentation. <code>roxygen2</code> is <a href="https://cran.r-project.org/web/packages/roxygen2/index.html">an R package</a> that automatically compiles <code>.Rd</code> files to your <code>man</code> folder in your package from simple tags written above each function.</p></li>
+<li><p>More information on using roxygen2 <a href="https://r-pkgs.org/man.html">documentation</a> is available in the R packages book.</p></li>
+<li><p>One key advantage of using <code>roxygen2</code> is that your <code>NAMESPACE</code> will always be automatically generated and up to date.</p></li>
+<li><p>All functions should document the type of object returned under the <code>@return</code> heading.</p></li>
+<li><p>We recommend using the <code>@family</code> tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package’s website, see <a href="https://r-pkgs.org/man.html">this section of Hadley Wickham’s book</a> and <a href="building.html#function-grouping">this section of the present chapter</a> for more details.</p></li>
+<li><p>You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of <a href="https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/">R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette</a> as well <a href="https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files">as in man pages by using the <code>@includeRmd</code> tag available from <code>roxygen 0.7.0</code></a>.</p></li>
+<li><p>Add <code>#' @noRd</code> to internal functions.</p></li>
+<li>
+<p>If you prefer not to clutter up code with extensive documentation, you can place further examples outside of the R script and use the <code>@example</code> tag; and you place further documentation in files in a <code>man-roxygen</code> folder in the root of your package, and those will be combined into the manual file by the use of <code>@template &lt;file name&gt;</code>, for example.</p>
+<ul>
+<li>Put any documentation for an object in a <code>.R</code> file in the <code>man-roxygen</code> folder (at the root of your package). For example, <a href="https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R">this file</a>. Link to that template file from your function (<a href="https://github.com/ropensci/rgbif/blob/master/R/occ_search.r">e.g.</a>) with the <code>@template</code> keyword (<a href="https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7">e.g.</a>). The contents of the template will be inserted when documentation is built into the resulting <code>.Rd</code> file that users will see when they ask for documentation for the function.</li>
+<li>Note that if you are using markdown documentation, markdown currently doesn’t work in template files, so make sure to use latex formatting.</li>
+<li>In most cases you can ignore templates and <code>man-roxygen</code>, but there are two cases in which leveraging them will greatly help:
+<ol style="list-style-type: decimal">
+<li>When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your <code>.R</code> source file tidy. This is especially useful when you have a lot of code in that <code>.R</code> file. On the other hand, it means the docs are not readable “in-source” since they’re in another file.</li>
+<li>When you have the same documentation parts used across many <code>.R</code> functions it’s helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other. Using a template file for a parameter documentation is an alternative to defining the parameter for one function and using <code>@inheritParams</code> for other functions using the same parameter.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Starting from <code>roxygen2</code> version 7.0.0, <code>R6</code> classes are officially supported. See the <a href="https://roxygen2.r-lib.org/articles/rd.html#r6">roxygen2 docs</a> for details on how to document <code>R6</code> classes.</p></li>
+</ul>
+</div>
+<div id="urls-in-documentation" class="section level3">
+<h3>
+<span class="header-section-number">1.6.3</span> URLs in documentation<a class="anchor" aria-label="anchor" href="#urls-in-documentation"><i class="fas fa-link"></i></a>
+</h3>
+<p>This subsection is particularly relevant to authors wishing to submit their package to CRAN.
+CRAN will check URLs in your documentation and does not allow redirect status codes such as 301.
+You can use the <a href="https://github.com/r-lib/urlchecker">urlchecker</a> package to reproduce these checks and, in particular, replace URLs with the URLs they redirect to.
+Others have used the option to escape some URLs (change <code>&lt;https://ropensci.org/&gt;</code> to <code>https://ropensci.org/</code>, or <code>\url{https://ropensci.org/}</code> to <code>https://ropensci.org/</code>.), but if you do so, you will need to implement some sort of URL checking yourself to prevent them from getting broken without your noticing. Furthermore, links would not be clickable from local docs.</p>
+</div>
+</div>
+<div id="website" class="section level2">
+<h2>
+<span class="header-section-number">1.7</span> Documentation website<a class="anchor" aria-label="anchor" href="#website"><i class="fas fa-link"></i></a>
+</h2>
+<p>We recommend creating a documentation website for your package using <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a>. <a href="https://enpiar.com/2017/11/21/getting-down-with-pkgdown/">Here</a> is a good tutorial to get started with <code>pkgdown</code>, and unsurprisingly <code>pkgdown</code> has <a href="https://pkgdown.r-lib.org/">its own documentation website</a>.</p>
+<p>There are a few elements we’d like to underline here.</p>
+<div id="docsropensci" class="section level3">
+<h3>
+<span class="header-section-number">1.7.1</span> Automatic deployment of the documentation website<a class="anchor" aria-label="anchor" href="#docsropensci"><i class="fas fa-link"></i></a>
+</h3>
+<p>You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at <code>https://dev.ropensci.org/job/package_name</code>, e.g. <a href="https://dev.ropensci.org/job/magick">for <code>magick</code></a>; and the website at <code>https://docs.ropensci.org/package_name</code>, e.g. <a href="https://docs.ropensci.org/magick">for <code>magick</code></a>. The website build will use your pkgdown config file if you have one, except for the styling that will use the <a href="https://github.com/ropensci-org/rotemplate/"><code>rotemplate</code> package</a>. The resulting website will have search enabled by Algolia. Please report bugs, questions and feature requests about the central builds at <a href="https://github.com/ropensci/docs/" class="uri">https://github.com/ropensci/docs/</a> and about the template at <a href="https://github.com/ropensci/rotemplate/" class="uri">https://github.com/ropensci/rotemplate/</a>.</p>
+<p><em>If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to <a href="https://ropensci.org/technotes/2019/12/08/precompute-vignettes/">precompute them</a> since credentials cannot be used on the docs server.</em></p>
+<p>Before submission and before transfer, you could use the <a href="https://pkgdown.r-lib.org/reference/deploy_site_github.html">approach documented by <code>pkgdown</code></a> or the <a href="https://docs.ropensci.org/tic/"><code>tic</code> package</a> for automatic deployment of the package’s website. This would save you the hassle of running (and remembering to run) <code>pkgdown::build_site()</code> yourself every time the site needs to be updated. First refer to our <a href="ci.html#ci">chapter on continuous integration</a> if you’re not familiar with continuous integration. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.</p>
+</div>
+<div id="function-grouping" class="section level3">
+<h3>
+<span class="header-section-number">1.7.2</span> Grouping functions in the reference<a class="anchor" aria-label="anchor" href="#function-grouping"><i class="fas fa-link"></i></a>
+</h3>
+<p>When your package has many functions, use grouping in the reference, which you can do more or less automatically.</p>
+<p>If you use <code>roxygen2</code> above version 6.1.1, you should use the <code>@family</code> tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package (“See also” section) <em>and</em> allow you to use the <code>pkgdown</code> <code>has_concept</code> function in the config file of your website. Non-rOpenSci example courtesy of <a href="https://github.com/lockedata/optiRum"><code>optiRum</code></a>: <a href="https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17">family tag</a>, <a href="https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml"><code>pkgdown</code> config file</a> and <a href="https://itsalocke.com/optirum/reference/">resulting reference section</a>.</p>
+<p>Less automatically, see the example of <a href="https://docs.ropensci.org/drake/"><code>drake</code> website</a> and <a href="https://github.com/ropensci/drake/blob/master/_pkgdown.yml">associated config file</a>.</p>
+</div>
+<div id="branding-of-authors" class="section level3">
+<h3>
+<span class="header-section-number">1.7.3</span> Branding of authors<a class="anchor" aria-label="anchor" href="#branding-of-authors"><i class="fas fa-link"></i></a>
+</h3>
+<p>You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci… or your organisation/company!). See <a href="https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors"><code>pkgdown</code> documentation</a> and this example in the wild: <a href="https://github.com/ropensci/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1"><code>pkgdown</code> config file</a>, <a href="https://docs.ropensci.org/rodev/">resulting website</a>.</p>
+</div>
+<div id="tweaking-the-navbar" class="section level3">
+<h3>
+<span class="header-section-number">1.7.4</span> Tweaking the navbar<a class="anchor" aria-label="anchor" href="#tweaking-the-navbar"><i class="fas fa-link"></i></a>
+</h3>
+<p>You can make your website content easier to browse by tweaking the navbar, refer to <a href="https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar"><code>pkgdown</code> documentation</a>. In particular, note that if you name the main vignette of your package “pkg-name.Rmd”, it’ll be accessible from the navbar as a <code>Get started</code> link instead of via <code>Articles &gt; Vignette Title</code>.</p>
+</div>
+<div id="mathjax" class="section level3">
+<h3>
+<span class="header-section-number">1.7.5</span> Mathjax<a class="anchor" aria-label="anchor" href="#mathjax"><i class="fas fa-link"></i></a>
+</h3>
+<p>Once your package is transferred and it gets a website using our <code>pkgdown</code> template, if you want to use Mathjax you’ll need to specify it in the <code>pkgdown</code> config file like so:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="building.html#cb4-1"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb4-2"><a href="building.html#cb4-2"></a><span class="at">  </span><span class="fu">params</span><span class="kw">:</span></span>
+<span id="cb4-3"><a href="building.html#cb4-3"></a><span class="at">    </span><span class="fu">mathjax</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+</div>
+<div id="package-logo" class="section level3">
+<h3>
+<span class="header-section-number">1.7.6</span> Package logo<a class="anchor" aria-label="anchor" href="#package-logo"><i class="fas fa-link"></i></a>
+</h3>
+<p>To use your package logo in the pkgdown homepage, refer to <a href="https://usethis.r-lib.org/reference/use_logo.html"><code>usethis::use_logo()</code></a>.
+If your package doesn’t have any logo, the <a href="building.html#docsropensci">rOpenSci docs builder</a> will use rOpenSci logo instead.</p>
+</div>
+</div>
+<div id="authorship" class="section level2">
+<h2>
+<span class="header-section-number">1.8</span> Authorship<a class="anchor" aria-label="anchor" href="#authorship"><i class="fas fa-link"></i></a>
+</h2>
+<p>The <code>DESCRIPTION</code> file of a package should list package authors and contributors to a package, using the <code>Authors@R</code> syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf <a href="https://ropensci.org/technotes/2018/10/08/orcid/">this post</a>). See <a href="https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file">this section of “Writing R Extensions”</a> for details. If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the <code>Authors@R</code> field with a Reviewer contributor type (<code>"rev"</code>), like so:</p>
+<pre><code>    person("Bea", "Hernández", role = "rev",
+    comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see &lt;https://github.com/ropensci/software-review/issues/116&gt;"),</code></pre>
+<p>Only include reviewers after asking for their consent. Read more in <a href="https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/">this blog post “Thanking Your Reviewers: Gratitude through Semantic Metadata”</a>. Note that ‘rev’ will raise a CRAN NOTE unless the package is built using R v3.5. Make sure you use <code>roxygen2</code>’s latest CRAN version.</p>
+<p>Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!</p>
+</div>
+<div id="licence" class="section level2">
+<h2>
+<span class="header-section-number">1.9</span> Licence<a class="anchor" aria-label="anchor" href="#licence"><i class="fas fa-link"></i></a>
+</h2>
+<p>The package needs to have a <a href="https://svn.r-project.org/R/trunk/share/licenses/license.db">CRAN</a> or <a href="https://opensource.org/licenses">OSI</a> accepted license.
+For more explanations around licensing, refer to the <a href="https://r-pkgs.org/license.html">R packages book</a>.</p>
+</div>
+<div id="testing" class="section level2">
+<h2>
+<span class="header-section-number">1.10</span> Testing<a class="anchor" aria-label="anchor" href="#testing"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>All packages should pass <code>R CMD check</code>/<code>devtools::check()</code> on all major platforms.</p></li>
+<li><p>All packages should have a test suite that covers major functionality of the package. The tests should also cover the behavior of the package in case of errors.</p></li>
+<li><p>It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. Test coverage below 75% will likely require additional tests or explanation before being sent for review.</p></li>
+<li><p>We recommend using <code>testthat</code> for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to <em>defensively</em> code against those. <a href="https://r-pkgs.org/tests.html">More information</a>.</p></li>
+<li><p>Packages with shiny apps should use a unit-testing framework such as <a href="https://rstudio.github.io/shinytest/articles/shinytest.html"><code>shinytest</code></a> to test that interactive interfaces behave as expected.</p></li>
+<li><p>For testing your functions creating plots, we suggest using <a href="https://cran.rstudio.com/web/packages/vdiffr/index.html"><code>vdiffr</code></a>, an extension of the <code>testthat</code> package; or <a href="https://testthat.r-lib.org/articles/snapshotting.html">testthat snapshot tests</a>.</p></li>
+<li><p>If your package interact with web resources (web APIs and other sources of data on the web) you might find the <a href="https://books.ropensci.org/http-testing/">HTTP testing in R book by Scott Chamberlain and Maëlle Salmon</a> relevant.</p></li>
+<li><p>Once you’ve set up CI, use your package’s code coverage report (cf <a href="ci.html#coverage">this section of our book</a>) to identify untested lines, and to add further tests.</p></li>
+<li><p><code>testthat</code> has a function <code>skip_on_cran()</code> that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration.</p></li>
+<li><p>Even if you use <a href="ci.html#ci">continuous integration</a>, we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set <code>Sys.setenv(NOT_CRAN="true")</code> in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat’s <a href="https://github.com/MangoTheCat/goodpractice/"><strong>goodpractice</strong></a> package to check your package for likely sources of errors, and run <code>spelling::spell_check_package()</code> to find spelling errors in documentation.</p></li>
+</ul>
+</div>
+<div id="examples" class="section level2">
+<h2>
+<span class="header-section-number">1.11</span> Examples<a class="anchor" aria-label="anchor" href="#examples"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Include extensive examples in the documentation. In addition to demonstrating how to use the package, these can act as an easy way to test package functionality before there are proper tests. However, keep in mind we require tests in contributed packages.</p></li>
+<li><p>You can run examples with <code>devtools::run_examples()</code>. Note that when you run R CMD CHECK or equivalent (e.g., <code>devtools::check()</code>) your examples that are not wrapped in <code>\dontrun{}</code> or <code>\donttest{}</code> are run.</p></li>
+<li><p>To safe-guard examples (e.g. requiring authentication) to be run on CRAN you need to use <code>\dontrun{}</code>. However, for a first submission CRAN won’t let you have all examples escaped so. In this case you might add some small toy examples, or wrap example code in <code><a href="https://rdrr.io/r/base/try.html">try()</a></code>. Also refer to the <code>@exampleIf</code> tag present, at the time of writing, in roxygen2 development version.</p></li>
+<li><p>In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the <a href="ci.html#ci">continuous integration systems</a>. Again, examples that are not wrapped in <code>\dontrun{}</code> or <code>\donttest{}</code> will be run, but for those that are you can configure your continuous integration builds to run them via R CMD check arguments <code>--run-dontrun</code> and/or <code>--run-donttest</code>.</p></li>
+</ul>
+</div>
+<div id="pkgdependencies" class="section level2">
+<h2>
+<span class="header-section-number">1.12</span> Package dependencies<a class="anchor" aria-label="anchor" href="#pkgdependencies"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Use <code>Imports</code> instead of <code>Depends</code> for packages providing functions from other packages. Make sure to list packages used for testing (<code>testthat</code>), and documentation (<code>knitr</code>, <code>roxygen2</code>) in your <code>Suggests</code> section of package dependencies (if you use <code>usethis</code> for adding testing infrastructure via <a href="https://usethis.r-lib.org/reference/use_testthat.html"><code>usethis::use_testthat()</code></a> or a vignette via <a href="https://usethis.r-lib.org/reference/use_vignette.html">usethis::use_vignette()</a>, the necessary packages will be added to <code>DESCRIPTION</code>). If you use any package in the examples or tests of your package, make sure to list it in <code>Suggests</code>, if not already listed in <code>Imports</code>.</p></li>
+<li>
+<p>If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.</p>
+<ul>
+<li><p>Should the user use <a href="https://www.bioconductor.org/install/index.html#why-biocmanagerinstall"><code>BiocManager</code></a> (recommended)? Document this.</p></li>
+<li><p>Is the automatic installation of Bioconductor packages by <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> enough? In that case, mention that the user needs to run <code><a href="https://rdrr.io/r/utils/setRepositories.html">setRepositories()</a></code> if they haven’t set the necessary Bioconductor repositories yet.</p></li>
+<li><p>If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.</p></li>
+</ul>
+</li>
+<li><p>Specifying minimum dependencies (e.g. <code>glue (&gt;= 1.3.0)</code> instead of just <code>glue</code>) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
+But if you don’t, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
+An example of bad practice would be for a developer to consider the versions of their current state of dependencies to be the minimal version. That would needlessly force everyone to upgrade (causing issues with other packages) when there is no good reason behind that version choice.</p></li>
+<li><p>For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the <code>Depends</code> fields. For instance, if functions in your package produce <code>raster</code> objects, you might re-export only printing and plotting functions from the <strong>raster</strong> package.</p></li>
+<li>
+<p>If your package uses a <em>system</em> dependency, you should</p>
+<ul>
+<li><p>indicate it in DESCRIPTION</p></li>
+<li><p>Check that it is listed by <a href="https://github.com/r-hub/sysreqsdb#sysreqs"><code>sysreqsdb</code></a> to allow automatic tools to install it, and <a href="https://github.com/r-hub/sysreqsdb#contributing">submit a contribution</a> if not.</p></li>
+<li><p>check for it in a <code>configure</code> script (<a href="https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19">example</a>) and give a helpful error message if it cannot be found (<a href="https://github.com/cran/webp/blob/master/configure">example</a>).
+<code>configure</code> scripts can be challenging as they often require hacky solutions
+to make diverse system dependencies work across systems. Use examples (<a href="https://github.com/search?q=org%3Acran+anticonf&amp;type=Code">more here</a>) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to <a href="https://discuss.ropensci.org/">ask for help on our forum</a>.</p></li>
+</ul>
+</li>
+<li>
+<p>Consider the trade-offs involved in relying on a package as a dependency. On one hand,
+using dependencies reduces coding effort, and can build on useful functionality developed by
+others, especially if the dependency performs complex tasks, is high-performance,
+and/or is well vetted and tested. On the other hand, having many dependencies
+places a burden on the maintainer to keep up with changes in those packages, at risk
+to your package’s long-term sustainability. It also
+increases installation time and size, primarily a consideration on your and others’ development cycle, and in automated build systems. “Heavy” packages - those with many dependencies themselves, and those with large amounts of compiled code - increase this cost. Here are some approaches to reducing
+dependencies:</p>
+<ul>
+<li>
+<p>Small, simple functions from a dependency package may be better copied into
+your own package if the dependency if you are using only a few functions
+in an otherwise large or heavy dependency. On the other hand, complex functions
+with many edge cases (e.g. parsers) require considerable testing and vetting.</p>
+<ul>
+<li>
+<p>An common example of this is in returning tidyverse-style “tibbles” from package
+functions that provide data.
+One can avoid the modestly heavy <strong>tibble</strong> package dependency by returning
+a tibble created by modifying a data frame like so:</p>
+<pre><code>class(df) &lt;- c("tbl_df", "tbl", "data.frame") </code></pre>
+<p>(Note that this approach is <a href="https://twitter.com/krlmlr/status/1067856118385381377">not universally endorsed</a>.)</p>
+</li>
+</ul>
+</li>
+<li><p>Ensure that you are using the package where the function is defined,
+rather than one where it is re-exported. For instance many functions in <strong>devtools</strong> can be found in smaller specialty packages such as <strong>sessioninfo</strong>. The <code>%&gt;%</code> function
+should be imported from <strong>magrittr</strong>, where it is defined, rather than the heavier
+<strong>dplyr</strong>, which re-exports it.</p></li>
+<li><p>Some dependencies are preferred because they provide easier to interpret
+function names and syntax than base R solutions. If this is the primary
+reason for using a function in a heavy dependency, consider wrapping
+the base R approach in a nicely-named internal function in your package.</p></li>
+<li><p>If dependencies have overlapping functionality, see if you can rely on only one.</p></li>
+<li><p>More dependency-management tips can be found <a href="https://recology.info/2018/10/limiting-dependencies/">in this post by
+Scott Chamberlain</a>.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="recommended-scaffolding" class="section level2">
+<h2>
+<span class="header-section-number">1.13</span> Recommended scaffolding<a class="anchor" aria-label="anchor" href="#recommended-scaffolding"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>For HTTP requests we recommend using <a href="https://github.com/jeroen/curl/">curl</a>, <a href="https://github.com/ropensci/crul/">crul</a>, or <a href="https://cran.rstudio.com/web/packages/httr/">httr</a> over <a href="https://cran.rstudio.com/web/packages/RCurl/">RCurl</a>. If you like low level clients for HTTP, <a href="https://github.com/jeroen/curl/">curl</a> is best, whereas <a href="https://github.com/ropensci/crul/">crul</a> or <a href="https://cran.rstudio.com/web/packages/httr/">httr</a> are better for higher level access. <a href="https://github.com/ropensci/crul/">crul</a> is maintained by rOpenSci. We recommend the rOpenSci maintained packages <a href="https://github.com/ropensci/webmockr/">webmockr</a> for mocking HTTP requests, and <a href="https://github.com/ropensci/vcr/">vcr</a> for caching HTTP requests in package tests.</p></li>
+<li><p>For parsing JSON, use <a href="https://github.com/jeroen/jsonlite">jsonlite</a> instead of <a href="https://cran.rstudio.com/web/packages/rjson/">rjson</a> or <a href="https://cran.rstudio.com/web/packages/RJSONIO/">RJSONIO</a>.</p></li>
+<li><p>For parsing, creating, and manipulating XML, we strongly recommend <a href="https://cran.rstudio.com/web/packages/xml2/">xml2</a> for most cases. <a href="https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66">You can refer to Daniel Nüst’s notes about migration from XML to xml2</a>.</p></li>
+</ul>
+</div>
+<div id="crangotchas" class="section level2">
+<h2>
+<span class="header-section-number">1.14</span> Miscellaneous CRAN gotchas<a class="anchor" aria-label="anchor" href="#crangotchas"><i class="fas fa-link"></i></a>
+</h2>
+<p>This is a collection of CRAN gotchas that are worth avoiding at the outset.</p>
+<ul>
+<li>Make sure your package title is in Title Case.</li>
+<li>Do not put a period on the end of your title.</li>
+<li>Do not put ‘in R’ or ‘with R’ in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the <a href="https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home"><code>pkgdown</code> documentation</a> to learn how to override this.</li>
+<li>Avoid starting the description with the package name or “This package …”.</li>
+<li>Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the <code>Description</code> field of your <code>DESCRIPTION</code> file. URLs should be enclosed in angle brackets, e.g. <code>&lt;https://www.r-project.org&gt;</code>.</li>
+<li>In both the <code>Title</code> and <code>Description</code> fields, the names of packages or other external software must be quoted using single quotes (e.g., <em>‘Rcpp’ Integration for the ‘Armadillo’ Templated Linear Algebra Library</em>).</li>
+<li>Avoid long running tests and examples. Consider <code>testthat::skip_on_cran</code> in tests to skip things that take a long time but still test them locally and on <a href="ci.html#ci">continuous integration</a>.</li>
+<li>Include top-level files such as <code>paper.md</code>, continuous integration configuration files, in your <code>.Rbuildignore</code> file.</li>
+</ul>
+<div id="cranchecks" class="section level3">
+<h3>
+<span class="header-section-number">1.14.1</span> CRAN checks<a class="anchor" aria-label="anchor" href="#cranchecks"><i class="fas fa-link"></i></a>
+</h3>
+<p>Once your package is on CRAN, it will be <a href="https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101">regularly checked on different platforms</a>. Failures of such checks, when not false positives, can lead to the CRAN team’s reaching out. You can monitor the state of the CRAN checks via</p>
+<ul>
+<li><p>the <a href="https://fmichonneau.github.io/foghorn/"><code>foghorn</code> package</a></p></li>
+<li><p>the <a href="https://github.com/ropenscilabs/cchecksapi">CRAN checks API</a> maintained by rOpenSci, that provides <a href="https://github.com/ropenscilabs/cchecksapi#badges">badges</a>. You can add one of them to the README of your package via <a href="https://docs.ropensci.org/rodev/reference/use_cchecks_badge.html"><code>rodev::use_cchecks_badge()</code></a>.</p></li>
+</ul>
+</div>
+</div>
+<div id="bioconductor-gotchas" class="section level2">
+<h2>
+<span class="header-section-number">1.15</span> Bioconductor gotchas<a class="anchor" aria-label="anchor" href="#bioconductor-gotchas"><i class="fas fa-link"></i></a>
+</h2>
+<p>If you intend your package to be submitted to, or if your package is on, Bioconductor, refer to <a href="https://www.bioconductor.org/developers/package-guidelines/">Bioconductor packaging guidelines</a>.</p>
+</div>
+<div id="further-guidance" class="section level2">
+<h2>
+<span class="header-section-number">1.16</span> Further guidance<a class="anchor" aria-label="anchor" href="#further-guidance"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>If you are submitting a package to rOpenSci via the <a href="https://github.com/ropensci/software-review">software-review repo</a>, you can direct further questions to the rOpenSci team in the issue tracker, or in our <a href="https://discuss.ropensci.org/">discussion forum</a>.</p></li>
+<li><p>Before submitting a package use the <a href="https://github.com/MangoTheCat/goodpractice"><strong>goodpractice</strong></a> package (<code>goodpractice::gp()</code>) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of <code>foo</code> might be generally bad and therefore flagged by <code>goodpractice</code> but you had a good reason to use it in your package.</p></li>
+</ul>
+<div id="learning-about-package-development" class="section level3">
+<h3>
+<span class="header-section-number">1.16.1</span> Learning about package development<a class="anchor" aria-label="anchor" href="#learning-about-package-development"><i class="fas fa-link"></i></a>
+</h3>
+<div id="books" class="section level4">
+<h4>
+<span class="header-section-number">1.16.1.1</span> Books<a class="anchor" aria-label="anchor" href="#books"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li><p><a href="https://r-pkgs.org/">Hadley Wickham and Jenny Bryan’s <em>R packages</em> book</a> is an excellent, readable resource on package development which is available for <a href="https://r-pkgs.org/">free online</a> (and <a href="https://amzn.com/1491910593?tag=r-pkgs-20">print – link to former version by Hadley Wickham as the new version is not published yet as of June 2019</a>).</p></li>
+<li><p><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html">Writing R Extensions</a> is the canonical, usually most up-to-date, reference for creating R packages.</p></li>
+<li><p><a href="https://bookdown.org/rdpeng/RProgDA/"><em>Mastering Software Development in R</em> by Roger D. Peng, Sean Kross, and Brooke Anderson</a></p></li>
+<li><p><a href="https://adv-r.hadley.nz/"><em>Advanced R</em> by Hadley Wickham</a></p></li>
+</ul>
+</div>
+<div id="tutorials" class="section level4">
+<h4>
+<span class="header-section-number">1.16.1.2</span> Tutorials<a class="anchor" aria-label="anchor" href="#tutorials"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li><p><a href="https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Hilary Parker’s famous blog post <em>Writing an R package from scratch</em></a> or <a href="https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/">its updated version by Tomas Westlake</a> that shows how to do the same more efficiently using <code>usethis</code>.</p></li>
+<li><p><a href="https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/">this workflow description by Emil Hvitfeldt</a></p></li>
+<li><p><a href="https://www.mjdenny.com/R_Package_Pictorial.html">This pictorial by Matthew J Denny</a></p></li>
+</ul>
+</div>
+<div id="moocs" class="section level4">
+<h4>
+<span class="header-section-number">1.16.1.3</span> MOOCs<a class="anchor" aria-label="anchor" href="#moocs"><i class="fas fa-link"></i></a>
+</h4>
+<p>There is a <a href="https://fr.coursera.org/specializations/r">Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson</a>, with a course specifically about R packages.</p>
+
+</div>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="preface.html">Preface</a></div>
+<div class="next"><a href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#building"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li>
+<a class="nav-link" href="#package-name-and-metadata"><span class="header-section-number">1.1</span> Package name and metadata</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#naming-your-package"><span class="header-section-number">1.1.1</span> Naming your package</a></li>
+<li><a class="nav-link" href="#creating-metadata-for-your-package"><span class="header-section-number">1.1.2</span> Creating metadata for your package</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#platforms"><span class="header-section-number">1.2</span> Platforms</a></li>
+<li>
+<a class="nav-link" href="#package-api"><span class="header-section-number">1.3</span> Package API</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#function-and-argument-naming"><span class="header-section-number">1.3.1</span> Function and argument naming</a></li>
+<li><a class="nav-link" href="#console-messages"><span class="header-section-number">1.3.2</span> Console messages</a></li>
+<li><a class="nav-link" href="#interactivegraphical-interfaces"><span class="header-section-number">1.3.3</span> Interactive/Graphical Interfaces</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#code-style"><span class="header-section-number">1.4</span> Code Style</a></li>
+<li><a class="nav-link" href="#readme"><span class="header-section-number">1.5</span> README</a></li>
+<li>
+<a class="nav-link" href="#documentation"><span class="header-section-number">1.6</span> Documentation</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#general"><span class="header-section-number">1.6.1</span> General</a></li>
+<li><a class="nav-link" href="#roxygen2-use"><span class="header-section-number">1.6.2</span> roxygen2 use</a></li>
+<li><a class="nav-link" href="#urls-in-documentation"><span class="header-section-number">1.6.3</span> URLs in documentation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#website"><span class="header-section-number">1.7</span> Documentation website</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#docsropensci"><span class="header-section-number">1.7.1</span> Automatic deployment of the documentation website</a></li>
+<li><a class="nav-link" href="#function-grouping"><span class="header-section-number">1.7.2</span> Grouping functions in the reference</a></li>
+<li><a class="nav-link" href="#branding-of-authors"><span class="header-section-number">1.7.3</span> Branding of authors</a></li>
+<li><a class="nav-link" href="#tweaking-the-navbar"><span class="header-section-number">1.7.4</span> Tweaking the navbar</a></li>
+<li><a class="nav-link" href="#mathjax"><span class="header-section-number">1.7.5</span> Mathjax</a></li>
+<li><a class="nav-link" href="#package-logo"><span class="header-section-number">1.7.6</span> Package logo</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#authorship"><span class="header-section-number">1.8</span> Authorship</a></li>
+<li><a class="nav-link" href="#licence"><span class="header-section-number">1.9</span> Licence</a></li>
+<li><a class="nav-link" href="#testing"><span class="header-section-number">1.10</span> Testing</a></li>
+<li><a class="nav-link" href="#examples"><span class="header-section-number">1.11</span> Examples</a></li>
+<li><a class="nav-link" href="#pkgdependencies"><span class="header-section-number">1.12</span> Package dependencies</a></li>
+<li><a class="nav-link" href="#recommended-scaffolding"><span class="header-section-number">1.13</span> Recommended scaffolding</a></li>
+<li>
+<a class="nav-link" href="#crangotchas"><span class="header-section-number">1.14</span> Miscellaneous CRAN gotchas</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#cranchecks"><span class="header-section-number">1.14.1</span> CRAN checks</a></li></ul>
+</li>
+<li><a class="nav-link" href="#bioconductor-gotchas"><span class="header-section-number">1.15</span> Bioconductor gotchas</a></li>
+<li>
+<a class="nav-link" href="#further-guidance"><span class="header-section-number">1.16</span> Further guidance</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#learning-about-package-development"><span class="header-section-number">1.16.1</span> Learning about package development</a></li></ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/pkg_building.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/pkg_building.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

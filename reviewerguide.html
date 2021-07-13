@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 7 Guide for Reviewers | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="Thanks for accepting to review a package for rOpenSci! This chapter consists of our guidelines to prepare, submit and follow up on your review.  You might contact the editor in charge of the...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 7 Guide for Reviewers | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/reviewerguide.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="Thanks for accepting to review a package for rOpenSci! This chapter consists of our guidelines to prepare, submit and follow up on your review.  You might contact the editor in charge of the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 7 Guide for Reviewers | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="Thanks for accepting to review a package for rOpenSci! This chapter consists of our guidelines to prepare, submit and follow up on your review.  You might contact the editor in charge of the...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="active" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="reviewerguide" class="section level1">
+<h1>
+<span class="header-section-number">7</span> Guide for Reviewers<a class="anchor" aria-label="anchor" href="#reviewerguide"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+Thanks for accepting to review a package for rOpenSci! This chapter consists of our guidelines to <a href="#preparereview">prepare</a>, <a href="reviewerguide.html#submitreview">submit</a> and <a href="reviewerguide.html#followupreviewer">follow up</a> on your review.
+</p>
+<p>
+You might contact the editor in charge of the submission for any question you might have about the process or your review.
+</p>
+<p>
+Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign additional or alternate reviewers if a review is excessively late.
+</p>
+<p>
+<em>If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in <a href="https://discuss.ropensci.org/c/usecases">our public forum</a>, or <a href="https://ropensci.org/contact/">privately by email</a>.</em>
+</p>
+</div>
+<div id="preparing-your-review" class="section level2">
+<h2>
+<span class="header-section-number">7.1</span> Preparing your review<a class="anchor" aria-label="anchor" href="#preparing-your-review"><i class="fas fa-link"></i></a>
+</h2>
+<p>Note that when installing the package to review it, you should use the <code>dependencies = TRUE</code> argument of <code>devtools::install()</code> to make sure you have all dependencies available.</p>
+<div id="general-guidelines" class="section level3">
+<h3>
+<span class="header-section-number">7.1.1</span> General guidelines<a class="anchor" aria-label="anchor" href="#general-guidelines"><i class="fas fa-link"></i></a>
+</h3>
+<p>To review a package, please begin by copying our <a href="reviewtemplate.html#reviewtemplate">review template</a> (or our <a href="reviewtemplatees.html#reviewtemplatees">review template in Spanish</a>) and using it as a high-level checklist. In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:</p>
+<ul>
+<li>Does the code comply with general principles in the <a href="https://mozillascience.github.io/codeReview/review.html">Mozilla reviewing guide</a>?</li>
+<li>Does the package comply with the <a href="building.html#building">rOpenSci packaging guide</a>?</li>
+<li>Are there improvements that could be made to the code style?</li>
+<li>Is there code duplication in the package that should be reduced?</li>
+<li>Are there user interface improvements that could be made?</li>
+<li>Are there performance improvements that could be made?</li>
+<li>Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient? Does it use the principle of <em>multiple points of entry</em> i.e. takes into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps?</li>
+<li>Were functions and arguments named to work together to form a common, logical programming API that is easy to read, and autocomplete?</li>
+<li>If you have your own relevant data/problem, work through it with the package. You may find rough edges and use-cases the author didn’t think about.</li>
+</ul>
+<p>Please be respectful and kind to the authors in your reviews. Our <a href="policies.html#code-of-conduct">code of conduct</a> is mandatory for everyone involved in our review process. We expect you to submit your review within 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.</p>
+<p>We encourage you to use automated tools to facilitate your reviewing. These include:</p>
+<ul>
+<li>Checking the package’s logs on its continuous integration services (GitHub Actions, Codecov, etc.)</li>
+<li>Running <code>devtools::check()</code> and <code>devtools::test()</code> on the package to find any errors that may be missed on the author’s system.</li>
+<li>Using the <strong>covr</strong> package to examine the extent of test coverage.</li>
+<li>Using the <a href="https://github.com/MangoTheCat/goodpractice"><strong>goodpractice</strong></a> package (<code>goodpractice::gp()</code>) to identify likely sources of errors and style issues. Most exceptions will need to be justified by the author in the particular context of their package.</li>
+<li>Using <code>spelling::spell_check_package()</code> (and <code>spelling::spell_check_files("README.Rmd")</code>) to find spelling errors.</li>
+</ul>
+</div>
+<div id="off-thread-interactions" class="section level3">
+<h3>
+<span class="header-section-number">7.1.2</span> Off-thread interactions<a class="anchor" aria-label="anchor" href="#off-thread-interactions"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you interact with the package authors and talked about the review outside a review thread (in chats, DMs, in-person, issues in the project repository), please make sure that your review captures and/or links to elements from these conversations that are relevant to the process.</p>
+</div>
+<div id="experience-from-past-reviewers" class="section level3">
+<h3>
+<span class="header-section-number">7.1.3</span> Experience from past reviewers<a class="anchor" aria-label="anchor" href="#experience-from-past-reviewers"><i class="fas fa-link"></i></a>
+</h3>
+<p>First-time reviewers may find it helpful to read (about) some previous reviews. In general you can find submission threads of onboarded packages <a href="https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved">here</a>. Here are a few chosen examples of reviews (note that your reviews do not need to be as long as these examples):</p>
+<ul>
+<li><p><code>rtika</code> <a href="https://github.com/ropensci/software-review/issues/191#issuecomment-367166658">review 1</a> and <a href="https://github.com/ropensci/software-review/issues/191#issuecomment-368254623">review 2</a></p></li>
+<li><p><code>NLMR</code> <a href="https://github.com/ropensci/software-review/issues/188#issuecomment-368042693">review 1</a> and <a href="https://github.com/ropensci/software-review/issues/188#issuecomment-369310831">review 2</a></p></li>
+<li><p><code>bowerbird</code> <a href="https://github.com/ropensci/software-review/issues/139#issuecomment-322713737">pre-review comment</a>, <a href="https://github.com/ropensci/software-review/issues/139#issuecomment-342380870">review 1</a>, <a href="https://github.com/ropensci/software-review/issues/139#issuecomment-342724843">review 2</a>.</p></li>
+<li><p><code>rusda</code> <a href="https://github.com/ropensci/software-review/issues/18#issuecomment-120445737">review</a> (from before we had a review template)</p></li>
+</ul>
+<p>You can read blog posts written by reviewers about their experiences <a href="https://ropensci.org/tags/reviewer/">via this link</a>. In particular, in <a href="https://ropensci.org/blog/2017/08/22/first-package-review/">this blog post by Mara Averick</a> read about the “naive user” role a reviewer can take to provide useful feedback even without being experts of the package’s topic or implementation, by asking themselves <em>“What did I think this thing would do? Does it do it? What are things that scare me off?”</em>. In <a href="https://ropensci.org/blog/2017/09/08/first-review-experiences/">another blog post</a> Verena Haunschmid explains how she alternated between using the package and checking its code.</p>
+<p>As both a former reviewer and package author <a href="https://adamhsparks.com/">Adam Sparks</a> <a href="https://twitter.com/adamhsparks/status/898132036451303425">wrote this</a> “[write] a good critique of the package structure and best coding practices. If you know how to do something better, tell me. It’s easy to miss documentation opportunities as a developer, as a reviewer, you have a different view. You’re a user that can give feedback. What’s not clear in the package? How can it be made more clear? If you’re using it for the first time, is it easy? Do you know another R package that maybe I should be using? Or is there one I’m using that perhaps I shouldn’t be? If you can contribute to the package, offer.”</p>
+</div>
+<div id="helper-package-for-reviewers" class="section level3">
+<h3>
+<span class="header-section-number">7.1.4</span> Helper package for reviewers<a class="anchor" aria-label="anchor" href="#helper-package-for-reviewers"><i class="fas fa-link"></i></a>
+</h3>
+<p>If working in RStudio, you can streamline your review workflow by using the <a href="https://github.com/ropensci-org/pkgreviewr"><code>pkgreviewr</code> package</a> created by associated editor Anna Krystalli. Say you accepted to review the <code>refnet</code> package, you’d write</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ropensci-org/pkgreviewr"</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">pkgreviewr</span><span class="op">)</span>
+<span class="fu">pkgreview_create</span><span class="op">(</span>pkg_repo <span class="op">=</span> <span class="st">"embruna/refnet"</span>, 
+                 review_parent <span class="op">=</span> <span class="st">"~/Documents/workflows/rOpenSci/reviews/"</span><span class="op">)</span></code></pre></div>
+<p>and</p>
+<ul>
+<li>the GitHub repo of the <code>refnet</code> package will be cloned.</li>
+<li>a review project will be created, containing a notebook for you to fill, and the review template.</li>
+</ul>
+</div>
+<div id="feedback-on-the-process" class="section level3">
+<h3>
+<span class="header-section-number">7.1.5</span> Feedback on the process<a class="anchor" aria-label="anchor" href="#feedback-on-the-process"><i class="fas fa-link"></i></a>
+</h3>
+<p>We encourage you to ask questions and provide feedback on the review process on our <a href="https://discuss.ropensci.org">forum</a>.</p>
+</div>
+</div>
+<div id="submitreview" class="section level2">
+<h2>
+<span class="header-section-number">7.2</span> Submitting the Review<a class="anchor" aria-label="anchor" href="#submitreview"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>When your review is complete, paste it as a comment into the package software-review issue.</li>
+<li>Additional comments are welcome in the same issue. We hope that package reviews will work as an ongoing conversation with the authors as opposed to a single round of reviews typical of academic manuscripts.</li>
+<li>You may also submit issues or pull requests directly to the package repo if you choose, but if you do, please comment about them and link to them in the software-review repo comment thread so we have a centralized record and text of your review.</li>
+<li>Please include an estimate of how many hours you spent on your review afterwards.</li>
+</ul>
+</div>
+<div id="followupreviewer" class="section level2">
+<h2>
+<span class="header-section-number">7.3</span> Review follow-up<a class="anchor" aria-label="anchor" href="#followupreviewer"><i class="fas fa-link"></i></a>
+</h2>
+<p>Authors should respond within 2 weeks with their changes to the package in response to your review. At this stage, we ask that you respond as to whether the changes sufficiently address any issues raised in your review. We encourage ongoing discussion between package authors and reviewers, and you may ask editors to clarify issues in the review thread as well.</p>
+<p>You’ll use the <a href="editorguide.html#approval2template">approval template</a>.</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></div>
+<div class="next"><a href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#reviewerguide"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li>
+<a class="nav-link" href="#preparing-your-review"><span class="header-section-number">7.1</span> Preparing your review</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#general-guidelines"><span class="header-section-number">7.1.1</span> General guidelines</a></li>
+<li><a class="nav-link" href="#off-thread-interactions"><span class="header-section-number">7.1.2</span> Off-thread interactions</a></li>
+<li><a class="nav-link" href="#experience-from-past-reviewers"><span class="header-section-number">7.1.3</span> Experience from past reviewers</a></li>
+<li><a class="nav-link" href="#helper-package-for-reviewers"><span class="header-section-number">7.1.4</span> Helper package for reviewers</a></li>
+<li><a class="nav-link" href="#feedback-on-the-process"><span class="header-section-number">7.1.5</span> Feedback on the process</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#submitreview"><span class="header-section-number">7.2</span> Submitting the Review</a></li>
+<li><a class="nav-link" href="#followupreviewer"><span class="header-section-number">7.3</span> Review follow-up</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/softwarereview_reviewer.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/softwarereview_reviewer.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 14 Package evolution - changing stuff in your package | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions.  This chapter was initially contributed as a tech...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 14 Package evolution - changing stuff in your package | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/evolution.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions.  This chapter was initially contributed as a tech...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 14 Package evolution - changing stuff in your package | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions.  This chapter was initially contributed as a tech...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="active" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="evolution" class="section level1">
+<h1>
+<span class="header-section-number">14</span> Package evolution - changing stuff in your package<a class="anchor" aria-label="anchor" href="#evolution"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions.
+</p>
+<p>
+<em>This chapter was initially contributed as a tech note on rOpenSci website by <a href="https://github.com/sckott">Scott Chamberlain</a>; you can read the original version <a href="https://ropensci.org/technotes/2017/01/05/package-evolution/">here</a>.</em>
+</p>
+</div>
+<div id="philosophy-of-changes" class="section level2">
+<h2>
+<span class="header-section-number">14.1</span> Philosophy of changes<a class="anchor" aria-label="anchor" href="#philosophy-of-changes"><i class="fas fa-link"></i></a>
+</h2>
+<p>Everyone’s free to have their own opinion about how freely parameters/functions/etc. are changed in a library - rules about package changes are not enforced by CRAN or otherwise. Generally, as a library gets more mature, changes to user facing methods (i.e., exported functions in an R package) should become very rare. Libraries that are dependencies of many other libraries are likely to be more careful about changes, and should be.</p>
+</div>
+<div id="the-lifecycle-package" class="section level2">
+<h2>
+<span class="header-section-number">14.2</span> The lifecycle package<a class="anchor" aria-label="anchor" href="#the-lifecycle-package"><i class="fas fa-link"></i></a>
+</h2>
+<p>This chapter presents solutions that do not require the lifecycle package but you might still find it useful.
+We recommend <a href="https://lifecycle.r-lib.org/articles/lifecycle.html">reading the lifecycle documentation</a>.</p>
+</div>
+<div id="parameters-changing-parameter-names" class="section level2">
+<h2>
+<span class="header-section-number">14.3</span> Parameters: changing parameter names<a class="anchor" aria-label="anchor" href="#parameters-changing-parameter-names"><i class="fas fa-link"></i></a>
+</h2>
+<p>Sometimes parameter names must be changed for clarity, or some other reason.</p>
+<p>A possible approach is check if deprecated arguments are not missing, and stop providing a meaningful message.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo_bar</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span>
+    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/missing.html">missing</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+        <span class="kw"><a href="https://rdrr.io/r/base/stop.html">stop</a></span><span class="op">(</span><span class="st">"use 'y' instead of 'x'"</span><span class="op">)</span>
+    <span class="op">}</span>
+    <span class="va">y</span><span class="op">^</span><span class="fl">2</span>
+<span class="op">}</span>
+
+<span class="fu">foo_bar</span><span class="op">(</span>x <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="co">#&gt; Error in foo_bar(x = 5) : use 'y' instead of 'x' </span></code></pre></div>
+<p>If you want to be more helpful, you could emit a warning but automatically take the necessary action:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo_bar</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span>
+    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/missing.html">missing</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+        <span class="kw"><a href="https://rdrr.io/r/base/warning.html">warning</a></span><span class="op">(</span><span class="st">"use 'y' instead of 'x'"</span><span class="op">)</span>
+        <span class="va">y</span> <span class="op">&lt;-</span> <span class="va">x</span>
+    <span class="op">}</span>
+    <span class="va">y</span><span class="op">^</span><span class="fl">2</span>
+<span class="op">}</span>
+
+<span class="fu">foo_bar</span><span class="op">(</span>x <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="co">#&gt; 25</span></code></pre></div>
+<p>Be aware of the parameter <code>...</code>. If your function has <code>...</code>, and you have already removed a parameter (lets call it <code>z</code>), a user may have older code that uses <code>z</code>. When they pass in <code>z</code>, it’s not a parameter in the function definition, and will likely be silently ignored – not what you want. Instead, leave the argument around, throwing an error if it used.</p>
+</div>
+<div id="functions-changing-function-names" class="section level2">
+<h2>
+<span class="header-section-number">14.4</span> Functions: changing function names<a class="anchor" aria-label="anchor" href="#functions-changing-function-names"><i class="fas fa-link"></i></a>
+</h2>
+<p>If you must change a function name, do it gradually, as with any other change in your package.</p>
+<p>Let’s say you have a function <code>foo</code>.</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
+<p>However, you want to change the function name to <code>bar</code>.</p>
+<p>Instead of simply changing the function name and <code>foo</code> no longer existing straight away, in the first version of the package where <code>bar</code> appears, make an alias like:</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' foo - add 1 to an input</span>
+<span class="co">#' @export</span>
+<span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span>
+
+<span class="co">#' @export</span>
+<span class="co">#' @rdname foo</span>
+<span class="va">bar</span> <span class="op">&lt;-</span> <span class="va">foo</span></code></pre></div>
+<p>With the above solution, the user can use either <code>foo()</code> or <code><a href="https://rdrr.io/r/grDevices/plotmath.html">bar()</a></code> – either will do the same thing, as they are the same function.</p>
+<p>It’s also useful to have a message but then you’ll only want to throw that message when they use the old function, e.g.,</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' foo - add 1 to an input</span>
+<span class="co">#' @export</span>
+<span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span>
+    <span class="kw"><a href="https://rdrr.io/r/base/warning.html">warning</a></span><span class="op">(</span><span class="st">"please use bar() instead of foo()"</span>, call. <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+    <span class="fu"><a href="https://rdrr.io/r/grDevices/plotmath.html">bar</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+<span class="op">}</span>
+
+<span class="co">#' @export</span>
+<span class="co">#' @rdname foo</span>
+<span class="va">bar</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
+<p>After users have used the package version for a while (with both <code>foo</code> and <code>bar</code>), in the next version you can remove the old function name (<code>foo</code>), and only have <code>bar</code>.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' bar - add 1 to an input</span>
+<span class="co">#' @export</span>
+<span class="va">bar</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="va">x</span> <span class="op">+</span> <span class="fl">1</span></code></pre></div>
+</div>
+<div id="functions-deprecate-defunct" class="section level2">
+<h2>
+<span class="header-section-number">14.5</span> Functions: deprecate &amp; defunct<a class="anchor" aria-label="anchor" href="#functions-deprecate-defunct"><i class="fas fa-link"></i></a>
+</h2>
+<p>To remove a function from a package (let’s say your package name is <code>helloworld</code>), you can use the following protocol:</p>
+<ul>
+<li>Mark the function as deprecated in package version <code>x</code> (e.g., <code>v0.2.0</code>)</li>
+</ul>
+<p>In the function itself, use <code><a href="https://rdrr.io/r/base/Deprecated.html">.Deprecated()</a></code> to point to the replacement function:</p>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/Deprecated.html">.Deprecated</a></span><span class="op">(</span><span class="st">"bar"</span><span class="op">)</span>
+<span class="op">}</span></code></pre></div>
+<p>There’s options in <code>.Deprecated</code> for specifying a new function name, as well as a new package name, which makes sense when moving functions into different packages.</p>
+<p>The message that’s given by <code>.Deprecated</code> is a warning, so can be suppressed by users with <code><a href="https://rdrr.io/r/base/warning.html">suppressWarnings()</a></code> if desired.</p>
+<p>Make a man page for deprecated functions like:</p>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' Deprecated functions in helloworld</span>
+<span class="co">#' </span>
+<span class="co">#' These functions still work but will be removed (defunct) in the next version.</span>
+<span class="co">#' </span>
+<span class="co">#' \itemize{</span>
+<span class="co">#'  \item \code{\link{foo}}: This function is deprecated, and will</span>
+<span class="co">#'  be removed in the next version of this package.</span>
+<span class="co">#' }</span>
+<span class="co">#' </span>
+<span class="co">#' @name helloworld-deprecated</span>
+<span class="cn">NULL</span></code></pre></div>
+<p>This creates a man page that users can access like <code>?`helloworld-deprecated`</code> and they’ll see in the documentation index. Add any functions to this page as needed, and take away as a function moves to defunct (see below).</p>
+<ul>
+<li>In the next version (<code>v0.3.0</code>) you can make the function defunct (that is, completely gone from the package, except for a man page with a note about it).</li>
+</ul>
+<p>In the function itself, use <code><a href="https://rdrr.io/r/base/Defunct.html">.Defunct()</a></code> like:</p>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/Defunct.html">.Defunct</a></span><span class="op">(</span><span class="st">"bar"</span><span class="op">)</span>
+<span class="op">}</span></code></pre></div>
+<p>Note that the message in <code>.Defunct</code> is an error so that the function stops whereas <code>.Deprecated</code> uses a warning that let the function proceed.</p>
+<p>In addition, it’s good to add <code>...</code> to all defunct functions so that if users pass in any parameters they’ll get the same defunct message instead of a <code>unused argument</code> message, so like:</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="op">{</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/Defunct.html">.Defunct</a></span><span class="op">(</span><span class="st">"bar"</span><span class="op">)</span>
+<span class="op">}</span></code></pre></div>
+<p>Without <code>...</code> gives:</p>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">foo</span><span class="op">(</span>x <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="co">#&gt; Error in foo(x = 5) : unused argument (x = 5)</span></code></pre></div>
+<p>And with <code>...</code> gives:</p>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">foo</span><span class="op">(</span>x <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
+<span class="co">#&gt; Error: 'foo' has been removed from this package</span></code></pre></div>
+<p>Make a man page for defunct functions like:</p>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">#' Defunct functions in helloworld</span>
+<span class="co">#' </span>
+<span class="co">#' These functions are gone, no longer available.</span>
+<span class="co">#' </span>
+<span class="co">#' \itemize{</span>
+<span class="co">#'  \item \code{\link{foo}}: This function is defunct.</span>
+<span class="co">#' }</span>
+<span class="co">#' </span>
+<span class="co">#' @name helloworld-defunct</span>
+<span class="cn">NULL</span></code></pre></div>
+<p>This creates a man page that users can access like <code>?`helloworld-defunct`</code> and they’ll see in the documentation index. Add any functions to this page as needed. You’ll likely want to keep this man page indefinitely.</p>
+<div id="testing-deprecated-functions" class="section level3">
+<h3>
+<span class="header-section-number">14.5.1</span> Testing deprecated functions<a class="anchor" aria-label="anchor" href="#testing-deprecated-functions"><i class="fas fa-link"></i></a>
+</h3>
+<p>You don’t have to change the tests of deprecated functions until they are made defunct.</p>
+<ul>
+<li>Consider any changes made to a deprecated function. Along with using <code>.Deprecated</code> inside the function, did you change the parameters at all in the deprecated function, or create a new function that replaces the deprecated function, etc. Those changes should be tested if any made.</li>
+<li>Related to above, if the deprecated function is simply getting a name change, perhaps test that the old and new functions return identical results.</li>
+<li>
+<a href="https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2"><code>suppressWarnings()</code> could be used</a> to suppress the warning thrown from <code>.Deprecated</code>, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.</li>
+</ul>
+<p>Once a function is made defunct, its tests are simply removed.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></div>
+<div class="next"><a href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#evolution"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="nav-link" href="#philosophy-of-changes"><span class="header-section-number">14.1</span> Philosophy of changes</a></li>
+<li><a class="nav-link" href="#the-lifecycle-package"><span class="header-section-number">14.2</span> The lifecycle package</a></li>
+<li><a class="nav-link" href="#parameters-changing-parameter-names"><span class="header-section-number">14.3</span> Parameters: changing parameter names</a></li>
+<li><a class="nav-link" href="#functions-changing-function-names"><span class="header-section-number">14.4</span> Functions: changing function names</a></li>
+<li>
+<a class="nav-link" href="#functions-deprecate-defunct"><span class="header-section-number">14.5</span> Functions: deprecate &amp; defunct</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#testing-deprecated-functions"><span class="header-section-number">14.5.1</span> Testing deprecated functions</a></li></ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/maintenance_evolution.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/maintenance_evolution.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

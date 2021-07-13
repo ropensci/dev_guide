@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>A NEWS | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="A.1 0.6.0 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (@annakrystalli, #305) 2021-01-25, add a translation of the review template in Spanish...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="A NEWS | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/booknews.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="A.1 0.6.0 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (@annakrystalli, #305) 2021-01-25, add a translation of the review template in Spanish...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="A NEWS | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="A.1 0.6.0 2021-02-04, add guidance to enforce package versioning and tracking of changes through review (@annakrystalli, #305) 2021-01-25, add a translation of the review template in Spanish...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="active" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="booknews" class="section level1">
+<h1>
+<span class="header-section-number">A</span> NEWS<a class="anchor" aria-label="anchor" href="#booknews"><i class="fas fa-link"></i></a>
+</h1>
+<div id="section-1" class="section level2">
+<h2>
+<span class="header-section-number">A.1</span> 0.6.0<a class="anchor" aria-label="anchor" href="#section-1"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2021-02-04, add guidance to enforce package versioning and tracking of changes through review (<code>@annakrystalli</code>, #305)</p></li>
+<li><p>2021-01-25, add a translation of the review template in Spanish (<code>@Fvd</code>, <code>@maurolepore</code>, #303)</p></li>
+<li><p>2021-01-25, the book has now better citation guidance in case you want to cite this very guide (<code>@Bisaloo</code>, #304).</p></li>
+<li><p>2021-01-12, add some more guidance on escaping examples (#290).</p></li>
+<li><p>2021-01-12, mention the lifecycle package in the chapter about package evolution (#287).</p></li>
+<li><p>2021-01-12, require overlap information is put in documentation (#292).</p></li>
+<li><p>2021-01-12, start using the bookdown::bs4_book() template.</p></li>
+<li><p>2021-01-12, add a sentence about whether it is acceptable to push a new version of a package to CRAN within two weeks of the most recent version if you have just been made aware of, and fixed, a major bug (<code>@sckott</code>, #283)</p></li>
+<li><p>2021-01-12, mention the HTTP testing in R book.</p></li>
+<li><p>2021-01-12, mention testthat snapshot tests.</p></li>
+<li><p>2021-01-12, remove mentions of Travis CI and link to Jeroen Ooms’ blog post about moving away from Travis.</p></li>
+<li><p>2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (<code>@noamross</code>, #293)</p></li>
+</ul>
+</div>
+<div id="section-2" class="section level2">
+<h2>
+<span class="header-section-number">A.2</span> 0.5.0<a class="anchor" aria-label="anchor" href="#section-2"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2020-10-08, add help about link checking (<code>@sckott</code>, #281)</p></li>
+<li><p>2020-10-08, update JOSS instructions (<code>@karthik</code>, #276)</p></li>
+<li><p>2020-10-05, add links to licence resources (<code>@annakrystalli</code>, #279)</p></li>
+<li><p>2020-10-05, update information about the contributing guide (<code>@stefaniebutland</code>, #280)</p></li>
+<li><p>2020-09-11, make reviewer approval a separate template (<code>@bisaloo</code>, #264)</p></li>
+<li><p>2020-09-22, add package curation policy (<code>@noamross</code>, #263)</p></li>
+<li><p>2020-09-11, add more guidance and requirements for docs at submission (<code>@annakrystalli</code>, #261)</p></li>
+<li><p>2020-09-14, add more guidance on describing data source in DESCRIPTION (<code>@mpadge</code>, #260)</p></li>
+<li><p>2020-09-14, add more guidance about tests of deprecated functions (<code>@sckott</code>, #213)</p></li>
+<li><p>2020-09-11, update the CI guidance (<code>@bisaloo</code>, <code>@mcguinlu</code>, #269)</p></li>
+<li><p>2020-09-11, improve the redirect guidance (<code>@jeroen</code>, <code>@mcguinlu</code>, #269)</p></li>
+</ul>
+</div>
+<div id="section-3" class="section level2">
+<h2>
+<span class="header-section-number">A.3</span> 0.4.0<a class="anchor" aria-label="anchor" href="#section-3"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2020-04-02, give less confusing code of conduct guidance: the reviewed packages’ COC is rOpenSci COC (<code>@Bisaloo</code>, <code>@cboettig</code>, #240)</p></li>
+<li><p>2020-03-27, add section on Ethics, Data Privacy and Human Subjects Research to Policies chapter</p></li>
+<li><p>2020-03-12, mention GitHub Actions as a CI provider.</p></li>
+<li><p>2020-02-24, add guide for inviting a guest editor.</p></li>
+<li><p>2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.</p></li>
+<li><p>2020-02-10, add field and laboratory reproducibility tools as a category in scope.</p></li>
+<li><p>2020-02-10, add more guidance about secrets and package development in the security chapter.</p></li>
+<li><p>2020-02-06, add guidance about Bioconductor dependencies (#246).</p></li>
+<li><p>2020-02-06, add package logo guidance (#217).</p></li>
+<li><p>2020-02-06, add one CRAN gotcha: single quoting software names(#245, <a href="https://github.com/aaronwolen"><code>@aaronwolen</code></a>)</p></li>
+<li><p>2020-02-06, improve guidance regarding the replacement of “older” pkgdown website links and source (#241, <a href="https://github.com/cboettig"><code>@cboettig</code></a>)</p></li>
+<li><p>2020-02-06, rephrase the EiC role (#244).</p></li>
+<li><p>2020-02-06, remove the recommendation to add rOpenSci footer (<a href="https://github.com/ropensci/software-review-meta/issues/79" class="uri">https://github.com/ropensci/software-review-meta/issues/79</a>).</p></li>
+<li><p>2020-02-06, remove the recommendation to add a review mention to DESCRIPTION but recommends mentioning the package version when reviewers are added as “rev” authors.</p></li>
+<li><p>2020-01-30, slightly changes the advice on documentation re-use: add a con; mention <code>@includeRmd</code> and <code>@example</code>; correct the location of Rmd fragments (#230).</p></li>
+<li><p>2020-01-30, add more guidance for the editor in charge of a dev guide release (#196, #205).</p></li>
+<li><p>2020-01-22, add guidance in the editor guide about not transferred repositories.</p></li>
+<li><p>2020-01-22, clarify forum guidance (for use cases and in general).</p></li>
+<li><p>2020-01-22, mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.</p></li>
+<li><p>2020-01-22, document the use of mathjax with rotemplate (<a href="https://github.com/Bisaloo"><code>@Bisaloo</code></a>, #199).</p></li>
+<li><p>2020-01-20, add guidance for off-thread interaction and COIs (<a href="https://github.com/noamross"><code>@noamross</code></a>, #197).</p></li>
+<li><p>2020-01-20, add advice on specifying dependency minimum versions (<a href="https://github.com/karthik"><code>@karthik</code></a>, <a href="https://github.com/annakrystalli"><code>@annakrystalli</code></a>, #185).</p></li>
+<li><p>2020-01-09, start using GitHub actions instead of Travis for deployment.</p></li>
+<li><p>-2019-12-11, add note in Documentation sub-section of Packaging Guide section about referencing the new R6 support in roxygen2 (ropensci/dev_guide#189)</p></li>
+<li><p>2019-12-11, add new CRAN gotcha about having ‘in R’ or ‘with R’ in your package title (<a href="https://github.com/Bisaloo"><code>@bisaloo</code></a>, ropensci/dev_guide#221)</p></li>
+</ul>
+</div>
+<div id="section-4" class="section level2">
+<h2>
+<span class="header-section-number">A.4</span> 0.3.0<a class="anchor" aria-label="anchor" href="#section-4"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)</p></li>
+<li><p>2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)</p></li>
+<li><p>2019-09-26, add chapter on changing package maintainers (ropensci/dev_guide#128) (ropensci/dev_guide#194)</p></li>
+<li><p>2019-09-26, update Slack room to use for editors (ropensci/dev_guide#193)</p></li>
+<li><p>2019-09-11, update instructions in README for rendering the book locally (ropensci/dev_guide#192)</p></li>
+<li><p>2019-08-05, update JOSS submission instructions (ropensci/dev_guide#187)</p></li>
+<li><p>2019-07-22, break “reproducibility” category in policies into component parts. (ropensci/software-review-meta#81)</p></li>
+<li><p>2019-06-18, add link to rOpenSci community call “Security for R” to security chapter.</p></li>
+<li><p>2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by <a href="https://github.com/IndrajeetPatil"><code>@IndrajeetPatil</code></a>, #179)</p></li>
+<li><p>2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content. (ropensci/dev_guide#161)</p></li>
+<li><p>2019-06-17, add mention of central building of documentation websites.</p></li>
+<li><p>2019-06-13, add explanations of CRAN checks. (ropensci/dev_guide#177)</p></li>
+<li><p>2019-06-13, add mentions of the <code>rodev</code> helper functions where relevant.</p></li>
+<li><p>2019-06-13, add recommendation about using <code>cat</code> for <code>str.*()</code> methods. RStudio assumes that <code>str</code> uses <code>cat</code>, if not when loading an R object the <code>str</code> prints to the console in RStudio and doesn’t show the correct object structure in the properties. ([<code>@mattfidler</code>] (<a href="https://github.com/mattfidler/" class="uri">https://github.com/mattfidler/</a>) #178)</p></li>
+<li><p>2019-06-12, add more details about git flow.</p></li>
+<li><p>2019-06-12, remove recommendation about <code>roxygen2</code> dev version since the latest stable version has what is needed. (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #165)</p></li>
+<li><p>2019-06-11, add mention of usethis functions for adding testing or vignette infrastructure in the part about dependencies in the package building guide.</p></li>
+<li><p>2019-06-10, use the new URL for the dev guide, <a href="https://devguide.ropensci.org/" class="uri">https://devguide.ropensci.org/</a></p></li>
+<li><p>2019-05-27, add more info about the importance of the repo being recognized as a R package by linguist (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #172)</p></li>
+<li><p>2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan’s books (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #167)</p></li>
+<li><p>2019-05-15, add book release guidance for editors. (ropensci/dev_guide#152)</p></li>
+</ul>
+</div>
+<div id="section-5" class="section level2">
+<h2>
+<span class="header-section-number">A.5</span> 0.2.0<a class="anchor" aria-label="anchor" href="#section-5"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2019-05-23, add CRAN gotcha: in the Description field of your DESCRIPTION file, enclose URLs in angle brackets.</p></li>
+<li><p>2019-05-13, add more content to the chapter about contributing.</p></li>
+<li><p>2019-05-13, add more precise instructions about blog posts to approval template for editors.</p></li>
+<li><p>2019-05-13, add policies allowing using either <code>&lt;-</code> or <code>=</code> within a package as long as the whole package is consistent.</p></li>
+<li><p>2019-05-13, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.</p></li>
+<li><p>2019-04-29, add requirement and advice on testing packages using <code>devel</code> and <code>oldrel</code> R versions on Travis.</p></li>
+<li><p>2019-04-23, add a sentence about why being generous with attributions and more info about ctb vs aut.</p></li>
+<li><p>2019-04-23, add link to Daniel Nüst’s notes about migration from XML to xml2.</p></li>
+<li><p>2019-04-22, add use of rOpenSci forum to maintenance section.</p></li>
+<li><p>2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.</p></li>
+<li><p>2019-04-22, use a darker blue for links (feedback by <a href="https://github.com/kwstat"><code>@kwstat</code></a>, #138).</p></li>
+<li><p>2019-04-22, add book cover.</p></li>
+<li><p>2019-04-08, improve formatting and link text in README (<a href="https://github.com/katrinleinweber"><code>@katrinleinweber</code></a>, #137)</p></li>
+<li><p>2019-03-25, add favicon (<a href="https://github.com/wlandau"><code>@wlandau</code></a>, #136).</p></li>
+<li><p>2019-03-21, improve Travis CI guidance, including link to examples. (<a href="https://github.com/mpadge"><code>@mpadge</code></a>, #135)</p></li>
+<li><p>2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file) (<a href="https://github.com/hadley"><code>@hadley</code></a>, #129).</p></li>
+<li><p>2019-02-07, added a PDF file to export (request by <a href="https://github.com/IndrajeetPatil"><code>@IndrajeetPatil</code></a>, #131).</p></li>
+</ul>
+</div>
+<div id="section-6" class="section level2">
+<h2>
+<span class="header-section-number">A.6</span> 0.1.5<a class="anchor" aria-label="anchor" href="#section-6"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>2019-02-01, created a .zenodo.json to explicitly set editors as authors.</li>
+</ul>
+</div>
+<div id="first-release-0.1.0" class="section level2">
+<h2>
+<span class="header-section-number">A.7</span> First release 0.1.0<a class="anchor" aria-label="anchor" href="#first-release-0.1.0"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>2019-01-23, add details about requirements for packages running on all major platforms and added new section to package categories.</p></li>
+<li><p>2019-01-22, add details to the guide for authors about the development stage at which to submit a package.</p></li>
+<li><p>2018-12-21, inclusion of an explicit policy for conflict of interest (for reviewers and editors).</p></li>
+<li><p>2018-12-18, added more guidance for editor on how to look for reviewers.</p></li>
+<li><p>2018-12-04, onboarding was renamed Software Peer Review.</p></li>
+</ul>
+</div>
+<div id="place-holder-0.0.1" class="section level2">
+<h2>
+<span class="header-section-number">A.8</span> place-holder 0.0.1<a class="anchor" aria-label="anchor" href="#place-holder-0.0.1"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li>Added a <code>NEWS.md</code> file to track changes to the book.</li>
+</ul>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></div>
+<div class="next"><a href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#booknews"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="nav-link" href="#section-1"><span class="header-section-number">A.1</span> 0.6.0</a></li>
+<li><a class="nav-link" href="#section-2"><span class="header-section-number">A.2</span> 0.5.0</a></li>
+<li><a class="nav-link" href="#section-3"><span class="header-section-number">A.3</span> 0.4.0</a></li>
+<li><a class="nav-link" href="#section-4"><span class="header-section-number">A.4</span> 0.3.0</a></li>
+<li><a class="nav-link" href="#section-5"><span class="header-section-number">A.5</span> 0.2.0</a></li>
+<li><a class="nav-link" href="#section-6"><span class="header-section-number">A.6</span> 0.1.5</a></li>
+<li><a class="nav-link" href="#first-release-0.1.0"><span class="header-section-number">A.7</span> First release 0.1.0</a></li>
+<li><a class="nav-link" href="#place-holder-0.0.1"><span class="header-section-number">A.8</span> place-holder 0.0.1</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/appendix.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/appendix.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

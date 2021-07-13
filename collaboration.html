@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Collaboration Guide | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="Having contributors will improve your package, and if you onboard some of them as package authors with write permissions to the repo, your package will be more sustainably developed.  This chapter...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Collaboration Guide | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/collaboration.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="Having contributors will improve your package, and if you onboard some of them as package authors with write permissions to the repo, your package will be more sustainably developed.  This chapter...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Collaboration Guide | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="Having contributors will improve your package, and if you onboard some of them as package authors with write permissions to the repo, your package will be more sustainably developed.  This chapter...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="active" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="collaboration" class="section level1">
+<h1>
+<span class="header-section-number">9</span> Collaboration Guide<a class="anchor" aria-label="anchor" href="#collaboration"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+Having contributors will improve your package, and if you onboard some of them as package authors with <a href="https://help.github.com/articles/repository-permission-levels-for-an-organization/">write permissions to the repo</a>, your package will be more sustainably developed.
+</p>
+<p>
+This chapter contains our guidance for collaboration, in a <a href="collaboration.html#friendlyfiles">section about making your repo contribution- and collaboration-friendly</a> by infrastructure (code of conduct, contribution guidelines, issue labels); and <a href="collaboration.html#workingcollaborators">a section about how to collaborate with new contributors</a>, in particular in the context of the rOpenSci’s “ropensci” GitHub organization.
+</p>
+</div>
+<div id="friendlyfiles" class="section level2">
+<h2>
+<span class="header-section-number">9.1</span> Make your repo contribution and collaboration friendly<a class="anchor" aria-label="anchor" href="#friendlyfiles"><i class="fas fa-link"></i></a>
+</h2>
+<div id="coc-file" class="section level3">
+<h3>
+<span class="header-section-number">9.1.1</span> Code of conduct<a class="anchor" aria-label="anchor" href="#coc-file"><i class="fas fa-link"></i></a>
+</h3>
+<p>After transfer to our GitHub organization, <a href="https://ropensci.org/code-of-conduct/">rOpenSci Code of Conduct</a> will apply to your project.
+Please add this text to the README</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb12-1"><a href="collaboration.html#cb12-1"></a>Please note that this package is released with a [Contributor</span>
+<span id="cb12-2"><a href="collaboration.html#cb12-2"></a>Code of Conduct](https://ropensci.org/code-of-conduct/). </span>
+<span id="cb12-3"><a href="collaboration.html#cb12-3"></a>By</span>
+<span id="cb12-4"><a href="collaboration.html#cb12-4"></a>contributing to this project, you agree to abide by its terms.</span></code></pre></div>
+<p>And delete the package current code of conduct if there was one.</p>
+</div>
+<div id="contributing-guide" class="section level3">
+<h3>
+<span class="header-section-number">9.1.2</span> Contributing guide<a class="anchor" aria-label="anchor" href="#contributing-guide"><i class="fas fa-link"></i></a>
+</h3>
+<p>We have templates for issue, pull request and contributing guidelines that you can find <a href="https://github.com/ropensci/dotgithubfiles/">in this GitHub repository</a>. There is also <a href="https://docs.ropensci.org/rodev/reference/use_ro_github.html">a helper function to insert them into your repository</a>.</p>
+<p>You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see <a href="collaboration.html#attributions">this section</a>) and the roadmap of your package (cf <a href="https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md">this example</a>).</p>
+<p>We encourage you to direct feedback that is not a bug report or a feature request to <a href="https://discuss.ropensci.org/">rOpenSci forum</a>, after making sure you’d see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package. Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template. Please direct your users to tag posts with the package name.</p>
+<p>You can use the <code>lintr</code> package’s own bot, lintr-bot, via continuous integration, to get comments if a commit or PR deteriorates the code style of your package. See <a href="https://github.com/jimhester/lintr#continuous-integration">this link for guidance</a>.</p>
+</div>
+<div id="issue-labelling" class="section level3">
+<h3>
+<span class="header-section-number">9.1.3</span> Issue labelling<a class="anchor" aria-label="anchor" href="#issue-labelling"><i class="fas fa-link"></i></a>
+</h3>
+<p>You can use labels such as “help wanted” and “good first issue” to help potential collaborators, including newbies, find your repo. <a href="https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/">Cf GitHub article</a>. You can also use the “Beginner” label. See <a href="https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&amp;type=Issues">examples of beginner issues over all ropensci repos</a>.</p>
+</div>
+</div>
+<div id="workingcollaborators" class="section level2">
+<h2>
+<span class="header-section-number">9.2</span> Working with collaborators<a class="anchor" aria-label="anchor" href="#workingcollaborators"><i class="fas fa-link"></i></a>
+</h2>
+<div id="onboarding-collaborators" class="section level3">
+<h3>
+<span class="header-section-number">9.2.1</span> Onboarding collaborators<a class="anchor" aria-label="anchor" href="#onboarding-collaborators"><i class="fas fa-link"></i></a>
+</h3>
+<p>There’s no general rOpenSci rule as to how you should onboard collaborators. You should increase their rights to the repo as you gain trust, and you should definitely acknowledge contributions (see <a href="collaboration.html#attributions">this section</a>).</p>
+<p>You can ask a new collaborator to make PRs (see following section for assessing a PR locally, i.e. beyond CI checks) to dev/master and assess them before merging, and after a while let them push to master, although you might want to keep a system of PR reviews… even for yourself once you have team mates!</p>
+<p>A possible model for onboarding collaborators is provided by Jim Hester in <a href="https://github.com/jimhester/lintr/issues/318">his <code>lintr</code> repo</a>.</p>
+<p>If your problem is <em>recruiting</em> collaborators, you can post an open call like Jim Hester’s <a href="https://twitter.com/jimhester_/status/997109466674819074">on Twitter</a>, <a href="https://github.com/jimhester/lintr/issues/318">GitHub</a>, and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.</p>
+</div>
+<div id="working-with-collaborators-including-yourself" class="section level3">
+<h3>
+<span class="header-section-number">9.2.2</span> Working with collaborators (including yourself)<a class="anchor" aria-label="anchor" href="#working-with-collaborators-including-yourself"><i class="fas fa-link"></i></a>
+</h3>
+<p>You could implement the “<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">gitflow</a>” philosophy as explained by Amanda Dobbyn in <a href="https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow">this blog post</a>. In a nutshell,</p>
+<ul>
+<li><p>Keep master shippable as much as possible</p></li>
+<li><p><a href="https://happygitwithr.com/git-branches.html">Branches</a> are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.</p></li>
+</ul>
+<p>One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed. Sometimes you’ll be fine just reading the changes and trusting <a href="ci.html#ci">Continuous integration</a>. Sometimes you’ll need more exploration and even extension of the PR in which case we recommend reading <a href="https://happygitwithr.com/pr-extend.html">“Explore and extend a pull request” in happygitwithr.com</a>.</p>
+</div>
+<div id="attributions" class="section level3">
+<h3>
+<span class="header-section-number">9.2.3</span> Be generous with attributions<a class="anchor" aria-label="anchor" href="#attributions"><i class="fas fa-link"></i></a>
+</h3>
+<p>If someone contributes to your repository consider adding them in DESCRIPTION, as contributor (“ctb”) for small contributions, author (“aut”) for bigger contributions. Traditionally when citing a package in a scientific publication only “aut” authors are listed, not “ctb” contributors; and on <code>pkgdown</code> websites only “aut” names are listed on the homepage, all authors being listed on the authors/ page.</p>
+<p>At a minimum consider adding the name of contributors near the feature/bug fix line in <a href="releasing.html#news">NEWS.md</a>.</p>
+<p>We recommend your being generous with such acknowledgements, because it is a nice thing to do and because it will make folks more likely to contribute again to your package or other repos of the organization.</p>
+<p>As a reminder from <a href="building.html#building">our packaging guidelines</a> if your package was reviewed and you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the <code>Authors@R</code> field with a Reviewer contributor type (<code>"rev"</code>), like so:</p>
+<pre><code>    person("Bea", "Hernández", role = "rev",
+    comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see &lt;https://github.com/ropensci/software-review/issues/116&gt;"),</code></pre>
+<p>Only include reviewers after asking for their consent. Read more in <a href="https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/">this blog post “Thanking Your Reviewers: Gratitude through Semantic Metadata”</a>. Note that ‘rev’ will raise a CRAN NOTE unless the package is built using R v3.5. Make sure you use <code>roxygen2</code>’s latest CRAN version.</p>
+<p>Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!</p>
+</div>
+<div id="welcoming-collaborators-to-ropensci" class="section level3">
+<h3>
+<span class="header-section-number">9.2.4</span> Welcoming collaborators to rOpenSci<a class="anchor" aria-label="anchor" href="#welcoming-collaborators-to-ropensci"><i class="fas fa-link"></i></a>
+</h3>
+<p>If you give someone write permissions to the repository,</p>
+<ul>
+<li><p>please contact one of <a href="softwarereviewintro.html#associateditors">the editors</a> so that this new contributor might get <strong>invited to rOpenSci’s “ropensci” GitHub organization</strong> (instead of being <a href="https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators">outside collaborators</a>)</p></li>
+<li><p>please contact rOpenSci community manager <a href="https://github.com/stefaniebutland">Stefanie Butland</a> so that this new contributor might get get <strong>invited to rOpenSci Slack workspace</strong>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></div>
+<div class="next"><a href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#collaboration"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li>
+<a class="nav-link" href="#friendlyfiles"><span class="header-section-number">9.1</span> Make your repo contribution and collaboration friendly</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#coc-file"><span class="header-section-number">9.1.1</span> Code of conduct</a></li>
+<li><a class="nav-link" href="#contributing-guide"><span class="header-section-number">9.1.2</span> Contributing guide</a></li>
+<li><a class="nav-link" href="#issue-labelling"><span class="header-section-number">9.1.3</span> Issue labelling</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#workingcollaborators"><span class="header-section-number">9.2</span> Working with collaborators</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#onboarding-collaborators"><span class="header-section-number">9.2.1</span> Onboarding collaborators</a></li>
+<li><a class="nav-link" href="#working-with-collaborators-including-yourself"><span class="header-section-number">9.2.2</span> Working with collaborators (including yourself)</a></li>
+<li><a class="nav-link" href="#attributions"><span class="header-section-number">9.2.3</span> Be generous with attributions</a></li>
+<li><a class="nav-link" href="#welcoming-collaborators-to-ropensci"><span class="header-section-number">9.2.4</span> Welcoming collaborators to rOpenSci</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/maintenance_collaboration.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/maintenance_collaboration.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

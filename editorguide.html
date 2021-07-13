@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 8 Guide for Editors | rOpenSci Packages: Development, Maintenance, and Peer Review</title>
+<meta name="author" content="rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni">
+<meta name="description" content="Software Peer Review at rOpenSci is managed by a team of editors. We are piloting a system of a rotating Editor-in-Chief (EiC).  This chapter presents the responsabilities of the Editor-in-Chief,...">
+<meta name="generator" content="bookdown 0.22.11 with bs4_book()">
+<meta property="og:title" content="Chapter 8 Guide for Editors | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://devguide.ropensci.org/editorguide.html">
+<meta property="og:image" content="https://devguide.ropensci.org//images/cover.png">
+<meta property="og:description" content="Software Peer Review at rOpenSci is managed by a team of editors. We are piloting a system of a rotating Editor-in-Chief (EiC).  This chapter presents the responsabilities of the Editor-in-Chief,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 8 Guide for Editors | rOpenSci Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:site" content="@ropensci">
+<meta name="twitter:description" content="Software Peer Review at rOpenSci is managed by a team of editors. We are piloting a system of a rotating Editor-in-Chief (EiC).  This chapter presents the responsabilities of the Editor-in-Chief,...">
+<meta name="twitter:image" content="https://devguide.ropensci.org//images/cover.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.9002/transition.js"></script><script src="libs/bs3compat-0.2.5.9002/tabs.js"></script><script src="libs/bs3compat-0.2.5.9002/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript><div class="inline-figure"><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></div></noscript>
+<!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">rOpenSci Packages: Development, Maintenance, and Peer Review</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"></a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li class="book-part">Building Your Package</li>
+<li><a class="" href="building.html"><span class="header-section-number">1</span> Packaging Guide</a></li>
+<li><a class="" href="ci.html"><span class="header-section-number">2</span> Continuous Integration Best Practices</a></li>
+<li><a class="" href="package-development-security-best-practices.html"><span class="header-section-number">3</span> Package Development Security Best Practices</a></li>
+<li class="book-part">Software Peer Review of Packages</li>
+<li><a class="" href="softwarereviewintro.html"><span class="header-section-number">4</span> Software Peer Review, Why? What?</a></li>
+<li><a class="" href="policies.html"><span class="header-section-number">5</span> Software Peer Review policies</a></li>
+<li><a class="" href="guide-for-authors.html"><span class="header-section-number">6</span> Guide for Authors</a></li>
+<li><a class="" href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></li>
+<li><a class="active" href="editorguide.html"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li class="book-part">Maintaining Packages</li>
+<li><a class="" href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></li>
+<li><a class="" href="changing-maintainers.html"><span class="header-section-number">10</span> Changing package maintainers</a></li>
+<li><a class="" href="releasing.html"><span class="header-section-number">11</span> Releasing a package</a></li>
+<li><a class="" href="marketing.html"><span class="header-section-number">12</span> Marketing your package</a></li>
+<li><a class="" href="grooming.html"><span class="header-section-number">13</span> GitHub Grooming</a></li>
+<li><a class="" href="evolution.html"><span class="header-section-number">14</span> Package evolution - changing stuff in your package</a></li>
+<li><a class="" href="curationpolicy.html"><span class="header-section-number">15</span> Package Curation Policy</a></li>
+<li><a class="" href="contributingguide.html"><span class="header-section-number">16</span> Contributing Guide</a></li>
+<li class="book-part">Appendix</li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="reviewtemplate.html"><span class="header-section-number">B</span> Review template</a></li>
+<li><a class="" href="reviewtemplatees.html"><span class="header-section-number">C</span> Review template in Spanish</a></li>
+<li><a class="" href="editortemplate.html"><span class="header-section-number">D</span> Editor’s template</a></li>
+<li><a class="" href="reviewrequesttemplate.html"><span class="header-section-number">E</span> Review request template</a></li>
+<li><a class="" href="approvaltemplate.html"><span class="header-section-number">F</span> Approval comment template</a></li>
+<li><a class="" href="approval2template.html"><span class="header-section-number">G</span> Reviewer approval comment template</a></li>
+<li><a class="" href="newstemplate.html"><span class="header-section-number">H</span> NEWS template</a></li>
+<li><a class="" href="bookreleaseissue.html"><span class="header-section-number">I</span> Book release guidance</a></li>
+<li><a class="" href="redirect.html"><span class="header-section-number">J</span> How to set a redirect</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/ropensci/dev_guide">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="editorguide" class="section level1">
+<h1>
+<span class="header-section-number">8</span> Guide for Editors<a class="anchor" aria-label="anchor" href="#editorguide"><i class="fas fa-link"></i></a>
+</h1>
+<div class="summaryblock">
+<p>
+Software Peer Review at rOpenSci is managed by a team of editors. We are piloting a system of a rotating Editor-in-Chief (EiC).
+</p>
+<p>
+This chapter presents the responsabilities <a href="editorguide.html#eicchecklist">of the Editor-in-Chief</a>, of <a href="editorguide.html#editorchecklist">any editor in charge of a submission</a>, <a href="editorguide.html#outofscoperesponse">how to respond to an out-of-scope submission</a> and <a href="editorguide.html#bookrelease">how to manage a dev guide release</a>.
+</p>
+<p>
+If you’re a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
+</p>
+</div>
+<div id="editorchecklist" class="section level2">
+<h2>
+<span class="header-section-number">8.1</span> Handling Editor’s Checklist<a class="anchor" aria-label="anchor" href="#editorchecklist"><i class="fas fa-link"></i></a>
+</h2>
+<div id="upon-submission" class="section level3">
+<h3>
+<span class="header-section-number">8.1.1</span> Upon submission:<a class="anchor" aria-label="anchor" href="#upon-submission"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Tag issue with <code>1/editor-checks</code> tag and assign a main editor. Please strive to finish the checks and start looking for reviewers within 5 working days.</li>
+<li>Use the <a href="editortemplate.html#editortemplate">editor template</a> to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the <a href="https://ropensci-org.github.io/pkgreviewr/articles/editors.html"><code>pkgreviewr</code> package created by associate editor Anna Krystalli</a>
+</li>
+<li>Check that template has been properly filled out.</li>
+<li>Check against policies for <a href="policies.html#aims-and-scope">fit</a> and <a href="policies.html#overlap">overlap</a>.
+Initiate discussion via Slack #software-review channel if needed for edge cases that haven’t been caught by previous checks by the EiC.
+If reject, see <a href="editorguide.html#outofscoperesponse">this section</a> about how to respond.</li>
+<li>Check that mandatory parts of template are complete. If not, direct authors toward appropriate instructions.</li>
+<li>Run automated tests: <code>spelling::spell_check_package()</code>, <code>goodpractice::gp()</code> (most exceptions will need to be justified by the author in the particular context of their package.), <code>devtools::spell_check()</code>. Run <code>covr::package_coverage()</code> using <code>NOT_CRAN</code> if needed, as well. Check that documentation is generated using <code>roxygen2</code>, not by hand (this isn’t part of automatic tests <a href="https://github.com/MangoTheCat/goodpractice/issues/116">yet</a>). Report relevant outputs in the issue thread.</li>
+<li>For packages needing continuous integration on multiple platforms (cf <a href="ci.html#whichci">criteria in this section of the CI chapter</a>) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).</li>
+<li>Wherever possible when asking for changes, direct authors to automatic tools such as <a href="https://usethis.r-lib.org/"><code>usethis</code></a> and <a href="https://styler.r-lib.org/"><code>styler</code></a>, and to online resources (sections of this guide, sections of the <a href="https://r-pkgs.org/">R packages book</a>) to make your feedback easier to use. <a href="https://github.com/ropensci/software-review/issues/207#issuecomment-379909739">Example of editor’s checks</a>.</li>
+<li>Ideally, the remarks you make should be tackled before reviewers start reviewing.</li>
+<li>If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, <a href="policies.html#policiesreviewprocess">apply the holding label</a>.</li>
+<li>If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the <a href="https://discuss.ropensci.org/">rOpenSci forum</a> to discuss it with other editors (<a href="https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368">example of policy discussion</a>).</li>
+</ul>
+</div>
+<div id="look-for-and-assign-reviewers" class="section level3">
+<h3>
+<span class="header-section-number">8.1.2</span> Look for and assign reviewers:<a class="anchor" aria-label="anchor" href="#look-for-and-assign-reviewers"><i class="fas fa-link"></i></a>
+</h3>
+<div id="tasks" class="section level4">
+<h4>
+<span class="header-section-number">8.1.2.1</span> Tasks<a class="anchor" aria-label="anchor" href="#tasks"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li>Switch numbered tag to <code>2/seeking-reviewers</code>.</li>
+<li>Ask author to add a rOpenSci review badge to their README, via <a href="https://docs.ropensci.org/rodev/reference/use_review_badge.html"><code>rodev::use_review_badge()</code></a>, <code>rodev::use_review_badge(&lt;issue_number&gt;)</code>. Badge URL is <code>https://badges.ropensci.org/&lt;issue_id&gt;_status.svg</code>. Full link should be:</li>
+</ul>
+<pre><code>[![](https://badges.ropensci.org/&lt;issue_id&gt;_status.svg)](https://github.com/ropensci/software-review/issues/&lt;issue_id&gt;)</code></pre>
+<ul>
+<li><p>Also ask the authors to add a NEWS file to their package if there’s none yet.</p></li>
+<li>
+<p>Use the <a href="reviewrequesttemplate.html#reviewrequesttemplate">email template</a> if needed for inviting reviewers</p>
+<ul>
+<li>When inviting reviewers, include something like “if I don’t hear from you in a week, I’ll assume you are unable to review,” so as to give a clear deadline when you’ll move on to looking for someone else.</li>
+</ul>
+</li>
+<li><p>Assign a due date 3 weeks after all reviewers have been found.</p></li>
+<li><p>Once two or more reviewers are found, assign reviewers by tagging in the issue with the following format:</p></li>
+</ul>
+<pre><code>Reviewer: @githubname1 
+Reviewer: @githubname2
+Due date: YYYY-MM-DD</code></pre>
+<ul>
+<li>Switch numbered tag <code>to 3/reviewers-assigned</code> once reviewers are assigned.</li>
+<li>Update Airtable database: Add one of the review record numbers associated with the package to the <code>Reviews</code> field of each reviewer’s record. Insert new <code>Reviewers</code> record if required.</li>
+</ul>
+</div>
+<div id="how-to-look-for-reviewers" class="section level4">
+<h4>
+<span class="header-section-number">8.1.2.2</span> How to look for reviewers<a class="anchor" aria-label="anchor" href="#how-to-look-for-reviewers"><i class="fas fa-link"></i></a>
+</h4>
+<div id="where-to-look-for-reviewers" class="section level5">
+<h5>
+<span class="header-section-number">8.1.2.2.1</span> Where to look for reviewers?<a class="anchor" aria-label="anchor" href="#where-to-look-for-reviewers"><i class="fas fa-link"></i></a>
+</h5>
+<p>As a (guest) editor, use</p>
+<ul>
+<li>the potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed. We suggest not using more than one of suggested reviewers)</li>
+<li>the Airtable database of reviewers and volunteers</li>
+<li>and the authors of <a href="https://ropensci.org/packages/">rOpenSci packages</a>.</li>
+</ul>
+<p>When these sources of information are not enough,</p>
+<ul>
+<li>ping other editors in Slack for ideas,</li>
+<li>look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter).</li>
+<li>You can also search for authors of related packages on <a href="https://r-pkg.org/">r-pkg.org</a>.</li>
+<li>R-Ladies has a <a href="https://rladies.org/directory/">directory</a> specifying skills and interests of people listed.</li>
+</ul>
+</div>
+</div>
+<div id="criteria-for-choosing-a-reviewer" class="section level4">
+<h4>
+<span class="header-section-number">8.1.2.3</span> Criteria for choosing a reviewer<a class="anchor" aria-label="anchor" href="#criteria-for-choosing-a-reviewer"><i class="fas fa-link"></i></a>
+</h4>
+<p>Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching CRAN and the potential reviewer’s GitHub page and general online presence (personal website, Twitter).</p>
+<ul>
+<li>Has not reviewed a package for us within the last 6 months.</li>
+<li>Some package development experience.</li>
+<li>Some domain experience in the field of the package or data source</li>
+<li>No <a href="policies.html#coi">conflicts of interest</a>.</li>
+<li>Try to balance your sense of the potential reviewer’s experience against the complexity of the package.</li>
+<li>Diversity - with two reviewers both shouldn’t be cis white males.</li>
+<li>Some evidence that they are interested in openness or R community activities, although blind emailing is fine.</li>
+</ul>
+<p>Each submission should be reviewed by <em>two</em> package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two. Both reviewers need to review the package comprehensively, though from their particular perspective. In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.</p>
+</div>
+</div>
+<div id="during-review" class="section level3">
+<h3>
+<span class="header-section-number">8.1.3</span> During review:<a class="anchor" aria-label="anchor" href="#during-review"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Check in with reviewers and authors occasionally. Offer clarification and help as needed.</li>
+<li>In general aim for 3 weeks for review, 2 weeks for
+subsequent changes, and 1 week for reviewer approval of changes.</li>
+<li>Upon all reviews being submitted, change the review status tag to
+<code>4/review-in-awaiting-changes</code>.</li>
+<li>Update Airtable database: Add the link to the review comment to the <code>review_url</code> field and the number of review hours to the <code>review_hours</code> field of each review record.</li>
+<li>If the author stops responding, refer to <a href="#package-submission">the policies</a> and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).</li>
+<li>Upon changes being made, change the review status tag to <code>5/awaiting-reviewer-response</code>, and request that reviewers indicate approval with the <span id="approval2template">reviewer approval template</span>.</li>
+</ul>
+</div>
+<div id="after-review" class="section level3">
+<h3>
+<span class="header-section-number">8.1.4</span> After review:<a class="anchor" aria-label="anchor" href="#after-review"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Change the status tag to <code>6/approved</code>.</li>
+<li>You can use the <a href="approvaltemplate.html#approvaltemplate">comment template</a>.</li>
+<li>Add review/er information to the review database.</li>
+<li>If authors intend to submit to CRAN, direct them to the <a href="building.html#crangotchas">section about CRAN gotchas</a> and offer to provide support through this process.</li>
+<li>Ask authors to migrate to <code>ropensci</code>
+<ul>
+<li>Create a two-person team in rOpenSci’s “ropensci” GitHub organization, named for the package, with yourself and the package author as members.</li>
+<li>Have the author transfer the repository to <code>ropensci</code>
+</li>
+<li>Go to the repository settings in rOpenSci’s “ropensci” GitHub organization and give the author “Admin” access to the repository.</li>
+</ul>
+</li>
+<li><em>If the original repository owner opposes transfer, add a line with its address to <a href="https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt">this repos list</a> to ensure the package gets included in rOpenSci package registry.</em></li>
+<li>Ask author to:
+<ul>
+<li>Add a CodeMeta file by running <code>codemetar::write_codemeta()</code> (<a href="https://github.com/ropensci/codemetar"><code>codemetar</code> GitHub repo</a>)</li>
+<li>Change any needed links, such those for CI badges</li>
+<li>Re-activate CI services
+<ul>
+<li>For AppVeyor, tell the author to update the GitHub link in their badge, but do not transfer the project: AppVeyor projects should remain under the authors’ account. The badge is <code>[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&amp;svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)</code>.</li>
+<li>For Codecov, the webhook may need to be reset by the author.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag <code>@ropensci/blog-editors</code> for follow-up.</li>
+<li>If authors maintain a gitbook that is at least partly about their
+package, contact <a href="https://ropensci.org/about/#team">an rOpenSci staff member</a> so they might contact the authors
+about transfer to <a href="https://github.com/orgs/ropensci-books">the <code>ropensci-books</code> GitHub organisation</a>.</li>
+<li>Add a “peer-reviewed” topic to the repo.</li>
+<li>Close the software-review issue.</li>
+</ul>
+</div>
+<div id="package-promotion" class="section level3">
+<h3>
+<span class="header-section-number">8.1.5</span> Package promotion:<a class="anchor" aria-label="anchor" href="#package-promotion"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Alert maintainers of appropriate <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=user%3Aropensci+%22task+view%22&amp;type=Repositories&amp;ref=searchresults">task views</a>
+</li>
+<li>Direct the author to the chapters of the guide about <a href="#releases">package releases</a>, <a href="marketing.html#marketing">marketing</a> and <a href="grooming.html#grooming">GitHub grooming</a>.</li>
+</ul>
+</div>
+</div>
+<div id="eicchecklist" class="section level2">
+<h2>
+<span class="header-section-number">8.2</span> EiC Responsibilities<a class="anchor" aria-label="anchor" href="#eicchecklist"><i class="fas fa-link"></i></a>
+</h2>
+<p>The EiC serves for 3 months or a time agreed to by all members of the editorial board.
+The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
+In details, the EiC plays the following roles</p>
+<ul>
+<li>Watches all issues posted to the software-review repo.</li>
+<li>Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.</li>
+<li>Monitors pace of review process and reminds other editors to move packages along as needed.</li>
+<li>Responds to issues posted to the software-review-meta repo</li>
+<li>Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven’t received enough answers, they can ping all editors.</li>
+<li>Any editor should feel free to step in on these. See <a href="editorguide.html#outofscoperesponse">this section</a> about how to respond to out-of-scope (pre-) submissions.</li>
+</ul>
+<div id="asking-for-more-details" class="section level3">
+<h3>
+<span class="header-section-number">8.2.1</span> Asking for more details<a class="anchor" aria-label="anchor" href="#asking-for-more-details"><i class="fas fa-link"></i></a>
+</h3>
+<p>In some cases online documentation is sparse. Minimal README, no pkgdown website make assessment harder.
+In that case please ask for more details: even if the package is deemed out-of-scope, the package docs will have gotten better so we are fine asking for these efforts.</p>
+<p>Example text</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb10-1"><a href="editorguide.html#cb10-1"></a>Hello &lt;username&gt; and many thanks for your submission.</span>
+<span id="cb10-2"><a href="editorguide.html#cb10-2"></a></span>
+<span id="cb10-3"><a href="editorguide.html#cb10-3"></a>We are discussing whether the package is in scope and need a bit more information.</span>
+<span id="cb10-4"><a href="editorguide.html#cb10-4"></a></span>
+<span id="cb10-5"><a href="editorguide.html#cb10-5"></a>Would you mind adding more details and context to the README?</span>
+<span id="cb10-6"><a href="editorguide.html#cb10-6"></a>After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.</span>
+<span id="cb10-7"><a href="editorguide.html#cb10-7"></a></span>
+<span id="cb10-8"><a href="editorguide.html#cb10-8"></a>&lt;optional&gt;</span>
+<span id="cb10-9"><a href="editorguide.html#cb10-9"></a>If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation <span class="ot">[how it is best in class](https://devguide.ropensci.org/policies.html#overlap)</span>. Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?</span>
+<span id="cb10-10"><a href="editorguide.html#cb10-10"></a>&lt;/optional&gt;</span></code></pre></div>
+</div>
+<div id="inviting-a-guest-editor" class="section level3">
+<h3>
+<span class="header-section-number">8.2.2</span> Inviting a guest editor<a class="anchor" aria-label="anchor" href="#inviting-a-guest-editor"><i class="fas fa-link"></i></a>
+</h3>
+<p>After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if all editors have a conflict of interest).</p>
+<p>When inviting a guest editor,</p>
+<ul>
+<li>Ask about conflicts of interest using the <a href="policies.html#coi">same phrasing as for reviewers</a>,</li>
+<li>Give a link to the <a href="editorguide.html#editorchecklist">guide for editors</a>.</li>
+</ul>
+<p>If the person said yes (yay!),</p>
+<ul>
+<li>Make sure they <a href="https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/">enabled 2FA for their GitHub account</a>,</li>
+<li>Give them write access to the software-review repository,</li>
+<li>Once they’ve accepted this repo invitation, assign the issue to them,</li>
+<li>Ensure they’re (already) invited to rOpenSci Slack workspace,</li>
+<li>Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).</li>
+</ul>
+<p>After the review process is finished (package approved, issue closed),</p>
+<ul>
+<li>Thank the guest editor again,</li>
+<li>Remove their write access from the software-review repository.</li>
+</ul>
+</div>
+</div>
+<div id="outofscoperesponse" class="section level2">
+<h2>
+<span class="header-section-number">8.3</span> Responding to out-of-scope submissions<a class="anchor" aria-label="anchor" href="#outofscoperesponse"><i class="fas fa-link"></i></a>
+</h2>
+<p>Thank authors for their submission, explain the reasons for the decision, and direct them to other publication venues if relevant, and to the rOpenSci discussion forum. Use wording from <a href="policies.html#aims-and-scope">Aims and scope</a> in particular regarding the evolution of scope over time, and the overlap and differences between unconf/staff/software-review development.</p>
+<p><a href="https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope">Examples of out-of-scope submissions and responses</a>.</p>
+</div>
+<div id="bookrelease" class="section level2">
+<h2>
+<span class="header-section-number">8.4</span> Managing a dev guide release<a class="anchor" aria-label="anchor" href="#bookrelease"><i class="fas fa-link"></i></a>
+</h2>
+<p>If you are in charge of managing a release of the very book you are reading, use <a href="bookreleaseissue.html#bookreleaseissue">the book release guidance</a> as an issue template to be posted <a href="https://github.com/ropensci/dev_guide/issues">in the dev guide issue tracker</a>, and do not hesitate to ask questions to other editors.</p>
+<div id="devguidegov" class="section level3">
+<h3>
+<span class="header-section-number">8.4.1</span> Dev guide governance<a class="anchor" aria-label="anchor" href="#devguidegov"><i class="fas fa-link"></i></a>
+</h3>
+<p>For very small amendments to the dev guide, no PR review is needed. For larger amendments, request review from at least a few editors (if none participated in the discussion related to the amendment, request a review from all of them on GitHub, and in the absence of any reaction merge after a week).</p>
+<p>Two weeks before a dev guide release, once the PR from dev to master <strong>and the release blog post</strong> are ready for review, all editors should be pinged by GitHub (“review request” on the PR from dev to master) and Slack, but the release doesn’t need all of them to explicitly approve the release.</p>
+</div>
+<div id="releaseblogpost" class="section level3">
+<h3>
+<span class="header-section-number">8.4.2</span> Blog post about a release<a class="anchor" aria-label="anchor" href="#releaseblogpost"><i class="fas fa-link"></i></a>
+</h3>
+<p>The blog post about a release will be reviewed <a href="editorguide.html#devguidegov">by editors</a>, and one of <code>@ropensci/blog-editors</code>.</p>
+<div id="content" class="section level4">
+<h4>
+<span class="header-section-number">8.4.2.1</span> Content<a class="anchor" aria-label="anchor" href="#content"><i class="fas fa-link"></i></a>
+</h4>
+<p>Refer to the <a href="https://blogguide.ropensci.org/">general rOpenSci blogging guidance</a>, and the more specific guidance below.</p>
+<p><a href="https://ropensci.org/blog/2019/05/16/dev-guide-update/">First example of such a post</a>; <a href="https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/">second example</a>.</p>
+<p>The blog post should mention all important items from the <a href="booknews.html#booknews">changelog</a> organized in (sub)sections: e.g. a section about big change A, another one about big change B, and one about smaller changes lumped together. Mention the most important changes first.</p>
+<p>For each change made by an external contributor, thank them explicitly using the information from the changelog. E.g. <code>[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).</code>.</p>
+<p>At the end of the post, mention upcoming changes by linking to open issues in the issue tracker, and invite readers to contribute to the dev guide by opening issues and participating in open discussions. Conclusion template:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb11-1"><a href="editorguide.html#cb11-1"></a>In this post we summarized the changes incorporated into our book <span class="ot">["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/)</span> over the last X months. </span>
+<span id="cb11-2"><a href="editorguide.html#cb11-2"></a>We are grateful for all contributions that made this release possible. </span>
+<span id="cb11-3"><a href="editorguide.html#cb11-3"></a>We are already working on updates for our next version, such as ISSUE1, ISSUE2. </span>
+<span id="cb11-4"><a href="editorguide.html#cb11-4"></a>Check out the <span class="ot">[the issue tracker](https://github.com/ropensci/dev_guide/issues/)</span> if you'd like to contribute.</span></code></pre></div>
+</div>
+<div id="authorship-1" class="section level4">
+<h4>
+<span class="header-section-number">8.4.2.2</span> Authorship<a class="anchor" aria-label="anchor" href="#authorship-1"><i class="fas fa-link"></i></a>
+</h4>
+<p>The editor writing the post is first author, other editors are listed by alphabetical order.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="reviewerguide.html"><span class="header-section-number">7</span> Guide for Reviewers</a></div>
+<div class="next"><a href="collaboration.html"><span class="header-section-number">9</span> Collaboration Guide</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#editorguide"><span class="header-section-number">8</span> Guide for Editors</a></li>
+<li>
+<a class="nav-link" href="#editorchecklist"><span class="header-section-number">8.1</span> Handling Editor’s Checklist</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#upon-submission"><span class="header-section-number">8.1.1</span> Upon submission:</a></li>
+<li><a class="nav-link" href="#look-for-and-assign-reviewers"><span class="header-section-number">8.1.2</span> Look for and assign reviewers:</a></li>
+<li><a class="nav-link" href="#during-review"><span class="header-section-number">8.1.3</span> During review:</a></li>
+<li><a class="nav-link" href="#after-review"><span class="header-section-number">8.1.4</span> After review:</a></li>
+<li><a class="nav-link" href="#package-promotion"><span class="header-section-number">8.1.5</span> Package promotion:</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#eicchecklist"><span class="header-section-number">8.2</span> EiC Responsibilities</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#asking-for-more-details"><span class="header-section-number">8.2.1</span> Asking for more details</a></li>
+<li><a class="nav-link" href="#inviting-a-guest-editor"><span class="header-section-number">8.2.2</span> Inviting a guest editor</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#outofscoperesponse"><span class="header-section-number">8.3</span> Responding to out-of-scope submissions</a></li>
+<li>
+<a class="nav-link" href="#bookrelease"><span class="header-section-number">8.4</span> Managing a dev guide release</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#devguidegov"><span class="header-section-number">8.4.1</span> Dev guide governance</a></li>
+<li><a class="nav-link" href="#releaseblogpost"><span class="header-section-number">8.4.2</span> Blog post about a release</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/ropensci/dev_guide/blob/master/softwarereview_editor.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/ropensci/dev_guide/edit/master/softwarereview_editor.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>rOpenSci Packages: Development, Maintenance, and Peer Review</strong>" was written by rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni. It was last built on 2021-07-13.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>
