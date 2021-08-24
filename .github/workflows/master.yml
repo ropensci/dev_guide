@@ -9,6 +9,8 @@ name: Render-Book-from-master
 
 jobs:
   bookdown:
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     name: Render-Book
     runs-on: macOS-latest
     steps:
