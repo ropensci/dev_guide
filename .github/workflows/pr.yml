@@ -4,6 +4,8 @@ name: PR-workflow
 
 jobs:
   bookdown:
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     name: Render Book
     runs-on: macOS-latest
     if: github.repository == 'ropensci/dev_guide'
