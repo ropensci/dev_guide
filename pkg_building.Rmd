@@ -397,6 +397,15 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 * For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
+
+## Version Control
+
+* Your package source files have to be under version control, more specifically tracked with [Git](https://happygitwithr.com/). You might find the [gert package](https://docs.ropensci.org/gert/) relevant, as well as some of [usethis Git/GitHub related functionality](https://usethis.r-lib.org/reference/index.html#section-git-and-github); you can however use git as you want.
+
+* Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
+
+* A later section of this book contains some [git workflow tips](#gitflow).
+
 ##  Miscellaneous CRAN gotchas {#crangotchas}
 
 This is a collection of CRAN gotchas that are worth avoiding at the outset.

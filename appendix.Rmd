@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2021-09-03, add some recommendations around git. (@annakrystalli, #341)
+
 * 2021-07-14, clarify the categories data extraction and munging by adding examples. (@noamross, #337)
 
 * 2021-05-20, add guidance around setting up your package to foster a community, inspired by the recent rOpenSci community call. (with help from `@Bisaloo`, #289, #308)

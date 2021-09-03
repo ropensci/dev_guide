@@ -92,11 +92,11 @@ A possible model for onboarding collaborators is provided by Jim Hester in [his 
 
 If your problem is _recruiting_ collaborators, you can post an open call like Jim Hester's [on Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318), and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.
 
-### Working with collaborators (including yourself)
+### Working with collaborators (including yourself) {#gitflow}
 
 You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow). In a nutshell,
 
-* Keep master shippable as much as possible
+* Keep the default branch (main or master) as shippable as much as possible
 
 * [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
