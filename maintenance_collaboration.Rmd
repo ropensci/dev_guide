@@ -70,13 +70,13 @@ It can help advertise what your priorities are.
 
 #### Milestones
 
-You can [create milestones](milest) and assign issues to them, which help see what you plan for the next version of your package for instance.
+You can [create milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) and assign issues to them, which help see what you plan for the next version of your package for instance.
 
 ## Working with collaborators {#workingcollaborators}
 
 First thing first: keep in touch with your GitHub repository!
 
-* do not forget to [**watch your GitHub repository**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) to be notified of issues or pull requests.
+* do not forget to [**watch your GitHub repository**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) to be notified of issues or pull requests (alternatively, if you work in bursts, maybe add the information to the contributing guide).
 
 * do not forget to push updates you have locally.
 
