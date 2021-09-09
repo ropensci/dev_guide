@@ -199,6 +199,8 @@ can be found at *link*".
 
 * More information on using roxygen2 [documentation](https://r-pkgs.org/man.html) is available in the R packages book.
 
+* If you were writing Rd by hand, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation. 
+
 * One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
 
 * All functions should document the type of object returned under the `@return` heading.
