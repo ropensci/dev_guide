@@ -3,7 +3,7 @@
 ```{block, type='summaryblock'}
 Your package should have different versions over time: snapshots of a state of the package that you can release to CRAN for instance. These versions should be properly _numbered_, _released_ and _described in a NEWS file_. More details below.
 
-Note that you could streamline the process of updating NEWS and versioning your package by using [the `fledge` package](https://github.com/krlmlr/fledge).
+Note that you could streamline the process of updating NEWS and versioning your package by using [the `fledge` package](https://github.com/cynkra/fledge).
 ```
 
 ## Versioning
