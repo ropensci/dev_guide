@@ -104,7 +104,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
     
 ### After review:
 
--  `@ropensci-review-bot approve`
+-  `@ropensci-review-bot approve <package-name>`
 -   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
 -   Ask authors to migrate to `ropensci`
