@@ -66,7 +66,7 @@ Best,
 
 * Post a welcome message in the channel, pinging all editors.
 
-* in the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
+* In the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
 
 * We add editors' names to 
     * [dev_guide authors list](https://github.com/ropensci/dev_guide/blob/master/index.Rmd)
@@ -75,4 +75,23 @@ Best,
 Both the dev_guide and software-review README are automatically knit via continuous integration.
 
 * Add editors to https://github.com/orgs/ropensci/teams/editors/members
+
+## Offboarding an editor
+
+* Thank them for their work!
+
+* Remove them from the editors-only channel and the editors Slack team.
+
+* Remove them from https://github.com/orgs/ropensci/teams/editors/members
+
+* Remove them from the ropensci/software-review repository.
+
+* Inform rOpenSci community manager or some other staff emember so that they're moved to alumni team members on the website.
+
+* Remove their access to the Airtable workspace.
+
+* Remove them from
+    * [dev_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/master/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
+    * [software-review README](https://github.com/ropensci/software-review/blob/master/README.Rmd) (in two places in this file as well)
+Both the dev_guide and software-review README are automatically knit via continuous integration.
 
