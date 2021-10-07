@@ -165,7 +165,7 @@ If a package has overlapping functionality with other packages, we require it to
 
 ```
  
-### Inviting a guest editor
+### Inviting a guest editor {#guesteditor}
 
 After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if submission volume is large, if all editors have a conflict of interest, if specific expertise is needed, or as a trial prior to inviting a person to join the editorial board).
 
