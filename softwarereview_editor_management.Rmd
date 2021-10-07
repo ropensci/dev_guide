@@ -86,7 +86,7 @@ Both the dev_guide and software-review README are automatically knit via continu
 
 * Remove them from the ropensci/software-review repository.
 
-* Inform rOpenSci community manager or some other staff emember so that they're moved to alumni team members on the website.
+* Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
 
 * Remove their access to the Airtable workspace.
 
