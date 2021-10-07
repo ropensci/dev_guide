@@ -6,6 +6,10 @@ jobs:
   bookdown:
     name: Render Book
     runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
     if: github.repository == 'ropensci/dev_guide'
     steps:
       - name: Is this a fork
