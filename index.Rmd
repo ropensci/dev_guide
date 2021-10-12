@@ -30,12 +30,13 @@ knitr::include_graphics("images/cover.png")
 
 ```{r zenodo, echo=FALSE, results = 'asis', warning=FALSE}
 cat("\n```bibtex\n")
-zenodo <- zen4R::ZenodoManager$new(
-  token = Sys.getenv("ZENODO_TOKEN")
-)
-guide <- zenodo$getDepositionByConceptDOI("10.5281/zenodo.2553043")
-guide$exportAsBibTeX("dev_citation")
-cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+writeLines(strsplit(bibentry, "\n")[[1]], "dev_citation_BibTeX.bib")
+cat(bibentry)
 cat("\n```\n")
 ```
 
