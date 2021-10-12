@@ -29,4 +29,10 @@
 
 - [ ] Squash and merge the PR from dev to master.
 
+- [ ] GitHub release, check Zenodo release.
+
+- [ ] Re-build (for Zenodo metadata update in the book) or wait for daily build
+
+- [ ] Re-create the dev branch
+
 - [ ] Finish your blog post / tech note PR. Underline the most important aspects to be highlighted in tweets as part of the PR discussion.

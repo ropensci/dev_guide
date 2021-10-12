@@ -1,4 +1,4 @@
-# Guide for Authors
+# Guide for Authors {#authors-guide}
 
 ```{block, type='summaryblock'}
 This concise guide presents the software peer review process for you as a package author.
@@ -17,7 +17,7 @@ This concise guide presents the software peer review process for you as a packag
     - Your package will continue to evolve after review, this book [provides guidance about the topic](#evolution).
 - In your initial (pre-)submission and README, strive to explain your package's functionality and aim assuming little to no domain knowledge from the reader. E.g. if you wrote something to interact with knitr engines, what's a knitr engine?
 -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result on conflicting requests for changes.
--   Next, [open a new issue](https://github.com/ropensci/software-review/issues/new) in
+-   Next, [open a new issue](https://github.com/ropensci/software-review/issues/new/choose) in
 the software review repository and fill out the template.
 -   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*

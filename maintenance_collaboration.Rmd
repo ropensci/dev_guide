@@ -4,8 +4,11 @@
 
 ```{block, type='summaryblock'}
 Having contributors will improve your package, and if you onboard some of them as package authors with [write permissions to the repo](https://help.github.com/articles/repository-permission-levels-for-an-organization/), your package will be more sustainably developed.
+It can also be very enjoyable to work as a team!
 
 This chapter contains our guidance for collaboration, in a [section about making your repo contribution- and collaboration-friendly](#friendlyfiles) by infrastructure (code of conduct, contribution guidelines, issue labels); and [ a section about how to collaborate with new contributors](#workingcollaborators), in particular in the context of the rOpenSci's "ropensci" GitHub organization.
+
+Besides these mostly technical tips, it is important to remember to be kind, and to take others' perspective into account especially when their priorities differ from yours.
 ```
 
 ## Make your repo contribution and collaboration friendly {#friendlyfiles}
@@ -28,17 +31,56 @@ And delete the package current code of conduct if there was one.
 
 We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles/). There is also [a helper function to insert them into your repository](https://docs.ropensci.org/rodev/reference/use_ro_github.html).
 
-You can tweak them a bit depending on your workflow and package. For example, make sure contributors have instructions in CONTRIBUTING.md for running local tests if not trivial. CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
+You can tweak them a bit depending on your workflow and package. 
+
+Example of useful content:
+
+* Style preferences? You might however prefer to make style a configuration (of [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
+
+* Infrastructure like roxygen2?
+
+* Process preferences? Issue before a PR?
+
+* Scope? E.g. in skimr.
+
+* Sandbox account creation? Mocking in tests? Use links to external docs.
+
+Example: [contributing guide template by Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c).
+
+Adding a personal touch to your contributing guide might make it look less generic and therefore more sincere.
+
+CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
 
 We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
-You can use the `lintr` package's own bot, lintr-bot, via continuous integration, to get comments if a commit or PR deteriorates the code style of your package. See [this link for guidance](https://github.com/jimhester/lintr#continuous-integration).
+Once a pull request is closer to being merged, you could use [a GitHub Actions PR workflow to style the code with styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
 
-### Issue labelling
+### Issue management
+
+By using GitHub features around issues you can help potential contributors find them, and make your roadmap public.
+
+#### Issue labelling
 
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
 
+#### Pinning issues
+
+You can [pin up to 3 issues by repository](https://docs.github.com/en/articles/pinning-an-issue-to-your-repository) that will then appear at the top of your issue tracker as nice issue cards.
+It can help advertise what your priorities are.
+
+#### Milestones
+
+You can [create milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) and assign issues to them, which help see what you plan for the next version of your package for instance.
+
 ## Working with collaborators {#workingcollaborators}
+
+First thing first: keep in touch with your GitHub repository!
+
+* do not forget to [**watch your GitHub repository**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) to be notified of issues or pull requests (alternatively, if you work in bursts, maybe add the information to the contributing guide).
+
+* do not forget to push updates you have locally.
+
+* disable failing tests if you cannot fix them as they create noise in PRs that can puzzle new contributors.
 
 ### Onboarding collaborators
 
@@ -50,11 +92,11 @@ A possible model for onboarding collaborators is provided by Jim Hester in [his 
 
 If your problem is _recruiting_ collaborators, you can post an open call like Jim Hester's [on Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318), and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.
 
-### Working with collaborators (including yourself)
+### Working with collaborators (including yourself) {#gitflow}
 
 You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow). In a nutshell,
 
-* Keep master shippable as much as possible
+* Keep the default branch (main or master) as shippable as much as possible
 
 * [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
@@ -85,3 +127,8 @@ If you give someone write permissions to the repository,
 * please contact one of [the editors](#associateditors) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
 * please contact rOpenSci community manager [Stefanie Butland](https://github.com/stefaniebutland) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
+
+## Further resources
+
+* rOpenSci community call [Set Up Your Package to Foster a Community](https://ropensci.org/commcalls/apr2021-pkg-community/).
+* For re-using kind and usual answers, consider GitHub's [saved replies](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/using-saved-replies).
