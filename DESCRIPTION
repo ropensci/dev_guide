@@ -12,7 +12,7 @@ Imports:
     bslib,
     downlit,
     xml2,
-    zen4R,
+    rvest,
     usethis,
     rlang (>= 0.4.11.9000)
 Remotes:  
