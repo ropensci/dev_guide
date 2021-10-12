@@ -71,15 +71,16 @@ We are grateful to the following individuals who have offered up their time and 
 
 ```{r has_airtable, echo=FALSE}
 has_airtable_access <- FALSE
-if (Sys.getenv("AIRTABLE_API_KEY") == ""){
+if (Sys.getenv("AIRTABLE_API_KEY") != ""){
+  has_airtable_access <- TRUE
+} else {
+  # if key is in params then set as envvar:
   if ("params" %in% ls()) {
     if ("AIRTABLE_API_KEY" %in% names(params)){
       Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
       has_airtable_access <- TRUE
     }
   }
-} else {
-  has_airtable_access <- TRUE
 }
 ```
 ```{r reviewers, echo=FALSE, results='asis', eval=has_airtable_access}
