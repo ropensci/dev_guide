@@ -6,7 +6,7 @@ Guidance for managing the editorial team.
 
 ## Recruiting new editors
 
-Recruiting new editors is a responsability of the [Software Review Lead](https://ropensci.org/about/#team) when asked to and advised by the editorial board.
+Recruiting new editors and maintaining a sufficient and well-balanced editorial board is a responsibility of the [Software Review Lead](https://ropensci.org/about/#team), with support and advice from the editorial board.
 
 Steps:
 
@@ -56,7 +56,9 @@ Best,
     * editors are added to the [rOpenSci website](https://github.com/ropensci/roweb3/#team-member).
     * an introduction blog post can be put together.
 
-* Invite editors to the ropensci organization as member. This is for making them able to display this in their profile, and to be able to see whether they have turned on 2FA.
+* If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
+
+* Invite editors to the ropensci GitHub organization as member, as a member of the `editors` team and the `data-pkg-editors` or `stats-board` sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications. 
 
 * Editors need to be added to the software-review repository to e.g. be able to apply the holding label. We grant this once editors have turned on 2FA.
 
