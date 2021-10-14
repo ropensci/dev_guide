@@ -139,6 +139,7 @@ In details, the EiC plays the following roles
   ```
 
 - Monitors pace of review process and reminds other editors to move packages along as needed.
+- On assuming EiC rotation, reviews status of current open reviews and reminds editors to respond or update status as needed.
 - Responds to issues posted to the software-review-meta repo
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
@@ -165,7 +166,7 @@ If a package has overlapping functionality with other packages, we require it to
 
 ```
  
-### Inviting a guest editor
+### Inviting a guest editor {#guesteditor}
 
 After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if submission volume is large, if all editors have a conflict of interest, if specific expertise is needed, or as a trial prior to inviting a person to join the editorial board).
 
