@@ -58,11 +58,9 @@ Best,
 
 * If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-* Invite editors to the ropensci GitHub organization as member, as a member of the `editors` team and the `data-pkg-editors` or `stats-board` sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications. 
+* Invite editors to the rOpensSi GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications. 
 
-* Editors need to be added to the software-review repository to e.g. be able to apply the holding label. We grant this once editors have turned on 2FA.
-
-* Editors need access to the Airtable database of software review.
+* Editors need access to the AirTable database of software review.
 
 * Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
 
@@ -84,9 +82,7 @@ Both the dev_guide and software-review README are automatically knit via continu
 
 * Remove them from the editors-only channel and the editors Slack team.
 
-* Remove them from https://github.com/orgs/ropensci/teams/editors/members
-
-* Remove them from the ropensci/software-review repository.
+* Remove them from https://github.com/orgs/ropensci/teams/editors/members and sub-team.
 
 * Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
 
