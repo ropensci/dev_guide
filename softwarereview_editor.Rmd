@@ -126,11 +126,11 @@ about transfer to [the `ropensci-books` GitHub organisation](https://github.com/
 
 ## EiC Responsibilities {#eicchecklist}
 
-The EiC serves for 3 months or a time agreed to by all members of the editorial board. 
+The EiC serves for 3 months or a time agreed to by all members of the editorial board.
 The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
 In details, the EiC plays the following roles
 
-- Watches all issues posted to the software-review repo.
+- Watches all issues posted to the software-review repo (either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack).
 - Tags issue with ` 0/editorial-team-prep`
 - Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
   
@@ -142,8 +142,9 @@ In details, the EiC plays the following roles
 - On assuming EiC rotation, reviews status of current open reviews and reminds editors to respond or update status as needed.
 - Responds to issues posted to the software-review-meta repo
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
- - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
- - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+    - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+    - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+- Requests a new EiC when their rotation is up (set a calendar reminder ahead of your expected end date and ask for volunteers in the editors' Slack channel)
  
 ### Asking for more details
 
