@@ -9,6 +9,14 @@ This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklis
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
 
+## Editors' responsabilities
+
+* In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly. 
+
+* You do not have to keep track of other submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on slack.
+
+* We also rotate [Editor-in-Chief responsibilities](#eicchecklist) (first-pass scope decisions and assigning editors) amongst the board about quarterly. 
+
 ## Handling Editor's Checklist {#editorchecklist}
 
 ### Upon submission:
