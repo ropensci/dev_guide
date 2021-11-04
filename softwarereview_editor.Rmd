@@ -96,16 +96,15 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 -   Check in with reviewers and authors occasionally. Offer clarification and help as needed.
 -   In general aim for 3 weeks for review, 2 weeks for
     subsequent changes, and 1 week for reviewer approval of changes.
--   Upon all reviews being submitted, change the review status tag to
-    `4/review-in-awaiting-changes`.
--   Update Airtable database: Add the link to the review comment to the `review_url` field and the number of review hours to the `review_hours` field of each review record. 
+-   Upon each review being submitted, 
+    - Write a comment thanking the reviewer with your words;
+    - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`. E.g. for the review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
 - If the author stops responding, refer to [the policies](#package-submission) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
 -   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template]{#approval2template}.
     
 ### After review:
 
 -  `@ropensci-review-bot approve <package-name>`
--   Add review/er information to the review database.
 -   If authors intend to submit to CRAN, direct them to the [section about CRAN gotchas](#crangotchas) and offer to provide support through this process.
 - *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt) to ensure the package gets included in rOpenSci package registry.*
 -   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.

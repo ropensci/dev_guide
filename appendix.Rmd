@@ -4,6 +4,8 @@
 
 ## dev
 
+* 2021-11-04, add more bot guidance (less work for editors).
+
 * 2021-10-07, add guidance for editorial management (recruiting, inviting, onboarding, offboarding editors).
 
 * 2021-09-14, add a requirement that there is at least one _HTML_ vignette.
