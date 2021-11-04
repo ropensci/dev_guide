@@ -14,7 +14,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 ### Upon submission:
 
 -   If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
--   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropensci-org.github.io/pkgreviewr/articles/editors.html)  Please strive to finish the checks and start looking for reviewers within 5 working days.
+-   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropensci-org.github.io/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
 -   Check that template has been properly filled out.
 -   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
     Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
