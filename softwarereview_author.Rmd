@@ -6,7 +6,7 @@ This concise guide presents the software peer review process for you as a packag
 
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and is not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
--   Read and follow [our packaging style guide](#building) and [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
+-   Use [pkgcheck](https://docs.ropensci.org/pkgcheck/), read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
     -   If you feel your package is in scope for the
         [Journal of Open-Source Software](https://joss.theoj.org/) (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
