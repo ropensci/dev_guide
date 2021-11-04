@@ -14,13 +14,13 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 ### Upon submission:
 
 -   If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
--   Use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropensci-org.github.io/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
+-   Post a comment `@ropensci-review-bot check package` (most exceptions will need to be justified by the author in the particular context of their package.).
+-   After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://ropensci-org.github.io/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
 -   Check that template has been properly filled out.
 -   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
     Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
     If reject, see [this section](#outofscoperesponse) about how to respond.
 -   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
--   Post a comment `@ropensci-review-bot check package` (most exceptions will need to be justified by the author in the particular context of their package.).
 -   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 -   Ideally, the remarks you make should be tackled before reviewers start reviewing.
