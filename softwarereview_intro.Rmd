@@ -89,7 +89,8 @@ if (Sys.getenv("AIRTABLE_API_KEY") != ""){
 editors <- c(
   "Noam Ross", "Karthik Ram", "Maëlle Salmon",
   "Melina Vidoni", "Anna Krystalli", "Mauro Lepore", 
-  "Laura DeCicco", "Julia Gustavsen"
+  "Laura DeCicco", "Julia Gustavsen",
+  "Emily Riederer", "Adam Sparks", "Jeff Hollister"
   )
 reviewers <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
                                 table = "reviewers-prod")
