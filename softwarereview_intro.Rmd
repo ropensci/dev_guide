@@ -5,6 +5,8 @@
 ```{block, type='summaryblock'}
 This chapter contains a [general intro](#whatissoftwarereview) to our software peer review system for packages, [reasons to submit a package](#whysubmit), [reasons to volunteer as a reviewer](#whyreview), [why our reviews are open](#whyopen), and acknowledgements of [actors of the system](#editors-and-reviewers).
 
+Our system has recently been expanded to [statistical software peer-review](https://ropensci.org/stat-software-review/).
+
 _If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in [our public forum](https://discuss.ropensci.org/c/usecases), or [privately by email](https://ropensci.org/contact/)._ 
 ```
 
@@ -87,7 +89,8 @@ if (Sys.getenv("AIRTABLE_API_KEY") != ""){
 editors <- c(
   "Noam Ross", "Karthik Ram", "Maëlle Salmon",
   "Melina Vidoni", "Anna Krystalli", "Mauro Lepore", 
-  "Laura DeCicco", "Julia Gustavsen"
+  "Laura DeCicco", "Julia Gustavsen",
+  "Emily Riederer", "Adam Sparks", "Jeff Hollister"
   )
 reviewers <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
                                 table = "reviewers-prod")

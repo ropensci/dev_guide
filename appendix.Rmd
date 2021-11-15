@@ -4,6 +4,16 @@
 
 ## dev
 
+* 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).
+
+* 2021-11-04, mention pkgcheck in the author guide (@mpadge, #343).
+
+* 2021-11-04, add editors' responsabilities including  Editor etiquette for commenting on packages on which you aren't handling/reviewing (@jhollist, #354). 
+
+* 2021-11-04, give precise examples of tools for installation instructions (remotes, pak, R-universe).
+
+* 2021-11-04, add more bot guidance (less work for editors).
+
 * 2021-10-07, add guidance for editorial management (recruiting, inviting, onboarding, offboarding editors).
 
 * 2021-09-14, add a requirement that there is at least one _HTML_ vignette.

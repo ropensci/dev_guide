@@ -29,9 +29,8 @@ And delete the package current code of conduct if there was one.
 
 ### Contributing guide
 
-We have templates for issue, pull request and contributing guidelines that you can find [in this GitHub repository](https://github.com/ropensci/dotgithubfiles/). There is also [a helper function to insert them into your repository](https://docs.ropensci.org/rodev/reference/use_ro_github.html).
-
-You can tweak them a bit depending on your workflow and package. 
+You can use issue, pull request and contributing guidelines.
+Having a contributing file as `.github/CONTRIBUTING.md` or `docs/CONTRIBUTING.md` is compulsory.
 
 Example of useful content:
 
