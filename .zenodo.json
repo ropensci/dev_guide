@@ -2,9 +2,9 @@
     "description": "Extended version of the rOpenSci packaging guide. This book is a guide for authors, maintainers, reviewers and editors of rOpenSci. The first section of the book contains our guidelines for creating and testing R packages. The second section is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. The third and last section features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a chapter for anyone wishing to start contributing to rOpenSci packages.",
     "license": {"id":"CC-BY-4.0"},
     "title": "rOpenSci Packages: Development, Maintenance, and Peer Review",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "upload_type": "software",
-    "publication_date": "2021-02-22",
+    "publication_date": "2021-11-16",
     "publication_type": "book",
     "creators": [
         {
