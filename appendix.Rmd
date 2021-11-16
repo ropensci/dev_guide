@@ -2,7 +2,7 @@
 
 # NEWS {#booknews}
 
-## dev
+## 0.7.0
 
 * 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).
 
