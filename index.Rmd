@@ -1,6 +1,6 @@
 --- 
 title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
-author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Melina Vidoni"
+author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -30,12 +30,13 @@ knitr::include_graphics("images/cover.png")
 
 ```{r zenodo, echo=FALSE, results = 'asis', warning=FALSE}
 cat("\n```bibtex\n")
-zenodo <- zen4R::ZenodoManager$new(
-  token = Sys.getenv("ZENODO_TOKEN")
-)
-guide <- zenodo$getDepositionByConceptDOI("10.5281/zenodo.2553043")
-guide$exportAsBibTeX("dev_citation")
-cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+writeLines(strsplit(bibentry, "\n")[[1]], "dev_citation_BibTeX.bib")
+cat(bibentry)
 cat("\n```\n")
 ```
 
@@ -47,7 +48,7 @@ Welcome! This book is a guide for authors, maintainers, reviewers and editors of
 
 The [first section of the book](#building) contains our guidelines for creating and testing R packages. 
 
-The [second section](#softwarereviewintro) is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process.
+The [second section](#softwarereviewintro) is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. For _statistical software review_, refer to the [project webpage and resources](https://ropensci.org/stat-software-review/).
 
 The [third and last section](#collaboration) features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a [chapter for anyone wishing to start contributing to rOpenSci packages](#contributingguide).
 

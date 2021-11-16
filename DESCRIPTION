@@ -4,18 +4,20 @@ Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
 Version: 0.0.1
 Imports:
-  airtabler,
-  htmltools,
-  bookdown,
-  purrr,
-  humaniformat,
-  bslib,
-  downlit,
-  xml2,
-  zen4R
-Remotes: 
-  bergant/airtabler,
-  rstudio/htmltools,
-  rstudio/bookdown,
-  rstudio/bslib,
-  r-lib/downlit
+    airtabler,
+    htmltools,
+    bookdown,
+    purrr,
+    humaniformat,
+    bslib,
+    downlit,
+    xml2,
+    rvest,
+    usethis,
+    rlang (>= 0.4.11.9000)
+Remotes:  
+    bergant/airtabler,
+    rstudio/htmltools,
+    rstudio/bookdown,
+    r-lib/downlit,
+    r-lib/rlang

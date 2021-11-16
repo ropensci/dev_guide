@@ -1,4 +1,4 @@
-# Guide for Authors
+# Guide for Authors {#authors-guide}
 
 ```{block, type='summaryblock'}
 This concise guide presents the software peer review process for you as a package author.
@@ -6,7 +6,7 @@ This concise guide presents the software peer review process for you as a packag
 
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and is not overlapping with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
--   Read and follow [our packaging style guide](#building) and [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
+-   Use [pkgcheck](https://docs.ropensci.org/pkgcheck/), read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
     -   If you feel your package is in scope for the
         [Journal of Open-Source Software](https://joss.theoj.org/) (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
@@ -17,7 +17,7 @@ This concise guide presents the software peer review process for you as a packag
     - Your package will continue to evolve after review, this book [provides guidance about the topic](#evolution).
 - In your initial (pre-)submission and README, strive to explain your package's functionality and aim assuming little to no domain knowledge from the reader. E.g. if you wrote something to interact with knitr engines, what's a knitr engine?
 -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result on conflicting requests for changes.
--   Next, [open a new issue](https://github.com/ropensci/software-review/issues/new) in
+-   Next, [open a new issue](https://github.com/ropensci/software-review/issues/new/choose) in
 the software review repository and fill out the template.
 -   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
