@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2021-11-18, update advice on grouping functions for pkgdown output (#361)
+
 * 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).
 
 * 2021-11-04, mention pkgcheck in the author guide (@mpadge, #343).
