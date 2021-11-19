@@ -399,7 +399,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 * For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-* For spatial data, the [sp][] package should be considered deprecated in favour of [sf][], and the packages [rgdal][], [maptools][], and [rgeos][] will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities.
+* For spatial data, the [sp][] package should be considered deprecated in favour of [sf][], and the packages [rgdal][], [maptools][], and [rgeos][] will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 
 ## Version Control
