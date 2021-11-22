@@ -476,3 +476,8 @@ There is a [Coursera specialization corresponding to the book by Roger Peng, Sea
 [rjson]: https://cran.rstudio.com/web/packages/rjson/
 [RJSONIO]: https://cran.rstudio.com/web/packages/RJSONIO/
 [xml2]: https://cran.rstudio.com/web/packages/xml2/
+[sp]: https://github.com/edzer/sp/
+[sf]: https://r-spatial.github.io/sf/
+[rgdal]: https://cran.r-project.org/web/packages/rgdal/index.html
+[maptools]: https://cran.r-project.org/web/packages/maptools/index.html
+[rgeos]: https://cran.r-project.org/web/packages/rgeos/index.html
