@@ -393,7 +393,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 ## Recommended scaffolding
 
-* For HTTP requests we recommend using [curl][], [crul][], or [httr][] over [RCurl][]. If you like low level clients for HTTP, [curl][] is best, whereas [crul][] or [httr][] are better for higher level access. [crul][] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr][] for mocking HTTP requests, and [vcr][] for caching HTTP requests in package tests.
+* For HTTP requests we recommend using [curl][], [crul][], [httr][] or [httr2][] over [RCurl][]. If you like low level clients for HTTP, [curl][] is best, whereas [crul][] or [httr][] are better for higher level access. [crul][] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr][] for mocking HTTP requests, and [vcr][] for caching HTTP requests in package tests.
 
 * For parsing JSON, use [jsonlite][] instead of [rjson][] or [RJSONIO][].
 
@@ -469,7 +469,8 @@ There is a [Coursera specialization corresponding to the book by Roger Peng, Sea
 [curl]: https://github.com/jeroen/curl/
 [RCurl]: https://cran.rstudio.com/web/packages/RCurl/
 [crul]: https://github.com/ropensci/crul/
-[httr]: https://cran.rstudio.com/web/packages/httr/
+[httr]: https://httr.r-lib.org
+[httr2]: https://httr2.r-lib.org
 [webmockr]: https://github.com/ropensci/webmockr/
 [vcr]: https://github.com/ropensci/vcr/
 [jsonlite]: https://github.com/jeroen/jsonlite
