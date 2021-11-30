@@ -6,6 +6,10 @@
 
 * 2021-11-30, adds links to examples of reviews, especially tough but constructive ones (with help from `@noamross`, `@mpadge`, #363).
 
+* 2021-11-19, add recommended spatial packages to scaffolding section (software-review-meta#47)
+
+* 2021-11-18, update advice on grouping functions for pkgdown output (#361)
+
 ## 0.7.0
 
 * 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).

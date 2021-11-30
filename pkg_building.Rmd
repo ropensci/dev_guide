@@ -205,7 +205,7 @@ can be found at *link*".
 
 * All functions should document the type of object returned under the `@return` heading.
 
-* We recommend using the `@family` tag in the documentation of functions to allow their grouping in the documentation of the installed package and potentially in the package's website, see [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
+- Documentation should support user navigation by including useful cross-links between related functions and documenting related functions together in groups or in common help pages.  The @seealso and @family tags (the latter of which automatically creates “See also” links and [can help group](https://pkgdown.r-lib.org/reference/build_reference.html) functions together on pkgdown sites), are recommended for this purpose. See [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
 
 * You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
 
@@ -393,11 +393,13 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 ## Recommended scaffolding
 
-* For HTTP requests we recommend using [curl][], [crul][], or [httr][] over [RCurl][]. If you like low level clients for HTTP, [curl][] is best, whereas [crul][] or [httr][] are better for higher level access. [crul][] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr][] for mocking HTTP requests, and [vcr][] for caching HTTP requests in package tests.
+* For HTTP requests we recommend using [curl][], [crul][], [httr][] or [httr2][] over [RCurl][]. If you like low level clients for HTTP, [curl][] is best, whereas [crul][] or [httr][] are better for higher level access. [crul][] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr][] for mocking HTTP requests, and [vcr][] for caching HTTP requests in package tests.
 
 * For parsing JSON, use [jsonlite][] instead of [rjson][] or [RJSONIO][].
 
 * For parsing, creating, and manipulating XML, we strongly recommend [xml2][] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+
+* For spatial data, the [sp][] package should be considered deprecated in favour of [sf][], and the packages [rgdal][], [maptools][], and [rgeos][] will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 
 ## Version Control
@@ -467,10 +469,16 @@ There is a [Coursera specialization corresponding to the book by Roger Peng, Sea
 [curl]: https://github.com/jeroen/curl/
 [RCurl]: https://cran.rstudio.com/web/packages/RCurl/
 [crul]: https://github.com/ropensci/crul/
-[httr]: https://cran.rstudio.com/web/packages/httr/
+[httr]: https://httr.r-lib.org
+[httr2]: https://httr2.r-lib.org
 [webmockr]: https://github.com/ropensci/webmockr/
 [vcr]: https://github.com/ropensci/vcr/
 [jsonlite]: https://github.com/jeroen/jsonlite
 [rjson]: https://cran.rstudio.com/web/packages/rjson/
 [RJSONIO]: https://cran.rstudio.com/web/packages/RJSONIO/
 [xml2]: https://cran.rstudio.com/web/packages/xml2/
+[sp]: https://github.com/edzer/sp/
+[sf]: https://r-spatial.github.io/sf/
+[rgdal]: https://cran.r-project.org/web/packages/rgdal/index.html
+[maptools]: https://cran.r-project.org/web/packages/maptools/index.html
+[rgeos]: https://cran.r-project.org/web/packages/rgeos/index.html
