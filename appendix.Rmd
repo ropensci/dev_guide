@@ -4,6 +4,10 @@
 
 ## dev
 
+* 2021-11-30, adds links to examples of reviews, especially tough but constructive ones (with help from `@noamross`, `@mpadge`, #363).
+
+## 0.7.0
+
 * 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).
 
 * 2021-11-04, mention pkgcheck in the author guide (@mpadge, #343).
