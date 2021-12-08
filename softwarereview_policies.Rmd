@@ -265,6 +265,9 @@ and reviewers in addressing ethical questions related to privacy and research so
 -   Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
     Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
     Integrity. <https://doi.org/10.1007/978-3-319-76040-7_18-1>
+-   Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., & Primack, B. (2021). Re-evaluating standards of
+    human subjects protection for sensitive health data in social media networks. 
+    Social Networks, 67, 41–46. <https://dx.doi.org/10.1016/j.socnet.2019.10.010>
 -   Lomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social
     Media. The Information Society, 30(4), 256--265. 
     <https://dx.doi.org/10.1080/01972243.2014.915276>
