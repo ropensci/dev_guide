@@ -4,8 +4,6 @@ name: PR-workflow
 
 jobs:
   bookdown:
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     name: Render Book
     runs-on: macOS-latest
     env:
