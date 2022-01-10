@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-01-10, divide author's guide into sub-sections, and add extra info including `pkgcheck`
+
 * 2021-11-19, add recommended spatial packages to scaffolding section (software-review-meta#47)
 
 * 2021-11-18, update advice on grouping functions for pkgdown output (#361)
