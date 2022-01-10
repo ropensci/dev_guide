@@ -4,7 +4,7 @@
 This concise guide presents the software peer review process for you as a package author.
 ```
 
-## Planning a Submission
+## Planning a Submission (or a Pre-Submission Enquiry)
 
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
