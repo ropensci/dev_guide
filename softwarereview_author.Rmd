@@ -6,16 +6,16 @@ This concise guide presents the software peer review process for you as a packag
 
 ## Planning a Submission
 
--   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and is not overlapping with other packages.
+-   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
     - We strongly suggest submitting your package for review _before_ publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
-    -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result on conflicting requests for changes.
-- If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an _Active_ instead of _WIP_ badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen if the package is at least _Maturing_.
+    -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
+- If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an _Active_ instead of _WIP_ badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is at least _Maturing_.
 - For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. Even better, set up a pkgdown website for allowing more detailed assessment of functionality online.
     - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
     - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
-- Your package will continue to evolve after review, this book [provides guidance about the topic](#evolution).
+- Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ## Preparing for Submission
 
@@ -29,6 +29,10 @@ This concise guide presents the software peer review process for you as a packag
 ## The Submission Process
 
 -   Software is submitted for review by [opening a new issue](https://github.com/ropensci/software-review/issues/new/choose) in the software review repository and filling out the template.
+- The template begins with a section which includes several HTML-styled variables (`<!---variable--->`). These are used by our `ropensci-review-bot`, and must be left in place, with values filled between the indicated start and end points, like this:
+```{bash, eval = F}
+<!---variable--->insert value here<!---end-variable>
+```
 -   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 
