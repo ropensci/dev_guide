@@ -267,10 +267,11 @@ lapply(
 
 You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review.md"}
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templaaates/review.md"), sep = "\n")
 ```
-```
+````
 
 ```{r, eval = knitr::is_latex_output(), child="templaaates/review.md"}
 
@@ -279,10 +280,12 @@ You can save this as an R Markdown file, or delete the YAML and save it as a Mar
 # Review template in Spanish {#reviewtemplatees}
 
 You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review-es.md"}
+
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templaaates/review-es.md"), sep = "\n")
 ```
-```
+````
 
 ```{r, eval = knitr::is_latex_output(), child="templaaates/review-es.md"}
 
