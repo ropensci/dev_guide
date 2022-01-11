@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-01-10, divide author's guide into sub-sections, and add extra info including `pkgcheck`.
+
 * 2021-11-30, adds links to examples of reviews, especially tough but constructive ones (with help from `@noamross`, `@mpadge`, #363).
 
 * 2021-11-19, add recommended spatial packages to scaffolding section (software-review-meta#47)

@@ -2,7 +2,7 @@ Package: placeholder
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
-Version: 0.0.1
+Version: 0.0.1.001
 Imports:
     airtabler,
     htmltools,
