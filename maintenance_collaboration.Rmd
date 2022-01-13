@@ -93,13 +93,17 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 ### Working with collaborators (including yourself) {#gitflow}
 
-You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow). In a nutshell,
+[Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
-* Keep the default branch (main or master) as shippable as much as possible
+One of the branches is the default / main branch, where, if you follow [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), you "merge small, frequent updates".
+See also [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) and [GitLab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) docs.
+You might want to pair the frequent incrementing of version numbers (in `DESCRIPTION`). 
+One particular aspect of working with collaborators is reviewing pull requests, with some useful guidance in:
 
-* [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
+* [The Art of Giving and Receiving Code Reviews (Gracefully), by Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
+* [GitHub documentation about PR reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
-One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed. Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](https://happygitwithr.com/pr-extend.html).
+For making and reviewing pull requests we recommend [exploring usethis functions](https://usethis.r-lib.org/articles/pr-functions.html).
 
 ### Be generous with attributions {#attributions}
 
