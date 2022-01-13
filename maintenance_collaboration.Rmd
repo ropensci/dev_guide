@@ -97,10 +97,8 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 One of the branches is the default / main branch, where, if you follow [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), you "merge small, frequent updates".
 See also [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) and [GitLab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) docs.
-You might want to pair the frequent updating with frequent version numbers incrementing (in `DESCRIPTION`).
-
-One particular aspect of working with collaborators is reviewing pull requests. 
-Some useful guidance:
+You might want to pair the frequent incrementing of version numbers (in `DESCRIPTION`). 
+One particular aspect of working with collaborators is reviewing pull requests, with some useful guidance in:
 
 * [The Art of Giving and Receiving Code Reviews (Gracefully), by Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
 * [GitHub documentation about PR reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
