@@ -26,7 +26,7 @@ R packages should have CI for all operating systems (Linux, Mac OSX, Windows) wh
 
 * Anything with file system / path calls
 
-In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all platforms, and most often not too much hassle.
+In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
 
 ## Which continuous integration service(s)? {#whichci}
 
