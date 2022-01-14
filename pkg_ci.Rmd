@@ -14,7 +14,7 @@ Both test status and code coverage should be reported via badges in your package
 
 ## How to use continuous integration?
 
-The `usethis` package offers a few functions for continuous integration setup, see [the documentation](https://usethis.r-lib.org/reference/ci.html).
+The `usethis` package offers a few functions for continuous integration setup, see [the documentation](https://usethis.r-lib.org/reference/index.html#continuous-integration).
 
 Details will be provided below for different services.
 
