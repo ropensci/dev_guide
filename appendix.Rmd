@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-01-10, make review templates R Markdown files (`@Bisaloo`, #340).
+
 - 2022-01-14, update guidance on CI services (#377)
 
 - 2022-01-11, update guidance around branches, with resources suggested by `@ha0ye` and `@statnmap`.
@@ -267,10 +269,13 @@ lapply(
 
 # Review template {#reviewtemplate}
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review.md"}
+You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
+
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templaaates/review.md"), sep = "\n")
 ```
-```
+````
 
 ```{r, eval = knitr::is_latex_output(), child="templaaates/review.md"}
 
@@ -278,10 +283,13 @@ lapply(
 
 # Review template in Spanish {#reviewtemplatees}
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review-es.md"}
+You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
+
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templaaates/review-es.md"), sep = "\n")
 ```
-```
+````
 
 ```{r, eval = knitr::is_latex_output(), child="templaaates/review-es.md"}
 
