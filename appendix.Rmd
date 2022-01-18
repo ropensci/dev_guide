@@ -6,6 +6,10 @@
 
 - 2022-01-10, make review templates R Markdown files (`@Bisaloo`, #340).
 
+- 2022-01-14, update guidance on CI services (#377)
+
+- 2022-01-11, update guidance around branches, with resources suggested by `@ha0ye` and `@statnmap`.
+
 - 2022-01-10, divide author's guide into sub-sections, and add extra info including `pkgcheck`.
 
 * 2021-11-30, adds links to examples of reviews, especially tough but constructive ones (with help from `@noamross`, `@mpadge`, #363).
