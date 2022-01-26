@@ -127,9 +127,9 @@ Please do not list editors as contributors. Your participation in and contributi
 
 If you give someone write permissions to the repository, 
 
-* please contact one of [the editors](#associateditors) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
+* please contact a [staff member](https://ropensci.org/about#team) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
-* please contact rOpenSci community manager [Stefanie Butland](https://github.com/stefaniebutland) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
+* please contact rOpenSci [community manager or another staff member](https://ropensci.org/about#team) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
 
 ## Further resources
 
