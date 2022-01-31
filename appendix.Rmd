@@ -236,40 +236,31 @@
 
 * Added a `NEWS.md` file to track changes to the book.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-fs::dir_create("templaaates")
-save_one <- function(file) {
-  download.file(
-    sprintf("https://raw.githubusercontent.com/ropensci/software-review/master/.buffy/templates/%s", file),
-    file.path("templaaates", file)
-  )
-}
-
-lapply(
-  c("approved.md", "editor.md", "review-es.md", "review.md", "reviewer-approval.md"),
-  save_one
-)
-```
-
 # Review template {#reviewtemplate}
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review.md"}
-```
-```
+You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
-```{r, eval = knitr::is_latex_output(), child="templaaates/review.md"}
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templates/review.md"), sep = "\n")
+```
+````
+
+```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
 
 ```
 
 # Review template in Spanish {#reviewtemplatees}
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/review-es.md"}
-```
-```
+You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
-```{r, eval = knitr::is_latex_output(), child="templaaates/review-es.md"}
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+cat(readLines("templates/review-es.md"), sep = "\n")
+```
+````
+
+```{r, eval = knitr::is_latex_output(), child="templates/review-es.md"}
 
 ```
 
@@ -279,11 +270,11 @@ lapply(
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/editor.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templaaates/editor.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
 
 ```
 
@@ -302,25 +293,42 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 # Approval comment template {#approvaltemplate}
 
+````markdown
+```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE, comment = ""}
+withr::with_tempfile("tf", {
+download.file(
+    "https://raw.githubusercontent.com/ropensci/software-review/master/.buffy/templates/approved.md",
+    tf
+  )
+  lines <- readLines(tf)
+cat(lines[2:(length(lines) - 1)], sep = "\n")
+}
+)
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/approved.md"}
 ```
-```
+````
 
-```{r, eval = knitr::is_latex_output(), child="templaaates/approved.md"}
-
+```{r, eval = knitr::is_latex_output(), echo=FALSE, comment = "", results='asis'}
+withr::with_tempfile("tf", {
+download.file(
+    "https://raw.githubusercontent.com/ropensci/software-review/master/.buffy/templates/approved.md",
+    tf
+  )
+  lines <- readLines(tf)
+cat(lines[2:(length(lines) - 1)], sep = "\n\n")
+}
+)
 ```
 
 # Reviewer approval comment template {#approval2template}
 
 
 ```markdown
-```{r, eval = !knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
+```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
 ```
 ```
 
-```{r, eval = knitr::is_latex_output(), child="templaaates/reviewer-approval.md"}
+```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
 
 ```
 
@@ -343,10 +351,6 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
 
-```
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-fs::dir_delete("templaaates")
 ```
 
 # How to set a redirect {#redirect}
