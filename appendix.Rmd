@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-02-14, mention more packages for testing like dittodb, vcr, httptest, httptest2, webfakes.
+
 - 2022-01-10, make review templates R Markdown files (`@Bisaloo`, #340).
 
 - 2022-01-14, update guidance on CI services (#377)

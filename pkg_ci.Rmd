@@ -75,7 +75,7 @@ We no longer transfer AppVeyor projects to ropensci AppVeyor account so after tr
 
 ## Test coverage {#coverage}
 
-Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
+Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well
 as `usethis::use_coverage()`. 
 
 If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).

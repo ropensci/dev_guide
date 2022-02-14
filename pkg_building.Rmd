@@ -300,17 +300,23 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. Test coverage below 75% will likely require additional tests or explanation before being sent for review.
 
-* We recommend using `testthat` for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](https://r-pkgs.org/tests.html).
+* We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](https://r-pkgs.org/tests.html).
 
 * Packages with Shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
-* For testing your functions creating plots, we suggest using [`vdiffr`](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the `testthat` package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
+* For testing your functions creating plots, we suggest using [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the testthat package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
 
-* If your package interact with web resources (web APIs and other sources of data on the web) you might find the [HTTP testing in R book by Scott Chamberlain and Maëlle Salmon](https://books.ropensci.org/http-testing/) relevant.
+* If your package interacts with web resources (web APIs and other sources of data on the web) you might find the [HTTP testing in R book by Scott Chamberlain and Maëlle Salmon](https://books.ropensci.org/http-testing/) relevant. Packages helping with HTTP testing (corresponding HTTP clients):
+    * [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
+    * [httptest](https://enpiar.com/httptest/) ([httr](https://httr.r-lib.org/));
+    * [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
+    * [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://github.com/jeroen/curl)).
 
-* Once you've set up CI, use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
+* testthat has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration. Note that from testthat 3.1.2 `skip_if_offline()` automatically calls `skip_on_cran()`. More info on [CRAN preparedness for API wrappers](https://books.ropensci.org/http-testing/cran-preparedness.html).
+    
+* If your package interacts with a database you might find [dittodb](https://docs.ropensci.org/dittodb) useful.
 
-* `testthat` has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration.
+* Once you've set up [continuous interaction (CI)](#ci), use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
 * Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
 
