@@ -302,6 +302,8 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to _defensively_ code against those. [More information](https://r-pkgs.org/tests.html).
 
+* Tests should be easy to understand. We suggest reading the blog post [_"Why Good Developers Write Bad Unit Tests"_](https://mtlynch.io/good-developers-bad-tests/) by Michael Lynch.
+
 * Packages with Shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
 * For testing your functions creating plots, we suggest using [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the testthat package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
