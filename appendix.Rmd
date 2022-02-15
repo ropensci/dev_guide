@@ -362,7 +362,7 @@ Replace the content of the current website with
 ```html
 <html>
 <head>
-<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/" />  
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/">  
 <script language="javascript">
   window.location.href = "https://docs.ropensci.org/<pkgname>"
 </script>
