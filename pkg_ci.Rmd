@@ -12,17 +12,7 @@ All rOpenSci packages must use one form of continuous integration. This ensures 
 
 Both test status and code coverage should be reported via badges in your package README.
 
-## How to use continuous integration?
-
-The `usethis` package offers a few functions for continuous integration setup, see [the documentation](https://usethis.r-lib.org/reference/ci.html).
-
-Details will be provided below for different services.
-
-## Which continuous integration service(s)? {#whichci}
-
-Different continuous integration services will support builds on different operating systems.
-
-R packages should have CI for all platforms when they contain:
+R packages should have CI for all operating systems (Linux, Mac OSX, Windows) when they contain:
 
 * Compiled code
 
@@ -36,12 +26,15 @@ R packages should have CI for all platforms when they contain:
 
 * Anything with file system / path calls
 
-In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all platforms, and most often not too much hassle.
+In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
 
-### GitHub Actions (Linux, Mac OSX, Windows)
+## Which continuous integration service(s)? {#whichci}
 
-[GitHub Actions](https://github.com/features/actions) is a new CI service for which there are [examples and actions for R packages](https://github.com/r-lib/actions/), as well as [usethis support](https://usethis.r-lib.org/reference/use_github_action.html).
-It is gaining popularity.
+There are a number of continuous integration services, including standalone services (CircleCI, AppVeyor), and others integrated into code hosting or related services (GitHub Actions, GitLab, AWS Code Pipeline). Different services support different operating system configurations.
+
+[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.  There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well and first-class support in the [{usethis}](https://usethis.r-lib.org/reference/use_github_action.html) package.
+
+[usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated. rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
 
 #### Testing using different versions of R
 
@@ -82,7 +75,7 @@ We no longer transfer AppVeyor projects to ropensci AppVeyor account so after tr
 
 ## Test coverage {#coverage}
 
-Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/jimhester/covr) for instructions, as well
+Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well
 as `usethis::use_coverage()`. 
 
 If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).

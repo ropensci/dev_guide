@@ -1,3 +1,12 @@
+---
+title: "review"
+output: 
+  rmarkdown::md_document:
+    pandoc_args: [
+      "--wrap=none"
+    ]
+---
+
 ## Revisión de un paquete
 
 *Por favor trata de marcar tantas casillas como te sea posible y elabora tus argumentos en comentarios abajo de cada una. Tu revisión no esta limitada a estos temas, tal como se describe en la guia para revisores (Reviewer Guide)*
@@ -17,7 +26,7 @@ El paquete incluye todos los siguiente tipos de documentación:
 - [ ] **Ejemplos** (que corren localmente) para todas las funciones exportadas 
 - [ ] **Directrices comunitarias** incluyendo una guia de contribución en el archivo README o el archivo CONTRIBUTING y un archivo DESCRIPTION que incluye `URL`, `BugReports` and `Maintainer` (todas en inglés por concenvión y para que puedan ser autogeneradas con `Authors@R`).
 
-#### Functionality
+#### Funcionalidad
 
 - [ ] **Instalación:** La instalación se completa con éxito tal como fue documentada.
 - [ ] **Funcionalidad:** Toda afirmación de funcionalidad del software se confirma como existente.
