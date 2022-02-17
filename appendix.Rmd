@@ -357,7 +357,7 @@ cat(lines[2:(length(lines) - 1)], sep = "\n\n")
 
 ## Non GitHub pages site (e.g. Netlify)
 
-Replace the content of the current website with
+Replace the content of the current website with a `404.html` page:
 
 ```html
 <html>
