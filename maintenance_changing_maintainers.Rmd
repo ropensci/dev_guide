@@ -53,7 +53,7 @@ As an organization, rOpenSci is interested in making sure packages in our suite 
   * Make contact and see what the situation is. They may say they’d like to step down as maintainer, in which case look for a new maintainer
 * Current maintainer is completely missing/not responding
   * If this happens we will try to contact the maintainer for up to one month. However, if updating the package is urgent, we may use our admin access to make changes on their behalf.
-* Put a call out in the “Call for Contributors” section of the rOpenSci newsletter for a new maintainer - get in touch with Scott for this or open an issue in the [newsletter repo](https://github.com/ropensci/biweekly/)
+* Put a call out in the “Call for Contributors” section of the rOpenSci newsletter for a new maintainer - open an issue in the [newsletter repo](https://github.com/ropensci/monthly/).
 
 
 [orphaned]: https://cran.r-project.org/src/contrib/Orphaned/README
