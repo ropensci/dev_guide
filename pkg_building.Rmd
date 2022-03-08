@@ -470,6 +470,16 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 * [This pictorial by Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
 
+#### Blogs
+
+* [R-hub blog](https://blog.r-hub.io/post).
+
+* Some posts of the [rOpenSci blog](https://ropensci.org/archive/) e.g. ["How to precompute package vignettes or pkgdown articles"](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
+
+* Package Development Corner section of [rOpenSci newsletter](https://ropensci.org/news/).
+
+* Some posts of the [tidyverse blog](https://www.tidyverse.org) e.g. ["Upgrading to testthat edition 3"](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
+
 #### MOOCs
 
 There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.

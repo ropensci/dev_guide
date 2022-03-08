@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-03-08, add links to blogs related to package development (#389).
+
 - 2022-02-17, update redirect instructions (`@peterdesmet`, #387).
 
 - 2022-02-14, link to Michael Lynch's post Why Good Developers Write Bad Unit Tests.
