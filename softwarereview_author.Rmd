@@ -6,6 +6,7 @@ This concise guide presents the software peer review process for you as a packag
 
 ## Planning a Submission (or a Pre-Submission Enquiry)
 
+-   Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
