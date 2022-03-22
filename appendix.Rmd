@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-03-21, rephrase CITATION guidance to make it less strict. Also mentions CITATION.cff and the cffr package.
+
 - 2022-03-08, add links to blogs related to package development (#389).
 
 - 2022-02-17, update redirect instructions (`@peterdesmet`, #387).
