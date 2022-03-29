@@ -12,7 +12,7 @@
 
 - [ ] For each contribution/change make sure the NEWS in Appendix.Rmd were updated.
 
-- [ ] Plan a date for release in communication with rOpenSci's Community Manager who will give you a date for publishing a blog post / tech note.
+- [ ] Plan a date for release in communication with `@stefaniebutland` who will give you a date for publishing a blog post / tech note.
 
 ### 2 weeks prior to release
 
