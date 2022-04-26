@@ -12,7 +12,7 @@ We recommend the article [Ten quick tips for staying safe online](https://journa
 
 * We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
 
-* We also recommend you regularly check who has access to your package repository, and that you prune any useless access (e.g. of a former contractor).
+* We also recommend you regularly check who has access to your package repository, and that you prune any unused access (such as from former collaborators).
 
 ## https
 
