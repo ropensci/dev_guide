@@ -4,6 +4,10 @@
 This work-in-progress chapter includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
 ```
 
+## Misc
+
+We recommend the article [Ten quick tips for staying safe online](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008563) by Danielle Smalls and Greg Wilson.
+
 ## GitHub access security
 
 * We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
