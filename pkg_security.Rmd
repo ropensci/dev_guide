@@ -4,7 +4,7 @@
 This work-in-progress chapter includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
 ```
 
-## Misc
+## Miscellaneous
 
 We recommend the article [Ten quick tips for staying safe online](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008563) by Danielle Smalls and Greg Wilson.
 
