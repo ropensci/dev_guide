@@ -82,7 +82,10 @@ make_checklist <- function (repo, version) {
 
     md <- c (md [1:2],
              paste0 ("### Current issues assigned to @",
-                     get_git_user ()),
+                     get_git_user (),
+                     " or v",
+                     version,
+                     " milestone"),
              "",
              get_issues (repo, version),
              "",
