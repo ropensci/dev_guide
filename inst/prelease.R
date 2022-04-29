@@ -31,8 +31,7 @@ get_version <- function () {
 
 get_git_user <- function () {
 
-    system2 ("git", args = list ("config", "user.name"), stdout = TRUE)
-
+    gsub ("\\s<.*$", "", gert::git_signature_default ())
 }
 
 # Currently open issues assigned either to the authorised user
