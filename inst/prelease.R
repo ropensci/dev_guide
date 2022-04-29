@@ -74,7 +74,7 @@ get_issues <- function (repo, version) {
 # top.
 make_checklist <- function (repo, version) {
 
-    u <- "https://raw.githubusercontent.com/ropensci/dev_guide/master/templates/book-release.md"
+    u <- "https://raw.githubusercontent.com/ropensci/dev_guide/HEAD/templates/book-release.md"
     f <- file.path (tempdir (), basename (u))
     download.file (u, f, quiet = TRUE)
     md <- readLines (f)
