@@ -15,7 +15,7 @@ has_gh_cli <- function () {
     nzchar (ghs_path)
 }
 
-if (!has_gh_cli) {
+if (!has_gh_cli ()) {
     stop ("The 'gh cli' must be installed; see https://cli.github.com")
 }
 
@@ -35,8 +35,9 @@ get_git_user <- function () {
 
 }
 
-# Currently open issues assigned to the authorised user
-get_issues <- function (repo) {
+# Currently open issues assigned either to the authorised user
+# or to the current milestone
+get_issues <- function (repo, version) {
 
     args <- list (
         "issue",
@@ -46,7 +47,20 @@ get_issues <- function (repo) {
         "--state", "open"
     )
 
-    issues <- system2 ("gh", args = args, stdout = TRUE)
+    issues_me <- system2 ("gh", args = args, stdout = TRUE)
+
+    args <- list (
+        "issue",
+        "list",
+        "--repo", repo,
+        "--milestone", version,
+        "--state", "open"
+    )
+
+    issues_milestone <- system2 ("gh", args = args, stdout = TRUE)
+
+    issues <- unique (c (issues_me, issues_milestone))
+
     issue_nums <- regmatches (issues, regexpr ("^[0-9]+", issues))
     issues <- gsub ("^[0-9]+\\tOPEN\\t", "", issues)
     issues <- gsub ("\\t.*$", "", issues)
@@ -71,7 +85,7 @@ make_checklist <- function (repo, version) {
              paste0 ("### Current issues assigned to @",
                      get_git_user ()),
              "",
-             get_issues (repo),
+             get_issues (repo, version),
              "",
              md [seq (3, length (md))])
 
