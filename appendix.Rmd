@@ -343,6 +343,10 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 # Book release guidance {#bookreleaseissue}
 
+Editors preparing for a release can run the `prelease.R` script in the `inst` directory of this repository to automatically open a GitHub issue with checkpoints for all current issues assigned to the upcoming release milestone, along with the following checklist. 
+Before running the script, please manually check the assignment of issues to the milestone.
+This should be run one month prior to planned release.
+
 
 ```markdown
 ```{r, eval = !knitr::is_latex_output(), child="templates/book-release.md"}
