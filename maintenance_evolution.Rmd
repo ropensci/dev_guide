@@ -209,6 +209,6 @@ An example of a minimal README in an archived package is in [ropensci-archive/mo
 - Close issues with a sentence explaining the situation and linking to this guidance.
 - Disable issues on GitHub (under repo settings).
 - Archive the repository on GitHub (also under repo settings).
-- Transfer the repository to [ropensci-archive](https://github.com/ropensci-archive), or request an rOpenSci staff member to transfer it.
+- Transfer the repository to [ropensci-archive](https://github.com/ropensci-archive), or request an [rOpenSci staff member](https://ropensci.org/about/#team) to transfer it (you can email `info@ropensci.org`).
 
 Archived packages may be unarchived if authors or a new person opt to resume maintenance. For that please contact rOpenSci. They are transferred to the ropenscilabs organization.
