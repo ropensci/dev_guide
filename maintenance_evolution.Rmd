@@ -198,7 +198,7 @@ Once a function is made defunct, its tests are simply removed.
 
 ## Archiving packages {#archivalguidance}
 
-Software generally has a finite lifespan, and packages may eventually need to be archived. Archived packages are moved to a dedicated GitHub organization, [ropensci-archive](https://github.com/ropensci-archive). Prior to archiving, the contents of the README file should be moved to an alternative location (such as "README-OLD.md"), and replaced with minimal contents including the following:
+Software generally has a finite lifespan, and packages may eventually need to be archived. Archived packages are [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) and moved to a dedicated GitHub organization, [ropensci-archive](https://github.com/ropensci-archive). Prior to archiving, the contents of the README file should be moved to an alternative location (such as "README-OLD.md"), and replaced with minimal contents including the following:
 
 - Title with name of package
 - A repostatus.org badge of "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages.
