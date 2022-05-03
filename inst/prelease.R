@@ -109,6 +109,7 @@ post_issue <- function (repo) {
         "--repo", repo,
         "--body-file", f,
         "--assignee", "@me",
+        "--milesone", version,
         "--title", issue_title
     )
 
