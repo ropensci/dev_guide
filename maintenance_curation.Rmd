@@ -130,10 +130,6 @@ at the time of submission to be reviewed.
    pages will `display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
--   Archived packages may be unarchived if authors or a new person
-    opt to resume maintenance.  For that please [contact rOpenSci](https://ropensci.org/contact/).
-    They are transferred to the ropenscilabs organization.
-
 ## Legacy acquired packages
 
 "Legacy" packages are packages not created or maintained by rOpenSci
@@ -195,15 +191,6 @@ at unconferences
     appropriate migration locations (e.g., ropensci-books)
 
 -   If archived, non-R-packages will move to "ropensci-archive" following [transfer guidance](#archivalguidance).
-
-### General guidance for transfer to ropensci-archive or authors account {#archivalguidance}
-
-- Update the README (remove installation instructions, add reason for archival,
-  link to this guidance).
-- Add a repostatus.org badge to the README (unsupported for former released packages, 
-  or abandoned if the package always only was a concept or WIP).
-- Close issues with a sentence explaining the situation and linking to this guidance.
-- Disable issues (under repo settings).
 
 ## Books
 
