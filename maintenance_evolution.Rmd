@@ -210,7 +210,12 @@ Software generally has a finite lifespan, and packages may eventually need to be
 This package has been archived. The former README is now in [README-old"](<link-to-README-old>).
 ```
 
-The repo status badge should be "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages. An example of a minimal README in an archived package is in [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md). Once the README has been copied elsewhere and reduced to minimal form, the following steps should be followed:
+The repo status badge should be "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages, in which case the badge code above should be replaced with:
+``` md
+[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+```
+
+An example of a minimal README in an archived package is in [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md). Once the README has been copied elsewhere and reduced to minimal form, the following steps should be followed:
 
 - [ ] Close issues with a sentence explaining the situation and linking to this guidance.
 - [ ] Archive the repository on GitHub (also under repo settings).
