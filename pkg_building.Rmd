@@ -381,7 +381,7 @@ An example of bad practice would be for a developer to consider the versions of 
 
     * Small, simple functions from a dependency package may be better copied into
       your own package if the dependency if you are using only a few functions
-      in an otherwise large or heavy dependency.  (See [*Authroship* section
+      in an otherwise large or heavy dependency.  (See [*Authorship* section
       above](#authorship-included-code) for how to acknowledge original authors
       of copied code.) On the other hand, complex functions with many edge
       cases (e.g. parsers) require considerable testing and vetting.
