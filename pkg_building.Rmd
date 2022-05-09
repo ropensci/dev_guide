@@ -285,6 +285,18 @@ The `DESCRIPTION` file of a package should list package authors and contributors
 
 Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
+### Authorship of included code {#authorship-included-code}
+
+Many packages include code from other software. Whether entire files or single functions are included from other packages, rOpenSci packages should follow [the CRAN *Repository Policy*](https://cran.r-project.org/web/packages/policies.html):
+
+> The ownership of copyright and intellectual property rights of all components of the package must be clear and unambiguous (including from the authors specification in the DESCRIPTION file). Where code is copied (or derived) from the work of others (including from R itself), care must be taken that any copyright/license statements are preserved and authorship is not misrepresented.
+>
+> Preferably, an ‘Authors@R’ field would be used with ‘ctb’ roles for the authors of such code. Alternatively, the ‘Author’ field should list these authors as contributors.
+>
+> Where copyrights are held by an entity other than the package authors, this should preferably be indicated via ‘cph’ roles in the ‘Authors@R’ field, or using a ‘Copyright’ field (if necessary referring to an inst/COPYRIGHTS file).
+>
+> Trademarks must be respected.
+
 ## Licence
 
 The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
@@ -369,8 +381,10 @@ An example of bad practice would be for a developer to consider the versions of 
 
     * Small, simple functions from a dependency package may be better copied into
       your own package if the dependency if you are using only a few functions
-      in an otherwise large or heavy dependency.  On the other hand, complex functions
-      with many edge cases (e.g. parsers) require considerable testing and vetting.
+      in an otherwise large or heavy dependency.  (See [*Authorship* section
+      above](#authorship-included-code) for how to acknowledge original authors
+      of copied code.) On the other hand, complex functions with many edge
+      cases (e.g. parsers) require considerable testing and vetting.
     
         * An common example of this is in returning tidyverse-style "tibbles" from package
           functions that provide data.
