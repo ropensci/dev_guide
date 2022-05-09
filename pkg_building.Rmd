@@ -285,7 +285,7 @@ The `DESCRIPTION` file of a package should list package authors and contributors
 
 Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
-### Authorship of included code
+### Authorship of included code {#authorship-included-code}
 
 Many packages include code from other software. Whether entire files or single functions are included from other packages, rOpenSci packages must follow [the CRAN *Repository Policy*](https://cran.r-project.org/web/packages/policies.html):
 
@@ -381,8 +381,10 @@ An example of bad practice would be for a developer to consider the versions of 
 
     * Small, simple functions from a dependency package may be better copied into
       your own package if the dependency if you are using only a few functions
-      in an otherwise large or heavy dependency.  On the other hand, complex functions
-      with many edge cases (e.g. parsers) require considerable testing and vetting.
+      in an otherwise large or heavy dependency.  (See [*Authroship* section
+      above](#authorship-included-code) for how to acknowledge original authors
+      of copied code.) On the other hand, complex functions with many edge
+      cases (e.g. parsers) require considerable testing and vetting.
     
         * An common example of this is in returning tidyverse-style "tibbles" from package
           functions that provide data.
