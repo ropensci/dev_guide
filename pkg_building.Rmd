@@ -287,7 +287,7 @@ Only include reviewers after asking for their consent. Read more in [this blog p
 
 ### Authorship of included code {#authorship-included-code}
 
-Many packages include code from other software. Whether entire files or single functions are included from other packages, rOpenSci packages must follow [the CRAN *Repository Policy*](https://cran.r-project.org/web/packages/policies.html):
+Many packages include code from other software. Whether entire files or single functions are included from other packages, rOpenSci packages should follow [the CRAN *Repository Policy*](https://cran.r-project.org/web/packages/policies.html):
 
 > The ownership of copyright and intellectual property rights of all components of the package must be clear and unambiguous (including from the authors specification in the DESCRIPTION file). Where code is copied (or derived) from the work of others (including from R itself), care must be taken that any copyright/license statements are preserved and authorship is not misrepresented.
 >
