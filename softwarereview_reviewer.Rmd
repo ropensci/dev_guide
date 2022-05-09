@@ -62,7 +62,7 @@ As both a former reviewer and package author [Adam Sparks](https://adamhsparks.c
 
 If working in RStudio, you can streamline your review workflow by using the [`pkgreviewr` package](https://github.com/ropensci-org/pkgreviewr) created by associated editor Anna Krystalli. Say you accepted to review the `refnet` package, you'd write
 
-```r
+```
 remotes::install_github("ropensci-org/pkgreviewr")
 library(pkgreviewr)
 pkgreview_create(pkg_repo = "embruna/refnet", 
