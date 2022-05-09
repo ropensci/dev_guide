@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-05-09, Add section on authorship of included code, thanks to `@KlausVig` (#388).
+
 - 2022-05-09, Remove mention of 'rev' role requiring R v3.5
 
 - 2022-05-05, Move all scripts from local `inst` directory to `ropensci-org/devguider` pkg.
