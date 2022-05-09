@@ -4,7 +4,7 @@
 
 ## dev
 
-- 2022-05-09, Add section on authorship of included code, thanks to `@KlausVig` (#388).
+- 2022-05-09, Add section on authorship of included code, thanks to `@KlausVigo` (#388).
 
 - 2022-05-09, Remove mention of 'rev' role requiring R v3.5
 
