@@ -204,7 +204,7 @@ Software generally has a finite lifespan, and packages may eventually need to be
 ``` md
 # <package name>
 
-[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/Unsupported.svg)](https://www.repostatus.org/#unsported)
+[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/Unsupported.svg)](https://www.repostatus.org/#unsupported)
 [![](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
 
 This package has been archived. The former README is now in [README-old"](<link-to-README-old>).
