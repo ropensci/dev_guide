@@ -22,10 +22,9 @@
 
 ### Release
 
+- [ ] Check URLs using [the `devguide_urls()` function from the {devguider} package](https://github.com/ropensci-org/devguider)
 
-- [ ] Check URLs using [the corresponding script](https://github.com/ropensci/dev_guide/blob/master/inst/book_grooming.R).
-
-- [ ] [Spell check](https://github.com/ropensci/dev_guide/blob/master/inst/spelling-check.R). Update the [WORDLIST](https://github.com/ropensci/dev_guide/blob/master/inst/WORDLIST) as necessary.
+- [ ] Check spelling using [the `devguide_spelling()` function from the {devguider} package](https://github.com/ropensci-org/devguider). Update the [WORDLIST](https://github.com/ropensci/dev_guide/blob/master/inst/WORDLIST) as necessary.
 
 - [ ] Squash and merge the PR from dev to master.
 
