@@ -8,6 +8,8 @@
 
 - [ ] Remind editors to open issues/PRs for items they want to see in the next version.
 
+- [ ] Run [the `devguide_prerelease()` function](https://github.com/ropensci-org/devguider) from the `devguider` package.
+
 - [ ] Ask editors for any feedback you need from them before release.
 
 - [ ] For each contribution/change make sure the NEWS in Appendix.Rmd were updated.
