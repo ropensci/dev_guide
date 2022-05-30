@@ -36,7 +36,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 -   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 -   Ideally, the remarks you make should be tackled before reviewers start reviewing.
--   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label](#policiesreviewprocess).
+-   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label via typing `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder every 90 days (in the issue) to check in with the package author(s).
 -   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
     
 ### Look for and assign two reviewers:
