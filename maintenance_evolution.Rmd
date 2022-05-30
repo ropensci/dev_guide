@@ -204,10 +204,10 @@ Software generally has a finite lifespan, and packages may eventually need to be
 ``` md
 # <package name>
 
-[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/Unsupported.svg)](https://www.repostatus.org/#unsupported)
-[![](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
+[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+[![Peer-review badge](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
 
-This package has been archived. The former README is now in [README-old"](<link-to-README-old>).
+This package has been archived. The former README is now in [README-old](<link-to-README-old>).
 ```
 
 The repo status badge should be "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages, in which case the badge code above should be replaced with:
