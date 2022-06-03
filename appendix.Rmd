@@ -4,6 +4,8 @@
 
 ## dev
 
+- 2022-06-03, Remove former references to now-archived "rodev" package
+
 - 2022-05-30, Advise that reviewers can also directly call `@ropensci-review-bot check package`
 
 - 2022-05-27, Add Mark Padgham to list of authors

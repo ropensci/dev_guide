@@ -133,8 +133,6 @@ bibentry(bibtype = "Manual",
 
 If you use another repo status badge such as a [lifecycle](https://www.tidyverse.org/lifecycle/) badge, please also add a [repostatus.org](https://www.repostatus.org/) badge. [Example of a repo README with two repo status badges](https://github.com/ropensci/ijtiff#ijtiff-).
 
-In all cases, for adding repostatus.org badges you can use the [`rodev::use_repostatus_badge()`](https://docs.ropensci.org/rodev/reference/use_repostatus_badge.html) function.
-
 * Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
 ```
@@ -253,7 +251,7 @@ Before submission and before transfer, you could use the [approach documented by
 
 ### Branding of authors
 
-You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors) and this example in the wild: [`pkgdown` config file](https://github.com/ropensci/rodev/blob/f07fdead39762b332bc1df63e470cdc271d696e0/_pkgdown.yml#L1), [resulting website](https://docs.ropensci.org/rodev/).
+You can make the names of (some) authors clickable by adding their URL, and you can even replace their names with a logo (think rOpenSci... or your organisation/company!). See [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
 
 ### Tweaking the navbar
 
@@ -450,7 +448,7 @@ Once your package is on CRAN, it will be [regularly checked on different platfor
 
 * the [`foghorn` package](https://fmichonneau.github.io/foghorn/).
 
-* the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges). You can add one of them to the README of your package via [`rodev::use_cchecks_badge()`](https://docs.ropensci.org/rodev/reference/use_cchecks_badge.html).
+* the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges).
 
 ## Bioconductor gotchas
 
