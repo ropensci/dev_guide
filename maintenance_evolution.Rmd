@@ -13,7 +13,7 @@ Everyone's free to have their own opinion about how freely parameters/functions/
 ## The lifecycle package
 
 This chapter presents solutions that do not require the lifecycle package but you might still find it useful.
-We recommend [reading the lifecycle documentation](https://lifecycle.r-lib.org/articles/lifecycle.html).
+We recommend [reading the lifecycle documentation](https://lifecycle.r-lib.org/articles/stages.html).
 
 ## Parameters: changing parameter names
 
