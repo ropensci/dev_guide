@@ -68,7 +68,7 @@
 
 * 2021-11-04, mention pkgcheck in the author guide (@mpadge, #343).
 
-* 2021-11-04, add editors' responsabilities including  Editor etiquette for commenting on packages on which you aren't handling/reviewing (@jhollist, #354). 
+* 2021-11-04, add editors' responsibilities including  Editor etiquette for commenting on packages on which you aren't handling/reviewing (@jhollist, #354). 
 
 * 2021-11-04, give precise examples of tools for installation instructions (remotes, pak, R-universe).
 
