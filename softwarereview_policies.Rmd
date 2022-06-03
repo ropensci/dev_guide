@@ -243,10 +243,11 @@ and reviewers in addressing ethical questions related to privacy and research so
     Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
     provide fundamental principles for ethical practice by researchers.
 -   Several organizations provide guidance on how to translate these principles
-    into the the context of internet research. These include the [Ethical
+    into the context of internet research. These include the [Ethical
     Guidelines of The Association of Internet
-    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet Research
-    Ethics](https://www.etikkom.no/en/ethical-guidelines-for-research/ethical-guidelines-for-internet-research/),
+    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet
+    Research
+    Ethics](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
     and [BPS' Ethics Guidelines for Internet-Mediated
     Research](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
     [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) provide a

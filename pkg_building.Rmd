@@ -318,7 +318,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * If your package interacts with web resources (web APIs and other sources of data on the web) you might find the [HTTP testing in R book by Scott Chamberlain and Maëlle Salmon](https://books.ropensci.org/http-testing/) relevant. Packages helping with HTTP testing (corresponding HTTP clients):
     * [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
-    * [httptest](https://enpiar.com/httptest/) ([httr](https://httr.r-lib.org/));
+    * [httptest](https://enpiar.com/r/httptest/) ([httr](https://httr.r-lib.org/));
     * [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
     * [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://github.com/jeroen/curl)).
 
@@ -466,7 +466,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 #### Books
 
-* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2019](https://amzn.com/1491910593?tag=r-pkgs-20)).
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2022](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
@@ -478,7 +478,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 * [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
 
-* [this workflow description by Emil Hvitfeldt](https://www.hvitfeldt.me/blog/usethis-workflow-for-package-development/).
+* [this workflow description by Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
 * [This pictorial by Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
 

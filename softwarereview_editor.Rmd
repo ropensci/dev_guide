@@ -118,7 +118,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 ### After review:
 
 -  `@ropensci-review-bot approve <package-name>`
-- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt) to ensure the package gets included in rOpenSci package registry.*
+- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
 -   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 -   If authors maintain a gitbook that is at least partly about their 
 package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors 
