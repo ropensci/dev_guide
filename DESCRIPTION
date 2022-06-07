@@ -1,8 +1,8 @@
-Package: placeholder
+Package: rOpenSci_dev_guide
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
-Version: 0.0.1
+Version: 0.8.0
 Imports:
     airtabler,
     htmltools,
@@ -21,3 +21,4 @@ Remotes:
     rstudio/bookdown,
     r-lib/downlit,
     r-lib/rlang
+URL: https://github.com/ropensci/dev_guide

@@ -36,7 +36,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 -   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
 -   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 -   Ideally, the remarks you make should be tackled before reviewers start reviewing.
--   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label](#policiesreviewprocess).
+-   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label via typing `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder every 90 days (in the issue) to check in with the package author(s).
 -   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
     
 ### Look for and assign two reviewers:
@@ -47,6 +47,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 -   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
     -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
 -   Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single). The following is thus also valid: `@ropensci-review-bot add @username to reviewers`. One command should be issued for each reviewer. If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
+-   If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
 #### How to look for reviewers
 
@@ -117,7 +118,7 @@ Each submission should be reviewed by _two_ package reviewers. Although it is fi
 ### After review:
 
 -  `@ropensci-review-bot approve <package-name>`
-- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropenscilabs/makeregistry/blob/master/inst/automation/not_transferred.txt) to ensure the package gets included in rOpenSci package registry.*
+- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
 -   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 -   If authors maintain a gitbook that is at least partly about their 
 package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors 
@@ -202,6 +203,18 @@ Thank authors for their submission, explain the reasons for the decision, and di
 
 [Examples of out-of-scope submissions and responses](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
+
+
+## Answering reviewers' questions {#reviewersupport}
+
+Reviewers might ask for feedback on e.g. the tone of their review.
+Beside pointing them at general guidance in this guide, asking editors / opening an issue when such guidance is lacking,
+here are some review examples that might be useful.
+
+* tough-but-constructive example: the part of this review suggesting a re-write of the vignette: [ropensci/software-review#191 (comment)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+* [the `slopes` package](https://github.com/ropensci/software-review/issues/420), which ended up being fundamentally redesigned in response to the reviews. All reviews/reviewers were at all times entirely constructive, which seems to have played a major role in motivating the authors to embark on such a major overhaul. Comments such as, _"this package does not ..."_ or _"has not ..."_ were invariably followed by constructive suggestions for what could be done (there are, for example, [several in one of the first reviews](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+* tic reviews politely expressed reservations: https://github.com/ropensci/software-review/issues/305#issuecomment-504762517 and https://github.com/ropensci/software-review/issues/305#issuecomment-508271766 
+* bowerbird useful ["pre-review"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) that resulted in a package split before the actual reviews.
 
 ## Managing a dev guide release {#bookrelease}
 

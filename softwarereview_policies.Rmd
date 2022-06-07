@@ -47,9 +47,7 @@ In the case where none of the [associate editors](#associateditors) can serve as
 
 ## Aims and Scope {#aims-and-scope}
 
-rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the
-categories outlined below.  If you are unsure whether your package fits into one of these categories, please open an issue as a pre-submission inquiry
-([**Examples**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
+rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the categories outlined either below.  Statistical software may also be submitted for peer review, for which we have a separate [set of guidelines and standards](https://stats-devguide.ropensci.org/index.html). The categories below are for general, and not statistical, software, while the remainder of this chapter applies to both kinds of software. If you are unsure whether your package fits into one of the general or statistical categories, please open an issue as a pre-submission inquiry ([**Examples**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
 As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today. For instance, data visualization packages are no longer in-scope. While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
 
@@ -96,12 +94,6 @@ In addition, we have some _specialty topics_ with a slightly broader scope.
 Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.
 
 Packages that include interactive tools to facilitate researcher workflows (e.g., shiny apps) must have a mechanism to make the interactive workflow reproducible, such as code generation or a scriptable API.
-
-Here are some types of packages we are unlikely to accept:
-
--  Packages that wrap or implement statistical or machine learning methods.  We are not organized so as to review the correctness of these methods (But see "text analysis", above).
--  Exploratory data analysis packages that visualize or summarize data.
--  General workflow or package development support packages.
 
 For packages that are not in the scope of rOpenSci, we encourage submitting them to CRAN, BioConductor, as well as other R package development initiatives (e.g., [cloudyr](https://cloudyr.github.io/)), and software journals such as JOSS, JSS, or the R journal, depending on the current scopes of those journals.
 
@@ -251,10 +243,11 @@ and reviewers in addressing ethical questions related to privacy and research so
     Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
     provide fundamental principles for ethical practice by researchers.
 -   Several organizations provide guidance on how to translate these principles
-    into the the context of internet research. These include the [Ethical
+    into the context of internet research. These include the [Ethical
     Guidelines of The Association of Internet
-    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet Research
-    Ethics](https://www.etikkom.no/en/ethical-guidelines-for-research/ethical-guidelines-for-internet-research/),
+    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet
+    Research
+    Ethics](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
     and [BPS' Ethics Guidelines for Internet-Mediated
     Research](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
     [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) provide a
@@ -265,6 +258,9 @@ and reviewers in addressing ethical questions related to privacy and research so
 -   Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
     Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
     Integrity. <https://doi.org/10.1007/978-3-319-76040-7_18-1>
+-   Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., & Primack, B. (2021). Re-evaluating standards of
+    human subjects protection for sensitive health data in social media networks. 
+    Social Networks, 67, 41–46. <https://dx.doi.org/10.1016/j.socnet.2019.10.010>
 -   Lomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social
     Media. The Information Society, 30(4), 256--265. 
     <https://dx.doi.org/10.1080/01972243.2014.915276>

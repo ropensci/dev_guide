@@ -31,24 +31,26 @@ And delete the package current code of conduct if there was one.
 
 You can use issue, pull request and contributing guidelines.
 Having a contributing file as `.github/CONTRIBUTING.md` or `docs/CONTRIBUTING.md` is compulsory.
-
-Example of useful content:
+An easy way to insert a template for a contributing guide is the [`use_tidy_contributing()` function from the `usethis` package](https://usethis.r-lib.org/reference/tidyverse.html), which inserts [this template](https://github.com/r-lib/usethis/blob/main/inst/templates/tidy-contributing.md) as `.github/CONTRIBUTING.md`.
+A more extensive example is [this template by Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c), or the comprehensive [GitHub wiki pages for the mlr3 package](https://github.com/mlr-org/mlr3/wiki).
+These and other templates will generally need to be modified for use with an rOpenSci package, particularly by referring and linking to our [Code of Conduct](https://ropensci.org/code-of-conduct/), as described elsewhere [in this book](#code-of-conduct).
+Modifying a generic contributing guide to add a personal touch also tends to make it look less generic and more sincere. 
+Personal preferences in a contributing guide include:
 
 * Style preferences? You might however prefer to make style a configuration (of [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
 
 * Infrastructure like roxygen2?
 
-* Process preferences? Issue before a PR?
+* Workflow preferences? Issue before a PR?
 
-* Scope? E.g. in skimr.
+* A scope statement, like [in the skimr package](https://github.com/ropensci/skimr/blob/main/.github/CONTRIBUTING.md#understanding-the-scope-of-skimr)?
 
-* Sandbox account creation? Mocking in tests? Use links to external docs.
+* Sandbox account creation? Mocking in tests? Linking to external docs?
 
-Example: [contributing guide template by Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c).
-
-Adding a personal touch to your contributing guide might make it look less generic and therefore more sincere.
-
-CONTRIBUTING.md can also contain some details about how you acknowledge contributions (see [this section](#attributions)) and the roadmap of your package (cf [this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md)).
+rOpenSci further encourages contributing guides to include a lifecycle statement clarifying visions and expectations for the future development of your package, like [in this example](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md#roadmap).
+Statistical packages are required to have a lifecycle statement, as specified in [*General Statistical Stanards* G1.2](https://stats-devguide.ropensci.org/standards.html#documentation).
+That links provides a template for a simple lifecycle statement.
+CONTRIBUTING.md files can also describe how you acknowledge contributions (see [this section](#attributions)).
 
 We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
@@ -93,13 +95,17 @@ If your problem is _recruiting_ collaborators, you can post an open call like Ji
 
 ### Working with collaborators (including yourself) {#gitflow}
 
-You could implement the "[gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)" philosophy as explained by Amanda Dobbyn in [this blog post](https://ropensci.org/blog/2018/04/20/monkeydo/#gitflow). In a nutshell,
+[Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
-* Keep the default branch (main or master) as shippable as much as possible
+One of the branches is the default / main branch, where, if you follow [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), you "merge small, frequent updates".
+See also [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) and [GitLab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) docs.
+You might want to pair the frequent incrementing of version numbers (in `DESCRIPTION`). 
+One particular aspect of working with collaborators is reviewing pull requests, with some useful guidance in:
 
-* [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
+* [The Art of Giving and Receiving Code Reviews (Gracefully), by Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
+* [GitHub documentation about PR reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
-One particular aspect of working with collaborators is reviewing pull requests. Even if not adopting gitflow it might make sense for repo collaborators to make PRs and have them reviewed, and in general PRs by external developers will need to be assessed. Sometimes you'll be fine just reading the changes and trusting [Continuous integration](#ci). Sometimes you'll need more exploration and even extension of the PR in which case we recommend reading ["Explore and extend a pull request" in happygitwithr.com](https://happygitwithr.com/pr-extend.html).
+For making and reviewing pull requests we recommend [exploring usethis functions](https://usethis.r-lib.org/articles/pr-functions.html).
 
 ### Be generous with attributions {#attributions}
 
@@ -123,9 +129,9 @@ Please do not list editors as contributors. Your participation in and contributi
 
 If you give someone write permissions to the repository, 
 
-* please contact one of [the editors](#associateditors) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [outside collaborators](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
+* please contact a [staff member](https://ropensci.org/about#team) so that this new contributor might get **invited to rOpenSci's "ropensci" GitHub organization** (instead of being [an outside collaborator](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
-* please contact rOpenSci community manager [Stefanie Butland](https://github.com/stefaniebutland) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
+* please contact rOpenSci's [community manager or another staff member](https://ropensci.org/about#team) so that this new contributor might get get **invited to rOpenSci Slack workspace**.
 
 ## Further resources
 

@@ -6,7 +6,15 @@ This work-in-progress chapter includes [guidance about managing secrets in packa
 
 ## Miscellaneous
 
-* We recommend you [secure your GitHub account with 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+We recommend the article [Ten quick tips for staying safe online](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008563) by Danielle Smalls and Greg Wilson.
+
+## GitHub access security
+
+* We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
+
+* We also recommend you regularly check who has access to your package repository, and that you prune any unused access (such as from former collaborators).
+
+## https
 
 * If the web service your package wraps has either https or http, opt for https.
 
@@ -26,7 +34,7 @@ Say your package needs an API key for making requests on behalf of users of your
     
     * Do not print the API key even in verbose mode in any message, warning, error.
 
-* In the GitHub issue template, it should be stated not to share any credentials (it's the case for [rOpenSci issue template](https://docs.ropensci.org/rodev/reference/use_ro_github.html)). If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
+* In the GitHub issue template, it should be stated not to share any credentials. If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
 
 ### Secrets in packages and development
 
@@ -71,5 +79,3 @@ Useful security resources:
 * [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/);
 
 * [`gargle` article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
-
-* elements outlined in [this bookdown](https://ropenscilabs.github.io/r-security-practices/) ([repo](https://github.com/ropenscilabs/r-security-practices)) started at the unconf 2017.
