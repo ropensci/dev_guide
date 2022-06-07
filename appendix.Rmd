@@ -2,6 +2,8 @@
 
 # NEWS {#booknews}
 
+## dev (0.9.0)
+
 ## 0.8.0
 
 - 2022-06-03, Remove former references to now-archived "rodev" package
