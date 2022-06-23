@@ -4,7 +4,7 @@
 
 ## 0.8.1
 
-- 2022-06-23, Expanded explanation of Codecov, added @ewallace to contributor list (#484)
+- 2022-06-23, Expanded explanation of Codecov, added `@ewallace` to contributor list (#484)
 
 ## 0.8.0
 
