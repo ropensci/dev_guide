@@ -9,7 +9,7 @@ Along with [last chapter](#building), it forms our guidelines for Software Peer 
 ## What is continuous integration (CI)?
 
 Continuous integration automatically runs tests on software.
-In the case of rOpenSci, CI practically means that a set of tests will be automatically run via github, every time that you make a commit or pull request to github.
+In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time that you make a commit or pull request to GitHub.
 
 CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
 It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
