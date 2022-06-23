@@ -2,7 +2,7 @@
 
 # NEWS {#booknews}
 
-## 0.8.1
+## dev (0.9.0)
 
 - 2022-06-23, Expanded explanation of Codecov, added `@ewallace` to contributor list (#484)
 
