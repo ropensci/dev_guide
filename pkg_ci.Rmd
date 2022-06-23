@@ -6,9 +6,21 @@ This chapter summarizes our guidelines about continuous integration after explai
 Along with [last chapter](#building), it forms our guidelines for Software Peer Review.
 ```
 
+## What is continuous integration (CI)?
+
+Continuous integration automatically runs tests on software.
+In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time that you make a commit or pull request to GitHub.
+
+CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
+It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
+
+
 ## Why use continuous integration (CI)?
 
-All rOpenSci packages must use one form of continuous integration. This ensures that all commits, pull requests and new branches are run through `R CMD check`. rOpenSci packages' continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
+All rOpenSci packages must use one form of continuous integration.
+This ensures that all commits, pull requests and new branches are run through `R CMD check`.
+The results of all tests are displayed on the pull request page on GitHub, providing another layer of information about problems and protection against breaking your package before merging changes.
+rOpenSci packages' continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
 
 Both test status and code coverage should be reported via badges in your package README.
 
@@ -75,8 +87,18 @@ We no longer transfer AppVeyor projects to ropensci AppVeyor account so after tr
 
 ## Test coverage {#coverage}
 
-Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).  See the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well
-as `usethis::use_coverage()`. 
+Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).
+
+We recommend using Codecov.
+To activate Codecov for your repo, run `usethis::use_github_action("test-coverage")` to create a file `.github/workflows/test-coverage.yaml`.
+You also need to give Codecov access to your github repository, see [Codecov quick start guide](https://docs.codecov.com/docs/quick-start) for how to set up access.
+Then add a Codecov status badge to the top of your README.md, see [Codecov status badges](https://docs.codecov.com/docs/status-badges).
+
+Currently, Codecov has access to all ropensci github repositories by default.
+When your repository is accepted and transferred to ropensci, Codecov access should transfer automatically.
+You will need to update the URL of the badge to point to the rOpenSci-hosted repository.
+
+For more details, see the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well as [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) and [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
 
 If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).
 
