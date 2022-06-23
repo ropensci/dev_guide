@@ -2,6 +2,10 @@
 
 # NEWS {#booknews}
 
+## 0.8.1
+
+- 2022-06-23, Expanded explanation of Codecov, added @ewallace to contributor list (#484)
+
 ## 0.8.0
 
 - 2022-06-03, Remove former references to now-archived "rodev" package
