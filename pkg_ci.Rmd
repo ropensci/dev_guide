@@ -11,14 +11,15 @@ Along with [last chapter](#building), it forms our guidelines for Software Peer 
 Continuous integration automatically runs tests on software.
 In the case of rOpenSci, CI practically means that a set of tests will be automatically run via github, every time that you make a commit or pull request to github.
 
-For CI to be meaningful you have to have tests set up that work locally using `R CMD check`, see [testing](/building.html#testing).
+CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
 It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
+
 
 ## Why use continuous integration (CI)?
 
 All rOpenSci packages must use one form of continuous integration.
 This ensures that all commits, pull requests and new branches are run through `R CMD check`.
-Tests are required to pass before merging pull requests, which provides another layer of information about problems and protection against breaking your package.
+The results of all tests are displayed on the pull request page on GitHub, providing another layer of information about problems and protection against breaking your package before merging changes.
 rOpenSci packages' continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
 
 Both test status and code coverage should be reported via badges in your package README.
