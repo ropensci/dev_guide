@@ -326,7 +326,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
     
 * If your package interacts with a database you might find [dittodb](https://docs.ropensci.org/dittodb) useful.
 
-* Once you've set up [continuous interaction (CI)](#ci), use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
+* Once you've set up [continuous integration (CI)](#ci), use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
 * Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
 
