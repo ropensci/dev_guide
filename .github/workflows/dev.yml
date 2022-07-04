@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      dev
+      main
   schedule:
     - cron:  '0 12 * * *'
 
@@ -19,13 +19,13 @@ jobs:
           ref: dev
 
       - uses: r-lib/actions/setup-r@v2
-      
+
       - uses: r-lib/actions/setup-pandoc@v2
-      
+
       - uses: r-lib/actions/setup-tinytex@v2
-      
+
       - uses: r-lib/actions/setup-r-dependencies@v2
-      
+
       - name: Render book html
         run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
         env: # Set the secret as an input
