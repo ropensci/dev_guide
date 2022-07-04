@@ -2,7 +2,7 @@ Package: rOpenSci_dev_guide
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
-Version: 0.8.0
+Version: 0.8.1
 Imports:
     airtabler,
     htmltools,
