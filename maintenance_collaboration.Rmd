@@ -93,19 +93,26 @@ A possible model for onboarding collaborators is provided by Jim Hester in [his 
 
 If your problem is _recruiting_ collaborators, you can post an open call like Jim Hester's [on Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318), and as an rOpenSci package author, you can ask for help in rOpenSci slack and ask rOpenSci team for ideas for recruiting new collaborators.
 
-### Working with collaborators (including yourself) {#gitflow}
+### Working with collaborators (including yourself) {#git-workflow}
 
 [Branches](https://happygitwithr.com/git-branches.html) are cheap. Use them extensively when developing features, testing out new ideas, fixing problems.
 
 One of the branches is the default / main branch, where, if you follow [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), you "merge small, frequent updates".
 See also [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow) and [GitLab flow](https://docs.gitlab.com/ee/topics/gitlab_flow.html) docs.
 You might want to pair the frequent incrementing of version numbers (in `DESCRIPTION`). 
+
 One particular aspect of working with collaborators is reviewing pull requests, with some useful guidance in:
 
-* [The Art of Giving and Receiving Code Reviews (Gracefully), by Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
-* [GitHub documentation about PR reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
+* [The Art of Giving and Receiving Code Reviews (Gracefully), by Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/);
+* [GitHub documentation about PR reviews](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
+
+You might want to tinker with your GitHub repository settings to, for instance, [require pull request reviews before merging](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging=).
+See also GitHub docs about ["code owners"](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 For making and reviewing pull requests we recommend [exploring usethis functions](https://usethis.r-lib.org/articles/pr-functions.html).
+
+For your "git remote" setup refer to [happy git with r](https://happygitwithr.com/common-remote-setups.html).
+See also [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) in the same book.
 
 ### Be generous with attributions {#attributions}
 

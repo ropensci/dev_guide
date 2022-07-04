@@ -427,7 +427,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
 
 * Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
 
-* A later section of this book contains some [git workflow tips](#gitflow).
+* A later section of this book contains some [git workflow tips](#git-workflow).
 
 ##  Miscellaneous CRAN gotchas {#crangotchas}
 
