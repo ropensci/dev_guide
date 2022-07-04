@@ -15,8 +15,6 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: dev
 
       - uses: r-lib/actions/setup-r@v2
 
