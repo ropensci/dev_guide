@@ -3,7 +3,7 @@ on:
   schedule:
     - cron:  '0 12 * * *'
 
-name: Render-dev-Book
+name: Rerender-released-Book
 
 jobs:
   bookdown:
