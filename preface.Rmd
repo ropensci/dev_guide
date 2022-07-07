@@ -1,4 +1,4 @@
-# Preface
+# Preface {.unnumbered}
 
 Welcome! This book is a guide for authors, maintainers, reviewers and editors of rOpenSci.
 
@@ -21,9 +21,13 @@ You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.52
 #| results: 'asis' 
 #| warning: false
 cat("\n```bibtex\n")
-cat(readLines("dev_citation_BibTeX.bib"), sep = "\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+cat(bibentry)
 cat("\n```\n")
-done <- file.remove("dev_citation_BibTeX.bib")
 ```
 
 _If you want to contribute to this book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_

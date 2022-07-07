@@ -1,4 +1,4 @@
-# rOpenSci Dev Guide
+# rOpenSci Dev Guide {.unnumbered}
 
 <a href="https://doi.org/10.5281/zenodo.2553043"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2553043.svg?branch=master" alt="DOI"></a>
 
@@ -14,7 +14,6 @@ s <- rvest::session(u)
 u <- paste0(s$url, "/export/hx") # redirected
 out <- rvest::read_html(u)
 bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
-writeLines(strsplit(bibentry, "\n")[[1]], "dev_citation_BibTeX.bib")
 cat(bibentry)
 cat("\n```\n")
 ```
