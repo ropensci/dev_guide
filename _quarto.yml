@@ -55,7 +55,7 @@ book:
 
   - part: Appendix
     chapters:
-    - index.Rmd
+    - appendix.Rmd
 
 format:
   html:
@@ -64,3 +64,4 @@ format:
     include-in-header: "matomo.html"
   pdf:
     include-in-header: "preamble.tex"
+    output-file: "ropensci-dev-guide.pdf"

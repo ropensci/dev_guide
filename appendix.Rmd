@@ -306,75 +306,112 @@
 
 You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
+::: {.content-hidden when-format="pdf"}
 ````markdown
-```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+```{r}
+#| results: 'asis'
+#| echo: false
 cat(readLines("templates/review.md"), sep = "\n")
 ```
 ````
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/review.md"}
-
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/review.md"
 ```
+:::
 
 # Review template in Spanish {#reviewtemplatees}
 
 You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
+::: {.content-hidden when-format="pdf"}
 ````markdown
-```{r, eval = !knitr::is_latex_output(), results="asis", echo=FALSE}
+```{r}
+#| results: 'asis'
+#| echo: false
 cat(readLines("templates/review-es.md"), sep = "\n")
 ```
 ````
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/review-es.md"}
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/review-es.md"
 
 ```
-
+:::
 
 
 # Editor's template {#editortemplate}
 
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/editor.md"}
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/editor.md"
 ```
 ```
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/editor.md"}
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/editor.md"
 
 ```
+:::
 
 # Review request template {#reviewrequesttemplate}
 
 Editors may make use of the e-mail template below in recruiting reviewers.
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/request.md"}
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/request.md"
 ```
-```
+````
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/request.md"}
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/request.md"
 
 ```
+:::
 
 
 # Reviewer approval comment template {#approval2template}
 
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/reviewer-approval.md"
 ```
-```
+````
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/reviewer-approval.md"}
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/reviewer-approval.md"
 
 ```
+:::
 
 # NEWS template {#newstemplate}
 
 
 ```markdown
-```{r, child="templates/news.md"}
+```{r}
+#| child: "templates/news.md"
 ```
 ```
 
@@ -386,14 +423,22 @@ Before running the script, please manually check the assignment of issues to the
 This should be run one month prior to planned release.
 
 
-```markdown
-```{r, eval = !knitr::is_latex_output(), child="templates/book-release.md"}
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/book-release.md"
 ```
-```
+````
+:::
 
-```{r, eval = knitr::is_latex_output(), child="templates/book-release.md"}
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/book-release.md"
 
 ```
+:::
 
 # How to set a redirect {#redirect}
 
