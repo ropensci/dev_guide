@@ -27,7 +27,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
 
       - name: Render book
-        run: quarto::quarto_render()
+        run: Rscript -e 'quarto::quarto_render()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
