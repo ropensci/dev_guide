@@ -14,11 +14,17 @@ This book contains our guidelines for packages contributed to [the rOpenSci suit
 
 ### Technical details
 
-Deployment is done via GitHub Actions: 
+Deployment is done via [GitHub Actions](.github/workflows).
+The book has a production version https://devguide.ropensci.org/ and a development version https://devdevguide.netlify.com/
+Both are updated when there are changes in their sources but also once a day to ensure the reviewers list is up to date (data pulled from Airtable).
 
-* whenever there's a GitHub release, the book is built and its content is then pushed to the `gh-pages` branch.
+* [prod.yml](.github/workflows/prod.yml): whenever there's a GitHub release, the book is built and its content is then pushed to the `gh-pages` branch. That branch serves ropensci.github.io/dev_guide which is redirected to https://devguide.ropensci.org/
 
-* whenever there's a push to `main`, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
+* [scheduled-manual-main.yml](scheduled-manual-main.yml): once a day the book is built with the source from the latest release (see "Checkout latest release tag" step) and pushed to the `gh-pages` branch.
+
+* [dev.yml](.github/workflows/dev.yml): whenever there's a push to the default branch `main`, and once a day, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
+
+* [pr.yml](.github/workflows/dev.yml): whenever there's a pull request to the default branch `main`, the book is built and its content is deployed via Netlify.
 
 Refer to [this blog post for more details and resources about bookdown deployment on GitHub Actions](https://ropensci.org/blog/2020/04/07/bookdown-learnings/#5-how-to-deploy-a-preview-of-the-book-for-pull-requests).
 
