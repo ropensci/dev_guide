@@ -73,9 +73,7 @@ Your tools for searching reviewers in the Airtable are
 
 * filters (please remove them once you're done), see example below.
 
-```{r, fig.alt='Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration', echo=FALSE}
-knitr::include_graphics("images/airtable.png")
-```
+![Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration](images/airtable.png)
 
 * creating a duplicated [view](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), depending on your Airtable skills.
 

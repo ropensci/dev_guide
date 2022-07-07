@@ -26,6 +26,7 @@ book:
 
   chapters:
   - index.Rmd
+  - preface.Rmd
 
   - part: Building Your Package
     chapters:
@@ -64,4 +65,4 @@ format:
     include-in-header: "matomo.html"
   pdf:
     include-in-header: "preamble.tex"
-    output-file: "ropensci-dev-guide.pdf"
+    output-file: "ropensci-dev-guide"
