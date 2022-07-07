@@ -53,9 +53,7 @@ As this is a living document, these categories may change through time and not a
 
 Note that not all rOpenSci projects and packages are in-scope or go through peer review.  Projects developed by [staff](https://ropensci.org/about/#team) or at conferences may be experimental, exploratory, address core infrastructure priorities and thus not fall into these categories. Look for the peer-review badge -  see below -  to identify peer-reviewed packages in the rOpenSci repository.
 
-```{r, echo = FALSE}
-knitr::include_graphics("images/status.png")
-```
+![example of a green peer-reviewed badge](images/status.png)
 
 ### Package categories
 

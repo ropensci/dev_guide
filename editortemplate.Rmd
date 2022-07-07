@@ -1,0 +1,19 @@
+# Editor's template {#editortemplate}
+
+
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/editor.md"
+```
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/editor.md"
+
+```
+:::

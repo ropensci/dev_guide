@@ -6,7 +6,7 @@ Version: 0.8.1
 Imports:
     airtabler,
     htmltools,
-    bookdown,
+    quarto,
     purrr,
     humaniformat,
     bslib,
@@ -18,7 +18,6 @@ Imports:
 Remotes:  
     bergant/airtabler,
     rstudio/htmltools,
-    rstudio/bookdown,
     r-lib/downlit,
     r-lib/rlang
 URL: https://github.com/ropensci/dev_guide

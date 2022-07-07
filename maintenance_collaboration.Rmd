@@ -1,5 +1,3 @@
-#  (PART) Maintaining Packages {-}
-
 # Collaboration Guide {#collaboration}
 
 ```{block, type='summaryblock'}
