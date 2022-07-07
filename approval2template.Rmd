@@ -1,0 +1,19 @@
+# Reviewer approval comment template {#approval2template}
+
+
+::: {.content-hidden when-format="pdf"}
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/reviewer-approval.md"
+```
+````
+:::
+
+::: {.content-visible when-format="pdf"}
+```{r}
+#| child: "templates/reviewer-approval.md"
+
+```
+:::

@@ -56,7 +56,15 @@ book:
 
   - part: Appendix
     chapters:
-    - appendix.Rmd
+    - booknews.Rmd
+    - reviewtemplate.Rmd
+    - reviewtemplatees.Rmd
+    - editortemplate.Rmd
+    - reviewrequesttemplate.Rmd
+    - approval2template.Rmd
+    - newstemplate.Rmd
+    - bookreleaseissue.Rmd
+    - redirect.Rmd
 
 format:
   html:
