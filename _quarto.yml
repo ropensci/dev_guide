@@ -62,3 +62,5 @@ format:
     theme: [cosmo, custom.scss]
     code-link: true
     include-in-header: "matomo.html"
+  pdf:
+    include-in-header: "preamble.tex"
