@@ -1,5 +1,3 @@
-#  (PART) Building Your Package {-}
-
 # Packaging Guide {#building}
 
 ```{block, type='summaryblock'}

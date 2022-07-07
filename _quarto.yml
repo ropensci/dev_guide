@@ -1,0 +1,64 @@
+project:
+  type: book
+
+book:
+  title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
+  author-meta: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+  description-meta: |
+    Extended version of the rOpenSci packaging guide.
+    This book is a guide for authors, maintainers, reviewers
+    and editors of rOpenSci. The first section of the book contains
+    our guidelines for creating and testing R packages.
+    The second section is dedicated to rOpenSci's software peer review
+    process: what it is, our policies, and specific guides for authors,
+    editors and reviewers throughout the process.
+    The third and last section features our best practice for nurturing
+    your package once it has been onboarded: how to collaborate with
+    other developers, how to document releases, how to promote your
+    package and how to leverage GitHub as a development platform.
+    The third section also features a chapter for anyone wishing
+    to start contributing to rOpenSci packages.
+  cover-image: images/cover.png
+  reader-mode: true
+  site-url: https://devguide.ropensci.org/
+  repo-url: https://github.com/ropensci/dev_guide/
+  repo-actions: [edit, issue]
+
+  chapters:
+  - index.Rmd
+
+  - part: Building Your Package
+    chapters:
+    - pkg_building.Rmd
+    - pkg_ci.Rmd
+    - pkg_security.Rmd
+
+  - part: Software Peer Review of Packages
+    chapters:
+    - softwarereview_intro.Rmd
+    - softwarereview_policies.Rmd
+    - softwarereview_author.Rmd
+    - softwarereview_reviewer.Rmd
+    - softwarereview_editor.Rmd
+    - softwarereview_editor_management.Rmd
+
+  - part: Maintaining Packages
+    chapters:
+    - maintenance_collaboration.Rmd
+    - maintenance_changing_maintainers.Rmd
+    - maintenance_releases.Rmd
+    - maintenance_marketing.Rmd
+    - maintenance_github_grooming.Rmd
+    - maintenance_evolution.Rmd
+    - maintenance_curation.Rmd
+    - maintenance_contributing.Rmd
+
+  - part: Appendix
+    chapters:
+    - index.Rmd
+
+format:
+  html:
+    theme: [cosmo, custom.scss]
+    code-link: true
+    include-in-header: "matomo.html"

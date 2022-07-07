@@ -1,5 +1,3 @@
-#  (PART) Software Peer Review of Packages {-}
-
 # Software Peer Review, Why? What? {#softwarereviewintro}
 
 ```{block, type='summaryblock'}
