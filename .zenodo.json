@@ -80,5 +80,10 @@
             "orcid": "0000-0002-9254-9740"
         }
     ],
-    "access_right": "open"
+  "access_right": "open",
+  "related_identifiers": [{
+    "identifier": "https://github.com/ropensci/dev_guide",
+    "relation": "isIdenticalTo",
+    "scheme": "url"
+  }]
 }
