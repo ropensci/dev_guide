@@ -18,7 +18,7 @@ Thank you for your desire to participate in rOpenSci software peer-review as a r
 Please fill our [volunteering form](https://ropensci.org/software-reviewer).
 
 If you see a current submission that is particularly relevant to your interests please email `info@ropensci.org`, including the name of the package, the URL to the submission issue and the name of the assigned editor.
-However, keep in mind that reviewer invitations are kept to the editor's discretion, and the editor might well have already emailed people.
+However, keep in mind that reviewer invitations are kept at the editor's discretion, and the editor might well have already emailed people.
 Please do not volunteer for all issues, and do not volunteer via GitHub interface.
 
 For other ways to contribute, refer to [rOpenSci contributing guide](https://contributing.ropensci.org/).
