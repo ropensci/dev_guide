@@ -8,6 +8,11 @@ You might contact the editor in charge of the submission for any question you mi
 Please strive to complete your review within 3 weeks of accepting a review request. We will aim to remind reviewers of upcoming and past due dates. Editors may assign
 additional or alternate reviewers if a review is excessively late.
 
+**rOpenSci’s community is our best asset. 
+We aim for reviews to be open, non-adversarial, and focused on improving software quality. 
+Be respectful and kind! 
+See our reviewers guide and [code of conduct](https://ropensci.org/code-of-conduct/) for more.**
+
 _If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in [our public forum](https://discuss.ropensci.org/c/usecases), or [privately by email](https://ropensci.org/contact/)._ 
 ```
 
