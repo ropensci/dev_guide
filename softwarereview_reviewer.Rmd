@@ -49,6 +49,7 @@ We encourage you to use automated tools to facilitate your reviewing.  These inc
 -  Checking the package's logs on its continuous integration services (GitHub Actions, Codecov, etc.)
 -  Running `devtools::check()` and `devtools::test()` on the package to find any errors that may be missed on the author's system.
 -  Seeing whether tests' skipping is justified (e.g. `skip_on_cran()` tests that do real API requests vs. skipping all tests on one operating system).
+- If the package is not submitted via the default/main branch, remember to switch to the submitted review branch before starting your review. In this case, you will also have to search the package locally, as GitHub search is limited to the default branch. Further, documentation hosted on a `pkgdown` website is not necessarily up-to-date, and we recommend to inspect the package's documentation locally by running `pkgdown::build_site()`.
 
 Reviewers may also re-generate package check results from `@ropensci-review-bot` at any time by issuing the single comment in a review issue: `@ropensci-review-bot check package`.
 
@@ -88,6 +89,7 @@ and
 
 * the GitHub repo of the `refnet` package will be cloned.
 * a review project will be created, containing a notebook for you to fill, and the review template.
+* note that if the package is not submitted via the default/main branch, you need to switch to the submitted branch before starting your review. 
 
 ### Feedback on the process
 
@@ -105,3 +107,4 @@ We encourage you to ask questions and provide feedback on the review process on 
 Authors should respond within 2 weeks with their changes to the package in response to your review.  At this stage, we ask that you respond as to whether the changes sufficiently address any issues raised in your review. We encourage ongoing discussion between package authors and reviewers, and you may ask editors to clarify issues in the review thread as well.
 
 You'll use the [approval template](#approval2template).
+

@@ -38,6 +38,7 @@ This concise guide presents the software peer review process for you as a packag
 -   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 -   Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
+- Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch. 
 
 ## The Review Process
 
