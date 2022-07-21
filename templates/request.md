@@ -8,6 +8,11 @@ If you accept, note that we ask reviewers to complete reviews in three weeks. (W
 
 Our [reviewers guide] details what we look for in a package review, and includes links to example reviews. Our standards are detailed in our [packaging guide], and we provide a reviewer [template] for you to use. Please make sure you do not have a [conflict of interest](https://devguide.ropensci.org/policies.html#coi) preventing you from reviewing this package. If you have questions or feedback, feel free to ask me or post to the [rOpenSci forum].
 
+rOpenSci’s community is our best asset. 
+We aim for reviews to be open, non-adversarial, and focused on improving software quality. 
+Be respectful and kind! 
+See our reviewers guide and [code of conduct](https://ropensci.org/code-of-conduct/) for more.
+
 Are you able to review? If you can not, suggestions for alternate reviewers are always helpful. If I don't hear from you within a week, I will assume you are unable to
 review at this time.
 
