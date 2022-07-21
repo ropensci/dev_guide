@@ -58,6 +58,15 @@ Once a pull request is closer to being merged, you could use [a GitHub Actions P
 
 By using GitHub features around issues you can help potential contributors find them, and make your roadmap public.
 
+#### Issue templates
+
+You could use one or several [issue template(s)](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-templates=) to help users fill better bug reports or feature requests.
+When there are several issue templates, users who click on opening a new issue see a menu that guide their choices.
+
+You can even [configure one of the choices](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser=) to point to somewhere outside of your repository (for instance a discussion forum).
+
+Refer to [GitHub docs](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
+
 #### Issue labelling
 
 You can use labels such as "help wanted" and "good first issue" to help potential collaborators, including newbies, find your repo. [Cf GitHub article](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). You can also use the "Beginner" label. See [examples of beginner issues over all ropensci repos](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
@@ -70,6 +79,11 @@ It can help advertise what your priorities are.
 #### Milestones
 
 You can [create milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) and assign issues to them, which help see what you plan for the next version of your package for instance.
+
+### Communication with users
+
+You can point users to rOpenSci forum if you monitor it, or enable [GitHub Discussions](https://docs.github.com/en/discussions) for your package repository.
+Each GitHub discussion can be converted to an issue if needed (and the other way round, issues can be converted to discussions).
 
 ## Working with collaborators {#workingcollaborators}
 
