@@ -2,7 +2,9 @@
 
 ## dev (0.9.0)
 
-- 2022-07-20, Explanation of package submission via non-default branches (#485), added `@s3alfisc` to contributor list 
+- 2022-07-20, Explanation of package submission via non-default branches (#485), added `@s3alfisc` to contributor list.
+
+- 2022-07-20, add how to volunteer as a reviewer (#457).
 
 - 2022-06-23, Expanded explanation of Codecov, added `@ewallace` to contributor list (#484)
 
