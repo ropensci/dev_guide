@@ -137,6 +137,7 @@ In details, the EiC plays the following roles
 
 - Watches all issues posted to the software-review repo (either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack).
 - Tags issue with ` 0/editorial-team-prep`
+- Calls `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
 - Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
   
   ```
