@@ -59,7 +59,6 @@ book:
     chapters:
     - booknews.Rmd
     - reviewtemplate.Rmd
-    - reviewtemplatees.Rmd
     - editortemplate.Rmd
     - reviewrequesttemplate.Rmd
     - approval2template.Rmd

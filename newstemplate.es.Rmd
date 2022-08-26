@@ -1,0 +1,8 @@
+# NEWS template {#newstemplate}
+
+
+```markdown
+```{r}
+#| child: "templates/news.es.md"
+```
+```

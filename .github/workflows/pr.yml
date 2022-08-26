@@ -29,15 +29,20 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: local::.
 
       - name: Render book
-        run: Rscript -e 'quarto::quarto_render()'
+        run: Rscript -e 'rOpenScidevguide::orchestrate()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
-      - name: Move files around
+      - name: Move English files
         run: Rscript -e 'file.copy(from = "_book/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
+
+      - name: Move Spanish files
+        run: Rscript -e 'file.copy(from = "_book/es/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
 
       - name: Deploy to Netlify
         id: netlify-deploy

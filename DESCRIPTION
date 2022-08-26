@@ -1,4 +1,4 @@
-Package: rOpenSci_dev_guide
+Package: rOpenScidevguide
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
@@ -14,10 +14,17 @@ Imports:
     xml2,
     rvest,
     usethis,
-    rlang (>= 0.4.11.9000)
-Remotes:  
+    rlang (>= 0.4.11.9000),
+    yaml,
+    fs,
+    withr,
+    brio
+Remotes: 
     bergant/airtabler,
     rstudio/htmltools,
     r-lib/downlit,
     r-lib/rlang
 URL: https://github.com/ropensci/dev_guide
+RoxygenNote: 7.2.1
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
