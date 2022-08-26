@@ -3,6 +3,6 @@
 
 ```markdown
 ```{r}
-#| child: "templates/news.md"
+#| child: "templates/news.es.md"
 ```
 ```
