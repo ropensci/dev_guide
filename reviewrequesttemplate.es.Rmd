@@ -7,14 +7,14 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/request.md"
+#| child: "templates/request.es.md"
 ```
 ````
 :::
 
 ::: {.content-visible when-format="pdf"}
 ```{r}
-#| child: "templates/request.md"
+#| child: "templates/request.es.md"
 
 ```
 :::
