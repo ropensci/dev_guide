@@ -11,10 +11,14 @@ orchestrate <- function() {
   fs::dir_copy(getwd(), temporary_directory)
   config <- yaml::read_yaml(file.path(temporary_directory, "dev_guide", "_quarto.yml"))
   config$lang <- "es"
-  # Here there could be some logic not replacing if there is no .es equivalent
+
   fix_chapters <- function(chapters_list) {
     if (is.list(chapters_list)) {
       chapters_list$chapters <- gsub("\\.Rmd", ".es.Rmd", chapters_list$chapters)
+      if (any(!fs::file_exists(chapters_list$chapters))) {
+        chapters_list$chapters[!fs::file_exists(chapters_list$chapters)]  <-
+          gsub("\\.es\\.Rmd", ".Rmd", chapters_list$chapters[!fs::file_exists(chapters_list$chapters)])
+      }
       chapters_list
     } else {
       gsub("\\.Rmd", ".es.Rmd", chapters_list)
