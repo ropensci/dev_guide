@@ -6,14 +6,14 @@
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/reviewer-approval.md"
+#| child: "templates/reviewer-approval.es.md"
 ```
 ````
 :::
 
 ::: {.content-visible when-format="pdf"}
 ```{r}
-#| child: "templates/reviewer-approval.md"
+#| child: "templates/reviewer-approval.es.md"
 
 ```
 :::
