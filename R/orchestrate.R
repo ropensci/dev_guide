@@ -31,7 +31,7 @@ orchestrate <- function() {
       xml2::xml_add_child(
         sidebar,
         "a",
-        sprintf("Version in %s", lang),
+        sprintf("Versión en español", lang),
         href = sprintf("/%s", new_path)
       )
     } else {
@@ -39,7 +39,7 @@ orchestrate <- function() {
       xml2::xml_add_child(
         sidebar,
         "a",
-        sprintf("Version in %s", lang),
+        sprintf("Version in English", lang),
         class = "toc-action",
         href = sprintf("/%s/%s", lang, new_path)
       )
