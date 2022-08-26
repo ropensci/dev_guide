@@ -10,14 +10,14 @@ This should be run one month prior to planned release.
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/book-release.md"
+#| child: "templates/book-release.es.md"
 ```
 ````
 :::
 
 ::: {.content-visible when-format="pdf"}
 ```{r}
-#| child: "templates/book-release.md"
+#| child: "templates/book-release.es.md"
 
 ```
 :::
