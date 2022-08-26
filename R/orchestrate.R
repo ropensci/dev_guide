@@ -54,9 +54,9 @@ orchestrate <- function() {
         class = "toc-action",
         href = sprintf("/%s/%s", lang, new_path)
       )
-      a <- xml2::xml_children(sidebar_action_links)[length(xml2::xml_children(sidebar_action_links))]
-      xml2::xml_add_parent(a, "p")
     }
+    a <- xml2::xml_children(sidebar_action_links)[length(xml2::xml_children(sidebar_action_links))]
+    xml2::xml_add_parent(a, "p")
 
 
     xml2::write_html(html, path)
