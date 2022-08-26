@@ -1,3 +1,7 @@
+#' Render both book versions
+#'
+#' @export
+#'
 orchestrate <- function() {
 
   if (fs::dir_exists("_book")) fs::dir_delete("_book")
@@ -18,35 +22,40 @@ orchestrate <- function() {
   }
   config$book$chapters <- purrr::map(config$book$chapters, fix_chapters)
   yaml::write_yaml(config, file.path(temporary_directory, "dev_guide", "_quarto.yml"))
+
+  # fix for Boolean that is yes and should be true
+  config_lines <- brio::read_lines(file.path(temporary_directory, "dev_guide", "_quarto.yml"))
+  config_lines[grepl("code-link", config_lines)] <- sub("yes", "true", config_lines[grepl("code-link", config_lines)])
+  brio::write_lines(config_lines, file.path(temporary_directory, "dev_guide", "_quarto.yml"))
+
   quarto::quarto_render(file.path(temporary_directory, "dev_guide"), as_job = FALSE)
   fs::dir_copy(file.path(temporary_directory, "dev_guide", "_book"), file.path("_book", "es"))
 
   # Add the language switching part
   add_link <- function(path, lang = "en") {
     html <- xml2::read_html(path)
-    sidebar <- xml2::xml_find_all(html, "//div[@id='quarto-margin-sidebar']")
+    sidebar_action_links <- xml2::xml_find_all(html, "//div[@class='action-links']")
 
     if (lang == "en") {
       new_path <- sub("\\...\\.html", ".html", basename(path))
       xml2::xml_add_child(
-        sidebar,
+        sidebar_action_links,
         "a",
-        sprintf("Versión en español", lang),
+        sprintf("Version in English", lang),
+        class = "toc-action",
         href = sprintf("/%s", new_path)
       )
     } else {
       new_path <- fs::path_ext_set(basename(path), sprintf(".%s.html", lang))
       xml2::xml_add_child(
-        sidebar,
+        sidebar_action_links,
         "a",
-        sprintf("Version in English", lang),
+        sprintf("Versión en español", lang),
         class = "toc-action",
         href = sprintf("/%s/%s", lang, new_path)
       )
-      a <- xml2::xml_children(sidebar)[length(xml2::xml_children(sidebar))]
+      a <- xml2::xml_children(sidebar_action_links)[length(xml2::xml_children(sidebar_action_links))]
       xml2::xml_add_parent(a, "p")
-      p <- xml2::xml_children(sidebar)[length(xml2::xml_children(sidebar))]
-      xml2::xml_add_parent(a, "div", class = "action-links")
     }
 
 
