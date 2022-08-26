@@ -29,9 +29,11 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: local::.
 
       - name: Render book
-        run: Rscript -e 'quarto::quarto_render()'
+        run: Rscript -e 'rOpenScidevguide::orchestrate()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}

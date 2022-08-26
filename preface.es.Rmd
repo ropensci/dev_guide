@@ -1,0 +1,41 @@
+# Preface {.unnumbered}
+
+Welcome! This book is a guide for authors, maintainers, reviewers and editors of rOpenSci.
+
+The [first section of the book](#building) contains our guidelines for creating and testing R packages. 
+
+The [second section](#softwarereviewintro) is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. For _statistical software review_, refer to the [project webpage and resources](https://ropensci.org/stat-software-review/).
+
+The [third and last section](#collaboration) features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a [chapter for anyone wishing to start contributing to rOpenSci packages](#contributingguide).
+
+We hope that you'll find the guide useful and clear, and welcome your suggestions in the [issue tracker of the book](https://github.com/ropensci/dev_guide/issues). Happy R packaging!
+
+The rOpenSci editorial team.
+
+This book is a living document. 
+You can view updates to our best practices and policies via the [release notes](#booknews).  
+You can cite this book using [its Zenodo metadata and DOI](https://doi.org/10.5281/zenodo.2553043).
+
+```{r}
+#| echo: false
+#| results: 'asis' 
+#| warning: false
+cat("\n```bibtex\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+cat(bibentry)
+cat("\n```\n")
+```
+
+_If you want to contribute to this book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_
+
+_We are thankful for all authors, reviewers and guest editors for helping us improve the system and this guide over the years. Thanks also to the following persons who made contributions to this guide and its previous incarnations: [Katrin Leinweber](https://github.com/katrinleinweber), [John Baumgartner](https://github.com/johnbaums), [François Michonneau](https://github.com/fmichonneau), [Christophe Dervieux](https://github.com/cderv), [Lorenzo Busetto](https://github.com/lbusett), [Ben Marwick](https://github.com/benmarwick), [Nicholas Horton](https://github.com/nicholasjhorton), [Chris Kennedy](https://github.com/ck37), [Mark Padgham](https://github.com/mpadge), [Jeroen Ooms](https://github.com/jeroen), [Sean Hughes](https://github.com/seaaan), [Jan Gorecki](https://github.com/jangorecki), [Joseph Stachelek](https://github.com/jsta), [Dean Attali](https://github.com/daattali), [Julia Gustavsen](https://github.com/jooolia), [Nicholas Tierney](https://github.com/njtierney), [Rich FitzJohn](https://github.com/richfitz), [Tiffany Timbers](https://github.com/ttimbers), [Hilmar Lapp](https://github.com/hlapp), [Miles McBain](https://github.com/milesmcbain), [Bryce Mecum](https://github.com/amoeba), [Jonathan Carroll](https://github.com/jonocarroll/), [Carl Boettiger](https://github.com/cboettig/), [Florian Privé](https://github.com/privefl), [Stefanie Butland](https://github.com/stefaniebutland), [Daniel Possenriede](https://github.com/dpprdan/), [Hadley Wickham](https://github.com/hadley/), [Mauro Lepore](https://github.com/maurolepore/), [Matthew Fidler](https://github.com/mattfidler), [Luke McGuinness](https://github.com/mcguinlu), [Aaron Wolen](https://github.com/aaronwolen), [Indrajeet Patil](https://github.com/IndrajeetPatil), [Kevin Wright](https://github.com/kwstat), [Will Landau](https://github.com/wlandau), [Hugo Gruson](https://github.com/Bisaloo),
+[Hao Ye](https://github.com/ha0ye),
+[Sébastien Rochette](https://github.com/statnmap),
+[Edward Wallace](https://github.com/ewallace/), 
+[Alexander Fischer](https://github.com/s3alfisc/). 
+Please tell us if we forgot to acknowledge your contribution!_
+
