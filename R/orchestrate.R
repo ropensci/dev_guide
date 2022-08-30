@@ -4,14 +4,22 @@
 #'
 orchestrate <- function() {
 
+  # start from blank slate
   if (fs::dir_exists("_book")) fs::dir_delete("_book")
+
+  # render the English book
   quarto::quarto_render(as_job = FALSE)
 
+  # create temporary directory to render Spanish book
   temporary_directory <- withr::local_tempdir()
   fs::dir_copy(getwd(), temporary_directory)
+
+  # change language in temporary config
   config <- yaml::read_yaml(file.path(temporary_directory, "dev_guide", "_quarto.yml"))
   config$lang <- "es"
 
+  # change chapter names in temporary config
+  # to Spanish chapter names if they exist
   fix_chapters <- function(chapters_list) {
     if (is.list(chapters_list)) {
       chapters_list$chapters <- gsub("\\.Rmd", ".es.Rmd", chapters_list$chapters)
@@ -30,12 +38,15 @@ orchestrate <- function() {
   # fix for Boolean that is yes and should be true
   config_lines <- brio::read_lines(file.path(temporary_directory, "dev_guide", "_quarto.yml"))
   config_lines[grepl("code-link", config_lines)] <- sub("yes", "true", config_lines[grepl("code-link", config_lines)])
+  config_lines[grepl("reader-mode", config_lines)] <- sub("yes", "true", config_lines[grepl("reader-mode", config_lines)])
   brio::write_lines(config_lines, file.path(temporary_directory, "dev_guide", "_quarto.yml"))
 
+  # Render Spanish book
   quarto::quarto_render(file.path(temporary_directory, "dev_guide"), as_job = FALSE)
+  # Copy it to local not temporary _book/es
   fs::dir_copy(file.path(temporary_directory, "dev_guide", "_book"), file.path("_book", "es"))
 
-  # Add the language switching part
+  # Add the language switching link to the sidebar
   add_link <- function(path, lang = "en") {
     html <- xml2::read_html(path)
     sidebar_action_links <- xml2::xml_find_all(html, "//div[@class='action-links']")
