@@ -20,7 +20,8 @@ translate_page <- function(page_path) {
         target_lang = "ES",
         tag_handling = "xml",
         formality = "less",
-        glossary_id = "10203bb5-9099-4a18-8380-008712e90de4"
+        glossary_id = "10203bb5-9099-4a18-8380-008712e90de4",
+        ignore_tags = "code"
       ) |>
       httr2::req_method("POST") |>
       httr2::req_perform() |>
