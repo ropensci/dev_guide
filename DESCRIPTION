@@ -18,7 +18,11 @@ Imports:
     yaml,
     fs,
     withr,
-    brio
+    brio,
+    gert,
+    tinkr,
+    httr2,
+    memoise
 Remotes: 
     bergant/airtabler,
     rstudio/htmltools,
