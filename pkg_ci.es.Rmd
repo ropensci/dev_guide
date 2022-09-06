@@ -1,111 +1,111 @@
-# Continuous Integration Best Practices {#ci}
+# Mejores prácticas de integración continua {#ci}
 
-```{block, type='summaryblock'}
-This chapter summarizes our guidelines about continuous integration after explaining what continuous integration is.
+```{block, type="summaryblock"}
+Este capítulo resume nuestras directrices sobre la integración continua después de explicar qué es la integración continua.
 
-Along with [last chapter](#building), it forms our guidelines for Software Peer Review.
+Junto con el [último capítulo](#construcción), forma nuestras directrices para la revisión por pares del software.
 ```
 
-## What is continuous integration (CI)?
+## ¿Qué es la integración continua (IC)?
 
-Continuous integration automatically runs tests on software.
-In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time that you make a commit or pull request to GitHub.
+La integración continua ejecuta automáticamente pruebas sobre el software.
+En el caso de rOpenSci, CI significa prácticamente que un conjunto de pruebas se ejecutará automáticamente a través de GitHub, cada vez que hagas un commit o pull request a GitHub.
 
-CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
-It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
+La IC automatiza la ejecución de comprobaciones generales de los paquetes, como `R CMD check`ver [pruebas](/building.html#testing).
+Es posible configurar CI antes de escribir tus pruebas, entonces CI ejecutará las pruebas a medida que las envíes al repositorio.
 
+## ¿Por qué utilizar la integración continua (CI)?
 
-## Why use continuous integration (CI)?
+Todos los paquetes de rOpenSci deben utilizar una forma de integración continua.
+Esto asegura que todos los commits, pull requests y nuevas ramas se ejecutan a través de `R CMD check`.
+Los resultados de todas las pruebas se muestran en la página de pull request en GitHub, proporcionando otra capa de información sobre los problemas y la protección contra la ruptura de tu paquete antes de fusionar los cambios.
+La integración continua de los paquetes rOpenSci también debe estar vinculada a un servicio de cobertura de código, que indique cuántas líneas están cubiertas por las pruebas unitarias.
 
-All rOpenSci packages must use one form of continuous integration.
-This ensures that all commits, pull requests and new branches are run through `R CMD check`.
-The results of all tests are displayed on the pull request page on GitHub, providing another layer of information about problems and protection against breaking your package before merging changes.
-rOpenSci packages' continuous integration must also be linked to a code coverage service, indicating how many lines are covered by unit tests.
+Tanto el estado de las pruebas como la cobertura del código deben informarse mediante insignias en el README de tu paquete.
 
-Both test status and code coverage should be reported via badges in your package README.
+Los paquetes de R deben tener CI para todos los sistemas operativos (Linux, Mac OSX, Windows) cuando contengan
 
-R packages should have CI for all operating systems (Linux, Mac OSX, Windows) when they contain:
+- Código compilado
 
-* Compiled code
+- Dependencias de Java
 
-* Java dependencies
+- Dependencias de otros lenguajes
 
-* Dependencies on other languages
+- Paquetes con llamadas al sistema
 
-* Packages with system calls
+- Munición de texto, como obtener los nombres de las personas (para encontrar problemas de codificación).
 
-* Text munging such as getting people's names (in order to find encoding issues).
+- Cualquier cosa con llamadas al sistema de archivos / ruta de acceso
 
-* Anything with file system / path calls
+En caso de duda sobre la aplicabilidad de estos criterios a tu paquete, es mejor añadir CI para todos los sistemas operativos. La mayoría de las configuraciones estándar de los servicios de IC para los paquetes de R lo permiten sin mucha complicación.
 
-In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
+## ¿Qué servicio(s) de integración continua? {#whichci}
 
-## Which continuous integration service(s)? {#whichci}
+Hay varios servicios de integración continua, incluyendo servicios independientes (CircleCI, AppVeyor), y otros integrados en el alojamiento de código o servicios relacionados (GitHub Actions, GitLab, AWS Code Pipeline). Los distintos servicios admiten diferentes configuraciones de sistemas operativos.
 
-There are a number of continuous integration services, including standalone services (CircleCI, AppVeyor), and others integrated into code hosting or related services (GitHub Actions, GitLab, AWS Code Pipeline). Different services support different operating system configurations.
+[GitHub Actions](https://github.com/features/actions) es una opción conveniente para muchos desarrolladores de R que ya utilizan GitHub, ya que está integrado en la plataforma y es compatible con todos los sistemas operativos necesarios.  Hay [acciones compatibles con el ecosistema R](https://github.com/r-lib/actions/)así como soporte de primera clase en el [{usar esto}](https://usethis.r-lib.org/reference/github_actions.html) paquete. Todos los paquetes enviados a rOpenSci para su revisión por pares son comprobados por nuestro propio [`pkgcheck` sistema](https://docs.ropensci.org/pkgcheck)que se describe con más detalle en la [Guía para los autores](#authors-guide). Estas comprobaciones también se proporcionan como una acción de GitHub en el [`ropensci-review-tools/pkgcheck-action` repositorio](https://github.com/ropensci-review-tools/pkgcheck-action). Se anima a los autores de paquetes a que utilicen esa acción para confirmar, antes de su envío, que un paquete pasa todas nuestras comprobaciones. Consulta en [nuestra publicación en el blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) para más información.
 
-[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.  There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well and first-class support in the [{usethis}](https://usethis.r-lib.org/reference/github_actions.html) package. All packages submitted to rOpenSci for peer review are checked by our own [`pkgcheck` system](https://docs.ropensci.org/pkgcheck), described further in the [Guide for Authors](#authors-guide). These checks are also provided as a GitHub Action in the [`ropensci-review-tools/pkgcheck-action` repository](https://github.com/ropensci-review-tools/pkgcheck-action). Packages authors are encouraged to use that action to confirm prior to submission that a package passes all of our checks. See [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) for more information.
+[usethis soporta la configuración de CI para otros sistemas](https://usethis.r-lib.org/reference/ci.html)aunque estas funciones están en desuso. rOpenSci también admite la función [círculo](https://docs.ropensci.org/circle/) que ayuda a configurar las canalizaciones de CircleCI, y el paquete [tic](https://docs.ropensci.org/tic/) para la construcción de cadenas de CI más complicadas.
 
-[usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated. rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
+#### Pruebas con diferentes versiones de R
 
-#### Testing using different versions of R
+Exigimos que los paquetes de rOpenSci se prueben con las versiones más recientes, anteriores y de desarrollo de R para garantizar la compatibilidad con R base, tanto hacia atrás como hacia delante.
 
-We require that rOpenSci packages are tested against the latest, previous and development versions of R to ensure both backwards and forwards compatibility with base R. 
+Los detalles de cómo ejecutar pruebas/comprobaciones utilizando diferentes versiones de R localmente se pueden encontrar en la viñeta de R-hub sobre la ejecución de [Comprobaciones locales en Linux con Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
 
-Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html). 
+Puedes afinar el despliegue de pruebas con cada una de las versiones utilizando una matriz de pruebas.
 
-You can fine tune the deployment of tests with each versions by using a testing matrix.
+Si desarrollas un paquete que depende de Bioconductor o está destinado a él, puede que encuentres [biocthis](https://lcolladotor.github.io/biocthis/index.html) relevante.
 
-If you develop a package depending on or intended for Bioconductor, you might find [biocthis](https://lcolladotor.github.io/biocthis/index.html) relevant.
+#### Minimizar los tiempos de construcción en CI
 
-#### Minimizing build times on CI
+Puedes utilizar estos consejos para minimizar el tiempo de compilación en CI:
 
-You can use these tips to minimize build time on CI:
+- Almacenar en caché la instalación de los paquetes. La opción por defecto [r-lib/actions](https://github.com/r-lib/actions) hacen esto.
 
-* Cache installation of packages. The default [r-lib/actions](https://github.com/r-lib/actions) do this.
+### Travis CI (Linux y Mac OSX)
 
-### Travis CI (Linux and Mac OSX)
-
-We recommend [moving away from Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
+Recomendamos [alejarse de Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
 
 ### AppVeyor CI (Windows)
 
-For continuous integration on Windows, see [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Set it up using `usethis::use_appveyor()`.
+Para la integración continua en Windows, consulta [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Configúralo con `usethis::use_appveyor()`.
 
-Here are tips to minimize AppVeyor build time:
+Aquí tienes consejos para minimizar el tiempo de compilación de AppVeyor:
 
-* Cache installation of packages. [Example in a config file](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). It'll already be in the config file if you set AppVeyor CI up using `usethis::use_appveyor()`.
+- Guarda en caché la instalación de los paquetes. [Ejemplo en un archivo de configuración](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). Ya estará en el archivo de configuración si configuras AppVeyor CI con `usethis::use_appveyor()`.
 
-* Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
+- Activa [construcciones rodantes](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
-We no longer transfer AppVeyor projects to ropensci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+Ya no transferimos los proyectos de AppVeyor a la cuenta de AppVeyor de ropensci, así que después de transferir tu repo a la organización de GitHub "ropensci" de rOpenSci, la insignia será `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
-### Circle CI (Linux and Mac OSX)
+### Circle CI (Linux y Mac OSX)
 
-[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as continuous integration service.
+[Circle CI](https://circleci.com/) es utilizado, por ejemplo, por el paquete rOpenSci [`bomrang`](https://github.com/ropensci/bomrang) como servicio de integración continua.
+
+## Cobertura de pruebas {#cobertura}
+
+La integración continua también debe incluir la notificación de la cobertura de las pruebas a través de un servicio de pruebas como [Codecov](https://codecov.io/) o [Coveralls](https://coveralls.io/).
+
+Recomendamos utilizar Codecov.
+Para activar Codecov para tu repo, ejecuta `usethis::use_github_action("test-coverage")` para crear un archivo `.github/workflows/test-coverage.yaml`.
+También tienes que dar acceso a Codecov a tu repositorio de github, ver [Guía de inicio rápido de Codecov](https://docs.codecov.com/docs/quick-start) para saber cómo configurar el acceso.
+A continuación, añade una insignia de estado de Codecov en la parte superior de tu README.md, consulta [Insignias de estado de Codecov](https://docs.codecov.com/docs/status-badges).
+
+Actualmente, Codecov tiene acceso a todos los repositorios de github de ropensci por defecto.
+Cuando tu repositorio sea aceptado y transferido a ropensci, el acceso de Codecov debería transferirse automáticamente.
+Tendrás que actualizar la URL de la insignia para que apunte al repositorio alojado en rOpenSci.
+
+Para más detalles, consulta el [README del programa **covr** del paquete](https://github.com/r-lib/covr) para obtener instrucciones, así como en [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) y [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
+
+Si ejecutas la cobertura en varios servicios CI [los resultados se fusionarán](https://docs.codecov.io/docs/merging-reports).
+
+## Más CI: OpenCPU
+
+Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada empuje al repo se construirá en OpenCPU y la persona que hace el commit recibirá un correo electrónico de notificación. Este es un servicio adicional de CI para los autores de paquetes que permite llamar a las funciones de R en los paquetes de forma remota a través de [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/) utilizando la [API de opencpu](https://www.opencpu.org/api.html#api-json). Para más detalles sobre este servicio, consulta la página de ayuda de OpenCPU [página de ayuda](https://www.opencpu.org/help.html) que también indica dónde hacer preguntas.
+
+## Aún más CI: rOpenSci docs {#rodocsci}
+
+Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, se construirá un sitio web pkgdown para tu paquete después de cada empuje al repo de GitHub. Puedes encontrar el estado de estas construcciones en `https://dev.ropensci.org/job/package_name`por ejemplo [para `magick`](https://dev.ropensci.org/job/magick)y el sitio web en `https://docs.ropensci.org/package_name`por ejemplo [para `magick`](https://docs.ropensci.org/magick). La construcción del sitio web utilizará tu archivo de configuración pkgdown si tienes uno, excepto el estilo que utilizará el [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/). Por favor, informa de los errores, preguntas y peticiones de características sobre las construcciones centrales en [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
 
-## Test coverage {#coverage}
-
-Continuous integration should also include reporting of test coverage via a testing service such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/).
-
-We recommend using Codecov.
-To activate Codecov for your repo, run `usethis::use_github_action("test-coverage")` to create a file `.github/workflows/test-coverage.yaml`.
-You also need to give Codecov access to your github repository, see [Codecov quick start guide](https://docs.codecov.com/docs/quick-start) for how to set up access.
-Then add a Codecov status badge to the top of your README.md, see [Codecov status badges](https://docs.codecov.com/docs/status-badges).
-
-Currently, Codecov has access to all ropensci github repositories by default.
-When your repository is accepted and transferred to ropensci, Codecov access should transfer automatically.
-You will need to update the URL of the badge to point to the rOpenSci-hosted repository.
-
-For more details, see the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well as [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) and [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
-
-If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).
-
-## Even more CI: OpenCPU
-
-After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
-
-## Even more CI: rOpenSci docs {#rodocsci}
-
-After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci-org/rotemplate/.
