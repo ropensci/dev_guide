@@ -2,6 +2,8 @@
 
 ## dev (0.9.0)
 
+- 2022-09-20, fixed link to reviewer approval template (#548), and rendering of editor's template (#547)
+
 - 2022-08-23, add recommendation to document argument default (`@Bisaloo`, #501)
 
 - 2022-08-06, fix link to R Packages book (#498)
