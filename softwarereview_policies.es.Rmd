@@ -3,9 +3,9 @@
 ```{block, type="summaryblock"}
 Este capítulo contiene las políticas de la Revisión por Pares de Software de rOpenSci.
 
-En particular, leerás nuestras políticas relativas a la propia revisión por pares del software: el [proceso de presentación de revisiones](#review-submission), incluyendo nuestras [políticas sobre conflictos de intereses](#coi), y los [objetivos y alcance del sistema de revisión por pares del software](#aims-and-scope). Este capítulo también presenta nuestras políticas relativas a la [propiedad y mantenimiento de los paquetes](#propiedad-después-de-la-revisión-de-software).  
+En particular, leerás nuestras políticas relativas a la propia revisión por pares del software: el [proceso de presentación de revisiones](#review-submission), incluyendo nuestras [políticas sobre conflictos de intereses](#coi), y los [objetivos y alcance del sistema de revisión por pares del software](#aims-and-scope). Este capítulo también presenta nuestras políticas relativas a la [propiedad y mantenimiento de los paquetes](#ownership-after-softwarereview).  
 
-Por último, pero no menos importante, encontrarás el [código de conducta de la Revisión por Pares de Software de rOpenSci](#código-de-conducta).
+Por último, pero no menos importante, encontrarás el [código de conducta de la Revisión por Pares de Software de rOpenSci](#code-of-conduct).
 ```
 
 ## Proceso de revisión {#policiesreviewprocess}
