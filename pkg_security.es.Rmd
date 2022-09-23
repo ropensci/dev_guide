@@ -10,7 +10,7 @@ Recomendamos el artículo [Diez consejos rápidos sobre seguridad en Internet](h
 
 ## Seguridad al acceder a GitHub
 
-- Te recomendamos [proteger tu cuenta de GitHub con autenticación de dos factores (2FA)](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). Esto es *obligatorio* para miembros de la organización ropensci en GitHub y quienes colaboren de manera externa, así que asegúrate de habilitarla antes de que se apruebe tu paquete.
+- Te recomendamos [proteger tu cuenta de GitHub con autenticación de dos factores (2FA)](https://docs.github.com/es/authentication/securing-your-account-with-two-factor-authentication-2fa). Esto es *obligatorio* para miembros de la organización ropensci en GitHub y quienes colaboren de manera externa, así que asegúrate de habilitarla antes de que se apruebe tu paquete.
 
 - También te recomendamos que compruebes regularmente quién tiene acceso al repositorio de tu paquete, y que elimines cualquier acceso no utilizado (como el de antiguos/as colaboradores/as).
 
