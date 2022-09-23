@@ -76,10 +76,10 @@ has_airtable_access <- FALSE
 if (Sys.getenv("AIRTABLE_API_KEY") != ""){
   has_airtable_access <- TRUE
 } else {
-  # si la clave está en params entonces establécela como envvar:
+  # if key is in params then set as envvar:
   if ("params" %in% ls()) {
     if ("AIRTABLE_API_KEY" %in% names(params)){
-      Sys.setenv(CLAVE_API_ASIGNADA = params$CLAVE_API_ASIGNADA)
+      Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
       has_airtable_access <- TRUE
     }
   }
@@ -88,40 +88,38 @@ if (Sys.getenv("AIRTABLE_API_KEY") != ""){
 
 ```{r}
 #| echo: false
-#| resultados: 'asis'
+#| results: 'asis'
 #| eval: !expr has_airtable_access
-editores <- c(
-  "Noam Ross", "Karthik Ram", "Maëlle Salmon
+editors <- c(
+  "Noam Ross", "Karthik Ram", "Maëlle Salmon",
   "Melina Vidoni", "Anna Krystalli", "Mauro Lepore", 
   "Laura DeCicco", "Julia Gustavsen",
   "Emily Riederer", "Adam Sparks", "Jeff Hollister"
   )
-revisores <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
-                                tabla = "revisores-prod")
-revisores <- revisores$`revisores-prod`$select_all()
-revisores <- revisores[purrr::map_lgl(revisores$reviews, 
+reviewers <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
+                                table = "reviewers-prod")
+reviewers <- reviewers$`reviewers-prod`$select_all()
+reviewers <- reviewers[purrr::map_lgl(reviewers$reviews, 
                                ~!is.null(.)) & 
-                         !(revisores$nombre %in% c(editores, "??")), ]
-# Obtén los apellidos
-apellidos <- humaniformat::apellidos(trimws(nombre_revisores))
-revisores <- revisores[orden(apellidos), ]
-cat(paste0("[", revisores$nombre, "](https://github.com/", revisores$github, ")", collapse = " \U00B7 ")
+                         !(reviewers$name %in% c(editors, "???")), ]
+# get last names
+last_names <- humaniformat::last_name(trimws(reviewers$name))
+reviewers <- reviewers[order(last_names), ]
+cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
 ```
 
 También agradecemos a las siguientes personas que han actuado como editores invitados.
 
 ```{r}
 #| echo: false
-#| resultados: 'asis'
+#| results: 'asis'
 #| eval: !expr has_airtable_access
-editores_invitados <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
-                                tabla = "editores-invitados")
-editores_invitados <- editores_invitados$`editores_invitados`$select_all()
-guest_editors <- guest_editors[!(guest_editors$name %in% c(editors, "??")), ]
-# Obtén los apellidos
-apellidos <- humaniformat::apellidos(trimws(nombre_editores))
-editores_invitados <- editores_invitados[orden(apellidos), ]
-cat(paste0("[", guest_editors$nombre, "](https://github.com/", guest_editors$github, ")", collapse = " \U00B7 ")
+guest_editors <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
+                                table = "guest-editors")
+guest_editors <- guest_editors$`guest-editors`$select_all()
+guest_editors <- guest_editors[!(guest_editors$name %in% c(editors, "???")), ]
+# get last names
+last_names <- humaniformat::last_name(trimws(guest_editors$name))
+guest_editors <- guest_editors[order(last_names), ]
+cat(paste0("[", guest_editors$name, "](https://github.com/", guest_editors$github, ")", collapse = " \U00B7 "))
 ```
-
-
