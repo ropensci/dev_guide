@@ -1,4 +1,4 @@
-# Políticas de la Revisión por Pares de Software {#políticas}
+# Políticas de la Revisión por Pares de Software {#policies}
 
 ```{block, type="summaryblock"}
 Este capítulo contiene las políticas de la Revisión por Pares de Software de rOpenSci.
