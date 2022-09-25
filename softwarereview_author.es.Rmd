@@ -1,56 +1,53 @@
-# Guía para autores {#guía para autores}
+# Guía para autores/as {#authors-guide}
 
-```{block, type="summaryblock"}
-Esta guía concisa presenta el proceso de revisión por pares del software para ti como autor de paquetes.
+```{block, type='summaryblock'}
+Esta guía condensa el proceso de revisión por pares desde el punto de vista del/a autor/a de paquetes. 
 ```
 
-## Planificar una presentación (o una consulta previa a la presentación)
+## Planificar un envío (o una consulta previa al envío)
 
-- ¿Esperas mantener tu paquete durante al menos 2 años, o poder identificar a un nuevo mantenedor?
-- Consulta nuestras [políticas](#policies) para ver si tu paquete cumple nuestros criterios para encajar en nuestro conjunto y no se solapa con otros paquetes.
-  - Si no estás seguro de si un paquete cumple nuestros criterios, no dudes en abrir una edición como consulta previa a la presentación para preguntar si el paquete es apropiado.
-- Por favor, considera el mejor momento en el desarrollo de tu paquete para presentarlo.  Tu paquete debe estar lo suficientemente maduro como para que los revisores puedan revisar todos los aspectos esenciales, pero ten en cuenta que la revisión puede dar lugar a cambios importantes.
-  - Te recomendamos encarecidamente que envíes tu paquete para su revisión *antes de* publicar en CRAN o enviar un artículo de software que describa el paquete a una revista. Las devoluciones de las revisiones pueden dar lugar a importantes mejoras y actualizaciones de tu paquete, incluyendo cambios de nombre y de funciones.
-  - No envíes tu paquete para su revisión mientras éste o un manuscrito asociado esté también en proceso de revisión en otro lugar, ya que esto puede dar lugar a solicitudes de cambios contradictorias.
-- Ten en cuenta también el tiempo y el esfuerzo necesarios para responder a las revisiones: piensa en tu disponibilidad o en la de tus colaboradores en las semanas y meses siguientes al envío. Ten en cuenta que los revisores son voluntarios, y te pedimos que respetes su tiempo y esfuerzo respondiendo de forma puntual y respetuosa.
-- Si utilizas [insignias de repostatus.org](https://www.repostatus.org/) (que es lo que recomendamos), envíalo cuando estés listo para obtener un *Activo* en lugar de *WIP* en lugar de WIP. Del mismo modo, si utilizas [insignias del ciclo de vida](https://www.tidyverse.org/lifecycle/)el envío debe producirse cuando el paquete esté al menos *Madurando*.
-- Para cualquier envío o consulta previa al envío, el LÉEME de tu paquete debería proporcionar suficiente información sobre el mismo (objetivos, uso, paquetes similares) para que los editores puedan evaluar su alcance sin tener que instalar el paquete. Mejor aún, crea un sitio web de pkgdown para permitir una evaluación más detallada de la funcionalidad en línea.
-  - En la fase de presentación, todas las funciones principales deben ser lo suficientemente estables como para estar completamente documentadas y probadas; el LÉEME debe ser un argumento sólido para el paquete.
-  - Tu archivo README debe esforzarse por explicar la funcionalidad y los objetivos de tu paquete, asumiendo que los lectores tienen poco o ningún conocimiento del dominio. Deben aclararse todos los temas técnicos, incluidas las referencias a otro software.
-- Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución del paquete* [proporciona orientación sobre el tema](#evolution).
+-   ¿Esperas mantener tu paquete durante al menos 2 años, o poder identificar a un nuevo encargado/a?
+-   Consulta nuestras [políticas](#policies) para evaluar si tu paquete cumple nuestros criterios para encajar en nuestro conjunto de paquetes y no se superpone con otros paquetes.
+-   Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un issue para preguntar si el paquete es apropiado antes de presentarlo.
+-   Por favor, considera cuál es el mejor momento en el desarrollo de tu paquete para presentarlo. Tu paquete debe estar lo suficientemente maduro como para quienes lo revisen puedan evaluar todos los aspectos esenciales, pero ten en cuenta que la revisión puede resultar en cambios importantes.
+-   Te recomendamos encarecidamente que envíes tu paquete para su revisión *antes* de publicar en CRAN o enviar un artículo de software describiéndolo a una revista. Es posible que tu paquete sufra mejoras importantes y actualizaciones fruto de la revisión, incluyendo cambios en el nombre de las funciones o incompatibilidades con versiones anteriores.
+-   No envíes tu paquete para su revisión mientras éste o un manuscrito asociado estén también en proceso de revisión en otro lugar, ya que esto puede dar lugar a solicitudes de cambios contradictorias.
+-   Ten en cuenta también el tiempo y el esfuerzo necesarios para responder a las revisiones: piensa en tu disponibilidad o en la de tus colaboradores/as en las semanas y meses siguientes al envío. Ten en cuenta que las revisiones se hacen por voluntarios/as, y te pedimos que respetes su tiempo y esfuerzo respondiendo puntual y respetuosamente.
+-   Si utilizas [etiquetas de repostatus.org](https://www.repostatus.org/) (que recomendamos), envía tu paquete cuando esté listo para obtener la etiqueta *Active* en vez de *WIP*. Si utilizas [etiquetas del ciclo de vida](https://www.tidyverse.org/lifecycle/), el envío debe producirse cuando el paquete esté al menos en el estado *Maturing*.
+-   Para cualquier envío o consulta previa al envío, el README de tu paquete debería proporcionar suficiente información sobre el mismo (objetivos, uso, paquetes similares) para que los/as revisores/as puedan evaluar su alcance sin tener que instalar el paquete. Mejor aún, crea un sitio web de pkgdown para que puedan evaluar la funcionalidad detalladamente en línea.
+-   En la fase de envío, todas las funciones principales deben ser lo suficientemente estables como para estar completamente documentadas y testeadas. El README tiene que dar una buena impresión de tu paquete.
+-   El archivo README debe esforzarse por explicar la funcionalidad y los objetivos de tu paquete asumiendo poco o ningún conocimiento de dominio. Además, debe aclarar todos los temas técnicos, incluidas las referencias a otro software.
+-   Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución de paquetes* [proporciona orientación sobre el tema](#evolution).
 
-## Preparación para la presentación
+## Preparación para el envío
 
-- Lee y sigue [nuestra guía de estilo de envases](#building), [guía del revisor](#preparereview) para asegurarte de que tu envase cumple nuestros criterios de estilo y calidad.
-- No dudes en hacer cualquier pregunta sobre el proceso, o sobre tu envase concreto, en nuestro [Foro de debate](https://discuss.ropensci.org).
-- Todos los envíos son revisados automáticamente por nuestro [pkgcheck](https://docs.ropensci.org/pkgcheck/) para garantizar que los paquetes siguen nuestras directrices. Se espera que todos los autores hayan ejecutado [la función `pkgcheck` función](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que el paquete está listo para ser enviado. Otra forma aún más fácil de asegurarse de que un paquete está listo para su envío es utilizar [el `pkgcheck` Acción GitHub](https://github.com/ropensci-review-tools/pkgcheck-action) para ejecutar `pkgcheck` como una Acción GitHub, como se describe en [nuestra publicación en el blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
-- Si hay algún aspecto `pkgcheck` que tu paquete no pueda pasar, explica los motivos en tu plantilla de envío.
-- Si crees que tu paquete está en el ámbito de la
-  [Revista de Software de Código Abierto](https://joss.theoj.org/) (JOSS), no lo sometas a la consideración de JOSS hasta que haya finalizado el proceso de revisión de rOpenSci: si los editores de JOSS consideran que tu paquete está dentro del ámbito de aplicación, sólo se revisará el breve artículo que lo acompaña, (no el software que habrá sido revisado en extensión por rOpenSci en ese momento). No todos los paquetes de rOpenSci cumplirán los criterios de JOSS.
+-   Lee y sigue nuestra [guía de estilo para paquetes](#building) y nuestra [guía para la revisión](#preparereview) para asegurarte de que tu paquete cumple nuestros criterios de estilo y calidad.
+-   No dudes en hacer cualquier pregunta sobre el proceso en general, o sobre tu paquete en particular en nuestro [Foro de debate](https://discuss.ropensci.org).
+-   Todos los envíos son revisados automáticamente por nuestro [sistema propio](https://docs.ropensci.org/pkgcheck/) para garantizar que los paquetes sigan nuestras directrices. Se espera que hayas corrido [la función `pkgcheck` función](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que el paquete está listo para ser enviado. Otra forma aún más fácil de asegurarse de que un paquete está listo para su envío es utilizar [la acción de GitHub `pkgcheck`](https://github.com/ropensci-review-tools/pkgcheck-action) para ejecutar `pkgcheck` como una Acción GitHub, como se describe en [esta publicación en nuestro blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
+-   Si hay algún test de `pkgcheck` que tu paquete no pueda pasar, explica los motivos en la plantilla de envío.
+-   Si crees que tu paquete es relevante para el [Journal of Open Source Software](https://joss.theoj.org/) (JOSS), no lo sometas a consideración de JOSS hasta que haya finalizado el proceso de revisión de rOpenSci: si los/as editores/as de JOSS consideran que tu paquete está dentro de su ámbito de aplicación, sólo se revisará el breve artículo que lo acompaña, (no el software que habrá sido revisado en extensión por rOpenSci en ese momento). No todos los paquetes de rOpenSci pueden aplicar a JOSS.
 
-## El proceso de presentación
+## El proceso de envío
 
-- El software se presenta para su revisión mediante [abriendo una nueva edición](https://github.com/ropensci/software-review/issues/new/choose) en el repositorio de revisión de software y rellenando la plantilla.
-- La plantilla comienza con una sección que incluye varias variables de estilo HTML (`<!---variable--->`). Éstas son utilizadas por nuestro `ropensci-review-bot`y deben dejarse en su sitio, con los valores rellenados entre los puntos de inicio y final indicados, así
+-   Para presentar tu paquete a revisión tienes que [abrir un nuevo issue](https://github.com/ropensci/software-review/issues/new/choose) en el repositorio de revisión de software y completar la plantilla.
+-   La plantilla comienza con una sección que incluye varias variables de estilo HTML (`<!---variable--->`). Éstas son utilizadas por nuestro bot (`ropensci-review-bot`) y no deben modificarse. Los valores de las variables deben completarse ente los puntos de inicio y fin, así:
 
 ```{bash, eval=F}
-<!---variable--->insertar valor aquí<!---variable-final>
+<!---variable--->insertar valor aquí<!---end-variable>
 ```
 
-- La comunicación entre los autores, los revisores y los editores tendrá lugar, en primer lugar, en GitHub, para que el hilo de revisión pueda servir como registro completo de la revisión. Puedes optar por ponerte en contacto con el editor por correo electrónico o Slack si es necesario realizar una consulta privada (por ejemplo, preguntar cómo responder a una pregunta de un revisor). No te pongas en contacto con los revisores fuera del hilo sin preguntarles en el hilo de GitHub si están de acuerdo con ello.
-- *Cuando envíes un paquete, asegúrate de que la configuración de las notificaciones de GitHub hace improbable que te pierdas un comentario.*
-- Los paquetes se comprueban automáticamente al ser enviados por [nuestro sistema `pkgcheck` sistema](https://docs.ropensci.org/pkgcheck)que confirmará si un paquete está listo para ser revisado o no.
-- Los paquetes enviados pueden alojarse en la rama principal/por defecto, o en cualquier otra rama no predeterminada. En este último caso, se recomienda, pero no es obligatorio, enviar el paquete a través de una rama dedicada `ropensci-software-review` rama.
+-   La comunicación entre autores/as, revisores/as y editores/as se dará principalmente en GitHub, para que el issue de revisión sirva de registro completo de la misma. Puedes contactarte con el/la editor/a por correo electrónico o Slack si es necesario realizar una consulta privada (por ejemplo, preguntar cómo responder a una pregunta de un/a revisor/a). No te pongas en contacto con los/as revisores/as fuera del issue sin antes preguntarles, dentro del mismo, si están de acuerdo con ello.
+-   *Cuando envíes un paquete, por favor asegúrate de tener configuradas las notificaciones de GitHub para que no te pierdas ningún comentario.*
+-   Los paquetes se checkean automáticamente por [nuestro sistema `pkgcheck` sistema](https://docs.ropensci.org/pkgcheck) al ser enviados, el cual confirmará si está listo para ser revisado o no.
+-   Los paquetes enviados pueden estar en la branch main/default, o en cualquier otra rama no predeterminada. En este último caso, es recomendable, aunque no obligatorio, enviar el paquete a través de una branch dedicada llamada `ropensci-software-review`.
 
 ## El proceso de revisión
 
-- Un editor de [editor](#editors) revisará tu envío en un plazo de 5 días laborables y te responderá con los siguientes pasos. El editor puede asignar el paquete a los revisores, solicitar que el paquete se actualice para cumplir los criterios mínimos antes de la revisión, o rechazar el paquete por falta de ajuste o solapamiento.
-- Si tu paquete cumple los criterios mínimos, el editor asignará de 1 a 3 revisores. Se les pedirá que proporcionen revisiones en forma de comentarios sobre tu tema en un plazo de 3 semanas.
-- Te pedimos que respondas a los comentarios de los revisores en un plazo de 2 semanas desde la última revisión presentada, pero puedes actualizar tu paquete o responder en cualquier momento. Tu respuesta debe incluir un enlace a la actualización de [NEWS.md](#news) de tu paquete. Aquí tienes [un ejemplo de respuesta del autor](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  Fomentamos las conversaciones continuas entre autores y revisores. Consulta la [guía de revisión](#reviewerguide) para más detalles.
-- Cada vez que los cambios en los paquetes puedan alterar los resultados de [las comprobaciones automáticas `pkgcheck` revisiones](https://docs.ropensci.org/pkgcheck)los autores pueden solicitar una nueva revisión con el comando `@ropensci-review-bot check package`.
-- Por favor, notifícanos inmediatamente si ya no puedes mantener tu paquete o responder a las revisiones. En ese caso, se espera que te retractes del envío, o que encuentres responsables alternativos para el mantenimiento del paquete. También puedes discutir los problemas de mantenimiento en el espacio de trabajo rOpenSci slack.
-- Una vez que tu paquete sea aprobado, te proporcionaremos más instrucciones sobre la transferencia de tu repositorio al repositorio de rOpenSci.
+-   Un/a [editor/a](#editors) revisará tu envío en un plazo de 5 días laborables y te responderá con los siguientes pasos a seguir. Puede asignar el paquete a los/as revisores/as, solicitar que el paquete se actualice para cumplir los criterios mínimos antes de la revisión, o rechazar el paquete porque el mismo no encaja en rOpenSci o porque se solapa con uno ya existente.
+-   Si tu paquete cumple los criterios mínimos, se le asignará de 1 a 3 revisores/as, a quienes se les pedirá proporcionar revisiones en forma de comentarios sobre tu issue en un plazo máximo de 3 semanas.
+-   Te pedimos que respondas a estos comentarios en un plazo máximo de 2 semanas desde la última revisión presentada, pero puedes actualizar tu paquete o responder en cualquier momento. Tu respuesta debe incluir un enlace a la actualización del [NEWS.md](#news) de tu paquete. Aquí tienes [un ejemplo de respuesta](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656). Fomentamos las conversaciones continuas entre autores/as y revisores/as. Consulta la [guía de revisión](#reviewerguide) para más detalles.
+-   Si algún cambio en el paquete puede modificar los resultados de [`pkgcheck`](https://docs.ropensci.org/pkgcheck), se puede solicitar un nuevo check con el comando `@ropensci-review-bot check package`.
+-   Por favor, notifícanos inmediatamente si ya no puedes mantener tu paquete o responder a las revisiones. En ese caso, se espera que retractes el envío o que encuentres responsables alternativos para el mantenimiento del paquete. También puedes discutir los problemas de mantenimiento en el Slack de rOpenSci.
+-   Una vez que tu paquete sea aceptado, te proporcionaremos más instrucciones sobre la transferencia de tu repositorio al repositorio de rOpenSci.
 
-Nuestro [código de conducta](#code-of-conduct) es obligatorio para todos los que participan en nuestro proceso de revisión.
-
-
+Nuestro [código de conducta](#code-of-conduct) es obligatorio para la participación en nuestro proceso de revisión.
