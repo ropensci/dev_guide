@@ -1,5 +1,5 @@
 translate_page <- function(page_path) {
-  git_branch_name <- sprintf("%s-es", page_path)
+  git_branch_name <- sprintf("%s-es-curly", page_path)
 
   gert::git_branch_checkout("main")
   gert::git_pull()
@@ -31,7 +31,29 @@ translate_page <- function(page_path) {
   translate <- memoise::memoise(.translate)
 
   # Translate body
-  wool$body <- xml2::read_xml(translate(as.character(wool$body)))
+  wool$body <- tinkr::protect_curly(wool$body)
+  curlies <- xml2::xml_find_all(wool$body, "//*[@curly]")
+  replace_curly <- function(curly) {
+    xml2::xml_name(curly) <- "code"
+  }
+  purrr::walk(curlies, replace_curly)
+
+  len <- length(xml2::xml_children(wool$body))
+  half <- floor(len/2)
+  part1 <- translate(glue::glue_collapse(as.character(
+    xml2::xml_children(wool$body)[1:half]
+  ), sep = " "))
+  part2 <- translate(glue::glue_collapse(as.character(
+    xml2::xml_children(wool$body)[(half+1):len]
+  ), sep = " "))
+
+  wool$body <- xml2::read_xml(paste0(part1, part2))
+
+  curlies <- xml2::xml_find_all(wool$body, "//*[@curly]")
+  replace_curly <- function(curly) {
+    xml2::xml_name(curly) <- "text"
+  }
+  purrr::walk(curlies, replace_curly)
 
   wool$write(page_path)
 

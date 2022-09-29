@@ -20,14 +20,15 @@ Imports:
     withr,
     brio,
     gert,
-    tinkr,
+    tinkr (>= 0.1.0),
     httr2,
     memoise
-Remotes: 
+Remotes:  
     bergant/airtabler,
     rstudio/htmltools,
     r-lib/downlit,
-    r-lib/rlang
+    r-lib/rlang,
+    ropensci/tinkr
 URL: https://github.com/ropensci/dev_guide
 RoxygenNote: 7.2.1
 Roxygen: list(markdown = TRUE)
