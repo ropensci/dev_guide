@@ -9,6 +9,7 @@ translate_page <- function(page_path) {
     gert::git_branch_checkout(git_branch_name)
   }
 
+  # split in two just to be sure we respect the API size limit
   temp1 <- withr::local_tempfile()
   temp2 <- withr::local_tempfile()
   len <- length(readLines(page_path))
@@ -39,6 +40,7 @@ translate_page <- function(page_path) {
     translate <- memoise::memoise(.translate)
 
     # Translate body
+    # Protect content inside curly braces
     wool$body <- tinkr::protect_curly(wool$body)
     curlies <- xml2::xml_find_all(wool$body, "//*[@curly]")
     replace_curly <- function(curly) {
@@ -48,6 +50,7 @@ translate_page <- function(page_path) {
 
     wool$body <- xml2::read_xml(translate(as.character(wool$body)))
 
+    # Make curly tags text tags again
     curlies <- xml2::xml_find_all(wool$body, "//*[@curly]")
     replace_curly <- function(curly) {
       xml2::xml_name(curly) <- "text"
@@ -57,6 +60,7 @@ translate_page <- function(page_path) {
     wool$write(file)
   }
 
+  # re-merge the two parts
   translate_part(temp1)
   translate_part(temp2)
   brio::write_lines(
