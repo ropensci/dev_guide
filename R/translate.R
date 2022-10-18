@@ -17,10 +17,10 @@ translate_page <- function(page_path) {
   brio::write_lines(brio::read_lines(page_path)[1:half], temp1)
   brio::write_lines(brio::read_lines(page_path)[(half+1):len], temp2)
 
-  translate_part <- function(file) {
+  translate_part <- function(file, glosario) {
     wool <- tinkr::yarn$new(path = file)
 
-    .translate <- function(text) {
+    .translate <- function(text, glosario) {
       doc <- httr2::request("https://api-free.deepl.com/v2/translate") |>
         httr2::req_headers("Authorization" = sprintf("DeepL-Auth-Key %s", Sys.getenv("DEEPL_KEY"))) |>
         httr2::req_body_form(
@@ -29,7 +29,7 @@ translate_page <- function(page_path) {
           target_lang = "ES",
           tag_handling = "xml",
           formality = "less",
-          glossary_id = "10203bb5-9099-4a18-8380-008712e90de4",
+          glossary_id = glosario,
           ignore_tags = "code,curly"
         ) |>
         httr2::req_method("POST") |>
@@ -48,7 +48,7 @@ translate_page <- function(page_path) {
     }
     purrr::walk(curlies, replace_curly)
 
-    wool$body <- xml2::read_xml(translate(as.character(wool$body)))
+    wool$body <- xml2::read_xml(translate(as.character(wool$body), glosario = glosario))
 
     # Make curly tags text tags again
     curlies <- xml2::xml_find_all(wool$body, "//*[@curly]")
@@ -60,9 +60,16 @@ translate_page <- function(page_path) {
     wool$write(file)
   }
 
+  glossaries <- httr2::request("https://api-free.deepl.com/v2/glossaries") |>
+    httr2::req_headers("Authorization" = sprintf("DeepL-Auth-Key %s", Sys.getenv("DEEPL_KEY"))) |>
+    httr2::req_method("GET") |>
+    httr2::req_perform() |>
+    httr2::resp_body_json()
+  glosario <- glossaries$glossaries[purrr::map_chr(glossaries$glossaries, "name") == "glosario"][[1]]$glossary_id
+
   # re-merge the two parts
-  translate_part(temp1)
-  translate_part(temp2)
+  translate_part(temp1, glosario = glosario)
+  translate_part(temp2, glosario = glosario)
   brio::write_lines(
     c(brio::read_lines(temp1), brio::read_lines(temp2)),
     page_path
