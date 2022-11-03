@@ -114,49 +114,47 @@ bibentry(bibtype = "Manual",
 
 ## README
 
-- Todos los paquetes deben tener un archivo README, llamado `README.md`en la raíz del repositorio. El README debe incluir, de arriba a abajo
+- Todos los paquetes deben tener un archivo README, llamado `README.md`en la raíz del repositorio. El README debe incluir, de arriba a abajo:
   
   - El nombre del paquete.
-  - Insignias para la integración continua y la cobertura de pruebas, la insignia para la revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una insignia de repostatus.org, y cualquier otra insignia (por ejemplo [R-universo](https://ropensci.org/blog/2021/10/14/runiverse-badges/)). Si el README tiene muchas más insignias, puedes considerar el uso de una tabla de insignias, ver [este ejemplo](https://github.com/ropensci/ijtiff#ijtiff-), [este otro](https://github.com/ropensci/drake) y [ese otro](https://github.com/ropensci/qualtRics/). Esta tabla debe ser más ancha que alta.
-  - Breve descripción de los objetivos del paquete, con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, cf. [la sección de la web de documentación](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el LÉAME.
-  - Instrucciones de instalación utilizando, por ejemplo, el paquete [paquete remotes](https://remotes.r-lib.org/), [paquete pak](https://pak.r-lib.org/)o [R-universo](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
+  - Las etiquetas para la integración continua y la cobertura de test, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universo](https://ropensci.org/blog/2021/10/14/runiverse-badges/)). Si el README tiene muchas etiquetas, puedes considerar el uso de una tabla de etiquetas, ver [este ejemplo](https://github.com/ropensci/ijtiff#ijtiff-), [este otro](https://github.com/ropensci/drake) y [o este otro](https://github.com/ropensci/qualtRics/). Esta tabla debe ser más ancha que alta.
+  - Breve descripción de los objetivos del paquete, con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, por ejemplo [la sección documentación de la web](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el README.
+  - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [paquete pak](https://pak.r-lib.org/)o [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
   - Cualquier configuración adicional que se requiera (tokens de autenticación, etc).
   - Breve demostración de uso.
-  - Si procede, cómo se compara el paquete con otros paquetes similares y/o cómo se relaciona con otros paquetes.
-  - Información sobre la citación, es decir, dirige a los usuarios a la cita preferida en el LÉAME añadiendo el texto "así es como se puede citar mi paquete". Véase, por ejemplo [ecmwfr LÉAME](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
+  - Si aplica, cómo se compara el paquete con otros paquetes similares y/o cómo se relaciona con otros paquetes.
+  - Información sobre cómo citar, es decir, muestra a las personas el formato de cita preferida en el README añadiendo el texto "así es como se puede citar mi paquete". Véase, por ejemplo [el README de ecmwfr](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
 
-Si utilizas otro distintivo de estado del repo, como un [ciclo de vida](https://www.tidyverse.org/lifecycle/) por favor, añade también un [repostatus.org](https://www.repostatus.org/) . [Ejemplo de un README del repo con dos insignias de estado del repo](https://github.com/ropensci/ijtiff#ijtiff-).
+Si utilizas otra etiqueta de estado del repo, como el [ciclo de vida](https://www.tidyverse.org/lifecycle/) por favor, añade también una etiqueta de [repostatus.org](https://www.repostatus.org/) . [Ejemplo de un README de un repo con dos insignias de estado](https://github.com/ropensci/ijtiff#ijtiff-).
 
-- Una vez que hayas enviado un paquete y haya pasado las comprobaciones del editor, añade una insignia de revisión por pares a través de
+- Una vez que hayas enviado el paquete y haya pasado las revisiones del o la editora, añade la insignia de revisión por pares a través de
 
 ```
 [![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
-donde issue\_id es el número de la cuestión en el repositorio de revisión de software. Por ejemplo, la insignia de [`rtimicropem`](https://github.com/ropensci/rtimicropem) revisión utiliza el número 126, ya que es el número de [número de edición de revisión](https://github.com/ropensci/software-review/issues/126). La insignia indicará primero "en revisión" y luego "revisado" una vez que tu paquete haya sido incorporado (cuestión etiquetada como "aprobada" y cerrada), y enlazará con la cuestión de revisión.
+donde issue\_id es el número del issue en el repositorio donde se hizo la revisión del software. Por ejemplo, la etiqueta de revisión de [`rtimicropem`](https://github.com/ropensci/rtimicropem) utiliza el número 126, ya que es el [número del issue de revisión](https://github.com/ropensci/software-review/issues/126). La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu paquete haya sido incorporado (issue etiquetado como "aprobado" y cerrado), y estará linkeado con el issue de la revisión.
 
-- Si tu README tiene muchas insignias, considera la posibilidad de ordenarlas en una tabla html para facilitar a los recién llegados la obtención de información de un vistazo. Consulta los ejemplos en [`drake` repo](https://github.com/ropensci/drake) y en [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Las secciones posibles son
+- Si tu README tiene muchas etiquetas, considera la posibilidad de ordenarlas en una tabla html para facilitar a las personas que recien llegan a acceder a la información de un vistazo. Consulta los ejemplos en el [repo de `drake`](https://github.com/ropensci/drake) y en el [repo de `qualtRics`](https://github.com/ropensci/qualtRics/). Las secciones posibles son:
   
-  - Desarrollo (estados de CI cf [capítulo CI](#ci)canal de Slack para la discusión, repostatus)
-  - Liberación/Publicación ([Insignias de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [Insignia de la API de comprobación de CRAN](https://github.com/ropensci/cchecksapi#badges), insignia de Zenodo)
-  - Estadísticas/Uso (descargas, por ejemplo [insignias de descarga de METACRAN](https://www.r-pkg.org/services#badges))
-    La tabla debe ser más ancha que larga para enmascarar el resto del LÉAME.
+  - Desarrollo (estados de CI, ver el [capítulo CI](#ci), canal de Slack para la discusión, repostatus)
+  - Edición/Publicación ([etiquetas de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [etiqueta de la API de chequeos de CRAN](https://github.com/ropensci/cchecksapi#badges), etiqueta de Zenodo)
+  - Estadísticas/Uso (descargas, por ejemplo [etiquetas de descarga de METACRAN](https://www.r-pkg.org/services#badges))
+  - La tabla debe ser más ancha que larga para enmascarar el resto del README.
 
-- Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o envuelve otro software, ten en cuenta que el LÉEME de tu paquete puede ser el primer punto de entrada para los usuarios.  Debe proporcionar suficiente información para que los usuarios entiendan la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.  Por ejemplo
-  un LÉEME no debe limitarse a decir: "Proporciona acceso a GooberDB", sino que también debe incluir
-  "..., un repositorio online de avistamientos de Goober en Sudamérica.  Más información en
-  información sobre GooberDB, y la documentación de la estructura de la base de datos y los metadatos
-  se pueden encontrar en *enlace*".
+- Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o utiliza otro software, ten en cuenta que el README de tu paquete puede ser el punto de entrada para los/as usuarios/As.  Debe proporcionar suficiente información para que las personas entiendan la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.  Por ejemplo
+  un README no debe limitarse a decir: "Proporciona acceso a GooberDB", sino que también debe incluir
+  "..., un repositorio online de avistamientos de Goober en Sudamérica. Se puede encontrar más información sobre GooberDB, y la documentación de la estructura de la base de datos y metadatos en *enlace*".
 
-- Recomendamos no crear `README.md` directamente, sino a partir de un archivo `README.Rmd` archivo (un archivo R Markdown) si tienes algún código de demostración. La ventaja del archivo `.Rmd` es que puedes combinar el texto con el código que se puede actualizar fácilmente cada vez que se actualice tu paquete.
+- Recomendamos no crear el `README.md` directamente, sino a partir de un archivo `README.Rmd` (un archivo R Markdown) si incluye código de ejemplo. La ventaja del archivo `.Rmd` es que puedes combinar el texto con el código que puede actualizarse fácilmente cada vez que se actualice tu paquete.
 
-- Considera la posibilidad de utilizar `usethis::use_readme_rmd()` para obtener una plantilla para un archivo `README.Rmd` y para configurar automáticamente un gancho de precompromiso que garantice que `README.md` sea siempre más reciente que `README.Rmd`.
+- Considera utilizar `usethis::use_readme_rmd()` para generar una plantilla para el archivo `README.Rmd` y para configurar automáticamente un chequeo que garantice que `README.md` sea siempre más reciente que `README.Rmd` antes de hacer un commit.
 
-- Los ejemplos extensos deben guardarse para una viñeta. Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website).
+- Los ejemplos largos deben incluirse en una viñeta. Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website).
 
-- Añade un [código de conducta y directrices de contribución](#friendlyfiles).
+- Añade un [código de conducta y una guía de contribución](#friendlyfiles).
 
-- Consulta el [`gistr` README](https://github.com/ropensci/gistr#gistr) para ver un buen ejemplo de README a seguir para un paquete pequeño, y [`bowerbird` README](https://github.com/ropensci/bowerbird) para un buen ejemplo de README para un paquete más grande.
+- Consulta el [README de `gistr`](https://github.com/ropensci/gistr#gistr) para ver un buen ejemplo de README de un paquete pequeño, y le [README de `bowerbird`](https://github.com/ropensci/bowerbird) para un buen ejemplo de README de un paquete más grande.
 
 ## Documentación
 
@@ -164,41 +162,41 @@ donde issue\_id es el número de la cuestión en el repositorio de revisión de 
 
 - Todas las funciones exportadas del paquete deben estar completamente documentadas con ejemplos.
 
-- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el LÉAME, en la viñeta principal y, potencialmente, en el campo Descripción de DESCRIPTION. Ejemplo en [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird).
+- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el README, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION. Ejemplo en el [README de rtweet](https://docs.ropensci.org/rtweet/), y el [README de rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird).
 
-- El paquete debe contener la documentación de nivel superior para `?foobar`(o ``?`foobar-package` `` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?foobar` y ``?`foobar-package` `` para el archivo de manual de nivel de paquete, utilizando la etiqueta `@aliases` etiqueta roxygen. `usethis::use_package_doc()` añade la plantilla para la documentación de nivel superior.
+- El paquete debe contener la documentación de nivel superior para `?foobar` (o ``?`foobar-package` `` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?foobar` y ``?`foobar-package` `` para el archivo del manual del paquete, utilizando la etiqueta `@aliases` de roxygen. `usethis::use_package_doc()` añade la plantilla para generar la documentación de nivel superior.
 
-- El paquete debe contener al menos un archivo **HTML** que proporcione una cobertura sustancial de las funciones del paquete, ilustrando casos de uso realistas y cómo se pretende que interactúen las funciones. Si el paquete es pequeño, la viñeta y el README pueden tener un contenido muy similar.
+- El paquete debe contener al menos una viñeta en formato **HTML** que proporcione ejemplos sustanciales de las funciones del paquete, ilustrando casos de uso realistas y cómo se pretende que interactúen las funciones. Si el paquete es pequeño, la viñeta y el README pueden tener un contenido muy similar.
 
-- Al igual que el LÉAME, la documentación de primer nivel o las viñetas pueden ser el primer punto de entrada para los usuarios. Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o envuelve otro software, debe proporcionar suficiente información para que los usuarios entiendan la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.  Por ejemplo, la introducción de una viñeta o la documentación no debería limitarse a decir: "Proporciona acceso a GooberDB", sino incluir también: "..., un repositorio online de avistamientos de Goober en Sudamérica".  Puedes encontrar más información sobre GooberDB y la documentación de la estructura de la base de datos y los metadatos en *enlace*". Cualquier viñeta debe exponer los conocimientos previos para poder entender la viñeta de antemano.
+- Al igual que el README, la documentación de primer nivel o las viñetas pueden ser el punto de entrada para los/as usuarios/as. Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o utiliza otro software, debe proporcionar suficiente información para que los usuarios entiendan la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.  Por ejemplo, la introducción de una viñeta o la documentación no debería limitarse a decir: "Proporciona acceso a GooberDB", sino incluir también: "..., un repositorio online de avistamientos de Goober en Sudamérica. Puedes encontrar más información sobre GooberDB y la documentación de la estructura de la base de datos y los metadatos en *enlace*". Cualquier viñeta debe incluir que conocimientos previos son necesarios para poder entender la viñeta de antemano.
 
 La viñeta general debe presentar una serie de ejemplos que progresen en complejidad desde el uso básico al avanzado.
 
-- La funcionalidad que probablemente sólo utilicen los usuarios más avanzados o los desarrolladores podría estar mejor en una viñeta separada (por ejemplo, la programación de NSE con dplyr).
+- La funciones que probablemente sólo utilicen usuarios/as más avanzados/as o desarrolladores/as pueden incluirse en una viñeta separada (por ejemplo, la programación de NSE con dplyr).
 
-- El LÉAME, la documentación del paquete de nivel superior, las viñetas, los sitios web, etc., deben tener suficiente información al principio para obtener una visión general de alto nivel del paquete y de los servicios/datos a los que se conecta, y proporcionar navegación a otras piezas de documentación relevantes. Esto es para seguir el principio de *múltiples puntos de entrada* es decir, tener en cuenta el hecho de que cualquier pieza de documentación puede ser el primer encuentro del usuario con el paquete y/o la herramienta/datos que envuelve.
+- El README, la documentación del paquete de nivel superior, las viñetas, los sitios web, etc., deben tener suficiente información al principio para obtener una visión general del paquete y de los servicios/datos a los que se conecta, y proporcionar navegación a otras partes de la documentación relevante. Esto es para seguir el principio de *múltiples puntos de entrada* es decir, tener en cuenta el hecho de que cualquier pieza de documentación puede ser el primer encuentro de la persona con el paquete y/o la herramienta/datos que envuelve.
 
-- La(s) viñeta(s) debe(n) incluir citas del software y de los documentos cuando sea apropiado.
+- La(s) viñeta(s) debe(n) incluir citas a software y de artículos cuando corresponda.
 
-- Si tu paquete proporciona acceso a una fuente de datos, requerimos que la DESCRIPCIÓN contenga (1) Una breve identificación y/o descripción de la organización responsable de la emisión de los datos; y (2) La URL que enlaza con la página pública que proporciona, describe o permite el acceso a los datos (que a menudo puede diferir de la URL que conduce directamente a la fuente de datos).
+- Si tu paquete proporciona acceso a una fuente de datos, requerimos que la DESCRIPCIÓN contenga (1) Una breve identificación y/o descripción de la organización responsable de la generación de los datos; y (2) La URL que linkea con la página pública que proporciona, describe o permite el acceso a los datos (que a menudo puede diferir de la URL que conduce directamente a la fuente de datos).
 
-- Utiliza los mensajes de inicio del paquete sólo cuando sea necesario (enmascaramiento de funciones, por ejemplo). Evita los mensajes de inicio del paquete como "Esto es foobar 2.4-0" o la guía de citación porque pueden ser molestos para el usuario. Apóyate en la documentación para obtener dicha orientación.
+- Utiliza mensajes de inicio en el paquete sólo cuando sea necesario (cuando algunas funciones son enmascaradas, por ejemplo). Evita los mensajes de inicio del paquete tales como "Esto es foobar 2.4-0" o la guía de cómo citarlo porque pueden ser molestos para el/la usuario/a. Utiliza la documentación para dar ese tipo de información.
 
-- Puedes optar por tener una sección README sobre casos de uso de tu paquete (otros paquetes, entradas de blog, etc.), [ejemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
+- Puedes optar por tener una sección en el README sobre casos de uso de tu paquete (otros paquetes, entradas de blog, etc.), [ejemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
-### uso de roxygen2
+### Uso de roxygen2
 
-- Pedimos a todos los envíos que utilicen `roxygen2` para la documentación.  `roxygen2` es [un paquete de R](https://cran.r-project.org/web/packages/roxygen2/index.html) que compila automáticamente `.Rd` archivos a su `man` carpeta de su paquete a partir de simples etiquetas escritas sobre cada función.
+- Pedimos que todos los paquetes que se presenten a revisión utilicen `roxygen2` para generar la documentación. `roxygen2` es [un paquete de R](https://cran.r-project.org/web/packages/roxygen2/index.html) que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.
 
-- Más información sobre el uso de roxygen2 [documentación](https://r-pkgs.org/man.html) está disponible en el libro de paquetes de R.
+- Más información sobre el uso de [documentación](https://r-pkgs.org/man.html) con roxygen2 está disponible en el libro The R Packages.
 
-- Si escribieras Rd a mano, el programa [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd en roxygen.
+- Si escribieras los archivo .Rd a mano, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd en roxygen.
 
-- Una ventaja clave de utilizar `roxygen2` es que tu `NAMESPACE` siempre se generará automáticamente y estará actualizada.
+- Una ventaja clave de utilizar `roxygen2` es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
-- Todas las funciones deben documentar el tipo de objeto devuelto bajo el `@return` encabezamiento.
+- Todas las funciones deben documentar el tipo de objeto devuelto bajo el encabezamiento `@return`.
 
-- El valor por defecto de cada parámetro debe estar claramente documentado. Por ejemplo, en lugar de escribir `A logical value determining if ...`deberías escribir ``A logical value (default `TRUE`) determining if ...``. También es una buena práctica indicar los valores por defecto directamente en la definición de tu función:
+- El valor por defecto de cada parámetro debe estar claramente documentado. Por ejemplo, en lugar de escribir `Un valor lógico que determina si ...` deberías escribir ``Un valor lógico (por defecto `TRUE`) que determina si ...``. También es una buena práctica indicar los valores por defecto directamente en la definición de tu función:
 
 ```{r, eval=FALSE}
 f <- function(a = TRUE) {
@@ -206,21 +204,21 @@ f <- function(a = TRUE) {
 }
 ```
 
-- La documentación debe apoyar la navegación del usuario incluyendo enlaces cruzados útiles entre funciones relacionadas y documentando funciones relacionadas juntas en grupos o en páginas de ayuda comunes.  Las páginas `@seealso` y `@family` (esta última crea automáticamente enlaces "Ver también" y [pueden ayudar a agrupar](https://pkgdown.r-lib.org/reference/build_reference.html) funciones juntas en sitios pkgdown), se recomiendan para este propósito. Consulta [la sección "manual" del libro The R Packages](https://r-pkgs.org/man.html) y [la sección "agrupación de funciones" del presente capítulo](#function-grouping) para más detalles.
+- La documentación debe ayudar a la navegación de la persona incluyendo links entre funciones relacionadas y documentando funciones relacionadas juntas en grupos o en páginas de ayuda comunes. Las etiquetas `@seealso` y `@family` (esta última crea automáticamente enlaces "See also" y [pueden ayudar a agrupar las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) que agrupan las funciones en sitios pkgdown), se recomiendan para este fin. Consulta [la sección "manual" del libro The R Packages](https://r-pkgs.org/man.html) y [la sección "Agrupación de funciones" del presente capítulo](#function-grouping) para más detalles.
 
-- Podrías reutilizar piezas de documentación (por ejemplo, detalles sobre la autentificación, paquetes relacionados) en las viñetas/README/páginas de manual. Un posible enfoque para ello es el uso de [fragmentos de R Markdown, confiando en el uso de knitr de los documentos hijos para que puedas almacenar las partes reutilizadas en una carpeta en man/, y llamarlas tanto desde el README como desde la viñeta](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) como desde [como en las páginas man utilizando la etiqueta `@includeRmd` disponible en `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
+- Podrías reutilizar partes de la documentación (por ejemplo, detalles sobre la autentificación, paquetes relacionados) en las viñetas/README/páginas de manual. Un posible enfoque para ello es el uso de [fragmentos de R Markdown, utilizando knitr y documentos hijos para que puedas almacenar las partes de texto reutilizadas en una carpeta en man/, y llamarlas tanto desde el README como desde la viñeta](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) como desde [las páginas man utilizando la etiqueta `@includeRmd` disponible en `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
 
 - Añade `#' @noRd` a las funciones internas.
 
-- Si prefieres no abarrotar el código con una extensa documentación, puedes colocar más ejemplos fuera del script de R y utilizar la etiqueta `@example` y colocar más documentación en archivos en una carpeta `man-roxygen` carpeta en la raíz de tu paquete, y éstos se combinarán en el archivo del manual mediante el uso de `@template <file name>`por ejemplo.
+- Si prefieres no abarrotar el código con una extensa documentación, puedes colocar más ejemplos fuera del script de R. Utiliza la etiqueta `@example` y coloca más documentación en archivos en una carpeta `man-roxygen` ubicada en la raíz de tu paquete. Éstos se combinarán en el archivo del manual mediante el uso de por ejemplo `@template <file name>`.
   
-  - Coloca cualquier documentación de un objeto en un archivo `.R` archivo en la carpeta `man-roxygen` (en la raíz de tu paquete). Por ejemplo [este archivo](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Enlaza con ese archivo de plantilla desde tu función ([por ejemplo](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) con la palabra clave `@template` palabra clave ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). El contenido de la plantilla se insertará cuando se construya la documentación en el archivo resultante `.Rd` que los usuarios verán cuando pidan la documentación de la función.
-  - Ten en cuenta que si utilizas documentación en markdown, éste no funciona actualmente en los archivos de plantilla, así que asegúrate de utilizar el formato latex.
-  - En la mayoría de los casos puedes ignorar las plantillas y `man-roxygen`pero hay dos casos en los que aprovecharlos será de gran ayuda:
-    1. Cuando tengas mucha documentación para una función/clase/objeto, separar ciertos trozos de esa documentación puede mantener tu `.R` archivo fuente ordenado. Esto es especialmente útil cuando tienes mucho código en ese `.R` archivo. Por otro lado, significa que la documentación no es legible "en el código fuente", ya que está en otro archivo.
-    2. Cuando tienes las mismas partes de la documentación utilizadas en muchas `.R` funciones, es útil utilizar una plantilla. Esto reduce el texto duplicado y ayuda a evitar que se actualice por error la documentación de una función pero no la de otra. Utilizar un archivo de plantilla para la documentación de un parámetro es una alternativa a definir el parámetro para una función y utilizar `@inheritParams` para otras funciones que utilicen el mismo parámetro.
+  - Coloca la documentación de un objeto en un archivo `.R` en la carpeta `man-roxygen` (en la raíz de tu paquete). Por ejemplo [este archivo](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Linkea ese archivo de plantilla desde tu función ([por ejemplo](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) con la etiqueta `@template` ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). El contenido de la plantilla se insertará cuando se construya la documentación en el archivo resultante `.Rd` que las personas verán cuando accedan a la documentación de la función.
+  - Ten en cuenta que si utilizas documentación en markdown, éste no funciona actualmente en las plantilla, así que asegúrate de utilizar formato latex.
+  - En la mayoría de los casos puedes ignorar las plantillas y `man-roxygen` pero hay dos casos en los que aprovecharlos será de gran ayuda:
+    1. Cuando tengas mucha documentación en una función/clase/objeto, separar ciertos trozos de esa documentación puede mantener tu archivo `.R` ordenado. Esto es especialmente útil cuando tienes mucho código en ese archivo `.R`. Por otro lado, significa que la documentación no será legible "en el código fuente", ya que estará en otro archivo.
+    2. Cuando utilizas la misma documentación en muchas funciones y archivos `.R` es útil utilizar una plantilla. Esto reduce el texto duplicado y ayuda a evitar que se actualice por error la documentación de una función pero no la de otra. Utilizar un archivo de plantilla para la documentación de un parámetro es una alternativa a definir el parámetro para una función y utilizar `@inheritParams` para otras funciones que utilicen el mismo parámetro.
 
-- A partir de la `roxygen2` versión 7.0.0, `R6` las clases son oficialmente compatibles. Consulta la [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) para saber cómo documentar las `R6` las clases.
+- A partir de la `roxygen2` versión 7.0.0, las clases `R6` son oficialmente compatibles. Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd.html#r6) para saber cómo documentar las clases `R6`.
 
 ### URLs en la documentación
 
