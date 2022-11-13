@@ -222,47 +222,46 @@ f <- function(a = TRUE) {
 
 ### URLs en la documentación
 
-Esta subsección es especialmente relevante para los autores que deseen enviar su paquete a CRAN.
-CRAN comprobará las URLs en tu documentación y no permite códigos de estado de redirección como 301.
-Puedes utilizar el [urlchecker](https://github.com/r-lib/urlchecker) para reproducir estas comprobaciones y, en particular, sustituir las URLs por las URLs a las que redirigen.
-Otros han utilizado la opción de escapar de algunas URLs (cambiar `<https://ropensci.org/>` por `https://ropensci.org/`o `\url{https://ropensci.org/}` a `https://ropensci.org/`.), pero si lo haces, tendrás que implementar tú mismo algún tipo de comprobación de URL para evitar que se rompan sin que te des cuenta. Además, los enlaces no se podrán pulsar desde la documentación local.
+Esta subsección es especialmente relevante para quienes deseen enviar su paquete a CRAN.
+CRAN comprobará las URLs incluidas en la documentación y no permitirá páginas que redirijan a códigos 301.
+Puedes utilizar el paquete [urlchecker](https://github.com/r-lib/urlchecker) para reproducir los cheks de CRAN y, en particular, sustituir las URLs originales por las URLs a las que redirigen.
+Otras personas han utilizado la opción de mostrar algunas URLs de manera explícita sin link (cambiar `<https://ropensci.org/>` por `https://ropensci.org/`o `\url{https://ropensci.org/}` a `https://ropensci.org/`.), pero si lo haces, tendrás que implementar algún tipo de comprobación de URL para evitar que se rompan sin que te des cuenta. Además, no se podrá hacer click en los enlaces desde la documentación local.
 
-## Sitio web de documentación {#website}
+## Sitio web de la documentación {#website}
 
-Te recomendamos que crees un sitio web de documentación para tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown). Neal Richardson escribió [un buen tutorial para empezar `pkgdown`](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/)y, como no es de extrañar, el `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
+Te recomendamos que crees un sitio web con la documentación de tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown). Neal Richardson escribió [un tutorial para dar los primeros pasos con `pkgdown`](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/)y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
 
 Hay algunos elementos que nos gustaría subrayar aquí.
 
-### Despliegue automático del sitio web de documentación {#docsropensci}
+### Construcción automática del sitio web de la documentación {#docsropensci}
 
-Sólo tienes que preocuparte del despliegue automático de tu sitio web hasta que se apruebe y se transfiera el repositorio de tu paquete a la organización ropensci; de hecho, después de eso se construirá un sitio web pkgdown para tu paquete después de cada empuje al repositorio de GitHub. Puedes encontrar el estado de estas construcciones en `https://dev.ropensci.org/job/package_name`por ejemplo [para `magick`](https://dev.ropensci.org/job/magick)y el sitio web en `https://docs.ropensci.org/package_name`por ejemplo [para `magick`](https://docs.ropensci.org/magick). La construcción del sitio web utilizará tu archivo de configuración pkgdown si tienes uno, excepto el estilo que utilizará el [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/). El sitio web resultante tendrá una barra de búsqueda local. Por favor, informa de los errores, preguntas y peticiones de características sobre las construcciones centrales en [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) y sobre la plantilla en [https://github.com/ropensci/rotemplate/](https://github.com/ropensci/rotemplate/).
+Sólo tendrás que preocuparte por la construcción automática de tu sitio web cuando se apruebe y se transfiera el repositorio de tu paquete a la organización ropensci; de hecho, después de eso se construirá un sitio web pkgdown para tu paquete luego de cada push al repositorio de GitHub. Puedes encontrar el estado de estas acciones en `https://dev.ropensci.org/job/package_name`, por ejemplo [para `magick`](https://dev.ropensci.org/job/magick) y el sitio web en `https://docs.ropensci.org/package_name`, por ejemplo [para `magick`](https://docs.ropensci.org/magick). La construcción del sitio web utilizará el archivo de configuración pkgdown si tienes uno, excepto para el estilo, ya que utilizará el [paquete `rotemplate`](https://github.com/ropensci-org/rotemplate/). El sitio web resultante tendrá una barra de búsqueda local. Por favor, informa de los errores, preguntas y pedido de nuevas características para la construcción del sitio centralizada en [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) y sobre la plantilla en [https://github.com/ropensci/rotemplate/](https://github.com/ropensci/rotemplate/).
 
-*Si las viñetas de tus paquetes necesitan credenciales (claves de la API, tokens, etc.) para poder tejerse, es posible que quieras [precalcularlas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) ya que las credenciales no se pueden utilizar en el servidor de docs.*
+*Si las viñetas de tus paquetes necesitan credenciales (claves de la API, tokens, etc.) para poder generarlas, es posible que quieras [precalcularlas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) ya que las credenciales no se pueden utilizar en el servidor de documentos.*
 
-Antes del envío y de la transferencia, podrías utilizar el [enfoque documentado por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) o el [`tic` paquete](https://docs.ropensci.org/tic/) para el despliegue automático del sitio web del paquete. Esto te ahorraría la molestia de ejecutar (y recordar ejecutar) `pkgdown::build_site()` tú mismo cada vez que haya que actualizar el sitio. Primero consulta nuestro [capítulo sobre integración continua](#ci) si no estás familiarizado con la integración continua. En cualquier caso, no olvides actualizar todas las apariciones de la URL del sitio web después de la transferencia a la organización ropensci.
+Antes de la presentación y transferencia de tu paquete, puedes utilizar el [enfoque documentado por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) o el [paquete `tic`](https://docs.ropensci.org/tic/) para la construcción automática del sitio web del paquete. Esto te ahorrará el trabajo de ejecutar (y recordar ejecutar) `pkgdown::build_site()` cada vez que haya que actualizar el sitio. Primero consulta nuestro [capítulo sobre integración continua](#ci) si ésto no te resulta familiar. En cualquier caso, no olvides actualizar todas las apariciones de la URL del sitio web después de hacer la transferencia a la organización ropensci.
 
-### Agrupación de funciones en la referencia {#function-grouping}
+### Agrupar funciones en la referencia {#function-grouping}
 
-Cuando tu paquete tenga muchas funciones, utiliza la agrupación en la referencia, que puedes hacer de forma más o menos automática.
+Cuando tu paquete tenga muchas funciones, utiliza la agrupación en las referencias, que puedes aplicar de forma más o menos automática.
 
-Si utilizas `roxygen2` por encima de la versión 6.1.1, debes utilizar la etiqueta `@family` en la documentación de tus funciones para indicar la agrupación. Esto te dará enlaces entre las funciones en la documentación local del paquete instalado (sección "Ver también") *y* te permitirá utilizar la `pkgdown` `has_concept` función en el archivo de configuración de tu sitio web. Ejemplo de no-rOpenSci por cortesía de [`optiRum`](https://github.com/lockedata/optiRum): [etiqueta familiar](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` archivo de configuración](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) y [sección de referencia resultante](https://itsalocke.com/optirum/reference/).
-Para personalizar el texto del título de la referencia cruzada creada por roxygen2 (`Other {family}:`), consulta la documentación de [docs de roxygen2 sobre cómo proporcionar una `rd_family_title` lista en `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
+Si utilizas `roxygen2` versión 6.1.1 o mayor, debes utilizar la etiqueta `@family` en la documentación de tus funciones para indicar la agrupación. Esto generará enlaces entre la documentación local de las funciones del paquete instalado (sección "See also") *y* te permitirá utilizar la función `has_concept` de `pkgdown` en el archivo de configuración de tu sitio web. Puedes ver un ejemplo (no rOpenSci) cortesía de [`optiRum`](https://github.com/lockedata/optiRum): [etiqueta family](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [archivo de configuración de `pkgdown`](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) y [la sección de referencia resultante](https://itsalocke.com/optirum/reference/).
+Para personalizar el texto del título de la referencia cruzada creada por roxygen2 (`Other {family}:`), puedes consultar la documentación de [roxygen2 sobre cómo proporcionar una lista `rd_family_title` en `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
 
-Menos automáticamente, consulta el ejemplo de [`drake` sitio web](https://docs.ropensci.org/drake/) y [archivo de configuración asociado
-](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
+Menos automáticamente, puedes ver el ejemplo de [sitio web de `drake`](https://docs.ropensci.org/drake/) y el [archivo de configuración asociado](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
-### Marca de los autores
+### Marca de autores/as
 
-Puedes hacer que los nombres de (algunos) autores sean clicables añadiendo su URL, e incluso puedes sustituir sus nombres por un logotipo (piensa en rOpenSci... ¡o en tu organización/empresa!). Ver [`pkgdown` documentación](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
+Puedes hacer que los nombres de (algunos) autores/as sean links añadiendo su URL, e incluso puedes sustituir sus nombres por un logo (por ejemplo rOpenSci... ¡o tu organización/empresa!). Ver la [documentación de `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
 
 
 ### Ajustar la barra de navegación
 
-Puedes hacer que el contenido de tu sitio web sea más fácil de navegar ajustando la barra de navegación, consulta [`pkgdown` documentación](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). En particular, ten en cuenta que si nombras la viñeta principal de tu paquete "pkg-name.Rmd", será accesible desde la barra de navegación como un `Get started` en lugar de a través de `Articles > Vignette Title`.
+Puedes hacer que el contenido de tu sitio web sea más fácil de navegar organizando la barra de navegación, consulta [`pkgdown` documentación](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). En particular, ten en cuenta que si nombras la viñeta principal de tu paquete como "pkg-name.Rmd", será accesible desde la barra de navegación como `Para empezar` en lugar de a través de `Artículos > Título de la Vigñeta`.
 
 ### Mathjax
 
-Una vez que tu paquete sea transferido y obtenga un sitio web utilizando nuestra `pkgdown` plantilla, si quieres utilizar Mathjax tendrás que especificarlo en el archivo `pkgdown` archivo de configuración así
+Una vez que tu paquete sea transferido y obtenga un sitio web utilizando nuestra plantilla de `pkgdown`, si quieres utilizar Mathjax tendrás que especificarlo en el archivo de configuración de `pkgdown` de la siguiente manera
 
 ```yaml
 template:
@@ -270,54 +269,54 @@ template:
     mathjax: true
 ```
 
-### Logotipo del paquete
+### Logo del paquete
 
-Para utilizar el logotipo de tu paquete en la página de inicio de pkgdown, consulta [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
-Si tu paquete no tiene ningún logotipo, el [rOpenSci docs builder](#docsropensci) utilizará el logotipo de rOpenSci en su lugar.
+Para utilizar el logo de tu paquete en la página de inicio de pkgdown, consulta [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+Si tu paquete no tiene ningún logotipo, el [generador de la documentación de rOpenSci](#docsropensci) utilizará el logo de rOpenSci en su lugar.
 
 ## Autoría {#authorship}
 
-El archivo `DESCRIPTION` de un paquete debe enumerar los autores y colaboradores del paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (autor/creador/colaborador, etc.) si hay más de un autor, y utilizando el campo de comentarios para indicar el ID ORCID de cada autor, si lo tiene (cf. [este post](https://ropensci.org/technotes/2018/10/08/orcid/)). Véase [esta sección de "Escribir extensiones de R"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para más detalles.  Si crees que tus revisores han hecho una contribución sustancial al desarrollo de tu paquete, puedes incluirlos en el campo `Authors@R` con un tipo de contribución de revisor (`"rev"`), así:
+El archivo `DESCRIPTION` de un paquete debe enumerar los/as autores/As y colaboradores/as del paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (author/creator/contributor, etc.) si hay más de un/a autor/a. Utiliza el campo de comentarios para indicar el ID ORCID de cada persona si tuviera (ver [este post](https://ropensci.org/technotes/2018/10/08/orcid/)). Revisa [la sección "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para más detalles. Si crees que tus revisores/as han hecho una contribución sustancial al desarrollo de tu paquete, puedes incluirlos en el campo `Authors@R` usando el tipo de contribución de revisor (`"rev"`), por ejemplo:
 
 ```
-    persona("Bea", "Hernández", rol = "rev",
+    person("Bea", "Hernández", role = "rev",
     comment = "Bea revisó el paquete (v. X.X.XX) para rOpenSci, ver <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Sólo incluye a los revisores después de pedirles su consentimiento. Lee más en [esta entrada del blog "Agradeciendo a tus revisores: La gratitud a través de los metadatos semánticos"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Por favor, no incluyas a los editores como colaboradores. ¡Tu participación y contribución a rOpenSci es suficiente agradecimiento!
+Sólo incluye a los/as revisores/as después de pedirles su consentimiento. Lee más en [esta entrada del blog "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Por favor, no incluyas a los/as editores/As como colaboradores/as. ¡Su participación y contribución a rOpenSci es suficiente agradecimiento!
 
-### Autoría del código incluido {#authorship-included-code}
+### Autoría del código incluido en el paquete {#authorship-included-code}
 
-Muchos paquetes incluyen código de otro software. Tanto si se incluyen archivos enteros como funciones individuales de otros paquetes, los paquetes de rOpenSci deben seguir [el CRAN *Política del repositorio*](https://cran.r-project.org/web/packages/policies.html):
+Muchos paquetes incluyen código de otro software. Tanto si se incluyen archivos enteros como funciones individuales de otros paquetes, los paquetes de rOpenSci deben seguir [la *Política de Repositorio* de CRAN](https://cran.r-project.org/web/packages/policies.html):
 
-> La titularidad de los derechos de autor y de propiedad intelectual de todos los componentes del paquete debe ser clara e inequívoca (incluso a partir de la especificación de los autores en el archivo DESCRIPTION). Cuando el código se copie (o se derive) del trabajo de otros (incluso del propio R), hay que tener cuidado de que se conserven las declaraciones de derechos de autor/licencia y no se tergiverse la autoría.
+> La propiedad de los derechos de autor y de propiedad intelectual de todos los componentes del paquete debe ser clara e inequívoca (incluso en la especificación de autores/as en el archivo DESCRIPTION). Cuando el código se copie (o se derive) del trabajo de otras personas (incluso del propio R), hay que tener cuidado de que se conserven las declaraciones de derechos de autor/licencia y no se tergiverse la autoría.
 > 
-> Preferiblemente, se utilizaría un campo "Autores@R" con funciones "ctb" para los autores de dicho código. Como alternativa, el campo "Autor" debería incluir a estos autores como colaboradores.
+> Preferiblemente, se utilizaría un campo "Autores@R" con funciones "ctb" para los/asautores/as de dicho código. Como alternativa, el campo "Autor" puede incluir a estas personas como colaboradores/as.
 > 
-> Cuando los derechos de autor los tenga una entidad distinta de los autores del paquete, se indicará preferentemente mediante roles "cph" en el campo "Autores@R", o utilizando un campo "Derechos de autor" (si es necesario, remitiendo a un archivo inst/COPYRIGHTS).
+> Cuando los derechos de autor los tenga una entidad distinta de los/as autores/As del paquete, se indicará preferentemente mediante roles "cph" en el campo "Autores@R", o utilizando un campo "Derechos de autor" (si es necesario, redirigiendo a un archivo inst/COPYRIGHTS).
 > 
 > Deben respetarse las marcas comerciales.
 
 ## Licencia
 
-El paquete debe tener una licencia [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) o [OSI](https://opensource.org/licenses) aceptada.
-Para más explicaciones sobre las licencias, consulta el [Libro de paquetes de R](https://r-pkgs.org/license.html).
+El paquete debe tener una licencia aceptada por [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) o [OSI](https://opensource.org/licenses).
+Para más detalles sobre las licencias, consulta el libro [R packages](https://r-pkgs.org/license.html).
 
-## Probando
+## Testeo
 
 - Todos los paquetes deben pasar `R CMD check`/`devtools::check()` en las principales plataformas.
 
 - Todos los paquetes deben tener un conjunto de pruebas que cubran la funcionalidad principal del paquete. Las pruebas deben cubrir también el comportamiento del paquete en caso de error.
 
-- Es una buena práctica escribir pruebas unitarias para todas las funciones, y para todo el código del paquete en general, asegurando que se cubra la funcionalidad clave. La cobertura de las pruebas por debajo del 75% probablemente requerirá pruebas adicionales o una explicación antes de ser enviada para su revisión.
+- Es una buena práctica escribir pruebas unitarias para todas las funciones, y para todo el código del paquete en general, asegurando que se cubra las funcionalidades clave. Si la cobertura de las pruebas en tu paquete está por debajo del 75% probablemente requerirá pruebas adicionales o una explicación de su causa antes de ser enviado para su revisión.
 
-- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir las pruebas. Esfuérzate por escribir pruebas a medida que escribes cada nueva función. Esto responde a la necesidad obvia de tener pruebas adecuadas para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y en *defensivamente* defensivamente contra ellas. [Más información](https://r-pkgs.org/tests.html).
+- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir las pruebas. Intenta escribir pruebas a medida que escribes cada nueva función. Esto responde a la necesidad obvia de tener pruebas adecuadas para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y *defensivamente* programar en contra esas fallas. [Más información](https://r-pkgs.org/tests.html).
 
-- Las pruebas deben ser fáciles de entender. Te sugerimos que leas la entrada del blog [*"Por qué los buenos desarrolladores escriben malas pruebas unitarias"*](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
+- Las pruebas deben ser fáciles de entender. Te sugerimos que leas la entrada del blog [*"Why Good Developers Write Bad Unit Tests"*](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
 
-- Los paquetes con aplicaciones Shiny deberían utilizar un marco de pruebas unitarias como [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas se comportan como se espera.
+- Los paquetes con aplicaciones Shiny deberán utilizar pruebas unitarias usando [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas se comportan como se espera.
 
-- Para probar las funciones que crean gráficos, sugerimos utilizar [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html)una extensión del paquete testthat; o [pruebas de instantáneas de testthat](https://testthat.r-lib.org/articles/snapshotting.html).
+- Para probar las funciones que crean gráficos, sugerimos utilizar [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html) una extensión del paquete testthat; o [pruebas instantáneas de testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
 - Si tu paquete interactúa con recursos de la web (APIs de la web y otras fuentes de datos en la web) podrías encontrar el [libro HTTP testing in R de Scott Chamberlain y Maëlle Salmon](https://books.ropensci.org/http-testing/) relevante. Paquetes que ayudan a realizar pruebas HTTP (clientes HTTP correspondientes):
   
@@ -326,90 +325,82 @@ Para más explicaciones sobre las licencias, consulta el [Libro de paquetes de R
   - [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
   - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://github.com/jeroen/curl)).
 
-- testthat tiene una función `skip_on_cran()` que puedes utilizar para no ejecutar las pruebas en CRAN. Recomendamos utilizarla en todas las funciones que sean llamadas a la API, ya que es muy probable que fallen en CRAN. Estas pruebas deberían seguir ejecutándose en integración continua. Ten en cuenta que a partir de testthat 3.1.2 `skip_if_offline()` llama automáticamente a `skip_on_cran()`. Más información sobre [Preparación de CRAN para las envolturas de la API](https://books.ropensci.org/http-testing/cran-preparedness.html).
+- testthat tiene una función `skip_on_cran()` que puedes utilizar para no ejecutar las pruebas en CRAN. Recomendamos utilizarla en todas las funciones que tengan llamadas a APIs, ya que es muy probable que fallen en CRAN. Estas pruebas deberan seguir ejecutándose en la integración continua. Ten en cuenta que a partir de testthat 3.1.2 `skip_if_offline()` llama automáticamente a `skip_on_cran()`. Más información en [CRAN preparedness for API wrappers](https://books.ropensci.org/http-testing/cran-preparedness.html).
 
 - Si tu paquete interactúa con una base de datos puedes encontrar [dittodb](https://docs.ropensci.org/dittodb) útil.
 
-- Una vez que hayas configurado [la integración continua (CI)](#ci)utiliza el informe de cobertura de código de tu paquete (véase [esta sección de nuestro libro](#coverage)) para identificar las líneas no probadas y añadir más pruebas.
+- Una vez que hayas configurado [la integración continua (CI)](#ci) utiliza el informe de cobertura con tests de código de tu paquete (revisa [esta sección de nuestro libro](#coverage)) para identificar las líneas no testeadas y añadir más pruebas.
 
-- Aunque utilices la [integración continua](#ci)te recomendamos que ejecutes las pruebas localmente antes de enviar tu paquete, ya que a menudo se omiten algunas pruebas (puede que tengas que establecer `Sys.setenv(NOT_CRAN="true")` para asegurarte de que se ejecutan todas las pruebas). Además, te recomendamos que, antes de enviar tu paquete, utilices la herramienta de MangoTheCat [**buenas prácticas**](https://github.com/MangoTheCat/goodpractice/) para comprobar tu paquete en busca de posibles fuentes de errores, y ejecutar `spelling::spell_check_package()` para encontrar errores ortográficos en la documentación.
+- Aunque utilices la [integración continua](#ci) te recomendamos que ejecutes las pruebas localmente antes de enviar tu paquete, ya que a menudo se omiten algunas pruebas (puede que tengas que establecer `Sys.setenv(NOT_CRAN="true")` para asegurarte de que se ejecutan todas las pruebas). Además, te recomendamos que antes de enviar tu paquete utilices el paquete de MangoTheCat [`goodpractice`](https://github.com/MangoTheCat/goodpractice/) para testear tu paquete en busca de posibles fuentes de errores, y ejecutar `spelling::spell_check_package()` para encontrar errores ortográficos en la documentación.
 
 ## Ejemplos
 
 - Incluye ejemplos extensos en la documentación. Además de demostrar cómo se utiliza el paquete, pueden ser una forma fácil de probar la funcionalidad del paquete antes de que haya pruebas adecuadas. Sin embargo, ten en cuenta que exigimos pruebas en los paquetes contribuidos.
 
-- Puedes ejecutar los ejemplos con `devtools::run_examples()`. Ten en cuenta que cuando ejecutes R CMD CHECK o su equivalente (p. ej, `devtools::check()`) tus ejemplos que no están envueltos en `\dontrun{}` o `\donttest{}` se ejecutan. Consulta la [tabla resumen](https://roxygen2.r-lib.org/articles/rd.html#functions) en la documentación de roxygen2.
+- Puedes ejecutar los ejemplos con `devtools::run_examples()`. Ten en cuenta que cuando ejecutes R CMD CHECK o su equivalente (por ejemplo, `devtools::check()`) tus ejemplos que no esten envueltos en `\dontrun{}` o `\donttest{}` se ejecutaran. Consulta la [tabla de resumen](https://roxygen2.r-lib.org/articles/rd.html#functions) en la documentación de roxygen2.
 
-- Para proteger los ejemplos (por ejemplo, requiriendo autenticación) para que se ejecuten en CRAN, tienes que utilizar `\dontrun{}`. Sin embargo, para un primer envío, CRAN no te permitirá que todos los ejemplos escapen así. En este caso podrías añadir algunos pequeños ejemplos de juguete, o envolver el código de los ejemplos en `try()`. Consulta también la etiqueta `@exampleIf` presente, en el momento de escribir este artículo, en la versión de desarrollo de roxygen2.
+- Para evitar que los ejemplos (por ejemplo, si requieren autenticación) se ejecuten en CRAN, tienes que utilizar `\dontrun{}`. Sin embargo, para un primer envío, CRAN no te permitirá que todos los ejemplos se salteen así. En este caso podrías añadir algunos pequeños ejemplos de juguete, o incluir el código de los ejemplos en `try()`. Consulta también la etiqueta `@exampleIf`, que al momento de escribir este artículo, se encuentra en la versión de desarrollo de roxygen2.
 
-- Además de ejecutar los ejemplos localmente en tu propio ordenador, te aconsejamos encarecidamente que ejecutes los ejemplos en uno de los [sistemas de integración continua](#ci). De nuevo, los ejemplos que no están envueltos en `\dontrun{}` o `\donttest{}` se ejecutarán, pero para los que sí lo están puedes configurar tus construcciones de integración continua para que se ejecuten a través de los argumentos de comprobación de R CMD `--run-dontrun` y/o `--run-donttest`.
+- Además de ejecutar los ejemplos localmente en tu propia computadora, te aconsejamos fuertemente que ejecutes los ejemplos en uno de los [sistemas de integración continua](#ci). De nuevo, los ejemplos que no están incluidos en `\dontrun{}` o `\donttest{}` se ejecutarán, pero para los que sí lo están puedes configurar la integración continua para que se ejecuten a través de los argumentos de comprobación de R CMD `--run-dontrun` y/o `--run-donttest`.
 
 ## Dependencias del paquete {#pkgdependencies}
 
-- Utiliza `Imports` en lugar de `Depends` para los paquetes que proporcionan funciones de otros paquetes. Asegúrate de enumerar los paquetes utilizados para las pruebas (`testthat`), y la documentación (`knitr`, `roxygen2`) en tu sección `Suggests` sección de dependencias de paquetes (si utilizas `usethis` para añadir la infraestructura de pruebas a través de [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html)los paquetes necesarios se añadirán a `DESCRIPTION`). Si utilizas algún paquete en los ejemplos o pruebas de tu paquete, asegúrate de listarlo en `Suggests`si no aparece ya en `Imports`.
+- Utiliza `Imports` en lugar de `Depends` para los paquetes que proporcionan funciones de otros paquetes. Asegúrate de enumerar los paquetes utilizados para las pruebas (`testthat`), y la documentación (`knitr`, `roxygen2`) en tu sección `Suggests` de dependencias de paquetes (si utilizas `usethis` para añadir la infraestructura de pruebas a través de [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`). Si utilizas algún paquete en los ejemplos o pruebas de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
 
-- Si tu paquete (no de Bioconductor) depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el LÉAME y la viñeta son lo suficientemente claras incluso para un usuario que no esté familiarizado con el ciclo de publicación de Bioconductor.
+- Si tu paquete (no de Bioconductor) depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el README y la viñeta son lo suficientemente claras incluso para una persona que no esté familiarizada con el ciclo de publicación de Bioconductor.
   
-  - ¿Debe el usuario utilizar [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recomendado)? Documenta esto.
+  - ¿Debería la persona utilizar [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recomendado)? Documenta esto.
   
-  - ¿Es la instalación automática de los paquetes de Bioconductor por `install.packages()` suficiente? En ese caso, menciona que el usuario debe ejecutar `setRepositories()` si aún no han configurado los repositorios de Bioconductor necesarios.
+  - ¿Es suficiente instalación automática de los paquetes de Bioconductor con `install.packages()`? En ese caso, menciona que se debe ejecutar `setRepositories()` si aún no han configurado los repositorios de Bioconductor necesarios.
   
-  - Si tu paquete depende de Bioconductor a partir de una determinada versión, menciónalo en la DESCRIPCIÓN y en las instrucciones de instalación.
+  - Si tu paquete depende de Bioconductor a partir de una determinada versión, menciónalo en el archivo  DESCRIPTION y en las instrucciones de instalación.
 
 - Especificar las dependencias mínimas (por ejemplo `glue (>= 1.3.0)` en lugar de sólo `glue`) debería ser una elección consciente. Si sabes con certeza que tu paquete se romperá por debajo de una determinada versión de dependencia, especifícalo explícitamente.
-  Pero si no lo sabes, no es necesario especificar una dependencia mínima. En ese caso, si un usuario informa de un fallo que está explícitamente relacionado con una versión más antigua de una dependencia, entonces atiéndelo.
-  Un ejemplo de mala práctica sería que un desarrollador considerara las versiones de su estado actual de dependencias como la versión mínima. Eso obligaría innecesariamente a todo el mundo a actualizarse (causando problemas con otros paquetes) cuando no hay una buena razón detrás de esa elección de versión.
+  Pero si no lo sabes, no es necesario especificar una dependencia mínima. En ese caso, si una persona informa de un fallo que está explícitamente relacionado con una versión más antigua de una dependencia, entonces revísalo.
+  Un ejemplo de mala práctica sería que un/a desarrollador/a considerara las versiones de paquetes en su computadora como la versiones mínimas necesarias para las dependencias. Eso obligaría innecesariamente a todo el mundo a actualizar las dependencias (causando problemas con otros paquetes) cuando no hay una buena razón detrás de esa elección de versiones.
 
-- En la mayoría de los casos en los que debes exponer al usuario funciones de las dependencias, debes importar y reexportar esas funciones individuales en lugar de enumerarlas en los `Depends` campos.  Por ejemplo, si las funciones de tu paquete producen `raster` podrías reexportar sólo las funciones de impresión y trazado del paquete **raster** del paquete raster.
+- En la mayoría de los casos en los que debes exponer al usuario/a a funciones de las dependencias, debes importar y reexportar esas funciones individuales en lugar de enumerarlas en el campo `Depends`.  Por ejemplo, si las funciones de tu paquete producen objetos `raster` podrías reexportar sólo las funciones de impresión y graficado del paquete **raster**.
 
-- Si tu paquete utiliza un *sistema* del sistema, debes
+- Si tu paquete utiliza una dependencia de *sistema*, debes
   
-  - Indicarla en la DESCRIPCIÓN;
+  - Indicarla en el archivo DESCRIPTION;
   
-  - Comprobar que aparece en la lista de [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) para permitir que las herramientas automáticas lo instalen, y [enviar una contribución](https://github.com/r-hub/sysreqsdb#contributing) si no es así;
+  - Comprobar que aparece en la lista de [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) para permitir que las herramientas automáticas lo instalen, o [enviar una contribución](https://github.com/r-hub/sysreqsdb#contributing) si no es así;
   
-  - Comprueba que está en un `configure` script ([ejemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) y dar un mensaje de error útil si no se encuentra ([ejemplo](https://github.com/cran/webp/blob/master/configure)).
-    `configure` Los scripts pueden ser un reto, ya que a menudo requieren soluciones complicadas
-    para hacer que diversas dependencias del sistema funcionen en todos los sistemas. Utiliza ejemplos ([más aquí](https://github.com/search?q=org%3Acran+anticonf&type=Code)) como punto de partida, pero ten en cuenta que es habitual encontrar errores y casos límite y que a menudo se violan las políticas de CRAN. No dudes en [pedir ayuda en nuestro foro](https://discuss.ropensci.org/).
+  - Comprueba que está en un script `configure` ([ejemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) y devuelve un mensaje de error útil si no se encuentra ([ejemplo](https://github.com/cran/webp/blob/master/configure)).
+    Los scripts `configure` pueden ser un reto, ya que a menudo requieren soluciones complicadas
+    para hacer que diversas dependencias del sistema funcionen en todos los sistemas. Utiliza ejemplos como punto de partida ([más aquí](https://github.com/search?q=org%3Acran+anticonf&type=Code)), pero ten en cuenta que es habitual encontrar errores y casos límite y que a menudo violan las políticas de CRAN. No dudes en [pedir ayuda en nuestro foro](https://discuss.ropensci.org/).
 
-- Ten en cuenta las ventajas y desventajas de depender de un paquete. Por un lado
-  el uso de dependencias reduce el esfuerzo de codificación, y puede basarse en una funcionalidad útil desarrollada por
-  otros, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento
+- Ten en cuenta las ventajas y desventajas de tener dependencias con un paquete. Por un lado
+  el uso de dependencias reduce el esfuerzo de codificación, y puede usarse una funcionalidad útil desarrollada por otros, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento
   y/o está bien revisada y probada. Por otro lado, tener muchas dependencias
-  supone una carga para el mantenedor, que debe estar al día de los cambios en esos paquetes, con riesgo
-  para la sostenibilidad de tu paquete a largo plazo.  También
-  aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en tu ciclo de desarrollo y en el de otros, y en los sistemas de compilación automatizados. Los paquetes "pesados" -los que tienen muchas dependencias en sí mismos, y los que tienen grandes cantidades de código compilado- aumentan este coste. He aquí algunos enfoques para reducir
+  supone una carga para quien mantiene el paquete, que debe estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo. También
+  aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en tu ciclo de desarrollo y en el de otras personas, y en los sistemas de compilación automatizados. Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo. He aquí algunos enfoques para reducir
   las dependencias:
   
-  - Las funciones pequeñas y sencillas de un paquete dependiente pueden copiarse mejor en
-    tu propio paquete si la dependencia si sólo utilizas unas pocas funciones
-    en una dependencia grande o pesada.  (Ver [*Autoría* sección
-    arriba](#authorship-included-code) para saber cómo reconocer a los autores originales
-    del código copiado). Por otro lado, las funciones complejas con muchos casos
+  - Las funciones pequeñas y sencillas de una dependencia pueden copiarse en
+    tu propio paquete si sólo utilizas unas pocas funciones de esa dependencia grande o pesada. (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer a los/as autores/as originales
+    del código copiado). Por otro lado, las funciones complejas con muchos casos extremos
     (por ejemplo, los analizadores sintácticos) requieren considerables pruebas y revisiones.
     
-    - Un ejemplo común de esto es la devolución de "tibbles" al estilo de tidyverse de las funciones del paquete
+    - Un ejemplo común de esto es usar "tibbles" al estilo de tidyverse en las funciones del paquete
       que proporcionan datos.
-      Se puede evitar el modesto y pesado **tibble** devolviendo
-      un tibble creado modificando un marco de datos de la siguiente manera
+      Se puede evitar el uso del paquete **tibble** devolviendo
+      un tibble creado modificando un data.frame de la siguiente manera
       
       ```
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Ten en cuenta que este enfoque [no está universalmente respaldado](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
   
   - Asegúrate de que utilizas el paquete donde está definida la función
-    y no uno en el que se reexporte. Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**. La función `%>%` función
-    debe importarse de **magrittr**donde está definida, en lugar de la más pesada
-    **dplyr**que la reexporta.
+    y no uno en el que se reexporte. Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**. La función `%>%`
+    debe importarse de **magrittr** donde está definida, en lugar de **dplyr** que la reexporta y es mucho más pesado.
   
-  - Se prefieren algunas dependencias porque proporcionan nombres de funciones y sintaxis más fáciles de interpretar
-    los nombres de las funciones y la sintaxis que las soluciones de R base. Si ésta es la razón principal
-    razón para usar una función en una dependencia pesada, considera envolver
-    el enfoque de R base en una función interna bien nombrada en tu paquete. Consulta, por ejemplo, el [rlang R script que proporciona funciones con una sintaxis similar a las funciones purrr](https://github.com/r-lib/rlang/blob/master/R/compat-purrr.R).
+  - Se prefieren algunas dependencias que proporcionan nombres de funciones y sintaxis más fáciles de interpretar que los nombres de las funciones y la sintaxis de R base. Si ésta es la razón principal para usar una función en una dependencia pesada, considera incluir el enfoque de R base en una función interna bien nombrada en tu paquete. Consulta, por ejemplo, el script de R de [rlang que proporciona funciones con una sintaxis similar a las funciones de purrr](https://github.com/r-lib/rlang/blob/master/R/compat-purrr.R).
   
-  - Si las dependencias tienen funcionalidades que se solapan, comprueba si puedes confiar en una sola.
+  - Si las dependencias tienen funcionalidades que se solapan, comprueba si puedes utilizar en una sola.
   
   - Puedes encontrar más consejos sobre la gestión de dependencias [en este post de
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
