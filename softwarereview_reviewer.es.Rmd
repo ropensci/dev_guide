@@ -1,70 +1,71 @@
-# Guía para revisores {#reviewerguide}
+# Guía para revisores/as {#reviewerguide}
 
-```{block, type="summaryblock"}
-¡Gracias por aceptar revisar un paquete para rOpenSci! Este capítulo consiste en nuestras directrices para [preparar](#preparereview), [enviar](#submitreview) y [seguir](#followupreviewer) tu revisión.
+```{block, type='summaryblock'}
+¡Gracias por aceptar revisar un paquete para rOpenSci! Este capítulo consiste en nuestras recomendaciones para [preparar](#preparereview), [enviar](#submitreview) y [completar](#followupreviewer) tu revisión.
 
-Puedes ponerte en contacto con el editor encargado del envío para cualquier pregunta que tengas sobre el proceso o tu revisión.
+Puedes ponerte en contacto con el/la editor/a encargado/a del envío si tienes dudas sobre el proceso en general o tu revisión en particular. 
 
-Procura completar tu revisión en un plazo de 3 semanas desde la aceptación de la solicitud de revisión. Intentaremos recordar a los revisores las fechas de vencimiento próximas y pasadas. Los editores pueden asignar
-revisores adicionales o alternativos si una revisión se retrasa excesivamente.
+Trata de completar tu revisión en un plazo de 3 semanas desde aceptar participar de la misma. Intentaremos recordar a los/as revisores/as las fechas de vencimiento próximas y pasadas. Los/as editores/as pueden asignar
+revisores/as adicionales o alternativos/as si una revisión se retrasa excesivamente.
 
-**La comunidad de rOpenSci es nuestro mejor activo. 
-Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centradas en la mejora de la calidad del software. 
-¡Sé respetuoso y amable! 
-Consulta nuestra guía de revisores y el [código de conducta] (https://ropensci.org/code-of-conduct/) para más información.**
+**La comunidad de rOpenSci es lo más importante. 
+Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y con el objetivo de mejorar la calidad del software. 
+¡Sé respetuoso/a y amable! 
+Consulta nuestra guía de revisores/as y el [código de conducta] (https://ropensci.org/code-of-conduct/) para más información.**
 
-Si utilizas nuestras normas/listas de comprobación, etc., cuando revises software en otro lugar, di a los destinatarios (por ejemplo, editores de revistas, estudiantes, revisión interna de código) que proceden de rOpenSci, y dínoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [en privado por correo electrónico](https://ropensci.org/contact/)._ 
+_Si utilizas nuestros estándares, listas de tareas, etc... al revisar software en otro lugar, informa a las/os destinatarias/os (por ejemplo, editoras/es de revistas, estudiantes, revisión interna de código) que proceden de rOpenSci, y cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [en privado por correo electrónico](https://ropensci.org/contact/)._ 
 ```
 
-## Voluntario como revisor
+## Voluntariarte para revisar
 
-Gracias por tu deseo de participar en la revisión de software de rOpenSci como revisor.
+Gracias por tu deseo de participar en la revisión de software de rOpenSci como revisor/a.
 
-Por favor, rellena nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer).
+Por favor, completa nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer).
 
-Si ves una presentación actual que es particularmente relevante para tus intereses, por favor envía un correo electrónico a `info@ropensci.org`incluyendo el nombre del paquete, la URL del número de presentación y el nombre del editor asignado.
-Sin embargo, ten en cuenta que las invitaciones a los revisores se mantienen a discreción del editor, y es muy posible que éste ya haya enviado un correo electrónico a la gente.
-Por favor, no te ofrezcas como voluntario para todos los temas, y no te ofrezcas a través de la interfaz de GitHub.
+Si ves una presentación vigente que es particularmente relevante para tus intereses, por favor envía un correo electrónico a `info@ropensci.org`, incluyendo el nombre del paquete, la URL del número de presentación y el nombre de el/la editor/a responsable.
+Sin embargo, ten en cuenta que las invitaciones a revisión son a discreción de el/la editor/a, y es muy posible que éste/a ya haya realizado invitaciones. 
+Por favor, no te ofrezcas como voluntario/a para todos los temas, y no te ofrezcas a través de la interfaz de GitHub.
 
 Para otras formas de contribuir, consulta la [Guía de contribución de rOpenSci](https://contributing.ropensci.org/).
 
 ## Preparar tu revisión
 
-Todos los envíos desencadenan un informe detallado sobre la estructura y funcionalidad del paquete, generado por [nuestro `pkgcheck` paquete](https://docs.ropensci.org/pkgcheck/). Si el paquete ha cambiado sustancialmente desde las últimas revisiones, puedes solicitar una nueva revisión con el comando `@ropensci-review-bot check package`. Ten en cuenta que, al instalar el paquete para revisarlo, debes utilizar el `dependencies = TRUE` argumento de `remotes::install()` para asegurarte de que tienes todas las dependencias disponibles.
+Todos los envíos generan un informe detallado sobre la estructura y funcionalidad del paquete, generado por [nuestro paquete `pkgcheck`](https://docs.ropensci.org/pkgcheck/). Si el paquete ha cambiado sustancialmente desde las últimas revisiones, puedes solicitar una nueva revisión con el comando `@ropensci-review-bot check package`. Ten en cuenta que, al instalar el paquete para revisarlo, debes utilizar el argumento `dependencies = TRUE` de `remotes::install()` para asegurarte de que tienes todas las dependencias necesarias.
 
 ### Directrices generales
 
-Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) (o nuestra [plantilla de revisión en español](#reviewtemplatees)) y utilízala como lista de control de alto nivel.  Además de marcar los criterios mínimos, te pedimos que hagas comentarios generales sobre lo siguiente
+Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) (o nuestra [plantilla de revisión en español](#reviewtemplatees)) y utilízala como checklist general. Además de marcar los criterios mínimos, te pedimos que hagas comentarios generales sobre lo siguiente:
 
 - ¿Cumple el código con los principios generales de la [Guía de revisión de Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
-- ¿Hay mejoras que puedan hacerse en el estilo del código?
-- ¿Hay duplicidades de código en el paquete que deban reducirse?
-- ¿Hay mejoras en la interfaz de usuario que podrían hacerse?
-- ¿Hay mejoras de rendimiento que podrían hacerse?
-- ¿La documentación (instrucciones de instalación/viñetas/ejemplos/demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada* es decir, tiene en cuenta que cualquier parte de la documentación puede ser el primer encuentro del usuario con el paquete y/o la herramienta/datos que envuelve?
-- ¿Se nombraron las funciones y los argumentos para que funcionen juntos y formen una API de programación común y lógica que sea fácil de leer y autocompletar?
-- Si tienes tus propios datos/problema relevantes, trabaja con el paquete. Puede que encuentres asperezas y casos de uso en los que el autor no haya pensado.
+- ¿Puede mejorarse el estilo del código?
+- ¿Puede reducirse el código duplicado, de haberlo?
+- ¿Podría mejorarse la interfaz de usuario?
+- ¿Podría aumentarse el rendimiento?
+- ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de el/la usuario/a con el paquete y/o la herramienta o datos que utiliza?
+- ¿Los nombres de funciones y argumentos forman una API de programación común y lógica que sea fácil de leer y que se beneficie de herramientas de automcompletado?
+- Si tienes tus propios datos relevante o un problema relacionado, trabaja con el paquete. Puede que encuentres asperezas y/o casos de uso no contemplados.
 
-Por favor, sé respetuoso y amable con los autores en tus revisiones. Nuestro [código de conducta](#code-of-conduct) es obligatorio para todos los que participan en nuestro proceso de revisión. Esperamos que envíes tu reseña en un plazo de 3 semanas, según el plazo establecido por el editor. Por favor, ponte en contacto con el editor directamente o en el hilo de envío para informarle de posibles retrasos.
+Por favor, en tus revisiones sé respetuoso/a y amable con los/as autores/as. Nuestro [código de conducta](#code-of-conduct) es obligatorio para quienes participan en nuestro proceso de revisión. Esperamos que envíes tu revisión en un plazo de 3 semanas, según el plazo establecido por el/la editor/a. Por favor, ponte en contacto con él/ella directamente o mediante el hilo de envío para informarle de posibles retrasos.
 
-Te animamos a que utilices herramientas automatizadas para facilitar tu revisión.  Éstas incluyen
+Te recomendamos usar herramientas automatizadas para facilitar tu revisión. Éstas incluyen
 
-- Comprobar el informe inicial del paquete generado por nuestro `@ropensci-review-bot`.
+- Comprobar el informe inicial del paquete generado por nuestro bot `@ropensci-review-bot`.
 - Comprobar los registros del paquete en sus servicios de integración continua (GitHub Actions, Codecov, etc.)
-- Ejecutando `devtools::check()` y `devtools::test()` en el paquete para encontrar cualquier error que pueda pasar desapercibido en el sistema del autor.
-- Ver si la omisión de pruebas está justificada (por ejemplo `skip_on_cran()` pruebas que hacen peticiones reales de la API frente a saltarse todas las pruebas en un sistema operativo).
-- Si el paquete no se envía a través de la rama principal/por defecto, recuerda cambiar a la rama de revisión enviada antes de comenzar tu revisión. En este caso, también tendrás que buscar el paquete localmente, ya que la búsqueda en GitHub está limitada a la rama por defecto. Además, la documentación alojada en un `pkgdown` no está necesariamente actualizada, por lo que recomendamos inspeccionar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
+- Ejecutar `devtools::check()` y `devtools::test()` en el paquete para encontrar cualquier error que haya 
+pasar desapercibido en la computadora de el/la autor/a.
+- Revisar si los tests salteados son justificados (por ejemplo usar `skip_on_cran()` en tests que usan una API versus saltearse todos los tests en un determinado sistema operativo).
+- Si el paquete no se envía a través de la branch principal o por defecto, recuerda cambiar a la branch enviada para revisar antes de comenzar tu revisión. En este caso, tendrás que usar la búsqueda local para revisar el código, ya que la búsqueda en GitHub está limitada a la branch por defecto. Además, la documentación alojada en un sitio web de `pkgdown` no va a estar necesariamente actualizada, por lo que recomendamos revisar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
 
-Los revisores también pueden volver a generar los resultados de la comprobación del paquete desde `@ropensci-review-bot` en cualquier momento, emitiendo un único comentario en una incidencia de revisión: `@ropensci-review-bot check package`.
+Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el hilo de revisión con el contenido "`@ropensci-review-bot check package`".
 
 ### Interacciones fuera del hilo
 
-Si interactúas con los autores del paquete y hablas de la revisión fuera de un hilo de revisión (en chats, DMs, en persona, cuestiones en el repositorio del proyecto), asegúrate de que tu revisión captura y/o enlaza con elementos de estas conversaciones que son relevantes para el proceso.
+Si interactúas con los/as autores/as del paquete y hablas de la revisión fuera de un hilo de revisión (en chats, DMs, en persona, issues en el repositorio del proyecto), asegúrate de que tu revisión refleje y/o enlace los elementos de estas conversaciones que sean relevantes para el proceso.
 
-### Experiencia de revisores anteriores
+### Experiencia de revisiones anteriores
 
-A los revisores noveles les puede resultar útil leer (sobre) algunas revisiones anteriores. En general, puedes encontrar hilos de presentación de paquetes incorporados [aquí](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aquí tienes algunos ejemplos escogidos de reseñas (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
+Si es la primera vez que revisas un paquete, te puede ser útil leer algunas revisiones anteriores. En general, puedes encontrar hilos de presentación de paquetes aceptados [aquí](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Estos son algunas revisiones seleccionadas en Inglés (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
 
 - `rtika` [revisión 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) y [revisión 2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
@@ -74,13 +75,13 @@ A los revisores noveles les puede resultar útil leer (sobre) algunas revisiones
 
 - `rusda` [revisión](https://github.com/ropensci/software-review/issues/18#issuecomment-120445737) (de antes de que tuviéramos una plantilla de revisión)
 
-Puedes leer las entradas del blog escritas por los revisores sobre sus experiencias [a través de este enlace](https://ropensci.org/tags/reviewer/). En particular, en [esta entrada de blog de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) lee sobre el papel de "usuario ingenuo" que puede adoptar un revisor para proporcionar una devolución útil incluso sin ser expertos en el tema o la implementación del paquete, preguntándose *"¿Qué pensaba que haría esta cosa? ¿Lo hace? ¿Qué cosas me asustan?".*. En [otra entrada del blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica cómo alternaba el uso del paquete con la comprobación de su código.
+Puedes leer las entradas del blog sobre experiencias al revisar paquetes [a través de este enlace](https://ropensci.org/tags/reviewer/). En particular [esta publicación de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) (en Inglés) habla como puedes proporcionar una devolución útil aún careciendo de experticia en el tema o en la implementación del paquete adoptando el rol de "usuario/a ingenuo/a" y preguntándote *"¿Qué creo que hace esta cosa? ¿Lo hace? ¿Qué cosas me causan rechazo?"* . En [otra entrada del blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica cómo alternó entre usar el paquete y revisar el código.
 
-Como antiguo revisor y autor del paquete [Adam Sparks](https://adamhsparks.netlify.app/) [escribió lo siguiente](https://twitter.com/adamhsparks/status/898132036451303425) "\[escribe\] una buena crítica de la estructura del paquete y de las mejores prácticas de codificación. Si sabes cómo hacer algo mejor, dímelo. Es fácil pasar por alto las oportunidades de documentación como desarrollador, como revisor, tienes una visión diferente. Eres un usuario que puede dar su devolución. ¿Qué no está claro en el paquete? ¿Cómo se puede hacer más claro? Si lo utilizas por primera vez, ¿es fácil? ¿Conoces otro paquete R que quizás debería utilizar? ¿O hay alguno que esté utilizando y que quizás no debería? Si puedes contribuir al paquete, ofrécete".
+Como antiguo revisor y autor de paquetes, [Adam Sparks](https://adamhsparks.netlify.app/) [escribió lo siguiente](https://twitter.com/adamhsparks/status/898132036451303425) "\[escribe\] una buena crítica de la estructura del paquete y de las mejores prácticas de escritura de código. Si sabes cómo hacer algo mejor, dímelo. Como desarrollador es fácil pasar por alto oportunidades de documentación, pero como revisor/a, tienes una visión diferente. Eres un/a usuario/a que puede dar devolución. ¿Qué no está claro en el paquete? ¿Cómo puede hacerse más claro? Si lo utilizas por primera vez, ¿es fácil? ¿Conoces otro paquete R que quizás debería utilizar? ¿O hay alguno que esté utilizando y que quizás no debería? Si puedes contribuir al paquete, ofrécete".
 
-### Paquete de ayuda para revisores
+### Paquete de ayuda para revisores/as
 
-Si trabajas en RStudio, puedes agilizar tu flujo de trabajo de revisión utilizando el [`pkgreviewr` paquete](https://github.com/ropensci-org/pkgreviewr) creado por la editora asociada Anna Krystalli. Digamos que aceptas revisar el paquete `refnet` paquete, escribirías
+Si trabajas en RStudio, puedes agilizar tu flujo de trabajo de revisión utilizando el [paquete `pkgreviewr`](https://github.com/ropensci-org/pkgreviewr) creado por la editora asociada Anna Krystalli. Digamos que aceptas revisar el paquete `refnet`, escribirías
 
 ```
 remotes::install_github("ropensci-org/pkgreviewr")
@@ -89,11 +90,12 @@ pkgreview_create(pkg_repo = "embruna/refnet",
                  review_parent = "~/Documents/workflows/rOpenSci/reviews/")
 ```
 
-y
+Esto
 
-- el repositorio de GitHub del paquete `refnet` paquete se clonará.
-- se creará un proyecto de revisión, que contendrá un cuaderno para que lo rellenes, y la plantilla de revisión.
-- ten en cuenta que si el paquete no se envía a través de la rama principal/por defecto, tienes que cambiar a la rama enviada antes de comenzar tu revisión.
+- clonará el repositorio de GitHub del paquete `refnet`,
+- creará un proyecto de revisión, que contendrá una notebook para que rellenes, y la plantilla de revisión.
+
+Ten en cuenta que si el paquete no se envía a través de la branch principal o por defecto, tienes que cambiar a la branch usada para enviar antes de comenzar tu revisión.
 
 ### Devoluciones sobre el proceso
 
@@ -101,15 +103,15 @@ Te animamos a que preguntes y des tu opinión sobre el proceso de revisión en n
 
 ## Enviar la revisión {#submitreview}
 
-- Cuando tu revisión esté completa, pégala como comentario en el tema de revisión del paquete de software.
-- Los comentarios adicionales son bienvenidos en el mismo tema. Esperamos que las revisiones de paquetes funcionen como una conversación continua con los autores, en lugar de una única ronda de revisiones típica de los manuscritos académicos.
-- También puedes enviar cuestiones o solicitudes de extracción directamente al repositorio del paquete si lo deseas, pero si lo haces, por favor, coméntalo y enlaza con él en el hilo de comentarios del repositorio de revisión de software para que tengamos un registro y un texto centralizados de tu revisión.
-- Por favor, incluye una estimación de cuántas horas has dedicado a tu revisión después.
+- Cuando tu revisión esté completa, agrégala como comentario en el hilo de revisión del paquete.
+- Comentarios adicionales son bienvenidos en el mismo tema. Aspiramos a que las revisiones de paquetes funcionen como una conversación continua entre las partes en lugar de una única ronda de revisiones típica de los manuscritos académicos.
+- También puedes crear issues o pull requests directamente al repositorio del paquete si lo deseas, pero si lo haces, por favor, menciónalo y vincúlalo en el hilo de revisión de software para que tengamos un registro y un texto centralizados de tu revisión.
+- Por favor, al terminar incluye una estimación de cuántas horas le has dedicado a tu revisión.
 
 ## Seguimiento de la revisión {#followupreviewer}
 
-Los autores deben responder en un plazo de 2 semanas con sus cambios en el paquete en respuesta a tu revisión.  En esta fase, te pedimos que respondas si los cambios abordan suficientemente las cuestiones planteadas en tu revisión. Fomentamos el debate continuo entre los autores del paquete y los revisores, y puedes pedir a los editores que aclaren las cuestiones en el hilo de revisión también.
+Los/as autores/as deben responder en un plazo de 2 semanas con sus cambios en el paquete en respuesta a tu revisión. En esta fase, te pedimos que respondas si los cambios abordan suficientemente las cuestiones planteadas en tu revisión. Fomentamos el debate continuo entre autores/as y revisores/as, y también puedes pedir que los/as editores/as aclaren cosas en el mismo hilo. 
 
-Utilizarás la [plantilla de aprobación](#approval2template).
+- Utilizarás la [plantilla de aprobación](#approval2template).
 
 
