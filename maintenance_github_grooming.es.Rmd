@@ -1,44 +1,45 @@
 # GitHub Grooming {#grooming}
 
-```{block, type='summaryblock'}
-rOpenSci packages are currently in their vast majority developed on GitHub. Here are a few tips to leverage the platform in a section about [making your repo more discoverable](#repodiscoverability) and a section about [marketing your own GitHub account after going through peer review](#marketown).
+```{block, type="summaryblock"}
+Los paquetes de rOpenSci se desarrollan actualmente en su gran mayoría en GitHub. Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobre [hacer que tu repo sea más descubrible](#repodiscoverability) y una sección sobre [comercializar tu propia cuenta de GitHub después de pasar por la revisión por pares](#marketown).
 
 ```
 
-## Make your repository more discoverable {#repodiscoverability}
+## Haz que tu repositorio sea más descubrible {#repodiscoverability}
 
-### GitHub repo topics
+### Temas del repositorio de GitHub
 
-GitHub [repo topics](https://blog.github.com/2017-01-31-introducing-topics/) help browsing and searching GitHub repos, and are digested by [`codemetar`](https://github.com/ropensci/codemetar) for rOpenSci registry keywords.
+GitHub [temas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) ayudan a navegar y buscar en los repositorios de GitHub, y son digeridos por [`codemetar`](https://github.com/ropensci/codemetar) para las palabras clave del registro de rOpenSci.
 
-We recommend:
+Recomendamos:
 
-* Adding "r", "r-package" and "rstats" as topics to your package repo.
+- Añadir "r", "r-package" y "rstats" como temas a tu repo de paquetes.
 
-* Adding any other relevant topics to your package repo.
+- Añadir cualquier otro tema relevante a tu repo de paquetes.
 
-We might make suggestions to you after your package is onboarded.
+Es posible que te hagamos sugerencias una vez que tu paquete esté incorporado.
 
-### GitHub linguist
-
-[GitHub linguist](https://github.com/github/linguist) will assign a language for your repo based on the files it contains. Some packages containing a lot of C++ code might get classified as C++ rather than R packages, which is fine and shows the need for the "r", "r-package" and "rstats" topics.
-
-We recommend overriding GitHub linguist by adding or modifying a .gitattributes to your repo in two cases:
-
-* If you store html files in non standard places (not in docs/, e.g. in vignettes/) use the documentation overrides. Add `*.html linguist-documentation=true` to .gitattributes ([Example in the wild](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
-
-* If your repo contains code you haven't authored, e.g. JavaScript code, add `inst/js/* linguist-vendored` to .gitattributes ([Example in the wild](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
-
-This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable. Notably, if linguist does not correctly recognize your repo as containing mainly R code, your package won't appear in search results with the `language:R` filter. Similarly, your repo cannot be listed among the [trending R repos](https://github.com/trending/r).
-
-More info about GitHub linguist overrides [here](https://github.com/github/linguist#overrides).
+### Lingüista de GitHub
 
 
-## Market your own account {#marketown}
+[El lingüista de GitHub](https://github.com/github/linguist) asignará un idioma a tu repo en función de los archivos que contenga. Algunos paquetes que contienen mucho código C++ pueden ser clasificados como paquetes C++ en lugar de R, lo cual está bien y muestra la necesidad de los temas "r", "r-package" y "rstats".
 
-* As the author of an onboarded package, you are now a member of rOpenSci's "ropensci" GitHub organization. By default, organization memberships are private; see [how to make it public in GitHub docs](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+Recomendamos anular el lingüista de GitHub añadiendo o modificando un .gitattributes a tu repositorio en dos casos:
 
-* Even after your package repo has been transferred to rOpenSci, you can [pin it under your own account](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+- Si almacenas archivos html en lugares no estándar (no en docs/, por ejemplo en vignettes/) utiliza las anulaciones de documentación. Añade `*.html linguist-documentation=true` a .gitattributes ([Ejemplo en la naturaleza](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
 
-* In general we recommend adding at least an avatar (which doesn't need to be your face!) and your name [to your GitHub profile](https://help.github.com/articles/customizing-your-profile/).
+- Si tu repo contiene código del que no eres autor, por ejemplo, código JavaScript, añade `inst/js/* linguist-vendored` a .gitattributes ([Ejemplo en la naturaleza](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
+
+De este modo, la clasificación lingüística y las estadísticas de tu repositorio reflejarán mejor el código fuente que contiene, además de hacerlo más descubrible. En particular, si linguist no reconoce correctamente que tu repositorio contiene principalmente código R, tu paquete no aparecerá en los resultados de búsqueda con el `language:R` filtro. Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R de tendencia](https://github.com/trending/r).
+
+Más información sobre las anulaciones de GitHub linguist [aquí](https://github.com/github/linguist#overrides).
+
+## Comercializa tu propia cuenta {#marketown}
+
+- Como autor de un paquete incorporado, ahora eres miembro de la organización GitHub "ropensci" de rOpenSci. Por defecto, la pertenencia a la organización es privada; consulta [cómo hacerla pública en la documentación de GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+
+- Incluso después de que tu repo de paquetes haya sido transferido a rOpenSci, puedes [anclarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+
+- En general, recomendamos añadir al menos un avatar (¡que no tiene por qué ser tu cara!) y tu nombre [a tu perfil de GitHub](https://help.github.com/articles/customizing-your-profile/).
+
 
