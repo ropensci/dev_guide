@@ -66,7 +66,7 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 
 If your package accesses a web API or another web resource,
 
-- Make sure requests send an user agent. The users should be able to override the package's default user agent. Ideally the user agent should be different on continuous integration services, and in development (based on, for instance, the GitHub usernames of the developers).
+- Make sure requests send an [user agent](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), that is, a way to identify what (your package) or who sent the request. The users should be able to override the package's default user agent. Ideally the user agent should be different on continuous integration services, and in development (based on, for instance, the GitHub usernames of the developers).
 - You might choose different (better) defaults than the API, in which case you should document them.
 - Your package could help with pagination, by allowing the users to not worry about it at all since your package does all necessary requests.
 - Your package should help with rate limiting according to the API rules.
