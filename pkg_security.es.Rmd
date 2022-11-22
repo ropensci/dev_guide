@@ -58,7 +58,9 @@ Documenta los pasos que has seguido en [CONTRIBUCIÓN.md](#friendlyfiles) para q
 
 #### Credenciales y colaboraciones
 
-¿Qué pasa con los pull requests de colaboradoras/es externas/os? Los test que utilicen tus credenciales fallarán a menos que utilices algún tipo de respuesta simulada/en caché, por lo que es posible que quieras omitirlos dependiendo del contexto. Por ejemplo, en tu cuenta CI podrías crear una variable de entorno llamada `ESTE_SOY_YO` y luego omitir los test en función de la presencia de esta variable. Obviamente, esto significa que los tests del PR por parte del CI no serán exhaustivos, por lo que tendrás que comprobar el PR localmente para ejecutar todos los tests.
+¿Qué pasa con los pull requests de colaboradoras/es externas/os? 
+En GitHub, por ejemplo, los secretos sólo están disponibles para las acciones de GitHub para los pull requests iniciados desde el propio repositorio, no desde el fork.
+Los test que utilicen tus credenciales fallarán a menos que utilices algún tipo de respuesta simulada/en caché, por lo que es posible que quieras omitirlos dependiendo del contexto. Por ejemplo, en tu cuenta CI podrías crear una variable de entorno llamada `ESTE_SOY_YO` y luego omitir los test en función de la presencia de esta variable. Obviamente, esto significa que los tests del PR por parte del CI no serán exhaustivos, por lo que tendrás que comprobar el PR localmente para ejecutar todos los tests.
 
 Documenta el comportamiento de tu paquete frente a PRs externos en [CONTRIBUCIÓN.md](#friendlyfiles) por el bien de la gente que hace PRs y de la gente que los revisa (tú dentro de unas semanas, y otras/os autoras/es del paquete).
 

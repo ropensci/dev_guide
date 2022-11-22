@@ -58,7 +58,11 @@ Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say 
 
 #### Secrets and collaborations
 
-What about pull requests from external contributors? Tests using your secrets will fail unless you use some sort of mocked/cached response, so you might want to skip them depending on the context. For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
+What about pull requests from external contributors? 
+On GitHub for instance, secrets are only available for GitHub Actions for pull requests started from the repository itself, not from fork.
+Tests using your secrets will fail unless you use some sort of mocked/cached response, so you might want to skip them depending on the context. 
+For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. 
+This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
 
 Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles) for the sake of people making PRs and of people reviewing them (you in a few weeks, and other authors of the package).
 
