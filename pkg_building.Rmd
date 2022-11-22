@@ -318,7 +318,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 * Tests should be easy to understand. We suggest reading the blog post [_"Why Good Developers Write Bad Unit Tests"_](https://mtlynch.io/good-developers-bad-tests/) by Michael Lynch.
 
-* Packages with Shiny apps should use a unit-testing framework such as [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
+* Packages with Shiny apps should use a unit-testing framework such as [`shinytest2`](https://rstudio.github.io/shinytest2/) or [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
 * For testing your functions creating plots, we suggest using [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the testthat package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
 
