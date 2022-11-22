@@ -2,6 +2,8 @@
 
 ## dev (0.9.0)
 
+- 2022-11-22, mention shinytest2 near shinytest.
+
 - 2022-09-20, add editor instruction to add "stats" label to stats submissions
 
 - 2022-09-20, fixed link to reviewer approval template (#548), and rendering of editor's template (#547)
