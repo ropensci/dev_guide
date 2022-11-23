@@ -57,7 +57,7 @@ rOpenSci también provee el paquete [circle](https://docs.ropensci.org/circle/),
 
 #### Tests con diferentes versiones de R
 
-Requerimos que los paquetes de rOpenSci no sólo se testeen usando la versión más reciente de R, sino también con la anterios y también la versión en desarrollo.
+Requerimos que los paquetes de rOpenSci no sólo se testeen usando la versión más reciente de R, sino también con la anterior y con la versión en desarrollo.
 Esto garantiza compatibilidad con R base, tanto con versiones futuras como con versiones pasadas.
 
 Los detalles de cómo ejecutar tests utilizando diferentes versiones de R localmente se pueden encontrar en la viñeta de R-hub sobre la ejecución de [Checks locales en Linux con Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
