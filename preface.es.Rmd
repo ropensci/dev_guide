@@ -4,7 +4,7 @@
 
 La [primera sección del libro](#building) contiene nuestras recomendaciones para crear y probar los paquetes de R.
 
-La [segunda sección](#softwarereviewintro) está dedicada al proceso de revisión por pares de software de rOpenSci: en qué consiste, nuestras políticas y las guías específicas orientar a  autoras/es, encargadas/os, revisoras/es y editoras/es a lo largo del proceso. 
+La [segunda sección](#softwarereviewintro) está dedicada al proceso de revisión por pares de software de rOpenSci: en qué consiste, nuestras políticas y las guías específicas para orientar a quienes crean, mantienen, revisan y editan a lo largo del proceso. 
 Para la *revisión de software estadístico*, consulta la  [página web del proyecto y los recursos asociados](https://ropensci.org/stat-software-review/).
 
 La [tercera y última sección](#collaboration) presenta nuestras buenas prácticas para hacer crecer tu paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras/os desarrolladoras/es, cómo documentar cada versión, cómo promover tu paquete y cómo aprovechar GitHub como plataforma de desarrollo.
