@@ -5,7 +5,7 @@ rOpenSci acepta paquetes que cumplen nuestras recomendaciones a través de un pr
 
 Recomendamos fuertemente a quienes desarrollen paquetes que lean el conciso pero exhaustivo libro de Hadley Wickham y Jenny Bryan sobre el desarrollo de paquetes, que está disponible [gratis en línea](https://r-pkgs.org/). Nuestra guía es parcialmente redundante con respecto a otros recursos, pero destaca las comendaciones de rOpenSci.
 
-Para leer por qué merece la pena enviar un paquete a rOpenSci siguiendo las recomendaciones, echa un vistazo a [razones para enviar](#whysubmit). 
+Para leer por qué merece la pena enviar un paquete a rOpenSci siguiendo las recomendaciones, echa un vistazo a [razones para enviar un paquete](#whysubmit). 
 
 ```
 
@@ -405,72 +405,72 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   - Puedes encontrar más consejos sobre la gestión de dependencias [en este post de
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
-## Andamiaje recomendado
+## Estructura de base recomendada
 
-- Para las consultas HTTP recomendamos utilizar [curl][curl], [crul][crul], [httr][httr] o [httr2][httr2] sobre [RCurl][RCurl]. Si te gustan los clientes de bajo nivel para HTTP [curl][curl] es mejor, mientras que [crul][crul] o [httr][httr] son mejores para un acceso de mayor nivel. [crul][crul] es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr][webmockr] para imitar las peticiones HTTP, y [vcr][vcr] para almacenar en caché las peticiones HTTP en las pruebas del paquete.
+- Para las consultas HTTP recomendamos utilizar [curl][curl], [crul][crul], [httr][httr] o [httr2][httr2] en vez de [RCurl][RCurl]. Si prefieres los clientes de bajo nivel de HTTP [curl][curl] es mejor, mientras que [crul][crul] o [httr][httr] son mejores para un acceso de mayor nivel. [crul][crul] es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr][webmockr] para imitar las consultas HTTP, y [vcr][vcr] para almacenar en caché las consultas HTTP en los test del paquete.
 
-- Para segmentar JSON, utiliza [jsonlite][jsonlite] en lugar de [rjson][rjson] o [RJSONIO][RJSONIO].
+- Para parsear JSON, utiliza [jsonlite][jsonlite] en lugar de [rjson][rjson] o [RJSONIO][RJSONIO].
 
-- Para segmentar, crear y manipular XML, recomendamos encarecidamente [xml2][xml2] en la mayoría de los casos. [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+- Para parsear, crear y manipular XML, recomendamos fuertemente [xml2][xml2] en la mayoría de los casos. [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- Para los datos espaciales, el [sp][sp] debe considerarse obsoleto en favor de [sf][sf]y los paquetes [rgdal][rgdal], [maptools][maptools]y [rgeos][rgeos] se retirarán a finales de 2023. Recomendamos el uso de las suites espaciales desarrolladas por el [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial) y rspatial. Consulta en [este tema de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
+- Para datos espaciales, el paquete [sp][sp] debe considerarse obsoleto en favor de [sf][sf]. Los paquetes [rgdal][rgdal], [maptools][maptools] y [rgeos][rgeos] se retirarán a finales de 2023. Recomendamos el uso de las suites espaciales desarrolladas por las comunidades [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial). Consulta [este issue de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
 
 ## Control de versiones
 
-- Los archivos fuente de tu paquete tienen que estar bajo control de versiones, más concretamente rastreados con [Git](https://happygitwithr.com/). Puede que encuentres el [paquete gert](https://docs.ropensci.org/gert/) relevante, así como algunas de las [funcionalidad relacionada con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
+- Los archivos fuente de tu paquete tienen que estar bajo control de versiones, más concretamente versionados con [Git](https://happygitwithr.com/). Puede que encuentres el [paquete gert](https://docs.ropensci.org/gert/) útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
 
-- Asegúrate de listar la "chatarra" como `.DS_Store` archivos en .gitignore. Puede que encuentres el [paquete gitignore](https://docs.ropensci.org/gitignore/) relevante.
+- Asegúrate de listar archios no necesarios como `.DS_Store` en .gitignore. Puede que encuentres el [paquete gitignore](https://docs.ropensci.org/gitignore/) útil.
 
-- Una sección posterior de este libro contiene algunos [consejos sobre el flujo de trabajo de git](#gitflow).
+- Una sección posterior de este libro incluye algunos [consejos sobre el flujo de trabajo con git](#gitflow).
 
-## Gotas varias de CRAN {#crangotchas}
+## Errores comunes de CRAN {#crangotchas}
 
-Esta es una colección de gotchas de CRAN que vale la pena evitar desde el principio.
+Esta es una colección de errores de CRAN que vale la pena evitar desde el principio.
 
-- Asegúrate de que el título de tu paquete está en mayúsculas.
+- Asegúrate de que las palabras el título de tu paquete comiencen con mayúsculas.
 - No pongas un punto al final de tu título.
-- No pongas "en R" o "con R" en tu título, ya que esto es obvio en los paquetes alojados en CRAN. Si a pesar de todo quieres que esta información aparezca en tu sitio web, comprueba la [`pkgdown` documentación](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber cómo anularla.
+- No pongas "en R" o "con R" en tu título, ya que esto es obvio en los paquetes alojados en CRAN. Si a pesar de todo quieres que esta información aparezca en tu sitio web, revisa la [documentación de `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber cómo anular esta restricción.
 - Evita empezar la descripción con el nombre del paquete o "Este paquete...".
-- Asegúrate de incluir enlaces a sitios web si envuelves una API web, raspas datos de un sitio, etc. en el campo `Description` de tu archivo `DESCRIPTION` archivo. Las URL deben ir entre corchetes, por ejemplo `<https://www.r-project.org>`.
-- Tanto en el campo `Title` y `Description` los nombres de los paquetes u otro software externo deben ir entre comillas simples (por ejemplo *Integración de 'Rcpp' para la Biblioteca de Álgebra Lineal Templada 'Armadillo*).
-- Evita las pruebas y los ejemplos de larga duración.  Considera `testthat::skip_on_cran` en las pruebas omitir las cosas que llevan mucho tiempo, pero seguir probándolas localmente y en [integración continua](#ci).
-- Incluye archivos de alto nivel como `paper.md`archivos de configuración de integración continua, en tu `.Rbuildignore` archivo.
+- Asegúrate de incluir enlaces a sitios web si utilizas una API, obtenés datos de una página web, etc. en el campo `Description` de tu archivo `DESCRIPTION`. Las URL deben ir entre simbolos `<>`, por ejemplo `<https://www.r-project.org>`.
+- Tanto en el campo `Title` como en `Description` los nombres de los paquetes u otro software externo deben ir entre comillas simples (por ejemplo *Integración de 'Rcpp' para la Biblioteca de Álgebra Lineal Armadillo*).
+- Evita los test y los ejemplos que terden en correr. Considera `testthat::skip_on_cran` en los test para omitir las cosas que llevan mucho tiempo, pero sigue probándolas localmente y en [integración continua](#ci).
+- Incluye archivos de alto nivel como `paper.md` y archivos de configuración de integración continua en tu archivo `.Rbuildignore`.
 
 ### Comprobaciones en CRAN {#cranchecks}
 
-Una vez que tu paquete esté en CRAN, será [comprobado regularmente en diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Los fallos de estas comprobaciones, cuando no son falsos positivos, pueden hacer que el equipo de CRAN se ponga en contacto con él. Puedes controlar el estado de las comprobaciones de CRAN a través de
+Una vez que tu paquete esté en CRAN, será [comprobado regularmente en diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Los fallos de estas comprobaciones, cuando no son falsos positivos, pueden hacer que el equipo de CRAN se ponga en contacto contigo. Puedes revisar el estado de las comprobaciones de CRAN con:
 
-- el [`foghorn` paquete](https://fmichonneau.github.io/foghorn/).
+- el paquete [`foghorn`](https://fmichonneau.github.io/foghorn/).
 
-- el [API de comprobaciones de CRAN](https://github.com/ropenscilabs/cchecksapi) mantenida por rOpenSci, que proporciona [insignias](https://github.com/ropenscilabs/cchecksapi#badges).
+- la [API de comprobaciones de CRAN](https://github.com/ropenscilabs/cchecksapi) mantenida por rOpenSci, que proporciona [etiquetas de estado](https://github.com/ropenscilabs/cchecksapi#badges).
 
-## Trucos de Bioconductor
+## Guía para Bioconductor
 
-Si pretendes que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioconductor, consulta [Directrices de empaquetado de Bioconductor](https://www.bioconductor.org/developers/package-guidelines/).
+Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioconductor, consulta las [Directrices de paquetes de Bioconductor](https://www.bioconductor.org/developers/package-guidelines/).
 
-## Otras orientaciones
+## Otras recomendaciones
 
-- Si envías un paquete a rOpenSci a través del [repo de software-review](https://github.com/ropensci/software-review)puedes dirigir tus preguntas al equipo de rOpenSci a través del gestor de incidencias o en nuestro [foro de discusión](https://discuss.ropensci.org/).
+- Si envías un paquete a rOpenSci a través del [repo de software-review](https://github.com/ropensci/software-review) puedes dirigir tus preguntas al equipo de rOpenSci a través de issues o en nuestro [foro de discusión](https://discuss.ropensci.org/).
 
-- Antes de enviar un paquete, utiliza las [**buenas prácticas**](https://github.com/MangoTheCat/goodpractice) (`goodpractice::gp()`) como guía para mejorar tu paquete, ya que la mayoría de las excepciones al mismo tendrán que justificarse. Por ejemplo, el uso de `foo` puede ser generalmente malo y, por tanto, marcado por `goodpractice` pero tú tenías una buena razón para utilizarlo en tu paquete.
+- Antes de enviar un paquete, utiliza estas [**buenas prácticas**](https://github.com/MangoTheCat/goodpractice) (`goodpractice::gp()`) como guía para mejorar tu paquete, ya que la mayoría de las excepciones a estas tendrán que justificarse. Por ejemplo, el uso de `foo` en general no es recomendado y, por tanto, marcado como erroneo por `goodpractice` pero podrías tener una buena razón para utilizarlo en tu paquete.
 
-- Lee, incorpora y actúa según los consejos de la [*Guía de Colaboración* capítulo](#collaboration).
+- Lee, incorpora y actúa según los consejos del capítulo [*Guía de Colaboración*](#collaboration).
 
 ### Aprender sobre el desarrollo de paquetes
 
 #### Libros
 
-- [Hadley Wickham y Jenny Bryan *Paquetes R* libro](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (y [impreso - enlace a la versión anterior de Hadley Wickham, ya que la nueva versión aún no se ha publicado en junio de 2022](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+- [*R Packages* de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (y [impreso - link a la versión anterior de Hadley Wickham, ya que, hasta junio de 2022, la nueva versión aún no se ha publicado](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
 
-- [Escribir extensiones de R](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) es la referencia canónica, normalmente la más actualizada, para crear paquetes de R.
+- [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) es la referencia canónica, normalmente la más actualizada, para crear paquetes de R.
 
-- [*Dominio del desarrollo de software en R* por Roger D. Peng, Sean Kross y Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/).
+- [*Mastering Software Development in R* por Roger D. Peng, Sean Kross y Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/).
 
-- [*R avanzado* de Hadley Wickham](https://adv-r.hadley.nz/)
+- [*Advanced R* de Hadley Wickham](https://adv-r.hadley.nz/)
 
 #### Tutoriales
 
-- [La famosa entrada del blog de Hilary Parker *Escribir un paquete de R desde cero*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) o [su versión actualizada por Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) que muestra cómo hacer lo mismo de forma más eficiente utilizando `usethis`.
+- [La famosa entrada del blog de Hilary Parker *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) o [su versión actualizada por Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) que muestra cómo hacer lo mismo de forma más eficiente utilizando `usethis`.
 
 - [esta descripción del flujo de trabajo por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
@@ -480,15 +480,15 @@ Si pretendes que tu paquete se envíe a Bioconductor, o si tu paquete está en B
 
 - [Blog de R-hub](https://blog.r-hub.io/post).
 
-- Algunos posts del [blog de rOpenSci](https://ropensci.org/archive/) por ejemplo ["Cómo precomputar viñetas de paquetes o artículos pkgdown"](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
+- Algunos posts del [blog de rOpenSci](https://ropensci.org/archive/) por ejemplo ["How to precompute package vignettes or pkgdown articles"](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
 
-- Sección del Rincón del Desarrollo de Paquetes del [boletín de rOpenSci](https://ropensci.org/news/).
+- Sección *El rincón del desarrollo de paquetes* del [boletín de rOpenSci](https://ropensci.org/news/).
 
-- Algunos posts del [blog tidyverse](https://www.tidyverse.org) por ejemplo ["Actualizando a la edición 3 de testthat".](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
+- Algunos posts del [blog de tidyverse](https://www.tidyverse.org) por ejemplo ["Upgrading to testthat edition 3"](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
 
 #### MOOCs
 
-Existe una [especialización de Coursera correspondiente al libro de Roger Peng, Sean Kross y Brooke Anderson](https://fr.coursera.org/specializations/r)con un curso específico sobre los paquetes de R.
+Existe una [especialización en Coursera correspondiente al libro de Roger Peng, Sean Kross y Brooke Anderson](https://fr.coursera.org/specializations/r) con un curso específico sobre paquetes de R.
 
 [curl]: https://github.com/jeroen/curl/
 [crul]: https://github.com/ropensci/crul/
