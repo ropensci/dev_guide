@@ -35,7 +35,7 @@ Te recomendamos que utilices el [paquete `codemetar`](https://github.com/ropensc
   
   - Considera un esquema `objecto_verbo()` de nomenclatura para las funciones de tu paquete que toman un tipo de datos común o interactúan con una API común. `objecto` se refiere a los datos/API y `verbo` a la acción principal.  Este esquema ayuda a evitar conflictos de nombres con paquetes que pueden tener verbos similares, y hace que el código sea legible y fácil de autocompletar.  Por ejemplo, en **stringi** las funciones que empiezan con `stri_` manipulan cadenas (`stri_join()`, `stri_sort()`y en **googlesheets** las funciones que empiezan con `gs_` son llamadas a la API de Google Sheets (`gs_auth()`, `gs_user()`, `gs_download()`).
 
-- Para las funciones que manipulan un objeto/dato y devuelven un objeto/dato del mismo tipo, haz que el objeto/dato sea el primer argumento de la función para mejorar la compatibilidad con el operador pipe (`%>%`).
+- Para las funciones que manipulan un objeto/dato y devuelven un objeto/dato del mismo tipo, haz que el objeto/dato sea el primer argumento de la función para mejorar la compatibilidad con el operador pipe (`%>%` o `|>`).
 
 - Recomendamos fuertemente usar `snake_case` por sobre todos los otros estilos, a menos que estés usando funciones de un paquete que ya se utiliza ampliamente.
 
@@ -314,7 +314,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Las pruebas deben ser fáciles de entender. Te sugerimos que leas la entrada del blog [*"Why Good Developers Write Bad Unit Tests"*](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
 
-- Los paquetes con aplicaciones Shiny deberán utilizar pruebas unitarias usando [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas se comportan como se espera.
+- Los paquetes con aplicaciones Shiny deberán generar pruebas unitarias usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas se comportan como se espera.
 
 - Para probar las funciones que crean gráficos, sugerimos utilizar [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html) una extensión del paquete testthat; o [pruebas instantáneas de testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
@@ -407,7 +407,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Andamiaje recomendado
 
-- Para las peticiones HTTP recomendamos utilizar [curl][curl], [crul][crul], [httr][httr] o [httr2][httr2] sobre [RCurl][RCurl]. Si te gustan los clientes de bajo nivel para HTTP [curl][curl] es mejor, mientras que [crul][crul] o [httr][httr] son mejores para un acceso de mayor nivel. [crul][crul] es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr][webmockr] para imitar las peticiones HTTP, y [vcr][vcr] para almacenar en caché las peticiones HTTP en las pruebas del paquete.
+- Para las consultas HTTP recomendamos utilizar [curl][curl], [crul][crul], [httr][httr] o [httr2][httr2] sobre [RCurl][RCurl]. Si te gustan los clientes de bajo nivel para HTTP [curl][curl] es mejor, mientras que [crul][crul] o [httr][httr] son mejores para un acceso de mayor nivel. [crul][crul] es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr][webmockr] para imitar las peticiones HTTP, y [vcr][vcr] para almacenar en caché las peticiones HTTP en las pruebas del paquete.
 
 - Para segmentar JSON, utiliza [jsonlite][jsonlite] en lugar de [rjson][rjson] o [RJSONIO][RJSONIO].
 
