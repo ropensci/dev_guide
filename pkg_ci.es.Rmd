@@ -9,7 +9,7 @@ Junto con el [capítulo anterior](#building), forma parte de nuestras directrice
 ## ¿Qué es la integración continua?
 
 La integración continua ejecuta tests sobre el software automáticamente.
-En el caso de rOpenSci, CI significa, en la práctica, que un conjunto de test se ejecutará automáticamente a través de GitHub, cada vez que hagas un commit o pull request a GitHub.
+En el caso de rOpenSci, CI significa, en la práctica, que un conjunto de test se ejecutará automáticamente a través de GitHub, cada vez que hagas un *commit* o *pull request* a GitHub.
 
 La CI automatiza la ejecución de tests globales de los paquetes, como `R CMD check` (ver [tests](/building.html#testing)).
 Es posible configurar la CI antes de escribir tus tests, entonces CI los ejecutará a medida que los envíes al repositorio.
@@ -17,11 +17,11 @@ Es posible configurar la CI antes de escribir tus tests, entonces CI los ejecuta
 ## ¿Por qué utilizar la integración continua (CI)?
 
 Todos los paquetes de rOpenSci deben utilizar alguna forma de integración continua.
-Esto asegura que todos los commits, pull requests y nuevas branches pasan por `R CMD check`.
-Los resultados de todos los tests se muestran en la página del pull request en GitHub, lo cual proporciona otra capa de información sobre los problemas y protección para no aceptar cambios que rompan tu paquete.
+Esto asegura que todos los *commits*, *pull requests* y nuevas *branches* pasan por `R CMD check`.
+Los resultados de todos los tests se muestran en la página del *pull request* en GitHub, lo cual proporciona otra capa de información sobre los problemas y protección para no aceptar cambios que rompan tu paquete.
 La integración continua de los paquetes de rOpenSci también debe estar vinculada a un servicio de cobertura de código que indique cuántas líneas son chequeadas por los tests unitarios.
 
-Tanto el estado de los tests como el porcentaje de cobertura del código deben informarse mediante etiquetas en el README de tu paquete.
+Tanto el estado de los tests como el porcentaje de cobertura del código deben informarse mediante etiquetas en el *README* de tu paquete.
 
 Los paquetes de R deben tener CI para todos los sistemas operativos (Linux, Mac OSX, Windows) si contienen:
 
@@ -113,13 +113,13 @@ Si ejecutas la cobertura en varios servicios de CI [los resultados se unirán](h
 
 ## Más servicios de CI: OpenCPU
 
-Después de transferir el repo a la organización GitHub "ropensci" de rOpenSci, cada push se chequeará en OpenCPU y la persona que hace el commit recibirá una notificación por correo electrónico.
+Después de transferir el repo a la organización GitHub "ropensci" de rOpenSci, cada *push* se chequeará en OpenCPU y la persona que hace el *commit* recibirá una notificación por correo electrónico.
 Este es un servicio adicional de CI para que permite correr funciones en paquetes de R de forma remota a través de [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/) utilizando la [API de opencpu](https://www.opencpu.org/api.html#api-json). 
 Para más detalles sobre este servicio, consulta [la página de ayuda de OpenCPU](https://www.opencpu.org/help.html) que también indica dónde hacer preguntas.
 
 ## Aún más servicios de CI: rOpenSci docs {#rodocsci}
 
-Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada push al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown. 
+Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada *push* al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown. 
 Puedes encontrar el estado de este proceso en la URL `https://dev.ropensci.org/job/package_name` (por ejemplo: [para `magick`](https://dev.ropensci.org/job/magick)).
 El sitio web estará en `https://docs.ropensci.org/package_name` (por ejemplo [para `magick`](https://docs.ropensci.org/magick)).
 Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo usará para crear el sitio web, excepto para el tema, que se utilizará [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/).
