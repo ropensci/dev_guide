@@ -101,7 +101,7 @@ La integración continua también debe incluir información de la cobertura de l
 Recomendamos utilizar Codecov.
 Para activar Codecov para tu repo, ejecuta `usethis::use_github_action("test-coverage")` el cual va a crear un archivo `.github/workflows/test-coverage.yaml`.
 También tienes que dar acceso a Codecov a tu repositorio de GitHub, ver [la guía de inicio rápido de Codecov](https://docs.codecov.com/docs/quick-start) para saber cómo hacerlo.
-Luego añade una etiqueta de estado de Codecov en la parte superior de tu README.md, puedes consultar [Status Badges](https://docs.codecov.com/docs/status-badges) en la documentación de Codecov.
+Luego añade una etiqueta de estado de Codecov en la parte superior de tu README.md, puedes consultar [*Status Badges* (etiquetas de estado)](https://docs.codecov.com/docs/status-badges) en la documentación de Codecov.
 
 Actualmente, Codecov tiene acceso a todos los repositorios de GitHub de la organización ropensci por defecto.
 Cuando tu repositorio sea aceptado y transferido a ropensci, el acceso de Codecov debería transferirse automáticamente.
