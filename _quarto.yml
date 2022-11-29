@@ -4,8 +4,8 @@ project:
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
-  author-meta: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
-  description-meta: |
+  author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+  description: |
     Extended version of the rOpenSci packaging guide.
     This book is a guide for authors, maintainers, reviewers
     and editors of rOpenSci. The first section of the book contains
