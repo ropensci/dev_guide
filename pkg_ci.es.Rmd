@@ -120,9 +120,9 @@ Para más detalles sobre este servicio, consulta [la página de ayuda de OpenCPU
 ## Aún más servicios de CI: rOpenSci docs {#rodocsci}
 
 Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada *push* al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown. 
-Puedes encontrar el estado de este proceso en la URL `https://dev.ropensci.org/job/package_name` (por ejemplo: [para `magick`](https://dev.ropensci.org/job/magick)).
+Puedes encontrar el estado de este proceso en la URL `https://ropensci.r-universe.dev/ui#packages` y en el [estado del commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works).
 El sitio web estará en `https://docs.ropensci.org/package_name` (por ejemplo [para `magick`](https://docs.ropensci.org/magick)).
 Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo usará para crear el sitio web, excepto para el tema, que se utilizará [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/).
 
-Por favor, informa sobre errores, haz preguntas y solicita nuevas funcionalidades sobre este servicio en [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
+Por favor, informa sobre errores, haz preguntas y solicita nuevas funcionalidades sobre este servicio y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
