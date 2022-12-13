@@ -4,13 +4,13 @@
 
 ### See the list of commands available to you {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot help
 ```
 
 ### See the code of conduct {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot code of conduct
 ```
 
@@ -18,25 +18,25 @@
 
 ### Check package with pkgcheck {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot check package
 ```
 
 ### Submit response to reviewers {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot submit response <response-url>
 ```
 
 ### Get a new invite after approval {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot invite me to ropensci/<package-name>
 ```
 
 ### Finalize repo transfer {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot finalize transfer of <package-name>
 ```
 
@@ -44,19 +44,19 @@
 
 ### Assign an editor {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot assign @username as editor
 ```
 
 ### Put submission on hold {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot put on hold
 ```
 
 ### Indicate the submission is out of scope {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot out-of-scope
 ```
 
@@ -64,67 +64,67 @@
 
 ### Put submission on hold {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot put on hold
 ```
 
 ### Check package with pkgcheck {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot check package
 ```
 
 ### Check statistical standards {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot check srr
 ```
 
 ### Check that README has software review badge {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot check readme
 ```
 
 ### Indicate you are now seeing reviewers {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot seeking reviewers
 ```
 
 ### Assign a reviewer {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot assign @username as reviewer
 ```
 
 or 
 
-```
+```markdown
 @ropensci-review-bot add @username as reviewer
 ```
 
 ### Remove a reviewer {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot remove @username from reviewers
 ```
 
 ### Tweak review due date {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot set due date for @username to YYYY-MM-DD
 ```
 
 ### Record that a review was submitted {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
 ### Approve package {.unnumbered}
 
-```
+```markdown
 @ropensci-review-bot approve <package-name>
 ```
 
