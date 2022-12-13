@@ -1,0 +1,23 @@
+# Bot commands
+
+## For everyone
+
+### See the list of commands available to you
+
+```
+@ropensci-review-bot help
+```
+
+### See the code of conduct
+
+```
+@ropensci-review-bot code of conduct
+```
+
+## For authors
+
+### Check your package with pkgcheck
+
+```
+@ropensci-review-bot check package
+```

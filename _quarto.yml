@@ -65,6 +65,7 @@ book:
     - newstemplate.Rmd
     - bookreleaseissue.Rmd
     - redirect.Rmd
+    - bot_cheatsheet.Rmd
 
 format:
   html:
