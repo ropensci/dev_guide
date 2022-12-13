@@ -16,8 +16,92 @@
 
 ## For authors
 
-### Check your package with pkgcheck
+### Check package with pkgcheck
 
 ```
 @ropensci-review-bot check package
 ```
+
+## For the editor-in-chief
+
+### Assign an editor
+
+```
+`@ropensci-review-bot assign @username as editor`
+```
+
+### Put submission on hold
+
+```
+@ropensci-review-bot put on hold
+```
+
+### Indicate the submission is out of scope
+
+```
+@ropensci-review-bot out-of-scope
+```
+
+## For assigned editor
+
+### Put submission on hold
+
+```
+@ropensci-review-bot put on hold
+```
+
+### Check package with pkgcheck
+
+```
+@ropensci-review-bot check package
+```
+
+### Check statistical standards
+
+```
+@ropensci-review-bot check srr
+```
+
+### Indicate you are now seeing reviewers
+
+```
+@ropensci-review-bot seeking reviewers
+```
+
+### Assign a reviewer
+
+```
+@ropensci-review-bot assign @username as reviewer
+```
+
+or 
+
+```
+@ropensci-review-bot add @username as reviewer
+```
+
+### Remove a reviewer
+
+```
+@ropensci-review-bot remove @username from reviewers
+```
+
+### Tweak review due date
+
+```
+@ropensci-review-bot set due date for @username to YYYY-MM-DD
+```
+
+### Record that a review was submitted
+
+```
+@ropensci-review-bot submit review <review-url> time <time in hours>
+```
+
+### Approve package
+
+```
+@ropensci-review-bot approve <package-name>
+```
+
+
