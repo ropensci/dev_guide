@@ -22,6 +22,12 @@
 @ropensci-review-bot check package
 ```
 
+### Submit response to reviewers
+
+```
+@ropensci-review-bot submit response <response-url>
+```
+
 ## For the editor-in-chief
 
 ### Assign an editor
