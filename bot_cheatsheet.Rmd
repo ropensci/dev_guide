@@ -1,80 +1,80 @@
 # Bot commands
 
-## For everyone
+## For everyone {.unnumbered}
 
-### See the list of commands available to you
+### See the list of commands available to you {.unnumbered}
 
 ```
 @ropensci-review-bot help
 ```
 
-### See the code of conduct
+### See the code of conduct {.unnumbered}
 
 ```
 @ropensci-review-bot code of conduct
 ```
 
-## For authors
+## For authors {.unnumbered}
 
-### Check package with pkgcheck
+### Check package with pkgcheck {.unnumbered}
 
 ```
 @ropensci-review-bot check package
 ```
 
-### Submit response to reviewers
+### Submit response to reviewers {.unnumbered}
 
 ```
 @ropensci-review-bot submit response <response-url>
 ```
 
-## For the editor-in-chief
+## For the editor-in-chief {.unnumbered}
 
-### Assign an editor
+### Assign an editor {.unnumbered}
 
 ```
 @ropensci-review-bot assign @username as editor
 ```
 
-### Put submission on hold
+### Put submission on hold {.unnumbered}
 
 ```
 @ropensci-review-bot put on hold
 ```
 
-### Indicate the submission is out of scope
+### Indicate the submission is out of scope {.unnumbered}
 
 ```
 @ropensci-review-bot out-of-scope
 ```
 
-## For assigned editor
+## For assigned editor {.unnumbered}
 
-### Put submission on hold
+### Put submission on hold {.unnumbered}
 
 ```
 @ropensci-review-bot put on hold
 ```
 
-### Check package with pkgcheck
+### Check package with pkgcheck {.unnumbered}
 
 ```
 @ropensci-review-bot check package
 ```
 
-### Check statistical standards
+### Check statistical standards {.unnumbered}
 
 ```
 @ropensci-review-bot check srr
 ```
 
-### Indicate you are now seeing reviewers
+### Indicate you are now seeing reviewers {.unnumbered}
 
 ```
 @ropensci-review-bot seeking reviewers
 ```
 
-### Assign a reviewer
+### Assign a reviewer {.unnumbered}
 
 ```
 @ropensci-review-bot assign @username as reviewer
@@ -86,25 +86,25 @@ or
 @ropensci-review-bot add @username as reviewer
 ```
 
-### Remove a reviewer
+### Remove a reviewer {.unnumbered}
 
 ```
 @ropensci-review-bot remove @username from reviewers
 ```
 
-### Tweak review due date
+### Tweak review due date {.unnumbered}
 
 ```
 @ropensci-review-bot set due date for @username to YYYY-MM-DD
 ```
 
-### Record that a review was submitted
+### Record that a review was submitted {.unnumbered}
 
 ```
 @ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
-### Approve package
+### Approve package {.unnumbered}
 
 ```
 @ropensci-review-bot approve <package-name>
