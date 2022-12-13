@@ -33,7 +33,7 @@
 ### Assign an editor
 
 ```
-`@ropensci-review-bot assign @username as editor`
+@ropensci-review-bot assign @username as editor
 ```
 
 ### Put submission on hold
