@@ -39,7 +39,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 -   La comunicación entre quines envian el paquete, quienes lo revisen y quienes hagan la edición se dará principalmente en GitHub, para que el *issue* de revisión sirva de registro completo de la misma. Puedes contactarte con tu editor/a por correo electrónico o Slack si es necesario realizar una consulta privada (por ejemplo, preguntar cómo responder a una pregunta de quien está haciendo la revisión). No te pongas en contacto con los/as revisores/as fuera del *issue* sin antes preguntarles, dentro del mismo, si están de acuerdo con ello.
 -   *Cuando envíes un paquete, por favor asegúrate de tener configuradas las notificaciones de GitHub para que no te pierdas ningún comentario.*
 -   Los paquetes se checkean automáticamente con [nuestro sistema `pkgcheck` sistema](https://docs.ropensci.org/pkgcheck) al ser enviados, el cual confirmará si está listo para ser revisado o no.
--   Los paquetes enviados pueden estar en la branch main/default, o en cualquier otra rama no predeterminada. En este último caso, es recomendable, aunque no obligatorio, enviar el paquete a través de una branch dedicada llamada `ropensci-software-review`.
+-   Los paquetes enviados pueden estar en la rama _main/default_, o en cualquier otra rama no predeterminada. En este último caso, es recomendable, aunque no obligatorio, enviar el paquete a través de una rama dedicada llamada `ropensci-software-review`.
 
 ## El proceso de revisión
 
