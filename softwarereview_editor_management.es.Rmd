@@ -49,7 +49,7 @@ Te deseamos lo mejor,
 [NOMBRE], en nombre del Equipo Editorial de rOpenSci.
 ```
 
-## Incorporar una nueva/o editora
+## Incorporar una nueva persona al equipo editor
 
 - Informa a la/el *community manager* de rOpenSci para
   
