@@ -16,7 +16,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 -   Si utilizas [etiquetas de repostatus.org](https://www.repostatus.org/) (que recomendamos), envía tu paquete cuando esté listo para obtener la etiqueta *Active* en vez de *WIP*. Si utilizas [etiquetas de ciclo de vida](https://www.tidyverse.org/lifecycle/), el envío debe producirse cuando el paquete esté al menos en el estado *Maturing*.
 -   Para cualquier envío o consulta previa al envío, el *README* de tu paquete debería proporcionar suficiente información sobre el mismo (objetivos, uso, paquetes similares) para que quienes revisan el paquete puedan evaluar su alcance sin tener que instalarlo. Mejor aún, crea un sitio web de pkgdown para que puedan evaluar las funcionalidads detalladamente en línea.
 -   En la fase de envío, todas las funciones principales deben ser lo suficientemente estables como para estar completamente documentadas y testeadas. El *README* tiene que dar una buena impresión de tu paquete.
--   El archivo *README* debe esforzarse por explicar laa funcionalidades y los objetivos de tu paquete asumiendo poco o ningún conocimiento del dominio. Además, debe aclarar todos los temas técnicos, incluidas las referencias a otros software.
+-   El archivo *README* debe esforzarse por explicar las funcionalidades y los objetivos de tu paquete asumiendo poco o ningún conocimiento del dominio. Además, debe aclarar todos los temas técnicos, incluidas las referencias a otros software.
 -   Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución de paquetes* [proporciona orientación sobre el tema](#evolution).
 
 ## Preparación para el envío
