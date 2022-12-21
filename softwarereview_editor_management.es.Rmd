@@ -54,7 +54,7 @@ Te deseamos lo mejor,
 - Informa a la/el *community manager* de rOpenSci para
   
   - agregar a la/o editora al [sitio web de rOpenSci](https://github.com/ropensci/roweb3/#team-member).
-  - preparar una entrada de presentación en el blog.
+  - preparar una artículo de presentación en el blog.
 
 - Solicita que la nueva persona active [la autenticación de dos factores (2FA) para GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
 
