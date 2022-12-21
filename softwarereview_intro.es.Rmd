@@ -42,7 +42,7 @@ Además, utilizamos funciones de GitHub como las plantillas de *issues* (como pl
 ## ¿Por qué las revisiones son abiertas? {#whyopen}
 
 Nuestros hilos de revisión son públicos.
-Las/os autoras/es, revisoras/es y editoras/es conocen la identidad del resto y la comunidad en general puede ver o incluso participar en la conversación a medida que se produce.
+Todas las personas que participan (en roles de autoría, revisión y edición) conocen la identidad del resto y la comunidad en general puede ver o incluso participar en la conversación a medida que se produce.
 Esto proporciona un incentivo para ser minucioso y proporcionar revisiones constructivas y no conflictivas.
 Tanto autoras/es como [revisoras/es afirman](https://ropensci.org/tags/reviewer/) que disfrutan y aprenden más de este intercambio abierto y directo.
 También tiene el beneficio de construir una comunidad, ya que quienes participan tienen la oportunidad de interactuar de manera significativa con nuevas personas.
