@@ -10,7 +10,7 @@ _Si utilizas nuestros estándares, listas de tareas, etc... al revisar software 
 
 ## ¿Qué es la revisión por pares de software de rOpenSci? {#whatissoftwarereview}
 
-La [suite de paquetes](https://ropensci.org/packages/) de rOpenSci recibe aportes tanto de miembros de la organización y como por miembros de la comunidad, lo que significa que se nutre de una gran diversidad de habilidades y experiencias.
+La [suite de paquetes](https://ropensci.org/packages/) de rOpenSci recibe aportes tanto de personal de la organización, como por miembros de la comunidad, lo que significa que se nutre de una gran diversidad de habilidades y experiencias.
 Pero, ¿cómo asegurar un buen nivel de calidad?
 Ahí es donde entra en juego la revisión por pares de software: los paquetes aportados por la comunidad se someten a un proceso de revisión transparente, constructivo, no conflictivo y abierto.
 El mismo se sustenta principalmente en el trabajo de personas voluntarias: [editoras/os asociadas/os](#associateditors) gestionan el flujo de información y garantizan que los envíos progresen; personas que crean, envían y mejoran su paquete; [revisoras/es](#reviewers) (dos por envío), examinan el código y la experiencia de usuario.
