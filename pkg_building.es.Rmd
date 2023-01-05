@@ -456,7 +456,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 #### Tutoriales
 
-- [La famosa entrada del blog de Hilary Parker *Writing an R package from scratch* (Escribiendo tu propio paquete de R desde cero)](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) o [su versión actualizada por Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) que muestra cómo hacer lo mismo de forma más eficiente utilizando `usethis`.
+- [El famoso artículo de Hilary Parker *Writing an R package from scratch* (Escribiendo tu propio paquete de R desde cero)](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) o [su versión actualizada por Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) que muestra cómo hacer lo mismo de forma más eficiente utilizando `usethis`.
 
 - [esta descripción del flujo de trabajo por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
