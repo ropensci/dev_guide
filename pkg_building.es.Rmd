@@ -17,7 +17,7 @@ Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recom
 
 - Un nombre de paquete menos común podría ser más fácil de seguir (para que tú y en rOpenSci evaluemos el uso del paquete) y de buscar (para que quienes lo usen lo encuentren y busquen en Google sus preguntas). Evidentemente, un nombre *demasiado* único puede hacer que el paquete sea más difícil de encontrar (por ejemplo, podría ser un argumento para nombrar tu paquete [geojson](https://github.com/ropensci/geojson)).
 
-- [Esta entrada del blog de Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/) lista otro aspectos interesantes de los nombres de los paquetes de R. En caso de que cambies de opinión, descubre [cómo cambiar el nombre de tu paquete en esta otra entrada del blog de Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+- [Este artículo web de Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/) lista otro aspectos interesantes de los nombres de los paquetes de R. En caso de que cambies de opinión sobre el nombre de tu paquete, descubre [cómo cambiar el nombre de tu paquete en este otro artículo del blog de Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
 ### Crear metadatos para tu paquete
 
