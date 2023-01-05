@@ -466,7 +466,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 - [Blog de R-hub](https://blog.r-hub.io/post).
 
-- Algunos posts del [blog de rOpenSci](https://ropensci.org/archive/) por ejemplo [*"How to precompute package vignettes or pkgdown articles"* (Cómo pregenerar viñetas delde paquetes o artículo de pkgdown)](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
+- Algunos posts del [blog de rOpenSci](https://ropensci.org/archive/) por ejemplo [*"How to precompute package vignettes or pkgdown articles"* (Cómo pregenerar viñetas de paquetes o artículos de pkgdown)](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
 
 - Sección *El rincón del desarrollo de paquetes* del [boletín de rOpenSci](https://ropensci.org/news/).
 
