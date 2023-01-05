@@ -419,7 +419,7 @@ Esta es una colección de problemas en CRAN que vale la pena evitar desde el pri
 - Evita empezar la descripción con el nombre del paquete o "Este paquete...".
 - Asegúrate de incluir enlaces a sitios web si utilizas una API, obtienes datos de una página web, etc... en el campo `Description` de tu archivo `DESCRIPTION`. Las URL deben ir entre simbolos `<>`, por ejemplo `<https://www.r-project.org>`.
 - Tanto en el campo `Title` como en `Description` los nombres de los paquetes u otro software externo deben ir entre comillas simples (por ejemplo *Integración de 'Rcpp' para la Biblioteca de Álgebra Lineal Armadillo*).
-- Evita tests y ejemplos que tarden en correr. Considera usar `testthat::skip_on_cran()` en los test que toman mucho tiempo para que se omitan en CRAN pero sigan corriendo localment ey en la [integración continua](#ci).
+- Evita tests y ejemplos que tarden en correr. Considera usar `testthat::skip_on_cran()` en los test que toman mucho tiempo para que se omitan en CRAN pero sigan corriendo localmente y en la [integración continua](#ci).
 - Incluye archivos de alto nivel como `paper.md` y archivos de configuración de integración continua en tu archivo `.Rbuildignore`.
 
 ### Comprobaciones en CRAN {#cranchecks}
