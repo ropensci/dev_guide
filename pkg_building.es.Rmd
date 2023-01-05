@@ -15,7 +15,7 @@ Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recom
 
 - Recomendamos fuertemente nombres cortos y descriptivos en minúsculas. Si tu paquete tiene que ver con uno o más servicios comerciales, asegúrate de que el nombre no infringe las recomendaciones de la marca. Puedes comprobar si el nombre de tu paquete está disponible, es informativo y no es ofensivo utilizando el [paquete `available`](https://github.com/ropenscilabs/available). En particular, *no* elijas un nombre de paquete que ya se utilice en CRAN o en Bioconductor.
 
-- Un nombre de paquete menos común podría ser más fácil de seguir (para que tú y en rOpenSci evaluemos el uso del paquete) y de buscar (para que quienes lo usen lo encuentren y busquen en Google sus preguntas). Evidentemente, un nombre *demasiado* único puede hacer que el paquete sea más difícil de encontrar (por ejemplo, podría ser un argumento para nombrar tu paquete [geojson](https://github.com/ropensci/geojson)).
+- Un nombre de paquete menos común podría ser más fácil de encontrar (para que tú y en rOpenSci evaluemos el uso del paquete) y de buscar (para que quienes lo usen lo encuentren y busquen en Google sus preguntas). Evidentemente, un nombre *demasiado* único puede hacer que el paquete sea más difícil de encontrar (por ejemplo, podría ser un argumento para nombrar tu paquete [geojson](https://github.com/ropensci/geojson)).
 
 - [Este artículo web de Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/) lista otro aspectos interesantes de los nombres de los paquetes de R. En caso de que cambies de opinión sobre el nombre de tu paquete, descubre [cómo cambiar el nombre de tu paquete en este otro artículo del blog de Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
@@ -172,7 +172,7 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 
 - La funciones de uso avanzado o que sean usadas sólo para desarrollo pueden incluirse en una viñeta separada (por ejemplo, la programación usando evaluación no estándar con dplyr).
 
-- El *README*, la documentación del paquete de nivel superior, las viñetas, los sitios web, etc., deben tener suficiente información al principio para obtener una visión general del paquete y de los servicios o datos a los que se conecta, y proporcionar navegación a otras partes de la documentación relevante. Esto es para seguir el principio de *múltiples puntos de entrada* es decir, tener en cuenta el hecho de que cualquier pieza de documentación puede ser el primer encuentro de la persona con el paquete y/o la herramienta o datos que envuelve.
+- El *README*, la documentación del paquete de nivel superior, las viñetas, los sitios web, etc., deben tener suficiente información al principio para obtener una visión general del paquete y de los servicios o datos a los que se conecta, y proporcionar navegación a otras partes de la documentación relevante. Esto es para seguir el principio de *múltiples puntos de entrada* es decir, tener en cuenta el hecho de que cualquier pieza de documentación puede ser el primer encuentro de la persona con el paquete y/o la herramienta o los datos que accede.
 
 - La(s) viñeta(s) debe(n) incluir citas a software y de artículos cuando corresponda.
 
@@ -180,7 +180,7 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 
 - Utiliza mensajes de inicio en el paquete sólo cuando sea necesario (cuando algunas funciones son enmascaradas, por ejemplo). Evita los mensajes de inicio del paquete tales como "Esto es paquete 2.4-0" o la guía de cómo citarlo porque pueden ser molestos para el/la usuario/a. Utiliza la documentación para dar ese tipo de información.
 
-- Puedes optar por tener una sección en el *README* sobre casos de uso de tu paquete (otros paquetes, entradas de blog, etc.), [ejemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
+- Puedes optar por tener una sección en el *README* sobre casos de uso de tu paquete (otros paquetes, artículos de blog, etc.), [ejemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
 ### Uso de roxygen2
 
@@ -204,14 +204,14 @@ f <- function(a = TRUE) {
 
 - La documentación debe ayudar a la navegación incluyendo links entre funciones relacionadas y agrupando la documentación de funciones relacionadas en página de ayuda comunes. Para esto recomendamos las etiquetas `@seealso` y `@family` (esta última crea automáticamente enlaces "See also" y [pueden agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown). Consulta [la sección "manual" del libro *R Packages*](https://r-pkgs.org/man.html) y [la sección "Agrupación de funciones" de este capítulo](#function-grouping) para más detalles.
 
-- Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual. Una forma de hacerlo es [usando fragmentos de R Markdown](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/). Usando "documentos hijos" con kintr puedes guardar fragmentos de código en la carpeta `man` y reutilizarlos el *README*, las viñetas y la documentación (usando la etiqueta `@includeRmd`, [disponible desde la versión 0.7.0 de roxygen2](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files)).
+- Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual. Una forma de hacerlo es [usando fragmentos de R Markdown](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/). Usando "documentos hijos" con kintr puedes guardar fragmentos de código en la carpeta `man` y reutilizarlos en el *README*, las viñetas y la documentación (usando la etiqueta `@includeRmd`, [disponible desde la versión 0.7.0 de roxygen2](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files)).
 
 - Añade `#' @noRd` a las funciones internas.
 
-- Si prefieres no abarrotar el código con un documentación muy larga, puedes colocar más ejemplos fuera del *script* de R. Coloca la documentación extra en archivos en la carpeta `man-roxygen` en la raiz de tu paquete e insértala en el archivo de ayuda con `@template <nombre de archivo>` debajo de la etiqueta `@example`.
+- Si prefieres no abarrotar el código con una documentación muy larga, puedes colocar más ejemplos fuera del *script* de R. Coloca la documentación extra en archivos en la carpeta `man-roxygen` en la raiz de tu paquete e insértala en el archivo de ayuda con `@template <nombre de archivo>` debajo de la etiqueta `@example`.
 
   - Coloca la documentación de cualquier objeto en un archivo `.R` en la carpeta `man-roxygen` (en la raíz de tu paquete). Por ejemplo [este archivo](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Vincula ese archivo de plantilla desde el código de tu función ([por ejemplo](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) con la etiqueta `@template` ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). El contenido de la plantilla se insertará cuando se construya la documentación en el archivo resultante `.Rd` que se mostrará al acceder a la documentación de la función.
-  - Ten en cuenta que actualmente el formato de markdown no funciona actualmente en las plantillas, así que asegúrate de utilizar formato LaTeX.
+  - Ten en cuenta que actualmente el formato de markdown no funciona en las plantillas, así que asegúrate de utilizar formato LaTeX.
   - En la mayoría de los casos puedes ignorar las plantillas y `man-roxygen` pero hay dos casos en los que aprovecharlos será de gran ayuda:
     1. Si tienes mucha documentación en una función, clase u objeto, separar ciertos trozos de esa documentación puede mantener tu archivo `.R` ordenado. Esto es especialmente útil cuando tienes mucho código en ese archivo `.R`. Por otro lado, significa que la documentación no será legible "en el código fuente", ya que estará en otro archivo.
     2. Cuando utilizas la misma documentación en muchas funciones y archivos `.R` es útil utilizar una plantilla. Esto reduce el texto duplicado y ayuda a evitar que por error se actualice la documentación de una función pero no la de otra. Utilizar un archivo de plantilla para la documentación de un parámetro es una alternativa a definir el parámetro para una función y utilizar `@inheritParams` para otras funciones que utilicen el mismo parámetro.
@@ -281,7 +281,7 @@ El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participar
     comment = "Bea revisó el paquete (v. X.X.XX) para rOpenSci, ver <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-No incluyas a nadie en tu paquete sin antes pedir su consentimiento. Lee más en [esta entrada del blog "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Por favor, no agregues al equipo editorial. ¡Su participación y contribución a rOpenSci es suficiente agradecimiento!
+No incluyas a nadie en tu paquete sin antes pedir su consentimiento. Lee más en [esta entrada del blog *Thanking Your Reviewers: Gratitude through Semantic Metadata* (Agradeciendo las revisiones: La gratitud a través de los metadatos semánticos)](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Por favor, no agregues al equipo editorial. ¡Su participación y contribución a rOpenSci es suficiente agradecimiento!
 
 ### Autoría del código incluido en el paquete {#authorship-included-code}
 
@@ -289,7 +289,7 @@ Muchos paquetes incluyen código de otro software. Tanto si se incluyen archivos
 
 > La propiedad de los derechos de autor y de propiedad intelectual de todos los componentes del paquete debe ser clara e inequívoca (incluso en la especificación de  autoría en el archivo DESCRIPTION). Cuando el código se copie (o se derive) del trabajo de otras personas (incluso del propio R), hay que tener cuidado de que se conserven las declaraciones de derechos de autor/licencia y no se tergiverse la autoría.
 > 
-> Preferiblemente, se utilizaría un campo "Autores@R" con funciones "ctb" para quienes tiene la autoría de dicho código. Como alternativa, el campo "Autor" puede incluir a estas personas como en el rol de colaboración.
+> Preferiblemente, se utilizaría un campo "Autores@R" con funciones "ctb" para quienes tiene la autoría de dicho código. Como alternativa, el campo "Autor" puede incluir a estas personas en el rol de colaboración.
 > 
 > Cuando los derechos de autor los tenga una entidad distinta de quienes mantienen la autoría del paquete, se indicará preferentemente mediante el rol "cph" en el campo "Autores@R", o utilizando un campo "Derechos de autor" (si es necesario, redirigiendo a un archivo inst/COPYRIGHTS).
 > 
@@ -308,9 +308,9 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Es una buena práctica escribir *tests* unitarios para todas las funciones, y para todo el código del paquete en general, asegurando que se cubra las funcionalidades clave. Si la cobertura de los *tests* en tu paquete está por debajo del 75% probablemente requerirá *tests* adicionales o una explicación de la baja cobertura antes de ser enviado para su revisión.
 
-- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir los *tests* Intenta escribir *tests* a medida que escribes cada nueva función. Esto responde a la necesidad obvia de tener *tests* adecuadas para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y *defensivamente* programar en contra esas fallas. [Más información](https://r-pkgs.org/tests.html).
+- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir los *tests*. Intenta escribir *tests* a medida que escribes cada nueva función. Esto responde a la necesidad obvia de tener *tests* adecuados para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y *defensivamente* programar en contra esas fallas. [Más información](https://r-pkgs.org/tests.html).
 
-- Los *tests* deben ser fáciles de entender. Te sugerimos que leas la entrada del blog [*Why Good Developers Write Bad Unit Tests* (Por qué las personas que desarrollan escriben malos tests)](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
+- Los *tests* deben ser fáciles de entender. Te sugerimos que leas el artículo de blog [*Why Good Developers Write Bad Unit Tests* (Por qué las personas que son buenas desarrollando escriben malos tests)](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
 
 - Los paquetes con aplicaciones Shiny deberán generar *tests* unitarios usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas se comportan como se espera.
 
@@ -335,7 +335,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Incluye ejemplos extensos en la documentación. Además de demostrar cómo se utiliza el paquete, pueden ser una forma fácil de testear la funcionalidad del paquete antes de que haya *tests* adecuados. Sin embargo, ten en cuenta que exigimos *tests* en los paquetes contribuidos.
 
-- Puedes ejecutar los ejemplos con `devtools::run_examples()`. Ten en cuenta que los ejemplos que no estén rodeados de `\dontrun{}` o `\donttest{}` serán ejecutados cuando cuando ejecutes R CMD CHECK o su equivalente (por ejemplo, `devtools::check()`). Consulta la [tabla de resumen](https://roxygen2.r-lib.org/articles/rd.html#functions) en la documentación de roxygen2.
+- Puedes ejecutar los ejemplos con `devtools::run_examples()`. Ten en cuenta que los ejemplos que no estén rodeados de `\dontrun{}` o `\donttest{}` serán ejecutados cuando ejecutes R CMD CHECK o su equivalente (por ejemplo, `devtools::check()`). Consulta la [tabla de resumen](https://roxygen2.r-lib.org/articles/rd.html#functions) en la documentación de roxygen2.
 
 - Para evitar que los ejemplos se ejecuten en CRAN (por ejemplo, si requieren autenticación), tienes que utilizar `\dontrun{}`. Sin embargo, para un primer envío, CRAN no te permitirá que todos los ejemplos se salteen así. En este caso podrías añadir algunos pequeños ejemplos de juguete, o incluir el código de los ejemplos en `try()`. Consulta también la etiqueta `@exampleIf`, que al momento de escribir este artículo, se encuentra en la versión de desarrollo de roxygen2.
 
@@ -389,11 +389,11 @@ Considerar las versiones de paquetes locales como la versiones mínimas necesari
   
   - Si las dependencias tienen funcionalidades que se solapan, comprueba si puedes depender sólo de una.
   
-  - Puedes encontrar más consejos sobre la gestión de dependencias [en este post de Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
+  - Puedes encontrar más consejos sobre la gestión de dependencias [en este artículo de Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
 ## Estructura de base recomendada
 
-- Para las consultas HTTP recomendamos utilizar [curl][https://github.com/jeroen/curl/], [crul][https://github.com/ropensci/crul/], [httr][https://httr.r-lib.org] o [httr2][https://httr2.r-lib.org] en vez de [RCurl][https://cran.rstudio.com/web/packages/RCurl/]. El paquete [curl][https://github.com/jeroen/curl/] es mejor es mejor si prefieres los clientes de bajo nivel de HTTP, mientras que [crul][https://github.com/ropensci/crul/] o [httr][https://httr.r-lib.org] son mejores para un control de mayor nivel. El paquete [crul][https://github.com/ropensci/crul/]  es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr][https://github.com/ropensci/webmockr/] para imitar las consultas HTTP, y [vcr][https://github.com/ropensci/vcr/] para almacenar en caché las consultas HTTP en los tests del paquete.
+- Para las consultas HTTP recomendamos utilizar [curl](https://github.com/jeroen/curl/), [crul](https://github.com/ropensci/crul/), [httr](https://httr.r-lib.org) o [httr2](https://httr2.r-lib.org) en vez de [RCurl](https://cran.rstudio.com/web/packages/RCurl/). El paquete [curl](https://github.com/jeroen/curl/) es mejor es mejor si prefieres los clientes de bajo nivel de HTTP, mientras que [crul](https://github.com/ropensci/crul/) o [httr](https://httr.r-lib.org) son mejores para un control de mayor nivel. El paquete [crul](https://github.com/ropensci/crul/) es mantenido por rOpenSci. Recomendamos los paquetes mantenidos por rOpenSci [webmockr](https://github.com/ropensci/webmockr/) para imitar las consultas HTTP, y [vcr](https://github.com/ropensci/vcr/) para almacenar en caché las consultas HTTP en los tests del paquete.
 
 - Para parsear JSON, utiliza [jsonlite][https://github.com/jeroen/jsonlite] en lugar de [rjson][rjson] o [RJSONIO][https://cran.rstudio.com/web/packages/RJSONIO/].
 
