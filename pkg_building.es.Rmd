@@ -133,7 +133,7 @@ Si utilizas otra etiqueta de estado del repo, como el [ciclo de vida](https://ww
 [![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
-donde issue\_id es el número de la issue en el repositorio donde se hizo la revisión del software. Por ejemplo, la etiqueta de revisión de [`rtimicropem`](https://github.com/ropensci/rtimicropem) utiliza el número 126, ya que es el [número de issue de revisión](https://github.com/ropensci/software-review/issues/126). La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu paquete haya sido incorporado (issue etiquetada como "aprobado" y cerrado), y estará vinculado con la issue de la revisión.
+donde issue\_id es el número del _issue _en el repositorio donde se hizo la revisión del software. Por ejemplo, la etiqueta de revisión de [`rtimicropem`](https://github.com/ropensci/rtimicropem) utiliza el número 126, ya que es el [número de _issue_ de revisión](https://github.com/ropensci/software-review/issues/126). La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu paquete haya sido incorporado (_issue_ etiquetado como "aprobado" y cerrado), y estará vinculado con el _issue_ de la revisión.
 
 - Si tu *README* tiene muchas etiquetas, considera la posibilidad de ordenarlas en una tabla HTML para que sea más fácil ver la información de un vistazo. Consulta los ejemplos en el [repo de `drake`](https://github.com/ropensci/drake) y en el [repo de `qualtRics`](https://github.com/ropensci/qualtRics/). Las secciones posibles son:
   
