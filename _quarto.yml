@@ -3,22 +3,21 @@ project:
 
 book:
   favicon: images/apple-touch-icon.png
-  title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
-  author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+  title: "Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares"
+  author: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
   description: |
-    Extended version of the rOpenSci packaging guide.
-    This book is a guide for authors, maintainers, reviewers
-    and editors of rOpenSci. The first section of the book contains
-    our guidelines for creating and testing R packages.
-    The second section is dedicated to rOpenSci's software peer review
-    process: what it is, our policies, and specific guides for authors,
-    editors and reviewers throughout the process.
-    The third and last section features our best practice for nurturing
-    your package once it has been onboarded: how to collaborate with
-    other developers, how to document releases, how to promote your
-    package and how to leverage GitHub as a development platform.
-    The third section also features a chapter for anyone wishing
-    to start contributing to rOpenSci packages.
+Versión extendida de la guía de empaquetado de rOpenSci.
+    Este libro es una guía para autoras/es, encargadas/os, revisoras/es y editoras/es de rOpenSci.
+    La primera sección del libro contiene
+    nuestras recomendaciones para crear y probar los paquetes de R.
+    La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci: 
+    qué es, nuestras políticas y guías específicas para orientar 
+    a quienes crean, mantienen, revisan y editan a lo largo del proceso.
+    La tercera y última sección presenta nuestras buenas prácticas para hacer crecer
+    su paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras/os desarrolladoras/es,
+    cómo documentar cada versión de tu paquete y cómo aprovechar GitHub como plataforma de desarrollo.
+    La tercera sección también incluye un capítulo para cualquiera que desee
+    comenzar a contribuir a los paquetes de rOpenSci.
   cover-image: images/cover.png
   reader-mode: true
   site-url: https://devguide.ropensci.org/
@@ -29,13 +28,13 @@ book:
   - index.Rmd
   - preface.Rmd
 
-  - part: Building Your Package
+  - part: Construyendo tu paquete
     chapters:
     - pkg_building.Rmd
     - pkg_ci.Rmd
     - pkg_security.Rmd
 
-  - part: Software Peer Review of Packages
+  - part: Revisión por pares de software de paquetes
     chapters:
     - softwarereview_intro.Rmd
     - softwarereview_policies.Rmd
@@ -44,7 +43,7 @@ book:
     - softwarereview_editor.Rmd
     - softwarereview_editor_management.Rmd
 
-  - part: Maintaining Packages
+  - part: Manteniendo paquetes
     chapters:
     - maintenance_collaboration.Rmd
     - maintenance_changing_maintainers.Rmd
@@ -55,7 +54,7 @@ book:
     - maintenance_curation.Rmd
     - maintenance_contributing.Rmd
 
-  - part: Appendix
+  - part: Apéndice
     chapters:
     - booknews.Rmd
     - reviewtemplate.Rmd
