@@ -165,7 +165,7 @@ Install devguider and run `devguider::devguide_eic_report()`, open the HTML repo
 
 - Look over submissions in "reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
 	
-- Look over submissions in "review(s)-in-awaiting-changes". If there are still missing an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
+- Look over submissions in "review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
  
 ### Asking for more details
 
