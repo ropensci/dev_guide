@@ -96,8 +96,6 @@ at the time of submission to be reviewed.
     [system](https://status.ropensci.org/). This system does not send notifications 
     but it outputs results as GitHub commit status (red check mark or red cross).
 
--   If packages are on CRAN, package authors can choose to subscribe to the [notifications 
-    of CRAN checks API](https://docs.cranchecks.info/#notifications).
 
 -   Annually or bi-annually, rOpenSci staff will review packages in a
     failing state or have been failing for extended periods, and
