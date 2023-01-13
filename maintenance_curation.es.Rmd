@@ -96,9 +96,6 @@ en el momento del envío para ser revisados.
   [sistema](https://status.ropensci.org/). Este sistema no envía notificaciones
   pero muestra los resultados como el estado de las confirmaciones de GitHub (marca de verificación roja o cruz roja).
 
-- Si los paquetes están en CRAN, los autores de los paquetes pueden elegir suscribirse a las [notificaciones
-  de la API de comprobaciones de CRAN](https://docs.cranchecks.info/#notifications).
-
 - Anualmente o bianualmente, el personal de rOpenSci revisará los paquetes en un
   estado de fallo o que han estado fallando durante largos periodos, y
   se pondrá en contacto con los autores para determinar el estado de mantenimiento y las
