@@ -111,106 +111,95 @@ Animamos a quienes desarrollaron paquetes no son aceptados debido al solapamient
 
 ## Propiedad y mantenimiento de los paquetes {#ownership-after-softwarereview}
 
-### Papel del equipo de rOpenSci
+### Rol del equipo de rOpenSci
 
-Los autores de los paquetes aportados mantienen esencialmente la misma propiedad que tenían antes de que su paquete se uniera al conjunto de rOpenSci. Los autores de los paquetes seguirán manteniendo y desarrollando su software tras su aceptación en rOpenSci. A menos que se les añada explícitamente como colaboradores, el equipo de rOpenSci no interferirá mucho en las operaciones cotidianas. Sin embargo, este equipo puede intervenir con correcciones de errores críticos, o abordar cuestiones urgentes si los autores de los paquetes no responden de manera oportuna (ver [la sección sobre la capacidad de respuesta de los mantenedores](#maintainer-responsiveness)).
+Quienes crearon los los paquetes mantienen esencialmente la misma propiedad que tenían antes de que su paquete se uniera al conjunto paquetes de rOpenSci. Estas personas seguirán manteniendo y desarrollando su software luego de su aceptación en rOpenSci. A menos que se les añada explícitamente como colaboradoras/es, el equipo de rOpenSci no interferirá mucho en las actividades cotidianas. Sin embargo, el equipo puede intervenir con correcciones de errores críticos, o abordar cuestiones urgentes si las autoras o autores de los paquetes no responden de manera oportuna (ver [la sección sobre la capacidad de respuesta de quienes mantienen los paquetes](#maintainer-responsiveness)).
 
-### Capacidad de respuesta de los mantenedores
+### Capacidad de respuesta de quienes mantienen los paquetes
 
-Si los mantenedores de paquetes no responden a tiempo a las solicitudes de corrección de paquetes de CRAN o de nosotros, se lo recordaremos al mantenedor varias veces, pero después de 3 meses (o un plazo más corto, dependiendo de lo crítica que sea la corrección) haremos los cambios nosotros mismos.
+Si quienes matienen los paquetes no responden a tiempo a las solicitudes de corrección de de CRAN o de rOpenSci, se lo recordaremos a la persona responsable varias veces, pero después de 3 meses (o un plazo más corto, dependiendo de lo crítica que sea la corrección) haremos los cambios nosotros mismos.
 
-Lo anterior es un poco vago, por lo que a continuación se presentan algunas áreas de consideración.
+Lo anterior es un poco impreciso, por lo que a continuación se presentan algunos ejemplos a considerar.
 
 - Ejemplos en los que querríamos actuar con rapidez:
-  - El paquete `foo` es importado por uno o más paquetes en CRAN, y `foo` está roto, y por tanto rompería sus dependencias inversas.
-  - El paquete `bar` puede no tener dependencias inversas en CRAN, pero es muy utilizado, por lo que arreglar rápidamente los problemas es más importante.
+  - El paquete `foo` es importado por uno o más paquetes en CRAN, y `foo` tiene problemas, y por tanto generará problemas en los paquetes que dependan de `foo`.
+  - El paquete `bar` puede no ser usado por otros paquetes que se encuentran en CRAN, pero es muy utilizado, por lo que arreglar rápidamente los problemas es muy importante.
 - Ejemplos en los que podemos esperar más:
-  - El paquete `hello` no está en CRAN, o en CRAN, pero no tiene dependencias inversas.
-  - El paquete `world` necesita algunas correcciones. El mantenedor ha respondido, pero simplemente está muy ocupado con un nuevo trabajo, u otra razón, y lo atenderá pronto.
+  - El paquete `hello` no está en CRAN, o está en CRAN, pero no tiene dependencias inversas (otros paquetes no dependen de `hello`).
+  - El paquete `world` necesita algunas correcciones. La persona responsable ha respondido, pero simplemente está muy ocupada con un nuevo trabajo, u otra razón, y atenderá el problema pronto.
 
-Instamos a los mantenedores de paquetes a que se aseguren de que reciben las notificaciones de GitHub, así como de que los correos electrónicos del personal de rOpenSci y de los mantenedores de CRAN no van a su bandeja de correo no deseado. Los autores de los paquetes incorporados serán invitados al Slack de rOpenSci para charlar con el equipo de rOpenSci y la comunidad de rOpenSci en general. Cualquiera puede también discutir con la comunidad rOpenSci en el [foro de discusión de rOpenSci](https://discuss.ropensci.org/).
+Instamos a quienes mantienen paquetes a que se aseguren de que reciben las notificaciones de GitHub, así como de que los correos electrónicos del equipo de rOpenSci y de CRAN no van a su bandeja de correo no deseado. Quienes hayan desarrollado paquetes que son incorporados a rOpen Sci serán invitadas/os al Slack de rOpenSci para charlar con el equipo y la comunidad de rOpenSci en general. Cualquier persona puede sumarse a la conversación con la comunidad rOpenSci en el [foro de discusión de rOpenSci](https://discuss.ropensci.org/).
 
-Si los autores abandonan el mantenimiento de un paquete activamente utilizado en nuestra suite, consideraremos la posibilidad de solicitar a CRAN que transfiera el estatus de mantenedor del paquete a rOpenSci.
+Si quienes desarrollaron un paquete abandonan su mantenimiento y se trata de un paquete utilizado activamente, consideraremos la posibilidad de solicitar a CRAN que transfiera el estatus de mantenedor del paquete a rOpenSci.
 
 ### Compromiso de calidad
 
 rOpenSci se esfuerza por desarrollar y promover software de investigación de alta calidad. Para asegurarnos de que tu software cumple nuestros criterios, revisamos todos los envíos como parte del proceso de revisión por pares del software, e incluso después de la aceptación seguiremos interviniendo con mejoras y correcciones de errores.
 
-A pesar de nuestros esfuerzos por apoyar el software contribuido, los errores son responsabilidad de los mantenedores individuales. El software con errores y sin mantenimiento puede ser eliminado de nuestro conjunto en cualquier momento.
+A pesar de nuestros esfuerzos por apoyar el software contribuido, los errores son responsabilidad de quien mantiene el paquete. El software con errores y sin mantenimiento puede ser eliminado de nuestra suite de paquetes en cualquier momento.
 
 ### Eliminación de paquetes
 
-En el improbable caso de que un colaborador de un paquete solicite la retirada de su paquete de la suite, nos reservamos el derecho de mantener una versión del paquete en nuestra suite con fines de archivo.
+En el improbable caso de que quien colabora con de un paquete solicite que su paquete sea returado de la suite, nos reservamos el derecho de mantener una versión del paquete en nuestra suite con fines de archivo.
 
 ## Ética, privacidad de los datos e investigación con sujetos humanos
 
-Los paquetes de rOpenSci y otras herramientas se utilizan para diversos fines, pero nuestro objetivo es
-herramientas para la investigación. Esperamos que las herramientas permitan un uso ético por parte de los investigadores
-que están obligados a adherirse a códigos éticos como la [Declaración de
+Los paquetes de rOpenSci y otras herramientas se utilizan para diversos fines, pero nuestro foco está en las
+herramientas para la investigación. Esperamos que las herramientas permitan un uso ético por parte de quines hacen investigación y tienen la obligación de adherirse a códigos éticos como la [Declaración de
 Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
-y [el Informe Belmont
-Informe](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
-Los investigadores son responsables del uso que hacen del software, pero los
-deben considerar el uso ético de sus productos, y los propios desarrolladores
-los propios desarrolladores se adhieren a los códigos éticos para los profesionales de la informática, como los
+y [el Informe Belmont](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
+Quienes investigan son responsables del uso que hacen del software, pero quienes desarrollan el software deben considerar el uso ético de sus productos, y estas persona deben adherir a los códigos éticos para profesionales de la informática, como los
 expresados por el [IEEE](https://www.computer.org/education/code-of-ethics) y
-[ACM](https://ethics.acm.org/)Los colaboradores de rOpenSci a menudo desempeñan el papel
-de investigador y de desarrollador.
+[ACM](https://ethics.acm.org/). Quienes colaboran en rOpenSci a menudo desempeñan el papel
+de investigador y de desarrollador sofware.
 
-Pedimos que los desarrolladores de software se pongan en el papel de investigadores y
-consideren los requisitos de un flujo de trabajo ético utilizando el software de los autores.
-Dada la variación y el grado de flujo de los enfoques éticos para los análisis basados en Internet
-en Internet, es necesario juzgar en lugar de elaborar recetas. El [Ética
+Pedimos que quienes desarrollan software se pongan en el papel de quienes investigan y
+consideren los requisitos de un flujo de trabajo ético utilizando el software.
+Dada la variación y el grado de flujo de los enfoques éticos para los análisis basados en Internet, es necesario evaluar cada caso en lugar de elaborar recetas. La [Guía de Ética
 de la Asociación de Investigadores de Internet](https://aoir.org/ethics/)
-proporcionan un marco sólido y animamos a los autores, editores y revisores a utilizarlo
-a la hora de evaluar su trabajo. En general, la adhesión a los requisitos legales o reglamentarios
-requisitos mínimos puede no ser suficiente, aunque éstos (p. ej,
-GDPR), pueden ser relevantes. Los autores de los paquetes deben dirigir
-a los usuarios a los recursos pertinentes para el uso ético del software.
+proporciona un marco sólido y animamos a autoras/es, editoras/es y revisoras/es a utilizarlo
+a la hora de evaluar su trabajo. En general, la adhesión a los requisitos legales o reglamentarios mínimos puede no ser suficiente, aunque éstos (p. ej,
+GDPR), pueden ser relevantes. Quienes crean los paquetes deben dirigir
+a las personas que los usan a los recursos pertinentes para el uso ético del software.
 
-Algunos paquetes, debido a la naturaleza de los datos que manejan, pueden ser determinados por los editores para requerir un mayor escrutinio. Para ellos, los editores pueden exigir una funcionalidad adicional (o reducida), y una sólida
-documentación, valores por defecto y advertencias para dirigir a los usuarios a las prácticas éticas pertinentes.
-prácticas éticas pertinentes. Los siguientes temas pueden merecer un mayor escrutinio:
+Algunos paquetes, debido a la naturaleza de los datos que manejan, pueden ser elegidos por quienes hacen la edición para pasar por un mayor escrutinio. Para ellos, quienes hacen la edición pueden exigir una funcionalidad adicional (o reducida), y una sólida
+documentación, valores por defecto y advertencias para dirigir a quienes usan el paquete a las prácticas éticas pertinentes. Los siguientes temas pueden merecer un mayor escrutinio:
 
-- ***Poblaciones vulnerables***: Los autores de paquetes y flujos de trabajo que tratan con
-  información relacionada con poblaciones vulnerables tienen la responsabilidad de proteger
-  de los posibles daños.
+- ***Poblaciones vulnerables***: Quienes crean paquetes y flujos de trabajo que tratan con
+  información relacionada con poblaciones vulnerables tienen la responsabilidad de protegerlas de posibles daños.
 
 - ***Datos personales o sensibles***: La divulgación de datos
   identificables o sensibles es potencialmente perjudicial. Esto incluye los datos "razonablemente
-  identificables", que una persona motivada podría rastrear hasta el
-  propietario o creador, incluso si los datos son anónimos. Esto incluye tanto los casos en los que los identificadores
+  identificables", que una persona motivada podría rastrear hasta la persona
+  propietaria o creadora, incluso si los datos son anónimos. Esto incluye tanto los casos en los que los identificadores
   (por ejemplo, nombre, fecha de nacimiento) están disponibles como parte de los datos, y también si los
   seudónimos/nombres de usuario están vinculados a mensajes de texto completo, a través de los cuales se puede
-  puede vincular a los individuos mediante referencias cruzadas con otros conjuntos de datos.
+  puede vincular a las personas individuales mediante referencias cruzadas con otros conjuntos de datos.
 
 Aunque la mejor respuesta a los problemas éticos dependerá del contexto, estas
 directrices generales deben ser seguidas por los paquetes cuando se presenten los desafíos anteriores:
 
 - Los paquetes deben adherirse a las condiciones de uso de la fuente de datos, expresadas en
-  los términos y condiciones del sitio web, ["robots.txt"](https://docs.ropensci.org/robotstxt/) políticas de privacidad y otras
+  los términos y condiciones del sitio web, archivos ["robots.txt"](https://docs.ropensci.org/robotstxt/), políticas de privacidad y otras
   otras restricciones relevantes, y enlazarlas de forma destacada en la documentación del paquete.
-  documentación del paquete. Los paquetes deben proporcionar o documentar la funcionalidad para cumplir
-  restricciones (por ejemplo, el raspado sólo de los puntos finales permitidos, el uso de
-  una limitación de velocidad adecuada en el código, los ejemplos o las viñetas). Ten en cuenta que aunque los Términos y Condiciones
-  condiciones, las políticas de privacidad, etc., pueden no ofrecer límites suficientes
-  uso ético, pueden proporcionar un límite exterior.
+  Los paquetes deben proporcionar o documentar la funcionalidad para cumplir
+  restricciones (por ejemplo, el *scrapeado* sólo de los puntos finales permitidos, el uso de limitación de velocidad adecuada en el código, los ejemplos o las viñetas). Ten en cuenta que aunque los Términos y Condiciones, las políticas de privacidad, etc., pueden no ofrecer límites suficientes
+  uso ético, pueden proporcionar un límite superior.
 
 - Una herramienta clave para abordar los riesgos que plantea el estudio de poblaciones vulnerables o
-  utilizar datos de identificación personal es el ***el consentimiento informado***.  Los autores de paquetes
-  deben apoyar la obtención del consentimiento informado de los usuarios cuando sea pertinente. Esto puede incluir
-  incluir la provisión de enlaces al método preferido por la fuente de datos para adquirir el consentimiento,
-  información de contacto de los proveedores de datos (por ejemplo, los moderadores del foro), documentación
+  utilizar datos de identificación personal es el ***el consentimiento informado***. Quienes crean los paquetes
+  deben apoyar la obtención del consentimiento informado de las personas cuando sea pertinente. Esto puede incluir la provisión de enlaces al método preferido por la fuente de datos para adquirir el consentimiento,
+  información de contacto de quienes proveen los datos (por ejemplo, quines moderan un foro), documentación
   de los protocolos de consentimiento informado, u obtener la aprobación previa para los usos generales de un
   paquete.
   
   Ten en cuenta que el consentimiento no se concede implícitamente sólo porque los datos sean accesibles.
   Los datos accesibles no son necesariamente públicos, ya que diferentes personas y contextos
-  tienen diferentes expectativas normativas de privacidad (véase el trabajo de [Datos Sociales
-  Lab](http://socialdatalab.net/ethics-resources)).
+  tienen diferentes expectativas normativas de privacidad (véase el trabajo de [*Social Data
+    Lab*](http://socialdatalab.net/ethics-resources)).
 
 - Los paquetes que acceden a información personal identificable deben tener especial
-  cuidado en seguir \[las mejores prácticas de seguridad\]\[las mejores prácticas de seguridad en el desarrollo de paquetes\]
+  cuidado en seguir [las buenas prácticas de seguridad](#package-development-security-best-practices)
   (por ejemplo, el uso exclusivo de protocolos de Internet seguros, mecanismos fuertes para
   almacenar credenciales, etc.).
 
@@ -218,60 +207,50 @@ directrices generales deben ser seguidas por los paquetes cuando se presenten lo
   deben habilitar, documentar y demostrar los flujos de trabajo para la desidentificación
   el almacenamiento seguro, y otras buenas prácticas para minimizar el riesgo de daños.
 
-A medida que las normas de privacidad de los datos y la investigación siguen evolucionando, agradeceremos las aportaciones
-de los autores sobre las consideraciones específicas de su software y la documentación
+A medida que las normas de privacidad de los datos y la investigación siguen evolucionando, agradeceremos los aportes
+de quienes desarrollan paquetes sobre las consideraciones específicas de su software y la
 documentación complementaria, como la aprobación de los comités de revisión ética de las universidades. Estos
 pueden adjuntarse a los hilos temáticos de los envíos de paquetes o a las consultas previas al envío,
-o transmitirse directamente a los editores si es necesario. En general,
-sugerencias pueden archivarse como [temas en el repositorio de este libro](https://github.com/ropensci/dev_guide/issues).
+o transmitirse directamente a quienes se encargan de la edición si es necesario. En general,
+sugerencias pueden enviarse como [*issue* en el repositorio de este libro](https://github.com/ropensci/dev_guide/issues).
 
 ### Recursos
 
-Los siguientes recursos pueden ser útiles para los investigadores, autores de paquetes, editores
-y revisores a la hora de abordar cuestiones éticas relacionadas con la privacidad y el software de investigación.
+Los siguientes recursos pueden ser útiles para quienes investigan, desarrollan paquetes, hacen la edición o revisión a la hora de abordar cuestiones éticas relacionadas con la privacidad y el software de investigación.
 
-- El sitio web [Declaración de
-  Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
-  y [el Informe Belmont
-  Informe](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
-  proporcionan principios fundamentales para la práctica ética de los investigadores.
+- El sitio web [Declaración de  Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
+  y [el Informe Belmont](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
+  proporcionan principios fundamentales para la práctica ética de quienes hacen investigación.
 - Varias organizaciones ofrecen orientación sobre cómo trasladar estos principios
-  en el contexto de la investigación en Internet. Entre ellas se encuentra la [Ética
+  en el contexto de la investigación en Internet. Entre ellas se encuentra la [Guía de Ética
   de la Asociación de Investigadores de
-  Researchers](https://aoir.org/ethics/)y la [Guía de la NESH sobre Internet
-  Investigación
-  Ética](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
-  y [Directrices éticas de BPS para la investigación a través de Internet
-  Investigación por Internet](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
-  [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) proporcionan una
-  útil visión general de las mismas.
-- El Laboratorio de Medios Sociales ofrece un [alto nivel
-  visión general](http://socialdatalab.net/ethics-resources) con datos sobre las expectativas
-  expectativas de privacidad y uso en los foros sociales.
-- Bechmann A., Kim J.Y. (2019) Big Data: Un enfoque en la investigación de los medios sociales
-  Dilemas. En: Iphofen R. (eds) Handbook of Research Ethics and Scientific
-  Integridad Científica. [https://doi.org/10.1007/978-3-319-76040-7\_18-1](https://doi.org/10.1007/978-3-319-76040-7_18-1)
-- Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., y Primack, B. (2021). Reevaluación de las normas de
-  protección de los sujetos humanos para los datos sanitarios sensibles en las redes sociales.
-  Redes Sociales, 67, 41-46. [https://dx.doi.org/10.1016/j.socnet.2019.10.010](https://dx.doi.org/10.1016/j.socnet.2019.10.010)
-- Lomborg, S., y Bechmann, A. (2014). Uso de las API para la recogida de datos en las redes sociales
-  Social Media. La Sociedad de la Información, 30(4), 256--265.
+  Internet](https://aoir.org/ethics/)y la [Guía de la NESH sobre Eica de la Investigación de Internet](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
+  y [Directrices éticas de BPS para la investigación a través de Internet](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
+-  [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) proporcionan una
+  visión general útil de estas guías.
+- El Laboratorio de Medios Sociales ofrece una [revisión general de alto nivel](http://socialdatalab.net/ethics-resources) con datos sobre las expectativas
+  de privacidad y uso en los foros sociales.
+- Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research Dilemas. En: Iphofen R. (eds) Handbook of Research Ethics and Scientific
+    Integrity. [https://doi.org/10.1007/978-3-319-76040-7\_18-1](https://doi.org/10.1007/978-3-319-76040-7_18-1)
+- Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., y Primack, B. (2021). Re-evaluating standards of
+    human subjects protection for sensitive health data in social media networks. Social Networks, 67, 41-46. [https://dx.doi.org/10.1016/j.socnet.2019.10.010](https://dx.doi.org/10.1016/j.socnet.2019.10.010)
+- Lomborg, S., y Bechmann, A. (2014). Using APIs for Data Collection on Social
+    Media. The Information Society, 30(4), 256--265.
   [https://dx.doi.org/10.1080/01972243.2014.915276](https://dx.doi.org/10.1080/01972243.2014.915276)
-- Flick, C. (2016). El consentimiento informado y el estudio de manipulación emocional de Facebook
-  de Facebook. *Ética de la investigación*, *12*(1), 14--28.
+- Flick, C. (2016). Informed consent and the Facebook emotional manipulation
+    study. Research Ethics, 12(1), 14--28.
   [https://doi.org/10.1177/1747016115599568](https://doi.org/10.1177/1747016115599568)
-- Sugiura, L., Wiles, R., y Pope, C. (2017). Desafíos éticos en la investigación
-  investigación en línea: Percepciones públicas/privadas. *Ética de la investigación*, *13*(3--4),
+- Sugiura, L., Wiles, R., y Pope, C. (2017). Ethical challenges in online
+    research: Public/private perceptions. Research Ethics, 13(3--4),
   184--199. [https://doi.org/10.1177/1747016116650720](https://doi.org/10.1177/1747016116650720)
-- Taylor, J., y Pagliari, C. (2018). La minería de datos de las redes sociales: ¿Cómo están
-  los patrocinadores de la investigación y los investigadores abordan los desafíos éticos?
-  Ética de la Investigación, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
-- Zimmer, M. (2010). "Pero los datos ya son públicos": sobre la ética de la
-  investigación en Facebook. Ética y Tecnología de la Información, 12(4), 313--325.
+- Taylor, J., y Pagliari, C. (2018).Mining social media data: How are
+    research sponsors and researchers addressing the ethical challenges? Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
+- Zimmer, M. (2010). "But the data is already public": on the ethics of
+    research in Facebook. Ethics and Information Technology, 12(4), 313--325.
   [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
 ## Código de conducta {#code-of-conduct}
 
-La comunidad de rOpenSci es nuestro mejor activo. Tanto si eres un colaborador habitual como un recién llegado, nos preocupamos por hacer de éste un lugar seguro para ti y te cubrimos las espaldas. Tenemos un Código de Conducta que se aplica a todas las personas que participan en la comunidad de rOpenSci, incluidos el personal y la dirección de rOpenSci y a todos los modos de interacción en línea o en persona. El [Código de Conducta](https://ropensci.org/code-of-conduct/) se mantiene en el sitio web de rOpenSci.
+La comunidad de rOpenSci es nuestro mejor recurso. Tanto si colaboras habitualmente como si recién llegas, nos preocupamos por hacer de éste un lugar seguro para ti y te apoyamos en lo que necesites. Tenemos un Código de Conducta que se aplica a todas las personas que participan en la comunidad de rOpenSci, incluidos el equipo y la dirección de rOpenSci y a todos las formas de interacción en línea o en persona. El [Código de Conducta](https://ropensci.org/code-of-conduct/) se mantiene en el sitio web de rOpenSci.
 
 
