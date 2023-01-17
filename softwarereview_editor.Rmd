@@ -9,6 +9,8 @@ This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklis
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
 
+> Always assume participants in the software review system (fellow editors, submitters, reviewers) are doing their best, and communicate gracefully accordingly, especially when inquiring why a thing is delayed.
+
 ## Editors' responsibilities
 
 * In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly. 
@@ -145,13 +147,26 @@ In details, the EiC plays the following roles
   @ropensci-review-bot assign @username as editor
   ```
 
-- Monitors pace of review process and reminds other editors to move packages along as needed.
-- On assuming EiC rotation, reviews status of current open reviews and reminds editors to respond or update status as needed.
+- Regularly (for instance weekly) monitors pace of review process thanks to [devguider](#eic-report) and reminds other editors to move packages along as needed.
+- On assuming EiC rotation, reviews status of current open reviews thanks to [devguider](#eic-report) and reminds editors to respond or update status as needed.
 - Responds to issues posted to the software-review-meta repo
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
     - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
     - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
 - Requests a new EiC when their rotation is up (set a calendar reminder ahead of your expected end date and ask for volunteers in the editors' Slack channel)
+
+### Using `devguider::devguide_eic_report()` {#eic-report}
+
+Install devguider and run `devguider::devguide_eic_report()`, open the HTML report in a browser.
+
+- Look over submissions in "presubmission" and "editorial-team-prep". Check whether any action needs to be taken (polling editors, making a decision, putting the issue on hold, pinging the submitter for an update, finding and assigning an editor).
+
+- Rows in each section are colored by "urgency" from white (ignore) to yellow (not urgent) to red (most urgent).
+- Look over submissions in "seeking-reviewer(s)". If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
+
+- Look over submissions in "reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
+	
+- Look over submissions in "review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
  
 ### Asking for more details
 
