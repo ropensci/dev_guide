@@ -161,6 +161,7 @@ Install devguider and run `devguider::devguide_eic_report()`, open the HTML repo
 
 - Look over submissions in "presubmission" and "editorial-team-prep". Check whether any action needs to be taken (polling editors, making a decision, putting the issue on hold, pinging the submitter for an update, finding and assigning an editor).
 
+- Rows in each section are colored by "urgency" from white (ignore) to yellow (not urgent) to red (most urgent).
 - Look over submissions in "seeking-reviewer(s)". If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
 
 - Look over submissions in "reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
