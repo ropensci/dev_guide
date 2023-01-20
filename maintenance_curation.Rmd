@@ -124,7 +124,7 @@ at the time of submission to be reviewed.
     badges. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default. A special tab of packages
-   pages will `display these with `"type": "archived"`
+   pages will display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
 ## Legacy acquired packages
