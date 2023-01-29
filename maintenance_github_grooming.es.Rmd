@@ -29,11 +29,11 @@ Recomendamos anular el lingüista de GitHub añadiendo o modificando un archivo 
 - Si almacenas archivos html en lugares no estándar (no en docs/, por ejemplo en vignettes/) omite los archivos de documentación. 
 Añade `*.html linguist-documentation=true` a .gitattributes (como en [este ejemplo](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5)).
 
-- Si tu repo contiene código no de tu autoría, por ejemplo, código JavaScript, añade `inst/js/* linguist-vendored` a .gitattributes (como en [este ejemplo](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1)).
+- Si tu repo contiene código que no es de tu autoría, por ejemplo, código JavaScript, añade `inst/js/* linguist-vendored` a .gitattributes (como en [este ejemplo](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1)).
 
 De este modo, la clasificación lingüística y las estadísticas de tu repositorio reflejarán mejor el código fuente que contiene, además de hacerlo más descubrible.
 En particular, si el lingüista no reconoce correctamente que tu repositorio contiene principalmente código R, tu paquete no aparecerá en los resultados de búsqueda con el filtro `language:R`.
-Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R de tendencia](https://github.com/trending/r).
+Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R en tendencia](https://github.com/trending/r).
 
 Más información sobre las anulaciones del lingüista de GitHub [aquí](https://github.com/github/linguist#overrides).
 
