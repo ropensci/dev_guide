@@ -9,7 +9,7 @@ Este capítulo describe nuestra Guía de Contribución, la cual indica cómo pue
 Hemos desarrollado la [Guía de Contribución a la Comunidad rOpenSci](https://contributing.ropensci.org/) para darte la bienvenida a rOpenSci y animarte a colaborar.
 Te ayudará a averiguar lo que podrías ganar aportando tu tiempo, tus conocimientos y tu experiencia, a coincidir tus necesidades con las cosas que ayudarán a la misión de rOpenSci y a ponerte en contacto con los recursos que te ayudarán en el camino.
 
-Nuestro personal y comunidad fomentan activamente un entorno acogedor donde gente de diferentes orígenes y niveles de habilidad aprenden, comparten ideas e innovan juntos abiertamente a través de normas y software compartidos, ya sea que usen o que desarrollen software. 
+Nuestro equipo y comunidad fomentan activamente un entorno acogedor donde gente de diferentes orígenes y niveles de habilidad aprenden, comparten ideas e innovan juntos abiertamente a través de normas y software compartidos, ya sea que usen o que desarrollen software. 
 La participación en todas las actividades de rOpenSci está respaldada por [nuestro Código de Conducta](https://ropensci.org/code-of-conduct).
 
 Aceptamos contribuciones de código y no código de personas con o sin experiencia, en cualquier etapa de su carrera, y en cualquier sector. 
