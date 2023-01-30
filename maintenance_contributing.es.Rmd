@@ -10,9 +10,9 @@ Hemos desarrollado la [Guía de Contribución a la Comunidad rOpenSci](https://c
 Te ayudará a averiguar lo que podrías ganar aportando tu tiempo, tus conocimientos y tu experiencia, a coincidir tus necesidades con las cosas que ayudarán a la misión de rOpenSci y a ponerte en contacto con los recursos que te ayudarán en el camino.
 
 Nuestro equipo y comunidad fomentan activamente un entorno acogedor donde gente de diferentes orígenes y niveles de habilidad aprenden, comparten ideas e innovan juntos abiertamente a través de normas y software compartidos, ya sea que usen o que desarrollen software. 
-La participación en todas las actividades de rOpenSci está respaldada por [nuestro Código de Conducta](https://ropensci.org/code-of-conduct).
+La participación en todas las actividades de rOpenSci está respaldada por [nuestro Código de Conducta](https://ropensci.org/codigo-de-conducta/).
 
-Aceptamos contribuciones de código y no código de personas con o sin experiencia, en cualquier etapa de su carrera, y en cualquier sector. 
+Aceptamos contribuciones de código y de otros tipos de personas con o sin experiencia, en cualquier etapa de su carrera, y en cualquier sector. 
 ¡No es necesario que desarrolles software! 
 Tal vez quieras **pasar 30 minutos** compartiendo el caso de uso de tu paquete en nuestro foro público o informando de un error, **una hora** a aprender asistiendo a una Llamada Comunitaria, **cinco horas** revisando un paquete de R enviado para una revisión abierta por pares, **o tal vez quieras comprometerte de forma continuada** para ayudar a mantener un paquete.
 
