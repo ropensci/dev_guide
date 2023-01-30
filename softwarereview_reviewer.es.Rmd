@@ -1,4 +1,4 @@
-# Guía para quienes hace una revisión {#reviewerguide}
+# Guía para quienes hacen una revisión {#reviewerguide}
 
 ```{block, type='summaryblock'}
 ¡Gracias por aceptar revisar un paquete para rOpenSci! Este capítulo incluye nuestras recomendaciones para [preparar](#preparereview), [enviar](#submitreview) y [completar](#followupreviewer) tu revisión.
