@@ -115,7 +115,7 @@ Si tu problema es *reclutar* nuevas personas, puedes publicar una convocatoria a
 [Las *branches*](https://happygitwithr.com/git-branches.html) son baratas. 
 Utilízalas mucho cuando desarrolles funciones, pruebes nuevas ideas o arregles problemas.
 
-Si sigues el [desarrollo basado en el "tronco"](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), "agregarás pequeñas y frecuentes actualizaciones" a tu *branch* principal.
+Si sigues el [desarrollo troncal](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development), "agregarás pequeñas y frecuentes actualizaciones" a tu *branch* principal.
 Ver también la documentación del [Flujo de GitHub](https://docs.github.com/en/get-started/quickstart/github-flow) y el [flujo de GitLab](https://docs.gitlab.com/ee/topics/gitlab_flow.html).
 Es posible que quieras incrementar los números de versión (en `DESCRIPTION`) frecuentemente.
 Un aspecto particular del trabajo con otras personas es la revisión de *pull requests*. 
