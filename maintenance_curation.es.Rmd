@@ -12,7 +12,7 @@ Esta política de gestión pretende apoyar estos objetivos:
 
 - Proporcionar un mecanismo para el retiro gradual de paquetes, manteniendo al mismo tiempo las etiquetas de revisión por pares
 
-```
+\`\`\`
 
 Los elementos de infraestructura necesarios para la aplicación de esta política están, en algunos casos, parcialmente construidos y en otros casos aún no se han iniciado.
 Nuestro objetivo es adoptar esta política en parte para priorizar el trabajo en estos componentes.
@@ -130,7 +130,7 @@ Los paquetes incubados se migrarán a ropensci-archive por defecto después de u
 
 Los libros de rOpenSci son documentación larga, a menudo con formato de libro, relacionada con los paquetes, proyectos o temas de rOpenSci, creados por el personal de rOpenSci o por miembros de la comunidad.
 
-- Los libros vivirán en la organización "ropensci-books".
+- Los libros vivirán en la organización "ropensci-books
 
 - Los libros se alojarán en books.ropensci.org
 
