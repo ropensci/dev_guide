@@ -46,7 +46,7 @@ No se comprobarán en el sistema de rOpenSci.
 - Los paquetes archivados no se mostrarán por defecto en la página web de paquetes.
 Una pestaña especial de páginas de paquetes los mostrará con `"type": "archived"`, hayan sido revisados por pares o mantenidos por el personal.
 
-- Los paquetes archivados pueden desarchivarse cuando alguien nuevo, o quien lo mantenía anteriormente, esté dispuesto a solucionar los problemas y quiera revivirlo. 
+- Los paquetes archivados pueden desarchivarse cuando alguien nuevo/a, o quien lo mantenía anteriormente, esté dispuesto/a a solucionar los problemas y quiera revivirlo. 
 Para ello, [ponte en contacto con rOpenSci](https://ropensci.org/contact/). 
 Se transferirán a la organización "ropenscilabs".
 
@@ -75,7 +75,7 @@ rOpenSci también proporcionará apoyo a pedido, tanto del equipo como de person
 
 - Si quien mantienen un paquete no responde consultas por un mes, o si ésta persona lo pide, rOpenSci puede buscar una nueva persona para mantener determinados paquetes revisados por pares que considere que tienen un alto valor para la comunidad en función de la base de personas que lo usan (descargas), dependencias inversas o los objetivos estratégicos de rOpenSci. 
 
-- Cuando se archiven, estos paquetes pasarán de la organización "ropensci" de GitHub a la organización "ropensci-archive" (o a las cuentas de GitHub quienes los mantienen si lo desean), siguiendo [guía de transferencia](#archivalguidance). 
+- Cuando se archiven, estos paquetes pasarán de la organización "ropensci" de GitHub a la organización "ropensci-archive" (o a las cuentas de GitHub quienes los mantienen si así lo desean), siguiendo la [guía de transferencia](#archivalguidance). 
 Obtendrán la etiqueta "archived" en el registro. 
 Conservarán las etiquetas e insignias de "peer-reviewed". 
 No se comprobará en el sistema rOpenSci.
@@ -116,7 +116,7 @@ Los paquetes incubados se migrarán a ropensci-archive por defecto después de u
 
 - Los paquetes incubados archivados ganarán la etiqueta "archived".
 
-### Paquetes incubados no de R 
+### Paquetes incubados que no son de R
 
 - La organización "incubator" también incluirá proyectos que no sean paquetes de R.
 
