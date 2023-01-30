@@ -23,7 +23,7 @@ Gracias por tu deseo de participar en la revisión de software de rOpenSci como 
 Por favor, completa nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer).
 
 Si ves una presentación vigente que es particularmente relevante para tus intereses, por favor envía un correo electrónico a `info@ropensci.org`, incluyendo el nombre del paquete, la URL del número de presentación y el nombre de la persona responsable de la edición.
-Sin embargo, ten en cuenta que las invitaciones a revisión quedan a discreción de la persona a cargo de la edición, y es muy posible que ya haya realizado invitaciones. 
+Sin embargo, ten en cuenta que las invitaciones a revisar quedan a discreción de la persona a cargo de la edición, y es muy posible que ya haya realizado invitaciones. 
 Por favor, no te ofrezcas como voluntario/a para todos los temas, y no lo hagas a través de la interfaz de GitHub.
 
 Para otras formas de contribuir, consulta la [Guía de contribución de rOpenSci](https://contributing.ropensci.org/).
