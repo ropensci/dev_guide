@@ -44,7 +44,7 @@ Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#re
 - ¿Podría aumentarse el rendimiento?
 - ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de una persona con el paquete y/o la herramienta o datos que utiliza?
 - ¿Los nombres de funciones y argumentos forman una API de programación común y lógica que sea fácil de leer y que se beneficie de herramientas de automcompletado?
-- Si tienes tus propios datos relevante o un problema relacionado, trabaja con el paquete. Puede que encuentres asperezas y/o casos de uso no contemplados.
+- Si tienes datos propios relevantes o un problema relacionado, trabaja con el paquete. Puede que encuentres asperezas y/o casos de uso no contemplados.
 
 Por favor, en tus revisiones dirígete con respeto y amabilidad hacia las personas que presentaron el paquete. Nuestro [código de conducta](#code-of-conduct) es obligatorio para quienes participan en nuestro proceso de revisión. Esperamos que envíes tu revisión en un plazo de 3 semanas, según el plazo establecido por la persona a cargo de la edición. Por favor, ponte en contacto con esta persona directamente o mediante el *issue* de envío para informarle de posibles retrasos.
 
@@ -55,7 +55,7 @@ Te recomendamos usar herramientas automatizadas para facilitar tu revisión. És
 - Ejecutar `devtools::check()` y `devtools::test()` en el paquete para encontrar cualquier error que haya 
 pasado desapercibido en la computadora de quien desarrolló el paquete.
 - Revisar si los tests salteados son justificados (por ejemplo usar `skip_on_cran()` en tests que usan una API versus saltearse todos los tests en un determinado sistema operativo).
-- Si el paquete no se envía a través de la branch principal o por defecto, recuerda cambiar a la branch enviada para revisar antes de comenzar tu revisión. En este caso, tendrás que usar la búsqueda local para revisar el código, ya que la búsqueda en GitHub está limitada a la branch por defecto. Además, la documentación alojada en un sitio web de `pkgdown` no va a estar necesariamente actualizada, por lo que recomendamos revisar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
+- Si el paquete no se envía a través de la _branch_ principal o por defecto, recuerda cambiar a la _branch_ enviada para revisar antes de comenzar tu revisión. En este caso, tendrás que usar la búsqueda local para revisar el código, ya que la búsqueda en GitHub está limitada a la _branch_ por defecto. Además, la documentación alojada en un sitio web de `pkgdown` no va a estar necesariamente actualizada, por lo que recomendamos revisar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
 
 Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el *issue* de revisión con el contenido "`@ropensci-review-bot check package`".
 
@@ -65,7 +65,7 @@ Si interactúas con quienes desarrollaron el paquete y hablas de la revisión fu
 
 ### Experiencia de revisiones anteriores
 
-Si es la primera vez que revisas un paquete, te puede ser útil leer algunas revisiones anteriores. En general, puedes encontrar *issues* de presentación de paquetes aceptados [aquí](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Estos son algunas revisiones seleccionadas en inglés (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
+Si es la primera vez que revisas un paquete, te puede ser útil leer algunas revisiones anteriores. En general, puedes encontrar *issues* de presentación de paquetes aceptados [aquí](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Estas son algunas revisiones seleccionadas en inglés (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
 
 - `rtika` [revisión 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) y [revisión 2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
@@ -75,7 +75,7 @@ Si es la primera vez que revisas un paquete, te puede ser útil leer algunas rev
 
 - `rusda` [revisión](https://github.com/ropensci/software-review/issues/18#issuecomment-120445737) (previo a que tuviéramos una plantilla de revisión)
 
-Puedes leer las entradas del blog sobre experiencias al revisar paquetes [a través de este enlace](https://ropensci.org/tags/reviewer/). En particular [esta publicación de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) (en inglés) habla como puedes proporcionar una devolución útil aún careciendo de experticia en el tema o en la implementación del paquete adoptando el rol de "usuario/a ingenuo/a" y preguntándote *"¿Qué creo que hace esta cosa? ¿lo hace? ¿qué cosas me causan rechazo?"* En [otra entrada del blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica cómo alternó entre usar el paquete y revisar el código.
+Puedes leer los artículos del blog sobre experiencias al revisar paquetes [a través de este enlace](https://ropensci.org/tags/reviewer/). En particular [esta publicación de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) (en inglés) habla como puedes proporcionar una devolución útil aún careciendo de experticia en el tema o en la implementación del paquete adoptando el rol de "usuario/a ingenuo/a" y preguntándote *"¿Qué creo que hace esta cosa? ¿lo hace? ¿qué cosas me causan rechazo?"* En [otra entrada del blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica cómo alternó entre usar el paquete y revisar el código.
 
 Como antiguo revisor y autor de paquetes, [Adam Sparks](https://adamhsparks.netlify.app/) [escribió lo siguiente](https://twitter.com/adamhsparks/status/898132036451303425) "\[escribe\] una buena crítica de la estructura del paquete y de las mejores prácticas de escritura de código. Si sabes cómo hacer algo mejor, dímelo. Como desarrollador es fácil pasar por alto oportunidades de documentación, pero como revisor/a, tienes una visión diferente. Eres una persona que puede dar devolución. ¿Qué no está claro en el paquete? ¿Cómo puede hacerse más claro? Si lo utilizas por primera vez, ¿es fácil? ¿Conoces otro paquete R que quizás debería utilizar? ¿O hay alguno que esté utilizando y que quizás no debería? Si puedes contribuir al paquete, ofrécete".
 
@@ -95,7 +95,7 @@ Esto
 - clonará el repositorio de GitHub del paquete `refnet`,
 - creará un proyecto de revisión, que contendrá una notebook para que rellenes, y la plantilla de revisión.
 
-Ten en cuenta que si el paquete no se envía a través de la branch principal o por defecto, tienes que cambiar a la branch usada para enviar antes de comenzar tu revisión.
+Ten en cuenta que si el paquete no se envía a través de la _branch_ principal o por defecto, tienes que cambiar a la _branch_ usada para enviar antes de comenzar tu revisión.
 
 ### Devoluciones sobre el proceso
 
