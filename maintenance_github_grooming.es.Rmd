@@ -2,7 +2,7 @@
 
 ```{block, type='summaryblock'}
 Los paquetes de rOpenSci se desarrollan actualmente en su gran mayoría en GitHub.
-Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobre [hacer que tu repo sea más descubrible](#repodiscoverability) y una sección sobre [comercializar tu propia cuenta de GitHub después de pasar por la revisión por pares](#marketown).
+Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobre [hacer que tu repo sea más descubrible](#repodiscoverability) y una sección sobre [publicitar tu propia cuenta de GitHub después de pasar por la revisión por pares](#marketown).
 ```
 
 ## Haz que tu repositorio sea fácil de descubrir {#repodiscoverability}
