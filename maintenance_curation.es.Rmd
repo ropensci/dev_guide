@@ -1,212 +1,142 @@
-# Package Curation Policy {#curationpolicy}
+# Política de gestión de paquetes {#curationpolicy}
 
 ```{block, type='summaryblock'}
-This chapter summarizes a proposed curation policy for rOpenSci's
-ongoing maintenance of packages developed as part of rOpenSci activities
-and/or under the rOpenSci GitHub organization. This curation policy aims
-to support these goals:
+Este capítulo resume la política de gestión propuesta para el mantenimiento continuo de los paquetes desarrollados como parte de las actividades de rOpenSci y/o bajo la organización rOpenSci en GitHub. 
+Esta política de gestión pretende apoyar estos objetivos:
 
--   Ensure packages provided by rOpenSci are up-to-date and high quality
+- Garantizar que los paquetes proporcionados por rOpenSci estén actualizados y sean de alta calidad.
 
--   Provide clarity as to the development status and and review status
-    of any software in rOpenSci repositories
+- Proporcionar información clara sobre el estado de desarrollo y revisión de cualquier software en los repositorios de rOpenSci.
 
--   Manage maintenance effort for rOpenSci staff, package authors, and
-    volunteer contributors
+- Gestionar el esfuerzo de mantenimiento para el equipo de rOpenSci, quienes mantienen paquetes y quienes contribuyen voluntariamente.
 
--   Provide a mechanism to gracefully sunset packages while maintaining
-    peer-review badging
+- Proporcionar un mecanismo para el retiro gradual de paquetes, manteniendo al mismo tiempo las etiquetas de revisión por pares
 
 ```
 
-Elements of infrastructure described
-below needed for implementation of the policy are in some cases partly
-built and in other cases not yet begun. We aim to adopt this policy in
-part to prioritize work on these components.
-
-## The package registry
-
--   The rOpenSci package
-[registry](https://github.com/ropensci/roregistry)
-is a central listing of R packages currently or formerly
-maintained or reviewed by rOpenSci. It contains essential package
-metadata including development and review status, and will be the
-source of data for display on websites, badges, etc. It will allow
-this listing to be maintained independently of package or
-infrastructure hosting platforms.
-
-## Staff-maintained packages
-
-Staff-maintained packages are developed and maintained by rOpenSci staff
-as part of rOpenSci projects. These packages may also be peer-reviewed
-packages, but are not necessarily peer reviewed. Many are infrastructure
-packages that fall out of scope for peer review.
-
--   Staff-maintained packages will be listed in the registry with tag
-    "staff_maintained" and listed on rOpenSci's packages web page or similar
-    venues with tag "staff-maintained"
-
--   These packages will be stored in the "ropensci" GitHub
-    organization
-
--   Staff-maintained packages and their docs will be built by rOpenSci 
-    [system](https://status.ropensci.org/). This system does not send notifications 
-    but it outputs results as GitHub commit status (red check mark or red cross).
-
--   When the packages fail checks, rOpenSci staff will endeavor to fix
-    changes, prioritizing packages based on user base (downloads),
-    reverse dependencies, or strategic goals.
-
--   On a biannual or annual basis, rOpenSci will review all packages
-    that have been failing for over a month to determine whether to transfer them to the ["ropensci-archive" GitHub organization](https://github.com/ropensci-archive).
-
--   Packages consistently failing and without an ongoing plan to return
-    to active maintenance will move to "archive" status. When
-    archived, staff packages will move to the "ropensci-archive"
-    repository (to be created) and and gain the "archived" type in
-    the registry. They will not be built on rOpenSci system.
-
--   Archived packages will not be displayed by default on the packages
-    web page. A special tab of packages pages will display
-    these with `"type": "archived"`
-     that were either peer-reviewed or staff-maintained.
-
--   Archived packages can be unarchived when the old or a new maintainer
-    is willing to address the problems and wants to revive the
-    package. For that please [contact rOpenSci](https://ropensci.org/contact/).
-    They are transferred to the ropenscilabs organization.
-
-## Peer-reviewed packages
-
-Peer-reviewed packages are those contributed to the rOpenSci by the
-community and have passed through peer review. They need to be
-[in-scope](#aims-and-scope)
-at the time of submission to be reviewed.
-
--   Upon acceptance, these peer-reviewed packages are transferred from
-    the author's GitHub to the "ropensci" GitHub organization
-
--   Peer-reviewed packages will be in the registry tagged as
-    "peer-reviewed" and have a peer-reviewed badge in their README.
-
--   Peer-reviewed packages will be listed on rOpenSci's web page or
-    similar venues with tag "peer-reviewed"
-
--   Peer-reviewed packages and their docs will be built by rOpenSci 
-    [system](https://status.ropensci.org/). This system does not send notifications 
-    but it outputs results as GitHub commit status (red check mark or red cross).
+Los elementos de infraestructura necesarios para la aplicación de esta política están, en algunos casos, parcialmente construidos y en otros casos aún no se han iniciado.
+Nuestro objetivo es adoptar esta política en parte para priorizar el trabajo en estos componentes.
 
 
--   Annually or bi-annually, rOpenSci staff will review packages in a
-    failing state or have been failing for extended periods, and
-    contact the authors to determine ongoing maintenance status and
-    expected updates. Based on this exchange, rOpenSci may opt to
-    retain the package's current status with the expectation of an
-    updates, contribute support or seek a new maintainer, or transfer
-    the package to "archived" status.
+- El registro de paquetes rOpenSci [registro](https://github.com/ropensci/roregistry) es una lista centralizada de paquetes de R mantenidos o revisados por rOpenSci. 
+Contiene metadatos esenciales de los paquetes, incluyendo el estado de desarrollo y revisión, y es la fuente de los datos mostrados en sitios web, etiquetas, etc...
+Esto permite mantener este listado independientemente de la infraestructura o plataforma de alojamiento de los paquetes. 
 
--   Based on user base (measured by downloads), reverse dependencies, or
-    rOpenSci strategic goals, rOpenSci staff may support failing
-    packages via PRs reviewed by package authors, or direct changes
-    (if authors are unresponsive for approximately a month). rOpenSci
-    will also provide support to package authors on request, both by
-    staff and community volunteers, based on time available.
+## Paquetes mantenidos por el equipo
 
--   At the author's request, or if authors are unresponsive to
-    inquiries for approximately a month, rOpenSci may seek a new
-    maintainer for select peer-reviewed packages it deems have high
-    community value based on user base/downloads, reverse
-    dependencies, or rOpenSci strategic goals.
+Los paquetes mantenidos por el equipo son desarrollados y mantenidos por el equipo de rOpenSci como parte de los proyectos de rOpenSci. 
+Estos paquetes pueden ser revisados por pares o no. 
+Muchos son paquetes de infraestructura que están fuera del alcance de la revisión por pares.
 
--   When archived, these packages will move from the "ropensci" GitHub
-    organization to the "ropensci-archive" organization (or author
-    GitHub accounts if desired), following [transfer guidance](#archivalguidance). They will gain the "archived" type
-    in the registry. They will retain "peer-reviewed" tags and
-    badges. They will not be built on rOpenSci system.
+- Los paquetes mantenidos por el equipo aparecerán en el registro con la etiqueta "staff_maintained" y aparecerán en la página web de paquetes de rOpenSci o en lugares similares con la etiqueta "staff-maintained".
 
--   Archived packages will not be displayed by default. A special tab of packages
-   pages will `display these with `"type": "archived"`
-     that were either peer-reviewed or staff-maintained.
-    
-## Legacy acquired packages
+- Estos paquetes se almacenarán en la organización GitHub "ropensci".
 
-"Legacy" packages are packages not created or maintained by rOpenSci
-staff and not peer reviewed, but are under the rOpenSci GitHub
-organization(s) due to historical reasons. (Prior to establishing the
-peer review process and its scope, rOpenSci absorbed packages from
-various developers without well-defined criteria.)
+- Los paquetes mantenidos por el equipo serán comprobados, y su documentación sera generada por el [sistema](https://status.ropensci.org/) de rOpenSci. 
+Este sistema no envía notificaciones pero guarda los resultados en forma de estado de *commit* en GitHub (marca de verificación roja o cruz roja).
 
--   rOpenSci will transfer legacy packages back to author organizations
-    and repositories. If authors are uninterested, we will transfer
-    them to the "ropensci-archive" repository following [transfer guidance](#archivalguidance). If packages are
-    [in-scope](https://devguide.ropensci.org/policies.html#aims-and-scope),
-    rOpenSci will inquire if authors would like to submit them to the
-    Software Review process.
+- Cuando las comprobaciones de un paquete fallen, el equipo de rOpenSci se esforzará en corregir los problemas, priorizando los paquetes en función de la base de las personas que lo usan  (descargas), las dependencias inversas o los objetivos estratégicos.
 
--   Legacy packages will not be listed in the package registry.
+- Cada uno o dos años, rOpenSci revisará todos los paquetes que lleven más de un mes con comprobaciones fallidas para determinar si se transfieren a la organización ["ropensci-archive"](https://github.com/ropensci-archive).
 
--   Exceptions may be made for packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff.
+- Los paquetes que fallan consistentemente y que no tienen un plan para volver al mantenimiento activo pasarán al estado de "archivados". Estos paquetes serán transferidos a la organización ["ropensci-archive"](https://github.com/ropensci-archive) y se les asignará la etiqueta "archived" en el registro. 
+No se comprobarán en el sistema de rOpenSci.
 
-## Incubator packages
+- Los paquetes archivados no se mostrarán por defecto en la página web de paquetes.
+Una pestaña especial de páginas de paquetes los mostrará con `"type": "archived"`, hayan sido revisados por pares o mantenidos por el personal.
 
-"Incubator" packages are in-development packages created by staff or
-community members as part of community projects, such as those created
-at unconferences
+- Los paquetes archivados pueden desarchivarse cuando alguien nuevo/a, o quien lo mantenía anteriormente, esté dispuesto/a a solucionar los problemas y quiera revivirlo. 
+Para ello, [ponte en contacto con rOpenSci](https://ropensci.org/contact/). 
+Se transferirán a la organización "ropenscilabs".
 
--   Incubator packages will live in the "ropenscilabs" organization.
+## Paquetes revisados por pares
 
--   Incubator packages will appear in the package registry with the
-    "incubator" tag
+Los paquetes revisados por pares son aquellos aportados a rOpenSci por la comunidad y han pasado por la revisión por pares. 
+Tienen que estar [en el ámbito de aplicación](#aims-and-scope) en el momento del envío para ser revisados.
 
--   Incubator packages will not appear on the website by default, but
-    packages pages will include an "experimental packages" tab.
-    
--   Incubator packages and their docs will be built by rOpenSci 
-    [system](https://status.ropensci.org/). This system does not send notifications 
-    but it outputs results as GitHub commit status (red check mark or red cross).
-    The docs will indicate clearly the package is experimental.
+- Una vez aceptados, estos paquetes revisados por pares se transfieren desde el GitHub original a la organización GitHub "ropensci".
 
--   Biannually or annually, rOpenSci will contact incubator maintainers
-    about repositories at least three months old, inquiring about
-    development status and author preferences for migration to
-    peer-review, ropensci-archive, or to author organizations. Based
-    on response, package will be migrated immediately, peer review
-    will be initiated, or migration will be deferred to the next
-    review. Incubator packages will be migrated to ropensci-archive by
-    default after one year, following [transfer guidance](#archivalguidance).
+- Los paquetes revisados por pares estarán en el registro etiquetados como "peer-reviewed" y tendrán una etiqueta de revisado por pares en su archivo README.
 
--   Archived incubator packages will gain the "archived" type.
+- Los paquetes revisados por pares aparecerán en la página web de rOpenSci o lugares similares con la etiqueta "peer-reviewed".
 
-### Incubator non-R-packages
+- Los paquetes revisados por pares serán comprobados, y su documentación sera generada por el [sistema](https://status.ropensci.org/) de rOpenSci. 
+Este sistema no envía notificaciones pero guarda los resultados en forma de estado de *commit* en GitHub (marca de verificación roja o cruz roja).
 
--   The "incubator" organization will also include non-R-package
-    projects.
+- Si los paquetes están en CRAN, quienes lo mantienen pueden subscribirse a [la API de notificaciones de comprobaciones de CRAN](https://docs.cranchecks.info/#notifications).
 
--   These projects will not be listed in the registry or appear on a web
-    page, and will not be automatically built.
+- Cada uno o dos años, el equipo de rOpenSci revisará los paquetes que estén fallando o que han estado fallando durante largos períodos y contactará a quienes los mantienen para determinar los planes de mantenimiento y las actualizaciones previstas.
+En base a esto, rOpenSci puede optar por mantener el estado actual del paquete con la expectativa de actualizaciones, contribuir a los arreglos, ayudar a buscar a una persona nueva para mantenerlo, o transferir el paquete al estado "archived".
 
--   Migration policy will be the same as for R packages, with
-    appropriate migration locations (e.g., ropensci-books)
 
--   If archived, non-R-packages will move to "ropensci-archive" following [transfer guidance](#archivalguidance).
+- En función de la base de personas que usan el paquete (medida por las descargas), las dependencias inversas u objetivos estratégicos de rOpenSci, el equipo de rOpenSci puede asistir a los paquetes que fallan a través de PRs revisados por quienes mantienen el paquete, o cambios directos (si quienes lo mantienen no responden por aproximadamente un mes).
+rOpenSci también proporcionará apoyo a pedido, tanto del equipo como de personas voluntarias de la comunidad, en función del tiempo disponible.
 
-## Books
+- Si quien mantienen un paquete no responde consultas por un mes, o si ésta persona lo pide, rOpenSci puede buscar una nueva persona para mantener determinados paquetes revisados por pares que considere que tienen un alto valor para la comunidad en función de la base de personas que lo usan (descargas), dependencias inversas o los objetivos estratégicos de rOpenSci. 
 
-rOpenSci books are long-form documentation, often bookdown-formatted,
-related to rOpenSci packages, projects, or themes, created by both
-rOpenSci staff and community members.
+- Cuando se archiven, estos paquetes pasarán de la organización "ropensci" de GitHub a la organización "ropensci-archive" (o a las cuentas de GitHub quienes los mantienen si así lo desean), siguiendo la [guía de transferencia](#archivalguidance). 
+Obtendrán la etiqueta "archived" en el registro. 
+Conservarán las etiquetas e insignias de "peer-reviewed". 
+No se comprobará en el sistema rOpenSci.
 
--   Books will live in the "ropensci-books" organization
+- Los paquetes archivados no se mostrarán por defecto en la página web de paquetes.
+Una pestaña especial de páginas de paquetes los mostrará con `"type": "archived"`, hayan sido revisados por pares o mantenidos por el equipo.
 
--   Books will be hosted at books.ropensci.org
+## Paquetes heredados
 
--   Books may be mature or in-development, but must have minimal
-    outlines/content before migrating into "ropensci-books" (e.g.
-    from "ropenscilabs").
+Los paquetes "heredados" son paquetes ni creados ni mantenidos por el equipo de rOpenSci ni revisados por pares, pero que están bajo la organización de rOpenSci GitHub por razones históricas.
+(Antes de establecer el proceso de revisión por pares y su alcance, rOpenSci absorbía paquetes de la comunidad sin criterios bien definidos).
 
--   The authorship and development status of a book should be clearly
-    described on its home page and README.
+- rOpenSci transferirá los paquetes heredados de nuevo a las organizaciones y repositorios de quienes los mantienen, si lo desean. 
+Caso contrario, serán transferidos al repositorio "ropensci-archive" siguiendo la [guía de transferencia](#archivalguidance). 
+Si los paquetes están [en el ámbito de aplicación](https://devguide.ropensci.org/policies.html#aims-and-scope), rOpenSci les preguntará si desean someterlos al proceso de revisión del software.
 
--   rOpenSci may provide badges or templates (e.g., "In development,"
-    "Community Maintained,") for authors to use on book home pages
-    in the future
+- Los paquetes heredados no se incluirán en el registro de paquetes.
+
+- Se pueden hacer excepciones para los paquetes que son partes vitales del ecosistema de paquetes de R y/o rOpenSci que son supervisados activamente por el equipo.
+
+## Paquetes incubados
+
+Los paquetes "incubados" son paquetes en desarrollo creados por el equipo o miembros de la comunidad como parte de proyectos comunitarios, como los creados en las desconferencias
+
+- Los paquetes incubados vivirán en la organización "ropenscilabs".
+
+- Los paquetes incubados aparecerán en el registro de paquetes con la etiqueta "incubator".
+
+- Los paquetes incubados no aparecerán por defecto en el sitio web, pero las páginas de paquetes incluirán una pestaña de "paquetes experimentales".
+
+- Los paquetes incubados serán comprobados, y su documentación sera generada por el [sistema](https://status.ropensci.org/) de rOpenSci. 
+Este sistema no envía notificaciones pero guarda los resultados en forma de estado de *commit* en GitHub (marca de verificación roja o cruz roja).
+La documentación indicará claramente que el paquete es experimental.
+
+- Semestral o anualmente, rOpenSci se pondrá en contacto con quienes mantienen los paquetes incubados con repositorios de al menos tres meses de antigüedad para consultar por el estado de desarrollo y las preferencias para la migración a revisión por pares, ropensci-archive, o a sus organizaciones.
+En base a la respuesta, el paquete se migrará inmediatamente, se iniciará la revisión por pares, o la migración se aplazará hasta la próxima revisión. 
+Los paquetes incubados se migrarán a ropensci-archive por defecto después de un año, siguiendo la [guía de transferencia](#archivalguidance).
+
+- Los paquetes incubados archivados ganarán la etiqueta "archived".
+
+### Paquetes incubados que no son de R
+
+- La organización "incubator" también incluirá proyectos que no sean paquetes de R.
+
+- Estos proyectos no aparecerán en el registro ni en una página web y no se comprobarán automáticamente.
+
+- La política de migración será la misma que para los paquetes R, con ubicaciones de migración adecuadas (por ejemplo, "ropensci-books")
+
+- Si se archivan, los paquetes que no son de R se trasladarán a "ropensci-archive" siguiendo la [guía de transferencia](#archivalguidance).
+
+## Libros
+
+Los libros de rOpenSci son documentación larga, a menudo con formato de libro, relacionada con los paquetes, proyectos o temas de rOpenSci, creados por el personal de rOpenSci o por miembros de la comunidad.
+
+- Los libros vivirán en la organización "ropensci-books
+
+- Los libros se alojarán en books.ropensci.org
+
+- Los libros pueden estar maduros o en desarrollo, pero deben tener un mínimo de contenido antes de migrar a "ropensci-books" (por ejemplo desde "ropenscilabs").
+
+- La autoría y el estado de desarrollo de un libro deben estar claramente descritos en su página de inicio y en el archivo README.
+
+- rOpenSci puede proporcionar etiquetas o plantillas (por ejemplo, "En desarrollo", "Mantenido por la comunidad") para utilizarse en las páginas de inicio de los libros en el futuro
+
+
