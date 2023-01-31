@@ -1,26 +1,34 @@
-# Contributing Guide {#contributingguide}
+# Guía de Contribución {#contributingguide}
 
 ```{block, type='summaryblock'}
-This chapter describes our Contributing Guide that outlines how you can make code and non-code contributions to the rOpenSci project.
-
+Este capítulo describe nuestra Guía de Contribución, la cual indica cómo puedes contribuir al proyecto rOpenSci, ya sea con código o no. 
 ```
 
-So you want to contribute to rOpenSci? Fantastic! We developed the [rOpenSci Community Contributing Guide](https://contributing.ropensci.org/) to welcome you to rOpenSci and help you recognize yourself as a potential contributor. It will help you figure out what you might gain by giving your time, expertise, and experience, match your needs with things that will help rOpenSci’s mission, and connect you with resources to help you along the way.
+¿Quieres contribuir a rOpenSci? 
+¡Fantástico! 
+Hemos desarrollado la [Guía de Contribución a la Comunidad rOpenSci](https://contributing.ropensci.org/) para darte la bienvenida a rOpenSci y animarte a colaborar.
+Te ayudará a averiguar lo que podrías ganar aportando tu tiempo, tus conocimientos y tu experiencia, a coincidir tus necesidades con las cosas que ayudarán a la misión de rOpenSci y a ponerte en contacto con los recursos que te ayudarán en el camino.
 
-Our staff and community actively foster a welcoming environment where users and developers from different backgrounds and skill levels learn, share ideas and innovate together openly through shared norms and shared software. Participation in all rOpenSci activities is supported by [our Code of Conduct](https://ropensci.org/code-of-conduct).
+Nuestro equipo y comunidad fomentan activamente un entorno acogedor donde gente de diferentes orígenes y niveles de habilidad aprenden, comparten ideas e innovan juntos abiertamente a través de normas y software compartidos, ya sea que usen o que desarrollen software. 
+La participación en todas las actividades de rOpenSci está respaldada por [nuestro Código de Conducta](https://ropensci.org/codigo-de-conducta/).
 
-We welcome code and non-code contributions from new and seasoned coders at any career stage, and in any sector. You don’t have to be a developer! Maybe you want to **spend 30 minutes** sharing your package use case in our public forum or reporting a bug, **one hour** learning by attending a Community Call, **five hours** reviewing an R package submitted for open peer review, **or maybe you want to make an ongoing commitment** to help maintain a package.
+Aceptamos contribuciones de código y de otros tipos de personas con o sin experiencia, en cualquier etapa de su carrera, y en cualquier sector. 
+¡No es necesario que desarrolles software! 
+Tal vez quieras **pasar 30 minutos** compartiendo el caso de uso de tu paquete en nuestro foro público o informando de un error, **una hora** a aprender asistiendo a una Llamada Comunitaria, **cinco horas** revisando un paquete de R enviado para una revisión abierta por pares, **o tal vez quieras comprometerte de forma continuada** para ayudar a mantener un paquete.
 
-What are some benefits of contributing?
+¿Cuáles son algunos de los beneficios de contribuir?
 
-*   Connect with a community  who shares your interest in making science more open
-*   Learn from people outside your domain who use R with challenges similar to yours
-*   Ask and answer new research questions by getting to know new software tools and allies
-*   Feel confident and supported in your efforts to write code and develop software
-*   Gain visibility for your open source work
-*   Improve the software you use or build
-*   Level up your R skills and help others level up theirs
-*   Level up your writing skills
-*   Get more exposure for your package
+- Conectar con una comunidad que comparte tu interés por hacer la ciencia más abierta
+- Aprender de personas ajenas a tu ámbito que utilizan R con retos similares a los tuyos
+- Plantear y responder a nuevas preguntas de investigación conociendo nuevas herramientas de software y aliados
+- Sentir confianza y apoyo en tus esfuerzos por escribir código y desarrollar software
+- Ganar visibilidad para tu trabajo de código abierto
+- Mejorar el software que utilizas o construyes
+- Mejorar tus conocimientos de R y ayudar a otros a mejorar los suyos
+- Aumentar tus habilidades de escritura
+- Consigue una mayor exposición para tu paquete
 
-Consult our [Contributing Guide](https://contributing.ropensci.org/) and browse "What brings you here?" to find which _I want to …_ statements fit you best and choose your path! To help you recognize yourself, we’ve grouped these into: Discover; Connect; Learn; Build; Help. For each category, we list examples of what those contributions might look like and we link to our resources for the details you need.
+Consulta nuestra [Guía de Contribución](https://contributing.ropensci.org/) y explora "¿Qué te trae por aquí?" para encontrar qué declaraciones *Quiero ...* te representan mejor y elige tu camino.  
+Para ayudarte a reconocerte, las hemos agrupado en: Descubrir; Conectar; Aprender; Construir; Ayudar.
+Para cada categoría, enumeramos ejemplos de cómo podrían ser esas contribuciones y enlazamos con nuestros recursos para obtener los detalles que necesitas.
+

@@ -96,9 +96,6 @@ at the time of submission to be reviewed.
     [system](https://status.ropensci.org/). This system does not send notifications 
     but it outputs results as GitHub commit status (red check mark or red cross).
 
--   If packages are on CRAN, package authors can choose to subscribe to the [notifications 
-    of CRAN checks API](https://docs.cranchecks.info/#notifications).
-
 -   Annually or bi-annually, rOpenSci staff will review packages in a
     failing state or have been failing for extended periods, and
     contact the authors to determine ongoing maintenance status and
@@ -127,7 +124,7 @@ at the time of submission to be reviewed.
     badges. They will not be built on rOpenSci system.
 
 -   Archived packages will not be displayed by default. A special tab of packages
-   pages will `display these with `"type": "archived"`
+   pages will display these with `"type": "archived"`
      that were either peer-reviewed or staff-maintained.
     
 ## Legacy acquired packages
