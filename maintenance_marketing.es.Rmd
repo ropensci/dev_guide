@@ -1,25 +1,24 @@
-# Comercialización de tu paquete {#marketing}
+# Promocionando tu paquete {#marketing}
 
-```{block, type="summaryblock"}
+```{block, type='summaryblock'}
 Te ayudaremos a promocionar tu paquete, pero aquí hay algunas cosas más que debes tener en cuenta.
 ```
 
-- Si te enteras de un caso de uso de tu paquete, anima a su autor a publicar el enlace en nuestro [foro de debate en la categoría Casos de uso](https://discuss.ropensci.org/c/usecases), [para recibir un tweet de rOpenSci y su posible inclusión en el boletín quincenal de rOpenSci](https://discuss.ropensci.org/t/about-the-usecases-category/33). También te recomendamos que añadas un enlace al caso de uso en la sección "use cases in the wild" de tu README.
+-   Si te enteras de un caso de uso de tu paquete, anima a quien lo escribió a publicar el enlace en nuestro [foro de debate en la categoría Casos de uso](https://discuss.ropensci.org/c/usecases), [para recibir un tweet de rOpenSci y su posible inclusión en el boletín quincenal de rOpenSci](https://discuss.ropensci.org/t/about-the-usecases-category/33).
+    También te recomendamos que añadas un enlace al caso de uso en la sección "casos de uso reales" de tu archivo README.
 
-- Cuando [publiques](#releasing) una nueva versión de tu paquete o lo publiques en CRAN por primera vez,
+-   Cuando [publiques](#releasing) una nueva versión de tu paquete o lo publiques en CRAN por primera vez,
 
+    -   haz un *pull request* a [R Weekly](https://github.com/rweekly/rweekly.org) con una mensaje sobre la versión en la sección "*New Releases*" (o "*New Packages*" para la primera versión de GitHub/CRAN).
 
-```
-* Haz un pull request a [R Weekly](https://github.com/rweekly/rweekly.org) con una línea sobre la versión en la sección "New Releases" (o "New Packages" para la primera versión de GitHub/CRAN).
+    -   ¡Tuitea sobre ello utilizando el hashtag "#rstats" y etiqueta a rOpenSci!
+        Esto puede ayudar llegar a gente que pueda colaborar o usar el paquete. 
+        [Por ejemplo](https://twitter.com/opencpu/status/1003934871830622208).
 
-* ¡Tuitea sobre ello utilizando el hashtag "#rstats" y etiqueta a rOpenSci! Esto puede ayudar al compromiso de los colaboradores/usuarios. [Example](https://twitter.com/opencpu/status/1003934871830622208).
+    -   Considera enviar un breve post sobre el lanzamiento a [rOpenSci tech notes](https://ropensci.org/technotes/).
+        Ponte en contacto con la persona encargada de *Community Management* de rOpenSci, (por ejemplo, a través de Slack o info@ropensci.org).
+        Consulta [las recomendaciones sobre cómo contribuir con un artículo en el blog](https://blogguide.ropensci.org)).
 
-* Considera la posibilidad de enviar un breve post sobre el lanzamiento a [rOpenSci tech notes](https://ropensci.org/technotes/). Ponte en contacto con el Community Manager de rOpenSci, (por ejemplo, a través de Slack o info@ropensci.org). Consulta [las directrices sobre cómo contribuir con una entrada en el blog](https://blogguide.ropensci.org)).
+    -   Envía tu paquete a listas de paquetes como [*CRAN Task Views*](https://cran.r-project.org/web/views/), y [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
 
-* Envía tu paquete a listas de paquetes como [CRAN Task Views](https://cran.r-project.org/web/views/), y [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
-```
-
-- Si decides comercializar tu paquete dando una charla sobre él en una reunión o conferencia (¡excelente idea!)
-  lee en [este artículo de Jenny Bryan y Mara Averick](https://www.tidyverse.org/articles/2018/07/carpe-talk/).
-
-
+-   Si decides promocionar tu paquete dando una charla sobre él en una reunión o conferencia (¡excelente idea!) lee en [este artículo de Jenny Bryan y Mara Averick](https://www.tidyverse.org/articles/2018/07/carpe-talk/).
