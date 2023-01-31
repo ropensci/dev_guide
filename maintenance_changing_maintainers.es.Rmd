@@ -1,59 +1,54 @@
-# Changing package maintainers {#changing-maintainers}
+# Cambio de mantenedores de paquetes {#changing-maintainers}
 
 ```{block, type='summaryblock'}
-This chapter presents our guidance for taking over maintenance of a package.
+Este capítulo presenta nuestra guía para asumir el mantenimiento de un paquete.
 ```
 
-## Do you want to give up maintenance of your package?
+## ¿Quieres dejar de mantener tu paquete?
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called _Call For Contributors_. In that section we highlight packages looking for new maintainers. If you are looking to leave the role of maintainer of your package, get in touch with us and we can highlight your package in our newsletter. We've been very successful thus far, finding new maintainers for six out of six packages.
+Nuestro newsletter quincenal tiene una sección de pedidos de colaboración denominada *"Call for Contributors"* (*Pedidos de contribuciones*, en inglés). En la misma se destacan paquetes que buscan nuevas personas para encargarse del mantenimiento. Si quieres dejar de mantener tu paquete, contáctanos para que lo incluyamos en esta sección. Hasta ahora hemos tenido mucho éxito, encontrando responsables para todos los paquetes que lo necesitaron. 
 
-## Do you want to take over maintenance of a package?
+## ¿Quieres encargarte del mantenimiento de un paquete?
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called _Call For Contributors_. In that section we highlight packages looking for new maintainers. If you are not subscribed to the newsletter already, it's a good idea to [subscribe](https://news.ropensci.org/) to get notified when there's a package looking for a new maintainer.
+Nuestro newsletter quincenal tiene una sección de pedidos de colaboración denominada *Pedidos de contribuciones*. En la misma se destacan paquetes que buscan nuevas personas para encargarse del mantenimiento. Si aún lo hiciste, es una buena idea [subscribirte al newsletter](https://news.ropensci.org/) para recibir notificaciones cuando hay un paquete buscando ayuda. 
 
-## Taking over maintenance of a package
+## Asumir el mantenimiento de un paquete
 
-* Add yourself as the new maintainer in the DESCRIPTION file, with `role = c("aut", "cre")`, and make the former maintainer `aut` only.
-* Make sure to change maintainer to your name anywhere else in the package, while retaining the former maintainer as an author (e.g, package level manual file, CONTRIBUTING.md, CITATION, etc.)
-* The [Collaboration Guide](#collaboration) has guidance about adding new maintainers and collaborators
-* Packages that have been archived or [orphaned][] on CRAN don’t need permission of the previous maintainer to be taken over on CRAN. In these cases do get in touch with us so we can offer any help as needed.
-* If the package has not been archived by CRAN and there is a maintainer change, have the old maintainer email CRAN and put in writing who the new maintainer is. Make sure to mention that email about the maintainer change when you submit the first new version to CRAN. If the old maintainer is unreachable or will not send this email get in touch with rOpenSci staff.
-* If the previous maintainer is reachable, scheduling a meeting will help you get the "lay of the land"
+- Agrégate en el archivo DESCRIPTION, con rol `role = c("aut", "cre")` y cambia el rol de la persona anterior a `role = c("aut")`.
+- Asegúrate reemplazar el nombre anterior en cualquier otra parte del paquete por el tuyo, manteniendo a la persona anterior como autora (por ejemplo, en el archivo de manual a nivel de paquete, CONTRIBUTING.md, CITATION, etc...)
+- La [Guía de Colaboración](#collaboration) tiene consejos sobre cómo añadir nuevos miembros al equipo de mantenimiento y colaboración.
+- Para paquetes que han sido archivados o han quedado [huérfanos en CRAN](https://cran.r-project.org/src/contrib/Orphaned/README), no es necesario el consentimiento de quien lo mantenía anteriormente para hacerse responsable del mismo en CRAN. En estos casos, contáctanos para que podamos ofrecerte la ayuda que necesites.
+- Si el paquete no ha sido archivado por CRAN y cambia quien lo mantiene, haz que la persona responsable anterior envíe un correo electrónico a CRAN y ponga por escrito quién se hará cargo del mantenimiento de ahí en adelante. Asegúrate de mencionar que se envío ese correo cuando envíes la próxima versión a CRAN. Si quien mantenía al paquete no es localizable o no envía ese correo electrónico, ponte en contacto con el personal de rOpenSci.
+- Si puedes contactarte con quien te está transfiriendo el paquete, puedes organizar una reunión para que te explique cómo funciona. 
 
-### FAQ for new maintainers
+### Preguntas frecuentes
 
-* There are a few unresolved issues from the package that I don’t know how to fix. Whom may I ask for help?
+- Hay algunos *issues* no resueltos del paquete que no sé cómo arreglar. ¿A quién puedo pedir ayuda? 
+Depende; esto es lo que hay que hacer en diferentes situaciones:
 
-  It depends; here's what to do in different scenarios:
+- si se puede contactar con la persona anterior, contáctate con ella y pídele ayuda.
+- el slack de rOpenSci: es bueno para obtener ayuda sobre problemas específicos o generales, consulta el canal #package-maintenance;
+- [Foro de discusión de rOpenSci](https://discuss.ropensci.org/c/package-development/29): este foro es una buena opción, siéntete libre de hacer cualquier pregunta allí;
+- [Equipo de rOpenSci](https://ropensci.org/about/#team): no dudes en contactarte con cualquier integrante del equipo por correo electrónico o enviando *issues* a GitHub, nos encantará ayudarte;
+- por supuesto, también hay ayuda general de R si eso se ajusta a tus necesidades: Foro de la comunidad de RStudio, StackOverflow, Twitter y Mastodon #rstats, etc.
 
-    - if the old maintainer can be contacted: reach out to them, and ask for help;
-    - rOpenSci slack: good for getting help on specific or general problems, see the #package-maintenance channel;
-    - [rOpenSci discussion forum](https://discuss.ropensci.org/c/package-development/29): this forum is a good option, feel free to ask any questions there;
-    - [rOpenSci staff](https://ropensci.org/about/#team): feel free to get in touch with one of us via email/pinging us on GitHub issues, we'll be happy to help;
-    - of course there's general R help too if that suits your needs: RStudio community forum, StackOverflow, Twitter #rstats, etc.
+- ¿Cuánto puedes/debes cambiar en el paquete?
 
-* How much can/should you change in the package?
+Para obtener ayuda general sobre cómo cambiar el código de un paquete, consulta la sección [Evolución del paquete](#evolution).
 
-  For general help on changing code in a package, see the [Package evolution](#evolution)
-  section. 
+Al pensar en esto, hay varias cosas a considerar.
 
-  When thinking though this, there are many considerations.
-  
-  How much time do you have to spend on the package? If you have very limited time, it'd be best to focus on the most critical tasks, whatever those are for the package in question. If you have ample amount of time, your goals can be larger in scope.
-  
-  How mature is the package? If the package is mature, many people likely have code that depends on the package's API (i.e., the exported functions, and their parameters). In addition, if there are packages that depend on your package on CRAN, then you need to check that whatever changes you make don't break those packages. The more mature the package is, the more careful you need to be about making changes, especially with the names of exported functions, their parameters, and the exact structure of what exported functions return. Changes can be more easily made that only affect internals of the package.
+¿Cuánto tiempo tienes que dedicar al paquete? Si tienes un tiempo muy limitado, lo mejor será que te centres en las tareas más críticas, sean las que sean para el paquete en cuestión. Si tienes mucho tiempo, tus objetivos pueden ser más ambiciosos.
 
-## Tasks for rOpenSci staff
+¿Qué grado de madurez tiene el paquete? Si el paquete es maduro, es probable que mucha gente tenga código que dependa de su API (es decir, las funciones exportadas y sus parámetros). Además, si hay paquetes que dependen de tu paquete en CRAN, entonces tienes que comprobar que cualquier cambio que hagas no rompa esos paquetes. Cuanto más maduro sea el paquete, más cuidado deberás tener a la hora de hacer cambios, especialmente con los nombres de las funciones exportadas, sus parámetros y la estructura exacta de lo que devuelven las funciones exportadas. Es más fácil hacer cambios que sólo afecten a los aspectos internos del paquete.
 
-As an organization, rOpenSci is interested in making sure packages in our suite are available as long as they are useful to the community. As maintainers need to move on, we will in most cases try to get a new maintainer for each package. To these ends, the following tasks are the responsibility of rOpenSci staff.
+## Tareas para el personal de rOpenSci
 
-* If a repository hasn’t seen any activity (commits, issues, pull requests) in quite a long time it may simply be a mature package with little need for changes/etc., so take this into account.
-* Current maintainer has not responded to issues/pull requests in many months, via any of emails, GitHub issues, or Slack messages:
-  * Make contact and see what the situation is. They may say they’d like to step down as maintainer, in which case look for a new maintainer
-* Current maintainer is completely missing/not responding
-  * If this happens we will try to contact the maintainer for up to one month. However, if updating the package is urgent, we may use our admin access to make changes on their behalf.
-* Put a call out in the “Call for Contributors” section of the rOpenSci newsletter for a new maintainer - open an issue in the [newsletter repo](https://github.com/ropensci/monthly/).
+Como organización, a rOpenSci le interesa asegurarse de que los paquetes de nuestra suite estén disponibles mientras sean útiles para la comunidad. Si un paquete se queda sin personas que lo mantengan, en la mayoría de los casos intentaremos conseguir nuevas personas que se encarguen del mismo. Para ello, las siguientes tareas son responsabilidad del personal de rOpenSci.
 
-
-[orphaned]: https://cran.r-project.org/src/contrib/Orphaned/README
+- Ten en cuenta que el hecho que un repositorio no haya ninguna actividad (*commits*, *issues*, *pull requests*) en mucho tiempo puede significar simplemente que se trata de un paquete maduro con poca necesidad de cambios.
+- Si no hay respuestas a reportes de problemas o *pull requests* en muchos meses, ya sea por email, *issues* en GitHub o mensajes de Slack:
+  - Ponte en contacto para averiguar cuál es la situación. Puede que la persona encargada diga que le gustaría dejar de mantener el paquete, en cuyo caso busca un reemplazo.
+- Si no recibes respuesta o no puedes establecer el contacto:
+  - Si esto ocurre, insistiremos con el intento de contacto durante un mes como máximo. Sin embargo, si la actualización del paquete es urgente, podemos utilizar nuestro acceso de administrador para realizar los cambios en su nombre.
+- Haz un llamado en la sección "Pedidos de contribuciones" del boletín rOpenSci para buscar reemplazo - abre un *issue* en el [repo del boletín](https://github.com/ropensci/monthly/).
