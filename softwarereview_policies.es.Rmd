@@ -70,7 +70,7 @@ Aunque nos esforzamos por ser coherentes, evaluamos los paquetes caso por caso y
 Ten en cuenta que no todos los proyectos y paquetes de rOpenSci están incluidos en el ámbito de aplicación o pasan por una revisión por pares.\
 
 Los proyectos desarrollados por el [personal](https://ropensci.org/about/#team) o en conferencias pueden ser experimentales, exploratorios, abordar las prioridades de la infraestructura básica y, por tanto, no entrar en estas categorías.
-Busca la etiqueda de revisión por pares -ver más abajo- para identificar los paquetes revisados por pares en el repositorio de rOpenSci.
+Busca la etiqueta de revisión por pares -ver más abajo- para identificar los paquetes revisados por pares en el repositorio de rOpenSci.
 
 ![ejemplo de insignia verde de revisión por pares](images/status.png)
 
@@ -81,12 +81,12 @@ Busca la etiqueda de revisión por pares -ver más abajo- para identificar los p
     Nuestra definición de "aplicaciones científicas" es amplia.
     Incluye servicios de almacenamiento de datos, revistas y otros servidores remotos, ya que muchas fuentes de datos pueden ser de interés para quienes hacen ciencia.
     Sin embargo, los paquetes de obtención de datos deben centrarse en las *fuentes* / *temas* de los datos y no en *servicios*.
-    Por ejemplo, un cliente general para el almacenamiento de datos de *Amazon Web Services* no estaría en el ámbito.
+    Por ejemplo, un cliente general para el almacenamiento de datos de *Amazon Web Services* no estaría en nuestro ámbito.
     (Ejemplos: [**rotl**](https://github.com/ropensci/software-review/issues/17), [**gutenbergr**](https://github.com/ropensci/software-review/issues/41))
 
--   **extracción de datos**: Paquetes que ayudan a recuperar datos de fuentes no estructuradas, como texto, imágenes y PDF, así como a analizar tipos de datos científicos y resultados de equipos científicos.
+-   **extracción de datos**: Paquetes que ayudan a recuperar datos de fuentes no estructuradas, como texto, imágenes y PDF, así como a analizar tipos de datos científicos y resultados de equipamiento científico.
     Las bibliotecas estadísticas o de *machine learning* para el modelado o la predicción no suelen incluirse en esta categoría, como tampoco los analizadores de código.
-    Los modelos entrenados que actúan como utilidades (por ejemplo, para el reconocimiento óptico de caracteres), podría calificar.
+    Los modelos entrenados que actúan como utilidades (por ejemplo, para el reconocimiento óptico de caracteres), podrían calificar.
     (Ejemplos: [**tabulador**](https://github.com/ropensci/software-review/issues/42) para extraer tablas de documentos PDF, [**genbankr**](https://github.com/ropensci/software-review/issues/47) para segmentar archivos de GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) para la lectura filogenética en archivos de árboles filogenéticos, [**lightr**](https://github.com/ropensci/software-review/issues/267) para segmentar archivos de instrumentos espectroscópicos)
 
 -   **manipulación de datos**: Paquetes para procesar datos obtenidos de los formatos anteriores.
@@ -187,8 +187,8 @@ Lo anterior es un poco impreciso, por lo que a continuación se presentan alguno
     -   El paquete `hello` no está en CRAN, o está en CRAN, pero no tiene dependencias inversas (otros paquetes no dependen de `hello`).
     -   El paquete `world` necesita algunas correcciones. La persona responsable ha respondido, pero simplemente está muy ocupada con un nuevo trabajo, u otra razón, y atenderá el problema pronto.
 
-Instamos a quienes mantienen paquetes a que se aseguren de que reciben las notificaciones de GitHub, así como de que los correos electrónicos del equipo de rOpenSci y de CRAN no van a su bandeja de correo no deseado.
-Invitaremos al Slack de rOpenSci a quienes hayan desarrollado paquetes que son incorporados a rOpenScipara charlar con el equipo y la comunidad de rOpenSci en general.
+Instamos a quienes mantienen paquetes a que se aseguren de que reciben las notificaciones de GitHub, y de que los correos electrónicos del equipo de rOpenSci y de CRAN no van a su bandeja de correo no deseado.
+Invitaremos al Slack de rOpenSci a quienes hayan desarrollado paquetes que son incorporados a rOpenSci para charlar con el equipo y la comunidad de rOpenSci en general.
 Cualquier persona puede sumarse a la conversación con la comunidad rOpenSci en el [foro de discusión de rOpenSci](https://discuss.ropensci.org/).
 
 Si quienes desarrollaron un paquete abandonan su mantenimiento y se trata de un paquete utilizado activamente, consideraremos la posibilidad de solicitar a CRAN que transfiera el estatus de mantenedor del paquete a rOpenSci.
@@ -270,4 +270,4 @@ Los siguientes recursos pueden ser útiles para quienes investigan, desarrollan 
 La comunidad de rOpenSci es nuestro mejor recurso.
 Tanto si colaboras habitualmente como si recién llegas, nos preocupamos por hacer de éste un lugar seguro para ti y te apoyamos en lo que necesites.
 Tenemos un Código de Conducta que se aplica a todas las personas que participan en la comunidad de rOpenSci, incluidos el equipo y la dirección de rOpenSci y a todos las formas de interacción en línea o en persona.
-El [Código de Conducta](https://ropensci.org/code-of-conduct/) se mantiene en el sitio web de rOpenSci.
+El [Código de Conducta](https://ropensci.org/codigo-de-conducta/) se mantiene en el sitio web de rOpenSci.
