@@ -13,8 +13,8 @@ Por último, pero no menos importante, encontrarás el [código de conducta de l
 
 -   Para que un paquete sea considerado para ingresar a rOpenSci, quienes crearon el paquete deben iniciar una solicitud en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review).
 
--   Los paquetes se revisan en cuanto a su calidad, adecuación, documentación y claridad, y el proceso de revisión es bastante similar al de la revisión de un manuscrito (véase nuestra [guía de empaquetado](#building) y [guía de revisión](#reviewerguide) para más detalles).
-    A diferencia de la revisión de un manuscrito, este proceso será una conversación continua.
+-   Los paquetes se revisan en cuanto a su calidad, adecuación, documentación y claridad, y el proceso de revisión es bastante similar al de la revisión de un artículo científico (véase nuestra [guía de empaquetado](#building) y [guía de revisión](#reviewerguide) para más detalles).
+    A diferencia de la revisión de un artículo científico, este proceso será una conversación continua.
 
 -   Una vez que se hayan resuelto todas las cuestiones y preguntas importantes que puedan abordarse haciendo esfuerzo razonable, la persona responsable de la edición tomará una decisión (aceptar, esperar o rechazar).
     Los rechazos suelen hacerse pronto (antes de que comience el proceso de revisión; ver [la sección de objetivos y alcance](#aims-and-scope)), pero en raras ocasiones un paquete puede no ser aceptado después de la revisión.
@@ -39,7 +39,7 @@ Por último, pero no menos importante, encontrarás el [código de conducta de l
     Las devoluciones de las revisiones pueden dar lugar a importantes mejoras y actualizaciones de tu paquete, incluyendo el cambio de nombre y funcionalidad en las funciones.
     No consideramos que la publicación previa en CRAN o en otros lugares sea razón suficiente para no adoptar las recomendaciones de quienes hacen la revisión o edición.
 
--   No envíes tu paquete para su revisión mientras éste o un manuscrito asociado también esté siendo revisado en otro lugar, ya que esto puede dar lugar a pedidos de cambios conflictivas.
+-   No envíes tu paquete para su revisión mientras éste o un artículo científico asociado también esté siendo revisado en otro lugar, ya que esto puede dar lugar a pedidos de cambios conflictivas.
 
 ### Conflicto de intereses con quienes revisan o editan {#coi}
 
@@ -108,7 +108,7 @@ Busca la etiqueta de revisión por pares -ver más abajo- para identificar los p
     Ten en cuenta que esto no incluye todas las herramientas que interactúan con los servicios de control de versiones en línea (por ejemplo, GitHub), a menos que encajen en otra categoría.
     (Ejemplo: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
 
--   **gestión de citas y bibliometría**: Herramientas que facilitan la gestión de las referencias, como por ejemplo para escribir manuscritos, crear CVs o atribuir de otra manera las contribuciones científicas, o acceder, manipular o trabajar de otra manera con datos bibliométricos.
+-   **gestión de citas y bibliometría**: Herramientas que facilitan la gestión de las referencias, como por ejemplo para escribir publicaciones científicas, crear CVs o atribuir de otra manera las contribuciones científicas, o acceder, manipular o trabajar de otra manera con datos bibliométricos.
     (Ejemplo: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
 
 -   **capa de interfaz de software científico**: Paquetes que permiten correr programas no escritos en R utilizados para la investigación científica.
