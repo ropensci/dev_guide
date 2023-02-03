@@ -1,95 +1,94 @@
-# Editorial management {#editorialmanagement}
+# Gestión editorial {#editorialmanagement}
 
 ```{block, type='summaryblock'}
-Guidance for managing the editorial team.
+Guía para gestionar el equipo editorial.
 ```
 
-## Recruiting new editors
+## Reclutar nuevas personas para la edición
 
-Recruiting new editors and maintaining a sufficient and well-balanced editorial board is a responsibility of the [Software Review Lead](https://ropensci.org/about/#team), with support and advice from the editorial board.
+Reclutar nuevas personas y mantener un equipo editorial funcional y equilibrado es responsabilidad de quien [Lidere la Revisión de Software](https://ropensci.org/about/#team) con el apoyo y asesoramiento del comité editorial.
 
-Steps:
+Estos son los pasos a seguir:
 
-* Start a private channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
+* Inicia un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
 
-* Ping editors to be sure they get a notification as this is an important topic.
+* Haz un *ping* a las personas del equipo editorial para asegurarte de que reciban una notificación, ya que se trata de un tema importante.
 
+* Espera a que la mayoría de del equipo intervenga antes de invitar a alguien. Dales una semana para que respondan.
 
-* Wait for a majority of editors to chime in before inviting someone. Leave them one week to respond.
+## Invitar a una nueva persona al equipo
 
-## Inviting a new editor
- 
-* Candidates might start by being [guest editors](#guesteditor). 
-When inviting them as guest editor, invite them as you would invite a guest editor for other reasons.
+* Quienes sean candidatas/os pueden empezar siendo [editoras/es invitadas/os](#guesteditor).
+  Haz la invitación como invitarías a cualquier editora/o invitada/o por otros motivos.
 
-* If a candidate is guest editor first, assess how the process went after the submission is tackled. Asked other editors for their advice again.
+* Si una candidata/o fue editora invitada/o, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
 
-* Send an email.
+* Envía un correo electrónico:
 
 ```
-We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
-We think you would make a wonderful addition to the team.
+Nos gustaría invitarte a formar parte del consejo editorial de rOpenSci como miembro en pleno derecho. [RAZONES ESPECÍFICAS PARA LA INVITACIÓN (MENCIONA LAS CONTRIBUCIONES A ROPENSCI)]. 
+Creemos que serías una magnífica incorporación al equipo.
 
-[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one one you just finished!]).  
-We ask that editors make an informal commitment of serving for two years, and re-evaluate their participation after that.  
-On a short-term basis, any editor can decline to handle a package or say, "I'm pretty busy, I can't handle a new package for a few weeks."
+[SI FUE EDITORA INVITADA/O: Ya conoces el rol de edición ya que has sido editora invitada/o]. Nuestro objetivo es que las/os editoras/es se encarguen de cuatro paquetes al año ([SI FUE EDITOR INVITADO: ¡incluyendo el que acabas de terminar!]).  
+Pedimos a las/os editoras/es que se comprometan de manera informal a prestar servicio durante dos años, y que reevalúen su participación luego de ese periodo.
+A corto plazo, cualquier persona puede rechazar encargarse de un paquete o decir: "Estoy muy ocupada/o, no puedo encargarme de un nuevo paquete hasta dentro de unas semanas".
 
-In addition to handling packages, editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. 
-We generally do this through Slack, which we expect editors to be able to check regularly. 
-We have editorial board calls annually.  
-We also rotate Editor-in-Chief responsibilities (first-pass scope decisions and assigning editors) amongst the board about quarterly. 
-You'll have the opportunity to enter this rotation once you have been on the board for some time, usually at least six months. 
-Some of us also take on bigger projects to improve the peer-review process, though this is entirely optional. 
+Además de encargarse de los paquetes, las personas en el equipo editorial opinan sobre las decisiones editoriales del grupo, como por ejemplo si un paquete está dentro de nuestro alcance, y determinan las actualizaciones de nuestras políticas. 
+Generalmente usamos Slack, donde esperamos que los miembros del equipo participen regularmente. 
+Tenemos convocatorias anuales al equipo editorial.  
+También rotamos las responsabilidades de Editora en Jefe (quien toma decisiones de alcance en primera instancia y asigna editoras/es) entre el equipo aproximadamente cada trimestre. 
+Tendrás la oportunidad de entrar en esta rotación cuando lleves un tiempo en el equipo, normalmente al menos seis meses. 
+Algunos mimebros del equipo también asumimos proyectos más grandes para mejorar el proceso de revisión por pares, aunque esto es totalmente opcional. 
 
-We hope that you'll join the board!  
-It's an exciting time for peer-review at rOpenSci.
+¡Esperamos que te unas al equipo!  
+Es un momento emocionante para la revisión por pares en rOpenSci.
 
-Please give this some thought, ask us any questions you have, and let us know whether you can join us.
+Por favor, reflexiónalo, pregúntanos cualquier duda que tengas y haznos saber si puedes unirte.
 
-Best,
-[EDITOR], on behalf of the rOpenSci Editorial Board
-``` 
+Te deseamos lo mejor,
+[NOMBRE], en nombre del Equipo Editorial de rOpenSci.
+```
 
-## Onboarding a new editor
+## Incorporar una nueva persona al equipo editor
 
-* Inform rOpenSci community manager so that
-    * editors are added to the [rOpenSci website](https://github.com/ropensci/roweb3/#team-member).
-    * an introduction blog post can be put together.
+- Informa a la/el *community manager* de rOpenSci para
+  
+  - agregar a la/o editora al [sitio web de rOpenSci](https://github.com/ropensci/roweb3/#team-member).
+  - preparar una artículo de presentación en el blog.
 
-* If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
+- Solicita que la nueva persona active [la autenticación de dos factores (2FA) para GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
 
-* Invite editors to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications. 
+- Invítala a la organización GitHub de rOpenSci, y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda. Esto le dará los permisos adecuados y le permitirá recibir notificaciones específicas del equipo.
 
-* Editors need access to the AirTable database of software review.
+- Dale acceso a la base de datos AirTable de revisión de software.
 
-* Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
+- Dale acceso al canal privado del Equipo Editorial en el espacio de trabajo de Slack de rOpenSci (y al espacio de trabajo de Slack en general si no lo tenía previamente, en ese caso pregunta a la/el *community manager* de rOpenSci).
 
-* Post a welcome message in the channel, pinging all editors.
+- Publica un mensaje de bienvenida en el canal, haciendo ping a `@editors`.
 
-* In the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
+- Agrégala al equipo `editors` de Slack para que `@editors` también le envíe una notificación.
 
-* We add editors' names to 
-    * [dev_guide authors list](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
-    * [dev_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-    * [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-Both the dev_guide and software-review README are automatically knit via continuous integration.
+- Añade su nombre a: 
+  
+  - la [lista de autoras/es de dev_guide](https://github.com/ropensci/dev_guide/blob/main/index.Rmd).
+  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como editoras/es y un poco más abajo para eliminar su nombre de la lista de revisoras/es).
+  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!)
+    Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
 
-* Add editors to https://github.com/orgs/ropensci/teams/editors/members
+## Dar de baja a un miembro del Equipo Editorial
 
-## Offboarding an editor
+- Agradece su trabajo.
 
-* Thank them for their work!
+- Elimína a la persona del canal de editoras/es y del equipo `@editors` de Slack.
 
-* Remove them from the editors-only channel and the editors Slack team.
+- Elimínala a la persona del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors/members) y del sub-equipo correspondiente en GitHub.
 
-* Remove them from https://github.com/orgs/ropensci/teams/editors/members and sub-team.
+- Informa a la/el *community manager* de rOpenSci o a algún otro miembro del personal para mover a la persona a la sección de ex-integrantes en el sitio web.
 
-* Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
+- Elimina su acceso al espacio de trabajo de Airtable.
 
-* Remove their access to the Airtable workspace.
-
-* Remove them from
-    * [dev_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-    * [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-Both the dev_guide and software-review README are automatically knit via continuous integration.
-
+- Elimína a la persona de:
+  
+  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como editoras/es y un poco más abajo para eliminar su nombre de la lista de revisoras/es).
+  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!)
+    Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
