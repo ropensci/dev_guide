@@ -163,11 +163,11 @@ can be found at *link*".
 
 ## Documentation
 
-### General
+### General {#docs-general}
 
 * All exported package functions should be fully documented with examples.
 
-* If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Example in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird).
+* If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Examples in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), and the non-rOpensci package [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
 * The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 
