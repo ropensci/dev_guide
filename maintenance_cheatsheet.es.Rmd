@@ -1,0 +1,47 @@
+# Hoja de trucos de mantenedores de paquetes rOpenSci {#maintainer-cheatsheet}
+
+```{block, type='summaryblock'}
+Un recordatorio de la infraestructura y los canales de contacto para mantenedores de paquetes rOpenSci.
+
+```
+
+## ¿Necesitas ayuda?
+
+Si necesitas ayuda (por ejemplo una revista de PR; o busqueda de soluciones para un problema de CI), o ayuda para encontrar co-mantenedores o una nueva persona para mantener el paquete, o si necesitas que jubilemos tu paquete, mencionanos en GitHub con `@ropensci/admin` o envia un correo electronico a `info@ropensci.org`.
+
+También puedes utilizar la cadena slack #package-maintenance.
+
+¡Nunca dudes en pedir ayuda!
+
+## Acceso al repositorio GitHub
+
+Deberias tenir acceso "admin" al repositorio GitHub de tu paquete.
+Si no es el caso (por ejemplo, porqué falló el proceso automatizado; o perdiste acceso después de haber tenido que deactivar temporalmente la autenticación a dos factores), por favor contactanos con `info@ropensci.org`.
+
+## Otros temas de GitHub
+
+Si tienes una pregunta o demanda sobre GitHub (añadir un collaborador a la organización GitHub por ejemplo), puedes utilizar una cadena publica del Slack de rOpenSci o mencionar a `@ropensci/admin` en GitHub.
+
+## Documentación pkgdown
+
+Consulta [rOpenSci docs](#rodocsci).
+
+## Acceso al Slack de rOpenSci
+
+Las personas que mantienen o desarrollan paquetes de rOpenSci deberian tenir acceso al [Slack de rOpenSci](https://contributing.ropensci.org/resources.html#channels).
+Si no recibiste la invitación o no la acceptaste a tiempo,
+o si quieres que una persona que ahora contribuye regularmente a tu paquete reciba una invicatión por favor envia un correo electronico a  `info@ropensci.org`.
+
+Se puede que consideras la cadena #package-maintenance relevante para preguntar y contestar y también para conmiseración amistosa cuando se necesite.
+
+## Entradas de blog sobre tu paquete
+
+Consulta nuestra [guía de blog](https://blogguide.ropensci.org/).
+
+## Promoción de issues del paquete
+
+Si les pones el label "help wanted" a algunas issues serán [difundidas a la comunidad](https://ropensci.org/help-wanted/).
+
+## Promoción de ejemplos de uso del paquete
+
+Puedes notificar ejemplos de uso de tu paquete o animar usuarias a hacerlo en nuestro forum, para que sean publicados en nuestro [sitio web](https://ropensci.org/usecases/) y en nuestro boletín de noticias.

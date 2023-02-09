@@ -14,7 +14,7 @@ Never hesitate to ask for help.
 
 ## GitHub repository access
 
-You should have administrative access to your GitHub repository.
+You should have administrative access to your package's GitHub repository.
 If that is no longer the case (say, the automated process failed; or you lost access after having to temporarily deactivate two-factor authentication), 
 please contact us via `info@ropensci.org`.
 
