@@ -33,7 +33,7 @@ To record your response to reviewers.
 ```markdown
 @ropensci-review-bot submit response <response-url>
 ```
-
+where `<response_url>` is the link to the response comment in the issue thread.
 ### Finalize repo transfer {.unnumbered}
 
 After you've accepted the invitation to rOpenSci GitHub organization and transferred your GitHub repository to it, run this command to re-gain admin access to your repository.
