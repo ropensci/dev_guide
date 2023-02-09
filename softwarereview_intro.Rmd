@@ -106,6 +106,7 @@ reviewers <- reviewers[purrr::map_lgl(reviewers$reviews,
 # get last names
 last_names <- humaniformat::last_name(trimws(reviewers$name))
 reviewers <- reviewers[order(last_names), ]
+reviewers$name[is.na(reviewers$name)] <- reviewers$github[is.na(reviewers$name)]
 cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
 ```
 
