@@ -8,7 +8,8 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 
 -   ¿Esperas mantener tu paquete durante al menos 2 años, o poder identificar a una persona para que lo haga?
 -   Consulta nuestras [políticas](#policies) para evaluar si tu paquete cumple los criterios para ser incluido en nuestro conjunto de paquetes y no se superpone con otros.
--   Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un issue para preguntar si el paquete es apropiado antes de presentarlo.
+    -   Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un issue para preguntar si el paquete es apropiado antes de presentarlo.
+    - Ejemplo de respuesta sobre solapamiento](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considera también añadir algunos puntos sobre paquetes similares a tu [documentación de paquetes](#docs-general).
 -   Por favor, considera cuál es el mejor momento en el desarrollo de tu paquete para presentarlo. Tu paquete debe estar lo suficientemente maduro como para que quienes lo revisen puedan evaluar todos los aspectos esenciales, pero ten en cuenta que la revisión puede resultar en cambios importantes.
 -   Te recomendamos fuertemente que envíes tu paquete para su revisión *antes* de publicarlo en CRAN o enviar un artículo de software describiéndolo a una revista. Es posible que tu paquete sufra mejoras importantes y actualizaciones fruto de la revisión, incluyendo cambios en el nombre de las funciones o incompatibilidades con versiones anteriores.
 -   No envíes tu paquete para su revisión mientras éste o un manuscrito asociado esté también en proceso de revisión en otro lugar, ya que esto puede dar lugar a solicitudes de cambios contradictorias.

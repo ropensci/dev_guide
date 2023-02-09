@@ -163,7 +163,7 @@ can be found at *link*".
 
 ## Documentation
 
-### General {#building-general}
+### General {#docs-general}
 
 * All exported package functions should be fully documented with examples.
 
