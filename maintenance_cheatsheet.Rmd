@@ -1,0 +1,26 @@
+# rOpenSci package maintenance cheatsheet {#maintainer-cheatsheet}
+
+```{block, type='summaryblock'}
+A reminder of infrastructure and contact channels for maintainers of rOpenSci packages.
+
+```
+
+## GitHub repository access
+
+You should have administrative access to your GitHub repository.
+If that is no longer the case (say, the automated process failed; or you lost access after having to temporarily deactivate two-factor authentication), 
+please contact us via `info@ropensci.org`.
+
+## Other GitHub topics
+
+If you have any GitHub question or request (adding a collaborator to the GitHub organization for instance) you can use a public channel of the rOpenSci slack workspace or ping `@ropensci/admin` on GitHub.
+
+## pkgdown documentation
+
+## Access to rOpenSci slack workspace
+
+## Package promotion
+
+## Package issues promotion
+
+## Package use cases promotion
