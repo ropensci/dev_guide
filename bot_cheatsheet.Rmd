@@ -2,6 +2,8 @@
 
 ## For everyone {.unnumbered}
 
+Note that we clean issue threads by removing extraneous content, so the record of you having asked for bot-help will most often quickly be erased or hidden.
+
 ### See the list of commands available to you {.unnumbered}
 
 If you need a quick reminder!
