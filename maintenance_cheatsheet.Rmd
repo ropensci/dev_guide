@@ -5,6 +5,13 @@ A reminder of infrastructure and contact channels for maintainers of rOpenSci pa
 
 ```
 
+## Help needed?
+
+If you need punctual help (say, a PR review; or some CI troubleshooting), or help looking for co-maintainers or a new maintainer, or if you need us to retire your package, ping us in GitHub via `@ropensci/admin` or email `info@ropensci.org`.
+You can also use our slack package maintenance channel.
+
+Never hesitate to ask for help.
+
 ## GitHub repository access
 
 You should have administrative access to your GitHub repository.
