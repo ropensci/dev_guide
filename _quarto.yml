@@ -46,6 +46,7 @@ book:
 
   - part: Maintaining Packages
     chapters:
+    - maintenance_cheatsheet.Rmd
     - maintenance_collaboration.Rmd
     - maintenance_changing_maintainers.Rmd
     - maintenance_releases.Rmd

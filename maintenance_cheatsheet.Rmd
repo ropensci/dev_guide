@@ -17,10 +17,24 @@ If you have any GitHub question or request (adding a collaborator to the GitHub 
 
 ## pkgdown documentation
 
+See [rOpenSci docs](#rodocsci).
+
 ## Access to rOpenSci slack workspace
 
-## Package promotion
+Package maintainers and developers should get access to [rOpenSci slack](https://contributing.ropensci.org/resources.html#channels).
+If you did not get the invitation or did not accept it in time, 
+or if you want a new regular contributor receive an invitation please email `info@ropensci.org`.
+
+You might find the #package-maintenance channel relevant for Q&A as well as friendly commiseration when needed.
+
+## Package blog posts
+
+Refer to our [blog guide](https://blogguide.ropensci.org/).
 
 ## Package issues promotion
 
+Label issues with "help wanted" to get them [broadcasted to the community](https://ropensci.org/help-wanted/).
+
 ## Package use cases promotion
+
+You can report use cases of your package or encourage users to report them via our forum to get them [published on our website](https://ropensci.org/usecases/) and in our newsletter.
