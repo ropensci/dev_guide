@@ -2,9 +2,11 @@
 
 ## dev (0.9.0)
 
-- 2023-01-25, add Mastodon as social media (#592, by @yabellini).
+- 2022-07-04, Add resources around GitHub workflows (#479, `@maurolepore`).
 
-- 2023-01-20, fix small formating error (#590 by @eliocamp).
+- 2023-01-25, add Mastodon as social media (#592, by `@yabellini`).
+
+- 2023-01-20, fix small formating error (#590 by `@eliocamp`).
 
 - 2022-11-22, mention shinytest2 near shinytest.
 
