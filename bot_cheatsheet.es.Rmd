@@ -9,13 +9,13 @@ Ten en cuenta que limpiamos los hilos de issue eliminando el contenido superfluo
 Si necesitas un recordatorio rápido
 
 ```markdown
-Ayuda @ropensci-review-bot
+@ropensci-review-bot help
 ```
 
 ### Ver el código de conducta {.unnumbered}
 
 ```markdown
-Código de conducta de @ropensci-review-bot
+@ropensci-review-bot code of conduct
 ```
 
 ## Para los autores {.unnumbered}
@@ -25,7 +25,7 @@ Código de conducta de @ropensci-review-bot
 Cuando tu paquete haya cambiado sustancialmente.
 
 ```markdown
-@ropensci-review-bot comprobar paquete
+@ropensci-review-bot check package
 ```
 
 ### Envía la respuesta a los revisores {.unnumbered}
@@ -33,7 +33,7 @@ Cuando tu paquete haya cambiado sustancialmente.
 Para registrar tu respuesta a los revisores.
 
 ```markdown
-@ropensci-review-bot enviar respuesta <response-url>
+@ropensci-review-bot submit response <response-url>
 ```
 
 donde `<response_url>` es el enlace al comentario de respuesta en el hilo del issue.
@@ -43,7 +43,7 @@ donde `<response_url>` es el enlace al comentario de respuesta en el hilo del is
 Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci y le hayas transferido tu repositorio GitHub, ejecuta este comando para recuperar el acceso de administrador a tu repositorio.
 
 ```markdown
-@ropensci-review-bot finalizar transferencia de <nombre-paquete>
+@ropensci-review-bot finalize transfer of <package-name>
 ```
 
 ### Obtener una nueva invitación tras la aprobación {.unnumbered}
@@ -51,7 +51,7 @@ Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci 
 Si se te ha pasado el plazo de una semana para aceptar la invitación a la organización rOpenSci GitHub, ejecuta esto para recibir una nueva.
 
 ```markdown
-@ropensci-review-bot invítame a ropensci/<nombre-paquete>
+@ropensci-review-bot invite me to ropensci/<package-name>
 ```
 
 ## Para el editor jefe {.unnumbered}
@@ -59,7 +59,7 @@ Si se te ha pasado el plazo de una semana para aceptar la invitación a la organ
 ### Asignar un redactor {.unnumbered}
 
 ```markdown
-@ropensci-review-bot asigna a @nombredeusuario como editor
+@ropensci-review-bot assign @username as editor
 ```
 
 ### Pon el envío en espera {.unnumbered}
@@ -67,7 +67,7 @@ Si se te ha pasado el plazo de una semana para aceptar la invitación a la organ
 Ver [política editorial](#policiesreviewprocess).
 
 ```markdown
-@ropensci-review-bot puesto en espera
+@ropensci-review-bot put on hold
 ```
 
 ### Indicar que el envío está fuera de alcance {.unnumbered}
@@ -75,7 +75,7 @@ Ver [política editorial](#policiesreviewprocess).
 No olvides publicar primero un comentario explicando la decisión y agradeciendo al autor o autores su envío.
 
 ```markdown
-@ropensci-review-bot fuera de alcance
+@ropensci-review-bot out-of-scope
 ```
 
 ## Para el editor asignado {.unnumbered}
@@ -85,7 +85,7 @@ No olvides publicar primero un comentario explicando la decisión y agradeciendo
 Ver [política editorial](#policiesreviewprocess).
 
 ```markdown
-@ropensci-review-bot puesto en espera
+@ropensci-review-bot put on hold
 ```
 
 ### Comprueba el paquete con pkgcheck {.unnumbered}
@@ -93,7 +93,7 @@ Ver [política editorial](#policiesreviewprocess).
 Generalmente sólo en consultas previas al envío, o cuando los autores indican de otro modo que el paquete ha cambiado sustancialmente.
 
 ```markdown
-@ropensci-review-bot comprobar paquete
+@ropensci-review-bot check package
 ```
 
 ### Comprueba las normas estadísticas {.unnumbered}
@@ -101,7 +101,7 @@ Generalmente sólo en consultas previas al envío, o cuando los autores indican 
 Generalmente sólo en las consultas previas a la presentación, o cuando los autores indican de otro modo que el paquete ha cambiado sustancialmente.
 
 ```markdown
-@ropensci-review-bot comprobar srr
+@ropensci-review-bot check srr
 ```
 
 ### Comprueba que README tiene la etiqueta de revisión de software {.unnumbered}
@@ -109,49 +109,49 @@ Generalmente sólo en las consultas previas a la presentación, o cuando los aut
 Hacia el final del proceso de envío.
 
 ```markdown
-@ropensci-review-bot comprobar readme
+@ropensci-review-bot check readme
 ```
 
 ### Indica que estás buscando revisores {.unnumbered}
 
 ```markdown
-@ropensci-review-bot busca revisores
+@ropensci-review-bot seeking reviewers
 ```
 
 ### Asignar un revisor {.unnumbered}
 
 ```markdown
-@ropensci-review-bot asignar @nombredeusuario como revisor
+@ropensci-review-bot assign @username as reviewer
 ```
 
 o
 
 ```markdown
-@ropensci-review-bot añade @nombredeusuario como revisor
+@ropensci-review-bot add @username as reviewer
 ```
 
 ### Eliminar un revisor {.unnumbered}
 
 ```markdown
-@ropensci-review-bot eliminar @nombredeusuario de los revisores
+@ropensci-review-bot remove @username from reviewers
 ```
 
 ### Ajustar la fecha de vencimiento de la revisión {.unnumbered}
 
 ```markdown
-@ropensci-review-bot fija la fecha de vencimiento para @nombredeusuario en AAAA-MM-DD
+@ropensci-review-bot set due date for @username to YYYY-MM-DD
 ```
 
 ### Registra que se ha enviado una revisión {.unnumbered}
 
 ```markdown
-@ropensci-review-bot enviar revisión <review-url> tiempo <tiempo en horas>
+@ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
 ### Aprobar paquete {.unnumbered}
 
 ```markdown
-@ropensci-review-bot aprueba <nombre-paquete>
+@ropensci-review-bot approve <package-name>
 ```
 
 
