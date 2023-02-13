@@ -152,11 +152,11 @@ donde issue\_id es el número del _issue _en el repositorio donde se hizo la rev
 
 ## Documentación
 
-### General
+### General {#docs-general}
 
 - Todas las funciones exportadas del paquete deben estar completamente documentadas con ejemplos.
 
-- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION. Ejemplo en el [*README* de rtweet](https://docs.ropensci.org/rtweet/), y el [*README* de rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird).
+- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION. Ejemplos en [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), y el paquete no-rOpensci [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
 - El paquete debe contener la documentación general del paquete para `?paquete` (o ``?`paquete-package` `` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?paquete` como ``?`paquete-package` `` para el archivo del manual del paquete utilizando la etiqueta `@aliases` de roxygen. `usethis::use_package_doc()` añade la plantilla para generar la documentación general.
 

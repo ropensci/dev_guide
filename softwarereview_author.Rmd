@@ -9,6 +9,7 @@ This concise guide presents the software peer review process for you as a packag
 -   Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
 -   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
     -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
+    - [Example response regarding overlap](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Also consider adding some points about similar packages to your [package documentation](#docs-general).
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
     - We strongly suggest submitting your package for review _before_ publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
     -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
