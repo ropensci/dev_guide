@@ -87,7 +87,8 @@ bibentry(
 bibentry(
   key = "dmpmpaper",
   bibtype  = "Misc",
-  title    = "Estimating Causal Effects from Panel Data with Dynamic Multivariate Panel Models",
+  title    = "Estimating Causal Effects from Panel Data with Dynamic 
+    Multivariate Panel Models",
   author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
   publisher = "SocArxiv",
   year     = "2022",
