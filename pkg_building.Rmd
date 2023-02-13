@@ -78,38 +78,38 @@ As an example see [the dynamite CITATION file](https://github.com/ropensci/dynam
 citHeader("To cite dynamite in publications use:")
 
 bibentry(
-    key = "dynamitepaper",
-    bibtype  = "Misc",
-    doi = "10.48550/ARXIV.2302.01607",
-    url = "https://arxiv.org/abs/2302.01607",
-    author = "Tikka, Santtu and Helske, Jouni",
-    title = "dynamite: An R Package for Dynamic Multivariate Panel Models",
-    publisher = "arXiv",
-    year = "2023"
+  key = "dynamitepaper",
+  bibtype  = "Misc",
+  doi = "10.48550/ARXIV.2302.01607",
+  url = "https://arxiv.org/abs/2302.01607",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  title = "dynamite: An R Package for Dynamic Multivariate Panel Models",
+  publisher = "arXiv",
+  year = "2023"
 )
 
 bibentry(
-    key = "dmpmpaper",
-    bibtype  = "Misc",
-    title    = "Estimating Causal Effects from Panel Data with Dynamic Multivariate Panel Models",
-    author   = "Jouni Helske and Santtu Tikka",
-    publisher = "SocArxiv",
-    year     = "2022",
-    url      = "https://osf.io/preprints/socarxiv/mdwu5/"
+  key = "dmpmpaper",
+  bibtype  = "Misc",
+  title    = "Estimating Causal Effects from Panel Data with Dynamic 
+    Multivariate Panel Models",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  publisher = "SocArxiv",
+  year     = "2022",
+  url      = "https://osf.io/preprints/socarxiv/mdwu5/"
 )
 
 bibentry(
-    key = "dynamite",
-    bibtype  = "Manual",
-    title    = "Bayesian Modeling and Causal Inference for Multivariate
+  key = "dynamite",
+  bibtype  = "Manual",
+  title    = "Bayesian Modeling and Causal Inference for Multivariate
     Longitudinal Data",
-    author   = "Santtu Tikka and Jouni Helske",
-    note  = "R package version 1.0.0",
-    year     = "2022",
-    url      = "https://github.com/ropensci/dynamite"
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  note  = "R package version 1.0.0",
+  year     = "2022",
+  url      = "https://github.com/ropensci/dynamite"
 )
 ```
-
 
 * You could also create and store a `CITATION.cff` thanks to the [cffr package](https://docs.ropensci.org/cffr/). It also provides a [GitHub Action workflow](https://docs.ropensci.org/cffr/reference/cff_gha_update.html) to keep the `CITATION.cff` file up-to-date.
 
@@ -161,11 +161,11 @@ can be found at *link*".
 
 ## Documentation
 
-### General
+### General {#docs-general}
 
 * All exported package functions should be fully documented with examples.
 
-* If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Example in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird).
+* If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Examples in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), and the non-rOpensci package [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
 * The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
 

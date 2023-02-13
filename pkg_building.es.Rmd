@@ -75,35 +75,35 @@ Como ejemplo, revisa el [archivo CITATION de dynamite](https://github.com/ropens
 citHeader("To cite dynamite in publications use:")
 
 bibentry(
-    key = "dynamitepaper",
-    bibtype  = "Misc",
-    doi = "10.48550/ARXIV.2302.01607",
-    url = "https://arxiv.org/abs/2302.01607",
-    author = "Tikka, Santtu and Helske, Jouni",
-    title = "dynamite: An R Package for Dynamic Multivariate Panel Models",
-    publisher = "arXiv",
-    year = "2023"
+  key = "dynamitepaper",
+  bibtype  = "Misc",
+  doi = "10.48550/ARXIV.2302.01607",
+  url = "https://arxiv.org/abs/2302.01607",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  title = "dynamite: An R Package for Dynamic Multivariate Panel Models",
+  publisher = "arXiv",
+  year = "2023"
+)
+bibentry(
+  key = "dmpmpaper",
+  bibtype  = "Misc",
+  title    = "Estimating Causal Effects from Panel Data with Dynamic 
+    Multivariate Panel Models",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  publisher = "SocArxiv",
+  year     = "2022",
+  url      = "https://osf.io/preprints/socarxiv/mdwu5/"
 )
 
 bibentry(
-    key = "dmpmpaper",
-    bibtype  = "Misc",
-    title    = "Estimating Causal Effects from Panel Data with Dynamic Multivariate Panel Models",
-    author   = "Jouni Helske and Santtu Tikka",
-    publisher = "SocArxiv",
-    year     = "2022",
-    url      = "https://osf.io/preprints/socarxiv/mdwu5/"
-)
-
-bibentry(
-    key = "dynamite",
-    bibtype  = "Manual",
-    title    = "Bayesian Modeling and Causal Inference for Multivariate
+  key = "dynamite",
+  bibtype  = "Manual",
+  title    = "Bayesian Modeling and Causal Inference for Multivariate
     Longitudinal Data",
-    author   = "Santtu Tikka and Jouni Helske",
-    note  = "R package version 1.0.0",
-    year     = "2022",
-    url      = "https://github.com/ropensci/dynamite"
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  note  = "R package version 1.0.0",
+  year     = "2022",
+  url      = "https://github.com/ropensci/dynamite"
 )
 ```
 
@@ -153,11 +153,11 @@ donde issue\_id es el número del _issue _en el repositorio donde se hizo la rev
 
 ## Documentación
 
-### General
+### General {#docs-general}
 
 - Todas las funciones exportadas del paquete deben estar completamente documentadas con ejemplos.
 
-- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION. Ejemplo en el [*README* de rtweet](https://docs.ropensci.org/rtweet/), y el [*README* de rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird).
+- Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION. Ejemplos en [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), y el paquete no-rOpensci [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
 - El paquete debe contener la documentación general del paquete para `?paquete` (o ``?`paquete-package` `` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?paquete` como ``?`paquete-package` `` para el archivo del manual del paquete utilizando la etiqueta `@aliases` de roxygen. `usethis::use_package_doc()` añade la plantilla para generar la documentación general.
 
