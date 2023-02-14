@@ -1,35 +1,36 @@
-foobar 0.2.0 (2016-04-01)
-=========================
+# foobar 0.2.0 (2016-04-01)
 
-### NEW FEATURES
+### NUEVAS FUNCIONES
 
-  * New function added `do_things()` to do things (#5)
+- Nueva función añadida `do_things()` para hacer cosas (#5)
 
-### MINOR IMPROVEMENTS
+### PEQUEÑAS MEJORAS
 
-  * Improved documentation for `things()` (#4)
+- Documentación mejorada para `things()` (#4)
 
-### BUG FIXES
+### CORRECCIÓN DE ERRORES
 
-  * Fix parsing bug in `stuff()` (#3)
+- Corrige un error de segmentación en `stuff()` (#3)
 
-### DEPRECATED AND DEFUNCT
+### OBSOLETO Y CADUCO
 
-  * `hello_world()` now deprecated and will be removed in a
-     future version, use `hello_mars()`
+- `hello_world()` ahora obsoleto y se eliminará en un
+  en una versión futura, utiliza `hello_mars()`
 
-### DOCUMENTATION FIXES
+### CORRECCIONES DE LA DOCUMENTACIÓN
 
-  * Clarified the role of `hello_mars()` vs. `goodbye_mars()`
+- Aclarado el papel de `hello_mars()` vs. `goodbye_mars()`
+
+### (un especial: cualquier epígrafe que agrupe un gran número de cambios bajo una misma cosa)
+
+```
+* blablabla.
+```
+
+# foobar 0.1.0 (2016-01-01)
+
+### NUEVAS FUNCIONES
+
+- publicado en CRAN
 
 
-### (a special: any heading grouping a large number of changes under one thing)
-
-    * blablabla.
-
-foobar 0.1.0 (2016-01-01)
-=========================
-
-### NEW FEATURES
-
-  * released to CRAN
