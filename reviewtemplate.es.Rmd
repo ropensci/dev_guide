@@ -1,19 +1,25 @@
-# Review template {#reviewtemplate}
+# Plantilla de revisión {#reviewtemplate}
 
-You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
+Puedes guardar esto como un archivo R Markdown, o eliminar el YAML y guardarlo como un archivo Markdown.
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
 #| echo: false
-cat(readLines("templates/review.es.md"), sep = "\n")
+cat(readLines("templates/review.es.md"), sep = "n")
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/review.md"
 ```
+
 :::
+
+
