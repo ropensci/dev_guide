@@ -69,7 +69,7 @@ El paquete [`tabulizer`](https://github.com/ropensci/tabulizer) por ejemplo, tie
 - Si un día [**luego de** la revisión en rOpenSci](#authors-guide) publicas un artículo sobre tu paquete, añádelo al archivo CITATION.
 - Menos relacionado con tu paquete en sí mismo, pero con lo que lo soporta: si tu paquete incluye un recurso concreto, como una fuente de datos o, por ejemplo, un algoritmo estadístico, recuérdale a quien lo use cómo citar ese recurso mediante, por ejemplo, `citHeader()`. [Quizás incluso añade la referencia a ese recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
 
-Como ejemplo, revisa el [archivo CITATION de dynamite](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) se refiere al manual R, así como a otras publicaciones asociadas.
+Como ejemplo, revisa el [archivo CITATION de dynamite](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) donde se refiere al manual, así como a otras publicaciones asociadas.
 
 ```r
 citHeader("To cite dynamite in publications use:")
