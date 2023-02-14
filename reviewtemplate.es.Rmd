@@ -8,7 +8,7 @@ Puedes guardar esto como un archivo R Markdown, o eliminar el YAML y guardarlo c
 ```{r}
 #| results: 'asis'
 #| echo: false
-cat(readLines("templates/review.es.md"), sep = "n")
+cat(readLines("templates/review.es.md"), sep = "\n")
 ```
 ````
 
