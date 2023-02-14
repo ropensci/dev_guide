@@ -1,8 +1,9 @@
-# Review request template {#reviewrequesttemplate}
+# Modelo de solicitud de revisión {#reviewrequesttemplate}
 
-Editors may make use of the e-mail template below in recruiting reviewers.
+Los editores pueden utilizar la siguiente plantilla de correo electrónico para reclutar revisores.
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -10,11 +11,16 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 #| child: "templates/request.es.md"
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/request.es.md"
 
 ```
+
 :::
+
+
