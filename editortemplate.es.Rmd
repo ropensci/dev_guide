@@ -1,7 +1,7 @@
-# Editor's template {#editortemplate}
-
+# Plantilla del editor {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -17,3 +17,6 @@
 
 ```
 :::
+````
+
+
