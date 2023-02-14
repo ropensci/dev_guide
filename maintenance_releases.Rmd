@@ -37,5 +37,5 @@ foobar 0.2.0 (2016-04-01)
 a description of the new feature, improvement, bug fix, or deprecated function/feature. Link
 to any related GitHub issue like `(#12)`. The `(#12)` will resolve on GitHub in Releases to a link to that issue in the repo.
 * After you have added a `git tag` and pushed up to GitHub, add the news items for that tagged version to the Release notes of a release in your GitHub repo with a title like `pkgname v0.1.0`. See [GitHub docs about creating a release](https://help.github.com/articles/creating-releases/).
-* New CRAN releases will be tweeted about automatically by [roknowtifier](https://twitter.com/roknowtifier) and written about [in our biweekly newsletter](https://news.ropensci.org/) but see [next chapter about marketing](#marketing) about how to inform more potential users about the release.
+* New CRAN releases will be written about [in our biweekly newsletter](https://news.ropensci.org/) but see [next chapter about marketing](#marketing) about how to inform more potential users about the release.
 * For more guidance about the NEWS file we suggest reading the [tidyverse NEWS style guide](https://style.tidyverse.org/news.html).

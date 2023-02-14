@@ -22,13 +22,15 @@ Imports:
     gert,
     tinkr (>= 0.1.0),
     httr2,
-    memoise
+    memoise,
+    babeldown (>= 0.0.0.9000)
 Remotes:  
     bergant/airtabler,
     rstudio/htmltools,
     r-lib/downlit,
     r-lib/rlang,
-    ropensci/tinkr
+    ropensci/tinkr,
+    ropensci-review-tools/babeldown
 URL: https://github.com/ropensci/dev_guide
 RoxygenNote: 7.2.1
 Roxygen: list(markdown = TRUE)
