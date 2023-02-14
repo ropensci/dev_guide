@@ -2,6 +2,8 @@
 
 ## dev (0.9.0)
 
+- 2023-02-14, update instructions for CITATION to reflect new CRAN policies (#604, #609)
+
 - 2023-01-25, add Mastodon as social media (#592, by @yabellini).
 
 - 2023-01-20, fix small formating error (#590 by @eliocamp).
