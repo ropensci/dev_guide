@@ -1,10 +1,11 @@
-## Reviewer Response
+## Respuesta del revisor
+
+#### Aprobación final (posterior a la revisión)
+
+- [ ] **El autor ha respondido a mi revisión y ha realizado cambios a mi satisfacción. Recomiendo aprobar este paquete.**
+
+<!-Por favor, actualiza el presupuesto a continuación.-->
+
+Estimación de horas dedicadas a la revisión:
 
 
-#### Final approval (post-review)
-
-- [ ] **The author has responded to my review and made changes to my satisfaction. I recommend approving this package.**
-
-<!--Please update the estimate below.-->
-
-Estimated hours spent reviewing:
