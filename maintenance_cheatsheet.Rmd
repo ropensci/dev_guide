@@ -30,7 +30,8 @@ See [rOpenSci docs](#rodocsci).
 
 Package maintainers and developers should get access to [rOpenSci slack](https://contributing.ropensci.org/resources.html#channels).
 If you did not get the invitation or did not accept it in time, 
-or if you want a new regular contributor receive an invitation please email `info@ropensci.org`.
+or if you want a new regular contributor receive an invitation please email `info@ropensci.org`,
+indicating to which email address you wish to receive the invitation.
 
 You might find the #package-maintenance channel relevant for Q&A as well as friendly commiseration when needed.
 
