@@ -1,7 +1,7 @@
-# Reviewer approval comment template {#approval2template}
-
+# Plantilla de comentarios de aprobación del revisor {#approval2template}
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -9,11 +9,16 @@
 #| child: "templates/reviewer-approval.es.md"
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/reviewer-approval.es.md"
 
 ```
+
 :::
+
+
