@@ -2,14 +2,22 @@
 
 <a href="https://doi.org/10.5281/zenodo.2553043"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2553043.svg?branch=master" alt="DOI"></a>
 
-<a rel="licencia" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo licencia [una Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 3.0 Estados Unidos](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Consulta [su DOI Zenodo](https://doi.org/10.5281/zenodo.2553043) para citarlo.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo licencia [una Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 3.0 Estados Unidos](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Consulta [su DOI Zenodo](https://doi.org/10.5281/zenodo.2553043) para citarlo.
 
-````{r}
-#| echo: FALSE
-#| results: asis
-#| warning: FALSE
 
-````
+```{r} 
+#| echo: false
+#| results: 'asis' 
+#| warning: false
+cat("\n```bibtex\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+cat(bibentry)
+cat("\n```\n")
+```
 
 También puedes leer el [versión PDF](/ropensci-dev-guide.pdf) de este libro.
 
