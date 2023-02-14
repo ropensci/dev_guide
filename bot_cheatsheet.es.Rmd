@@ -1,6 +1,6 @@
-# Comandos bot
+# Comandos del bot
 
-## Para todos {.unnumbered}
+## Para todas las personas que participan {.unnumbered}
 
 Ten en cuenta que limpiamos los hilos de issue eliminando el contenido superfluo, por lo que la mayoría de las veces se borrará u ocultará rápidamente el registro de que has pedido ayuda a un bot.
 
@@ -18,7 +18,7 @@ Si necesitas un recordatorio rápido
 @ropensci-review-bot code of conduct
 ```
 
-## Para los autores {.unnumbered}
+## Para las personas responsables del paquete {.unnumbered}
 
 ### Comprueba el paquete con pkgcheck {.unnumbered}
 
@@ -28,19 +28,19 @@ Cuando tu paquete haya cambiado sustancialmente.
 @ropensci-review-bot check package
 ```
 
-### Envía la respuesta a los revisores {.unnumbered}
+### Envía tu respuesta sobre la revisión {.unnumbered}
 
-Para registrar tu respuesta a los revisores.
+Para registrar tu respuesta al equipo revisor.
 
 ```markdown
 @ropensci-review-bot submit response <response-url>
 ```
 
-donde `<response_url>` es el enlace al comentario de respuesta en el hilo del issue.
+donde `<response_url>` es el enlace al comentario de respuesta en el hilo del _issue_.
 
 ### Finalizar la transferencia del repositorio {.unnumbered}
 
-Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci y le hayas transferido tu repositorio GitHub, ejecuta este comando para recuperar el acceso de administrador a tu repositorio.
+Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci y le hayas transferido tu repositorio GitHub, ejecuta este comando para recuperar el acceso de administración a tu repositorio.
 
 ```markdown
 @ropensci-review-bot finalize transfer of <package-name>
@@ -48,21 +48,21 @@ Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci 
 
 ### Obtener una nueva invitación tras la aprobación {.unnumbered}
 
-Si se te ha pasado el plazo de una semana para aceptar la invitación a la organización rOpenSci GitHub, ejecuta esto para recibir una nueva.
+Si se venció el plazo de una semana para aceptar la invitación a la organización rOpenSci en GitHub, ejecuta este comando para recibir una nueva.
 
 ```markdown
 @ropensci-review-bot invite me to ropensci/<package-name>
 ```
 
-## Para el editor jefe {.unnumbered}
+## Para la persona encargada de la edición {.unnumbered}
 
-### Asignar un redactor {.unnumbered}
+### Asignar la persona editora de esta revisión {.unnumbered}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
 ```
 
-### Pon el envío en espera {.unnumbered}
+### Poner el envío en espera {.unnumbered}
 
 Ver [política editorial](#policiesreviewprocess).
 
@@ -72,13 +72,13 @@ Ver [política editorial](#policiesreviewprocess).
 
 ### Indicar que el envío está fuera de alcance {.unnumbered}
 
-No olvides publicar primero un comentario explicando la decisión y agradeciendo al autor o autores su envío.
+No olvides publicar primero un comentario explicando la decisión y agradeciendo a las personas responsables del paquete su envío.
 
 ```markdown
 @ropensci-review-bot out-of-scope
 ```
 
-## Para el editor asignado {.unnumbered}
+## Para la persona asignada como responsable de la edición {.unnumbered}
 
 ### Poner el envío en espera {.unnumbered}
 
@@ -90,7 +90,7 @@ Ver [política editorial](#policiesreviewprocess).
 
 ### Comprueba el paquete con pkgcheck {.unnumbered}
 
-Generalmente sólo en consultas previas al envío, o cuando los autores indican de otro modo que el paquete ha cambiado sustancialmente.
+Generalmente se hace sólo en consultas previas al envío para revisión, o cuando las personas responsables del paquete indican que el paquete ha cambiado sustancialmente.
 
 ```markdown
 @ropensci-review-bot check package
@@ -98,13 +98,13 @@ Generalmente sólo en consultas previas al envío, o cuando los autores indican 
 
 ### Comprueba las normas estadísticas {.unnumbered}
 
-Generalmente sólo en las consultas previas a la presentación, o cuando los autores indican de otro modo que el paquete ha cambiado sustancialmente.
+Generalmente se hace sólo en consultas previas al envío para revisión, o cuando las personas responsables del paquete indican que el paquete ha cambiado sustancialmente.
 
 ```markdown
 @ropensci-review-bot check srr
 ```
 
-### Comprueba que README tiene la etiqueta de revisión de software {.unnumbered}
+### Comprueba que el README tiene la etiqueta de revisión de software {.unnumbered}
 
 Hacia el final del proceso de envío.
 
@@ -112,13 +112,13 @@ Hacia el final del proceso de envío.
 @ropensci-review-bot check readme
 ```
 
-### Indica que estás buscando revisores {.unnumbered}
+### Indica que estás buscando personas para revisar {.unnumbered}
 
 ```markdown
 @ropensci-review-bot seeking reviewers
 ```
 
-### Asignar un revisor {.unnumbered}
+### Asignar una persona al equipo revisor {.unnumbered}
 
 ```markdown
 @ropensci-review-bot assign @username as reviewer
@@ -130,13 +130,13 @@ o
 @ropensci-review-bot add @username as reviewer
 ```
 
-### Eliminar un revisor {.unnumbered}
+### Eliminar una persona del equipo revisor {.unnumbered}
 
 ```markdown
 @ropensci-review-bot remove @username from reviewers
 ```
 
-### Ajustar la fecha de vencimiento de la revisión {.unnumbered}
+### Ajustar la fecha límite de la revisión {.unnumbered}
 
 ```markdown
 @ropensci-review-bot set due date for @username to YYYY-MM-DD
@@ -148,7 +148,7 @@ o
 @ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
-### Aprobar paquete {.unnumbered}
+### Aprobar un paquete {.unnumbered}
 
 ```markdown
 @ropensci-review-bot approve <package-name>
