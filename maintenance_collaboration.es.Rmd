@@ -126,7 +126,7 @@ Pueden ver algunas guías útiles en:
 
 Puedes modificar la configuración de tu repositorio de GitHub,
 por ejemplo [requeriendo revisiones de solicitudes de cambio antes de fusionarlas](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging).
-También puedes consultar la documentación [Acerca de los propietarios de código](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+También puedes consultar la documentación [acerca de propiedad sobre código](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 Para hacer y revisar *pull requests* recomendamos [explorar las funciones del paquete usethis](https://usethis.r-lib.org/articles/pr-functions.html).
 
