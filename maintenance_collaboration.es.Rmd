@@ -110,7 +110,7 @@ Jim Hester ofrece un posible modelo de incorporación de miembros de equipo en [
 
 Si tu problema es *reclutar* nuevas personas, puedes publicar una convocatoria abierta como la de Jim Hester [en Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318) y, como responsable de un paquete de rOpenSci, puedes pedir ayuda en el Slack de rOpenSci y solicitar al equipo de rOpenSci ideas para reclutar ayuda.
 
-### Trabajar con otras personas (y incluyendo tú en el futuro) {#git-workflow}
+### Trabajar con otras personas (incluyendo tú en el futuro) {#git-workflow}
 
 [Las *branches*](https://happygitwithr.com/git-branches.html) son baratas. 
 Utilízalas mucho cuando desarrolles funciones, pruebes nuevas ideas o arregles problemas.
