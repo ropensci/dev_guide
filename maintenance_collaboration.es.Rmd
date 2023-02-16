@@ -110,7 +110,7 @@ Jim Hester ofrece un posible modelo de incorporación de miembros de equipo en [
 
 Si tu problema es *reclutar* nuevas personas, puedes publicar una convocatoria abierta como la de Jim Hester [en Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318) y, como responsable de un paquete de rOpenSci, puedes pedir ayuda en el Slack de rOpenSci y solicitar al equipo de rOpenSci ideas para reclutar ayuda.
 
-### Trabajar con otras personas (y incluyendo tú en el futuro) {#gitflow}
+### Trabajar con otras personas (incluyendo tú en el futuro) {#git-workflow}
 
 [Las *branches*](https://happygitwithr.com/git-branches.html) son baratas. 
 Utilízalas mucho cuando desarrolles funciones, pruebes nuevas ideas o arregles problemas.
@@ -124,7 +124,14 @@ Pueden ver algunas guías útiles en:
 - [*The Art of Giving and Receiving Code Reviews (Gracefully)* (El arte de dar y recibir revisiones de código (con elegancia)), por Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/)
 - [Documentación de GitHub sobre revisiones de PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
+Puedes modificar la configuración de tu repositorio de GitHub,
+por ejemplo [requeriendo revisiones de solicitudes de cambio antes de aceptarlas e incorporarlas](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging).
+También puedes consultar la documentación [acerca de propiedad sobre código](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+
 Para hacer y revisar *pull requests* recomendamos [explorar las funciones del paquete usethis](https://usethis.r-lib.org/articles/pr-functions.html).
+
+Para tu configuración "git remote" consulta [_Happy Git with R_](https://happygitwithr.com/common-remote-setups.html).
+También es útil la sección [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) en el mismo libro.
 
 ### Atribuye con generosidad {#attributions}
 
