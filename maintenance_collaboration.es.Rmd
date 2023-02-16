@@ -131,7 +131,7 @@ También puedes consultar la documentación [acerca de propiedad sobre código](
 Para hacer y revisar *pull requests* recomendamos [explorar las funciones del paquete usethis](https://usethis.r-lib.org/articles/pr-functions.html).
 
 Para tu configuración "git remote" consulta [_Happy Git with R_](https://happygitwithr.com/common-remote-setups.html).
-También es útil [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) en el mismo libro.
+También es útil la sección [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) en el mismo libro.
 
 ### Atribuye con generosidad {#attributions}
 
