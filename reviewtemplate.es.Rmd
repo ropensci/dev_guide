@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Plantilla de revisión {#reviewtemplate}
 
 Puedes guardar esto como un archivo R Markdown, o eliminar el YAML y guardarlo como un archivo Markdown.
