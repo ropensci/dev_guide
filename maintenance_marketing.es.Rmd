@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Comercialización de tu paquete {#marketing}
 
 ```{block, type="summaryblock"}
