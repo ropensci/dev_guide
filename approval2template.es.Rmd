@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Plantilla de comentarios de aprobación del revisor {#approval2template}
 
 ::: {.content-hidden when-format="pdf"}
