@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Modelo de solicitud de revisión {#reviewrequesttemplate}
 
 Los editores pueden utilizar la siguiente plantilla de correo electrónico para reclutar revisores.
