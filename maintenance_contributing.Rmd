@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Contributing Guide {#contributingguide}
 
 ```{block, type='summaryblock'}

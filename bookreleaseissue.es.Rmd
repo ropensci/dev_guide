@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Book release guidance {#bookreleaseissue}
 
 Editors preparing for a release can run the `prelease.R` script in the `inst` directory of this repository to automatically open a GitHub issue with checkpoints for all current issues assigned to the upcoming release milestone, along with the following checklist. 

@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Editor's template {#editortemplate}
 
 

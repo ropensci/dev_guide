@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Reviewer approval comment template {#approval2template}
 
 

@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Prefacio {.unnumbered}
 
 ¡Te damos la bienvenida! Este libro es una guía para autoras/es, encargadas/os, revisoras/es y editoras/es de rOpenSci.
