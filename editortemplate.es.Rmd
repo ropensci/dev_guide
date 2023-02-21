@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Plantilla del editor {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
