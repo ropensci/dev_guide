@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Preface {.unnumbered}
 
 Welcome! This book is a guide for authors, maintainers, reviewers and editors of rOpenSci.

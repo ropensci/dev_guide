@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Review request template {#reviewrequesttemplate}
 
 Editors may make use of the e-mail template below in recruiting reviewers.

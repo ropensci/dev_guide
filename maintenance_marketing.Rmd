@@ -1,3 +1,7 @@
+---
+repo-actions: true
+---
+
 # Marketing your package {#marketing}
 
 ```{block, type='summaryblock'}
