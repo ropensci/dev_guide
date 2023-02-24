@@ -382,7 +382,7 @@ Considerar las versiones de paquetes locales como la versiones mínimas necesari
   
   - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta. Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**. La función `%>%` debe importarse de **magrittr** donde está definida, en lugar de **dplyr** que la reexporta y es mucho más pesado.
   
-  - Algunas dependencias proporcionan nombres de funciones y sintaxis más fáciles de interpretar que los nombres de las funciones y la sintaxis de R base. Si ésta es la razón principal para usar una función en una dependencia pesada, considera incluir el código de R base en una función interna bien nombrada en tu paquete. Consulta, por ejemplo, el [script de R de rlang que proporciona funciones con una sintaxis similar a las funciones de purrr](https://github.com/r-lib/rlang/blob/master/R/compat-purrr.R).
+  - Algunas dependencias proporcionan nombres de funciones y sintaxis más fáciles de interpretar que los nombres de las funciones y la sintaxis de R base. Si ésta es la razón principal para usar una función en una dependencia pesada, considera incluir el código de R base en una función interna bien nombrada en tu paquete. Consulta, por ejemplo, el [script de R de rlang que proporciona funciones con una sintaxis similar a las funciones de purrr](https://github.com/r-lib/rlang/blob/main/R/standalone-purrr.R).
   
   - Si las dependencias tienen funcionalidades que se solapan, comprueba si puedes depender sólo de una.
   
@@ -443,7 +443,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 #### Libros
 
-- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (e [impreso - link a la versión anterior de Hadley Wickham, ya que, hasta junio de 2022, la nueva versión aún no se ha publicado](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (e [impreso - link a la versión anterior de Hadley Wickham, ya que, hasta enero de 2023, la nueva versión aún no se ha publicado](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
 
 - [*Writing R Extensions* (Escribiendo extensiones de R)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) es la referencia canónica, normalmente la más actualizada, para crear paquetes de R.
 
