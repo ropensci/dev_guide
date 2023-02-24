@@ -407,7 +407,7 @@ rather than one where it is re-exported. For instance many functions in **devtoo
     * Some dependencies are preferred because they provide easier to interpret
       function names and syntax than base R solutions. If this is the primary
       reason for using a function in a heavy dependency, consider wrapping
-      the base R approach in a nicely-named internal function in your package. See e.g. the [rlang R script providing functions with a syntax similar to purrr functions](https://github.com/r-lib/rlang/blob/master/R/compat-purrr.R).
+      the base R approach in a nicely-named internal function in your package. See e.g. the [rlang R script providing functions with a syntax similar to purrr functions](https://github.com/r-lib/rlang/blob/main/R/standalone-purrr.R).
 
     * If dependencies have overlapping functionality, see if you can rely on only one.
     
@@ -470,7 +470,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 #### Books
 
-* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2022](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+* [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of January 2023](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
 
 * [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
