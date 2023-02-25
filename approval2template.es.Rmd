@@ -2,10 +2,9 @@
 repo-actions: true
 ---
 
-# Plantilla de comentarios de aprobación del revisor {#approval2template}
+# Plantilla de comentarios de aprobación de quien hace una revisión {#approval2template}
 
 ::: {.content-hidden when-format="pdf"}
-
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -17,12 +16,10 @@ repo-actions: true
 :::
 
 ::: {.content-visible when-format="pdf"}
-
 ```{r}
 #| child: "templates/reviewer-approval.es.md"
 
 ```
-
 :::
 
 
