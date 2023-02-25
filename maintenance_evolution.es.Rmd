@@ -3,7 +3,7 @@
 ```{block, type='summaryblock'}
 Este capítulo presenta nuestra guía para realizar modificaciones a tu paquete: cambiar los nombres de los parámetros, cambiar los nombres de las funciones, eliminar funciones, e incluso retirar y archivar paquetes.
 
-Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
+Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
 
 ## Filosofía del cambio
@@ -13,9 +13,9 @@ en un paquete; ni CRAN ni ningún otro sitio impone normas sobre esto.
 En general, a medida que un paquete madura los cambios en los métodos orientados al uso (es decir, las funciones exportadas en un paquete R) deberían ser muy infrecuentes.
 Los paquetes de los cuales dependen muchos otros paquetes probablemente sean más cuidadosos con los cambios, y deberían serlo.
 
-## El paquete lifecycle
+## El paquete {lifecycle}
 
-En este capítulo se presentan soluciones que no requieren el paquete lifecycle, pero que pueden resultarte útiles.
+En este capítulo se presentan soluciones que no requieren el paquete {lifecycle}, pero que pueden resultarte útiles.
 Te recomendamos [leer la documentación de lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
 
 ## Parámetros: cambiando los nombres de los parámetros
@@ -55,8 +55,8 @@ foo_bar(x = 5)
 
 Ten cuidado con el el parámetro `...`.
 Si tu función tiene `...` y ya has eliminado un parámetro (llamémoslo `z`), alguien puede tener un código más antiguo que utilice `z`.
-Cuando usen `z`, como no es un parámetro en la definición de la función, y es probable que sea capturado por los `...` y seea ignore silenciosamente -- no es lo que quieres.
-En su lugar, deja el argumento, emitiendo un error si se utiliza.
+Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por los `...` y sea ignore silenciosamente -- no es lo que quieres.
+En su lugar, deja el argumento `z`, emitiendo un error si se utiliza.
 
 ## Funciones: cambiando los nombres de las funciones
 
@@ -84,7 +84,7 @@ bar <- foo
 
 Con la solución anterior, se pueden usar tanto `foo()` como `bar()` -- cualquiera de los dos hará lo mismo, ya que son la misma función.
 
-También es útil tener un mensaje, pero entonces sólo querrás emitirlo cuando se la función que va a desaparecer, por ejemplo
+También es útil tener un mensaje, pero entonces sólo querrás emitirlo cuando se use la función que va a desaparecer, por ejemplo
 
 ``` r
 #' foo - añadir 1 a un input
@@ -113,7 +113,7 @@ Para eliminar una función de un paquete (digamos que el nombre de tu paquete es
 
 -   Marca la función como obsoleta en la versión del paquete `x` (por ejemplo `v0.2.0`)
 
-En la propia función, utiliza `.Deprecated()` para indicar la nueva función que substituye la anterior. 
+En la propia función, utiliza `.Deprecated()` para indicar cual es la nueva función que substituye la anterior. 
 
 ``` r
 foo <- function() {
@@ -125,7 +125,7 @@ Hay opciones en `.Deprecated` para especificar un nuevo nombre de función, así
 
 El mensaje que da `.Deprecated` es una advertencia, por lo que los usuarios pueden suprimirla con `suppressWarnings()` si lo desean.
 
-Haz una página de manual para las funciones obsoletas como:
+Haz una página de manual para las funciones obsoletas por ejemplo:
 
 ``` r
 #' Funciones obsoletas en holamundo
@@ -141,7 +141,7 @@ Haz una página de manual para las funciones obsoletas como:
 NULL
 ```
 
-Esto crea una página de manual a la que los usuarios pueden acceder como `` ?`holamundo-deprecated` `` y verán en el índice de documentación.
+Esto crea una página de manual a la que los usuarios pueden acceder como `` ?`holamundo-deprecated` `` y verán en el índice de la documentación.
 Añade cualquier función a esta página según sea necesario, y quítala cuando una función caduque (ver más abajo).
 
 -   En la próxima versión (`v0.3.0`) puedes hacer que la función sea caduca (es decir, que desaparezca completamente del paquete, excepto por una página man con una nota sobre ella).
@@ -178,22 +178,22 @@ foo(x = 5)
 #> Error: 'foo' ha sido eliminada de este paquete
 ```
 
-Haz una página de manual para las funciones caducas como
+Haz una página de manual para las funciones caducas por ejemplo:
 
 ``` r
-#' Funciones caducas en helloworld
+#' Funciones caducas en holamundo
 #' 
-#' Estas funciones han desaparecido, ya no están disponibles.
+#' Estas funciones han sido removidas, ya no están disponibles.
 #'
 #' \itemize { 
-#'   \item \code{\link{foo}}:  Esta función ha desaparecido.
+#'   \item \code{\link{foo}}:  Esta función ha sido removida
 #' }
 #' 
-#' @name helloworld-defunct
+#' @name holamundo-defunct
 NULL
 ```
 
-Esto crea una página de manual que se accede como `` ?`helloworld-defunct` `` y que aparece en el índice de documentación.
+Esto crea una página de manual que se accede como `` ?`holamundo-defunct` `` y que aparece en el índice de documentación.
 Añade a esta página las funciones que necesites.
 Es probable que quieras mantener esta página indefinidamente.
 
@@ -210,8 +210,8 @@ Una vez que se caduca una función, sus tests se eliminan sin más.
 ## Archivando paquetes {#archivalguidance}
 
 Por lo general, el software tiene una vida útil finita, y es posible que los paquetes deban ser archivados en algún momento.
-Los paquetes archivados son [archivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) y transladados a una organización dedicada de GitHub, [ropensci-archive](https://github.com/ropensci-archive).
-Antes de archivar, el contenido del archivo README debe trasladarse a una ubicación alternativa (como "README-OLD.md"), y sustituirse por un contenido mínimo que incluya algo como lo siguiente
+Los paquetes son [archivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) y transladados a una organización dedicada de GitHub, [ropensci-archive](https://github.com/ropensci-archive).
+Antes de archivar, el contenido del archivo *README* debe trasladarse a una ubicación alternativa (como "README-OLD.md"), y sustituirse por un contenido mínimo que incluya algo como lo siguiente
 
 ``` md
 # <nombre del paquete>
@@ -219,7 +219,7 @@ Antes de archivar, el contenido del archivo README debe trasladarse a una ubicac
 [![Estado del proyecto: sin soporte](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
 [![Etiqueta de revisión por pares](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
 
-Este paquete ha sido archivado. El antiguo README está ahora en [README-viejo](<link-a-README-viejo>).
+Este paquete ha sido archivado. El antiguo README está ahora en [README-OLD](<link-a-README-viejo>).
 ```
 
 La etiqueta del estado del repositorio debe ser "*unsupported*" (no soportado) para los paquetes anteriormente publicados, o "*abandoned*" (abandonado) para los ex paquetes conceptuales o en proceso, en cuyo caso el código de la etiqueta anterior debe sustituirse por:
@@ -228,13 +228,13 @@ La etiqueta del estado del repositorio debe ser "*unsupported*" (no soportado) p
 [![Estado del proyecto: Abandonado](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 ```
 
-Un ejemplo de un archivo README mínimo en un paquete archivado está en [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md).
-Una vez que el README se ha copiado en otro lugar y se ha reducido a su forma mínima, hay que seguir los siguientes pasos
+Un ejemplo de un archivo *README* mínimo en un paquete archivado está en [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md).
+Una vez que el *README* se ha copiado en otro lugar y se ha reducido a su forma mínima, hay que seguir los siguientes pasos
 
 -   [ ] Cierra los issues con una frase que explique la situación y enlace a esta guía.
--   [ ] Archivar el repositorio en GitHub (también en la configuración del repositorio).
--   [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del personal de rOpenSci](https://ropensci.org/about/#team) que lo transfiera (puedes enviar un correo electrónico a `info@ropensci.org`).
+-   [ ] Archiva el repositorio en GitHub (también en la configuración del repositorio).
+-   [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo transfiera (puedes enviar un correo electrónico a `info@ropensci.org`).
 
 Los paquetes archivados pueden ser desarchivados si quien lo ḿantenía, o una nueva persona, deciden reanudar el mantenimiento.
 Para ello, ponte en contacto con rOpenSci.
-Se transfieren a la organización ropenscilabs.
+Se transferira a la organización ropenscilabs.
