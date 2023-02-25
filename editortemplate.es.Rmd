@@ -2,7 +2,7 @@
 repo-actions: true
 ---
 
-# Plantilla de quien hace la edición {#editortemplate}
+# Plantilla para quien hace la edición {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 ````markdown
