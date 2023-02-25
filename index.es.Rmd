@@ -2,7 +2,7 @@
 
 <a href="https://doi.org/10.5281/zenodo.2553043"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2553043.svg?branch=master" alt="DOI"></a>
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo licencia [una Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 3.0 Estados Unidos](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Consulta [su DOI Zenodo](https://doi.org/10.5281/zenodo.2553043) para citarlo.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo [una Licencia Creative Commons Attribution-NonCommercial-ShareAlike 3.0 de Estados Unidos](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Consulta [el DOI de Zenodo](https://doi.org/10.5281/zenodo.2553043) para saber como citarla.
 
 
 ```{r} 
@@ -19,6 +19,6 @@ cat(bibentry)
 cat("\n```\n")
 ```
 
-También puedes leer el [versión PDF](/ropensci-dev-guide.pdf) de este libro.
+También puedes leer la [versión PDF de este libro](/ropensci-dev-guide.pdf).
 
 
