@@ -1,5 +1,8 @@
-# Editor's template {#editortemplate}
+---
+repo-actions: true
+---
 
+# Plantilla para quien hace la edición {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 ````markdown
@@ -17,3 +20,6 @@
 
 ```
 :::
+````
+
+
