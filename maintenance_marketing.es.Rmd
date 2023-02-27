@@ -1,4 +1,9 @@
 # Promocionando tu paquete {#marketing}
+---
+repo-actions: true
+---
+
+# Comercialización de tu paquete {#marketing}
 
 ```{block, type='summaryblock'}
 Te ayudaremos a promocionar tu paquete, pero aquí hay algunas cosas más que debes tener en cuenta.
