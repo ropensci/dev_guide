@@ -2,10 +2,9 @@
 repo-actions: true
 ---
 
-# Plantilla del editor {#editortemplate}
+# Plantilla para quien hace la edición {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
-
 ````markdown
 ```{r}
 #| results: 'asis'
