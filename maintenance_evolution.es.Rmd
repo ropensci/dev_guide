@@ -36,7 +36,7 @@ foo_bar(x = 5)
 #> Error en foo_bar(x = 5) : utiliza 'y' en lugar de 'x' 
 ```
 
-Si quieres ser más útil, podrías emitir una advertencia pero tomar automáticamente la acción necesaria
+Si quieres que sea más útil, podrías emitir una advertencia pero tomar automáticamente la acción necesaria
 
 ``` r
 foo_bar <- function(x, y) {
@@ -53,9 +53,9 @@ foo_bar(x = 5)
 #> 25
 ```
 
-Ten cuidado con el el parámetro `...`.
+Ten cuidado con el parámetro `...`.
 Si tu función tiene `...` y ya has eliminado un parámetro (llamémoslo `z`), alguien puede tener un código más antiguo que utilice `z`.
-Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por los `...` y sea ignore silenciosamente -- no es lo que quieres.
+Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por los `...` y se ignore silenciosamente -- no es lo que quieres.
 En su lugar, deja el argumento `z`, emitiendo un error si se utiliza.
 
 ## Funciones: cambiando los nombres de las funciones
@@ -144,7 +144,7 @@ NULL
 Esto crea una página de manual a la que los usuarios pueden acceder como `` ?`holamundo-deprecated` `` y verán en el índice de la documentación.
 Añade cualquier función a esta página según sea necesario, y quítala cuando una función caduque (ver más abajo).
 
--   En la próxima versión (`v0.3.0`) puedes hacer que la función sea caduca (es decir, que desaparezca completamente del paquete, excepto por una página man con una nota sobre ella).
+-   En la próxima versión (`v0.3.0`) puedes hacer que la función sea caduca (es decir, que desaparezca completamente del paquete, excepto por una página _man_ con una nota sobre ella).
 
 En la propia función, utiliza `.Defunct()` de esta manera:
 
