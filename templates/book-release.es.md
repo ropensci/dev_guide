@@ -19,7 +19,7 @@
 ### 2 semanas antes de publicar
 
 -   [ ] Redacta un artículo para el blog o nota técnica sobre el lanzamiento con suficiente antelación para que el equipo de edición, y luego quien sea Community Manager puedan revisarlo (2 semanas).
-    [Ejemplo](https://github.com/ropensci/roweb3/pull/291), [Instrucciones generales para artículos de blog](https://github.com/ropensci/roweb2#contributing-a-blog-post), [instrucciones específicas para articulos de lanzamiento](#releaseblogpost).
+    [Ejemplo](https://github.com/ropensci/roweb3/pull/291), [Instrucciones generales para artículos de blog](https://blogguide.ropensci.org/), [instrucciones específicas para articulos de lanzamiento](#releaseblogpost).
 
 -   [ ] Haz un PR de la *branch* dev a la *branch* master, notifica al equipo de edición en GitHub y Slack.
     Menciona el borrador del artículo del blog en un comentario en ese PR.
