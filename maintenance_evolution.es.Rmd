@@ -1,71 +1,79 @@
-# Package evolution - changing stuff in your package {#evolution}
+# Evolución de paquetes - cambiando cosas en tu paquete {#evolution}
 
 ```{block, type='summaryblock'}
-This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions, and even retiring and archiving packages.
+Este capítulo presenta nuestra guía para realizar modificaciones a tu paquete: cambiar los nombres de los parámetros, cambiar los nombres de las funciones, eliminar funciones, e incluso retirar y archivar paquetes.
 
-_This chapter was initially contributed as a tech note on rOpenSci website by [Scott Chamberlain](https://github.com/sckott); you can read the original version [here](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
+Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
 
-## Philosophy of changes
+## Filosofía del cambio
 
-Everyone's free to have their own opinion about how freely parameters/functions/etc. are changed in a library - rules about package changes are not enforced by CRAN or otherwise. Generally, as a library gets more mature, changes to user facing methods (i.e., exported functions in an R package) should become very rare. Libraries that are dependencies of many other libraries are likely to be more careful about changes, and should be. 
+Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc..
+en un paquete; ni CRAN ni ningún otro sitio impone normas sobre esto.
+En general, a medida que un paquete madura los cambios en los métodos orientados al uso (es decir, las funciones exportadas en un paquete R) deberían ser muy infrecuentes.
+Los paquetes de los cuales dependen muchos otros paquetes probablemente sean más cuidadosos con los cambios, y deberían serlo.
 
-## The lifecycle package
+## El paquete {lifecycle}
 
-This chapter presents solutions that do not require the lifecycle package but you might still find it useful.
-We recommend [reading the lifecycle documentation](https://lifecycle.r-lib.org/articles/stages.html).
+En este capítulo se presentan soluciones que no requieren el paquete {lifecycle}, pero que pueden resultarte útiles.
+Te recomendamos [leer la documentación de lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
 
-## Parameters: changing parameter names
+## Parámetros: cambiando los nombres de los parámetros
 
-Sometimes parameter names must be changed for clarity, or some other reason. 
+A veces hay que cambiar los nombres de los parámetros por claridad, u otra razón.
 
-A possible approach is check if deprecated arguments are not missing, and stop providing a meaningful message.
+Un posible enfoque es comprobar si los argumentos obsoletos no faltan, y llamar a `stop()` con un mensaje significativo.
 
-```r
+``` r
 foo_bar <- function(x, y) {
     if (!missing(x)) {
-        stop("use 'y' instead of 'x'")
+        stop("utiliza 'y' en lugar de 'x'")
     }
     y^2
 }
 
 foo_bar(x = 5)
-#> Error in foo_bar(x = 5) : use 'y' instead of 'x' 
+#> Error en foo_bar(x = 5) : utiliza 'y' en lugar de 'x' 
 ```
 
-If you want to be more helpful, you could emit a warning but automatically take the necessary action:
+Si quieres que sea más útil, podrías emitir una advertencia pero tomar automáticamente la acción necesaria
 
-```r
+``` r
 foo_bar <- function(x, y) {
     if (!missing(x)) {
-        warning("use 'y' instead of 'x'")
+        warning("utiliza 'y' en lugar de 'x'")
         y <- x
     }
     y^2
 }
 
 foo_bar(x = 5)
+#> Warning message:
+#> In foo_bar(x = 5) : utiliza 'y' en lugar de 'x'
 #> 25
 ```
 
-Be aware of the parameter `...`. If your function has `...`, and you have already removed a parameter (lets call it `z`), a user may have older code that uses `z`. When they pass in `z`, it's not a parameter in the function definition, and will likely be silently ignored -- not what you want. Instead, leave the argument around, throwing an error if it used.
+Ten cuidado con el parámetro `...`.
+Si tu función tiene `...` y ya has eliminado un parámetro (llamémoslo `z`), alguien puede tener un código más antiguo que utilice `z`.
+Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por los `...` y se ignore silenciosamente -- no es lo que quieres.
+En su lugar, deja el argumento `z`, emitiendo un error si se utiliza.
 
-## Functions: changing function names
+## Funciones: cambiando los nombres de las funciones
 
-If you must change a function name, do it gradually, as with any other change in your package. 
+Si tienes que cambiar el nombre de una función, hazlo gradualmente, como con cualquier otro cambio en tu paquete.
 
-Let's say you have a function `foo`.
+Digamos que tienes una función `foo`.
 
-```r
+``` r
 foo <- function(x) x + 1
 ```
 
-However, you want to change the function name to `bar`. 
+Pero quieres cambiar el nombre de la función a `bar`.
 
-Instead of simply changing the function name and `foo` no longer existing straight away, in the first version of the package where `bar` appears, make an alias like:
+En lugar de simplemente cambiar el nombre de la función y que `foo` deje de existir directamente, en la primera versión del paquete donde `bar` aparezca, haz un alias como
 
-```r
-#' foo - add 1 to an input
+``` r
+#' foo - añadir 1 a un input
 #' @export
 foo <- function(x) x + 1
 
@@ -74,15 +82,15 @@ foo <- function(x) x + 1
 bar <- foo
 ```
 
-With the above solution, the user can use either `foo()` or `bar()` -- either will do the same thing, as they are the same function.
+Con la solución anterior, se pueden usar tanto `foo()` como `bar()` -- cualquiera de los dos hará lo mismo, ya que son la misma función.
 
-It's also useful to have a message but then you'll only want to throw that message when they use the old function, e.g.,
+También es útil tener un mensaje, pero entonces sólo querrás emitirlo cuando se use la función que va a desaparecer, por ejemplo
 
-```r
-#' foo - add 1 to an input
+``` r
+#' foo - añadir 1 a un input
 #' @export
 foo <- function(x) {
-    warning("please use bar() instead of foo()", call. = FALSE)
+    warning("por favor, utiliza bar() en lugar de foo()", call. = FALSE)
     bar(x)
 }
 
@@ -91,134 +99,142 @@ foo <- function(x) {
 bar <- function(x) x + 1
 ```
 
-After users have used the package version for a while (with both `foo` and `bar`), in the next version you can remove the old function name (`foo`), and only have `bar`.
+Después de que la versión del paquete con `foo` y `bar` haya sido usada durante un tiempo, en la siguiente versión puedes eliminar el antiguo nombre de la función (`foo`), y tener sólo `bar`.
 
-```r
-#' bar - add 1 to an input
-#' @export
+``` r
+#' bar - añadir 1 a un input
+#' @exportar
 bar <- function(x) x + 1
 ```
 
-## Functions: deprecate & defunct
+## Funciones: obsoletas y caducas
 
-To remove a function from a package (let's say your package name is `helloworld`), you can use the following protocol:
+Para eliminar una función de un paquete (digamos que el nombre de tu paquete es `holamundo`), puedes utilizar el siguiente protocolo
 
-* Mark the function as deprecated in package version `x` (e.g., `v0.2.0`)
+-   Marca la función como obsoleta en la versión del paquete `x` (por ejemplo `v0.2.0`)
 
-In the function itself, use `.Deprecated()` to point to the replacement function:
+En la propia función, utiliza `.Deprecated()` para indicar cual es la nueva función que substituye la anterior. 
 
-```r
+``` r
 foo <- function() {
     .Deprecated("bar")
 }
 ```
 
-There's options in `.Deprecated` for specifying a new function name, as well as a new package name, which makes sense when moving functions into different packages.
+Hay opciones en `.Deprecated` para especificar un nuevo nombre de función, así como un nuevo nombre de paquete, lo que tiene sentido cuando se mueven funciones a paquetes diferentes.
 
-The message that's given by `.Deprecated` is a warning, so can be suppressed by users with `suppressWarnings()` if desired.
+El mensaje que da `.Deprecated` es una advertencia, por lo que los usuarios pueden suprimirla con `suppressWarnings()` si lo desean.
 
-Make a man page for deprecated functions like:
+Haz una página de manual para las funciones obsoletas por ejemplo:
 
-```r
-#' Deprecated functions in helloworld
+``` r
+#' Funciones obsoletas en holamundo
 #' 
-#' These functions still work but will be removed (defunct) in the next version.
+#' Estas funciones aún funcionan pero serán eliminadas (obsoletas) en la próxima versión.
 #' 
-#' \itemize{
-#'  \item \code{\link{foo}}: This function is deprecated, and will
-#'  be removed in the next version of this package.
+#' \itemize { 
+#'   \item \code{\link{foo}}: Esta función está obsoleta y se eliminará en la 
+#'    próxima versión de este paquete.
 #' }
 #' 
-#' @name helloworld-deprecated
+#' @name holamundo-deprecated
 NULL
 ```
 
-This creates a man page that users can access like ``?`helloworld-deprecated` `` and they'll see in the documentation index. Add any functions to this page as needed, and take away as a function moves to defunct (see below).
+Esto crea una página de manual a la que los usuarios pueden acceder como `` ?`holamundo-deprecated` `` y verán en el índice de la documentación.
+Añade cualquier función a esta página según sea necesario, y quítala cuando una función caduque (ver más abajo).
 
-* In the next version (`v0.3.0`) you can make the function defunct (that is, completely gone from the package, except for a man page with a note about it).
+-   En la próxima versión (`v0.3.0`) puedes hacer que la función sea caduca (es decir, que desaparezca completamente del paquete, excepto por una página _man_ con una nota sobre ella).
 
-In the function itself, use `.Defunct()` like:
+En la propia función, utiliza `.Defunct()` de esta manera:
 
-```r
+``` r
 foo <- function() {
     .Defunct("bar")
 }
 ```
 
-Note that the message in `.Defunct` is an error so that the function stops whereas `.Deprecated` uses a warning that let the function proceed.
+Observa que el mensaje en `.Defunct` es un error para que la función se detenga mientras que `.Deprecated` utiliza una advertencia que permite que la función continúe.
 
-In addition, it's good to add `...` to all defunct functions so that if users pass in any parameters they'll get the same defunct message instead of a `unused argument` message, so like:
+Además, es bueno añadir `...` a todas las funciones caducas para que si los usuarios pasan algún parámetro obtengan el mismo mensaje de caducidad en lugar de un error de `argumento no utilizado` de esta forma:
 
-```r
+``` r
 foo <- function(...) {
     .Defunct("bar")
 }
 ```
 
-Without `...` gives:
+Sin `...` da:
 
-```r
+``` r
 foo(x = 5)
-#> Error in foo(x = 5) : unused argument (x = 5)
+#> Error en foo(x = 5) : argumento no utilizado (x = 5)
 ```
 
-And with `...` gives:
+Y con `...` da:
 
-```r
+``` r
 foo(x = 5)
-#> Error: 'foo' has been removed from this package
+#> Error: 'foo' ha sido eliminada de este paquete
 ```
 
-Make a man page for defunct functions like:
+Haz una página de manual para las funciones caducas por ejemplo:
 
-```r
-#' Defunct functions in helloworld
+``` r
+#' Funciones caducas en holamundo
 #' 
-#' These functions are gone, no longer available.
-#' 
-#' \itemize{
-#'  \item \code{\link{foo}}: This function is defunct.
+#' Estas funciones han sido removidas, ya no están disponibles.
+#'
+#' \itemize { 
+#'   \item \code{\link{foo}}:  Esta función ha sido removida
 #' }
 #' 
-#' @name helloworld-defunct
+#' @name holamundo-defunct
 NULL
 ```
 
-This creates a man page that users can access like ``?`helloworld-defunct` `` and they'll see in the documentation index. Add any functions to this page as needed. You'll likely want to keep this man page indefinitely.
+Esto crea una página de manual que se accede como `` ?`holamundo-defunct` `` y que aparece en el índice de documentación.
+Añade a esta página las funciones que necesites.
+Es probable que quieras mantener esta página indefinidamente.
 
-### Testing deprecated functions
+### Testeando las funciones obsoletas
 
-You don't have to change the tests of deprecated functions until they are made defunct.
+No es necesario que cambies los test de las funciones obsoletas hasta que caduquen.
 
-* Consider any changes made to a deprecated function. Along with using `.Deprecated` inside the function, did you change the parameters at all in the deprecated function, or create a new function that replaces the deprecated function, etc. Those changes should be tested if any made.
-* Related to above, if the deprecated function is simply getting a name change, perhaps test that the old and new functions return identical results.
-* [`suppressWarnings()` could be used](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) to suppress the warning thrown from `.Deprecated`, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.
+-   Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc.? Hay que testear esos cambios, si se han hecho.
+-   En relación con lo anterior, si a la función obsoleta se le cambia simplemente el nombre, tal vez se pueda testar que la función  antigua y la nueva devuelven resultados idénticos.
+-   [`suppressWarnings()` podría utilizarse](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir la advertencia emitida desde `.Deprecated` pero las pruebas no están orientadas al uso, así que no es tan malo que las pruebas emitan advertencias, y la advertencia podría incluso utilizarse como recordatorio para quien mantiene el paquete.
 
-Once a function is made defunct, its tests are simply removed.
+Una vez que se caduca una función, sus tests se eliminan sin más.
 
-## Archiving packages {#archivalguidance}
+## Archivando paquetes {#archivalguidance}
 
-Software generally has a finite lifespan, and packages may eventually need to be archived. Archived packages are [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) and moved to a dedicated GitHub organization, [ropensci-archive](https://github.com/ropensci-archive). Prior to archiving, the contents of the README file should be moved to an alternative location (such as "README-OLD.md"), and replaced with minimal contents including something like the following:
-
+Por lo general, el software tiene una vida útil finita, y es posible que los paquetes deban ser archivados en algún momento.
+Los paquetes son [archivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) y transladados a una organización dedicada de GitHub, [ropensci-archive](https://github.com/ropensci-archive).
+Antes de archivar, el contenido del archivo *README* debe trasladarse a una ubicación alternativa (como "README-OLD.md"), y sustituirse por un contenido mínimo que incluya algo como lo siguiente
 
 ``` md
-# <package name>
+# <nombre del paquete>
 
-[![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
-[![Peer-review badge](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
+[![Estado del proyecto: sin soporte](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+[![Etiqueta de revisión por pares](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
 
-This package has been archived. The former README is now in [README-old](<link-to-README-old>).
+Este paquete ha sido archivado. El antiguo README está ahora en [README-OLD](<link-a-README-viejo>).
 ```
 
-The repo status badge should be "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages, in which case the badge code above should be replaced with:
+La etiqueta del estado del repositorio debe ser "*unsupported*" (no soportado) para los paquetes anteriormente publicados, o "*abandoned*" (abandonado) para los ex paquetes conceptuales o en proceso, en cuyo caso el código de la etiqueta anterior debe sustituirse por:
+
 ``` md
-[![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+[![Estado del proyecto: Abandonado](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 ```
 
-An example of a minimal README in an archived package is in [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md). Once the README has been copied elsewhere and reduced to minimal form, the following steps should be followed:
+Un ejemplo de un archivo *README* mínimo en un paquete archivado está en [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md).
+Una vez que el *README* se ha copiado en otro lugar y se ha reducido a su forma mínima, hay que seguir los siguientes pasos
 
-- [ ] Close issues with a sentence explaining the situation and linking to this guidance.
-- [ ] Archive the repository on GitHub (also under repo settings).
-- [ ] Transfer the repository to [ropensci-archive](https://github.com/ropensci-archive), or request an [rOpenSci staff member](https://ropensci.org/about/#team) to transfer it (you can email `info@ropensci.org`).
+-   [ ] Cierra los issues con una frase que explique la situación y enlace a esta guía.
+-   [ ] Archiva el repositorio en GitHub (también en la configuración del repositorio).
+-   [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo transfiera (puedes enviar un correo electrónico a `info@ropensci.org`).
 
-Archived packages may be unarchived if authors or a new person opt to resume maintenance. For that please contact rOpenSci. They are transferred to the ropenscilabs organization.
+Los paquetes archivados pueden ser desarchivados si quien lo ḿantenía, o una nueva persona, deciden reanudar el mantenimiento.
+Para ello, ponte en contacto con rOpenSci.
+Se transferira a la organización ropenscilabs.
