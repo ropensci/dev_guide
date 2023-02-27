@@ -1,35 +1,33 @@
 foobar 0.2.0 (2016-04-01)
 =========================
 
-### NEW FEATURES
+### NUEVA FUNCIONALIDAD
 
-  * New function added `do_things()` to do things (#5)
+  * Nueva función `hacer_algo()` para hacer cosas (#5)
 
-### MINOR IMPROVEMENTS
+### MEJORAS MENORES
 
-  * Improved documentation for `things()` (#4)
+  * Documentación mejorada para `cosas()` (#4)
 
-### BUG FIXES
+### ERRORES CORREGIDOS
 
-  * Fix parsing bug in `stuff()` (#3)
+  * Corrige un error en `algo()` (#3) 
 
-### DEPRECATED AND DEFUNCT
+### OBSOLETO Y CADUCADO
 
-  * `hello_world()` now deprecated and will be removed in a
-     future version, use `hello_mars()`
+  * `hola_mundo()` ahora es una función obsoleta y se eliminará en un en una versión futura, utiliza `hola_marte()`
 
-### DOCUMENTATION FIXES
+### CORRECCIONES EN LA DOCUMENTACIÓN
 
-  * Clarified the role of `hello_mars()` vs. `goodbye_mars()`
+  * Se aclaró el papel de `hola_marte()` vs. `adios_marte()`
 
+### (algo especial: cualquier epígrafe que agrupe un gran número de cambios bajo un mismo tema)
 
-### (a special: any heading grouping a large number of changes under one thing)
-
-    * blablabla.
+  * blablabla.
 
 foobar 0.1.0 (2016-01-01)
 =========================
 
-### NEW FEATURES
+### NUEVA FUNCIONALIDAD
 
-  * released to CRAN
+  * publicado en CRAN
