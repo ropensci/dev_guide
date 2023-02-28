@@ -12,7 +12,6 @@
 -   [ ] **Información para contribuir**: ¿La documentación de cómo contribuir es lo suficientemente clara, por ejemplo, los *tokens* para tests, espacios para pruebas?
 -   [ ] **Licencia:** El paquete tiene una licencia aceptada por CRAN u OSI.
 -   [ ] **Gestión del proyecto:** ¿Los *issues* y *pull requests* están en buen estado? Por ejemplo, ¿hay errores pendientes, está claro cuándo se abordarán los pedidos de nueva funcionalidad?
-
 ---
 
 #### Comentarios de edición
