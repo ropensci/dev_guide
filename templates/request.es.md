@@ -1,28 +1,30 @@
-Dear [REVIEWER]
+Estimado/a [REVISOR/A]
 
-Hi, this is [EDITOR]. [FRIENDLY BANTER]. I'm writing to ask if you would be willing to review a package for rOpenSci. As you probably know, rOpenSci conducts peer review of R packages contributed to our collection in a manner similar to journals.
+Hola, soy [EDITOR/A]. [COMENTARIO AMISTOSO]. Te escribo para preguntarte si te interesa revisar un paquete para rOpenSci. Como probablemente sepas, rOpenSci lleva a cabo la revisión por pares de los paquetes de R aportados a nuestra colección de forma similar a las revistas científicas.
 
-The package, [PACKAGE] by [AUTHOR(S)], does [FUNCTION]. You can find it on GitHub here: [REPO LINK]. We conduct our open review process via GitHub as well, here: [ONBOARDING ISSUE]
+El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en GitHub aquí: [ENLACE REPO]. Hacemos nuestro proceso de revisión abierta a través de GitHub, aquí: [ONBOARDING ISSUE]
 
-If you accept, note that we ask reviewers to complete reviews in three weeks. (We’ve found it takes a similar amount of time to review a package as an academic paper.)
+Si aceptas, ten en cuenta que te pediremos completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
-Our [reviewers guide] details what we look for in a package review, and includes links to example reviews. Our standards are detailed in our [packaging guide], and we provide a reviewer [template] for you to use. Please make sure you do not have a [conflict of interest](https://devguide.ropensci.org/policies.html#coi) preventing you from reviewing this package. If you have questions or feedback, feel free to ask me or post to the [rOpenSci forum].
+Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme o enviar un mensaje a la sección  del [foro de rOpenSci][foro de rOpenSci].
 
-rOpenSci’s community is our best asset. 
-We aim for reviews to be open, non-adversarial, and focused on improving software quality. 
-Be respectful and kind! 
-See our reviewers guide and [code of conduct](https://ropensci.org/code-of-conduct/) for more.
+La comunidad de rOpenSci es nuestro mejor activo.
+Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centradas en mejorar la calidad del software.
+¡Sé amable!
+Consulta nuestra guía de revisión y el [código de conducta](https://ropensci.org/code-of-conduct/) para más información.
 
-Are you able to review? If you can not, suggestions for alternate reviewers are always helpful. If I don't hear from you within a week, I will assume you are unable to
-review at this time.
+¿Puedes revisar? Si no puedes, siempre nos sirve si puede sugerir personas alternativas. Si no tengo noticias tuyas en el plazo de una semana, supondré que no puedes hacer una revisión en este momento.
 
-Thank you for your time.
+Gracias por tu tiempo.
 
-Sincerely,
+Atentamente,
 
-[EDITOR]
+[EDITOR/A]
 
-[reviewers guide]: https://devguide.ropensci.org/reviewerguide.html
-[packaging guide]: https://devguide.ropensci.org/building.html
-[template]: https://devguide.ropensci.org/reviewtemplate.html
-[rOpenSci forum]: https://discuss.ropensci.org/
+[guía de revisión]: https://devguide.ropensci.org/reviewerguide.html
+[guía de empaquetado]: https://devguide.ropensci.org/building.html
+[plantilla]: https://devguide.ropensci.org/reviewtemplate.html
+[foro de rOpenSci]: https://discuss.ropensci.org/
+
+
+

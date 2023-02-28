@@ -1,39 +1,43 @@
-## Release book version <insert version>
+## Publicación del libro, versión <insertar versión>
 
-### Repo maintenance between releases
+### Mantenimiento de repositorios entre versiones
 
-- [ ] Look at the issue tracker for [the dev guide](https://github.com/ropensci/dev_guide/issues) and for [software review meta](https://github.com/ropensci/software-review-meta/issues) for changes still to be made in the dev guide. Assign dev guide issues to milestones corresponding to versions, either the next one or the one after that, e.g. [version 0.3.0](https://github.com/ropensci/dev_guide/milestone/2). Encourage PRs, have them reviewed.
+-   [ ] Mira los *issues* de [la guía de desarrollo](https://github.com/ropensci/dev_guide/issues) y del [meta de revisión del software](https://github.com/ropensci/software-review-meta/issues) para revisar los cambios pendientes en la guía de desarrollo. Asigna los *issues* de la guía de desarrollo a los *milestones* correspondientes a cada versión, ya sea la siguiente o la versión que viene luego de esa, por ejemplo [versión 0.3.0](https://github.com/ropensci/dev_guide/milestone/2). Fomenta la creación de PR y haz que sean revisados.
 
-### 1 month prior to release
+### 1 mes antes de la publicación
 
-- [ ] Remind editors to open issues/PRs for items they want to see in the next version.
+-   [ ] Recuerda al equipo de edición que abran *issues* o PRs sobre los temas que quieran incluir en la próxima versión.
 
-- [ ] Run [the `devguide_prerelease()` function](https://github.com/ropensci-org/devguider) from the `devguider` package.
+-   [ ] Ejecuta [la función `devguide_prerelease()`](https://github.com/ropensci-org/devguider) del paquete `devguider`.
 
-- [ ] Ask editors for any feedback you need from them before release.
+-   [ ] Pide al equipo de edición cualquier devolución que necesites antes de la publicación.
 
-- [ ] For each contribution/change make sure the NEWS in Appendix.Rmd were updated.
+-   [ ] Por cada contribución o cambio, asegúrate de que se hayan actualizado las *NEWS* en Appendix.Rmd.
 
-- [ ] Plan a date for release in communication with rOpenSci's Community Manager who will give you a date for publishing a blog post / tech note.
+-   [ ] Coordina una fecha para la publicación con quien sea Community Manager de rOpenSci, quien te dará una fecha para publicar un artículo en el blog o nota técnica.
 
-### 2 weeks prior to release
+### 2 semanas antes de publicar
 
-- [ ] Draft a blog post / tech note about the release with enough advance for editors and then Community Manager to review it (2 weeks). [Example](https://github.com/ropensci/roweb3/pull/291), [General blog post instructions](https://blogguide.ropensci.org/), [specific instructions for release posts](#releaseblogpost). 
+-   [ ] Redacta un artículo para el blog o nota técnica sobre el lanzamiento con suficiente antelación para que el equipo de edición, y luego quien sea Community Manager puedan revisarlo (2 semanas).
+    [Ejemplo](https://github.com/ropensci/roweb3/pull/291), [Instrucciones generales para artículos de blog](https://blogguide.ropensci.org/), [instrucciones específicas para articulos de lanzamiento](#releaseblogpost).
 
-- [ ] Make a PR from the dev branch to the master branch, ping editors on GitHub and Slack. Mention the blog post draft in a comment on this PR.
+-   [ ] Haz un PR de la *branch* dev a la *branch* master, notifica al equipo de edición en GitHub y Slack.
+    Menciona el borrador del artículo del blog en un comentario en ese PR.
 
-### Release
+### Publicación
 
-- [ ] Check URLs using [the `devguide_urls()` function from the {devguider} package](https://github.com/ropensci-org/devguider)
+-   [ ] Comprueba las URL utilizando [la función `devguide_urls()` del paquete {devguider}](https://github.com/ropensci-org/devguider)
 
-- [ ] Check spelling using [the `devguide_spelling()` function from the {devguider} package](https://github.com/ropensci-org/devguider). Update the [WORDLIST](https://github.com/ropensci/dev_guide/blob/master/inst/WORDLIST) as necessary.
+-   [ ] Comprueba la ortografía con [la función `devguide_spelling()` del paquete {devguider}](https://github.com/ropensci-org/devguider).
+    Actualiza la [LISTA DE PALABRAS](https://github.com/ropensci/dev_guide/blob/master/inst/WORDLIST) según sea necesario.
 
-- [ ] Squash and merge the PR from dev to master.
+-   [ ] Unifica los *commits* (*squash*) y haz *merge* del PR de *dev* a *master*.
 
-- [ ] GitHub release, check Zenodo release.
+-   [ ] Crea un *release* en GitHub, asegúrate de que se cree un *release* en Zenodo.
 
-- [ ] Re-build (for Zenodo metadata update in the book) or wait for daily build
+-   [ ] Re-genera el libro (para actualizar los metadatos de Zenodo en el libro) o espera a la compilación diaria
 
-- [ ] Re-create the dev branch
+-   [ ] Vuelve a crear la *branch* dev.
 
-- [ ] Finish your blog post / tech note PR. Underline the most important aspects to be highlighted in tweets as part of the PR discussion.
+-   [ ] Termina el PR de tu artículo para el blog o nota técnica.
+    Indica los aspectos más importantes que deben destacarse en los tweets como parte de la discusión del PR.
