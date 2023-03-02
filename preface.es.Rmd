@@ -27,7 +27,7 @@ Puedes citar este libro utilizando [sus metadatos de Zenodo y su DOI](https://do
 #| echo: false
 #| results: 'asis' 
 #| warning: false
-cat("\n``bibtex\n")
+cat("\n```bibtex\n")
 u <- "https://zenodo.org/record/2553043" # la URL universal redirige a la última
 s <- rvest::session(u)
 u <- paste0(s$url, "/export/hx") # redirigido
