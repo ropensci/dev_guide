@@ -13,6 +13,8 @@ We aim for reviews to be open, non-adversarial, and focused on improving softwar
 Be respectful and kind! 
 See our reviewers guide and [code of conduct](https://ropensci.org/code-of-conduct/) for more.
 
+[IF MENTORSHIP REQUESTED: You indicated in your form that you'd prefer mentorship for your first review.  You are free to use me as a resource during this process, including asking questions by email and Slack (you will receive an invite to the rOpenSci Slack), and sharing draft reviews for feedback before posting. I'm also happy to have a brief Zoom call to walk through the process.  Please let me know in your reply if you would like to schedule one.]
+
 Are you able to review? If you can not, suggestions for alternate reviewers are always helpful. If I don't hear from you within a week, I will assume you are unable to
 review at this time.
 
