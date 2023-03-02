@@ -1,94 +1,97 @@
-# Guía para editores {#editorguide}
+# Guía para el equipo editorial {#editorguide}
 
 ```{block, type="summaryblock"}
-Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
-a system of a rotating Editor-in-Chief (EiC).
+La revisión por pares de software en rOpenSci es gestionada por un equipo editorial.  Estamos probando
+un sistema de rotación para quien ocupa el rol de Editor/a Lider (EL).
 
-This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
+Este capítulo presenta las responsabilidades [de la persona que lidera el equipo editorial](#eicchecklist), de [cualquier editor/a a cargo de un envío](#editorchecklist), [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse) y [cómo gestionar la publicación de la guía de desarrollo](#bookrelease).
 
-If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
+Si eres editor/a invitado/a, ¡gracias por tu ayuda! Si tiene alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
 ```
 
-## Responsabilidades de los editores
+> Asume siempre que las personas que participan en el sistema de revisión de software (colegas editores/as, autores/as de paquetes, revisores/as) están haciendo todo lo posible, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.
 
-- Además de ocuparse de los paquetes (unos 4 al año), los editores intervienen en las decisiones editoriales del grupo, como si un paquete está dentro del ámbito de aplicación, y determinan las actualizaciones de nuestras políticas. Generalmente lo hacemos a través de Slack, que esperamos que los editores puedan consultar con regularidad.
+## Responsabilidades de editores-/as
 
-- También rotamos [Responsabilidades del redactor jefe](#eicchecklist) (decisiones de alcance en primera instancia y asignación de editores) entre la junta aproximadamente cada tres meses.
+- Además de ocuparse de los paquetes (unos 4 al año), quienes realizan la edición intervienen en las decisiones editoriales del equipo, como si un paquete está dentro del ámbito de aplicación, y determinan las actualizaciones de nuestras políticas. Generalmente lo hacemos a través de Slack, que esperamos que los miembros del equipo puedan consultar con regularidad.
 
-- No tienes que hacer un seguimiento de otros envíos, pero si observas un issue con un paquete que está siendo gestionado por otro editor, no dudes en plantear ese issue directamente al otro editor, o publica la preocupación en el canal exclusivo para editores en slack. Por ejemplo:
+- También rotamos [Responsabilidades del Editor/a Lider](#eicchecklist) (decisiones de alcance en primera instancia y asignación de editores/as) entre los mimebros del equipo aproximadamente cada tres meses.
+
+- No tienes que hacer un seguimiento de otros envíos, pero si observas un problema con un paquete que está siendo gestionado por otra persona, no dudes en plantear ese problema directamente a quien está a cargo de la edición, o publica la preocupación en el canal exclusivo para el equipo editorial en slack. Por ejemplo:
   
   - Sabes de un paquete que se solapa, que aún no se ha mencionado en el proceso.
-  - Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de una entrada en el blog que aborda cómo añadir imágenes a los documentos del paquete).
-  - Las preocupaciones relacionadas, por ejemplo, con la rapidez del proceso, deberían ser abordadas por el redactor jefe, así que es a él a quien te dirigirías para tales preguntas.
+  - Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de un artículo en el blog que aborda cómo añadir imágenes a los documentos del paquete).
+  - Las preocupaciones relacionadas, por ejemplo, con la rapidez del proceso, deberían ser abordadas por el/la editor/a líder, así que es a esa persona a quien te dirigirías para tales preguntas.
 
-## Lista de control del redactor jefe {#editorchecklist}
+## Lista de tareas de el/la editor/a a cargo de un paquete {#editorchecklist}
 
 ### En el momento del envío:
 
-- Si eres el EiC o el primer editor que responde, asigna un editor con un comentario de `@ropensci-review-bot assign @username as editor`. Esto también añadirá la etiqueta `1/editor-checks` al issue.
-- El envío generará automáticamente una salida de comprobación del paquete por parte de ropensci-review-bot, que deberá examinarse en busca de cualquier issue pendiente (la mayoría de las excepciones deberán ser justificadas por el autor en el contexto particular de su paquete). Si quieres volver a realizar comprobaciones después de cualquier cambio en el paquete, envía un comentario `@ropensci-review-bot check package`.
-- Después de publicar las comprobaciones automáticas, utiliza [plantilla del editor](#editortemplate) para guiar las comprobaciones iniciales y registrar tu respuesta al envío. También puedes agilizar las comprobaciones del editor utilizando el botón [`pkgreviewr` paquete creado por la editora asociada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Procura terminar las comprobaciones y empezar a buscar revisores en un plazo de 5 días laborables.
+- Si eres EL o sos la primera persona que responde, asigna un editor/a con un comentario de `@ropensci-review-bot assign @username as editor`. Esto también añadirá la etiqueta `1/editor-checks` al issue.
+- Para los envíos de paquetes estadísticos (identificables como "Submission Type: Stats" en la plantilla del issue), añade la etiqueta "stats" a la edición.
+- El envío generará automáticamente una salida de comprobación del paquete por parte de ropensci-review-bot, que deberá examinarse en busca de cualquier problema pendiente (la mayoría de las excepciones deberán ser justificadas por quien presenta el paquete en el contexto particular de su paquete). Si quieres volver a realizar comprobaciones después de cualquier cambio en el paquete, envía un comentario `@ropensci-review-bot check package`.
+- Después de publicar las comprobaciones automáticas, utiliza [plantilla para quien hace la edición](#editortemplate) para guiar las comprobaciones iniciales y registrar tu respuesta sobre envío. También puedes agilizar las comprobaciones de edición utilizando el paquete [`pkgreviewr`  creado por la editora asociada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Procura terminar las comprobaciones y empezar a buscar personas para hacer la revisión en un plazo de 5 días laborables.
 - Comprueba que la plantilla se ha rellenado correctamente.
-- Comprueba si las políticas [ajuste](#aims-and-scope) y [solapamiento](#overlap).
-  Inicia el debate a través del canal Slack #software-review si es necesario para casos extremos que no hayan sido detectados por comprobaciones previas del EiC.
-  Si se rechaza, ver [esta sección](#outofscoperesponse) sobre cómo responder.
-- Comprueba que las partes obligatorias de la plantilla están completas.  Si no es así, orienta a los autores hacia las instrucciones adecuadas.
-- Para paquetes que necesiten integración continua en varias plataformas (cf [criterios de esta sección del capítulo sobre IC](#whichci)) asegúrate de que el paquete se prueba en varias plataformas (por ejemplo, haciendo que el paquete se construya en varios sistemas operativos a través de GitHub Actions).
-- Siempre que sea posible, cuando pidas cambios, dirige a los autores a herramientas automáticas como [`usethis`](https://usethis.r-lib.org/) y [`styler`](https://styler.r-lib.org/) y a los recursos en línea (secciones de esta guía, secciones del [Libro de paquetes R](https://r-pkgs.org/)) para facilitar tu devolución. [Ejemplo de comprobaciones del editor](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
-- Lo ideal es que las observaciones que hagas se aborden antes de que los revisores empiecen a revisar.
-- Si las comprobaciones iniciales muestran lagunas importantes, solicita cambios antes de asignar revisores. Si el autor menciona que los cambios pueden llevar tiempo, [aplica la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). Recibirás un recordatorio cada 90 días (en el issue) para que te pongas en contacto con el autor o autores del paquete.
-- Si el paquete plantea un nuevo issue para la política de rOpenSci, inicia una conversación en Slack o abre un debate en la sección [foro rOpenSci](https://discuss.ropensci.org/) para discutirlo con otros editores ([ejemplo de discusión política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
+- Comprueba si las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap).
+  Inicia el debate a través del canal Slack #software-review si es necesario para casos extremos que no hayan sido detectados por comprobaciones previas del EL.
+  Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
+- Comprueba que las partes obligatorias de la plantilla están completas.  Si no es así, orienta a las personas que presentaron el paquete hacia las instrucciones adecuadas.
+- Para paquetes que necesiten integración continua en varias plataformas (ver [criterios la sección del capítulo sobre CI](#whichci)) asegúrate de que el paquete se prueba en varias plataformas (por ejemplo, haciendo que el paquete se construya en varios sistemas operativos a través de GitHub Actions).
+- Siempre que sea posible, cuando pidas cambios, sugiere a los/las autores/as a herramientas automáticas como [`usethis`](https://usethis.r-lib.org/) y [`styler`](https://styler.r-lib.org/) y a los recursos en línea (secciones de esta guía, secciones del [Libro *R Packages*](https://r-pkgs.org/)) para facilitar tu devolución. [Ejemplo de comprobaciones de una editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
+- Si las comprobaciones iniciales muestran lagunas importantes, solicita cambios antes de asignar revisores/as. Si el autor menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+- Si el paquete plantea un nuevo problema para la política de rOpenSci, inicia una conversación en Slack o abre un debate en el [foro rOpenSci](https://discuss.ropensci.org/) para discutirlo con el equipo editorial ([ejemplo de discusión sobre política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
-### Busca y asigna dos revisores:
+### Busca y asigna dos revisores/as:
 
 #### Tareas
 
 - Comenta con `@ropensci-review-bot seeking reviewers`.
-- Utiliza el [plantilla de correo electrónico](#reviewrequesttemplate) si es necesario para invitar a los revisores
-  - Cuando invites a revisores, incluye algo como "si no tengo noticias tuyas en una semana, asumiré que no puedes revisar", para dar un plazo claro en el que pasarás a buscar a otra persona.
-- Asigna revisores con `@ropensci-review-bot assign @username as reviewer`. `add` también puede utilizarse en lugar de `assign` y `to reviewers` (plural) en lugar de `as reviewer` (simple). Por tanto, lo siguiente también es válido: `@ropensci-review-bot add @username to reviewers`. Debe emitirse una orden para cada revisor. Si es necesario más adelante, elimina revisores con `@ropensci-review-bot remove @username from reviewers`.
+- Utiliza la [plantilla de correo electrónico](#reviewrequesttemplate) si es necesario para invitar a las personas a participar en la revisión
+  - Cuando invites a personas, incluye algo como "si no tengo noticias tuyas en una semana, asumiré que no puedes revisar", para dar un plazo claro en el que pasarás a buscar a otra persona.
+- Asigna revisores/as con `@ropensci-review-bot assign @username as reviewer`. `add` también puede utilizarse en lugar de `assign` y `to reviewers` (plural) en lugar de `as reviewer` (singular). Por lo tanto, lo siguiente también es válido: `@ropensci-review-bot add @username to reviewers`. Debe generarse una orden para cada persona. Si es necesario más adelante, elimina revisores/as con `@ropensci-review-bot remove @username from reviewers`.
 - Si quieres cambiar la fecha de vencimiento de una revisión utiliza `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
-#### Cómo buscar revisores
+#### Cómo buscar personas para hacer una revisión
 
-##### ¿Dónde buscar revisores?
+##### ¿Dónde buscar revisores/as?
 
-Como editor (invitado), utiliza
+Como editor/a (invitado/a), utiliza
 
-- las posibles sugerencias realizadas por el remitente o remitentes, (aunque los remitentes pueden tener una visión limitada de los tipos de conocimientos necesarios.  Sugerimos no utilizar más de uno de los revisores sugeridos);
-- la base de datos Airtable de revisores y voluntarios (ver siguiente subsección);
-- y los autores de [paquetes rOpenSci](https://ropensci.org/packages/).
+- las posibles sugerencias realizadas por la o las personas que presentaron el paquete, (aunque lestas pueden tener una visión limitada de los tipos de conocimientos necesarios.  Sugerimos no utilizar más de una de las personas sugeridas);
+- la base de datos *Airtable* de revisores/as y voluntarios/as (ver siguiente subsección);
+- y los autores y autoras de [paquetes rOpenSci](https://ropensci.org/packages/).
 
 Cuando estas fuentes de información no sean suficientes,
 
-- pide ideas a otros editores en Slack,
-- busca usuarios del paquete o de la fuente de datos/servicio de flujo ascendente al que se conecta el paquete (a través de la apertura de issues en el repositorio, destacándolo, citándolo en artículos, hablando de él en Twitter).
-- También puedes buscar autores de paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
+- pide ideas a personas en el equipo editorial en Slack,
+- busca usuarios/as del paquete o de la fuente de datos/servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en Twitter).
+- También puedes buscar autores/as de paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tiene una [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
-- Puedes tuitear sobre la búsqueda de revisores.
+- Puedes tuitear sobre la búsqueda de personas para hacer una revisión.
 
-##### Consejos para la búsqueda de revisores en Airtable
+##### Consejos para la búsqueda de personas en *Airtable*
 
-Tus herramientas para buscar revisores en la Mesa del Aire son
+Tus herramientas para buscar personas para la revisión en *Airtable* son
 
 - filtros (por favor, elimínalos una vez que hayas terminado), ver ejemplo más abajo.
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y áreas técnicas que tienen que incluir integración continua](images/airtable.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y en áreas técnicas tienen que incluir integración continua (interfaz y etiquetas en inglés)](images/airtable.png)
 
-- crear un duplicado [vista](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views) dependiendo de tus conocimientos de Airtable.
+- crear una [visualización duplicada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views) dependiendo de tus conocimientos de Airtable.
 
-Echa un vistazo a la `last_time_contacted` y `last_answer` antes de ponerte en contacto con alguien.
-Si alguien se ha negado recientemente porque estaba ocupado, podría ser mejor abstenerse, mientras que alguien que se negó debido a una COI podría ser contactado de nuevo sin esperar demasiado.
+Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
+Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que alguien que se negó debido a un conflictos de interés podría ser contactado de nuevo sin esperar demasiado.
 
-##### Almacenar la información de la búsqueda de revisores en Airtable {#airtable-info}
+##### Almacenar la información de la búsqueda de revisores/as en Airtable {#airtable-info}
 
-Para las personas que figuran en la Airtable, si te pones en contacto con ellas acerca de una reseña, actualiza el campo `last_time_contacted` e introduce la categoría correspondiente a su respuesta en `last_answer`.
+Para las personas que figuran en la Airtable, si te pones en contacto con ellas acerca de una revisión, actualiza el campo `last_time_contacted` e introduce la categoría correspondiente a su respuesta en `last_answer`.
 
 Sólo añade personas a Airtable si aceptan revisar (de lo contrario, las personas deben ofrecerse voluntarias rellenando el formulario de Airtable).
-No introduzcas más información que tu nombre de usuario de GitHub, tu nombre y tu dirección de correo electrónico.
-Señala a los revisores la página [formulario Airtable](https://ropensci.org/software-reviewer).
+No introduzcas más información que su nombre de usuario de GitHub, su nombre y su dirección de correo electrónico.
+Indícales a las personas que podrían revisar que completen [formulario de Airtable](https://ropensci.org/software-reviewer).
 
-##### Criterios para elegir un revisor
+##### Criterios para elegir a las personas que harán la revisión
 
 Estos son los criterios que debes tener en cuenta a la hora de elegir a un revisor. Puede que tengas que reunir esta información buscando en CRAN y en la página GitHub del posible revisor, así como en su presencia general en Internet (sitio web personal, Twitter).
 
