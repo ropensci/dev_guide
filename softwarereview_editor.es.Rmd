@@ -93,72 +93,71 @@ Indícales a las personas que podrían revisar que completen [formulario de Airt
 
 ##### Criterios para elegir a las personas que harán la revisión
 
-Estos son los criterios que debes tener en cuenta a la hora de elegir a un revisor. Puede que tengas que reunir esta información buscando en CRAN y en la página GitHub del posible revisor, así como en su presencia general en Internet (sitio web personal, Twitter).
+Estos son los criterios que debes tener en cuenta a la hora de elegir a quien hará la revisión. Puede que tengas que reunir esta información buscando en CRAN y en la página GitHub de la posible persona, así como en su presencia general en Internet (sitio web personal, Twitter).
 
-- No ha revisado ningún paquete para nosotros en los últimos 6 meses.
+- No ha revisado ningún paquete para rOpenSci en los últimos 6 meses.
 - Alguna experiencia en el desarrollo de paquetes.
 - Alguna experiencia de dominio en el campo del paquete o fuente de datos.
-- No [conflictos de intereses](#coi).
-- Intenta equilibrar tu sensación de la experiencia del posible revisor con la complejidad del paquete.
-- Diversidad: con dos revisores, ambos no deberían ser hombres blancos cis.
-- Alguna prueba de que están interesados en la apertura o en las actividades de la comunidad R, aunque el correo electrónico ciego está bien.
+- No hay [conflictos de intereses](#coi).
+- Intenta equilibrar lo que sabes de la experiencia del posible revisor con la complejidad del paquete.
+- Diversidad: con dos revisores/as, ambas personas no deberían ser hombres cis blancos.
+- Alguna prueba de que están interesados en software libre o en las actividades de la comunidad R, aunque enviar un correo electrónico sin esta información está bien.
 
-Cada envío debe ser revisado por *dos* revisores de paquetes. Aunque está bien que uno de ellos tenga menos experiencia en el desarrollo de paquetes y más conocimientos del dominio, la revisión no debe dividirse en dos.  Ambos revisores deben revisar el paquete de forma exhaustiva, aunque desde su perspectiva particular.  En general, al menos un revisor debe tener experiencia previa en revisiones y, por supuesto, invitar a un nuevo revisor amplía nuestro grupo de revisores.
+Cada envío debe ser revisado por *dos* revisores/as de paquetes. Aunque está bien que uno de ellos tenga menos experiencia en el desarrollo de paquetes y más conocimientos del dominio, la revisión no debe dividirse en dos.  Ambas personas deben revisar el paquete de forma exhaustiva, aunque desde su perspectiva particular.  En general, al menos una persona debe tener experiencia previa en revisiones y, por supuesto, invitar a un nuevo revisor/a amplía nuestro grupo de revisores.
 
 ### Durante la revisión:
 
 - Consulta de vez en cuando a los revisores y autores. Ofrece aclaraciones y ayuda cuando sea necesario.
 - En general, espera 3 semanas para la revisión, 2 semanas para
-  cambios posteriores, y 1 semana para la aprobación de los cambios por parte del revisor.
+  cambios posteriores, y 1 semana para la aprobación de los cambios por parte de quien hace la revisión.
 - Una vez enviada cada revisión,
-  - Escribe un comentario agradeciendo al revisor con tus palabras;
+  - Escribe un comentario agradeciendo a quien hizo la revisión con tus palabras;
   - Registra la reseña escribiendo un nuevo comentario `@ropensci-review-bot submit review <review-url> time <time in hours>`. Por ejemplo, para la reseña [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) el comentario sería `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
-- Si el autor deja de responder, consulta [las políticas](#policies) y/o haz ping a los demás editores en el canal Slack para discutirlo. Es importante que, si se asignó un revisor a un issue cerrado, te pongas en contacto con él al cerrar el issue para explicarle la decisión, agradecerle una vez más su trabajo y tomar nota en nuestra base de datos para asignarle la próxima vez un envío con altas posibilidades de que la revisión del software se realice sin problemas (por ejemplo, un autor de paquetes que ya nos haya enviado paquetes).
-- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a los revisores que indiquen su aprobación con la \[plantilla de aprobación del revisor\].{#approval2template}.
+- Si la persona que presentó el paquete deja de responder, consulta [las políticas](#policies) y/o notifica a las demás personas del equipo editorial en el canal Slack para discutirlo. Es importante que, si se asignó una persona para hacer la revisión a un issue cerrado, te pongas en contacto con esa persona al cerrar el issue para explicarle la decisión, agradecerle una vez más su trabajo y tomar nota en nuestra base de datos para asignarle la próxima vez un envío con altas posibilidades de que la revisión del software se realice sin problemas (por ejemplo, una persona que ya nos haya enviado paquetes).
+- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la \[plantilla de aprobación de quien hace una revisión\].{#approval2template}.
 
 ### Después de la revisión:
 
 - `@ropensci-review-bot approve <package-name>`
-- *Si el propietario original del depósito se opone a la transferencia, añade una línea con su dirección a [esta lista de repositorios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantizar que el paquete se incluye en el registro de paquetes de rOpenSci.*
-- Nomina un paquete para que aparezca en una entrada del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés. Por favor, anota en el software review issue una o dos cosas que el autor podría destacar, y etiqueta `@ropensci/blog-editors` para su seguimiento.
-- Si los autores mantienen un gitbook que trate al menos en parte sobre su
-  paquete, ponte en contacto con [un miembro del personal de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con los autores
-  sobre la transferencia a [la página `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
+- *Si la persona que tiene la propiedad original del repositorio se opone a la transferencia, añade una línea con su dirección a [esta lista de repositorios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantizar que el paquete se incluye en el registro de paquetes de rOpenSci.*
+- Nomina un paquete para que aparezca en un artículo del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés. Por favor, anota en *issue* de revisión una o dos cosas que el autor podría destacar, y etiqueta `@ropensci/blog-editors` para su seguimiento.
+- Si los/as autores/as mantienen un gitbook que trate al menos en parte sobre su
+  paquete, ponte en contacto con [alguien del equipo de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con las personas al cargo del paquete y hable sobre su transferencia a [la página `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
 
 ### Promoción de paquetes:
 
-- Dirige al autor a los capítulos de la guía sobre [publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
+- Dirige a la persona que presentó el paqute a los capítulos de la guía sobre [publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
 
-## Responsabilidades del EiC {#eicchecklist}
+## Responsabilidades del EL {#eicchecklist}
 
-El EiC desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del comité editorial.
-El EiC tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento).
-En detalle, el EiC desempeña las siguientes funciones
+Quien ocupa el rol de EL desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
+El EL tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento).
+En detalle, el EL desempeña las siguientes funciones
 
-- Vigila todos los issue publicados en el repositorio de revisión del software (suscríbete a las notificaciones del repositorio en GitHub, o vigila la página `#software-peer-review-feed` en Slack).
+- Vigila todos los *issues* publicados en el repositorio de revisión del software (se suscribe a las notificaciones del repositorio en GitHub, o vigila la página `#software-peer-review-feed` en Slack).
 
-- Etiqueta el issue con ` 0/editorial-team-prep`
+- Etiqueta el *issue* con ` 0/editorial-team-prep`
 
-- Llamadas `@ropensci-review-bot check srr` sobre consultas previas a la presentación de programas informáticos estadísticos. Ver correspondientes [*Guía de desarrollo de estadísticas* capítulo](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para más detalles.
+- Usa `@ropensci-review-bot check srr` sobre consultas previas a la presentación de programas informáticos estadísticos. Revisa los capítulos correspondientes a la [*Guía de desarrollo de estadística*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para más detalles.
 
-- Asigna los envíos de paquetes a otros editores, incluido el propio, para que se encarguen de ellos. En la mayoría de los casos, esto rota entre los editores, a menos que el EiC considere que un editor es especialmente adecuado para un paquete, o que un editor rechace encargarse del envío por estar demasiado ocupado o por tener intereses contrapuestos.
+- Asigna los envíos de paquetes a otras personas del equipo editorial, incluyéndose, para que se encarguen de ellos. En la mayoría de los casos, esto rota entre los miembros del equipo editorial, a menos que el EL considere que una persona es especialmente adecuado para un paquete, o que alguien rechace encargarse del envío por no tener tiempo o por tener conflicto de intereses.
   
   ```
   @ropensci-review-bot assign @username as editor
   ```
 
-- Supervisa el ritmo del proceso de revisión y recuerda a otros editores que hagan avanzar los paquetes según sea necesario.
+- Supervisa el ritmo del proceso de revisión y recuerda a otros miembros del equipo editorial que hagan avanzar los paquetes según sea necesario.
 
-- Al asumir la rotación de EiC, revisa el estado de las revisiones abiertas actuales y recuerda a los editores que respondan o actualicen el estado según sea necesario.
+- Al asumir la rotación de EL, revisa el estado de las revisiones abiertas actuales y recuerda a los/as editores/As que respondan o actualicen el estado según sea necesario.
 
-- Responde a los issues publicados en el repositorio software-review-meta
+- Responde a los *issues* publicados en el repositorio software-review-meta
 
-- Toma decisiones sobre el alcance/solapamiento de las consultas previas a la presentación, las remisiones de JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (Este último caso también puede ser realizado por editores de manipulación (ver más abajo)). Para iniciar el debate, esto se publica en el canal Slack sólo para editores de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, qué dudas tiene el EiC, es decir, digerir un poco la información. Si al cabo de uno o dos días el EiC considera que no ha recibido suficientes respuestas, puede enviar un ping a todos los editores.
+- Toma decisiones sobre el alcance/solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)). Para iniciar el debate, esto se publica en el canal de Slack sólo para el equipo editorial de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, qué dudas tiene el EL, es decir, digerir un poco la información. Si al cabo de uno o dos días el EL considera que no ha recibido suficientes respuestas, puede enviar una notificación a todas las personas en el equipo editorial.
   
-  - Cualquier editor debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los envíos fuera del ámbito (pre).
-  - Tras explicar la decisión de fuera de ámbito, escribe un comentario issue `@ropensci-review-bot out-of-scope`.
+  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera del ámbito.
+  - Tras explicar la decisión de fuera de ámbito, escribe un comentario en el *issue* `@ropensci-review-bot out-of-scope`.
 
-- Solicita un nuevo EiC cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide voluntarios en el canal Slack de los editores)
+- Solicita un nuevo EL cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide voluntarios/as en el canal de Slack del equipo editorial).
 
 ### Pide más detalles
 
