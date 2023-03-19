@@ -161,99 +161,98 @@ En detalle, el EL desempeña las siguientes funciones
 
 ### Pide más detalles
 
-En algunos casos, la documentación en línea es escasa. Un README mínimo y la ausencia de un sitio web pkgdown dificultan la evaluación.
-En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos importa pedir estos esfuerzos.
+En algunos casos, la documentación en línea es escasa. Un *README* mínimo y la ausencia de un sitio web de *pkgdown* dificultan la evaluación.
+En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.
 
 Ejemplo de texto
 
 ```markdown
-Hello <username> and many thanks for your submission.
+Hola <nombre> y muchas gracias por su envío.
 
-We are discussing whether the package is in scope and need a bit more information.
+Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
 
-Would you mind adding more details and context to the README?
-After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
+¿Le importaría añadir más detalles y contexto al *README*?
+Después de leerlo alguien con poco conocimiento del dominio debería haber saber sobre el objetivo, las metas y la funcionalidad del paquete.
 
-<optional>
-If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is best in class](https://devguide.ropensci.org/policies.html#overlap). Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
-</optional>
-
+<opcional>
+Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es el mejor de su clase](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
+</opcional>
 ```
 
-### Invitar a un editor {#guesteditor}
+### Invitar a una persona para la tarea de edición {#guesteditor}
 
-Tras debatirlo con otros editores, el EiC puede invitar a un editor invitado para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los editores tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de invitar a una persona a formar parte del consejo editorial).
+Tras debatirlo con otros miembros del equipo, el EL puede invitar a un editor/a invitado/a para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de invitar a una persona a formar parte del equipo de edición).
 
-Cuando invites a un editor invitado,
+Cuando invites a una persona como editor invitado,
 
-- Pregunta sobre los conflictos de intereses utilizando el [la misma formulación que para los revisores](#coi),
-- Proporciona un enlace al [guía para editores](#editorchecklist).
+- Pregunta sobre los conflictos de intereses utilizando el [mismo texto que para los revisores](#coi),
+- Proporciona un enlace al [guía para quines se encargan de la edición](#editorchecklist).
 
 Si la persona ha dicho que sí (¡bien!),
 
-- Asegúrate de que [ha activado la 2FA en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
-- Invítalos a `ropensci/editors` equipo y a la organización ropensci,
-- Una vez que hayan aceptado esta invitación al repositorio, asígnales el issue,
-- Asegúrate de que (ya) están invitados al espacio de trabajo Slack de rOpenSci,
-- Añade su nombre a la tabla de invitados-editores de Airtable (para que sus nombres aparezcan en este libro y en el README de la revisión del software).
+- Asegúrate de que [ha activado la autenticación 2FA en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
+- Invítala al equipo `ropensci/editors` y a la organización ropensci,
+- Una vez que haya aceptado esta invitación al repositorio, asígnale el issue,
+- Asegúrate de que (ya) está invitada al espacio de trabajo en Slack de rOpenSci,
+- Añade su nombre a la tabla de *guest-editor* de Airtable (para que sus nombre aparezcan en este libro y en el *README* de la revisión del software).
 
 Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
 
-- vuelve a dar las gracias al editor invitado,
-- Elimínalos del `ropensci/editors` equipo (pero no de la organización ropensci).
+- vuelve a dar las gracias a la persona invitada,
+- Elimínala del equipo `ropensci/editors` (pero no de la organización ropensci).
 
 ## Responder a las presentaciones fuera del ámbito de aplicación {#outofscoperesponse}
 
-Agradece a los autores su envío, explica los motivos de la decisión y dirígelos a otros lugares de publicación, si procede, y al foro de debate de rOpenSci. Utiliza la redacción de [Objetivos y alcance](#aims-and-scope) en particular en lo que respecta a la evolución del alcance a lo largo del tiempo, y al solapamiento y las diferencias entre el desarrollo de unconf/personal/revisión de software.
+Agradece a quienes presentaron el paquete por el envío, explica los motivos de la decisión y dirígelos a otros lugares de publicación, si corresponde, y al foro de debate de rOpenSci. Utiliza el texto de [Objetivos y alcance](#aims-and-scope) en particular en lo que respecta a la evolución del alcance a lo largo del tiempo, y al solapamiento y las diferencias entre el desarrollo de unconf/personal/revisión de software.
 
 [Ejemplos de envíos y respuestas fuera del ámbito de aplicación](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
-## Responder a las preguntas de los revisores {#reviewersupport}
+## Responder a las preguntas de quienes hacen una revisión {#reviewersupport}
 
-Los revisores pueden pedir devoluciones sobre, por ejemplo, el tono de su revisión.
-Además de indicarles las orientaciones generales de esta guía, pregunta a los editores / abre un issue cuando falten tales orientaciones,
+Las personas que hacen revisiones pueden pedir devoluciones sobre, por ejemplo, el tono de su revisión.
+Además de darles las orientaciones generales de esta guía, pregunta a las personas del equipo de edición / abre un issue cuando falten indicaciones,
 aquí tienes algunos ejemplos de reseñas que pueden ser útiles.
 
 - Ejemplo duro pero constructivo: la parte de esta revisión que sugiere una reescritura de la viñeta: [ropensci/software-review#191 (comentario)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
-- [el `slopes` paquete](https://github.com/ropensci/software-review/issues/420) que acabó siendo rediseñado fundamentalmente en respuesta a las revisiones. Todas las revisiones/revisores fueron en todo momento totalmente constructivas, lo que parece haber desempeñado un papel importante a la hora de motivar a los autores a embarcarse en una revisión tan importante. Comentarios como, *"este paquete no..."* o *"no tiene ..."* iban seguidas invariablemente de sugerencias constructivas sobre lo que se podría hacer (hay, por ejemplo, [varias en una de las primeras revisiones](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
-- tic críticas expresaban educadamente sus reservas: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) y [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
-- bowerbird útil ["revisión previa"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) que dio lugar a una división del paquete antes de las revisiones propiamente dichas.
+- [el paquete `slopes`](https://github.com/ropensci/software-review/issues/420) que acabó siendo rediseñado fundamentalmente en respuesta a las revisiones. Todas las revisiones/revisores fueron en todo momento totalmente constructivas, lo que parece haber desempeñado un papel importante a la hora de motivar a quienes desarrollaron el paquete a embarcarse en una revisión tan importante. Comentarios como, *"este paquete no..."* o *"no tiene ..."* iban seguidas invariablemente de sugerencias constructivas sobre lo que se podría hacer (hay, por ejemplo, [varias en una de las primeras revisiones](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+- la revisión al paquete `tic` expresaban educadamente sus reservas: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) y [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
+- `bowerbird` recibió  una útil ["revisión previa"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) que dio lugar a una división del paquete antes de las revisiones propiamente dichas.
 
 ## Gestión de la publicación de una guía de desarrollo {#bookrelease}
 
-Si te encargas de gestionar una versión del mismo libro que estás leyendo, utiliza [la guía para la publicación de libros](#bookreleaseissue) como plantilla de issue para publicar [en el gestor de incidencias de la guía de desarrollo](https://github.com/ropensci/dev_guide/issues) y no dudes en hacer preguntas a otros editores.
+Si te encargas de gestionar una versión del mismo libro que estás leyendo, utiliza [la guía para la publicación de libros](#bookreleaseissue) como plantilla de issue para publicar [en el gestor de *issues* de la guía de desarrollo](https://github.com/ropensci/dev_guide/issues) y no dudes en hacer preguntas a otras personas del equipo de edición.
 
 ### Gobernanza de la guía de desarrollo {#devguidegov}
 
-Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del RP. Para enmiendas mayores, solicita la revisión de al menos unos cuantos editores (si ninguno participó en la discusión relacionada con la enmienda, solicita una revisión de todos ellos en GitHub, y en ausencia de cualquier reacción fusiona después de una semana).
+Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del PR. Para enmiendas mayores, solicita la revisión de al menos varias personss del equipo de edición (si ninguna de los miembros participó en la discusión relacionada con la enmienda, solicita una revisión de todas las persoans en GitHub, y en ausencia de cualquier reacción aprueba el PR después de una semana).
 
-Dos semanas antes del lanzamiento de una guía dev, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los editores deben recibir un ping de GitHub ("solicitud de revisión" en el PR de dev a master) y Slack, pero no es necesario que todos ellos aprueben explícitamente la publicación.
+Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub ("solicitud de revisión" en el PR de dev a master) y Slack, pero no es necesario que todos ellos aprueben explícitamente la publicación.
 
-### Entrada de blog sobre una publicación {#releaseblogpost}
+### Artículo de blog sobre una publicación {#releaseblogpost}
 
-Se revisará la entrada del blog sobre un lanzamiento [por los editores](#devguidegov) y uno de `@ropensci/blog-editors`.
+El artículo del blog sobre una nueva edición será revisado [por el equipo de edición](#devguidegov) y por alguien de `@ropensci/blog-editors`.
 
 #### Contenido
 
-Consulta el [guía general para blogs rOpenSci](https://blogguide.ropensci.org/) y las orientaciones más específicas a continuación.
+Consulta la [guía general para blogs rOpenSci](https://blogguide.ropensci.org/) y las orientaciones más específicas a continuación.
 
-[Primer ejemplo de un puesto de este tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo ejemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+[Primer ejemplo de un artículo de este tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo ejemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
 
-La entrada del blog debe mencionar todos los elementos importantes del [registro de cambios](#booknews) organizados en (sub)secciones: por ejemplo, una sección sobre el gran cambio A, otra sobre el gran cambio B, y otra sobre cambios menores agrupados. Menciona primero los cambios más importantes.
+El artículo del blog debe mencionar todos los elementos importantes del [registro de cambios](#booknews) organizados en (sub)secciones: por ejemplo, una sección sobre el gran cambio A, otra sobre el gran cambio B, y otra sobre cambios menores agrupados. Menciona primero los cambios más importantes.
 
-Por cada cambio realizado por un colaborador externo, agradéceselo explícitamente utilizando la información del registro de cambios. Por ejemplo `[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+Por cada cambio realizado por una persona que colabora de manera externa, agradéceselo explícitamente utilizando la información del registro de cambios. Por ejemplo `[Matt Fidler](https://github.com/mattfidler/) arregló nuestra sección sobre mensajes en la Consola [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
 
-Al final del post, menciona los próximos cambios enlazando a los issue abiertos en el issue tracker, e invita a los lectores a contribuir a la guía de desarrollo abriendo issues y participando en los debates abiertos. Plantilla de conclusiones:
+Al final del post, menciona los próximos cambios enlazando a los *issue* abiertos en el repositorio, e invita a las personas a contribuir a la guía de desarrollo abriendo *issues* y participando en los debates abiertos. Plantilla de conclusiones:
 
 ```markdown
-In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. 
-We are grateful for all contributions that made this release possible. 
-We are already working on updates for our next version, such as ISSUE1, ISSUE2. 
-Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+En este post resumimos los cambios incorporados a nuestro libro ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) en los últimos X meses. 
+Agradecemos todas las contribuciones que han hecho posible esta versión. 
+Ya estamos trabajando en actualizaciones para nuestra próxima versión, como *ISSUE1*, *ISSUE2.* 
+Echa un vistazo a [la lista de *issues*](https://github.com/ropensci/dev_guide/issues/) si quieres contribuir.
 ```
 
 #### Autoría
 
-El editor que escribe el post es el primer autor, los demás editores aparecen por orden alfabético.
+La persona que escribe el post es el primer autor, las demás personas del quipo de edición aparecen por orden alfabético.
 
 
