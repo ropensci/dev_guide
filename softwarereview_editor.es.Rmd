@@ -2,14 +2,14 @@
 
 ```{block, type="summaryblock"}
 La revisión por pares de software en rOpenSci es gestionada por un equipo editorial. Estamos probando
-un sistema de rotación para quien ocupa el rol de Líder Editorial (LE).
+un sistema donde el rol de Líder Editorial (LE) va rotando.
 
-Este capítulo presenta las responsabilidades [quien lidera el equipo editorial](#eicchecklist), de [cualquiera a cargo de editar un envío](#editorchecklist), [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse) y [cómo gestionar la publicación de la guía de desarrollo](#bookrelease).
+Este capítulo presenta las responsabilidades [quien lidera el equipo editorial](#eicchecklist), de [cualquiera a cargo de editar un envío](#editorchecklist), [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse) y [cómo gestionar la publicación de una nueva versión de la guía de desarrollo](#bookrelease).
 
 Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si tienes alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
 ```
 
-> Asume siempre que quiens participan en el sistema de revisión de software (tanto en la edicción, como la revisión y la autoría de pauqetes) están haciendo todo lo posible, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.
+> Asume siempre que quienes participan en el sistema de revisión de software (tanto en la edición, como la revisión y la autoría de paquetes) están dando su mayor esfuerzo, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.
 
 ## Responsabilidades del rol de edición
 
@@ -30,16 +30,16 @@ Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si ti
 - Si eres LE o eres la primera persona que responde, asigna a una persona para la edición con un comentario de `@ropensci-review-bot assign @username as editor`. Esto también añadirá la etiqueta `1/editor-checks` al issue.
 - Para los envíos de paquetes estadísticos (identificables como "Submission Type: Stats" en la plantilla del issue), añade la etiqueta "stats" a la edición.
 - El envío generará automáticamente una salida de comprobación del paquete por parte de ropensci-review-bot, que deberá examinarse en busca de cualquier problema pendiente (la mayoría de las excepciones deberán ser justificadas por quien presenta el paquete en el contexto particular de su paquete). Si quieres volver a realizar comprobaciones después de cualquier cambio en el paquete, envía un comentario `@ropensci-review-bot check package`.
-- Después de publicar las comprobaciones automáticas, utiliza [plantilla editorial](#editortemplate) para guiar las comprobaciones iniciales y registrar tu respuesta sobre envío. También puedes agilizar las comprobaciones de edición utilizando el paquete [`pkgreviewr`  creado por la editora asociada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html). Procura terminar las comprobaciones y empezar a buscar personas para hacer la revisión en un plazo de 5 días laborables.
+- Después de publicar las comprobaciones automáticas, utiliza la [plantilla editorial](#editortemplate) para guiar las comprobaciones iniciales y registrar tu respuesta sobre el envío. También puedes agilizar las comprobaciones de edición utilizando el paquete [`pkgreviewr`  creado por la editora asociada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html). Procura terminar las comprobaciones y empezar a buscar personas para hacer la revisión en un plazo de 5 días laborables.
 - Comprueba que la plantilla haya sido completada correctamente.
 - Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap).
-  Inicia el debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas.
+  Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas.
   Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
 - Comprueba que las partes obligatorias de la plantilla están completas. Si no es así, orienta a quienes presentaron el paquete hacia las instrucciones adecuadas.
-- Para paquetes que necesiten integración continua en varias plataformas (ver [criterios la sección del capítulo sobre CI](#whichci)) asegúrate de que el paquete se pruebe en varias plataformas (por ejemplo, haciendo que el paquete se compruebe en varios sistemas operativos a través de GitHub Actions).
+- Para paquetes que necesiten integración continua en varias plataformas (ver [criterios en la sección del capítulo sobre CI](#whichci)) asegúrate de que el paquete se pruebe en varias plataformas (por ejemplo, haciendo que el paquete se compruebe en varios sistemas operativos a través de GitHub Actions).
 - Siempre que sea posible, cuando pidas cambios, sugiere herramientas automáticas como [`usethis`](https://usethis.r-lib.org/) y [`styler`](https://styler.r-lib.org/) y a los recursos en línea (secciones de esta guía, secciones del [Libro *R Packages*](https://r-pkgs.org/)) para facilitar tu devolución. [Ejemplo de comprobaciones de una editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
-- Si las comprobaciones iniciales muestran faltas importantes, solicita cambios antes de asignar personas para la revisión. Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+- Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión. Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
 - Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack o abre un debate en el [foro rOpenSci](https://discuss.ropensci.org/) para discutirlo con el equipo editorial ([ejemplo de discusión sobre política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
 ### Busca y asigna dos personas para revisar el paquete
@@ -48,7 +48,7 @@ Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si ti
 
 - Comenta con `@ropensci-review-bot seeking reviewers`.
 - Utiliza la [plantilla de correo electrónico](#reviewrequesttemplate) si es necesario para invitar a las personas a participar en la revisión
-  - Cuando invites a personas, incluye algo como "si no tengo noticias tuyas en una semana, asumiré que no puedes revisar", para dar un plazo claro en el que pasarás a buscar a alguien más.
+  - Cuando envíes la invitación, incluye algo como "si no tengo noticias tuyas en una semana, asumiré que no puedes revisar", para dar un plazo claro en el que empezarás a buscar a alguien más.
 - Para asignar a alguien para la revisión, usa `@ropensci-review-bot assign @username as reviewer`. `add` también puede utilizarse en lugar de `assign` y `to reviewers` (plural) en lugar de `as reviewer` (singular). Por lo tanto, lo siguiente también es válido: `@ropensci-review-bot add @username to reviewers`. Debe generarse una orden para cada persona. Si es necesario sacar a alguien de la revisión, usa `@ropensci-review-bot remove @username from reviewers`.
 - Si quieres cambiar la fecha de vencimiento de una revisión utiliza `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
@@ -65,10 +65,10 @@ Como responsable de la edición, utiliza
 Cuando estas fuentes de información no sean suficientes,
 
 - pide ideas a personas en el equipo editorial en Slack,
-- busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en Twitter).
+- busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en redes sociales).
 - También puedes buscar personas con paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
-- Puedes tuitear sobre la búsqueda de personas para hacer una revisión.
+- Puedes publicar en redes sociales sobre la búsqueda de personas para hacer una revisión.
 
 ##### Consejos para la búsqueda en *Airtable*
 
@@ -150,10 +150,10 @@ En detalle, el rol de LE implica las siguientes funciones
 
 - Responde a los *issues* publicados en el repositorio software-review-meta
 
-- Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)). Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus, es decir, digerir un poco la información. Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todas las personas en el equipo editorial.
+- Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)). Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus dudas, es decir, digerir un poco la información. Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todas las personas en el equipo editorial.
   
-  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera del ámbito.
-  - Tras explicar la decisión de fuera de ámbito, escribe un comentario en el *issue* `@ropensci-review-bot out-of-scope`.
+  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera de nuestro alcance temático.
+  - Tras explicar la decisión de fuera de alcance, escribe un comentario en el *issue* `@ropensci-review-bot out-of-scope`.
 
 - Solicita a alguien más para cubrir el rol de LE cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide reemplazos en el canal de Slack del equipo editorial).
 
@@ -170,7 +170,7 @@ Hola <nombre> y muchas gracias por su envío.
 Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
 
 ¿Le importaría añadir más detalles y contexto al *README*?
-Después de leerlo alguien con poco conocimiento del dominio debería haber saber sobre el objetivo, las metas y la funcionalidad del paquete.
+Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.
 
 <opcional>
 Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es el mejor de su clase](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
@@ -240,7 +240,7 @@ El artículo del blog debe mencionar todos los elementos importantes del [regist
 
 Por cada cambio realizado por una persona que colabora de manera externa, agradéceselo explícitamente utilizando la información del registro de cambios. Por ejemplo `[Matt Fidler](https://github.com/mattfidler/) arregló nuestra sección sobre mensajes en la Consola [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
 
-Al final del post, menciona los próximos cambios enlazando a los *issue* abiertos en el repositorio, e invita a queines leen a contribuir a la guía de desarrollo abriendo *issues* y participando en los debates abiertos. Plantilla de conclusiones:
+Al final del post, menciona los próximos cambios enlazando a los *issue* abiertos en el repositorio, e invita a quienes leen a contribuir a la guía de desarrollo abriendo *issues* y participando en los debates abiertos. Plantilla de conclusiones:
 
 ```markdown
 En este post resumimos los cambios incorporados a nuestro libro ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) en los últimos X meses. 
