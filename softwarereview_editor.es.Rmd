@@ -224,7 +224,7 @@ Si te encargas de gestionar una versión de este mismo libro que estás leyendo,
 
 Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del PR. Para enmiendas mayores, solicita la revisión de al menos varios miembros del equipo de edición (si ninguno participó en la discusión relacionada con la enmienda, solicita una revisión de todos en GitHub, y en ausencia de cualquier reacción aprueba el PR después de una semana).
 
-Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub ("solicitud de revisión" en el PR de dev a master) y Slack, pero no es necesario que todos aprueben explícitamente la publicación.
+Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub ("solicitud de revisión" en el PR de dev a main) y Slack, pero no es necesario que todos aprueben explícitamente la publicación.
 
 ### Artículo de blog sobre una publicación {#releaseblogpost}
 
