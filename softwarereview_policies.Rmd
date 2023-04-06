@@ -1,3 +1,8 @@
+---
+aliases:
+  - policies.html
+---
+
 # Software Peer Review policies {#policies}
 
 ```{block, type='summaryblock'}

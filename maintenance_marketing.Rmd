@@ -1,5 +1,7 @@
 ---
 repo-actions: true
+aliases: 
+  - marketing.html
 ---
 
 # Marketing your package {#marketing}

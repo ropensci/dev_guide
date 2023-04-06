@@ -1,3 +1,8 @@
+---
+aliases:
+  - changing-maintainers.html
+---
+
 # Changing package maintainers {#changing-maintainers}
 
 ```{block, type='summaryblock'}

@@ -1,3 +1,8 @@
+---
+aliases:
+  - editorguide.html
+---
+
 # Guide for Editors {#editorguide}
 
 ```{block, type='summaryblock'}

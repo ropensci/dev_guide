@@ -1,3 +1,8 @@
+---
+aliases:
+  - authors-guide.html
+---
+
 # Guide for Authors {#authors-guide}
 
 ```{block, type='summaryblock'}

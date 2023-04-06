@@ -1,3 +1,8 @@
+---
+aliases:
+  - curationpolicy.html
+---
+
 # Package Curation Policy {#curationpolicy}
 
 ```{block, type='summaryblock'}

@@ -1,3 +1,8 @@
+---
+aliases:
+  - building.html
+---
+
 # Packaging Guide {#building}
 
 ```{block, type='summaryblock'}
