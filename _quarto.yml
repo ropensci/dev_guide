@@ -1,6 +1,7 @@
 project:
   type: book
 
+
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
@@ -30,12 +31,14 @@ book:
   - preface.Rmd
 
   - part: Building Your Package
+    part-es: Construyendo tu paquete
     chapters:
     - pkg_building.Rmd
     - pkg_ci.Rmd
     - pkg_security.Rmd
 
   - part: Software Peer Review of Packages
+    part-es: Revisión por pares de software de paquetes
     chapters:
     - softwarereview_intro.Rmd
     - softwarereview_policies.Rmd
@@ -45,6 +48,7 @@ book:
     - softwarereview_editor_management.Rmd
 
   - part: Maintaining Packages
+    part-es: Manteniendo paquetes
     chapters:
     - maintenance_cheatsheet.Rmd
     - maintenance_collaboration.Rmd
@@ -57,6 +61,7 @@ book:
     - maintenance_contributing.Rmd
 
   - part: Appendix
+    part-es: Apéndice
     chapters:
     - booknews.Rmd
     - reviewtemplate.Rmd
