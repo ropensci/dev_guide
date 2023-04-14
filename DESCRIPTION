@@ -4,13 +4,19 @@ Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
 Version: 0.8.1
 Imports:
+    airtabler,
     babeldown (>= 0.0.0.9000),
-    babelquarto
-Remotes:  
+    babelquarto,
+    gert,
+    humaniformat,
+    rvest,
+    usethis,
+    withr
+Remotes: 
     bergant/airtabler
     ropensci-review-tools/babeldown
     ropensci-review-tools/babelquarto
 URL: https://github.com/ropensci/dev_guide
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
