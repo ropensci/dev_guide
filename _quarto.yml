@@ -76,3 +76,7 @@ format:
   pdf:
     include-in-header: "preamble.tex"
     output-file: "ropensci-dev-guide"
+babelquarto:
+  mainlanguage: en
+  languages: es
+lang: en
