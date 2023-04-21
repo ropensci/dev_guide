@@ -35,7 +35,7 @@ jobs:
           extra-packages: local::.
 
       - name: Render book
-        run: Rscript -e 'rOpenScidevguide::orchestrate()'
+        run: Rscript -e 'babelquarto::render_book()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
         run: Rscript -e 'file.copy(from = "_book/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
 
       - name: Move Spanish files
-        run: Rscript -e 'file.copy(from = "_book/es/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
+        run: Rscript -e 'file.copy(from = "_book/es/Paquetes-de-rOpenSci--Desarrollo,-mantenimiento-y-revisión-por-pares.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
 
       - name: Deploy to Netlify
         id: netlify-deploy
