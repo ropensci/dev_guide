@@ -10,18 +10,18 @@ Reclutar nuevas personas y mantener un equipo editorial funcional y equilibrado 
 
 Estos son los pasos a seguir:
 
-* Inicia un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
+* Crea un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
 
 * Haz un *ping* a las personas del equipo editorial para asegurarte de que reciban una notificación, ya que se trata de un tema importante.
 
-* Espera a que la mayoría de del equipo intervenga antes de invitar a alguien. Dales una semana para que respondan.
+* Espera a que la mayoría de del equipo intervenga antes de realizar la invitación. Dales una semana para que respondan.
 
 ## Invitar a una nueva persona al equipo
 
-* Quienes sean candidatas/os pueden empezar siendo [editoras/es invitadas/os](#guesteditor).
-  Haz la invitación como invitarías a cualquier editora/o invitada/o por otros motivos.
+* Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
+  Haz la invitación como invitarías a a cualquier otra persona por otros motivos.
 
-* Si una candidata/o fue editora invitada/o, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
+* Si el posible nuevo miembro realiza una edición invitada, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
 
 * Envía un correo electrónico:
 
@@ -29,14 +29,14 @@ Estos son los pasos a seguir:
 Nos gustaría invitarte a formar parte del consejo editorial de rOpenSci como miembro en pleno derecho. [RAZONES ESPECÍFICAS PARA LA INVITACIÓN (MENCIONA LAS CONTRIBUCIONES A ROPENSCI)]. 
 Creemos que serías una magnífica incorporación al equipo.
 
-[SI FUE EDITORA INVITADA/O: Ya conoces el rol de edición ya que has sido editora invitada/o]. Nuestro objetivo es que las/os editoras/es se encarguen de cuatro paquetes al año ([SI FUE EDITOR INVITADO: ¡incluyendo el que acabas de terminar!]).  
-Pedimos a las/os editoras/es que se comprometan de manera informal a prestar servicio durante dos años, y que reevalúen su participación luego de ese periodo.
-A corto plazo, cualquier persona puede rechazar encargarse de un paquete o decir: "Estoy muy ocupada/o, no puedo encargarme de un nuevo paquete hasta dentro de unas semanas".
+[SI REALIZÓ EDICIÓN DE FORMA INVITADA: Ya conoces el rol de edición ya que has sido editora/o invitada/o]. Nuestro objetivo es que los miembros del comité editorial se encarguen de cuatro paquetes al año ([SI REALIZÓ EDICIÓN DE FORMA INVITADA: ¡incluyendo el que acabas de terminar!]).  
+Pedimos a los miembros del comité editorial que se comprometan de manera informal a prestar servicio durante dos años, y que reevalúen su participación luego de ese periodo.
+A corto plazo, cualquier persona puede rechazar encargarse de un paquete o decir: "Tengo mi agenda completa, no puedo encargarme de un nuevo paquete hasta dentro de unas semanas".
 
-Además de encargarse de los paquetes, las personas en el equipo editorial opinan sobre las decisiones editoriales del grupo, como por ejemplo si un paquete está dentro de nuestro alcance, y determinan las actualizaciones de nuestras políticas. 
+Además de encargarse de los paquetes, los miembros del equipo editorial opinan sobre las decisiones editoriales del grupo, como por ejemplo si un paquete está dentro de nuestro alcance, y determinan las actualizaciones de nuestras políticas. 
 Generalmente usamos Slack, donde esperamos que los miembros del equipo participen regularmente. 
-Tenemos convocatorias anuales al equipo editorial.  
-También rotamos las responsabilidades de Editora en Jefe (quien toma decisiones de alcance en primera instancia y asigna editoras/es) entre el equipo aproximadamente cada trimestre. 
+Tenemos reuniones anuales del equipo editorial.  
+También rotamos las responsabilidades de Lider Editorial (quien toma decisiones de alcance en primera instancia y asigna personas para editar envíos) entre el equipo aproximadamente cada trimestre. 
 Tendrás la oportunidad de entrar en esta rotación cuando lleves un tiempo en el equipo, normalmente al menos seis meses. 
 Algunos mimebros del equipo también asumimos proyectos más grandes para mejorar el proceso de revisión por pares, aunque esto es totalmente opcional. 
 
@@ -46,49 +46,51 @@ Es un momento emocionante para la revisión por pares en rOpenSci.
 Por favor, reflexiónalo, pregúntanos cualquier duda que tengas y haznos saber si puedes unirte.
 
 Te deseamos lo mejor,
-[NOMBRE], en nombre del Equipo Editorial de rOpenSci.
+[NOMBRE], en nombre del equipo editorial de rOpenSci.
 ```
 
-## Incorporar una nueva persona al equipo editor
+## Incorporar un nuevo miembro al equipo
 
-- Informa a la/el *community manager* de rOpenSci para
+- Pide a quien sea maneja la comunidad de rOpenSci que
   
-  - agregar a la/o editora al [sitio web de rOpenSci](https://github.com/ropensci/roweb3/#team-member).
-  - preparar una artículo de presentación en el blog.
+  - agregue al nuevo miembro del equipo editorial al [sitio web de rOpenSci](https://github.com/ropensci/roweb3/#team-member);
+  - prepare una artículo de presentación en el blog.
 
-- Solicita que la nueva persona active [la autenticación de dos factores (2FA) para GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
+- Solicita al nuevo miembro que active [la autenticación de dos factores (2FA) en GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
 
-- Invítala a la organización GitHub de rOpenSci, y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda. Esto le dará los permisos adecuados y le permitirá recibir notificaciones específicas del equipo.
+- Invítalo a la organización GitHub de rOpenSci y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda. Esto le dará los permisos adecuados y le permitirá recibir notificaciones específicas del equipo.
 
-- Dale acceso a la base de datos AirTable de revisión de software.
+- Dale acceso a la base de datos de revisión de software de AirTable.
 
-- Dale acceso al canal privado del Equipo Editorial en el espacio de trabajo de Slack de rOpenSci (y al espacio de trabajo de Slack en general si no lo tenía previamente, en ese caso pregunta a la/el *community manager* de rOpenSci).
+- Dale acceso al canal privado del equipo editorial en el espacio de trabajo de Slack de rOpenSci (y al espacio de trabajo de Slack en general si no lo tenía previamente, en ese caso pregunta a quien maneja la comunidad de rOpenSci).
 
 - Publica un mensaje de bienvenida en el canal, haciendo ping a `@editors`.
 
-- Agrégala al equipo `editors` de Slack para que `@editors` también le envíe una notificación.
+- Agrégalo al equipo `editors` de Slack para que `@editors` también le envíe una notificación.
 
 - Añade su nombre a: 
   
-  - la [lista de autoras/es de dev_guide](https://github.com/ropensci/dev_guide/blob/main/index.Rmd).
-  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como editoras/es y un poco más abajo para eliminar su nombre de la lista de revisoras/es).
-  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!)
-    Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
+  - la [lista de personas autoras de dev_guide](https://github.com/ropensci/dev_guide/blob/main/index.Rmd);
+  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembros del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
+  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!).
+  
+Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
 
-## Dar de baja a un miembro del Equipo Editorial
+## Dar de baja a un miembro del equipo editorial
 
 - Agradece su trabajo.
 
-- Elimína a la persona del canal de editoras/es y del equipo `@editors` de Slack.
+- Elimínalo del canal del equipo editorial y del equipo `@editors` de Slack.
 
-- Elimínala a la persona del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors/members) y del sub-equipo correspondiente en GitHub.
+- Elimínalo del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors/members) y del sub-equipo correspondiente en GitHub.
 
-- Informa a la/el *community manager* de rOpenSci o a algún otro miembro del personal para mover a la persona a la sección de ex-integrantes en el sitio web.
+- Informa a quien maneja la comunidad de rOpenSci o a algún otro miembro del personal para moverlo a la sección de ex-integrantes en el sitio web.
 
 - Elimina su acceso al espacio de trabajo de Airtable.
 
-- Elimína a la persona de:
+- Elimínalo de:
   
-  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como editoras/es y un poco más abajo para eliminar su nombre de la lista de revisoras/es).
-  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!)
-    Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
+  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembro del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
+  - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!).
+    
+Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
