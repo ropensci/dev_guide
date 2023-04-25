@@ -532,7 +532,7 @@ Esta es una colección de problemas en CRAN que vale la pena evitar desde el pri
 -   No pongas un punto al final de tu título.
 -   No pongas "en R" o "con R" en tu título, ya que esto es obvio en los paquetes alojados en CRAN. Si a pesar de todo quieres que esta información aparezca en tu sitio web, revisa la [documentación de `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber cómo anular esta restricción.
 -   Evita empezar la descripción con el nombre del paquete o "Este paquete...".
--   Asegúrate de incluir enlaces a sitios web si utilizas una API, obtienes datos de una página web, etc... en el campo `Description` de tu archivo `DESCRIPTION`. Las URL deben ir entre simbolos `<>`, por ejemplo `<https://www.r-project.org>`.
+-   Asegúrate de incluir enlaces a sitios web si utilizas una API, obtienes datos de una página web, etc. en el campo `Description` de tu archivo `DESCRIPTION`. Las URL deben ir entre simbolos `<>`, por ejemplo `<https://www.r-project.org>`.
 -   Tanto en el campo `Title` como en `Description` los nombres de los paquetes u otro software externo deben ir entre comillas simples (por ejemplo *Integración de 'Rcpp' para la Biblioteca de Álgebra Lineal Armadillo*).
 -   Evita tests y ejemplos que tarden en correr. Considera usar `testthat::skip_on_cran()` en los test que toman mucho tiempo para que se omitan en CRAN pero sigan corriendo localmente y en la [integración continua](#ci).
 -   Incluye archivos extra ubicados en la raíz del proyecto, como `paper.md` y archivos de configuración de integración continua, en tu archivo `.Rbuildignore`.

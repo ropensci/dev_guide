@@ -15,7 +15,7 @@ Nuestro newsletter quincenal tiene una sección de pedidos de colaboración deno
 ## Asumir el mantenimiento de un paquete
 
 - Agrégate en el archivo DESCRIPTION, con rol `role = c("aut", "cre")` y cambia el rol de la persona anterior a `role = c("aut")`.
-- Asegúrate reemplazar el nombre anterior en cualquier otra parte del paquete por el tuyo, manteniendo a la persona anterior como autora (por ejemplo, en el archivo de manual a nivel de paquete, CONTRIBUTING.md, CITATION, etc...)
+- Asegúrate reemplazar el nombre anterior en cualquier otra parte del paquete por el tuyo, manteniendo a la persona anterior como autora (por ejemplo, en el archivo de manual a nivel de paquete, CONTRIBUTING.md, CITATION, etc.)
 - La [Guía de Colaboración](#collaboration) tiene consejos sobre cómo añadir nuevos miembros al equipo de mantenimiento y colaboración.
 - Para paquetes que han sido archivados o han quedado [huérfanos en CRAN](https://cran.r-project.org/src/contrib/Orphaned/README), no es necesario el consentimiento de quien lo mantenía anteriormente para hacerse responsable del mismo en CRAN. En estos casos, contáctanos para que podamos ofrecerte la ayuda que necesites.
 - Si el paquete no ha sido archivado por CRAN y cambia quien lo mantiene, haz que la persona responsable anterior envíe un correo electrónico a CRAN y ponga por escrito quién se hará cargo del mantenimiento de ahí en adelante. Asegúrate de mencionar que se envió ese correo cuando envíes la próxima versión a CRAN. Si quien mantenía al paquete no es localizable o no envía ese correo electrónico, ponte en contacto con el personal de rOpenSci.
@@ -31,7 +31,7 @@ Nuestro newsletter quincenal tiene una sección de pedidos de colaboración deno
   - Consulta el canal #package-maintenance en el Slack de rOpenSci. Este es un buen lugar para obtener ayuda sobre problemas específicos o generales. 
   - Siéntete libre de hacer cualquier pregunta en [el foro de discusión de rOpenSci](https://discuss.ropensci.org/c/package-development/29).
   - No dudes en contactarte con cualquier integrande del [equipo de rOpenSci](https://ropensci.org/about/#team) por correo electrónico o enviando *issues* a GitHub; nos encantará ayudarte.
-  - Por supuesto, también hay ayuda general de R en el Foro de la comunidad de RStudio, StackOverflow, Twitter y Mastodon #rstats, etc... si eso se ajusta a tus necesidades.
+  - Por supuesto, también hay ayuda general de R en el Foro de la comunidad de RStudio, StackOverflow, Twitter y Mastodon #rstats, etc. si eso se ajusta a tus necesidades.
 
 - ¿Cuánto puedes o debes cambiar en el paquete?
 

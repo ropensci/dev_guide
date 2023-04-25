@@ -232,7 +232,7 @@ Aunque la mejor respuesta a los problemas éticos dependerá del contexto, se de
 
 -   Los paquetes deben adherirse a las condiciones de uso de la fuente de datos, expresadas en los términos y condiciones del sitio web, archivos ["robots.txt"](https://docs.ropensci.org/robotstxt/), políticas de privacidad y otras otras restricciones relevantes, y enlazarlas de forma destacada en la documentación del paquete.
     Los paquetes deben proporcionar o documentar la funcionalidad para cumplir restricciones (por ejemplo, el *scrapeado* sólo de los servicios permitidos, el uso de limitación de velocidad adecuada en el código, los ejemplos o las viñetas).
-    Ten en cuenta que aunque los Términos y Condiciones, las políticas de privacidad, etc..., pueden no ofrecer límites suficientes para un uso ético, pueden proporcionar límites mínimos. 
+    Ten en cuenta que aunque los Términos y Condiciones, las políticas de privacidad, etc., pueden no ofrecer límites suficientes para un uso ético, pueden proporcionar límites mínimos. 
 
 -   Una herramienta clave para abordar los riesgos que plantea el estudio de poblaciones vulnerables o utilizar datos de identificación personal es ***el consentimiento informado***.
     Quienes crean los paquetes deben permitir la obtención del consentimiento informado cuando sea pertinente.
@@ -241,7 +241,7 @@ Aunque la mejor respuesta a los problemas éticos dependerá del contexto, se de
     Ten en cuenta que el consentimiento no se concede implícitamente sólo porque los datos sean accesibles.
     Los datos accesibles no son necesariamente públicos, ya que diferentes personas y contextos tienen diferentes expectativas normativas de privacidad (véase el trabajo de [*Social Data Lab*](http://socialdatalab.net/ethics-resources)).
 
--   Los paquetes que acceden a información personal identificable deben tener especial cuidado en seguir [las buenas prácticas de seguridad](#package-development-security-best-practices) (por ejemplo, el uso exclusivo de protocolos de Internet seguros, mecanismos fuertes para almacenar credenciales, etc...).
+-   Los paquetes que acceden a información personal identificable deben tener especial cuidado en seguir [las buenas prácticas de seguridad](#package-development-security-best-practices) (por ejemplo, el uso exclusivo de protocolos de Internet seguros, mecanismos fuertes para almacenar credenciales, etc.).
 
 -   Los paquetes que acceden o manejan datos personales identificables o sensibles deben habilitar, documentar y demostrar los flujos de trabajo para la desidentificación, el almacenamiento seguro, y otras buenas prácticas para minimizar el riesgo de daños.
 

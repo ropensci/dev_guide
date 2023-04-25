@@ -82,7 +82,7 @@ También [omite las viñetas](https://ropensci.org/technotes/2019/12/08/precompu
 
 Recursos útiles sobre seguridad:
 
--   [Encuentro de la comunidad rOpenSci sobre "Seguridad para R"](https://ropensci.org/commcalls/2019-05-07/) (grabación, diapositivas, etc...).
+-   [Encuentro de la comunidad rOpenSci sobre "Seguridad para R"](https://ropensci.org/commcalls/2019-05-07/) (grabación, diapositivas, etc.).
     Ver en particular [la lista de recursos](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources);
 
 -   [los proyectos relacionados con la seguridad de la unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);

@@ -8,7 +8,7 @@ Este capítulo fue aportado inicialmente como nota técnica en el sitio web de r
 
 ## Filosofía de los cambios
 
-Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc....
+Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc.
 en un paquete; ni CRAN ni ningún otro sitio impone normas sobre esto.
 En general, a medida que un paquete madura los cambios en los métodos orientados al uso (es decir, las funciones exportadas en un paquete R) deberían ser muy infrecuentes.
 Los paquetes de los cuales dependen muchos otros paquetes probablemente sean más cuidadosos con los cambios, y deberían serlo.
@@ -201,7 +201,7 @@ Es probable que quieras mantener esta página indefinidamente.
 
 No es necesario que cambies los test de las funciones obsoletas hasta que caduquen.
 
--   Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc...? Hay que testear esos cambios, si se han hecho.
+-   Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc.? Hay que testear esos cambios, si se han hecho.
 -   En relación con lo anterior, si a la función obsoleta se le cambia simplemente el nombre, tal vez se pueda testar que la función  antigua y la nueva devuelven resultados idénticos.
 -   [`suppressWarnings()` podría utilizarse](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir la advertencia emitida desde `.Deprecated`. Pero como las pruebas no están orientadas al uso, no es tan malo que las pruebas emitan advertencias, y la advertencia podría incluso utilizarse como recordatorio para quien mantiene el paquete.
 

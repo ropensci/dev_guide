@@ -12,7 +12,7 @@ Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y con el o
 ¡Sé amable! 
 Consulta nuestra guía para quienes realizan una revisión y el [código de conducta] (https://ropensci.org/code-of-conduct/) para más información.**
 
-_Si utilizas nuestros estándares, listas de tareas, etc... al revisar software en otro lugar, cuenta que estos materiales proceden de rOpenSci a quienes reciben la revisión (por ejemplo, quien edita la revista, estudiantes, colegas durante una revisión interna de código), y también cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [por correo electrónico](https://ropensci.org/contact/) si prefieres comentarlo en forma privada._
+_Si utilizas nuestros estándares, listas de tareas, etc. al revisar software en otro lugar, cuenta que estos materiales proceden de rOpenSci a quienes reciben la revisión (por ejemplo, quien edita la revista, estudiantes, colegas durante una revisión interna de código), y también cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [por correo electrónico](https://ropensci.org/contact/) si prefieres comentarlo en forma privada._
 ```
 
 ## Voluntariarte para revisar
