@@ -4,12 +4,12 @@
 Colaborar con otras personas mejorará tu paquete, y si les das a algunas de ellas rol de autoría y [permisos de escritura en el repositorio](https://help.github.com/articles/repository-permission-levels-for-an-organization/), tu paquete se desarrollará de forma más sostenible.
 Además, ¡trabajar en equipo puede ser muy agradable!
 
-Los consejos para colaboración de este capítulo están divididos en una sección sobre [cómo hacer que la infraestructura de tu repo sea accessible para la contribución y la colaboración](#friendlyfiles) (código de conducta, directrices de contribución, etiquetas de *issue*) y [una sección sobre cómo colaborar con nuevas personas que quieran contribuir](#workingcollaborators), en particular en el contexto de la organización "ropensci" de rOpenSci en GitHub.
+Los consejos para colaborar en este capítulo están divididos en una sección sobre [cómo hacer que la infraestructura de tu repo sea accessible para la contribución y la colaboración](#friendlyfiles) (código de conducta, directrices de contribución, etiquetas de *issues*) y [una sección sobre cómo colaborar con nuevas personas que quieran contribuir](#workingcollaborators), en particular en el contexto de la organización "ropensci" de rOpenSci en GitHub.
 
-Además de estos consejos, en su mayoría técnicos, es importante recordar que hay que ser amable y tener en cuenta la perspectiva del resto, especialmente cuando sus prioridades difieren de las tuyas.
+Además de estos consejos, en su mayoría técnicos, es importante recordar que hay que ser amable y tener en cuenta la perspectiva de las otras personas, especialmente cuando sus prioridades difieren de las tuyas.
 ```
 
-## Haz que tu repositorio sea accesible a las contribuciones y colaboración {#friendlyfiles}
+## Haz que tu repositorio sea accesible a las contribuciones y la colaboración {#friendlyfiles}
 
 ### Código de conducta {#coc-file}
 
@@ -25,11 +25,11 @@ Y eliminar el código de conducta actual del paquete, si lo hubiera.
 
 ### Guía de contribución
 
-Puedes utilizar guías de *issue*, *pull request* y de contribución.
+Puedes utilizar guías de *issues*, *pull request* y de contribución.
 Tener un archivo de contribución como `.github/CONTRIBUTING.md` o `docs/CONTRIBUTING.md` es obligatorio.
 Una forma fácil de insertar una plantilla para una guía de contribución es la función [`use_tidy_contributing()` del paquete `usethis`](https://usethis.r-lib.org/reference/tidyverse.html) que inserta [esta plantilla](https://github.com/r-lib/usethis/blob/main/inst/templates/tidy-contributing.md) como `.github/CONTRIBUTING.md`.
 Un ejemplo más extenso es [esta plantilla de Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c) o las completas [páginas wiki de GitHub para el paquete mlr3](https://github.com/mlr-org/mlr3/wiki).
-Estas y otras plantillas generalmente tendrán que ser modificadas para su uso con un paquete rOpenSci, en particular haciendo referencia y enlazando con nuestro [Código de Conducta](https://ropensci.org/codigo-de-conducta/) como se describe en otra sección [de este libro](#code-of-conduct).
+Estas y otras plantillas generalmente tendrán que ser modificadas para su uso con un paquete de rOpenSci, en particular haciendo referencia y enlazando con nuestro [Código de Conducta](https://ropensci.org/codigo-de-conducta/) como se describe en otra sección [de este libro](#code-of-conduct).
 Modificar una guía de contribución genérica para añadir un toque propio también tiende a hacer que parezca menos impersonal y más sincera.
 Las preferencias personales en una guía de contribución incluyen
 
@@ -50,14 +50,14 @@ Los archivos CONTRIBUTING.md también pueden describir cómo se reconocen las co
 
 Te animamos a que dirijas las consultas y comentarios que no sean informes de errores o pedidos de nueva funcionalidad al [foro de rOpenSci](https://discuss.ropensci.org/) después de asegurarte de que verás esas preguntas en el foro. 
 El foro puede usarse para hacer preguntas sobre cómo usar el paquete e informar de sus casos de uso, y puedes suscribirte a categorías y etiquetas individuales para recibir notificaciones sobre tu paquete. 
-No dudes en mencionar esto en los documentos de tu paquete, ya sea en la guía de contribución o en la plantilla de *issue*.  
+No dudes en mencionar esto en los documentos de tu paquete, ya sea en la guía de contribución o en la plantilla de *issue*.
 Pide etiquetar las publicaciones con el nombre del paquete.
 
-Una vez que un *pull request* está más cerca de ser aceptado, puedes utilizar [un flujo de trabajo de *GitHub Actions PR* para estilizar el código con styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Una vez que un *pull request* está más cerca de ser aceptado, puedes utilizar [un flujo de trabajo de *GitHub Actions PR* para aplicar el estilo al código con styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
 
 ### Gestión de *issues*
 
-Utilizando las funciones de GitHub en torno a los *issues* puedes hacer que sean más encontrables y a hacer pública tu hoja de ruta.
+Utilizando las funciones de GitHub en torno a los *issues* puedes hacer que sean más encontrables y que tu hoja de ruta sea pública.
 
 #### Plantillas de *issue*
 
@@ -66,13 +66,13 @@ Cuando hay varias plantillas de *issue*, éstas se muestran en un menú al hacer
 
 Incluso puedes [configurar una de las opciones](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser=) para que apunte a algún lugar fuera de tu repositorio (por ejemplo, un foro de discusión).
 
-Consulta la [Documentación de GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
+Consulta la [documentación de GitHub (en inglés)](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
 
 #### Etiquetado de *issues*
 
 Puedes utilizar etiquetas como "se necesita ayuda" y "buen primer *issue*" para que seas más fáciles de encontrar, incluso por gente que llega por primera vez a tu repo. 
-Consulta [este artículo de GitHub](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). 
-También puedes utilizar la etiqueta "Principiante". 
+Consulta [este artículo de GitHub (en inglés)](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). 
+También puedes utilizar la etiqueta "principiante". 
 Consulta [ejemplos de issues para principiantes en todos los repos de ropensci](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
 
 #### Resaltado de *issues*
@@ -102,7 +102,7 @@ Lo primero lo primero: ¡estate al tanto de tu repositorio de GitHub!
 ### Incorporación de miembros al equipo
 
 No hay una regla general en rOpenSci sobre cómo debes incorporar a quienes colaboran en tu paquete al equipo.
-Deberías aumentar sus derechos en el repositorio a medida que ganes confianza, y definitivamente deberías reconocer las contribuciones (ver [esta sección](#attributions)).
+Deberías ir dándoles más derechos en el repositorio a medida que ganes confianza, y definitivamente deberías reconocer las contribuciones (ver [esta sección](#attributions)).
 
 Puedes pedir a las nuevas personas que se incorporen que hagan PRs (ver la siguiente sección para evaluar un PR localmente, es decir, más allá de las comprobaciones de CI) a *dev/main* y evaluarlos antes de aceptarlos, y después de un tiempo dejar que hagan *push* a *main*. También puede que quieras mantener un sistema de revisión de PRs... ¡incluso para ti una vez que tengas miembros de equipo!
 
@@ -110,7 +110,7 @@ Jim Hester ofrece un posible modelo de incorporación de miembros de equipo en [
 
 Si tu problema es *reclutar* nuevas personas, puedes publicar una convocatoria abierta como la de Jim Hester [en Twitter](https://twitter.com/jimhester_/status/997109466674819074), [GitHub](https://github.com/jimhester/lintr/issues/318) y, como responsable de un paquete de rOpenSci, puedes pedir ayuda en el Slack de rOpenSci y solicitar al equipo de rOpenSci ideas para reclutar ayuda.
 
-### Trabajar con otras personas (incluyendo tú en el futuro) {#git-workflow}
+### Trabajar con otras personas (inclusive a tí en el futuro) {#git-workflow}
 
 [Las *branches*](https://happygitwithr.com/git-branches.html) son baratas. 
 Utilízalas mucho cuando desarrolles funciones, pruebes nuevas ideas o arregles problemas.
@@ -125,7 +125,7 @@ Pueden ver algunas guías útiles en:
 - [Documentación de GitHub sobre revisiones de PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews)
 
 Puedes modificar la configuración de tu repositorio de GitHub,
-por ejemplo [requeriendo revisiones de solicitudes de cambio antes de aceptarlas e incorporarlas](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging).
+por ejemplo [requeriendo revisiones de *pull requests* antes de aceptarlas e incorporarlas](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging).
 También puedes consultar la documentación [acerca de propiedad sobre código](https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 Para hacer y revisar *pull requests* recomendamos [explorar las funciones del paquete usethis](https://usethis.r-lib.org/articles/pr-functions.html).
