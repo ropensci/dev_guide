@@ -1,13 +1,12 @@
-# Guía rápida para personas que mantienen paquetes de rOpenSci {#maintainer-cheatsheet}
+# Guía rápida para mantener paquetes de rOpenSci {#maintainer-cheatsheet}
 
 ```{block, type='summaryblock'}
 Un recordatorio de la infraestructura y los canales de contacto para quienes mantienen paquetes de rOpenSci.
-
 ```
 
 ## ¿Necesitas ayuda?
 
-Si necesitas ayuda (por ejemplo una revisión de un PR; o una búsqueda de soluciones para un problema de CI), o asistencia para encontrar personas que ayuden o tomen la responsabilidad de mantener el paquete, o si necesitas que retiremos tu paquete, mencionanos en GitHub con `@ropensci/admin` o envia un correo electronico a `info@ropensci.org`.
+Si necesitas ayuda (por ejemplo una revisión de un PR o resolver problemas de CI), o asistencia para encontrar personas que ayuden o tomen la responsabilidad de mantener el paquete, o si necesitas que retiremos tu paquete, menciónanos en GitHub con `@ropensci/admin` o envía un correo electrónico a `info@ropensci.org`.
 
 También puedes utilizar el canal de slack #package-maintenance.
 
@@ -15,24 +14,23 @@ También puedes utilizar el canal de slack #package-maintenance.
 
 ## Acceso al repositorio GitHub
 
-Deberias tenir acceso "admin" al repositorio GitHub de tu paquete.
-Si no es el caso (por ejemplo, porqué falló el proceso automatizado; o perdiste acceso después de haber tenido que desactivar temporalmente la autenticación de dos factores), por favor contactanos enviando un mail a `info@ropensci.org` detallando el paquete.
+Deberías tener acceso "admin" al repositorio GitHub de tu paquete.
+Si no es el caso (por ejemplo, porqué falló el proceso automatizado o porque perdiste acceso después de haber tenido que desactivar temporalmente la autenticación de dos factores), por favor contáctanos enviando un correo electrónico a `info@ropensci.org`.
 
 ## Otros temas de GitHub
 
 Si tienes una pregunta o un pedido sobre GitHub, como por ejemplo, añadir una nueva persona que colabora a la organización GitHub, puedes utilizar un canal público en el Slack de rOpenSci o mencionar a `@ropensci/admin` en GitHub.
 
-## Documentación pkgdown
+## Documentación creada con pkgdown
 
 Consulta [rOpenSci docs](#rodocsci).
 
 ## Acceso al Slack de rOpenSci
 
-Las personas que mantienen o desarrollan paquetes de rOpenSci deberian tener acceso al [Slack de rOpenSci](https://contributing.ropensci.org/resources.html#channels).
-Si no recibiste la invitación o no la acceptaste a tiempo,
-o si quieres que una persona que ahora contribuye regularmente a tu paquete reciba una invicatión por favor envia un correo electronico a  `info@ropensci.org` indicando el mail con el que quieres unirte al espacio de trabajo.
+Quienes  mantienen o desarrollan paquetes de rOpenSci deberían tener acceso al [Slack de rOpenSci](https://contributing.ropensci.org/resources.html#channels).
+Si no recibiste la invitación o no la aceptaste a tiempo, o si quieres que alguien que ahora contribuye regularmente a tu paquete reciba una invitación, por favor envía un correo electrónico a  `info@ropensci.org` indicando el correo electrónico de la persona que quiere unirse al espacio de trabajo.
 
-El canal #package-maintenance es relevante para preguntar y contestar y también, así como para dar y recibir críticas amistosas y constructivas cuando sea necesario.
+El canal #package-maintenance es relevante para hacer y responder consultas, así como para dar y recibir apoyo emocional cuando sea necesario.
 
 ## Artículos para el blog de rOpenSci sobre tu paquete
 
@@ -40,7 +38,7 @@ Consulta nuestra [guía de blog](https://blogguide.ropensci.org/).
 
 ## Promoción de _issues_ de tu paquete
 
-Si les pones el label _"help wanted"_ ("se busca ayuda", en inglés) a algunas _issues_, las [difundiremos con la comunidad](https://ropensci.org/help-wanted/).
+Si etiquetas *issues* con  _"help wanted"_ ("se busca ayuda", en inglés), las [difundiremos en la comunidad](https://ropensci.org/help-wanted/).
 
 ## Promoción de casos de uso del paquete
 
