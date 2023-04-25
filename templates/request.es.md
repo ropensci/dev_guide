@@ -2,7 +2,7 @@ Estimado/a [REVISOR/A]
 
 Hola, soy [EDITOR/A]. [COMENTARIO AMISTOSO]. Te escribo para preguntarte si te interesa revisar un paquete para rOpenSci. Como probablemente sepas, rOpenSci lleva a cabo la revisión por pares de los paquetes de R aportados a nuestra colección de forma similar a las revistas científicas.
 
-El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en GitHub aquí: [ENLACE REPO]. Hacemos nuestro proceso de revisión abierta a través de GitHub, aquí: [ONBOARDING ISSUE]
+El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en GitHub aquí: [ENLACE REPO]. Hacemos nuestro proceso de revisión abierta a través de GitHub, aquí: [ISSUE DE REVISIÓN]
 
 Si aceptas, ten en cuenta que te pediremos completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
@@ -13,7 +13,7 @@ Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centrada
 ¡Sé amable!
 Consulta nuestra guía de revisión y el [código de conducta](https://ropensci.org/code-of-conduct/) para más información.
 
-¿Puedes revisar? Si no puedes, siempre nos sirve si puede sugerir personas alternativas. Si no tengo noticias tuyas en el plazo de una semana, supondré que no puedes hacer una revisión en este momento.
+¿Puedes revisar? Si no puedes, siempre nos sirve si puedes sugerir personas alternativas. Si no tengo noticias tuyas en el plazo de una semana, supondré que no puedes hacer una revisión en este momento.
 
 Gracias por tu tiempo.
 

@@ -4,9 +4,9 @@ repo-actions: true
 
 # Guía para publicar el libro {#bookreleaseissue}
 
-Antes de realizar una nueva pblicación de este libro, se puede ejecutar el script `prelease.R` que se encuentra en la carpeta `inst` de este repositorio. 
-Esto va a crear una issue en GitHub con una lista de todas las issues asignadas al milestone de la próxima versión junto con la siguiente lista de tareas. 
-Antes de correr el script, por favor revistar la asignación de issues al milestone. 
+Antes de realizar una nueva publicación de este libro, se puede ejecutar el script `prelease.R` que se encuentra en la carpeta `inst` de este repositorio. 
+Esto va a crear una *issue* en GitHub con una lista de todas las *issues* asignadas al *milestone* de la próxima versión junto con la siguiente lista de tareas. 
+Antes de correr el script, por favor revistar la asignación de *issues* al *milestone*. 
 Todo esto debería hacerse un mes antes de la fecha de publicación programada. 
 
 

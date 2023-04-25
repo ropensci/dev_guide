@@ -1,8 +1,8 @@
 # Comandos del bot
 
-## Para todas las personas que participan {.unnumbered}
+## Para todo el mundo {.unnumbered}
 
-Ten en cuenta que limpiamos los hilos de issue eliminando el contenido superfluo, por lo que la mayoría de las veces se borrará u ocultará rápidamente el registro de que has pedido ayuda a un bot.
+Ten en cuenta que limpiamos los *issues* eliminando el contenido superfluo, por lo que la mayoría de las veces el registro de que has pedido ayuda a un bot se borrará u ocultará rápidamente.
 
 ### Consulta la lista de comandos disponibles {.unnumbered}
 
@@ -36,7 +36,7 @@ Para registrar tu respuesta al equipo revisor.
 @ropensci-review-bot submit response <response-url>
 ```
 
-donde `<response_url>` es el enlace al comentario de respuesta en el hilo del _issue_.
+donde `<response_url>` es el enlace al comentario de respuesta en el *issue*.
 
 ### Finalizar la transferencia del repositorio {.unnumbered}
 
@@ -48,7 +48,7 @@ Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci 
 
 ### Obtener una nueva invitación tras la aprobación {.unnumbered}
 
-Si se venció el plazo de una semana para aceptar la invitación a la organización rOpenSci en GitHub, ejecuta este comando para recibir una nueva.
+Si se venció el plazo de una semana para aceptar la invitación a la organización ropensci en GitHub, ejecuta este comando para recibir una nueva.
 
 ```markdown
 @ropensci-review-bot invite me to ropensci/<package-name>
@@ -56,7 +56,7 @@ Si se venció el plazo de una semana para aceptar la invitación a la organizaci
 
 ## Para la persona encargada de la edición {.unnumbered}
 
-### Asignar la persona editora de esta revisión {.unnumbered}
+### Asignar la persona para editar esta revisión {.unnumbered}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
