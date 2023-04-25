@@ -3,24 +3,24 @@
 ```{block, type='summaryblock'}
 Este capítulo presenta nuestra guía para realizar modificaciones a tu paquete: cambiar los nombres de los parámetros, cambiar los nombres de las funciones, eliminar funciones, e incluso retirar y archivar paquetes.
 
-Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
+Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/).
 ```
 
-## Filosofía del cambio
+## Filosofía de los cambios
 
-Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc..
+Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc....
 en un paquete; ni CRAN ni ningún otro sitio impone normas sobre esto.
 En general, a medida que un paquete madura los cambios en los métodos orientados al uso (es decir, las funciones exportadas en un paquete R) deberían ser muy infrecuentes.
 Los paquetes de los cuales dependen muchos otros paquetes probablemente sean más cuidadosos con los cambios, y deberían serlo.
 
-## El paquete {lifecycle}
+## El paquete lifecycle
 
-En este capítulo se presentan soluciones que no requieren el paquete {lifecycle}, pero que pueden resultarte útiles.
+En este capítulo se presentan soluciones que no requieren el paquete lifecycle, pero que pueden resultarte útiles.
 Te recomendamos [leer la documentación de lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
 
 ## Parámetros: cambiando los nombres de los parámetros
 
-A veces hay que cambiar los nombres de los parámetros por claridad, u otra razón.
+A veces hay que cambiar los nombres de los parámetros, ya sea en pos de mayor claridad u otras razones.
 
 Un posible enfoque es comprobar si los argumentos obsoletos no faltan, y llamar a `stop()` con un mensaje significativo.
 
@@ -55,7 +55,7 @@ foo_bar(x = 5)
 
 Ten cuidado con el parámetro `...`.
 Si tu función tiene `...` y ya has eliminado un parámetro (llamémoslo `z`), alguien puede tener un código más antiguo que utilice `z`.
-Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por los `...` y se ignore silenciosamente -- no es lo que quieres.
+Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por `...` y se ignore silenciosamente -- no es lo que quieres.
 En su lugar, deja el argumento `z`, emitiendo un error si se utiliza.
 
 ## Funciones: cambiando los nombres de las funciones
@@ -103,7 +103,7 @@ Después de que la versión del paquete con `foo` y `bar` haya sido usada durant
 
 ``` r
 #' bar - añadir 1 a un input
-#' @exportar
+#' @export
 bar <- function(x) x + 1
 ```
 
@@ -144,7 +144,7 @@ NULL
 Esto crea una página de manual a la que los usuarios pueden acceder como `` ?`holamundo-deprecated` `` y verán en el índice de la documentación.
 Añade cualquier función a esta página según sea necesario, y quítala cuando una función caduque (ver más abajo).
 
--   En la próxima versión (`v0.3.0`) puedes hacer que la función sea caduca (es decir, que desaparezca completamente del paquete, excepto por una página _man_ con una nota sobre ella).
+-   En la próxima versión (`v0.3.0`) puedes caducar la función (es decir, que desaparezca completamente del paquete, excepto por una página _man_ con una nota sobre ella).
 
 En la propia función, utiliza `.Defunct()` de esta manera:
 
@@ -201,9 +201,9 @@ Es probable que quieras mantener esta página indefinidamente.
 
 No es necesario que cambies los test de las funciones obsoletas hasta que caduquen.
 
--   Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc.? Hay que testear esos cambios, si se han hecho.
+-   Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc...? Hay que testear esos cambios, si se han hecho.
 -   En relación con lo anterior, si a la función obsoleta se le cambia simplemente el nombre, tal vez se pueda testar que la función  antigua y la nueva devuelven resultados idénticos.
--   [`suppressWarnings()` podría utilizarse](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir la advertencia emitida desde `.Deprecated` pero las pruebas no están orientadas al uso, así que no es tan malo que las pruebas emitan advertencias, y la advertencia podría incluso utilizarse como recordatorio para quien mantiene el paquete.
+-   [`suppressWarnings()` podría utilizarse](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir la advertencia emitida desde `.Deprecated`. Pero como las pruebas no están orientadas al uso, no es tan malo que las pruebas emitan advertencias, y la advertencia podría incluso utilizarse como recordatorio para quien mantiene el paquete.
 
 Una vez que se caduca una función, sus tests se eliminan sin más.
 
@@ -222,19 +222,18 @@ Antes de archivar, el contenido del archivo *README* debe trasladarse a una ubic
 Este paquete ha sido archivado. El antiguo README está ahora en [README-OLD](<link-a-README-viejo>).
 ```
 
-La etiqueta del estado del repositorio debe ser "*unsupported*" (no soportado) para los paquetes anteriormente publicados, o "*abandoned*" (abandonado) para los ex paquetes conceptuales o en proceso, en cuyo caso el código de la etiqueta anterior debe sustituirse por:
+La etiqueta del estado del repositorio debe ser "*unsupported*" (sin soporte) para los paquetes anteriormente publicados, o "*abandoned*" (abandonado) para los ex paquetes conceptuales o en proceso, en cuyo caso el código de la etiqueta anterior debe sustituirse por:
 
 ``` md
-[![Estado del proyecto: Abandonado](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+[![Estado del proyecto: abandonado](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 ```
 
 Un ejemplo de un archivo *README* mínimo en un paquete archivado está en [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md).
 Una vez que el *README* se ha copiado en otro lugar y se ha reducido a su forma mínima, hay que seguir los siguientes pasos
 
 -   [ ] Cierra los issues con una frase que explique la situación y enlace a esta guía.
--   [ ] Archiva el repositorio en GitHub (también en la configuración del repositorio).
--   [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo transfiera (puedes enviar un correo electrónico a `info@ropensci.org`).
+-   [ ] Archiva el repositorio en GitHub (la opción se encuentra en la configuración del repositorio).
+-   [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo haga (puedes enviar un correo electrónico a `info@ropensci.org`).
 
-Los paquetes archivados pueden ser desarchivados si quien lo ḿantenía, o una nueva persona, deciden reanudar el mantenimiento.
-Para ello, ponte en contacto con rOpenSci.
-Se transferira a la organización ropenscilabs.
+Los paquetes archivados pueden ser desarchivados si quien lo mantenía, o una nueva persona, deciden reanudar el mantenimiento.
+Para ello, ponte en contacto con rOpenSci y se transferirá el repo a la organización ropenscilabs.
