@@ -51,7 +51,7 @@ Te deseamos lo mejor,
 
 ## Incorporar un nuevo miembro al equipo
 
-- Pide a quien sea maneja la comunidad de rOpenSci que
+- Pide a quien gestiona la comunidad de rOpenSci que
   
   - agregue al nuevo miembro del equipo editorial al [sitio web de rOpenSci](https://github.com/ropensci/roweb3/#team-member);
   - prepare una artículo de presentación en el blog.
