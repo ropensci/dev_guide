@@ -17,7 +17,7 @@ Ambos deben contener:
 
 Puedes configurar la redirección desde tu repositorio principal de GitHub Pages. 
 
- - Crae un nuevo repositorio (si no tienes uno).
+ - Crea un nuevo repositorio (si no tienes uno).
   `https://github.com/<usuario>/<usuario>.github.io`.
  - En este repositorio, crea un directorio llamado `<nombrepaquete>` con dos archivos: `index.html` y `404.html`. Ambos deben redireccionar a la nueva ubicación según lo visto en la sección anterior. 
  - Comprueba que `https://<usuario>.github.io/<nombrepaquete>/index.html` redirecciona a la dirección correcta. 
