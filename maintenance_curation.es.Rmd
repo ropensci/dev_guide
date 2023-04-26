@@ -43,7 +43,7 @@ No se comprobarán en el sistema de rOpenSci.
 - Los paquetes archivados no se mostrarán por defecto en la página web de paquetes.
 Una pestaña especial de páginas de paquetes los mostrará con `"type": "archived"`, hayan sido revisados por pares o mantenidos por el personal.
 
-- Los paquetes archivados pueden desarchivarse cuando alguien una nueva persona, o quien lo mantenía anteriormente, quiera revivirlo y solucionar los problemas.
+- Los paquetes archivados pueden desarchivarse cuando una nueva persona, o quien lo mantenía anteriormente, quiera revivirlo y solucionar los problemas.
 Para ello, [ponte en contacto con rOpenSci](https://ropensci.org/contact/). 
 Se transferirán a la organización ropenscilabs.
 
