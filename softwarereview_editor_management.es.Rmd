@@ -19,7 +19,7 @@ Estos son los pasos a seguir:
 ## Invitar a una nueva persona al equipo
 
 * Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
-  Haz la invitación como invitarías a a cualquier otra persona por otros motivos.
+  Haz la invitación como invitarías a cualquier otra persona por otros motivos.
 
 * Si el posible nuevo miembro realiza una edición invitada, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
 
