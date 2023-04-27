@@ -1,0 +1,12 @@
+-   [Noam Ross](https://github.com/noamross), EcoHealth Alliance
+-   [Karthik Ram](https://github.com/karthik), rOpenSci
+-   [Maëlle Salmon](https://github.com/maelle), rOpenSci
+-   [Mark Padgham](https://github.com/mpadge), rOpenSci
+-   [Anna Krystalli](https://github.com/annakrystalli), University of Sheffield RSE
+-   [Melina Vidoni](https://github.com/melvidoni), RMIT University (School of Science)
+-   [Mauro Lepore](https://github.com/maurolepore), 2 Degrees Investing Initiative
+-   [Laura DeCicco](https://github.com/ldecicco-USGS), USGS
+-   [Julia Gustavsen](https://github.com/jooolia), Agroscope
+-   [Emily Riederer](https://github.com/emilyriederer), Capital One
+-   [Adam Sparks](https://github.com/adamhsparks), Department of Primary Industries and Regional Development
+-   [Jeff Hollister](https://github.com/jhollist), US Environmental Protection Agency
