@@ -268,6 +268,6 @@ Los siguientes recursos pueden ser útiles para quienes investigan, desarrollan 
 ## Código de conducta {#code-of-conduct}
 
 La comunidad de rOpenSci es nuestro mejor recurso.
-Tanto si colaboras habitualmente como si recién llegas, nos esforzamos para que ésta sea ugar seguro para ti y te apoyamos en lo que necesites.
+Tanto si colaboras habitualmente como si recién llegas, nos esforzamos para que éste lugar sea seguro para ti y te apoyamos en lo que necesites.
 Tenemos un Código de Conducta que se aplica a todas las personas que participan en la comunidad de rOpenSci, incluidos el equipo y la dirección de rOpenSci y a todos las formas de interacción en línea o en persona.
 El [Código de Conducta](https://ropensci.org/codigo-de-conducta/) se mantiene en el sitio web de rOpenSci.
