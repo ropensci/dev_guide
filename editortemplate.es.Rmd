@@ -11,7 +11,7 @@ repo-actions: true
 #| echo: false
 #| child: "templates/editor.es.md"
 ```
-```
+````
 :::
 
 ::: {.content-visible when-format="pdf"}
@@ -20,6 +20,3 @@ repo-actions: true
 
 ```
 :::
-````
-
-
