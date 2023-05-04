@@ -26,7 +26,7 @@
 
 ### Publicación
 
--   [ ] Comprueba las URL utilizando [la función `devguide_urls()` del paquete {devguider}](https://github.com/ropensci-org/devguider)
+-   [ ] Comprueba las URL utilizando [la función `devguide_urls()` del paquete {devguider}](https://github.com/ropensci-org/devguider).
 
 -   [ ] Comprueba la ortografía con [la función `devguide_spelling()` del paquete {devguider}](https://github.com/ropensci-org/devguider).
     Actualiza la [LISTA DE PALABRAS](https://github.com/ropensci/dev_guide/blob/master/inst/WORDLIST) según sea necesario.
@@ -35,7 +35,7 @@
 
 -   [ ] Crea un *release* en GitHub, asegúrate de que se cree un *release* en Zenodo.
 
--   [ ] Re-genera el libro (para actualizar los metadatos de Zenodo en el libro) o espera a la compilación diaria
+-   [ ] Re-genera el libro (para actualizar los metadatos de Zenodo en el libro) o espera a la compilación diaria.
 
 -   [ ] Vuelve a crear la *branch* dev.
 

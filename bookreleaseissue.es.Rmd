@@ -2,11 +2,12 @@
 repo-actions: true
 ---
 
-# Book release guidance {#bookreleaseissue}
+# Guía para publicar el libro {#bookreleaseissue}
 
-Editors preparing for a release can run the `prelease.R` script in the `inst` directory of this repository to automatically open a GitHub issue with checkpoints for all current issues assigned to the upcoming release milestone, along with the following checklist. 
-Before running the script, please manually check the assignment of issues to the milestone.
-This should be run one month prior to planned release.
+Antes de realizar una nueva publicación de este libro, se puede ejecutar el script `prelease.R` que se encuentra en la carpeta `inst` de este repositorio. 
+Esto va a crear una *issue* en GitHub con una lista de todas las *issues* asignadas al *milestone* de la próxima versión junto con la siguiente lista de tareas. 
+Antes de correr el script, por favor revistar la asignación de *issues* al *milestone*. 
+Todo esto debería hacerse un mes antes de la fecha de publicación programada. 
 
 
 ::: {.content-hidden when-format="pdf"}

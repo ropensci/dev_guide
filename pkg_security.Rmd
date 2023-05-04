@@ -80,6 +80,4 @@ Useful security resources:
 
 * [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
 
-* [the `notary` package](https://ropensci.org/blog/2017/07/25/notary/);
-
 * [`gargle` article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
