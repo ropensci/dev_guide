@@ -1,3 +1,8 @@
+---
+aliases:
+  - evolution.html
+---
+
 # Package evolution - changing stuff in your package {#evolution}
 
 ```{block, type='summaryblock'}

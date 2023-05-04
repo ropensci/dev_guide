@@ -1,3 +1,8 @@
+---
+aliases:
+  - collaboration.html
+---
+
 # Collaboration Guide {#collaboration}
 
 ```{block, type='summaryblock'}

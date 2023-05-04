@@ -1,3 +1,8 @@
+---
+aliases:
+  - ci.html
+---
+
 # Continuous Integration Best Practices {#ci}
 
 ```{block, type='summaryblock'}

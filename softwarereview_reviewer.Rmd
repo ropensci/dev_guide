@@ -1,3 +1,8 @@
+---
+aliases:
+  - reviewerguide.html
+---
+
 # Guide for Reviewers {#reviewerguide}
 
 ```{block, type='summaryblock'}

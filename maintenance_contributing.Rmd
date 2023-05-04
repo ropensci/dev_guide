@@ -1,5 +1,7 @@
 ---
 repo-actions: true
+aliases:
+  - contributingguide.html
 ---
 
 # Contributing Guide {#contributingguide}
