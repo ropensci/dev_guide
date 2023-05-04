@@ -461,7 +461,7 @@ Once your package is on CRAN, it will be [regularly checked on different platfor
 
 ## Bioconductor gotchas
 
-If you intend your package to be submitted to, or if your package is on, Bioconductor, refer to [Bioconductor packaging guidelines](https://www.bioconductor.org/developers/package-guidelines/).
+If you intend your package to be submitted to, or if your package is on, Bioconductor, refer to [Bioconductor packaging guidelines](https://www.bioconductor.org/developers/package-guidelines/) and the [updated developer book](https://contributions.bioconductor.org/).
 
 ## Further guidance
 
