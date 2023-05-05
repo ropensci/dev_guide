@@ -549,7 +549,7 @@ Puedes revisar el estado de las comprobaciones de CRAN con:
 
 ## Guía para Bioconductor
 
-Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioconductor, consulta las [Directrices de paquetes de Bioconductor](https://www.bioconductor.org/developers/package-guidelines/) y el [libro para desarrolladores actualizado](https://contributions.bioconductor.org/).
+Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioconductor, consulta las [Directrices de paquetes de Bioconductor](https://www.bioconductor.org/developers/package-guidelines/) y el [libro de desarrollo actualizado](https://contributions.bioconductor.org/).
 
 ## Otras recomendaciones
 
