@@ -16,6 +16,8 @@ Esta política de gestión pretende apoyar estos objetivos:
 Los elementos de infraestructura necesarios para la aplicación de esta política están, en algunos casos, parcialmente construidos y en otros casos aún no se han iniciado.
 Nuestro objetivo es adoptar esta política en parte para priorizar el trabajo en estos componentes.
 
+## El registro de paquetes
+
 - El [registro](https://github.com/ropensci/roregistry) de paquetes rOpenSci es una lista centralizada de paquetes de R mantenidos o revisados por rOpenSci. 
 Contiene metadatos esenciales de los paquetes, incluyendo el estado de desarrollo y revisión, y es la fuente de los datos mostrados en sitios web, etiquetas, etc.
 Esto permite mantener este listado independientemente de la infraestructura o plataforma de alojamiento de los paquetes. 
