@@ -1,5 +1,5 @@
 rmds <- fs::dir_ls(glob = "*.Rmd")
-rmds <- rmds[rmds != "booknews.Rmd"]
+rmds <- rmds[!(rmds %in% c("booknews.Rmd", "index.Rmd", "index.es.Rmd", "preface.Rmd", "preface.es.Rmd"))]
 english <- rmds[!grepl("\\.es\\.Rmd", rmds)]
 spanish <- rmds[grepl("\\.es\\.Rmd", rmds)]
 
@@ -13,7 +13,13 @@ tackle_english_header <- function(header) {
 
   crossref <- snakecase::to_any_case(sub("\\{\\.unnumbered\\}", "", text), sep_out = "-")
   crossref <- sub("r-open-sci", "ropensci", crossref)
-  xml2::xml_text(header) <- sprintf("%s {#%s}", text, crossref)
+  unnumbered <- grepl("\\{\\.unnumbered\\}", text)
+  text <- sub("\\{\\.unnumbered\\}", "", text)
+  xml2::xml_text(header) <- if (unnumbered) {
+    sprintf("%s {#%s} {.unnumbered}", text, crossref)
+  } else {
+    sprintf("%s {#%s}", text, crossref)
+  }
 
   return(crossref)
 
@@ -42,7 +48,7 @@ tackle_spanish <- function(path, english_crossrefs) {
 
   texts <- xml2::xml_text(headers)
   texts <- sub("\\{\\#.*\\}", "", texts)
-  texts <- sprintf("%s {#%s}", texts, current_english_crossrefs[["crossref"]])
+  xml2::xml_text(headers) <- sprintf("%s {#%s}", texts, current_english_crossrefs[["crossref"]])
   contents$write(path)
 }
 

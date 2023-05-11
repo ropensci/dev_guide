@@ -4,8 +4,8 @@ repo-actions: true
 
 # Editor's template {#editortemplate}
 
-
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -13,11 +13,16 @@ repo-actions: true
 #| child: "templates/editor.md"
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/editor.md"
 
 ```
+
 :::
+
+

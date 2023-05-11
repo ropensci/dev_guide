@@ -1,58 +1,58 @@
-# Buenas prácticas de seguridad en el desarrollo de paquetes
+# Buenas prácticas de seguridad en el desarrollo de paquetes {#package-development-security-best-practices}
 
 ```{block, type="summaryblock"}
 Este es un capítulo en construcción que incluye [consejos sobre la gestión de información confidencial en los paquetes](#pkgsecrets) y [enlaces a lecturas adicionales](#furthersecreading).
 ```
 
-## Miscelaneos
+## Miscelaneos {#miscellaneous}
 
 Recomendamos el artículo [*Ten quick tips for staying safe online* (Diez consejos rápidos sobre seguridad en Internet)](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008563) de Danielle Smalls y Greg Wilson.
 
-## Seguridad al acceder a GitHub
+## Seguridad al acceder a GitHub {#git-hub-access-security}
 
--   Te recomendamos [proteger tu cuenta de GitHub con autenticación de dos factores (2FA)](https://docs.github.com/es/authentication/securing-your-account-with-two-factor-authentication-2fa).
-    Esto es *obligatorio* para miembros de la organización ropensci en GitHub y quienes colaboren de manera externa, así que asegúrate de habilitarla antes de que se apruebe tu paquete.
+- Te recomendamos [proteger tu cuenta de GitHub con autenticación de dos factores (2FA)](https://docs.github.com/es/authentication/securing-your-account-with-two-factor-authentication-2fa).
+  Esto es *obligatorio* para miembros de la organización ropensci en GitHub y quienes colaboren de manera externa, así que asegúrate de habilitarla antes de que se apruebe tu paquete.
 
--   También te recomendamos que compruebes regularmente quién tiene acceso al repositorio de tu paquete, y que elimines cualquier acceso no utilizado (como el de personas que hayan dejado de colaborar).
+- También te recomendamos que compruebes regularmente quién tiene acceso al repositorio de tu paquete, y que elimines cualquier acceso no utilizado (como el de personas que hayan dejado de colaborar).
 
-## https
+## https {#https}
 
--   Si el servicio web al que se conecta tu paquete tiene opciones de https y http, usa https.
+- Si el servicio web al que se conecta tu paquete tiene opciones de https y http, usa https.
 
-## Credenciales usadas en paquetes {#pkgsecrets}
+## Credenciales usadas en paquetes  {#pkgsecrets}
 
 Esta sección incluye consejos para cuando desarrolles un paquete que interactúa con un recurso web que requiere credenciales (claves API, tokens, etc.).
 Consulta también [la viñeta de `httr` sobre compartir credenciales](https://httr.r-lib.org/articles/secrets.html).
 
-### Credenciales de quien usa el paquete
+### Credenciales de quien usa el paquete {#secrets-in-packages-and-user-protection}
 
 Supongamos que tu paquete necesita una clave para hacer consultas a una API en nombre de quien usa el paquete.
 
--   En la documentación de tu paquete, brinda consejos para que la clave de la API no se almacene en el archivo .Rhistory o en los scripts.
+- En la documentación de tu paquete, brinda consejos para que la clave de la API no se almacene en el archivo .Rhistory o en los scripts.
+  
+  - Fomenta el uso de variables de entorno para almacenar la clave de la API (o incluso elimina la posibilidad de pasarla como argumento a las funciones).
+    Puedes mencionar [esta introducción a los archivos de arranque](https://rstats.wtf/r-startup.html) y la función [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+  
+  - Otra posibilidad es usar o fomentar el uso del paquete [`keyring` para almacenar variables](https://github.com/r-lib/keyring#readme) en los sistemas de almacenamiento de credenciales del sistema operativo (que son más seguros que guardarlas en el archivo .Renviron).
+    Para esto tu paquete tendría una función para guardar la clave en el keyring y una para recuperarla; alternativamente quien use tu paquete podría escribir `Sys.setenv(CLAVESUPERSECRETA = keyring::key_get("miservicio"))` al principio de su script.
+  
+  - No imprimas la clave de la API en ningún mensaje, advertencia o error, ni siquiera en modo verboso.
 
-    -   Fomenta el uso de variables de entorno para almacenar la clave de la API (o incluso elimina la posibilidad de pasarla como argumento a las funciones).
-        Puedes mencionar [esta introducción a los archivos de arranque](https://rstats.wtf/r-startup.html) y la función [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+- La plantilla de issues en GitHub debe advertir de no compartir ninguna credencial.
+  Si alguien comparte accidentalmente las credenciales en un issue, asegúrate de avisarle para que revoque la clave (es decir, pregúntale explícitamente si se ha dado cuenta de que ha compartido su clave).
 
-    -   Otra posibilidad es usar o fomentar el uso del paquete [`keyring` para almacenar variables](https://github.com/r-lib/keyring#readme) en los sistemas de almacenamiento de credenciales del sistema operativo (que son más seguros que guardarlas en el archivo .Renviron).
-        Para esto tu paquete tendría una función para guardar la clave en el keyring y una para recuperarla; alternativamente quien use tu paquete podría escribir `Sys.setenv(CLAVESUPERSECRETA = keyring::key_get("miservicio"))` al principio de su script.
-
-    -   No imprimas la clave de la API en ningún mensaje, advertencia o error, ni siquiera en modo verboso.
-
--   La plantilla de issues en GitHub debe advertir de no compartir ninguna credencial.
-    Si alguien comparte accidentalmente las credenciales en un issue, asegúrate de avisarle para que revoque la clave (es decir, pregúntale explícitamente si se ha dado cuenta de que ha compartido su clave).
-
-### Credenciales en paquetes y desarrollo
+### Credenciales en paquetes y desarrollo {#secrets-in-packages-and-development}
 
 Durante el desarrollo del paquete tendrás que proteger tus credenciales igual que proteges las credenciales de quienes usan tu paquete, pero hay más cosas a considerar y tener en cuenta.
 
-#### Credenciales y consultas guardadas en los tests
+#### Credenciales y consultas guardadas en los tests {#secrets-and-recorded-requests-in-tests}
 
 Si utilizas [`vcr`](https://docs.ropensci.org/vcr/) o [`httptest`](https://enpiar.com/r/httptest/) en los test para almacenar las respuestas de la API en caché, tienes que asegurarte de que las consultas grabadas o fixtures no contengan credenciales.
 Consulta la [guía de seguridad de `vcr`](https://books.ropensci.org/http-testing/security-chapter.html) y [la guía *Redacting and Modifying Recorded Requests* (Censurando y modificando consultas grabadas) de `httptest`](https://enpiar.com/r/httptest/articles/redacting.html) e inspecciona tus consultas grabadas y *fixtures* antes de hacer un primer *commit* para asegurarte de que tienes la configuración correcta.
 
 Como `vcr` es un paquete de rOpenSci, puedes hacer cualquier pregunta que tengas en el [foro de rOpenSci](https://discuss.ropensci.org/).
 
-#### Compartir credenciales con servicios de integración contínua
+#### Compartir credenciales con servicios de integración contínua {#share-secrets-with-ci-services}
 
 Si utilizas un [servicio de integración continua](#ci) (CI por sus siglas en inglés), es posible que necesites compartir credenciales con el mismo.
 
@@ -62,7 +62,7 @@ Para más detalles y consejos sobre el flujo de trabajo, consulta [al artículo 
 
 Documenta los pasos que has seguido en [CONTRIBUTING.md](#friendlyfiles) para que tú, o alguien en el futuro, pueda recordar cómo hacerlo la próxima vez.
 
-#### Credenciales y colaboraciones
+#### Credenciales y colaboraciones {#secrets-and-collaborations}
 
 ¿Qué pasa con los pull requests de contribuciones externas?
 En GitHub, por ejemplo, los "secretos" sólo están disponibles para las acciones de GitHub para los *pull requests* iniciados desde el propio repositorio, no desde el *fork*.
@@ -72,19 +72,21 @@ Obviamente, esto significa que los tests del PR por parte del servicio de CI no 
 
 Documenta el comportamiento de tu paquete frente a PRs externos en [CONTRIBUTING.md](#friendlyfiles) por el bien de la gente que hace PRs y de la gente que los revisa (tú dentro de unas semanas, y otras personas que mantengan del paquete).
 
-### Credenciales y CRAN
+### Credenciales y CRAN {#secrets-and-cran}
 
 En CRAN, omite las pruebas y los ejemplos que requieran credenciales utilizando `skip_on_cran()` y `dontrun` respectivamente.
 
 También [omite las viñetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) que requieran credenciales.
 
-## Lecturas adicionales {#furthersecreading}
+## Lecturas adicionales  {#furthersecreading}
 
 Recursos útiles sobre seguridad:
 
--   [Encuentro de la comunidad rOpenSci sobre "Seguridad para R"](https://ropensci.org/commcalls/2019-05-07/) (grabación, diapositivas, etc.).
-    Ver en particular [la lista de recursos](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources);
+- [Encuentro de la comunidad rOpenSci sobre "Seguridad para R"](https://ropensci.org/commcalls/2019-05-07/) (grabación, diapositivas, etc.).
+  Ver en particular [la lista de recursos](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources);
 
--   [los proyectos relacionados con la seguridad de la unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
+- [los proyectos relacionados con la seguridad de la unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
 
--   [el artículo de `gargle` *Managing tokens securely* (Gestionando claves de forma segura)](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+- [el artículo de `gargle` *Managing tokens securely* (Gestionando claves de forma segura)](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+
+

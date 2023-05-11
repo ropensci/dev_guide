@@ -1,29 +1,29 @@
-# Gestión editorial {#editorialmanagement}
+# Gestión editorial  {#editorialmanagement}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 Guía para gestionar el equipo editorial.
 ```
 
-## Reclutar nuevas personas para la edición
+## Reclutar nuevas personas para la edición {#recruiting-new-editors}
 
 Reclutar nuevas personas y mantener un equipo editorial funcional y equilibrado es responsabilidad de quien [Lidere la Revisión de Software](https://ropensci.org/about/#team) con el apoyo y asesoramiento del comité editorial.
 
 Estos son los pasos a seguir:
 
-* Crea un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
+- Crea un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
 
-* Haz un *ping* a las personas del equipo editorial para asegurarte de que reciban una notificación, ya que se trata de un tema importante.
+- Haz un *ping* a las personas del equipo editorial para asegurarte de que reciban una notificación, ya que se trata de un tema importante.
 
-* Espera a que la mayoría de del equipo intervenga antes de realizar la invitación. Dales una semana para que respondan.
+- Espera a que la mayoría de del equipo intervenga antes de realizar la invitación. Dales una semana para que respondan.
 
-## Invitar a una nueva persona al equipo
+## Invitar a una nueva persona al equipo {#inviting-a-new-editor}
 
-* Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
+- Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
   Haz la invitación como invitarías a cualquier otra persona por otros motivos.
 
-* Si el posible nuevo miembro realiza una edición invitada, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
+- Si el posible nuevo miembro realiza una edición invitada, evalúa cómo ha sido el proceso una vez abordada la presentación. Vuelve a pedir consejo a otras personas del equipo.
 
-* Envía un correo electrónico:
+- Envía un correo electrónico:
 
 ```
 Nos gustaría invitarte a formar parte del consejo editorial de rOpenSci como miembro en pleno derecho. [RAZONES ESPECÍFICAS PARA LA INVITACIÓN (MENCIONA LAS CONTRIBUCIONES A ROPENSCI)]. 
@@ -49,7 +49,7 @@ Te deseamos lo mejor,
 [NOMBRE], en nombre del equipo editorial de rOpenSci.
 ```
 
-## Incorporar un nuevo miembro al equipo
+## Incorporar un nuevo miembro al equipo {#onboarding-a-new-editor}
 
 - Pide a quien gestiona la comunidad de rOpenSci que
   
@@ -68,15 +68,15 @@ Te deseamos lo mejor,
 
 - Agrégalo al equipo `editors` de Slack para que `@editors` también le envíe una notificación.
 
-- Añade su nombre a: 
+- Añade su nombre a:
   
-  - la [lista de personas autoras de dev_guide](https://github.com/ropensci/dev_guide/blob/main/index.Rmd);
-  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembros del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
+  - la [lista de personas autoras de dev\_guide](https://github.com/ropensci/dev_guide/blob/main/index.Rmd);
+  - el [capítulo dev\_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembros del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
   - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!).
-  
+
 Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
 
-## Dar de baja a un miembro del equipo editorial
+## Dar de baja a un miembro del equipo editorial {#offboarding-an-editor}
 
 - Agradece su trabajo.
 
@@ -90,7 +90,9 @@ Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan aut
 
 - Elimínalo de:
   
-  - el [capítulo dev_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembro del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
+  - el [capítulo dev\_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembro del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
   - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!).
-    
+
 Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
+
+

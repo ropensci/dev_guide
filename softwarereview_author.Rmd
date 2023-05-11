@@ -5,54 +5,58 @@ aliases:
 
 # Guide for Authors {#authors-guide}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This concise guide presents the software peer review process for you as a package author.
 ```
 
-## Planning a Submission (or a Pre-Submission Enquiry)
+## Planning a Submission (or a Pre-Submission Enquiry) {#planning-a-submission-or-a-pre-submission-enquiry}
 
--   Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
--   Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
-    -    If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
-    - [Example response regarding overlap](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Also consider adding some points about similar packages to your [package documentation](#docs-general).
+- Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
+- Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
+  - If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
+  - [Example response regarding overlap](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Also consider adding some points about similar packages to your [package documentation](#docs-general).
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
-    - We strongly suggest submitting your package for review _before_ publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
-    -   Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
+  - We strongly suggest submitting your package for review *before* publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
+  - Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
 - Please also consider the time and effort needed to respond to reviews: think about your availability or that of your collaborators in the next weeks and months following a submission. Note that reviewers are volunteers, and we ask that you respect their time and effort by responding in a timely and respectful manner.
-- If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an _Active_ instead of _WIP_ badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is _Stable_.
+- If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an *Active* instead of *WIP* badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is *Stable*.
 - For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. Even better, set up a pkgdown website for allowing more detailed assessment of functionality online.
-    - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
-    - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
+  - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
+  - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
-## Preparing for Submission
+## Preparing for Submission {#preparing-for-submission}
 
--   Read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
--   Feel free to ask any questions about the process, or your specific package, in our [Discussion Forum](https://discuss.ropensci.org).
--   All submissions are automatically checked by our [pkgcheck](https://docs.ropensci.org/pkgcheck/) system to ensure packages follow our guidelines. All authors are expected to have run [the main `pkgcheck` function](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) locally to confirm that the package is ready to be submitted. Alternatively, an even easier way to ensure a package is ready for submission is to use [the `pkgcheck` GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action) to run `pkgcheck` as a GitHub Action, as described in [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
--   If there are any aspects of `pkgcheck` which your package is unable to pass, please explain reasons in your submission template.
--   If you feel your package is in scope for the
-    [Journal of Open-Source Software](https://joss.theoj.org/) (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
+- Read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
+- Feel free to ask any questions about the process, or your specific package, in our [Discussion Forum](https://discuss.ropensci.org).
+- All submissions are automatically checked by our [pkgcheck](https://docs.ropensci.org/pkgcheck/) system to ensure packages follow our guidelines. All authors are expected to have run [the main `pkgcheck` function](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) locally to confirm that the package is ready to be submitted. Alternatively, an even easier way to ensure a package is ready for submission is to use [the `pkgcheck` GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action) to run `pkgcheck` as a GitHub Action, as described in [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
+- If there are any aspects of `pkgcheck` which your package is unable to pass, please explain reasons in your submission template.
+- If you feel your package is in scope for the
+  [Journal of Open-Source Software](https://joss.theoj.org/) (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
 
-## The Submission Process
+## The Submission Process {#the-submission-process}
 
--   Software is submitted for review by [opening a new issue](https://github.com/ropensci/software-review/issues/new/choose) in the software review repository and filling out the template.
+- Software is submitted for review by [opening a new issue](https://github.com/ropensci/software-review/issues/new/choose) in the software review repository and filling out the template.
 - The template begins with a section which includes several HTML-styled variables (`<!---variable--->`). These are used by our `ropensci-review-bot`, and must be left in place, with values filled between the indicated start and end points, like this:
-```{bash, eval = F}
+
+```{bash, eval=F}
 <!---variable--->insert value here<!---end-variable>
 ```
--   Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
+
+- Communication between authors, reviewers and editors will first and foremost take place on GitHub so that the review thread can serve as a full record of the review. You may choose to contact the editor by email or Slack if private consultation is needed (e.g., asking how to respond to a reviewer question). Do not contact reviewers off-thread without asking them in the GitHub thread whether they agree to it.
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
--   Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
-- Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch. 
+- Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
+- Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch.
 
-## The Review Process
+## The Review Process {#the-review-process}
 
--   An [editor](#editors) will review your submission within 5 business days and respond with next steps. The editor may assign the package to reviewers, request that the package be updated to meet minimal criteria before review, or reject the package due to lack of fit or overlap.
--   If your package meets minimal criteria, the editor will assign  1-3 reviewers. They will be asked to provide reviews as comments on your issue within 3 weeks.
--   We ask that you respond to reviewers' comments within 2 weeks of the last-submitted review, but you may make updates to your package or respond at any time. Your response should include a link to the updated [NEWS.md](#news) of your package. Here is [an author response example](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  We encourage ongoing conversations between authors and reviewers. See the [reviewing guide](#reviewerguide) for more details.
--   Any time package changes are likely to alter the results of [the automated `pkgcheck` checks](https://docs.ropensci.org/pkgcheck), authors can request a re-check with the command, `@ropensci-review-bot check package`.
--   Please notify us immediately if you are no longer able to maintain your package or to respond to reviews. You will then be expected to either retract a submission, or to find alternative package maintainers. You can also discuss maintenance issues in the rOpenSci slack workspace.
--   Once your package is approved, we will provide further instructions about the transfer of your repository to the rOpenSci repository.
+- An [editor](#editors) will review your submission within 5 business days and respond with next steps. The editor may assign the package to reviewers, request that the package be updated to meet minimal criteria before review, or reject the package due to lack of fit or overlap.
+- If your package meets minimal criteria, the editor will assign  1-3 reviewers. They will be asked to provide reviews as comments on your issue within 3 weeks.
+- We ask that you respond to reviewers' comments within 2 weeks of the last-submitted review, but you may make updates to your package or respond at any time. Your response should include a link to the updated [NEWS.md](#news) of your package. Here is [an author response example](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  We encourage ongoing conversations between authors and reviewers. See the [reviewing guide](#reviewerguide) for more details.
+- Any time package changes are likely to alter the results of [the automated `pkgcheck` checks](https://docs.ropensci.org/pkgcheck), authors can request a re-check with the command, `@ropensci-review-bot check package`.
+- Please notify us immediately if you are no longer able to maintain your package or to respond to reviews. You will then be expected to either retract a submission, or to find alternative package maintainers. You can also discuss maintenance issues in the rOpenSci slack workspace.
+- Once your package is approved, we will provide further instructions about the transfer of your repository to the rOpenSci repository.
 
 Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process.
+
+
