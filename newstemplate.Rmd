@@ -4,9 +4,12 @@ repo-actions: true
 
 # NEWS template {#newstemplate}
 
-
-```markdown
+````markdown
 ```{r}
 #| child: "templates/news.md"
+````
+
 ```
 ```
+
+

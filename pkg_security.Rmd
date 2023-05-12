@@ -3,55 +3,55 @@ aliases:
   - security.html
 ---
 
-# Package Development Security Best Practices
+# Package Development Security Best Practices {#package-development-security-best-practices}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This work-in-progress chapter includes [guidance about managing secrets in packages](#pkgsecrets) and [links for further reading](#furthersecreading).
 ```
 
-## Miscellaneous
+## Miscellaneous {#miscellaneous}
 
 We recommend the article [Ten quick tips for staying safe online](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008563) by Danielle Smalls and Greg Wilson.
 
-## GitHub access security
+## GitHub access security {#git-hub-access-security}
 
-* We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
+- We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
 
-* We also recommend you regularly check who has access to your package repository, and that you prune any unused access (such as from former collaborators).
+- We also recommend you regularly check who has access to your package repository, and that you prune any unused access (such as from former collaborators).
 
-## https
+## https {#https}
 
-* If the web service your package wraps has either https or http, opt for https.
+- If the web service your package wraps has either https or http, opt for https.
 
 ## Secrets in packages {#pkgsecrets}
 
 This section contains guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
 
-### Secrets in packages and user protection
+### Secrets in packages and user protection {#secrets-in-packages-and-user-protection}
 
 Say your package needs an API key for making requests on behalf of users of your package.
 
-* In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of users of your package.
+- In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of users of your package.
+  
+  - Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+  
+  - Or your package could depend on, or encourage the use of, [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme) in the specific OS' credential stores (more secure than .Renviron): i.e. you'd create a function for setting the key, and have another one for retrieving the key; or the user would write `Sys.setenv(SUPERSECRETKEY = keyring::key_get("myservice"))` at the beginning of their script.
+  
+  - Do not print the API key even in verbose mode in any message, warning, error.
 
-    * Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
-    
-    * Or your package could depend on, or encourage the use of, [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme) in the specific OS' credential stores (more secure than .Renviron): i.e. you'd create a function for setting the key, and have another one for retrieving the key; or the user would write `Sys.setenv(SUPERSECRETKEY = keyring::key_get("myservice"))` at the beginning of their script.
-    
-    * Do not print the API key even in verbose mode in any message, warning, error.
+- In the GitHub issue template, it should be stated not to share any credentials. If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
 
-* In the GitHub issue template, it should be stated not to share any credentials. If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
-
-### Secrets in packages and development
+### Secrets in packages and development {#secrets-in-packages-and-development}
 
 You'll need to protect your secrets as you protect secrets of users, but there's more to take into account and keep in mind.
 
-#### Secrets and recorded requests in tests
+#### Secrets and recorded requests in tests {#secrets-and-recorded-requests-in-tests}
 
 If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security-chapter.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
 
 `vcr` being an rOpenSci package, you can post any question you might have to [rOpenSci forum](https://discuss.ropensci.org/).
 
-#### Share secrets with CI services
+#### Share secrets with CI services {#share-secrets-with-ci-services}
 
 Now, you might need to share secrets with [continuous integration services](#ci).
 
@@ -61,17 +61,17 @@ For more details and workflow advice, refer [to the gargle article "Managing tok
 
 Document the steps you made in [CONTRIBUTING.md](#friendlyfiles) so you, or say a new maintainer, can remember how to do that next time.
 
-#### Secrets and collaborations
+#### Secrets and collaborations {#secrets-and-collaborations}
 
-What about pull requests from external contributors? 
+What about pull requests from external contributors?
 On GitHub for instance, secrets are only available for GitHub Actions for pull requests started from the repository itself, not from fork.
-Tests using your secrets will fail unless you use some sort of mocked/cached response, so you might want to skip them depending on the context. 
-For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable. 
+Tests using your secrets will fail unless you use some sort of mocked/cached response, so you might want to skip them depending on the context.
+For instance, in your CI account you could create an environment variable called `THIS_IS_ME` and then skip tests based on the presence of this variable.
 This obviously means the PR checks by the CI are not exhaustive, so you'll need to check out the PR locally to run all tests.
 
 Document the behavior of your package for external PRs in [CONTRIBUTING.md](#friendlyfiles) for the sake of people making PRs and of people reviewing them (you in a few weeks, and other authors of the package).
 
-### Secrets and CRAN
+### Secrets and CRAN {#secrets-and-cran}
 
 On CRAN, skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring credentials.
 
@@ -81,8 +81,10 @@ On CRAN, skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring cr
 
 Useful security resources:
 
-* [rOpenSci community call "Security for R"](https://ropensci.org/commcalls/2019-05-07/) (recording, slides, etc. see in particular [the list of resources](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources));
+- [rOpenSci community call "Security for R"](https://ropensci.org/commcalls/2019-05-07/) (recording, slides, etc. see in particular [the list of resources](https://ropensci.org/blog/2019/04/09/commcall-may2019/#resources));
 
-* [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
+- [the security-related projects of unconf18](https://ropensci.org/blog/2018/06/06/unconf18_recap_2/);
 
-* [`gargle` article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+- [`gargle` article "Managing tokens securely"](gargle.r-lib.org/articles/articles/managing-tokens-securely.html)
+
+
