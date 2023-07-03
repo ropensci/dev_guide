@@ -99,5 +99,8 @@ format:
     output-file: "ropensci-dev-guide"
 babelquarto:
   mainlanguage: en
-  languages: es
+  languages: ['es', 'pt']
+title-pt: title in pt
+description-pt: description in pt
+author-pt: author in pt
 lang: en
