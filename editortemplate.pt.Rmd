@@ -1,8 +1,8 @@
 ---
-repo-actions: true
+repo-actions: yes
 ---
 
-# Editor's template {#editortemplate}
+# Modelo do editor {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 
