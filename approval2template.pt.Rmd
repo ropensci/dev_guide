@@ -1,8 +1,8 @@
 ---
-repo-actions: true
+repo-actions: yes
 ---
 
-# Reviewer approval comment template {#approval2template}
+# Modelo de comentário de aprovação do revisor {#approval2template}
 
 ::: {.content-hidden when-format="pdf"}
 
