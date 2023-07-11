@@ -10,7 +10,7 @@ repo-actions: yes
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/editor.md"
+#| child: "templates/editor.pt.md"
 ```
 ````
 
@@ -19,7 +19,7 @@ repo-actions: yes
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/editor.md"
+#| child: "templates/editor.pt.md"
 
 ```
 
