@@ -2,7 +2,7 @@
 repo-actions: yes
 ---
 
-# Modelo do editor {#editortemplate}
+# Modelo para o editor {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 
