@@ -116,6 +116,7 @@ Busca la etiqueta de revisión por pares (ver más abajo) para identificar los p
   Las capas deben ser no triviales, en el sentido de que debe haber un valor añadido significativo por encima del uso de `system()` o de vincular el programa, ya sea en darle formato a las entradas entradas y salidas, en el manejo de datos, etc.
   La mejora del proceso de instalación, o la ampliación de la compatibilidad a más plataformas, puede constituir un valor añadido si la instalación es compleja.
   Esto no incluye las capas de interfaz de otros paquetes de R o bibliotecas de C/C++ que puedan incluirse en los paquetes de R.
+    Tampoco se incluyen los paquetes que son clientes de API web, que deben pertenecer a una de las otras categorías.
   Animamos encarecidamente crear capas de interfaz a utilidades de código abierto y de licencia abierta; las excepciones se evaluarán caso por caso, teniendo en cuenta si existen opciones de código abierto.
   (Ejemplos: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
 
@@ -130,11 +131,7 @@ Además, tenemos algunos *temas especializados* con un alcance algo más amplio.
 - **datos geoespaciales**: Aceptamos paquetes centrados en el acceso, manipulación y conversión entre formatos de datos geoespaciales.
   (Ejemplos: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
 
-- **datos de texto**: Incluimos paquetes que procesan y manejan datos de texto y de lenguaje.
-  Esto se limita al procesamiento, manipulación y/o gestión de textos (por ejemplo, tokenización, origen, conversión a y entre formatos de texto estructurados, metadatos de texto y acceso a repositorios, etc. ).
-  El aprendizaje automático y los paquetes que implementan algoritmos de análisis de Procesamiento del Lenguaje Natural deben presentarse bajo la [revisión por pares de software *estadístico*](https://stats-devguide.ropensci.org/).
-  El alcance de este tema no está totalmente definido, por lo que te rogamos que abras una consulta previa a la presentación si estás pensando en presentar un paquete que entre dentro de este tema.
-  (Ejemplo: [**tokenizers**](https://github.com/ropensci/software-review/issues/33))
+- **traducción**: Como parte de nuestro trabajo en [publicación multilingüe](https://ropensci.org/multilingual-publishing/) tenemos especial interés en paquetes que faciliten la traducción y publicación de recursos científicos y de programación a múltiples lenguages (humanos) para que sean accesibles a públicos más amplios y diversos. Podría tratarse de interfaces para programas de traducción automática, infraestructura para gestionar la documentación en varios lenguages o programas que accedan a recursos lingüísticos especializados.  Se trata de un ámbito nuevo y experimental, por lo que te rogamos que abras un [issue para preguntar si el software está dentro del alcance de rOpenSci](https://github.com/ropensci/software-review/issues/new/choose) si te interesa presentar un paquete en esta categoría.
 
 ### Otras consideraciones sobre el ámbito de aplicación {#other-scope-considerations}
 
