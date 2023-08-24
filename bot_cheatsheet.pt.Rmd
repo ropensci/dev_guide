@@ -1,154 +1,154 @@
-# Bot commands {#bot-commands}
+# Comandos do bot {#bot-commands}
 
-## For everyone {#for-everyone}
+## Para todos {#for-everyone}
 
-Note that we clean issue threads by removing extraneous content, so the record of you having asked for bot-help will most often quickly be erased or hidden.
+Observe que limpamos os tópicos de problemas removendo conteúdo estranho, portanto, o registro de que você solicitou ajuda de bots será rapidamente apagado ou ocultado.
 
-### See the list of commands available to you {#see-the-list-of-commands-available-to-you}
+### Veja a lista de comandos disponíveis para você {#see-the-list-of-commands-available-to-you}
 
-If you need a quick reminder!
+Se você precisar de um lembrete rápido!
 
 ```markdown
 @ropensci-review-bot help
 ```
 
-### See the code of conduct {#see-the-code-of-conduct}
+### Veja o código de conduta {#see-the-code-of-conduct}
 
 ```markdown
 @ropensci-review-bot code of conduct
 ```
 
-## For authors {#for-authors}
+## Para autores {#for-authors}
 
-### Check package with pkgcheck {#check-package-with-pkgcheck}
+### Verificar o pacote com o pkgcheck {#check-package-with-pkgcheck}
 
-When your package has substantially changed.
+Quando seu pacote tiver mudado substancialmente.
 
 ```markdown
 @ropensci-review-bot check package
 ```
 
-### Submit response to reviewers {#submit-response-to-reviewers}
+### Enviar resposta aos revisores {#submit-response-to-reviewers}
 
-To record your response to reviewers.
+Para registrar sua resposta aos revisores.
 
 ```markdown
 @ropensci-review-bot submit response <response-url>
 ```
 
-where `<response_url>` is the link to the response comment in the issue thread.
+onde `<response_url>` é o link para o comentário de resposta no tópico do problema.
 
-### Finalize repo transfer {#finalize-repo-transfer}
+### Finalizar a transferência do repositório {#finalize-repo-transfer}
 
-After you've accepted the invitation to rOpenSci GitHub organization and transferred your GitHub repository to it, run this command to re-gain admin access to your repository.
+Depois que você aceitar o convite para a organização do GitHub do rOpenSci e transferir seu repositório do GitHub para ela, execute este comando para obter novamente o acesso de administrador ao seu repositório.
 
 ```markdown
 @ropensci-review-bot finalize transfer of <package-name>
 ```
 
-### Get a new invite after approval {#get-a-new-invite-after-approval}
+### Obter um novo convite após a aprovação {#get-a-new-invite-after-approval}
 
-If you missed the one-week window to accept the invitation to the rOpenSci GitHub organization, run this to receive a new one.
+Se você perdeu o prazo de uma semana para aceitar o convite para a organização do rOpenSci no GitHub, execute isso para receber um novo convite.
 
 ```markdown
 @ropensci-review-bot invite me to ropensci/<package-name>
 ```
 
-## For the editor-in-chief {#for-the-editor-in-chief}
+## Para o editor-chefe {#for-the-editor-in-chief}
 
-### Assign an editor {#assign-an-editor}
+### Designar um editor {#assign-an-editor}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
 ```
 
-### Put submission on hold {#put-submission-on-hold}
+### Colocar o envio em espera {#put-submission-on-hold}
 
-See [editorial policy](#policiesreviewprocess).
+Veja [política editorial](#policiesreviewprocess).
 
 ```markdown
 @ropensci-review-bot put on hold
 ```
 
-### Indicate the submission is out of scope {#indicate-the-submission-is-out-of-scope}
+### Indique que o envio está fora do escopo {#indicate-the-submission-is-out-of-scope}
 
-Do not forget to first post a comment explaining the decision and thanking the author(s) for their submission.
+Não se esqueça de publicar primeiro um comentário explicando a decisão e agradecendo ao(s) autor(es) pelo envio.
 
 ```markdown
 @ropensci-review-bot out-of-scope
 ```
 
-## For assigned editor {#for-assigned-editor}
+## Para o editor designado {#for-assigned-editor}
 
-### Put submission on hold {#put-submission-on-hold}
+### Colocar o envio em espera {#put-submission-on-hold}
 
-See [editorial policy](#policiesreviewprocess).
+Veja [política editorial](#policiesreviewprocess).
 
 ```markdown
 @ropensci-review-bot put on hold
 ```
 
-### Check package with pkgcheck {#check-package-with-pkgcheck}
+### Verificar o pacote com o pkgcheck {#check-package-with-pkgcheck}
 
-Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+Geralmente, apenas em consultas pré-submissão ou quando os autores indicam que o pacote foi substancialmente alterado.
 
 ```markdown
 @ropensci-review-bot check package
 ```
 
-### Check statistical standards {#check-statistical-standards}
+### Verificar padrões estatísticos {#check-statistical-standards}
 
-Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+Geralmente, apenas em consultas pré-submissão ou quando os autores indicam que o pacote foi substancialmente alterado.
 
 ```markdown
 @ropensci-review-bot check srr
 ```
 
-### Check that README has software review badge {#check-that-readme-has-software-review-badge}
+### Verifique se o README tem o selo de revisão de software {#check-that-readme-has-software-review-badge}
 
-Towards the end of the submission process.
+No final do processo de envio.
 
 ```markdown
 @ropensci-review-bot check readme
 ```
 
-### Indicate you are now seeking reviewers {#indicate-you-are-now-seeking-reviewers}
+### Indique que você está procurando revisores {#indicate-you-are-now-seeking-reviewers}
 
 ```markdown
 @ropensci-review-bot seeking reviewers
 ```
 
-### Assign a reviewer {#assign-a-reviewer}
+### Atribuir um revisor {#assign-a-reviewer}
 
 ```markdown
 @ropensci-review-bot assign @username as reviewer
 ```
 
-or
+ou
 
 ```markdown
 @ropensci-review-bot add @username as reviewer
 ```
 
-### Remove a reviewer {#remove-a-reviewer}
+### Remover um revisor {#remove-a-reviewer}
 
 ```markdown
 @ropensci-review-bot remove @username from reviewers
 ```
 
-### Tweak review due date {#tweak-review-due-date}
+### Ajustar a data de vencimento da revisão {#tweak-review-due-date}
 
 ```markdown
 @ropensci-review-bot set due date for @username to YYYY-MM-DD
 ```
 
-### Record that a review was submitted {#record-that-a-review-was-submitted}
+### Registre que uma revisão foi enviada {#record-that-a-review-was-submitted}
 
 ```markdown
 @ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
-### Approve package {#approve-package}
+### Aprovar o pacote {#approve-package}
 
 ```markdown
 @ropensci-review-bot approve <package-name>
