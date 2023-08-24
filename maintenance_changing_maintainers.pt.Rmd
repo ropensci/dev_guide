@@ -1,66 +1,66 @@
 ---
-aliases:
+aliases: 
   - changing-maintainers.html
 ---
 
-# Changing package maintainers {#changing-maintainers}
+# Mudança de mantenedores de pacotes {#changing-maintainers}
 
 ```{block, type="summaryblock"}
 This chapter presents our guidance for taking over maintenance of a package.
 ```
 
-## Do you want to give up maintenance of your package? {#do-you-want-to-give-up-maintenance-of-your-package}
+## Você quer desistir da manutenção do seu pacote? {#do-you-want-to-give-up-maintenance-of-your-package}
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called *Call For Contributors*. In that section we highlight packages looking for new maintainers. If you are looking to leave the role of maintainer of your package, get in touch with us and we can highlight your package in our newsletter. We've been very successful thus far, finding new maintainers for six out of six packages.
+Temos uma seção de chamada para colaboradores em nosso boletim informativo que é publicado a cada duas semanas. A seção se chama *Chamada para colaboradores*. Nessa seção, destacamos os pacotes que procuram novos mantenedores. Se você deseja deixar a função de mantenedor do seu pacote, entre em contato conosco e poderemos destacar seu pacote em nosso boletim informativo. Tivemos muito sucesso até agora, encontrando novos mantenedores para seis dos seis pacotes.
 
-## Do you want to take over maintenance of a package? {#do-you-want-to-take-over-maintenance-of-a-package}
+## Você quer assumir a manutenção de um pacote? {#do-you-want-to-take-over-maintenance-of-a-package}
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called *Call For Contributors*. In that section we highlight packages looking for new maintainers. If you are not subscribed to the newsletter already, it's a good idea to [subscribe](https://news.ropensci.org/) to get notified when there's a package looking for a new maintainer.
+Temos uma seção de chamada para colaboradores em nosso boletim informativo que é publicado a cada duas semanas. A seção se chama *Chamada para colaboradores*. Nessa seção, destacamos os pacotes que procuram novos mantenedores. Se você ainda não está inscrito no boletim informativo, é uma boa ideia [assinar](https://news.ropensci.org/) para que você seja notificado quando houver um pacote procurando por um novo mantenedor.
 
-## Taking over maintenance of a package {#taking-over-maintenance-of-a-package}
+## Assumir a manutenção de um pacote {#taking-over-maintenance-of-a-package}
 
-- Add yourself as the new maintainer in the DESCRIPTION file, with `role = c("aut", "cre")`, and make the former maintainer `aut` only.
-- Make sure to change maintainer to your name anywhere else in the package, while retaining the former maintainer as an author (e.g, package level manual file, CONTRIBUTING.md, CITATION, etc.)
-- The [Collaboration Guide](#collaboration) has guidance about adding new maintainers and collaborators
-- Packages that have been archived or [orphaned] on CRAN don't need permission of the previous maintainer to be taken over on CRAN. In these cases do get in touch with us so we can offer any help as needed.
-- If the package has not been archived by CRAN and there is a maintainer change, have the old maintainer email CRAN and put in writing who the new maintainer is. Make sure to mention that email about the maintainer change when you submit the first new version to CRAN. If the old maintainer is unreachable or will not send this email get in touch with rOpenSci staff.
-- If the previous maintainer is reachable, scheduling a meeting will help you get the "lay of the land"
+- Adicione você como o novo mantenedor no arquivo DESCRIPTION, com `role = c("aut", "cre")` e torne você o antigo mantenedor `aut` apenas.
+- Certifique-se de alterar o mantenedor para o seu nome em qualquer outro lugar do pacote, mantendo o antigo mantenedor como autor (por exemplo, arquivo de manual no nível do pacote, CONTRIBUTING.md, CITATION etc.)
+- Os [Guia de Colaboração](#collaboration) tem orientações sobre como adicionar novos mantenedores e colaboradores
+- Pacotes que foram arquivados ou [órfãos][orphaned] no CRAN não precisam da permissão do mantenedor anterior para serem retomados no CRAN. Nesses casos, entre em contato conosco para que possamos oferecer a ajuda necessária.
+- Se o pacote não tiver sido arquivado pelo CRAN e houver uma mudança de mantenedor, peça ao mantenedor antigo que envie um e-mail ao CRAN e informe por escrito quem é o novo mantenedor. Certifique-se de mencionar esse e-mail sobre a mudança de mantenedor quando você enviar a primeira nova versão ao CRAN. Se o antigo mantenedor estiver inacessível ou não enviar esse e-mail, entre em contato com a equipe do rOpenSci.
+- Se o mantenedor anterior estiver acessível, agendar uma reunião ajudará você a conhecer melhor a situação
 
-### FAQ for new maintainers {#faq-for-new-maintainers}
+### Perguntas frequentes para novos mantenedores {#faq-for-new-maintainers}
 
-- There are a few unresolved issues from the package that I don't know how to fix. Whom may I ask for help?
+- Há alguns problemas não resolvidos no pacote que eu não sei como corrigir. A quem posso pedir ajuda?
   
-  It depends; here's what to do in different scenarios:
+  Depende; aqui está o que você deve fazer em diferentes cenários:
   
-  - if the old maintainer can be contacted: reach out to them, and ask for help;
-  - rOpenSci slack: good for getting help on specific or general problems, see the #package-maintenance channel;
-  - [rOpenSci discussion forum](https://discuss.ropensci.org/c/package-development/29): this forum is a good option, feel free to ask any questions there;
-  - [rOpenSci staff](https://ropensci.org/about/#team): feel free to get in touch with one of us via email/pinging us on GitHub issues, we'll be happy to help;
-  - of course there's general R help too if that suits your needs: RStudio community forum, StackOverflow, Twitter #rstats, etc.
+  - Se for possível entrar em contato com o antigo mantenedor: entre em contato com ele e peça ajuda;
+  - Slack do rOpenSci: bom para obter ajuda em problemas específicos ou gerais, consulte o canal #package-maintenance;
+  - [Fórum de discussão do rOpenSci](https://discuss.ropensci.org/c/package-development/29) Se você quiser fazer perguntas, sinta-se à vontade para fazê-lo;
+  - [Equipe do rOpenSci](https://ropensci.org/about/#team) Se você quiser entrar em contato com um de nós por e-mail ou nos enviando um problema no GitHub, ficaremos felizes em ajudar;
+  - é claro que você também pode obter ajuda geral sobre o R, se isso atender às suas necessidades: Fórum da comunidade RStudio, StackOverflow, Twitter #rstats, etc.
 
-- How much can/should you change in the package?
+- O quanto você pode/deve alterar no pacote?
   
-  For general help on changing code in a package, see the [Package evolution](#evolution)
-  section.
+  Para obter ajuda geral sobre como alterar o código em um pacote, consulte a seção [Evolução do pacote](#evolution)
+  de pacotes.
   
-  When thinking though this, there are many considerations.
+  Quando você pensa nisso, há muitas considerações a fazer.
   
-  How much time do you have to spend on the package? If you have very limited time, it'd be best to focus on the most critical tasks, whatever those are for the package in question. If you have ample amount of time, your goals can be larger in scope.
+  Quanto tempo você tem para dedicar ao pacote? Se você tiver um tempo muito limitado, seria melhor se concentrar nas tarefas mais importantes, sejam elas quais forem para o pacote em questão. Se você tiver bastante tempo, suas metas poderão ter um escopo maior.
   
-  How mature is the package? If the package is mature, many people likely have code that depends on the package's API (i.e., the exported functions, and their parameters). In addition, if there are packages that depend on your package on CRAN, then you need to check that whatever changes you make don't break those packages. The more mature the package is, the more careful you need to be about making changes, especially with the names of exported functions, their parameters, and the exact structure of what exported functions return. Changes can be more easily made that only affect internals of the package.
+  Qual é o grau de maturidade do pacote? Se o pacote for maduro, muitas pessoas provavelmente têm códigos que dependem da API do pacote (ou seja, as funções exportadas e seus parâmetros). Além disso, se houver pacotes que dependam do seu pacote no CRAN, você precisará verificar se as alterações que fizer não quebrarão esses pacotes. Quanto mais maduro for o pacote, mais cuidadoso você precisará ser ao fazer alterações, especialmente com os nomes das funções exportadas, seus parâmetros e a estrutura exata do que as funções exportadas retornam. É mais fácil fazer alterações que afetem apenas os aspectos internos do pacote.
 
-## Tasks for rOpenSci staff {#tasks-for-ropensci-staff}
+## Tarefas da equipe do rOpenSci {#tasks-for-ropensci-staff}
 
-As an organization, rOpenSci is interested in making sure packages in our suite are available as long as they are useful to the community. As maintainers need to move on, we will in most cases try to get a new maintainer for each package. To these ends, the following tasks are the responsibility of rOpenSci staff.
+Como organização, a rOpenSci está interessada em garantir que os pacotes de nossa suíte estejam disponíveis enquanto forem úteis para a comunidade. Como os mantenedores precisam seguir em frente, na maioria dos casos tentaremos conseguir um novo mantenedor para cada pacote. Para isso, as tarefas a seguir são de responsabilidade da equipe da rOpenSci.
 
-- If a repository hasn't seen any activity (commits, issues, pull requests) in quite a long time it may simply be a mature package with little need for changes/etc., so take this into account.
-- Current maintainer has not responded to issues/pull requests in many months, via any of emails, GitHub issues, or Slack messages:
-  - Make contact and see what the situation is. They may say they'd like to step down as maintainer, in which case look for a new maintainer
-- Current maintainer is completely missing/not responding
-  - If this happens we will try to contact the maintainer for up to one month. However, if updating the package is urgent, we may use our admin access to make changes on their behalf.
-- Put a call out in the "Call for Contributors" section of the rOpenSci newsletter for a new maintainer - open an issue in the [newsletter repo](https://github.com/ropensci/monthly/).
+- Se um repositório não tiver nenhuma atividade (commits, issues, pull requests) há muito tempo, ele pode ser simplesmente um pacote maduro com pouca necessidade de alterações/etc., portanto, leve isso em consideração.
+- O mantenedor atual não responde a problemas/solicitações pull há muitos meses, por meio de e-mails, problemas no GitHub ou mensagens no Slack:
+  - Entre em contato e veja qual é a situação. Ele pode dizer que gostaria de deixar o cargo de mantenedor e, nesse caso, procure um novo mantenedor
+- O mantenedor atual está completamente ausente/não está respondendo
+  - Se isso acontecer, tentaremos entrar em contato com o mantenedor por até um mês. No entanto, se a atualização do pacote for urgente, poderemos usar nosso acesso de administrador para fazer alterações em seu nome.
+- Faça uma chamada na seção "Call for Contributors" do boletim informativo da rOpenSci para um novo mantenedor - abra uma edição na seção [repositório do](https://github.com/ropensci/monthly/).
 
-[orphaned]: https://cran.r-project.org/src/contrib/Orphaned/README
+[órfão]: https://cran.r-project.org/src/contrib/Orphaned/README
 
 
 
