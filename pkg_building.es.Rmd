@@ -68,6 +68,23 @@ Esto puede incluir la generación automática del código necesario para reprodu
 El paquete [`tabulizer`](https://github.com/ropensci/tabulizer) por ejemplo, tiene un flujo de trabajo interactivo para extraer tablas, pero también puede extraer sólo coordenadas, por lo que se pueden volver a ejecutar los mismos pasos como un script.
 Otros dos ejemplos de aplicaciones shiny que generan código son [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/)y [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
 
+### Comprobación de inputs
+
+Recomendamos que tu paquete utilice un método coherente de tu elección para [comprobar los inputs](https://blog.r-hub.io/2022/03/10/input-checking/) -- ya sea R base, un paquete de R o ayudantes personalizados.
+
+### Paquetes que envuelven recursos web (clientes API)
+
+Si tu paquete accede a una API web o a otro recurso web,
+
+- asegúrate de que las peticiones envían un [agente de usuario](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent) es decir, una forma de identificar qué (tu paquete) o quién envió la solicitud. Los usuarios deben poder anular el agente de usuario por defecto del paquete. Lo ideal sería que el agente de usuario fuera diferente en los servicios de integración continua y en los de desarrollo (basándose, por ejemplo, en los nombres de usuario de GitHub de los desarrolladores).
+- Puede que elijas valores por defecto diferentes (mejores) que los de la API, en cuyo caso deberías documentarlos.
+- Tu paquete debería ayudar con la paginación, permitiendo que los usuarios no se preocupen en absoluto de ella, ya que tu paquete realiza todas las peticiones necesarias.
+- Tu paquete debe ayudar a limitar la tasa de acuerdo con las normas de la API.
+- Tu paquete debe reproducir los errores de la API, y posiblemente explicarlos en mensajes de error informativos.
+- Tu paquete podría exportar funciones de alto nivel y funciones de bajo nivel, estas últimas permitiendo a los usuarios llamar directamente a los puntos finales de la API con más control (como `gh::gh()`).
+
+Para más información, consulta la entrada del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
+
 ## Estilo del código {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
