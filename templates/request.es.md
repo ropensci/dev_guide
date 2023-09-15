@@ -13,7 +13,11 @@ Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centrada
 ¡Sé amable!
 Consulta nuestra guía de revisión y el [código de conducta](https://ropensci.org/code-of-conduct/) para más información.
 
-¿Puedes revisar? Si no puedes, siempre nos sirve si puedes sugerir personas alternativas. Si no tengo noticias tuyas en el plazo de una semana, supondré que no puedes hacer una revisión en este momento.
+[SI SE SOLICITÓ TUTORÍA: Has indicado en tu formulario que te gustaría tener tutoría para tu primera revisión.  
+Sientete libre de contactarme cuando lo necesites durante este proceso, lo que incluye hacer preguntas por correo electrónico y Slack (recibirás una invitación al Slack de rOpenSci), y compartir borradores de revisiones para recibir devoluciones antes de publicarlas. 
+También me encantará hacer una breve videollamada para explicar el proceso. Por favor, házmelo saber en tu respuesta si quieres programar una.]
+
+¿Puedes revisar? Si no puedes, siempre nos sirve si puedes sugerir a otras personas. Si no tengo noticias tuyas en el plazo de una semana, supondré que no puedes hacer una revisión en este momento.
 
 Gracias por tu tiempo.
 
