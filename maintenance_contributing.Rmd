@@ -1,26 +1,34 @@
+---
+repo-actions: true
+aliases:
+  - contributingguide.html
+---
+
 # Contributing Guide {#contributingguide}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This chapter describes our Contributing Guide that outlines how you can make code and non-code contributions to the rOpenSci project.
 
 ```
 
-So you want to contribute to rOpenSci? Fantastic! We developed the [rOpenSci Community Contributing Guide](https://contributing.ropensci.org/) to welcome you to rOpenSci and help you recognize yourself as a potential contributor. It will help you figure out what you might gain by giving your time, expertise, and experience, match your needs with things that will help rOpenSci’s mission, and connect you with resources to help you along the way.
+So you want to contribute to rOpenSci? Fantastic! We developed the [rOpenSci Community Contributing Guide](https://contributing.ropensci.org/) to welcome you to rOpenSci and help you recognize yourself as a potential contributor. It will help you figure out what you might gain by giving your time, expertise, and experience, match your needs with things that will help rOpenSci's mission, and connect you with resources to help you along the way.
 
 Our staff and community actively foster a welcoming environment where users and developers from different backgrounds and skill levels learn, share ideas and innovate together openly through shared norms and shared software. Participation in all rOpenSci activities is supported by [our Code of Conduct](https://ropensci.org/code-of-conduct).
 
-We welcome code and non-code contributions from new and seasoned coders at any career stage, and in any sector. You don’t have to be a developer! Maybe you want to **spend 30 minutes** sharing your package use case in our public forum or reporting a bug, **one hour** learning by attending a Community Call, **five hours** reviewing an R package submitted for open peer review, **or maybe you want to make an ongoing commitment** to help maintain a package.
+We welcome code and non-code contributions from new and seasoned coders at any career stage, and in any sector. You don't have to be a developer! Maybe you want to **spend 30 minutes** sharing your package use case in our public forum or reporting a bug, **one hour** learning by attending a Community Call, **five hours** reviewing an R package submitted for open peer review, **or maybe you want to make an ongoing commitment** to help maintain a package.
 
 What are some benefits of contributing?
 
-*   Connect with a community  who shares your interest in making science more open
-*   Learn from people outside your domain who use R with challenges similar to yours
-*   Ask and answer new research questions by getting to know new software tools and allies
-*   Feel confident and supported in your efforts to write code and develop software
-*   Gain visibility for your open source work
-*   Improve the software you use or build
-*   Level up your R skills and help others level up theirs
-*   Level up your writing skills
-*   Get more exposure for your package
+- Connect with a community  who shares your interest in making science more open
+- Learn from people outside your domain who use R with challenges similar to yours
+- Ask and answer new research questions by getting to know new software tools and allies
+- Feel confident and supported in your efforts to write code and develop software
+- Gain visibility for your open source work
+- Improve the software you use or build
+- Level up your R skills and help others level up theirs
+- Level up your writing skills
+- Get more exposure for your package
 
-Consult our [Contributing Guide](https://contributing.ropensci.org/) and browse "What brings you here?" to find which _I want to …_ statements fit you best and choose your path! To help you recognize yourself, we’ve grouped these into: Discover; Connect; Learn; Build; Help. For each category, we list examples of what those contributions might look like and we link to our resources for the details you need.
+Consult our [Contributing Guide](https://contributing.ropensci.org/) and browse "What brings you here?" to find which *I want to …* statements fit you best and choose your path! To help you recognize yourself, we've grouped these into: Discover; Connect; Learn; Build; Help. For each category, we list examples of what those contributions might look like and we link to our resources for the details you need.
+
+

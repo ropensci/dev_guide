@@ -1,0 +1,29 @@
+---
+repo-actions: true
+---
+
+# Plantilla de revisión  {#reviewtemplate}
+
+Puedes guardar esto como un archivo R Markdown, o eliminar el YAML y guardarlo como un archivo Markdown.
+
+::: {.content-hidden when-format="pdf"}
+
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+cat(readLines("templates/review.es.md"), sep = "\n")
+```
+````
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+```{r}
+#| child: "templates/review.md"
+```
+
+:::
+
+

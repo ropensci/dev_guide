@@ -1,0 +1,241 @@
+# Evolución de paquetes - cambiando cosas en tu paquete  {#evolution}
+
+```{block, type="summaryblock"}
+Este capítulo presenta nuestra guía para realizar modificaciones a tu paquete: cambiar los nombres de los parámetros, cambiar los nombres de las funciones, eliminar funciones, e incluso retirar y archivar paquetes.
+
+Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/).
+```
+
+## Filosofía de los cambios {#philosophy-of-changes}
+
+Cada persona es libre de tener su propia opinión sobre cuán libremente se pueden cambiar los parámetros, funciones, etc.
+en un paquete; ni CRAN ni ningún otro sitio impone normas sobre esto.
+En general, a medida que un paquete madura los cambios en los métodos orientados al uso (es decir, las funciones exportadas en un paquete R) deberían ser muy infrecuentes.
+Los paquetes de los cuales dependen muchos otros paquetes probablemente sean más cuidadosos con los cambios, y deberían serlo.
+
+## El paquete lifecycle {#the-lifecycle-package}
+
+En este capítulo se presentan soluciones que no requieren el paquete lifecycle, pero que pueden resultarte útiles.
+Te recomendamos [leer la documentación de lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
+
+## Parámetros: cambiando los nombres de los parámetros {#parameters-changing-parameter-names}
+
+A veces hay que cambiar los nombres de los parámetros, ya sea en pos de mayor claridad u otras razones.
+
+Un posible enfoque es comprobar si los argumentos obsoletos no faltan, y llamar a `stop()` con un mensaje significativo.
+
+```r
+foo_bar <- function(x, y) {
+    if (!missing(x)) {
+        stop("utiliza 'y' en lugar de 'x'")
+    }
+    y^2
+}
+
+foo_bar(x = 5)
+#> Error en foo_bar(x = 5) : utiliza 'y' en lugar de 'x' 
+```
+
+Si quieres que sea más útil, podrías emitir una advertencia pero tomar automáticamente la acción necesaria
+
+```r
+foo_bar <- function(x, y) {
+    if (!missing(x)) {
+        warning("utiliza 'y' en lugar de 'x'")
+        y <- x
+    }
+    y^2
+}
+
+foo_bar(x = 5)
+#> Warning message:
+#> In foo_bar(x = 5) : utiliza 'y' en lugar de 'x'
+#> 25
+```
+
+Ten cuidado con el parámetro `...`.
+Si tu función tiene `...` y ya has eliminado un parámetro (llamémoslo `z`), alguien puede tener un código más antiguo que utilice `z`.
+Cuando usen `z`, como no es un parámetro en la definición de la función, es probable que sea capturado por `...` y se ignore silenciosamente -- no es lo que quieres.
+En su lugar, deja el argumento `z`, emitiendo un error si se utiliza.
+
+## Funciones: cambiando los nombres de las funciones {#functions-changing-function-names}
+
+Si tienes que cambiar el nombre de una función, hazlo gradualmente, como con cualquier otro cambio en tu paquete.
+
+Digamos que tienes una función `foo`.
+
+```r
+foo <- function(x) x + 1
+```
+
+Pero quieres cambiar el nombre de la función a `bar`.
+
+En lugar de simplemente cambiar el nombre de la función y que `foo` deje de existir directamente, en la primera versión del paquete donde `bar` aparezca, haz un alias como
+
+```r
+#' foo - añadir 1 a un input
+#' @export
+foo <- function(x) x + 1
+
+#' @export
+#' @rdname foo
+bar <- foo
+```
+
+Con la solución anterior, se pueden usar tanto `foo()` como `bar()` -- cualquiera de los dos hará lo mismo, ya que son la misma función.
+
+También es útil tener un mensaje, pero entonces sólo querrás emitirlo cuando se use la función que va a desaparecer, por ejemplo
+
+```r
+#' foo - añadir 1 a un input
+#' @export
+foo <- function(x) {
+    warning("por favor, utiliza bar() en lugar de foo()", call. = FALSE)
+    bar(x)
+}
+
+#' @export
+#' @rdname foo
+bar <- function(x) x + 1
+```
+
+Después de que la versión del paquete con `foo` y `bar` haya sido usada durante un tiempo, en la siguiente versión puedes eliminar el antiguo nombre de la función (`foo`), y tener sólo `bar`.
+
+```r
+#' bar - añadir 1 a un input
+#' @export
+bar <- function(x) x + 1
+```
+
+## Funciones: obsoletas y caducas {#functions-deprecate-defunct}
+
+Para eliminar una función de un paquete (digamos que el nombre de tu paquete es `holamundo`), puedes utilizar el siguiente protocolo
+
+- Marca la función como obsoleta en la versión del paquete `x` (por ejemplo `v0.2.0`)
+
+En la propia función, utiliza `.Deprecated()` para indicar cual es la nueva función que substituye la anterior.
+
+```r
+foo <- function() {
+    .Deprecated("bar")
+}
+```
+
+Hay opciones en `.Deprecated` para especificar un nuevo nombre de función, así como un nuevo nombre de paquete, lo que tiene sentido cuando se mueven funciones a paquetes diferentes.
+
+El mensaje que da `.Deprecated` es una advertencia, por lo que los usuarios pueden suprimirla con `suppressWarnings()` si lo desean.
+
+Haz una página de manual para las funciones obsoletas por ejemplo:
+
+```r
+#' Funciones obsoletas en holamundo
+#' 
+#' Estas funciones aún funcionan pero serán eliminadas (obsoletas) en la próxima versión.
+#' 
+#' \itemize { 
+#'   \item \code{\link{foo}}: Esta función está obsoleta y se eliminará en la 
+#'    próxima versión de este paquete.
+#' }
+#' 
+#' @name holamundo-deprecated
+NULL
+```
+
+Esto crea una página de manual a la que los usuarios pueden acceder como ``?`holamundo-deprecated``` y verán en el índice de la documentación.
+Añade cualquier función a esta página según sea necesario, y quítala cuando una función caduque (ver más abajo).
+
+- En la próxima versión (`v0.3.0`) puedes caducar la función (es decir, que desaparezca completamente del paquete, excepto por una página *man* con una nota sobre ella).
+
+En la propia función, utiliza `.Defunct()` de esta manera:
+
+```r
+foo <- function() {
+    .Defunct("bar")
+}
+```
+
+Observa que el mensaje en `.Defunct` es un error para que la función se detenga mientras que `.Deprecated` utiliza una advertencia que permite que la función continúe.
+
+Además, es bueno añadir `...` a todas las funciones caducas para que si los usuarios pasan algún parámetro obtengan el mismo mensaje de caducidad en lugar de un error de `argumento no utilizado` de esta forma:
+
+```r
+foo <- function(...) {
+    .Defunct("bar")
+}
+```
+
+Sin `...` da:
+
+```r
+foo(x = 5)
+#> Error en foo(x = 5) : argumento no utilizado (x = 5)
+```
+
+Y con `...` da:
+
+```r
+foo(x = 5)
+#> Error: 'foo' ha sido eliminada de este paquete
+```
+
+Haz una página de manual para las funciones caducas por ejemplo:
+
+```r
+#' Funciones caducas en holamundo
+#' 
+#' Estas funciones han sido removidas, ya no están disponibles.
+#'
+#' \itemize { 
+#'   \item \code{\link{foo}}:  Esta función ha sido removida
+#' }
+#' 
+#' @name holamundo-defunct
+NULL
+```
+
+Esto crea una página de manual que se accede como ``?`holamundo-defunct``` y que aparece en el índice de documentación.
+Añade a esta página las funciones que necesites.
+Es probable que quieras mantener esta página indefinidamente.
+
+### Testeando las funciones obsoletas {#testing-deprecated-functions}
+
+No es necesario que cambies los test de las funciones obsoletas hasta que caduquen.
+
+- Ten en cuenta cualquier cambio realizado en una función obsoleta. Además de utilizar `.Deprecated` dentro de la función, ¿has cambiado los parámetros en la función obsoleta, o has creado una nueva función que sustituye a la función obsoleta, etc.? Hay que testear esos cambios, si se han hecho.
+- En relación con lo anterior, si a la función obsoleta se le cambia simplemente el nombre, tal vez se pueda testar que la función  antigua y la nueva devuelven resultados idénticos.
+- [`suppressWarnings()` podría utilizarse](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir la advertencia emitida desde `.Deprecated`. Pero como las pruebas no están orientadas al uso, no es tan malo que las pruebas emitan advertencias, y la advertencia podría incluso utilizarse como recordatorio para quien mantiene el paquete.
+
+Una vez que se caduca una función, sus tests se eliminan sin más.
+
+## Archivando paquetes  {#archivalguidance}
+
+Por lo general, el software tiene una vida útil finita, y es posible que los paquetes deban ser archivados en algún momento.
+Los paquetes son [archivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) y transladados a una organización dedicada de GitHub, [ropensci-archive](https://github.com/ropensci-archive).
+Antes de archivar, el contenido del archivo *README* debe trasladarse a una ubicación alternativa (como "README-OLD.md"), y sustituirse por un contenido mínimo que incluya algo como lo siguiente
+
+```md
+# <nombre del paquete>
+
+[![Estado del proyecto: sin soporte](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+[![Etiqueta de revisión por pares](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
+
+Este paquete ha sido archivado. El antiguo README está ahora en [README-OLD](<link-a-README-viejo>).
+```
+
+La etiqueta del estado del repositorio debe ser "*unsupported*" (sin soporte) para los paquetes anteriormente publicados, o "*abandoned*" (abandonado) para los ex paquetes conceptuales o en proceso, en cuyo caso el código de la etiqueta anterior debe sustituirse por:
+
+```md
+[![Estado del proyecto: abandonado](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+```
+
+Un ejemplo de un archivo *README* mínimo en un paquete archivado está en [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md).
+Una vez que el *README* se ha copiado en otro lugar y se ha reducido a su forma mínima, hay que seguir los siguientes pasos
+
+- [ ] Cierra los issues con una frase que explique la situación y enlace a esta guía.
+- [ ] Archiva el repositorio en GitHub (la opción se encuentra en la configuración del repositorio).
+- [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo haga (puedes enviar un correo electrónico a `info@ropensci.org`).
+
+Los paquetes archivados pueden ser desarchivados si quien lo mantenía, o una nueva persona, deciden reanudar el mantenimiento.
+Para ello, ponte en contacto con rOpenSci y se transferirá el repo a la organización ropenscilabs.
+
+

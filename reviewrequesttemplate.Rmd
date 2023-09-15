@@ -1,8 +1,13 @@
+---
+repo-actions: true
+---
+
 # Review request template {#reviewrequesttemplate}
 
 Editors may make use of the e-mail template below in recruiting reviewers.
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -10,11 +15,16 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 #| child: "templates/request.md"
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/request.md"
 
 ```
+
 :::
+
+

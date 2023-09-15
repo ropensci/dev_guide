@@ -1,23 +1,28 @@
+---
+aliases:
+  - evolution.html
+---
+
 # Package evolution - changing stuff in your package {#evolution}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions, and even retiring and archiving packages.
 
 _This chapter was initially contributed as a tech note on rOpenSci website by [Scott Chamberlain](https://github.com/sckott); you can read the original version [here](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
 
-## Philosophy of changes
+## Philosophy of changes {#philosophy-of-changes}
 
-Everyone's free to have their own opinion about how freely parameters/functions/etc. are changed in a library - rules about package changes are not enforced by CRAN or otherwise. Generally, as a library gets more mature, changes to user facing methods (i.e., exported functions in an R package) should become very rare. Libraries that are dependencies of many other libraries are likely to be more careful about changes, and should be. 
+Everyone's free to have their own opinion about how freely parameters/functions/etc. are changed in a library - rules about package changes are not enforced by CRAN or otherwise. Generally, as a library gets more mature, changes to user facing methods (i.e., exported functions in an R package) should become very rare. Libraries that are dependencies of many other libraries are likely to be more careful about changes, and should be.
 
-## The lifecycle package
+## The lifecycle package {#the-lifecycle-package}
 
 This chapter presents solutions that do not require the lifecycle package but you might still find it useful.
 We recommend [reading the lifecycle documentation](https://lifecycle.r-lib.org/articles/stages.html).
 
-## Parameters: changing parameter names
+## Parameters: changing parameter names {#parameters-changing-parameter-names}
 
-Sometimes parameter names must be changed for clarity, or some other reason. 
+Sometimes parameter names must be changed for clarity, or some other reason.
 
 A possible approach is check if deprecated arguments are not missing, and stop providing a meaningful message.
 
@@ -50,9 +55,9 @@ foo_bar(x = 5)
 
 Be aware of the parameter `...`. If your function has `...`, and you have already removed a parameter (lets call it `z`), a user may have older code that uses `z`. When they pass in `z`, it's not a parameter in the function definition, and will likely be silently ignored -- not what you want. Instead, leave the argument around, throwing an error if it used.
 
-## Functions: changing function names
+## Functions: changing function names {#functions-changing-function-names}
 
-If you must change a function name, do it gradually, as with any other change in your package. 
+If you must change a function name, do it gradually, as with any other change in your package.
 
 Let's say you have a function `foo`.
 
@@ -60,7 +65,7 @@ Let's say you have a function `foo`.
 foo <- function(x) x + 1
 ```
 
-However, you want to change the function name to `bar`. 
+However, you want to change the function name to `bar`.
 
 Instead of simply changing the function name and `foo` no longer existing straight away, in the first version of the package where `bar` appears, make an alias like:
 
@@ -99,11 +104,11 @@ After users have used the package version for a while (with both `foo` and `bar`
 bar <- function(x) x + 1
 ```
 
-## Functions: deprecate & defunct
+## Functions: deprecate \& defunct {#functions-deprecate-defunct}
 
 To remove a function from a package (let's say your package name is `helloworld`), you can use the following protocol:
 
-* Mark the function as deprecated in package version `x` (e.g., `v0.2.0`)
+- Mark the function as deprecated in package version `x` (e.g., `v0.2.0`)
 
 In the function itself, use `.Deprecated()` to point to the replacement function:
 
@@ -135,7 +140,7 @@ NULL
 
 This creates a man page that users can access like ``?`helloworld-deprecated` `` and they'll see in the documentation index. Add any functions to this page as needed, and take away as a function moves to defunct (see below).
 
-* In the next version (`v0.3.0`) you can make the function defunct (that is, completely gone from the package, except for a man page with a note about it).
+- In the next version (`v0.3.0`) you can make the function defunct (that is, completely gone from the package, except for a man page with a note about it).
 
 In the function itself, use `.Defunct()` like:
 
@@ -186,13 +191,13 @@ NULL
 
 This creates a man page that users can access like ``?`helloworld-defunct` `` and they'll see in the documentation index. Add any functions to this page as needed. You'll likely want to keep this man page indefinitely.
 
-### Testing deprecated functions
+### Testing deprecated functions {#testing-deprecated-functions}
 
 You don't have to change the tests of deprecated functions until they are made defunct.
 
-* Consider any changes made to a deprecated function. Along with using `.Deprecated` inside the function, did you change the parameters at all in the deprecated function, or create a new function that replaces the deprecated function, etc. Those changes should be tested if any made.
-* Related to above, if the deprecated function is simply getting a name change, perhaps test that the old and new functions return identical results.
-* [`suppressWarnings()` could be used](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) to suppress the warning thrown from `.Deprecated`, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.
+- Consider any changes made to a deprecated function. Along with using `.Deprecated` inside the function, did you change the parameters at all in the deprecated function, or create a new function that replaces the deprecated function, etc. Those changes should be tested if any made.
+- Related to above, if the deprecated function is simply getting a name change, perhaps test that the old and new functions return identical results.
+- [`suppressWarnings()` could be used](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) to suppress the warning thrown from `.Deprecated`, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.
 
 Once a function is made defunct, its tests are simply removed.
 
@@ -200,8 +205,7 @@ Once a function is made defunct, its tests are simply removed.
 
 Software generally has a finite lifespan, and packages may eventually need to be archived. Archived packages are [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) and moved to a dedicated GitHub organization, [ropensci-archive](https://github.com/ropensci-archive). Prior to archiving, the contents of the README file should be moved to an alternative location (such as "README-OLD.md"), and replaced with minimal contents including something like the following:
 
-
-``` md
+```md
 # <package name>
 
 [![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
@@ -211,7 +215,8 @@ This package has been archived. The former README is now in [README-old](<link-t
 ```
 
 The repo status badge should be "unsupported" for formerly released packages, or "abandoned" for former concept or WIP packages, in which case the badge code above should be replaced with:
-``` md
+
+```md
 [![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
 ```
 
@@ -222,3 +227,5 @@ An example of a minimal README in an archived package is in [ropensci-archive/mo
 - [ ] Transfer the repository to [ropensci-archive](https://github.com/ropensci-archive), or request an [rOpenSci staff member](https://ropensci.org/about/#team) to transfer it (you can email `info@ropensci.org`).
 
 Archived packages may be unarchived if authors or a new person opt to resume maintenance. For that please contact rOpenSci. They are transferred to the ropenscilabs organization.
+
+

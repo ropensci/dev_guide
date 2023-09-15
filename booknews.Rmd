@@ -2,6 +2,38 @@
 
 ## dev (0.9.0)
 
+- 2023-07-17, Update Aims and Scope to include translation packages, remove experimental text-processing categories, and provide clarifications around API wrappers
+
+- 2023-05-04, Added link to Bioconductor book (#663, `@llrs`).
+
+- 2023-04-26, Changed suggested lifecycle stage in authors guide (#661, `@bart1`).
+
+- 2023-04-25, changed the COI section to use parallel construction (#659, `@eliocamp`).
+ 
+- 2022-07-04, Add resources around GitHub workflows (#479, `@maurolepore`).
+
+- 2023-02-14, update instructions for CITATION to reflect new CRAN policies (#604, #609).
+
+- 2023-02-14, add package maintainer cheatsheet (#608).
+
+- 2023-01-25, add Mastodon as social media (#592, by @yabellini).
+
+- 2023-01-25, add Mastodon as social media (#592, by `@yabellini`).
+
+- 2023-01-20, fix small formating error (#590 by `@eliocamp`).
+
+- 2022-11-22, mention shinytest2 near shinytest.
+
+- 2022-09-20, add editor instruction to add "stats" label to stats submissions
+
+- 2022-09-20, fixed link to reviewer approval template (#548), and rendering of editor's template (#547)
+
+- 2022-08-23, add recommendation to document argument default (`@Bisaloo`, #501)
+
+- 2022-08-06, fix link to R Packages book (#498)
+
+- 2022-07-21, mention GitHub Discussions and GitHub issue templates. (#482)
+
 - 2022-07-21, highlight values for reviewing in more places (#481)
 
 - 2022-07-20, Explanation of package submission via non-default branches (#485), added `@s3alfisc` to contributor list.

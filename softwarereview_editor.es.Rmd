@@ -1,0 +1,269 @@
+# Guía para el equipo editorial  {#editorguide}
+
+```{block, type="summaryblock"}
+La revisión por pares de software en rOpenSci es gestionada por un equipo editorial. Estamos probando
+un sistema donde el rol de Líder Editorial (LE) va rotando.
+
+Este capítulo presenta las responsabilidades [quien lidera el equipo editorial](#eicchecklist), de [cualquiera a cargo de editar un envío](#editorchecklist), [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse) y [cómo gestionar la publicación de una nueva versión de la guía de desarrollo](#bookrelease).
+
+Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si tienes alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
+```
+
+> Asume siempre que quienes participan en el sistema de revisión de software (tanto en la edición, como la revisión y la autoría de paquetes) están dando su mayor esfuerzo, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.
+
+## Responsabilidades del rol de edición {#editors-responsibilities}
+
+- Además de ocuparse de los paquetes (unos 4 al año), quienes realizan la edición intervienen en las decisiones editoriales del equipo (como si un paquete está dentro del ámbito de aplicación) y determinan las actualizaciones de nuestras políticas.
+  Generalmente lo hacemos a través de Slack, que esperamos que los miembros del equipo puedan consultar con regularidad.
+
+- También rotamos [Responsabilidades del Líder Editorial](#eicchecklist) (decisiones de alcance en primera instancia y asignación de roles editoriales) entre los miembros del equipo aproximadamente cada tres meses.
+
+- No tienes que hacer un seguimiento de otros envíos, pero si observas un problema con un paquete que está siendo gestionado por otra persona, no dudes en plantear ese problema directamente a quien está a cargo de la edición, o publica la preocupación en el canal exclusivo para el equipo editorial en Slack.
+  Por ejemplo:
+  
+  - Sabes de un paquete que se solapa, que aún no se ha mencionado en el proceso.
+  - Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de un artículo en el blog que aborda cómo añadir imágenes a los documentos del paquete).
+  - Las preocupaciones relacionadas, por ejemplo, con la rapidez del proceso, deberían ser abordadas por quien sea Líder Editorial, así que es a esa persona a quien te dirigirías para tales preguntas.
+
+## Lista de tareas para la edición de un paquete  {#editorchecklist}
+
+### En el momento del envío: {#upon-submission}
+
+- Si eres LE o eres la primera persona que responde, asigna a una persona para la edición con un comentario de `@ropensci-review-bot assign @username as editor`. Esto también añadirá la etiqueta `1/editor-checks` al issue.
+- Para los envíos de paquetes estadísticos (identificables como "Submission Type: Stats" en la plantilla del issue), añade la etiqueta "stats" a la edición.
+- El envío generará automáticamente una salida de comprobación del paquete por parte de ropensci-review-bot, que deberá examinarse en busca de cualquier problema pendiente (la mayoría de las excepciones deberán ser justificadas por quien presenta el paquete en el contexto particular de su paquete). Si quieres volver a realizar comprobaciones después de cualquier cambio en el paquete, envía un comentario con el texto "`@ropensci-review-bot check package`".
+- Después de publicar las comprobaciones automáticas, utiliza la [plantilla editorial](#editortemplate) para guiar las comprobaciones iniciales y registrar tu respuesta sobre el envío. También puedes agilizar las comprobaciones de edición utilizando el paquete [`pkgreviewr` creado por la editora asociada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html). Procura terminar las comprobaciones y empezar a buscar personas para hacer la revisión en un plazo de 5 días laborables.
+- Comprueba que la plantilla haya sido completada correctamente.
+- Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap). Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas. Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
+- Comprueba que las partes obligatorias de la plantilla estén completas. Si así no fuera, orienta a quienes presentaron el paquete hacia las instrucciones adecuadas.
+- Para paquetes que necesiten integración continua en varias plataformas (ver [criterios en la sección del capítulo sobre CI](#whichci)) asegúrate de que el paquete se pruebe en varias plataformas (por ejemplo, haciendo que el paquete se compruebe en varios sistemas operativos a través de GitHub Actions).
+- Siempre que sea posible, cuando pidas cambios, sugiere herramientas automáticas como [`usethis`](https://usethis.r-lib.org/) y [`styler`](https://styler.r-lib.org/) y recursos en línea (secciones de esta guía, secciones del [Libro *R Packages*](https://r-pkgs.org/)) para facilitar tu devolución. [Ejemplo de comprobaciones de una editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
+- Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión. Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+- Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack o abre un debate en el [foro rOpenSci](https://discuss.ropensci.org/) para discutirlo con el equipo editorial ([ejemplo de discusión sobre política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
+
+### Busca y asigna dos personas para revisar el paquete {#look-for-and-assign-two-reviewers}
+
+#### Tareas {#tasks}
+
+- Comenta con `@ropensci-review-bot seeking reviewers`.
+- Utiliza la [plantilla de correo electrónico](#reviewrequesttemplate) si es necesario para invitar a las personas a participar en la revisión
+  - Cuando envíes la invitación, incluye algo como "si no tengo noticias tuyas en una semana, asumiré que no puedes revisar", para dar un plazo claro en el que empezarás a buscar a alguien más.
+- Para asignar a alguien para la revisión, usa `@ropensci-review-bot assign @username as reviewer`. `add` también puede utilizarse en lugar de `assign` y `to reviewers` (plural) en lugar de `as reviewer` (singular). Por lo tanto, lo siguiente también es válido: `@ropensci-review-bot add @username to reviewers`. Debe generarse una orden para cada persona. Si es necesario sacar a alguien de la revisión, usa `@ropensci-review-bot remove @username from reviewers`.
+- Si quieres cambiar la fecha de vencimiento de una revisión utiliza `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+
+#### Cómo buscar personas para hacer una revisión {#how-to-look-for-reviewers}
+
+##### ¿Dónde buscarlas? {#where-to-look-for-reviewers}
+
+Como responsable de la edición, utiliza
+
+- las posibles sugerencias realizadas por quienes presentaron el paquete (aunque éstas pueden tener una visión limitada de los tipos de conocimientos necesarios; sugerimos no utilizar más de una de las personas sugeridas);
+- la base de datos *Airtable* de revisión y voluntariado (ver siguiente subsección);
+- y personas con [paquetes de rOpenSci](https://ropensci.org/packages/).
+
+Cuando estas fuentes de información no sean suficientes,
+
+- pide ideas al equipo editorial en Slack,
+- busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en redes sociales).
+- También puedes buscar personas con paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
+- R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
+- Puedes publicar la búsqueda en las redes sociales.
+
+##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}*Airtable*
+
+Tus herramientas para buscar personas para la revisión en *Airtable* son
+
+- filtros (por favor, elimínalos una vez que hayas terminado), ver ejemplo más abajo.
+
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y en áreas técnicas tienen que incluir integración continua (interfaz y etiquetas en inglés)](images/airtable.png)
+
+- crear una [visualización duplicada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), dependiendo de tus conocimientos de Airtable.
+
+Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
+Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que no hace falta esperar demasiado para volver a invitar a alguien que se negó debido a conflictos de interés.
+
+##### Almacenar la información de la búsqueda en Airtable  {#airtable-info}
+
+Si contactas a alguien desde Airtable, actualiza el campo `last_time_contacted` e introduce la categoría correspondiente a su respuesta en `last_answer`.
+
+Sólo añade personas a Airtable si aceptan revisar (de lo contrario, las personas deben ofrecerse voluntariamente rellenando el formulario de Airtable).
+No introduzcas más información que su nombre de usuario de GitHub, su nombre y su dirección de correo electrónico.
+Pide a quienes que podrían potencialmente revisar que completen el [formulario de Airtable](https://ropensci.org/software-reviewer).
+
+##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
+
+Estos son los criterios que debes tener en cuenta a la hora de elegir a alguien para realizar la revisión.
+Puede que tengas que reunir esta información buscando en CRAN y en su página GitHub, así como en su presencia general en Internet (sitio web personal, Twitter).
+
+- No ha revisado ningún paquete para rOpenSci en los últimos 6 meses.
+- Alguna experiencia en el desarrollo de paquetes.
+- Alguna experiencia de dominio en el campo del paquete o fuente de datos.
+- No hay [conflictos de intereses](#coi).
+- Intenta equilibrar lo que sabes sobre su experiencia con la complejidad del paquete.
+- Diversidad: las dos personas que revisen el paquete no deberían ser hombres cis blancos.
+- Alguna prueba de que que le interesa el software libre o las actividades de la comunidad de R, aunque enviar un correo electrónico sin esta información está bien.
+
+Cada envío debe ser revisado por *dos* personas.
+Aunque está bien que una de ellas tenga menos experiencia en el desarrollo de paquetes y más conocimientos del dominio, la revisión no debe dividirse en dos.
+Ambas deben revisar el paquete de forma exhaustiva, aunque desde su perspectiva particular.
+En general, al menos una debe tener experiencia previa en revisiones y, por supuesto, invitar gente nueva amplía nuestro grupo de revisión.
+
+### Durante la revisión: {#during-review}
+
+- Consulta de vez en cuando a tanto a quienes están revisando el paquete como a quienes lo enviaron. Ofrece aclaraciones y ayuda cuando sea necesario.
+- En general, espera 3 semanas para la revisión, 2 semanas para cambios posteriores, y 1 semana para la aprobación de los cambios por parte de quien hace la revisión.
+- Una vez enviada cada revisión,
+  - Escribe un comentario agradeciendo a quien hizo la revisión con tus palabras;
+  - Registra la reseña escribiendo un nuevo comentario `@ropensci-review-bot submit review <review-url> time <time in hours>`. Por ejemplo, para la reseña [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) el comentario sería `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
+- Si quien presentó el paquete deja de responder, consulta [las políticas](#policies) y/o notifica al resto del equipo editorial en el canal Slack para discutirlo. Es importante que, si se asignó una persona para hacer la revisión a un issue que se cerró, te pongas en contacto con esa persona al cerrar el issue para explicarle la decisión, agradecerle una vez más su trabajo y tomar nota en nuestra base de datos para asignarle la próxima vez un envío con altas posibilidades de que la revisión del software se realice sin problemas (por ejemplo, una persona que ya nos haya enviado paquetes).
+- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la \[plantilla de aprobación de revisión\]{#approval2template}.
+
+### Después de la revisión: {#after-review}
+
+- `@ropensci-review-bot approve <package-name>`
+- *Si quien tiene la propiedad original del repositorio no quiere transferirlo a rOpenSci, añade una línea con su dirección a [esta lista de repositorios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantizar que el paquete se incluya en el registro de paquetes de rOpenSci.*
+- Nomina el paquete para que aparezca en un artículo del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés. Por favor, anota en el *issue* de revisión una o dos cosas que destacables, y etiqueta a `@ropensci/blog-editors` para su seguimiento.
+- Si el paquete tiene un gitbook asociado (aunque sólo sea parcialmente), ponte en contacto con [alguien del equipo de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con quienes lo mantienen y hable sobre su transferencia a [la página `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
+
+### Promoción de paquetes: {#package-promotion}
+
+- Dirige quien presentó el paquete a los capítulos de la guía sobre [publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
+
+## Responsabilidades del rol de LE  {#eicchecklist}
+
+Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
+Tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento).
+En detalle, el rol de LE implica las siguientes funciones
+
+- Vigila todos los *issues* publicados en el repositorio de revisión del software (se suscribe a las notificaciones del repositorio en GitHub, o vigila la página `#software-peer-review-feed` en Slack).
+
+- Etiqueta el *issue* con `0/editorial-team-prep`
+
+- Usa `@ropensci-review-bot check srr` sobre consultas previas a la presentación de software estadístico.
+  Revisar los capítulos correspondientes a la [*Guía de desarrollo de estadística*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para más detalles.
+
+- Asigna los envíos de paquetes a otros miembros del equipo editorial, incluyéndose, para que se encarguen de ellos.
+  En la mayoría de los casos, esta responsabilidad rota entre los miembros del equipo editorial a menos que quien sea LE considere que un miembro en particular es especialmente adecuado para algún paquete, o que alguien rechace encargarse del envío por no tener tiempo o por tener un conflicto de intereses.
+  
+  ```
+  @ropensci-review-bot assign @username as editor
+  ```
+
+- Supervisa el ritmo del proceso de revisión y recuerda a otros miembros del equipo editorial que hagan avanzar los paquetes según sea necesario.
+
+- Al asumir el rol de LE, revisa el estado de las revisiones abiertas actuales y recuerda a quienes las editan que respondan o actualicen el estado según sea necesario.
+
+- Responde a los *issues* publicados en el repositorio software-review-meta
+
+- Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)).
+  Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus dudas, es decir, digerir un poco la información.
+  Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todo el equipo editorial.
+  
+  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera de nuestro alcance temático.
+  - Tras explicar la decisión de fuera de alcance, escribe un comentario con "`@ropensci-review-bot out-of-scope`" en el *issue*.
+
+- Solicita a alguien más para cubrir el rol de LE cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide reemplazos en el canal de Slack del equipo editorial).
+
+### Pide más detalles {#asking-for-more-details}
+
+En algunos casos, la documentación en línea es escasa.
+Un *README* mínimo y la ausencia de un sitio web de *pkgdown* dificultan la evaluación.
+En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.
+
+Ejemplo de texto
+
+```markdown
+Hola <nombre> y muchas gracias por su envío.
+
+Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
+
+¿Le importaría añadir más detalles y contexto al *README*?
+Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.
+
+<opcional>
+Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es el mejor de su clase](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
+</opcional>
+```
+
+### Invitar a una persona para la tarea de edición  {#guesteditor}
+
+Tras debatirlo con otros miembros del equipo, quien sea LE puede invitar a una persona externa para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de enviar una invitación a formar parte del equipo de edición).
+
+Cuando invites a alguien para realizar una edición de forma invitada:
+
+- Pregunta sobre los conflictos de intereses utilizando el [mismo texto que para quienes revisan paquetes](#coi),
+- Proporciona un enlace a la [guía para quines se encargan de la edición](#editorchecklist).
+
+Si la persona acepta (¡bien!),
+
+- asegúrate de que [haya activado la autenticación de 2 factores en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/);
+- invítala al equipo `ropensci/editors` y a la organización ropensci;
+- una vez que haya aceptado esta invitación al repositorio, asígnale el *issue*;
+- asegúrate de que esté invitada al espacio de trabajo en Slack de rOpenSci;
+- añade su nombre a la tabla de *guest-editor* de Airtable (para que su nombre aparezcan en este libro y en el *README* de la revisión del software).
+
+Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
+
+- vuelve a dar las gracias a la persona invitada;
+- elimínala del equipo `ropensci/editors` (pero no de la organización ropensci).
+
+## Responder a las presentaciones fuera del ámbito de aplicación  {#outofscoperesponse}
+
+Agradece a quienes presentaron el paquete por el envío, explica los motivos de la decisión y propone otros lugares de publicación, si corresponde, y al foro de debate de rOpenSci.
+Utiliza el texto de [Objetivos y alcance](#aims-and-scope) en particular en lo que respecta a la evolución del alcance a lo largo del tiempo, y al solapamiento y las diferencias entre el desarrollo de unconf/personal/revisión de software.
+
+[Ejemplos de envíos y respuestas fuera del ámbito de aplicación](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
+
+## Responder a las preguntas de quienes revisan  {#reviewersupport}
+
+Las personas que hacen revisiones pueden pedir devoluciones sobre, por ejemplo, el tono de su revisión.
+Además de darles las orientaciones generales de esta guía, pregunta a los miembros del equipo de edición o abre un issue cuando falten indicaciones. Aquí tienes algunos ejemplos de reseñas que pueden ser útiles:
+
+- Ejemplo duro pero constructivo: la parte de esta revisión que sugiere una reescritura de la viñeta: [ropensci/software-review#191 (comentario)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+- [El paquete `slopes`](https://github.com/ropensci/software-review/issues/420) que acabó siendo rediseñado fundamentalmente en respuesta a las revisiones. Todas las revisiones fueron en todo momento totalmente constructivas, lo que parece haber desempeñado un papel importante a la hora de motivar a quienes desarrollaron el paquete a embarcarse en una revisión tan importante. Comentarios como, *"este paquete no..."* o *"no tiene ..."* iban seguidas invariablemente de sugerencias constructivas sobre lo que se podría hacer (hay, por ejemplo, [varias en una de las primeras revisiones](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+- La revisión al paquete `tic` expresaban educadamente sus reservas: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) y [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
+- El paquete `bowerbird` recibió una útil ["revisión previa"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) que dio lugar a una división del paquete antes de las revisiones propiamente dichas.
+
+## Gestión de la publicación de la guía de desarrollo  {#bookrelease}
+
+Si te encargas de gestionar una versión de este mismo libro que estás leyendo, utiliza [la guía para la publicación de libros](#bookreleaseissue) como plantilla de issue para publicar [en el gestor de *issues* de la guía de desarrollo](https://github.com/ropensci/dev_guide/issues) y no dudes en hacer preguntas al resto del equipo de edición.
+
+### Gobernanza de la guía de desarrollo  {#devguidegov}
+
+Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del PR.
+Para enmiendas mayores, solicita la revisión de al menos varios miembros del equipo de edición (si ninguno participó en la discusión relacionada con la enmienda, solicita una revisión de todos en GitHub, y en ausencia de cualquier reacción aprueba el PR después de una semana).
+
+Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub ("solicitud de revisión" en el PR de dev a main) y Slack, pero no es necesario que todos aprueben explícitamente la publicación.
+
+### Artículo de blog sobre una publicación  {#releaseblogpost}
+
+El artículo del blog sobre una nueva edición será revisado [por el equipo de edición](#devguidegov) y por alguien de `@ropensci/blog-editors`.
+
+#### Contenido {#content}
+
+Consulta la [guía general para blogs rOpenSci](https://blogguide.ropensci.org/) y las orientaciones más específicas a continuación.
+
+[Primer ejemplo de un artículo de este tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo ejemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+
+El artículo del blog debe mencionar todos los elementos importantes del [registro de cambios](#booknews) organizados en (sub)secciones: por ejemplo, una sección sobre el gran cambio A, otra sobre el gran cambio B, y otra sobre cambios menores agrupados.
+Menciona primero los cambios más importantes.
+
+Por cada cambio realizado por una persona que colabora de manera externa, agradéceselo explícitamente utilizando la información del registro de cambios.
+Por ejemplo `[Matt Fidler](https://github.com/mattfidler/) arregló nuestra sección sobre mensajes en la Consola [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+
+Al final del post, menciona los próximos cambios enlazando a los *issues* abiertos en el repositorio, e invita a quienes leen a contribuir a la guía de desarrollo abriendo *issues* y participando en los debates abiertos.
+Plantilla de conclusiones:
+
+```markdown
+En este post resumimos los cambios incorporados a nuestro libro ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) en los últimos X meses. 
+Agradecemos todas las personas cuyas contribuciones han hecho posible esta versión. 
+Ya estamos trabajando en actualizaciones para nuestra próxima versión, como *ISSUE1*, *ISSUE2.* 
+Echa un vistazo a [la lista de *issues*](https://github.com/ropensci/dev_guide/issues/) si quieres contribuir.
+```
+
+#### Autoría {#authorship}
+
+Quien escribe el post lidera la lista de autoría, el resto del equipo de edición aparecen en orden alfabético.
+
+

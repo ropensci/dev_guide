@@ -1,0 +1,44 @@
+---
+repo-actions: true
+---
+
+# Prefacio {.unnumbered}
+
+¡Te damos la bienvenida! Este libro es una guía para quienes desarrollan y mantienen paquetes y quienes revisan y editan envíos de paquetes a rOpenSci. 
+
+La [primera sección del libro](#building) contiene nuestras recomendaciones para crear y *testear* los paquetes de R.
+
+La [segunda sección](#softwarereviewintro) está dedicada al proceso de revisión por pares de software de rOpenSci: en qué consiste, nuestras políticas y las guías específicas para orientar a quienes crean, mantienen, revisan y editan a lo largo del proceso. 
+Para la *revisión de software estadístico*, consulta la  [página web del proyecto y los recursos asociados](https://ropensci.org/stat-software-review/).
+
+La [tercera y última sección](#collaboration) presenta nuestras buenas prácticas para hacer crecer tu paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras personas, cómo documentar cada versión, cómo promover tu paquete y cómo aprovechar GitHub como plataforma de desarrollo.
+La tercera sección también incluye un [capítulo para quienes desean comenzar a contribuir a los paquetes de rOpenSci](#contributingguide).
+
+Esperamos que esta guía te resulte útil y clara, y agradecemos tus sugerencias en las [issues del libro](https://github.com/ropensci/dev_guide/issues). 
+¡Mucho éxito desarrollando paquetes de R!
+
+El equipo editorial de rOpenSci.
+
+Este libro es un documento vivo.
+Puedes ver las actualizaciones de nuestras buenas prácticas y políticas a través de las [notas de cada versión](#booknews).  
+Puedes citar este libro utilizando [sus metadatos de Zenodo y su DOI](https://doi.org/10.5281/zenodo.2553043).
+
+```{r}
+#| echo: false
+#| results: 'asis' 
+#| warning: false
+cat("\n```bibtex\n")
+u <- "https://zenodo.org/record/2553043" # la URL universal redirige a la última
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirigido
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+cat(bibentry)
+cat("\n```\n")
+```
+
+*Si quieres contribuir sugerencias o correcciones a este libro, visita [el repositorio de GitHub](https://github.com/ropensci/dev_guide) y, en particular, [la guía de contribución](https://github.com/ropensci/dev_guide#contributing). ¡Gracias!*
+
+*Agradecemos a quienes crean, mantienen, revisan y editan paquetes por ayudarnos a mejorar el sistema y esta guía a lo largo de los años. Gracias también a las siguientes personas que han contribuido a esta guía y a sus versiones anteriores: `r readLines("thanks.md")`. Por favor, avísanos si nos olvidamos de reconocer tu contribución.*
+
+

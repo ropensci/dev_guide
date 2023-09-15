@@ -1,0 +1,30 @@
+---
+repo-actions: true
+---
+
+# Modelo de pedido de revisión  {#reviewrequesttemplate}
+
+Quienes estén a cargo de la edición pueden utilizar la siguiente plantilla de correo electrónico para convocar personas para realizar la revisión.
+
+::: {.content-hidden when-format="pdf"}
+
+````markdown
+```{r}
+#| results: 'asis'
+#| echo: false
+#| child: "templates/request.es.md"
+```
+````
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+```{r}
+#| child: "templates/request.es.md"
+
+```
+
+:::
+
+

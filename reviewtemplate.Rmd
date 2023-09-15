@@ -1,8 +1,13 @@
+---
+repo-actions: true
+---
+
 # Review template {#reviewtemplate}
 
 You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -10,10 +15,15 @@ You can save this as an R Markdown file, or delete the YAML and save it as a Mar
 cat(readLines("templates/review.md"), sep = "\n")
 ```
 ````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/review.md"
 ```
+
 :::
+
+

@@ -1,12 +1,17 @@
+---
+aliases:
+  - ci.html
+---
+
 # Continuous Integration Best Practices {#ci}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This chapter summarizes our guidelines about continuous integration after explaining what continuous integration is.
 
-Along with [last chapter](#building), it forms our guidelines for Software Peer Review.
+Along with the [previous chapter](#building), it forms our guidelines for Software Peer Review.
 ```
 
-## What is continuous integration (CI)?
+## What is continuous integration (CI)? {#what-is-continuous-integration-ci}
 
 Continuous integration automatically runs tests on software.
 In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time that you make a commit or pull request to GitHub.
@@ -14,8 +19,7 @@ In the case of rOpenSci, CI practically means that a set of tests will be automa
 CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
 It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
 
-
-## Why use continuous integration (CI)?
+## Why use continuous integration (CI)? {#why-use-continuous-integration-ci}
 
 All rOpenSci packages must use one form of continuous integration.
 This ensures that all commits, pull requests and new branches are run through `R CMD check`.
@@ -26,17 +30,17 @@ Both test status and code coverage should be reported via badges in your package
 
 R packages should have CI for all operating systems (Linux, Mac OSX, Windows) when they contain:
 
-* Compiled code
+- Compiled code
 
-* Java dependencies
+- Java dependencies
 
-* Dependencies on other languages
+- Dependencies on other languages
 
-* Packages with system calls
+- Packages with system calls
 
-* Text munging such as getting people's names (in order to find encoding issues).
+- Text munging such as getting people's names (in order to find encoding issues).
 
-* Anything with file system / path calls
+- Anything with file system / path calls
 
 In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
 
@@ -48,42 +52,41 @@ There are a number of continuous integration services, including standalone serv
 
 [usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated. rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
 
-#### Testing using different versions of R
+#### Testing using different versions of R {#testing-using-different-versions-of-r}
 
-We require that rOpenSci packages are tested against the latest, previous and development versions of R to ensure both backwards and forwards compatibility with base R. 
+We require that rOpenSci packages are tested against the latest, previous and development versions of R to ensure both backwards and forwards compatibility with base R.
 
-Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html). 
+Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
 
 You can fine tune the deployment of tests with each versions by using a testing matrix.
 
 If you develop a package depending on or intended for Bioconductor, you might find [biocthis](https://lcolladotor.github.io/biocthis/index.html) relevant.
 
-#### Minimizing build times on CI
+#### Minimizing build times on CI {#minimizing-build-times-on-ci}
 
 You can use these tips to minimize build time on CI:
 
-* Cache installation of packages. The default [r-lib/actions](https://github.com/r-lib/actions) do this.
+- Cache installation of packages. The default [r-lib/actions workflows](https://github.com/r-lib/actions) do this.
 
-### Travis CI (Linux and Mac OSX)
+### Travis CI (Linux and Mac OSX) {#travis-ci-linux-and-mac-osx}
 
 We recommend [moving away from Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
 
-### AppVeyor CI (Windows)
+### AppVeyor CI (Windows) {#app-veyor-ci-windows}
 
 For continuous integration on Windows, see [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Set it up using `usethis::use_appveyor()`.
 
 Here are tips to minimize AppVeyor build time:
 
-* Cache installation of packages. [Example in a config file](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). It'll already be in the config file if you set AppVeyor CI up using `usethis::use_appveyor()`.
+- Cache installation of packages. [Example in a config file](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). It'll already be in the config file if you set AppVeyor CI up using `usethis::use_appveyor()`.
 
-* Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
+- Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
 We no longer transfer AppVeyor projects to ropensci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
-### Circle CI (Linux and Mac OSX)
+### Circle CI (Linux and Mac OSX) {#circle-ci-linux-and-mac-osx}
 
 [Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as continuous integration service.
-
 
 ## Test coverage {#coverage}
 
@@ -102,10 +105,12 @@ For more details, see the [README for the **covr** package](https://github.com/r
 
 If you run coverage on several CI services [the results will be merged](https://docs.codecov.io/docs/merging-reports).
 
-## Even more CI: OpenCPU
+## Even more CI: OpenCPU {#even-more-ci-open-cpu}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via https://ropensci.ocpu.io/ using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
+After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/) using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
 
 ## Even more CI: rOpenSci docs {#rodocsci}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). Please report bugs, questions and feature requests about the central builds at https://github.com/ropensci/docs/ and about the template at https://github.com/ropensci-org/rotemplate/.
+After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). Please report bugs, questions and feature requests about the central builds and about the template at [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
+
+

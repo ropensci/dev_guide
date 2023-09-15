@@ -1,30 +1,34 @@
+---
+aliases:
+  - editorialmanagement.html
+---
+
 # Editorial management {#editorialmanagement}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 Guidance for managing the editorial team.
 ```
 
-## Recruiting new editors
+## Recruiting new editors {#recruiting-new-editors}
 
 Recruiting new editors and maintaining a sufficient and well-balanced editorial board is a responsibility of the [Software Review Lead](https://ropensci.org/about/#team), with support and advice from the editorial board.
 
 Steps:
 
-* Start a private channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
+- Start a private channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
 
-* Ping editors to be sure they get a notification as this is an important topic.
+- Ping editors to be sure they get a notification as this is an important topic.
 
+- Wait for a majority of editors to chime in before inviting someone. Leave them one week to respond.
 
-* Wait for a majority of editors to chime in before inviting someone. Leave them one week to respond.
+## Inviting a new editor {#inviting-a-new-editor}
 
-## Inviting a new editor
- 
-* Candidates might start by being [guest editors](#guesteditor). 
-When inviting them as guest editor, invite them as you would invite a guest editor for other reasons.
+- Candidates might start by being [guest editors](#guesteditor).
+  When inviting them as guest editor, invite them as you would invite a guest editor for other reasons.
 
-* If a candidate is guest editor first, assess how the process went after the submission is tackled. Asked other editors for their advice again.
+- If a candidate is guest editor first, assess how the process went after the submission is tackled. Asked other editors for their advice again.
 
-* Send an email.
+- Send an email.
 
 ```
 We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
@@ -48,48 +52,52 @@ Please give this some thought, ask us any questions you have, and let us know wh
 
 Best,
 [EDITOR], on behalf of the rOpenSci Editorial Board
-``` 
+```
 
-## Onboarding a new editor
+## Onboarding a new editor {#onboarding-a-new-editor}
 
-* Inform rOpenSci community manager so that
-    * editors are added to the [rOpenSci website](https://github.com/ropensci/roweb3/#team-member).
-    * an introduction blog post can be put together.
+- Inform rOpenSci community manager so that
+  
+  - editors are added to the [rOpenSci website](https://github.com/ropensci/roweb3/#team-member).
+  - an introduction blog post can be put together.
 
-* If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
+- If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-* Invite editors to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications. 
+- Invite editors to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications.
 
-* Editors need access to the AirTable database of software review.
+- Editors need access to the AirTable database of software review.
 
-* Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
+- Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
 
-* Post a welcome message in the channel, pinging all editors.
+- Post a welcome message in the channel, pinging all editors.
 
-* In the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
+- In the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
 
-* We add editors' names to 
-    * [dev_guide authors list](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
-    * [dev_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-    * [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-Both the dev_guide and software-review README are automatically knit via continuous integration.
+- We add editors' names to
+  
+  - [dev\_guide authors list](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
+  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
+  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
+    Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
-* Add editors to https://github.com/orgs/ropensci/teams/editors/members
+- Add editors to [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
 
-## Offboarding an editor
+## Offboarding an editor {#offboarding-an-editor}
 
-* Thank them for their work!
+- Thank them for their work!
 
-* Remove them from the editors-only channel and the editors Slack team.
+- Remove them from the editors-only channel and the editors Slack team.
 
-* Remove them from https://github.com/orgs/ropensci/teams/editors/members and sub-team.
+- Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
-* Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
+- Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
 
-* Remove their access to the Airtable workspace.
+- Remove their access to the Airtable workspace.
 
-* Remove them from
-    * [dev_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-    * [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-Both the dev_guide and software-review README are automatically knit via continuous integration.
+- Remove them from
+  
+  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
+  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
+    Both the dev\_guide and software-review README are automatically knit via continuous integration.
+
 

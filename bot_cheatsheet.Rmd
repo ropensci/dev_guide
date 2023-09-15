@@ -1,0 +1,157 @@
+# Bot commands {#bot-commands}
+
+## For everyone {#for-everyone}
+
+Note that we clean issue threads by removing extraneous content, so the record of you having asked for bot-help will most often quickly be erased or hidden.
+
+### See the list of commands available to you {#see-the-list-of-commands-available-to-you}
+
+If you need a quick reminder!
+
+```markdown
+@ropensci-review-bot help
+```
+
+### See the code of conduct {#see-the-code-of-conduct}
+
+```markdown
+@ropensci-review-bot code of conduct
+```
+
+## For authors {#for-authors}
+
+### Check package with pkgcheck {#check-package-with-pkgcheck}
+
+When your package has substantially changed.
+
+```markdown
+@ropensci-review-bot check package
+```
+
+### Submit response to reviewers {#submit-response-to-reviewers}
+
+To record your response to reviewers.
+
+```markdown
+@ropensci-review-bot submit response <response-url>
+```
+
+where `<response_url>` is the link to the response comment in the issue thread.
+
+### Finalize repo transfer {#finalize-repo-transfer}
+
+After you've accepted the invitation to rOpenSci GitHub organization and transferred your GitHub repository to it, run this command to re-gain admin access to your repository.
+
+```markdown
+@ropensci-review-bot finalize transfer of <package-name>
+```
+
+### Get a new invite after approval {#get-a-new-invite-after-approval}
+
+If you missed the one-week window to accept the invitation to the rOpenSci GitHub organization, run this to receive a new one.
+
+```markdown
+@ropensci-review-bot invite me to ropensci/<package-name>
+```
+
+## For the editor-in-chief {#for-the-editor-in-chief}
+
+### Assign an editor {#assign-an-editor}
+
+```markdown
+@ropensci-review-bot assign @username as editor
+```
+
+### Put submission on hold {#put-submission-on-hold}
+
+See [editorial policy](#policiesreviewprocess).
+
+```markdown
+@ropensci-review-bot put on hold
+```
+
+### Indicate the submission is out of scope {#indicate-the-submission-is-out-of-scope}
+
+Do not forget to first post a comment explaining the decision and thanking the author(s) for their submission.
+
+```markdown
+@ropensci-review-bot out-of-scope
+```
+
+## For assigned editor {#for-assigned-editor}
+
+### Put submission on hold {#put-submission-on-hold}
+
+See [editorial policy](#policiesreviewprocess).
+
+```markdown
+@ropensci-review-bot put on hold
+```
+
+### Check package with pkgcheck {#check-package-with-pkgcheck}
+
+Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+
+```markdown
+@ropensci-review-bot check package
+```
+
+### Check statistical standards {#check-statistical-standards}
+
+Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+
+```markdown
+@ropensci-review-bot check srr
+```
+
+### Check that README has software review badge {#check-that-readme-has-software-review-badge}
+
+Towards the end of the submission process.
+
+```markdown
+@ropensci-review-bot check readme
+```
+
+### Indicate you are now seeking reviewers {#indicate-you-are-now-seeking-reviewers}
+
+```markdown
+@ropensci-review-bot seeking reviewers
+```
+
+### Assign a reviewer {#assign-a-reviewer}
+
+```markdown
+@ropensci-review-bot assign @username as reviewer
+```
+
+or
+
+```markdown
+@ropensci-review-bot add @username as reviewer
+```
+
+### Remove a reviewer {#remove-a-reviewer}
+
+```markdown
+@ropensci-review-bot remove @username from reviewers
+```
+
+### Tweak review due date {#tweak-review-due-date}
+
+```markdown
+@ropensci-review-bot set due date for @username to YYYY-MM-DD
+```
+
+### Record that a review was submitted {#record-that-a-review-was-submitted}
+
+```markdown
+@ropensci-review-bot submit review <review-url> time <time in hours>
+```
+
+### Approve package {#approve-package}
+
+```markdown
+@ropensci-review-bot approve <package-name>
+```
+
+

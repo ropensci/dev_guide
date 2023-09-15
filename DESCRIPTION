@@ -1,23 +1,22 @@
-Package: rOpenSci_dev_guide
+Package: rOpenScidevguide
 Type: Website
 Title: rOpenSci Packages: Development, Maintenance, and Peer Review
 Description: rOpenSci Packages: Development, Maintenance, and Peer Review
 Version: 0.8.1
 Imports:
     airtabler,
-    htmltools,
-    quarto,
-    purrr,
+    babeldown (>= 0.0.0.9000),
+    babelquarto,
+    gert,
     humaniformat,
-    bslib,
-    downlit,
-    xml2,
     rvest,
     usethis,
-    rlang (>= 0.4.11.9000)
-Remotes:  
+    withr
+Remotes: 
     bergant/airtabler,
-    rstudio/htmltools,
-    r-lib/downlit,
-    r-lib/rlang
+    ropensci-review-tools/babeldown,
+    ropensci-review-tools/babelquarto
 URL: https://github.com/ropensci/dev_guide
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8
