@@ -83,7 +83,7 @@ Tus herramientas para buscar personas para la revisión en *Airtable* son
 Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
 Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que no hace falta esperar demasiado para volver a invitar a alguien que se negó debido a conflictos de interés.
 
-Además, comprueba si un revisor novel ha indicado que `require_mentorship`.  En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
+Además, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.  En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Almacenar la información de la búsqueda en Airtable  {#airtable-info}
 
