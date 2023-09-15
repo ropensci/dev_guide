@@ -1,6 +1,23 @@
 project:
   type: book
 
+
+title-es: "Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares"
+author-es: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+description-es: |
+    Versión extendida de la guía de empaquetado de rOpenSci.
+      Este libro es una guía para autoras/es, encargadas/os, revisoras/es y editoras/es de rOpenSci.
+      La primera sección del libro contiene
+      nuestras recomendaciones para crear y probar los paquetes de R.
+      La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci:
+      qué es, nuestras políticas y guías específicas para orientar
+      a quienes crean, mantienen, revisan y editan a lo largo del proceso.
+      La tercera y última sección presenta nuestras buenas prácticas para hacer crecer
+      su paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras/os desarrolladoras/es,
+      cómo documentar cada versión de tu paquete y cómo aprovechar GitHub como plataforma de desarrollo.
+      La tercera sección también incluye un capítulo para cualquiera que desee
+      comenzar a contribuir a los paquetes de rOpenSci.
+
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
@@ -30,12 +47,14 @@ book:
   - preface.Rmd
 
   - part: Building Your Package
+    part-es: Construyendo tu paquete
     chapters:
     - pkg_building.Rmd
     - pkg_ci.Rmd
     - pkg_security.Rmd
 
   - part: Software Peer Review of Packages
+    part-es: Revisión por pares de software de paquetes
     chapters:
     - softwarereview_intro.Rmd
     - softwarereview_policies.Rmd
@@ -45,7 +64,9 @@ book:
     - softwarereview_editor_management.Rmd
 
   - part: Maintaining Packages
+    part-es: Manteniendo paquetes
     chapters:
+    - maintenance_cheatsheet.Rmd
     - maintenance_collaboration.Rmd
     - maintenance_changing_maintainers.Rmd
     - maintenance_releases.Rmd
@@ -56,6 +77,7 @@ book:
     - maintenance_contributing.Rmd
 
   - part: Appendix
+    part-es: Apéndice
     chapters:
     - booknews.Rmd
     - reviewtemplate.Rmd
@@ -65,6 +87,7 @@ book:
     - newstemplate.Rmd
     - bookreleaseissue.Rmd
     - redirect.Rmd
+    - bot_cheatsheet.Rmd
 
 format:
   html:
@@ -74,3 +97,10 @@ format:
   pdf:
     include-in-header: "preamble.tex"
     output-file: "ropensci-dev-guide"
+babelquarto:
+  mainlanguage: en
+  languages: ['es', 'pt']
+title-pt: title in pt
+description-pt: description in pt
+author-pt: author in pt
+lang: en

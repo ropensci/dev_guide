@@ -1,6 +1,11 @@
+---
+aliases:
+  - editorguide.html
+---
+
 # Guide for Editors {#editorguide}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
 a system of a rotating Editor-in-Chief (EiC).
 
@@ -11,74 +16,74 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 
 > Always assume participants in the software review system (fellow editors, submitters, reviewers) are doing their best, and communicate gracefully accordingly, especially when inquiring why a thing is delayed.
 
-## Editors' responsibilities
+## Editors' responsibilities {#editors-responsibilities}
 
-* In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly. 
+- In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly.
 
-* We also rotate [Editor-in-Chief responsibilities](#eicchecklist) (first-pass scope decisions and assigning editors) amongst the board about quarterly. 
+- We also rotate [Editor-in-Chief responsibilities](#eicchecklist) (first-pass scope decisions and assigning editors) amongst the board about quarterly.
 
-* You do not have to keep track of other submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on slack. Examples:
+- You do not have to keep track of other submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on slack. Examples:
+  
+  - You know of an overlapping package, that hasn't been mentioned in the process yet.
+  - You see a question to which you have an expert answer that hasn't been given after a few days (e.g. you know of a blog post tackling how to add images to package docs).
+  - Concerns related to e.g. the speed of the process should be tackled by the editor-in-chief so that's who you'd turn to for such questions.
 
-    * You know of an overlapping package, that hasn't been mentioned in the process yet.
-    * You see a question to which you have an expert answer that hasn't been given after a few days (e.g. you know of a blog post tackling how to add images to package docs). 
-    * Concerns related to e.g. the speed of the process should be tackled by the editor-in-chief so that's who you'd turn to for such questions.
-    
 ## Handling Editor's Checklist {#editorchecklist}
 
-### Upon submission:
+### Upon submission: {#upon-submission}
 
--   If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
--   For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue.
--   Submission will automatically generate package check output from ropensci-review-bot which should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package.). If you want to re-run checks after any package change post a comment `@ropensci-review-bot check package`.
--   After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
--   Check that template has been properly filled out.
--   Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
-    Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
-    If reject, see [this section](#outofscoperesponse) about how to respond.
--   Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
--   For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
--   Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
--   Ideally, the remarks you make should be tackled before reviewers start reviewing.
--   If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label via typing `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder every 90 days (in the issue) to check in with the package author(s).
--   If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
-    
-### Look for and assign two reviewers:
+- If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
+- For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue.
+- Submission will automatically generate package check output from ropensci-review-bot which should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package.). If you want to re-run checks after any package change post a comment `@ropensci-review-bot check package`.
+- After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
+- Check that template has been properly filled out.
+- Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
+  Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
+  If reject, see [this section](#outofscoperesponse) about how to respond.
+- Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
+- For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
+- Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Ideally, the remarks you make should be tackled before reviewers start reviewing.
+- If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label via typing `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder every 90 days (in the issue) to check in with the package author(s).
+- If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
-#### Tasks
+### Look for and assign two reviewers: {#look-for-and-assign-two-reviewers}
 
--   Comment with `@ropensci-review-bot seeking reviewers`.
--   Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
-    -   When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
--   Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single). The following is thus also valid: `@ropensci-review-bot add @username to reviewers`. One command should be issued for each reviewer. If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
--   If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+#### Tasks {#tasks}
 
-#### How to look for reviewers
+- Comment with `@ropensci-review-bot seeking reviewers`.
+- Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
+  - When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
+- Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single). The following is thus also valid: `@ropensci-review-bot add @username to reviewers`. One command should be issued for each reviewer. If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
+- If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
-##### Where to look for reviewers?
+#### How to look for reviewers {#how-to-look-for-reviewers}
 
-As a (guest) editor, use 
+##### Where to look for reviewers? {#where-to-look-for-reviewers}
 
-* the potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed.  We suggest not using more than one of suggested reviewers);
-* the Airtable database of reviewers and volunteers (see next subsection);
-* and the authors of [rOpenSci packages](https://ropensci.org/packages/). 
+As a (guest) editor, use
 
-When these sources of information are not enough, 
+- the potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed.  We suggest not using more than one of suggested reviewers);
+- the Airtable database of reviewers and volunteers (see next subsection);
+- and the authors of [rOpenSci packages](https://ropensci.org/packages/).
 
-* ping other editors in Slack for ideas, 
-* look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter).
-* You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
-* R-Ladies has a [directory](https://rladies.org/directory/) specifying skills and interests of people listed.
-* You might tweet about the reviewer search.
+When these sources of information are not enough,
 
-##### Tips for reviewer search in Airtable
+- ping other editors in Slack for ideas,
+- look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter).
+- You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
+- R-Ladies has a [directory](https://rladies.org/directory/) specifying skills and interests of people listed.
+- You might tweet about the reviewer search.
+
+##### Tips for reviewer search in Airtable {#tips-for-reviewer-search-in-airtable}
 
 Your tools for searching reviewers in the Airtable are
 
-* filters (please remove them once you're done), see example below.
+- filters (please remove them once you're done), see example below.
 
 ![Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration](images/airtable.png)
 
-* creating a duplicated [view](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), depending on your Airtable skills.
+- creating a duplicated [view](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), depending on your Airtable skills.
 
 Have a look at the `last_time_contacted` and `last_answer` columns before contacting someone!
 If someone recently refused because they were busy, it might be best to abstain, whereas someone who refused because of a COI could be contacted again without waiting too long.
@@ -91,46 +96,43 @@ Only add people to Airtable if they accept to review (otherwise, people should v
 Do not enter any information other than GitHub username, name and email address yourself.
 Point reviewers to the [Airtable form](https://ropensci.org/software-reviewer).
 
-##### Criteria for choosing a reviewer
+##### Criteria for choosing a reviewer {#criteria-for-choosing-a-reviewer}
 
-Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching CRAN and the potential reviewer’s GitHub page and general online presence (personal website, Twitter).
+Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching CRAN and the potential reviewer's GitHub page and general online presence (personal website, Twitter).
 
-* Has not reviewed a package for us within the last 6 months.
-* Some package development experience.
-* Some domain experience in the field of the package or data source
-* No [conflicts of interest](#coi).
-* Try to balance your sense of the potential reviewer’s experience against the complexity of the package.
-* Diversity - with two reviewers both shouldn’t be cis white males.
-* Some evidence that they are interested in openness or R community activities, although blind emailing is fine.
+- Has not reviewed a package for us within the last 6 months.
+- Some package development experience.
+- Some domain experience in the field of the package or data source
+- No [conflicts of interest](#coi).
+- Try to balance your sense of the potential reviewer's experience against the complexity of the package.
+- Diversity - with two reviewers both shouldn't be cis white males.
+- Some evidence that they are interested in openness or R community activities, although blind emailing is fine.
 
-Each submission should be reviewed by _two_ package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two.  Both reviewers need to review the package comprehensively, though from their particular perspective.  In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
+Each submission should be reviewed by *two* package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two.  Both reviewers need to review the package comprehensively, though from their particular perspective.  In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
 
-### During review:
+### During review: {#during-review}
 
--   Check in with reviewers and authors occasionally. Offer clarification and help as needed.
--   In general aim for 3 weeks for review, 2 weeks for
-    subsequent changes, and 1 week for reviewer approval of changes.
--   Upon each review being submitted, 
-    - Write a comment thanking the reviewer with your words;
-    - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`. E.g. for the review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
+- Check in with reviewers and authors occasionally. Offer clarification and help as needed.
+- In general aim for 3 weeks for review, 2 weeks for
+  subsequent changes, and 1 week for reviewer approval of changes.
+- Upon each review being submitted,
+  - Write a comment thanking the reviewer with your words;
+  - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`. E.g. for the review [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
 - If the author stops responding, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
--   Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
+- Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 
-### After review:
+### After review: {#after-review}
 
--  `@ropensci-review-bot approve <package-name>`
+- `@ropensci-review-bot approve <package-name>`
 - *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
--   Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
--   If authors maintain a gitbook that is at least partly about their 
-package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors 
-about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
+- Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
+- If authors maintain a gitbook that is at least partly about their
+  package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors
+  about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
 
-### Package promotion:
+### Package promotion: {#package-promotion}
 
--   Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
-
-
-
+- Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
 
 ## EiC Responsibilities {#eicchecklist}
 
@@ -139,8 +141,11 @@ The EiC is entitled to taking scope and overlap decisions as independently as po
 In details, the EiC plays the following roles
 
 - Watches all issues posted to the software-review repo (either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack).
+
 - Tags issue with ` 0/editorial-team-prep`
+
 - Calls `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
+
 - Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
   
   ```
@@ -148,11 +153,16 @@ In details, the EiC plays the following roles
   ```
 
 - Regularly (for instance weekly) monitors pace of review process thanks to [devguider](#eic-report) and reminds other editors to move packages along as needed.
+
 - On assuming EiC rotation, reviews status of current open reviews thanks to [devguider](#eic-report) and reminds editors to respond or update status as needed.
+
 - Responds to issues posted to the software-review-meta repo
+
 - Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
-    - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
-    - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+  
+  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+  - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+
 - Requests a new EiC when their rotation is up (set a calendar reminder ahead of your expected end date and ask for volunteers in the editors' Slack channel)
 
 ### Using `devguider::devguide_eic_report()` {#eic-report}
@@ -162,13 +172,14 @@ Install devguider and run `devguider::devguide_eic_report()`, open the HTML repo
 - Look over submissions in "presubmission" and "editorial-team-prep". Check whether any action needs to be taken (polling editors, making a decision, putting the issue on hold, pinging the submitter for an update, finding and assigning an editor).
 
 - Rows in each section are colored by "urgency" from white (ignore) to yellow (not urgent) to red (most urgent).
+
 - Look over submissions in "seeking-reviewer(s)". If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
 
 - Look over submissions in "reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
-	
+
 - Look over submissions in "review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
- 
-### Asking for more details
+
+### Asking for more details {#asking-for-more-details}
 
 In some cases online documentation is sparse. Minimal README, no pkgdown website make assessment harder.
 In that case please ask for more details: even if the package is deemed out-of-scope, the package docs will have gotten better so we are fine asking for these efforts.
@@ -188,7 +199,7 @@ If a package has overlapping functionality with other packages, we require it to
 </optional>
 
 ```
- 
+
 ### Inviting a guest editor {#guesteditor}
 
 After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if submission volume is large, if all editors have a conflict of interest, if specific expertise is needed, or as a trial prior to inviting a person to join the editorial board).
@@ -197,7 +208,7 @@ When inviting a guest editor,
 
 - Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
 - Give a link to the [guide for editors](#editorchecklist).
- 
+
 If the person said yes (yay!),
 
 - Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
@@ -206,11 +217,10 @@ If the person said yes (yay!),
 - Ensure they're (already) invited to rOpenSci Slack workspace,
 - Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
 
-After the review process is finished (package approved, issue closed), 
+After the review process is finished (package approved, issue closed),
 
 - Thank the guest editor again,
 - Remove them from the `ropensci/editors` team (but not from the ropensci organization).
-
 
 ## Responding to out-of-scope submissions {#outofscoperesponse}
 
@@ -218,18 +228,16 @@ Thank authors for their submission, explain the reasons for the decision, and di
 
 [Examples of out-of-scope submissions and responses](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
-
-
 ## Answering reviewers' questions {#reviewersupport}
 
 Reviewers might ask for feedback on e.g. the tone of their review.
 Beside pointing them at general guidance in this guide, asking editors / opening an issue when such guidance is lacking,
 here are some review examples that might be useful.
 
-* tough-but-constructive example: the part of this review suggesting a re-write of the vignette: [ropensci/software-review#191 (comment)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
-* [the `slopes` package](https://github.com/ropensci/software-review/issues/420), which ended up being fundamentally redesigned in response to the reviews. All reviews/reviewers were at all times entirely constructive, which seems to have played a major role in motivating the authors to embark on such a major overhaul. Comments such as, _"this package does not ..."_ or _"has not ..."_ were invariably followed by constructive suggestions for what could be done (there are, for example, [several in one of the first reviews](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
-* tic reviews politely expressed reservations: https://github.com/ropensci/software-review/issues/305#issuecomment-504762517 and https://github.com/ropensci/software-review/issues/305#issuecomment-508271766 
-* bowerbird useful ["pre-review"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) that resulted in a package split before the actual reviews.
+- tough-but-constructive example: the part of this review suggesting a re-write of the vignette: [ropensci/software-review#191 (comment)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+- [the `slopes` package](https://github.com/ropensci/software-review/issues/420), which ended up being fundamentally redesigned in response to the reviews. All reviews/reviewers were at all times entirely constructive, which seems to have played a major role in motivating the authors to embark on such a major overhaul. Comments such as, *"this package does not ..."* or *"has not ..."* were invariably followed by constructive suggestions for what could be done (there are, for example, [several in one of the first reviews](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+- tic reviews politely expressed reservations: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) and [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
+- bowerbird useful ["pre-review"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) that resulted in a package split before the actual reviews.
 
 ## Managing a dev guide release {#bookrelease}
 
@@ -245,7 +253,7 @@ Two weeks before a dev guide release, once the PR from dev to master **and the r
 
 The blog post about a release will be reviewed [by editors](#devguidegov), and one of `@ropensci/blog-editors`.
 
-#### Content
+#### Content {#content}
 
 Refer to the [general rOpenSci blogging guidance](https://blogguide.ropensci.org/), and the more specific guidance below.
 
@@ -264,7 +272,8 @@ We are already working on updates for our next version, such as ISSUE1, ISSUE2.
 Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
 ```
 
-#### Authorship
+#### Authorship {#authorship}
 
 The editor writing the post is first author, other editors are listed by alphabetical order.
+
 

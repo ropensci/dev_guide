@@ -1,19 +1,28 @@
-# Editor's template {#editortemplate}
+---
+repo-actions: true
+---
 
+# Plantilla para quien hace la edición  {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
+
 ````markdown
 ```{r}
 #| results: 'asis'
 #| echo: false
 #| child: "templates/editor.es.md"
 ```
-```
+````
+
 :::
 
 ::: {.content-visible when-format="pdf"}
+
 ```{r}
 #| child: "templates/editor.es.md"
 
 ```
+
 :::
+
+

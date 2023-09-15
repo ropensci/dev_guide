@@ -1,8 +1,15 @@
-# NEWS template {#newstemplate}
+---
+repo-actions: true
+---
 
+# Plantilla de NEWS  {#newstemplate}
 
-```markdown
+````markdown
 ```{r}
 #| child: "templates/news.es.md"
+````
+
 ```
 ```
+
+
