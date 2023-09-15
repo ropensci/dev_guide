@@ -1,6 +1,11 @@
+---
+aliases:
+  - policies.html
+---
+
 # Software Peer Review policies {#policies}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 This chapter contains the policies of rOpenSci Software Peer Review.
 
 In particular, you'll read our policies regarding software peer review itself: the [review submission process](#review-submission) including our [conflict of interest policies](#coi), and the [aims and scope of the Software Peer Review system](#aims-and-scope). This chapter also features our policies regarding [package ownership and maintenance](#ownership-after-softwarereview).  
@@ -8,42 +13,40 @@ In particular, you'll read our policies regarding software peer review itself: t
 Last but not least, you'll find the [code of conduct of rOpenSci Software Peer Review](#code-of-conduct).
 ```
 
-
 ## Review process {#policiesreviewprocess}
 
-* For a package to be considered for the rOpenSci suite, package authors must initiate a request on the [ropensci/software-review](https://github.com/ropensci/software-review) repository.
-* Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](#building) and [reviewing guide](#reviewerguide) for more details). Unlike a manuscript review, this process will be an ongoing conversation.
-* Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins, see [the aims and scope section](#aims-and-scope)), but in rare cases a package may also be not onboarded after review & revision. It is ultimately editor's decision on whether or not to reject the package based on how the reviews are addressed.
-* Communication between authors, reviewers and editors will first and foremost take place on GitHub, although you can choose to contact the editor by email or Slack for some issues. When submitting a package, please make sure your GitHub notification settings make it unlikely you will miss a comment.
-* The author can choose to have their submission put on hold (editor applies the holding label). The holding status will be revisited every 3 months, and after one year the issue will be closed.
-* If the author hasn't requested a holding label, but is simply not responding, we should close the issue within one month after the last contact intent. This intent will include a comment tagging the author, but also an email using the email address listed in the DESCRIPTION of the package which is one of the rare cases where the editor will try to contact the author by email.
-* If a submission is closed and the author wishes to re-submit, they'll have to start a new submission. If the package is still in scope, the author will have to respond to the initial reviews before the editor starts looking for new reviewers.
+- For a package to be considered for the rOpenSci suite, package authors must initiate a request on the [ropensci/software-review](https://github.com/ropensci/software-review) repository.
+- Packages are reviewed for quality, fit, documentation, clarity and the review process is quite similar to a manuscript review (see our [packaging guide](#building) and [reviewing guide](#reviewerguide) for more details). Unlike a manuscript review, this process will be an ongoing conversation.
+- Once all major issues and questions, and those addressable with reasonable effort, are resolved, the editor assigned to a package will make a decision (accept, hold, or reject). Rejections are usually done early (before the review process begins, see [the aims and scope section](#aims-and-scope)), but in rare cases a package may also be not onboarded after review \& revision. It is ultimately editor's decision on whether or not to reject the package based on how the reviews are addressed.
+- Communication between authors, reviewers and editors will first and foremost take place on GitHub, although you can choose to contact the editor by email or Slack for some issues. When submitting a package, please make sure your GitHub notification settings make it unlikely you will miss a comment.
+- The author can choose to have their submission put on hold (editor applies the holding label). The holding status will be revisited every 3 months, and after one year the issue will be closed.
+- If the author hasn't requested a holding label, but is simply not responding, we should close the issue within one month after the last contact intent. This intent will include a comment tagging the author, but also an email using the email address listed in the DESCRIPTION of the package which is one of the rare cases where the editor will try to contact the author by email.
+- If a submission is closed and the author wishes to re-submit, they'll have to start a new submission. If the package is still in scope, the author will have to respond to the initial reviews before the editor starts looking for new reviewers.
 
-### Publishing in other Venues
+### Publishing in other Venues {#publishing-in-other-venues}
 
--   We strongly suggest submitting your package for review _before_ publishing
-    on CRAN or submitting a software paper describing the package to a journal.
-    Review feedback may result in major improvements and updates to your package,
-    including renaming and breaking changes to functions.  We do not consider
-    previous publication on CRAN or in other venues sufficient reason to
-    not adopt reviewer or editor recommendations.
--   Do not submit your package for review while it or an associated manuscript
-    is also under review at another venue, as this may result on conflicting
-    requests for changes.
+- We strongly suggest submitting your package for review *before* publishing
+  on CRAN or submitting a software paper describing the package to a journal.
+  Review feedback may result in major improvements and updates to your package,
+  including renaming and breaking changes to functions.  We do not consider
+  previous publication on CRAN or in other venues sufficient reason to
+  not adopt reviewer or editor recommendations.
+- Do not submit your package for review while it or an associated manuscript
+  is also under review at another venue, as this may result on conflicting
+  requests for changes.
 
 ### Conflict of interest for reviewers/editors {#coi}
 
 Following criteria are meant to be a guide for what constitutes a conflict of interest for an editor or reviewer. The potential editor or reviewer has a conflict of interest if:
 
-* The authors with a major role are from the potential reviewer/editor's institution or institutional component (e.g., department)
-* Within in the past three years, the potential reviewer/editor has been a collaborator or has had any other professional relationship with any person on the package who has a major role
-* The potential reviewer/editor serves as a member of the advisory board for the project under review
-*  The potential reviewer/editor would receive a direct or indirect financial benefit if the package is accepted
-* The potential reviewer/editor has significantly contributed to a competitor project.
-* There is also a lifetime COI for the family members, business partners, and thesis student/advisor or mentor.
+- The potential reviewer/editor are from the same institution or institutional component (e.g., department) as any author with a major role.
+- The potential reviewer/editor has been a collaborator or has had other professional relationships with at least one person on the package who has a major role within in the past three year.
+- The potential reviewer/editor serves, or has served, as a member of the advisory board for the project under review.
+- The potential reviewer/editor would receive a direct or indirect financial benefit if the package were accepted.
+- The potential reviewer/editor has significantly contributed to a competitor project.
+- There is also a lifetime COI for the family members, business partners, and thesis student/advisor or mentor.
 
 In the case where none of the [associate editors](#associateditors) can serve as editor, an external guest editor will be recruited.
-
 
 ## Aims and Scope {#aims-and-scope}
 
@@ -55,39 +58,39 @@ Note that not all rOpenSci projects and packages are in-scope or go through peer
 
 ![example of a green peer-reviewed badge](images/status.png)
 
-### Package categories
+### Package categories {#package-categories}
 
-* __data retrieval__: Packages for accessing and downloading data from online sources with scientific applications.  Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data _sources_ / _topics_, rather than _services_. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: [**rotl**](https://github.com/ropensci/software-review/issues/17),
-[**gutenbergr**](https://github.com/ropensci/software-review/issues/41))
+- **data retrieval**: Packages for accessing and downloading data from online sources with scientific applications.  Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data *sources* / *topics*, rather than *services*. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: [**rotl**](https://github.com/ropensci/software-review/issues/17),
+  [**gutenbergr**](https://github.com/ropensci/software-review/issues/41))
 
-* __data extraction__: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, nor are code parsers. Trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/software-review/issues/42) for extracting tables from PDF documents, [**genbankr**](https://github.com/ropensci/software-review/issues/47) for parsing files from GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) for phylogentic reading in phylogentic tree files, [**lightr**](https://github.com/ropensci/software-review/issues/267) for parsing files from spectroscopic instruments))
+- **data extraction**: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, nor are code parsers. Trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/software-review/issues/42) for extracting tables from PDF documents, [**genbankr**](https://github.com/ropensci/software-review/issues/47) for parsing files from GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) for phylogentic reading in phylogentic tree files, [**lightr**](https://github.com/ropensci/software-review/issues/267) for parsing files from spectroscopic instruments))
 
-* __data munging__: Packages for processing data from formats above. This area does not include broad data manipulations tools such as **reshape2** or **tidyr**, or tools for extracting data from R code itself. Rather, it focuses on tools for handling data in specific scientific formats generated from scientific workflows or exported from scientific instruments. (Examples: [**plateR**](https://github.com/ropensci/software-review/issues/60) for reading in data structured as plate maps for scientific instruments, or [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) for processing annotated audio files for phonics research)
+- **data munging**: Packages for processing data from formats above. This area does not include broad data manipulations tools such as **reshape2** or **tidyr**, or tools for extracting data from R code itself. Rather, it focuses on tools for handling data in specific scientific formats generated from scientific workflows or exported from scientific instruments. (Examples: [**plateR**](https://github.com/ropensci/software-review/issues/60) for reading in data structured as plate maps for scientific instruments, or [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) for processing annotated audio files for phonics research)
 
-* __data deposition__: Packages that support deposition of data  into research repositories, including data formatting and metadata generation.
-(Example: [**EML**](https://github.com/ropensci/software-review/issues/80))
+- **data deposition**: Packages that support deposition of data  into research repositories, including data formatting and metadata generation.
+  (Example: [**EML**](https://github.com/ropensci/software-review/issues/80))
 
-* __data validation and testing__: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
+- **data validation and testing**: Tools that enable automated validation and checking of data quality and completeness as part of scientific workflows. (Example: [**assertr**](https://github.com/ropensci/software-review/issues/23))
 
-* __workflow automation__: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
+- **workflow automation**: Tools that automate and link together workflows, such as build systems and tools to manage continuous integration. Does not include general tools for literate programming. (e.g., R markdown extensions not under the previous topics). (Example: [**drake**](https://github.com/ropensci/software-review/issues/156))
 
-* __version control__: Tools that facilitate the use of version control in scientific workflows.  Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category.  (Example: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
+- **version control**: Tools that facilitate the use of version control in scientific workflows.  Note that this does not include all tools that interact with online version control services (e.g., GitHub), unless they fit into another category.  (Example: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
 
-* __citation management and bibliometrics__: Tools that facilitate managing references, such as for writing manuscripts, creating CVs or otherwise attributing scientific contributions, or accessing, manipulating or otherwise working with bibliometric data. (Example: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
+- **citation management and bibliometrics**: Tools that facilitate managing references, such as for writing manuscripts, creating CVs or otherwise attributing scientific contributions, or accessing, manipulating or otherwise working with bibliometric data. (Example: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
 
-* __scientific software wrappers__: Packages that wrap non-R utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple `system()` call or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex.  This does not include wrappers of other R packages or C/C++ libraries that can be included in R packages. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
+- **scientific software wrappers**: Packages that wrap non-R utility programs used for scientific research. These programs must be specific to research fields, not general computing utilities. Wrappers must be non-trivial, in that there must be significant added value above simple `system()` calls or bindings, whether in parsing inputs and outputs, data handling, etc. Improved installation process, or extension of compatibility to more platforms, may constitute added value if installation is complex.  This does not include wrappers of other R packages or C/C++ libraries that can be included in R packages.  It also does not include packages that are clients for web APIs, which must fall into one of the other categories. We strongly encourage wrapping open-source and open-licensed utilities - exceptions will be evaluated case-by-case, considering whether open-source options exist. (Examples: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
 
-* __field and laboratory reproducibility tools__: Packages that improve reproducibility of real-world workflows through standardization and automation of field and lab protocols, such as sample tracking and tagging, form and data sheet generation, interfacing with laboratory equipment or information systems, and executing experimental designs. (Example: [**baRcodeR**](https://github.com/ropensci/software-review/issues/336))
+- **field and laboratory reproducibility tools**: Packages that improve reproducibility of real-world workflows through standardization and automation of field and lab protocols, such as sample tracking and tagging, form and data sheet generation, interfacing with laboratory equipment or information systems, and executing experimental designs. (Example: [**baRcodeR**](https://github.com/ropensci/software-review/issues/336))
 
-* __database software bindings__: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
+- **database software bindings**: Bindings and wrappers for generic database APIs (Example: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
 
-In addition, we have some _specialty topics_ with a slightly broader scope.
+In addition, we have some *specialty topics* with a slightly broader scope.
 
-* __geospatial data__: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Examples: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
+- **geospatial data**: We accept packages focused on accessing geospatial data, manipulating geospatial data, and converting between geospatial data formats. (Examples: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
 
-* __text data__: We include packages that process and manage text and language data. This is limited to text processing/munging/management (e.g., tokenization, stemming, conversion to and between structured text formats, text metadata and repository access, etc. ).  Machine-learning and packages implementing NLP analysis algorithms should be submitted under [_statistical_ software peer review](https://stats-devguide.ropensci.org/). The scope for this topic is not fully defined, please open a pre-submission inquiry if you are considering submitting a package that falls under this topic. (Example: [**tokenizers**](https://github.com/ropensci/software-review/issues/33))
+- **translation**:  As part of our work in [multilingual publishing](https://ropensci.org/multilingual-publishing/), we have a special interest in packages that facilitate the translation and publication of scientific and programming resources into multiple (human) languages so they are accessible to larger and more diverse audiences. These could include interfaces to automated translation programs, frameworks for managing documentation in multiple languages, or programs accessing specialized linguistic resources.  This is a new and experimental scope, so please open a [pre-submission inquiry](https://github.com/ropensci/software-review/issues/new/choose) if you are interested in submitting a package in this category.
 
-### Other scope considerations
+### Other scope considerations {#other-scope-considerations}
 
 Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.
 
@@ -101,10 +104,10 @@ Note that the packages developed internally by rOpenSci, through our events or t
 
 rOpenSci encourages competition among packages, forking and re-implementation as they improve options of users overall. However, as we want packages in the rOpenSci suite to be our top recommendations for the tasks they perform, we aim to avoid duplication of functionality of existing R packages in any repo without significant improvements. An R package that replicates the functionality of an existing R package may be considered for inclusion in the rOpenSci suite if it significantly improves on alternatives in any repository (RO, CRAN, BioC) by being:
 
--   More open in licensing or development practices
--   Broader in functionality (e.g., providing access to more data sets, providing a greater suite of functions), but not only by duplicating additional packages
--   Better in usability and performance
--  Actively maintained while alternatives are poorly or no longer actively maintained
+- More open in licensing or development practices
+- Broader in functionality (e.g., providing access to more data sets, providing a greater suite of functions), but not only by duplicating additional packages
+- Better in usability and performance
+- Actively maintained while alternatives are poorly or no longer actively maintained
 
 These factors should be considered *as a whole* to determine if the package is a significant improvement. A new package would not meet this standard only by following our package guidelines while others do not, unless this leads to a significant difference in the areas above.
 
@@ -112,42 +115,40 @@ We recommend that packages highlight differences from and improvements over over
 
 We encourage developers whose packages are not accepted due to overlap to still consider submittal to other repositories or journals.
 
-
 ## Package ownership and maintenance {#ownership-after-softwarereview}
 
-### Role of the rOpenSci team
+### Role of the rOpenSci team {#role-of-the-ropensci-team}
 
 Authors of contributed packages essentially maintain the same ownership they had prior to their package joining the rOpenSci suite. Package authors will continue to maintain and develop their software after acceptance into rOpenSci. Unless explicitly added as collaborators, the rOpenSci team will not interfere much with day to day operations. However, this team may intervene with critical bug fixes, or address urgent issues if package authors do not respond in a timely manner (see [the section about maintainer responsiveness](#maintainer-responsiveness)).
 
-### Maintainer responsiveness
+### Maintainer responsiveness {#maintainer-responsiveness}
 
 If package maintainers do not respond in a timely manner to requests for package fixes from CRAN or from us, we will remind the maintainer a number of times, but after 3 months (or shorter time frame, depending on how critical the fix is) we will make the changes ourselves.
 
 The above is a bit vague, so the following are a few areas of consideration.
 
 - Examples where we'd want to move quickly:
-    - Package `foo` is imported by one or more packages on CRAN, and `foo` is broken, and thus would break its reverse dependencies.
-    - Package `bar` may not have reverse dependencies on CRAN, but is widely used, thus quickly fixing problems is of greater importance.
+  - Package `foo` is imported by one or more packages on CRAN, and `foo` is broken, and thus would break its reverse dependencies.
+  - Package `bar` may not have reverse dependencies on CRAN, but is widely used, thus quickly fixing problems is of greater importance.
 - Examples where we can wait longer:
-    - Package `hello` is not on CRAN, or on CRAN, but has no reverse dependencies.
-    - Package `world` needs some fixes. The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.
+  - Package `hello` is not on CRAN, or on CRAN, but has no reverse dependencies.
+  - Package `world` needs some fixes. The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.
 
 We urge package maintainers to make sure they are receiving GitHub notifications, as well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their spam box. Authors of onboarded packages will be invited to the rOpenSci Slack to chat with the rOpenSci team and the greater rOpenSci community. Anyone can also discuss with the rOpenSci community on the [rOpenSci discussion forum](https://discuss.ropensci.org/).
 
 Should authors abandon the maintenance of an actively used package in our suite, we will consider petitioning CRAN to transfer package maintainer status to rOpenSci.
 
-### Quality commitment
+### Quality commitment {#quality-commitment}
 
 rOpenSci strives to develop and promote high quality research software. To ensure that your software meets our criteria, we review all of our submissions as part of the Software Peer Review process, and even after acceptance will continue to step in with improvements and bug fixes.
 
 Despite our best efforts to support contributed software, errors are the responsibility of individual maintainers. Buggy, unmaintained software may be removed from our suite at any time.
 
-
-### Package removal
+### Package removal {#package-removal}
 
 In the unlikely scenario that a contributor of a package requests removal of their package from the suite, we retain the right to maintain a version of the package in our suite for archival purposes.
 
-## Ethics, Data Privacy and Human Subjects Research
+## Ethics, Data Privacy and Human Subjects Research {#ethics-data-privacy-and-human-subjects-research}
 
 rOpenSci packages and other tools are used for a variety of purposes, but our focus is on
 tools for research. We expect that tools will enable ethical use by research
@@ -177,51 +178,51 @@ Some packages, due to the nature of data they handle, may be determined by edito
 documentation, defaults, and warnings to direct users to relevant ethical
 practices. The following topics may merit enhanced scrutiny:
 
--   ***Vulnerable populations***: Authors of packages and workflows that deal with
-    information related to vulnerable populations bear responsibility to protect
-    them from likely harms.
+- ***Vulnerable populations***: Authors of packages and workflows that deal with
+  information related to vulnerable populations bear responsibility to protect
+  them from likely harms.
 
--   ***Personally identifiable or sensitive data***: The release of personally
-    identifiable or sensitive data is potentially harmful. This includes "reasonably
-    re-identifiable" data - which a motivated individual could trace back to the
-    owner or creator even if the data are anonymized. This includes both cases where identifiers
-    (e.g., name, date of birth) are available as part of data, and also if unique
-    pseudonyms/screen names are linked with full-text posts, through which one
-    can link back individuals through cross-reference with other data sets.
-    
+- ***Personally identifiable or sensitive data***: The release of personally
+  identifiable or sensitive data is potentially harmful. This includes "reasonably
+  re-identifiable" data - which a motivated individual could trace back to the
+  owner or creator even if the data are anonymized. This includes both cases where identifiers
+  (e.g., name, date of birth) are available as part of data, and also if unique
+  pseudonyms/screen names are linked with full-text posts, through which one
+  can link back individuals through cross-reference with other data sets.
+
 While the best response to ethical concerns will be context-specific, these
 general guidelines should be followed by packages where the challenges above arise:
 
--   Packages should adhere to data source's terms of use, as expressed in
-    website Terms and Conditions, ["robots.txt"](https://docs.ropensci.org/robotstxt/) files, privacy policies, and
-    other relevant restrictions, and link to them prominently in package
-    documentation. Packages should provide or document functionality to adhere
-    to such restrictions (e.g., scrape from only allowed endpoints, use
-    appropriate rate limiting in code, examples, or vignettes). Note that while Terms
-    and Conditions, Privacy Policies, etc., may not provide sufficient bounds on
-    ethical usage, they can provide an outer bound.
+- Packages should adhere to data source's terms of use, as expressed in
+  website Terms and Conditions, ["robots.txt"](https://docs.ropensci.org/robotstxt/) files, privacy policies, and
+  other relevant restrictions, and link to them prominently in package
+  documentation. Packages should provide or document functionality to adhere
+  to such restrictions (e.g., scrape from only allowed endpoints, use
+  appropriate rate limiting in code, examples, or vignettes). Note that while Terms
+  and Conditions, Privacy Policies, etc., may not provide sufficient bounds on
+  ethical usage, they can provide an outer bound.
 
--   A key tool in addressing the risks posed in studying vulnerable populations or
-    using personally identifiable data is ***informed consent***.  Package authors
-    should support users' acquisition of informed consent when relevant. This may
-    include providing links to data source's preferred method of acquiring consent,
-    contact information of data providers (e.g. forum moderators), documentation
-    of informed consent protocols, or getting pre-approval for general uses of a
-    package.
-   
-    Note that consent is not implicitly granted just because data are accessible.
-    Accessible data are not necessarily public, as different persons and contexts
-    have different normative expectations of privacy (see work by [Social Data
-    Lab](http://socialdatalab.net/ethics-resources)).
+- A key tool in addressing the risks posed in studying vulnerable populations or
+  using personally identifiable data is ***informed consent***.  Package authors
+  should support users' acquisition of informed consent when relevant. This may
+  include providing links to data source's preferred method of acquiring consent,
+  contact information of data providers (e.g. forum moderators), documentation
+  of informed consent protocols, or getting pre-approval for general uses of a
+  package.
+  
+  Note that consent is not implicitly granted just because data are accessible.
+  Accessible data are not necessarily public, as different persons and contexts
+  have different normative expectations of privacy (see work by [Social Data
+  Lab](http://socialdatalab.net/ethics-resources)).
 
--   Packages accessing personally identifiable information should take special
-    care to follow [security best practices][Package Development Security Best Practices]
-    (e.g., exclusive use of secure internet protocols, strong mechanisms for
-    storing credentials, etc.).
+- Packages accessing personally identifiable information should take special
+  care to follow \[security best practices\]\[Package Development Security Best Practices\]
+  (e.g., exclusive use of secure internet protocols, strong mechanisms for
+  storing credentials, etc.).
 
--   Packages that access or handle personally identifiable or sensitive data
-    should enable, document, and demonstrate workflows for de-identification,
-    secure storage, other best practices to minimize risk of harm.
+- Packages that access or handle personally identifiable or sensitive data
+  should enable, document, and demonstrate workflows for de-identification,
+  secure storage, other best practices to minimize risk of harm.
 
 As standards for data privacy and research continue to evolve, we welcome input
 from authors on considerations specific to their software and supplemental
@@ -230,52 +231,53 @@ may be attached to issue threads of package submissions or pre-submission inquir
 or conveyed directly to editors if needed. General
 suggestions may be filed as [issues in this book's repository](https://github.com/ropensci/dev_guide/issues).
 
-### Resources
+### Resources {#resources}
 
 The following resources may be helpful for researchers, package authors, editors
 and reviewers in addressing ethical questions related to privacy and research software.
 
--   The [Declaration of
-    Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
-    and [The Belmont
-    Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
-    provide fundamental principles for ethical practice by researchers.
--   Several organizations provide guidance on how to translate these principles
-    into the context of internet research. These include the [Ethical
-    Guidelines of The Association of Internet
-    Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet
-    Research
-    Ethics](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
-    and [BPS' Ethics Guidelines for Internet-Mediated
-    Research](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
-    [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) provide a
-    helpful overview of these.
--   The Social Media Lab provides a [high-level
-    overview](http://socialdatalab.net/ethics-resources) with data on normative
-    expectations of privacy and use on social forums.
--   Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
-    Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
-    Integrity. <https://doi.org/10.1007/978-3-319-76040-7_18-1>
--   Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., & Primack, B. (2021). Re-evaluating standards of
-    human subjects protection for sensitive health data in social media networks. 
-    Social Networks, 67, 41–46. <https://dx.doi.org/10.1016/j.socnet.2019.10.010>
--   Lomborg, S., & Bechmann, A. (2014). Using APIs for Data Collection on Social
-    Media. The Information Society, 30(4), 256--265. 
-    <https://dx.doi.org/10.1080/01972243.2014.915276>
--   Flick, C. (2016). Informed consent and the Facebook emotional manipulation
-    study. *Research Ethics*, *12*(1), 14--28.
-    <https://doi.org/10.1177/1747016115599568>
--   Sugiura, L., Wiles, R., & Pope, C. (2017). Ethical challenges in online
-    research: Public/private perceptions. *Research Ethics*, *13*(3--4),
-    184--199. <https://doi.org/10.1177/1747016116650720>
--   Taylor, J., & Pagliari, C. (2018). Mining social media data: How are
-    research sponsors and researchers addressing the ethical challenges?
-    Research Ethics, 14(2), 1--39. <https://doi.org/10.1177/1747016117738559>
--   Zimmer, M. (2010). "But the data is already public": on the ethics of
-    research in Facebook. Ethics and Information Technology, 12(4), 313--325.
-    <https://dx.doi.org/10.1007/s10676-010-9227-5>
-
+- The [Declaration of
+  Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
+  and [The Belmont
+  Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)
+  provide fundamental principles for ethical practice by researchers.
+- Several organizations provide guidance on how to translate these principles
+  into the context of internet research. These include the [Ethical
+  Guidelines of The Association of Internet
+  Researchers](https://aoir.org/ethics/), the [NESH Guide to Internet
+  Research
+  Ethics](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/),
+  and [BPS' Ethics Guidelines for Internet-Mediated
+  Research](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017).
+  [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) provide a
+  helpful overview of these.
+- The Social Media Lab provides a [high-level
+  overview](http://socialdatalab.net/ethics-resources) with data on normative
+  expectations of privacy and use on social forums.
+- Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research
+  Dilemmas. In: Iphofen R. (eds) Handbook of Research Ethics and Scientific
+  Integrity. [https://doi.org/10.1007/978-3-319-76040-7\_18-1](https://doi.org/10.1007/978-3-319-76040-7_18-1)
+- Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., \& Primack, B. (2021). Re-evaluating standards of
+  human subjects protection for sensitive health data in social media networks.
+  Social Networks, 67, 41–46. [https://dx.doi.org/10.1016/j.socnet.2019.10.010](https://dx.doi.org/10.1016/j.socnet.2019.10.010)
+- Lomborg, S., \& Bechmann, A. (2014). Using APIs for Data Collection on Social
+  Media. The Information Society, 30(4), 256--265.
+  [https://dx.doi.org/10.1080/01972243.2014.915276](https://dx.doi.org/10.1080/01972243.2014.915276)
+- Flick, C. (2016). Informed consent and the Facebook emotional manipulation
+  study. *Research Ethics*, *12*(1), 14--28.
+  [https://doi.org/10.1177/1747016115599568](https://doi.org/10.1177/1747016115599568)
+- Sugiura, L., Wiles, R., \& Pope, C. (2017). Ethical challenges in online
+  research: Public/private perceptions. *Research Ethics*, *13*(3--4),
+  184--199. [https://doi.org/10.1177/1747016116650720](https://doi.org/10.1177/1747016116650720)
+- Taylor, J., \& Pagliari, C. (2018). Mining social media data: How are
+  research sponsors and researchers addressing the ethical challenges?
+  Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
+- Zimmer, M. (2010). "But the data is already public": on the ethics of
+  research in Facebook. Ethics and Information Technology, 12(4), 313--325.
+  [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
 ## Code of Conduct {#code-of-conduct}
 
-rOpenSci’s community is our best asset. Whether you’re a regular contributor or a newcomer, we care about making this a safe place for you and we’ve got your back. We have a Code of Conduct that applies to all people participating in the rOpenSci community, including rOpenSci staff and leadership and to all modes of interaction online or in person. The [Code of Conduct](https://ropensci.org/code-of-conduct/) is maintained on the rOpenSci website.
+rOpenSci's community is our best asset. Whether you're a regular contributor or a newcomer, we care about making this a safe place for you and we've got your back. We have a Code of Conduct that applies to all people participating in the rOpenSci community, including rOpenSci staff and leadership and to all modes of interaction online or in person. The [Code of Conduct](https://ropensci.org/code-of-conduct/) is maintained on the rOpenSci website.
+
+

@@ -2,9 +2,17 @@
 
 ## dev (0.9.0)
 
+- 2023-07-17, Update Aims and Scope to include translation packages, remove experimental text-processing categories, and provide clarifications around API wrappers
+
+- 2023-05-04, Added link to Bioconductor book (#663, `@llrs`).
+
+- 2023-04-26, Changed suggested lifecycle stage in authors guide (#661, `@bart1`).
+
+- 2023-04-25, changed the COI section to use parallel construction (#659, `@eliocamp`).
+ 
 - 2022-07-04, Add resources around GitHub workflows (#479, `@maurolepore`).
 
-- 2023-02-14, update instructions for CITATION to reflect new CRAN policies (#604, #609)
+- 2023-02-14, update instructions for CITATION to reflect new CRAN policies (#604, #609).
 
 - 2023-02-14, add package maintainer cheatsheet (#608).
 

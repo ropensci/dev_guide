@@ -27,7 +27,7 @@ jobs:
           extra-packages: local::.
 
       - name: Render book
-        run: Rscript -e 'rOpenScidevguide::orchestrate()'
+        run: Rscript -e 'babelquarto::render_book()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}

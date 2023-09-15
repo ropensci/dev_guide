@@ -1,10 +1,10 @@
-# Comandos del bot
+# Comandos del bot {#bot-commands}
 
-## Para todas las personas que participan {.unnumbered}
+## Para todo el mundo {#for-everyone}
 
-Ten en cuenta que limpiamos los hilos de issue eliminando el contenido superfluo, por lo que la mayoría de las veces se borrará u ocultará rápidamente el registro de que has pedido ayuda a un bot.
+Ten en cuenta que limpiamos los *issues* eliminando el contenido superfluo, por lo que la mayoría de las veces el registro de que has pedido ayuda a un bot se borrará u ocultará rápidamente.
 
-### Consulta la lista de comandos disponibles {.unnumbered}
+### Consulta la lista de comandos disponibles {#see-the-list-of-commands-available-to-you}
 
 Si necesitas un recordatorio rápido
 
@@ -12,15 +12,15 @@ Si necesitas un recordatorio rápido
 @ropensci-review-bot help
 ```
 
-### Ver el código de conducta {.unnumbered}
+### Ver el código de conducta {#see-the-code-of-conduct}
 
 ```markdown
 @ropensci-review-bot code of conduct
 ```
 
-## Para las personas responsables del paquete {.unnumbered}
+## Para las personas responsables del paquete {#for-authors}
 
-### Comprueba el paquete con pkgcheck {.unnumbered}
+### Comprueba el paquete con pkgcheck {#check-package-with-pkgcheck}
 
 Cuando tu paquete haya cambiado sustancialmente.
 
@@ -28,7 +28,7 @@ Cuando tu paquete haya cambiado sustancialmente.
 @ropensci-review-bot check package
 ```
 
-### Envía tu respuesta sobre la revisión {.unnumbered}
+### Envía tu respuesta sobre la revisión {#submit-response-to-reviewers}
 
 Para registrar tu respuesta al equipo revisor.
 
@@ -36,9 +36,9 @@ Para registrar tu respuesta al equipo revisor.
 @ropensci-review-bot submit response <response-url>
 ```
 
-donde `<response_url>` es el enlace al comentario de respuesta en el hilo del _issue_.
+donde `<response_url>` es el enlace al comentario de respuesta en el *issue*.
 
-### Finalizar la transferencia del repositorio {.unnumbered}
+### Finalizar la transferencia del repositorio {#finalize-repo-transfer}
 
 Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci y le hayas transferido tu repositorio GitHub, ejecuta este comando para recuperar el acceso de administración a tu repositorio.
 
@@ -46,23 +46,23 @@ Una vez que hayas aceptado la invitación a la organización GitHub de rOpenSci 
 @ropensci-review-bot finalize transfer of <package-name>
 ```
 
-### Obtener una nueva invitación tras la aprobación {.unnumbered}
+### Obtener una nueva invitación tras la aprobación {#get-a-new-invite-after-approval}
 
-Si se venció el plazo de una semana para aceptar la invitación a la organización rOpenSci en GitHub, ejecuta este comando para recibir una nueva.
+Si se venció el plazo de una semana para aceptar la invitación a la organización ropensci en GitHub, ejecuta este comando para recibir una nueva.
 
 ```markdown
 @ropensci-review-bot invite me to ropensci/<package-name>
 ```
 
-## Para la persona encargada de la edición {.unnumbered}
+## Para la persona encargada de la edición {#for-the-editor-in-chief}
 
-### Asignar la persona editora de esta revisión {.unnumbered}
+### Asignar la persona para editar esta revisión {#assign-an-editor}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
 ```
 
-### Poner el envío en espera {.unnumbered}
+### Poner el envío en espera {#put-submission-on-hold}
 
 Ver [política editorial](#policiesreviewprocess).
 
@@ -70,7 +70,7 @@ Ver [política editorial](#policiesreviewprocess).
 @ropensci-review-bot put on hold
 ```
 
-### Indicar que el envío está fuera de alcance {.unnumbered}
+### Indicar que el envío está fuera de alcance {#indicate-the-submission-is-out-of-scope}
 
 No olvides publicar primero un comentario explicando la decisión y agradeciendo a las personas responsables del paquete su envío.
 
@@ -78,9 +78,9 @@ No olvides publicar primero un comentario explicando la decisión y agradeciendo
 @ropensci-review-bot out-of-scope
 ```
 
-## Para la persona asignada como responsable de la edición {.unnumbered}
+## Para la persona asignada como responsable de la edición {#for-assigned-editor}
 
-### Poner el envío en espera {.unnumbered}
+### Poner el envío en espera {#put-submission-on-hold}
 
 Ver [política editorial](#policiesreviewprocess).
 
@@ -88,7 +88,7 @@ Ver [política editorial](#policiesreviewprocess).
 @ropensci-review-bot put on hold
 ```
 
-### Comprueba el paquete con pkgcheck {.unnumbered}
+### Comprueba el paquete con pkgcheck {#check-package-with-pkgcheck}
 
 Generalmente se hace sólo en consultas previas al envío para revisión, o cuando las personas responsables del paquete indican que el paquete ha cambiado sustancialmente.
 
@@ -96,7 +96,7 @@ Generalmente se hace sólo en consultas previas al envío para revisión, o cuan
 @ropensci-review-bot check package
 ```
 
-### Comprueba las normas estadísticas {.unnumbered}
+### Comprueba las normas estadísticas {#check-statistical-standards}
 
 Generalmente se hace sólo en consultas previas al envío para revisión, o cuando las personas responsables del paquete indican que el paquete ha cambiado sustancialmente.
 
@@ -104,7 +104,7 @@ Generalmente se hace sólo en consultas previas al envío para revisión, o cuan
 @ropensci-review-bot check srr
 ```
 
-### Comprueba que el README tiene la etiqueta de revisión de software {.unnumbered}
+### Comprueba que el README tiene la etiqueta de revisión de software {#check-that-readme-has-software-review-badge}
 
 Hacia el final del proceso de envío.
 
@@ -112,13 +112,13 @@ Hacia el final del proceso de envío.
 @ropensci-review-bot check readme
 ```
 
-### Indica que estás buscando personas para revisar {.unnumbered}
+### Indica que estás buscando personas para revisar {#indicate-you-are-now-seeking-reviewers}
 
 ```markdown
 @ropensci-review-bot seeking reviewers
 ```
 
-### Asignar una persona al equipo revisor {.unnumbered}
+### Asignar una persona al equipo revisor {#assign-a-reviewer}
 
 ```markdown
 @ropensci-review-bot assign @username as reviewer
@@ -130,25 +130,25 @@ o
 @ropensci-review-bot add @username as reviewer
 ```
 
-### Eliminar una persona del equipo revisor {.unnumbered}
+### Eliminar una persona del equipo revisor {#remove-a-reviewer}
 
 ```markdown
 @ropensci-review-bot remove @username from reviewers
 ```
 
-### Ajustar la fecha límite de la revisión {.unnumbered}
+### Ajustar la fecha límite de la revisión {#tweak-review-due-date}
 
 ```markdown
 @ropensci-review-bot set due date for @username to YYYY-MM-DD
 ```
 
-### Registra que se ha enviado una revisión {.unnumbered}
+### Registra que se ha enviado una revisión {#record-that-a-review-was-submitted}
 
 ```markdown
 @ropensci-review-bot submit review <review-url> time <time in hours>
 ```
 
-### Aprobar un paquete {.unnumbered}
+### Aprobar un paquete {#approve-package}
 
 ```markdown
 @ropensci-review-bot approve <package-name>

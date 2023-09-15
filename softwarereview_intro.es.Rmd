@@ -1,90 +1,83 @@
-# Revisión por pares del software, ¿por qué? ¿qué? {#softwarereviewintro}
+# Revisión por pares de software, ¿por qué? ¿qué es?  {#softwarereviewintro}
 
-```{block, type='summaryblock'}
+```{block, type="summaryblock"}
 Este capítulo contiene una [introducción general](#whatissoftwarereview) a nuestro sistema de revisión por pares de software para paquetes, [razones para enviar un paquete](#whysubmit), [razones para ofrecerse para revisar](#whyreview), [por qué nuestras revisiones son abiertas](#whyopen), y agradecimientos a [quienes participan del sistema](#editors-and-reviewers).
 
 Nuestro sistema se ha ampliado recientemente a [la revisión por pares de software estadístico](https://ropensci.org/stat-software-review/).
 
-_Si utilizas nuestros estándares, listas de tareas, etc... al revisar software en otro lugar, informa a las personas a las que está destinado (por ejemplo, editoras/es de revistas, estudiantes, revisión interna de código) que estos materiales proceden de rOpenSci, y también cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [por correo electrónico](https://ropensci.org/contact/), si prefieres comentarlo en forma privada._ 
+_Si utilizas nuestros estándares, listas de tareas, etc. al revisar software en otro lugar, cuenta que estos materiales proceden de rOpenSci a quienes reciben la revisión (por ejemplo, quien edita la revista, estudiantes, colegas durante una revisión interna de código), y también cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [por correo electrónico](https://ropensci.org/contact/) si prefieres comentarlo en forma privada._ 
 ```
 
-## ¿Qué es la revisión por pares de software de rOpenSci? {#whatissoftwarereview}
+## ¿Qué es la revisión por pares de software de rOpenSci?  {#whatissoftwarereview}
 
 La [suite de paquetes](https://ropensci.org/packages/) de rOpenSci recibe aportes tanto de personal de la organización, como por miembros de la comunidad, lo que significa que se nutre de una gran diversidad de habilidades y experiencias.
 Pero, ¿cómo asegurar un buen nivel de calidad?
 Ahí es donde entra en juego la revisión por pares de software: los paquetes aportados por la comunidad se someten a un proceso de revisión transparente, constructivo, no conflictivo y abierto.
-El mismo se sustenta principalmente en el trabajo de personas voluntarias: [editoras/os asociadas/os](#associateditors) gestionan el flujo de información y garantizan que los envíos progresen; personas que crean, envían y mejoran su paquete; [revisoras/es](#reviewers) (dos por envío), examinan el código y la experiencia de usuario.
-[Esta entrada del blog](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/), escrito por editoras/es de rOpenSci es una buena introducción a la revisión por pares de software de rOpenSci.
+El mismo se sustenta principalmente en el trabajo voluntario: desde el rol de [edición asociada](#associateditors), gestionando el flujo de información y garantizando que los envíos progresen; personas que crean, envían y mejoran su paquete; [personas que revisan paquetes](#reviewers) (dos por envío), examinan el código y la experiencia de usuario.
+[Este artículo del blog](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/), escrito por miembros del equipo editorial de rOpenSci es una buena introducción a la revisión por pares de software de rOpenSci.
 Puedes encontrar más artículos en el blog de rOpenSci sobre el proceso y los paquetes que pasaron por el mismo en la etiqueta ["software-peer-review"](https://ropensci.org/tags/software-peer-review/).
 
-Puedes reconocer los paquetes de rOpenSci que han sido revisados por pares mediante una etiqueta verde que dice "peer-reviewed" en su *README* (ej. el paquete [restez](https://github.com/ropensci/restez#locally-query-genbank-)), y por el icono azul en su descripción en [la página de paquetes de rOpenSci](https://ropensci.org/packages/), ambos contienen links a la revisión.
+Puedes reconocer los paquetes de rOpenSci que han sido revisados por pares mediante una etiqueta verde que dice "peer-reviewed" en su *README* (ej. el paquete [restez](https://github.com/ropensci/restez#locally-query-genbank-)) y por el icono azul en su descripción en [la página de paquetes de rOpenSci](https://ropensci.org/packages/).
+Ambos contienen links a la revisión.
 
-En cuanto a la parte técnica, aprovechamos [GitHub](https://github.com/) al máximo: cada proceso de revisión es un *issue* en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review/).
-Por ejemplo, haz click [aquí](https://github.com/ropensci/software-review/issues/24) para leer el hilo de revisión del paquete `ropenaq`: el proceso es una conversación activa hasta que el paquete es aceptado, con dos revisiones externas como hitos importantes.
-Además, utilizamos funciones de GitHub como las plantillas de *issues* (como plantilla de envío), y el etiquetado que utilizamos para seguir el progreso de los envíos (desde las revisiones de quien hace la edición hasta la aprobación).
+En cuanto a la parte técnica, le sacamos el jugo a [GitHub](https://github.com/): cada proceso de revisión es un *issue* en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review/).
+Por ejemplo, haz click [aquí](https://github.com/ropensci/software-review/issues/24) para leer el hilo de revisión del paquete `ropenaq`.
+El proceso es una conversación activa hasta que el paquete es aceptado, con dos revisiones externas como momentos importantes.
+Además, utilizamos funcionalidades de GitHub como las plantillas de *issues* (como plantilla de envío), y el etiquetado que utilizamos para seguir el progreso de los envíos (desde las revisiones iniciales hasta la aprobación).
 
-## ¿Por qué enviar tu paquete a rOpenSci? {#whysubmit}
+## ¿Por qué enviar tu paquete a rOpenSci?  {#whysubmit}
 
--   En primer lugar, y sobre todo, esperamos que envíes tu paquete para su revisión **porque valoras la devolución**. Nuestro objetivo es proporcionar una devolución útil a las personas que crearon el paquetes y que nuestro proceso de revisión sea abierto, no conflictivo y centrado en la mejora de la calidad del software.
--   Una vez a aceptado, tu paquete seguirá recibiendo **apoyo de los miembros de rOpenSci**. Mantendrás la propiedad y el control de tu paquete, pero podemos ayudarte con los problemas de mantenimiento en curso, como los relacionados con las actualizaciones de R y las dependencias, y las políticas de CRAN.
--   rOpenSci **difundirá tu paquete** a través de nuestra [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) y [redes sociales](https://twitter.com/ropensci). Los paquetes de nuestra suite también tienen un [sitio web de documentación que se construye y despliega automáticamente después de cada _push_](#docsropensci).
--   Los paquete de rOpenSci **se pueden incluir** en otros repositorios como CRAN y BioConductor.
--   Los paquetes de rOpenSci que son relevantes para el [Journal of Open-Source Software](https://joss.theoj.org/) y añaden un artículo corto de acompañamiento pueden beneficiarse, a discreción de las/os editoras/es de JOSS, de un proceso de revisión acelerado.
--   Si escribes un **gitbook relacionado a tu paquete**, rOpenSci lo difundirá: el código fuentel mismo puede ser transferido a [la organización de GitHub `ropensci-books`](https://github.com/ropensci-books) para ser listado [en books.ropensci.org](https://books.ropensci.org/).
+- En primer lugar, y sobre todo, esperamos que envíes tu paquete para su revisión **porque valoras la devolución**. Nuestro objetivo es proporcionar una devolución útil a las personas que crearon el paquetes y que nuestro proceso de revisión sea abierto, no conflictivo y centrado en la mejora de la calidad del software.
+- Una vez a aceptado, tu paquete seguirá recibiendo **apoyo de los miembros de rOpenSci**. Mantendrás la propiedad y el control de tu paquete, pero podemos ayudarte con los problemas de mantenimiento continuo, como los relacionados con las actualizaciones de R y las dependencias, y las políticas de CRAN.
+- rOpenSci **promoverá tu paquete** a través de nuestra [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) y redes sociales (como [Mastodon](https://fosstodon.org/@ropensci) y [Twitter](https://twitter.com/ropensci)). Los paquetes de nuestra suite también tienen un [sitio web de documentación que se construye y despliega automáticamente después de cada *push*](#docsropensci).
+- Los paquete de rOpenSci **se pueden incluir** en otros repositorios como CRAN y BioConductor.
+- Los paquetes de rOpenSci que son relevantes para el [Journal of Open-Source Software](https://joss.theoj.org/) y añaden un artículo corto de acompañamiento pueden beneficiarse, a discreción del equipo editorial de JOSS, de un proceso de revisión acelerado.
+- Si escribes un ***gitbook* relacionado a tu paquete**, rOpenSci lo difundirá: se puede transferir su código fuente a [la organización de GitHub `ropensci-books`](https://github.com/ropensci-books) para ser listado en [books.ropensci.org](https://books.ropensci.org/).
 
-## ¿Por qué revisar paquetes para rOpenSci? {#whyreview}
+## ¿Por qué revisar paquetes para rOpenSci?  {#whyreview}
 
--   Como en cualquier proceso de revisión por pares, esperamos que elijas revisar **para contribuir a rOpenSci y a las comunidades científicas**. Nuestra misión de ampliar el acceso a los datos científicos y promover una cultura de investigación reproducible sólo es posible gracias a los esfuerzos voluntarios de miembros de la comunidad como tú.
--   La revisión es una conversación bidireccional. Al revisar los paquetes, tendrás la oportunidad de **seguir aprendiendo buenas prácticas de desarrollo de las personas que crean paquetes y otras/os revisoras/es**.
--   La naturaleza abierta de nuestro proceso de revisión te permite **establecer redes y conocer colegas y personas que colaboran**. Nuestra comunidad es amigable y está llena de miembros con conocimiento en el desarrollo de R y en muchas otras áreas de la ciencia y la informática científica con ganas de ayudar.
--   Para ofrecerte para revisar paquetes, completa [este breve formulario](https://airtable.com/shrnfDI2S9uuyxtDw) con tu información de contacto y tus áreas de experiencia. Siempre buscamos más personas con experiencia en el desarrollo de paquetes en general y con experiencia en los campos en los que se utilizan los paquetes.
+- Como en cualquier proceso de revisión por pares, esperamos que elijas revisar **para contribuir a rOpenSci y a las comunidades científicas**. Nuestra misión de ampliar el acceso a los datos científicos y promover una cultura de investigación reproducible sólo es posible gracias a los esfuerzos voluntarios de miembros de la comunidad como tú.
+- La revisión es una conversación bidireccional. Al revisar los paquetes, tendrás la oportunidad de **seguir aprendiendo buenas prácticas de desarrollo de quienes crean y revisan los paquetes**.
+- La naturaleza abierta de nuestro proceso de revisión te permite **establecer redes y conocer colegas y personas con quien colaborar**. Nuestra comunidad es amigable y tiene muchos miembros con ganas de ayudar y conocimiento en el desarrollo en R y en muchas otras áreas de la ciencia y la informática científica.
+- Para ofrecerte para revisar paquetes, completa [este breve formulario](https://airtable.com/shrnfDI2S9uuyxtDw) con tu información de contacto y tus áreas de conocimiento. Siempre buscamos más personas con experiencia en el desarrollo de paquetes en general y con experiencia en los campos en los que se utilizan los paquetes.
 
-## ¿Por qué las revisiones son abiertas? {#whyopen}
+## ¿Por qué las revisiones son abiertas?  {#whyopen}
 
 Nuestros hilos de revisión son públicos.
-Todas las personas que participan (en roles de autoría, revisión y edición) conocen la identidad del resto y la comunidad en general puede ver o incluso participar en la conversación a medida que se produce.
-Esto proporciona un incentivo para ser minucioso y proporcionar revisiones constructivas y no conflictivas.
-Tanto autoras/es como [revisoras/es afirman](https://ropensci.org/tags/reviewer/) que disfrutan y aprenden más de este intercambio abierto y directo.
+Todas las personas involucradas (en roles de autoría, revisión y edición) conocen la identidad del resto y la comunidad en general puede ver o incluso participar en la conversación a medida que se produce.
+Esto proporciona un incentivo para realizar una revisión minuciosa y proporcionar revisiones constructivas y no conflictivas.
+Tanto quienes envían paquete como [quienes los revisan](https://ropensci.org/tags/reviewer/) dicen disfrutar y aprender más de este intercambio abierto y directo.
 También tiene el beneficio de construir una comunidad, ya que quienes participan tienen la oportunidad de interactuar de manera significativa con nuevas personas.
 Nuevas colaboraciones han nacido gracias a las ideas surgidas durante el proceso de revisión.
 
 Somos conscientes de que los sistemas abiertos pueden tener inconvenientes.
-Por ejemplo, en la revisión académica tradicional [la revisión por pares doblemente ciega puede aumentar la representación de autoras femeninas](https://www.sciencedirect.com/science/article/pii/S0169534707002704), lo que sugiere un sesgo en las revisiones abiertas.
+Por ejemplo, en la revisión académica tradicional [la revisión por pares con doble ciego puede aumentar la representación de autoras femeninas](https://www.sciencedirect.com/science/article/pii/S0169534707002704), lo que sugiere un sesgo en las revisiones abiertas.
 También es posible que quienes hacen la revisión sean menos críticos en la revisión abierta.
 Sin embargo, proponemos que la apertura de la conversación de la revisión proporciona un control de la calidad de la revisión y del sesgo; es más difícil hacer comentarios no fundamentados o subjetivos en público sin la cobertura del anonimato.
-En definitiva, creemos que tener una comunicación directa y pública entre las personas que desarrollaron el paquete y quienes lo revisan mejora la calidad y la imparcialidad de las revisiones.
+En definitiva, creemos que la comunicación directa y pública quienes desarrollaron el paquete y quienes lo revisan mejora la calidad y la imparcialidad de las revisiones.
 
-Además, tanto autoras/es como revisoras/es tienen la posibilidad de contactar al equipo editorial por privado si tienen alguna duda o pregunta.
+Además, tanto quienes envían paquete y quienes los revisan tienen la posibilidad de contactar al equipo editorial por privado si tienen alguna duda o pregunta.
 
-## ¿Cómo se distingue un paquete que fue revisado?
+## ¿Cómo se distingue un paquete que fue revisado? {#how-will-users-know-a-package-has-been-reviewed}
 
--   El *README* de tu paquete incluirá una etiqueta de revisión por pares que enlaza con el hilo de revisión.
--   Tu paquete tendrá un [sitio web de documentación en `docs.ropensci.org`](#rodocsci) que podrás enlazar en el archivo *DESCRIPTION*.
--   El repositorio de tu paquete será transferido a la organización rOpenSci.
--   Si quines realizan la revisión [aceptan aparecer en el archivo *DESCRIPTION*](#authorship) sus metadatos mencionarán la revisión.
+- El *README* de tu paquete incluirá una etiqueta de revisión por pares que enlaza con el hilo de revisión.
+- Tu paquete tendrá un [sitio web de documentación en `docs.ropensci.org`](#rodocsci) que podrás enlazar en el archivo *DESCRIPTION*.
+- El repositorio de tu paquete será transferido a la organización rOpenSci.
+- Si quienes realizaron la revisión [aceptan aparecer en el archivo *DESCRIPTION*](#authorship), sus metadatos mencionarán la revisión.
 
-## Editoras/es y revisoras/es
+## Personas responsables de edición y revisión   {#editors-and-reviewers}
 
-### Equipo editorial asociado {#associateditors}
+### Equipo editorial asociado  {#associateditors}
 
 El proceso de revisión por pares del software de rOpenSci está dirigido por
 
--   [Noam Ross](https://github.com/noamross), EcoHealth Alliance
--   [Karthik Ram](https://github.com/karthik), rOpenSci
--   [Maëlle Salmon](https://github.com/maelle), rOpenSci
--   [Mark Padgham](https://github.com/mpadge), rOpenSci
--   [Anna Krystalli](https://github.com/annakrystalli), University of Sheffield RSE
--   [Melina Vidoni](https://github.com/melvidoni), RMIT University (School of Science)
--   [Mauro Lepore](https://github.com/maurolepore), 2 Degrees Investing Initiative
--   [Laura DeCicco](https://github.com/ldecicco-USGS), USGS
--   [Julia Gustavsen](https://github.com/jooolia), Agroscope
--   [Emily Riederer](https://github.com/emilyriederer), Capital One
--   [Adam Sparks](https://github.com/adamhsparks), Department of Primary Industries and Regional Development
--   [Jeff Hollister](https://github.com/jhollist), US Environmental Protection Agency
+```{r}
+#| child: "associate-editors.md"
+```
 
-### Equipo de revisión
+### Equipo de revisión {#reviewers}
 
-Agradecemos a las siguientes personas que han ofrecido su tiempo y experiencia para revisar los paquetes enviados a rOpenSci.
+Agradecemos a las siguientes personas que han ofrecido su tiempo y experiencia para revisar los paquetes enviados a rOpenSci:
 
 ```{r}
 #| echo: false
@@ -124,7 +117,7 @@ reviewers <- reviewers[order(last_names), ]
 cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
 ```
 
-También agradecemos a las siguientes personas que han actuado como editoras/es invitadas/os.
+También agradecemos a las siguientes personas que han tomado el rol de edición de forma invitada:
 
 ```{r}
 #| echo: false
@@ -139,3 +132,5 @@ last_names <- humaniformat::last_name(trimws(guest_editors$name))
 guest_editors <- guest_editors[order(last_names), ]
 cat(paste0("[", guest_editors$name, "](https://github.com/", guest_editors$github, ")", collapse = " \U00B7 "))
 ```
+
+
