@@ -18,6 +18,7 @@ Se você precisar de um lembrete rápido!
 @ropensci-review-bot code of conduct
 ```
 
+
 ## Para autores {#for-authors}
 
 ### Verificar o pacote com o pkgcheck {#check-package-with-pkgcheck}
