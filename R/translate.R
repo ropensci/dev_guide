@@ -1,5 +1,9 @@
-translate_page <- function(page_path) {
-  git_branch_name <- sprintf("%s-es-auto", page_path)
+translate_page <- function(page_path, language, glossary = NULL) {
+  git_branch_name <- sprintf(
+    "%s-%s-auto",
+    page_path,
+    tolower(strsplit(language, "-")[[1]][[1]])
+  )
 
   gert::git_branch_checkout("main")
   gert::git_pull()
@@ -13,14 +17,14 @@ translate_page <- function(page_path) {
   babeldown::deepl_translate(
     path = page_path,
     out_path = page_path,
-    glossary = "glosario",
+    glossary = glossary,
     source_lang = "EN",
-    target_lang = "ES",
+    target_lang = language,
     formality = "less"
   )
 
   gert::git_add(page_path)
-  gert::git_commit(sprintf("Add Spanish automatic translation %s", page_path))
+  gert::git_commit(sprintf("Add %s automatic translation %s", language, page_path))
   gert::git_push()
   usethis::pr_init(git_branch_name)
   usethis::pr_push()
