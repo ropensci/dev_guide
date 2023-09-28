@@ -70,7 +70,7 @@ Otros dos ejemplos de aplicaciones shiny que generan código son [https://gdanci
 
 ### Comprobación de entradas
 
-Recomendamos que tu paquete utilice un método coherente de tu elección para [comprobar los inputs](https://blog.r-hub.io/2022/03/10/input-checking/) -- ya sea R base, un paquete de R o ayudantes personalizados.
+Recomendamos que tu paquete utilice un método coherente de tu elección para [comprobar las entradas](https://blog.r-hub.io/2022/03/10/input-checking/) -- ya sea R base, un paquete de R o ayudantes personalizados.
 
 ### Paquetes que envuelven recursos web (clientes API)
 
