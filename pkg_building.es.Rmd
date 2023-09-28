@@ -68,7 +68,7 @@ Esto puede incluir la generación automática del código necesario para reprodu
 El paquete [`tabulizer`](https://github.com/ropensci/tabulizer) por ejemplo, tiene un flujo de trabajo interactivo para extraer tablas, pero también puede extraer sólo coordenadas, por lo que se pueden volver a ejecutar los mismos pasos como un script.
 Otros dos ejemplos de aplicaciones shiny que generan código son [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/)y [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
 
-### Comprobación de inputs
+### Comprobación de entradas
 
 Recomendamos que tu paquete utilice un método coherente de tu elección para [comprobar los inputs](https://blog.r-hub.io/2022/03/10/input-checking/) -- ya sea R base, un paquete de R o ayudantes personalizados.
 
