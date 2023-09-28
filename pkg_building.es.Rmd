@@ -83,7 +83,7 @@ Si tu paquete accede a una API web o a otro recurso web,
 - Tu paquete debe reproducir los errores de la API, y posiblemente explicarlos en mensajes de error informativos.
 - Tu paquete podría exportar funciones de alto nivel y funciones de bajo nivel, estas últimas permitiendo a las personas que lo usen llamar directamente a los puntos finales de la API con más control (como `gh::gh()`).
 
-Para más información, consulta la entrada del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
+Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
 ## Estilo del código {#code-style}
 
