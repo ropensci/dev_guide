@@ -9,6 +9,7 @@ translate_page <- function(page_path) {
     gert::git_branch_checkout(git_branch_name)
   }
   withr::local_envvar("DEEPL_API_URL" = "https://api.deepl.com")
+  withr::local_envvar("DEEPL_API_KEY" = keyring::key_get("deepl"))
   babeldown::deepl_translate(
     path = page_path,
     out_path = page_path,
