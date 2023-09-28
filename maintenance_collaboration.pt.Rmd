@@ -1,5 +1,6 @@
 ---
-aliases: collaboration.html
+aliases: 
+- collaboration.html
 ---
 
 # Guia de colaboração {#collaboration}
