@@ -76,7 +76,7 @@ Recomendamos que tu paquete utilice un método coherente de tu elección para [c
 
 Si tu paquete accede a una API web o a otro recurso web,
 
-- asegúrate de que las peticiones envían un [agente de usuario](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent) es decir, una forma de identificar qué (tu paquete) o quién envió la solicitud. Los usuarios deben poder anular el agente de usuario por defecto del paquete. Lo ideal sería que el agente de usuario fuera diferente en los servicios de integración continua y en los de desarrollo (basándose, por ejemplo, en los nombres de usuario de GitHub de los desarrolladores).
+- asegúrate de que las peticiones envían un [agente de usuario](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent) es decir, una forma de identificar qué (tu paquete) o quién envió la solicitud. Se debe poder anular el agente de usuario por defecto del paquete. Lo ideal sería que el agente de usuario fuera diferente en los servicios de integración continua y en los de desarrollo (basándose, por ejemplo, en los nombres de usuario de GitHub de quienes desarrollan).
 - Puede que elijas valores por defecto diferentes (mejores) que los de la API, en cuyo caso deberías documentarlos.
 - Tu paquete debería ayudar con la paginación, permitiendo que los usuarios no se preocupen en absoluto de ella, ya que tu paquete realiza todas las peticiones necesarias.
 - Tu paquete debe ayudar a limitar la tasa de acuerdo con las normas de la API.
