@@ -78,7 +78,7 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 - asegúrate de que las peticiones envían un [agente de usuario](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent) es decir, una forma de identificar qué (tu paquete) o quién envió la solicitud. Se debe poder anular el agente de usuario por defecto del paquete. Lo ideal sería que el agente de usuario fuera diferente en los servicios de integración continua y en los de desarrollo (basándose, por ejemplo, en los nombres de usuario de GitHub de quienes desarrollan).
 - Puede que elijas valores por defecto diferentes (mejores) que los de la API, en cuyo caso deberías documentarlos.
-- Tu paquete debería ayudar con la paginación, permitiendo que los usuarios no se preocupen en absoluto de ella, ya que tu paquete realiza todas las peticiones necesarias.
+- Tu paquete debería ayudar con la paginación, permitiendo que quienes lo usen no se preocupen en absoluto de ella, ya que tu paquete realiza todas las peticiones necesarias.
 - Tu paquete debe ayudar a limitar la tasa de acuerdo con las normas de la API.
 - Tu paquete debe reproducir los errores de la API, y posiblemente explicarlos en mensajes de error informativos.
 - Tu paquete podría exportar funciones de alto nivel y funciones de bajo nivel, estas últimas permitiendo a los usuarios llamar directamente a los puntos finales de la API con más control (como `gh::gh()`).
