@@ -2,7 +2,7 @@
 
 ### Manutenção do repositório entre lançamentos
 
-- [ ] Consulte a página de problemas para [o guia dev](https://github.com/ropensci/dev_guide/issues) e também para o repositório [de revisões de software](https://github.com/ropensci/software-review-meta/issues), procure por mudanças que ainda devem ser feitas no guia dev. Atribua os problemas encontrados no guida dev ao marco correspondente às versões, seja esta a próxima versão, ou, às versões seguintes, e.g [versão 0.3.0](https://github.com/ropensci/dev_guide/milestone/2). Encoraje novos PRs e revise eles.
+- [ ] Consulte a página de problemas para [o guia dev](https://github.com/ropensci/dev_guide/issues) e também para o repositório [de revisões de software](https://github.com/ropensci/software-review-meta/issues), procure por mudanças que ainda devem ser feitas no guia dev. Atribua os problemas encontrados no guia dev ao marco correspondente às versões, seja esta a próxima versão, ou, às versões seguintes, e.g [versão 0.3.0](https://github.com/ropensci/dev_guide/milestone/2). Encoraje novos PRs e revise eles.
 
 ### 1 mês antes do lançamento
 
