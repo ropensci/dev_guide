@@ -6,7 +6,7 @@ aliases:
 # Mudando os mantenedores de um pacote {#changing-maintainers}
 
 ```{block, type="summaryblock"}
-Este capítulo apresenta um guia sobre assumir a manutenção de um pacote.
+Este capítulo apresenta um guia sobre como assumir a manutenção de um pacote.
 ```
 
 ## Você quer desistir da manutenção do seu pacote? {#do-you-want-to-give-up-maintenance-of-your-package}
