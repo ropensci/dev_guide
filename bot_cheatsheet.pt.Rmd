@@ -2,7 +2,7 @@
 
 ## Para todos {#for-everyone}
 
-Observe que limpamos os tópicos de problemas removendo conteúdo estranho, portanto, o registro de que você solicitou ajuda de bots será rapidamente apagado ou ocultado.
+Vale ressaltar que nós limpamos os tópicos de problemas ao remover todo conteúdo estranho, portanto, o registro de que você solicitou ajuda de bots será rapidamente apagado ou ocultado.
 
 ### Veja a lista de comandos disponíveis para você {#see-the-list-of-commands-available-to-you}
 
@@ -17,6 +17,7 @@ Se você precisar de um lembrete rápido!
 ```markdown
 @ropensci-review-bot code of conduct
 ```
+
 
 ## Para autores {#for-authors}
 
@@ -56,7 +57,7 @@ Se você perdeu o prazo de uma semana para aceitar o convite para a organizaçã
 
 ## Para o editor-chefe {#for-the-editor-in-chief}
 
-### Designar um editor {#assign-an-editor}
+### Atribua um editor {#assign-an-editor}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
