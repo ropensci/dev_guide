@@ -57,7 +57,7 @@ Se você perdeu o prazo de uma semana para aceitar o convite para a organizaçã
 
 ## Para o editor-chefe {#for-the-editor-in-chief}
 
-### Atribua um editor {#assign-an-editor}
+### Atribua um (a) editor (a) {#assign-an-editor}
 
 ```markdown
 @ropensci-review-bot assign @username as editor
@@ -119,7 +119,7 @@ No final do processo de envio.
 @ropensci-review-bot seeking reviewers
 ```
 
-### Atribuir um revisor {#assign-a-reviewer}
+### Atribuir um (a) revisor (a) {#assign-a-reviewer}
 
 ```markdown
 @ropensci-review-bot assign @username as reviewer
@@ -131,7 +131,7 @@ ou
 @ropensci-review-bot add @username as reviewer
 ```
 
-### Remover um revisor {#remove-a-reviewer}
+### Remover um (a) revisor (a) {#remove-a-reviewer}
 
 ```markdown
 @ropensci-review-bot remove @username from reviewers
