@@ -1,6 +1,7 @@
 ---
 repo-actions: yes
-aliases: contributingguide.html
+aliases: 
+  - contributingguide.html
 ---
 
 # Guia de contribuição {#contributingguide}
