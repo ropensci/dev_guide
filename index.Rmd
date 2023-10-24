@@ -8,7 +8,7 @@
 #| echo: false
 #| results: 'asis' 
 #| warning: false
-#| eval: fase
+#| eval: false
 cat("\n```bibtex\n")
 u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
 s <- rvest::session(u)
