@@ -1,13 +1,13 @@
-# Folha de dicas de manutenção de um pacote rOpenSci {#maintainer-cheatsheet}
+# Guia rápido para a manutenção de pacotes da rOpenSci {#maintainer-cheatsheet}
 
 ```{block, type="summaryblock"}
-Um lembrete da infraestrutura e dos canais de contato para mantenedores de pacotes rOpenSci.
+Um lembrete sobre a infraestrutura e os canais de contato para mantenedores de pacotes da rOpenSci.
 
 ```
 
-## Você precisa de ajuda? {#help-needed}
+## Precisa de ajuda? {#help-needed}
 
-Se você precisar de ajuda pontual (por exemplo, uma revisão de PR; ou alguma solução para um problema de CI), ou ajuda para procurar co-mantenedores ou um novo mantenedor, ou se precisar que retiremos o seu pacote, envie-nos uma mensagem no GitHub via `@ropensci/admin` ou envie um e-mail para o endereço `info@ropensci.org`.
+Se você precisar de uma ajuda pontual (por exemplo, uma revisão de PR; ou alguma solução para um problema de CI), ou precisar de ajuda para procurar co-mantenedores ou um novo mantenedor, ou se precisar que arquivemos seu pacote, envie-nos uma mensagem no GitHub via `@ropensci/admin` ou pelo e-mail `info@ropensci.org`.
 Você também pode usar o nosso canal de manutenção de pacotes no Slack.
 
 Nunca hesite em pedir ajuda.
@@ -18,34 +18,32 @@ Você deve ter acesso administrativo ao repositório do GitHub do seu pacote.
 Se esse não for mais o caso (por exemplo, o processo automatizado falhou ou você perdeu o acesso depois de ter que desativar temporariamente a autenticação de dois fatores),
 entre em contato conosco pelo email `info@ropensci.org`.
 
-## Outros tópicos do GitHub {#other-git-hub-topics}
+## Outros tópicos relacionados ao GitHub {#other-git-hub-topics}
 
-Se você tiver alguma pergunta ou solicitação sobre o GitHub (por exemplo, adicionar um colaborador à organização do GitHub), você pode usar um dos canais públicos no Slack do rOpenSci ou enviar uma mensagem para `@ropensci/admin` no GitHub.
+Se você tiver alguma pergunta ou solicitação sobre o GitHub (por exemplo, sobre adicionar um colaborador à organização do GitHub), você pode usar um dos canais públicos no Slack da rOpenSci ou enviar uma mensagem para `@ropensci/admin` no GitHub.
 
-## Documentação produzida pelo pkgdown {#pkgdown-documentation}
+## Documentação produzida pelo pacote pkgdown {#pkgdown-documentation}
 
-Veja [Documentos do rOpenSci](#rodocsci).
+Veja a seção [Documentos da rOpenSci](#rodocsci).
 
 ## Acesso ao espaço de trabalho do rOpenSci no Slack {#access-to-ropensci-slack-workspace}
 
-Os mantenedores e desenvolvedores de pacotes devem ter acesso ao [Slack do rOpenSci](https://contributing.ropensci.org/resources.html#channels).
+Os mantenedores e desenvolvedores de pacotes devem ter acesso ao [Slack da rOpenSci](https://contributing.ropensci.org/resources.html#channels).
 Se você não recebeu o convite ou não o aceitou a tempo,
 ou se você quiser que um novo colaborador regular receba um convite, envie um e-mail para `info@ropensci.org`,
-indicando para qual endereço de e-mail você deseja receber o convite.
+indicando para qual endereço de e-mail que você deseja receber o convite.
 
-Você pode descobrir que o canal #package-maintenance é um lugar relevante para perguntas e respostas, bem como para um papo amigável quando necessário.
+Você pode achar o canal #package-maintenance um lugar relevante para perguntas e respostas, bem como para uma conversa amigável quando necessário.
 
 ## Publicações no blog sobre pacotes {#package-blog-posts}
 
 Consulte nosso [guia do blog](https://blogguide.ropensci.org/).
 
-## Promoção de problemas nos pacotes {#package-issues-promotion}
+## Divulgação de problemas nos pacotes {#package-issues-promotion}
 
-Uma boa maneira de se [obter ajuda da comunidade](https://ropensci.org/help-wanted/) para resolver um problema existente
-em um pacote é rotular os problemas no GitHub com o rótulo "Procura-se ajuda".
+Uma boa maneira de [solicitar ajuda da comunidade](https://ropensci.org/help-wanted/) para resolver um problema em um pacote é rotular os _issues_ no GitHub com o rótulo "help-wanted" ("procura-se ajuda").
 
-## Promoção de casos de uso de pacotes {#package-use-cases-promotion}
+## Divulgação de casos de uso de pacotes {#package-use-cases-promotion}
 
-Você pode relatar casos de uso do seu pacote ou incentivar os usuários a relatá-los por meio do nosso fórum [que é publicado em nosso site](https://ropensci.org/usecases/) além do nosso boletim informativo.
-
+Você pode relatar casos de uso do seu pacote ou incentivar os usuários a relatá-los em nosso fórum para que sejam [publicados em nosso site](https://ropensci.org/usecases/) e em nossa newsletter.
 
