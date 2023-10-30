@@ -7,5 +7,5 @@
 
 
 <!--Por favor, preencha a estimativa abaixo.-->
-Horas estimadas gastas durante a revisão:
+Estimativa de horas dedicadas à revisão:
 
