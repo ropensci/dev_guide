@@ -2,7 +2,7 @@
 repo-actions: yes
 ---
 
-# Modelo de comentário de aprovação do revisor {#approval2template}
+# Modelo de comentário de aprovação do(a) revisor(a) {#approval2template}
 
 ::: {.content-hidden when-format="pdf"}
 
