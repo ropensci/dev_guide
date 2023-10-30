@@ -10,7 +10,7 @@
 
 - [] Execute [a função `devguide_prerelease()`](https://github.com/ropensci-org/devguider) do pacote `devguider`.
 
-- [ ] Peça aos editores por qualquer feedback que você precise antes do lançamento.
+- [ ] Peça aos(às) editores(as) por qualquer feedback que você precise antes do lançamento.
 
 - [ ] Para cada contribuição/alteração verifique se as NOTÍCIAS no arquivo `Appendix.Rmd` foram atualizadas.
 
@@ -19,7 +19,7 @@
 
 ### 2 semanas antes do lançamento
 
-- [ ] Escreva um rascunho para uma postagem de blog (ou nota técnica) sobre o lançamento com antecedência suficiente para que os/as editores/as e, em seguida, o/a gerente da comunidade, possam revisá-lo (2 semanas). [Exemplo](https://github.com/ropensci/roweb3/pull/291), [instruções gerais para a postagem no blog](https://blogguide.rpensci.org/), [instruções específicas para as postagens de lançamento](#releaseblogpost).
+- [ ] Escreva um rascunho para uma postagem de blog (ou nota técnica) sobre o lançamento com antecedência suficiente para que os(as) editores(as) e, em seguida, o(a) gerente da comunidade, possam revisá-lo (2 semanas). [Exemplo](https://github.com/ropensci/roweb3/pull/291), [instruções gerais para a postagem no blog](https://blogguide.rpensci.org/), [instruções específicas para as postagens de lançamento](#releaseblogpost).
 
 - [] Crie um PR a partir da branch `dev` para a branch `master` e, em seguida, comunique aos editores através do GitHub e do Slack. Mencione o rascunho da postagem do blog em um comentário dentro deste PR.
 
