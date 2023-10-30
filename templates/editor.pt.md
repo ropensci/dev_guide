@@ -13,7 +13,7 @@
 - [ ] **Gerenciamento do projeto**: O monitoramento de problemas (*issues*) e PRs (*pull requests*) está em bom estado, e.g. existem bugs muito críticos, está claro quando um pedido de *feature* está planejado para ser tratado?
 ---
 
-#### Comentários do editor
+#### Comentários do(a) editor(a)
 
 ---
 
