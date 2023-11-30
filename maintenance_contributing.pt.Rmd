@@ -7,15 +7,15 @@ aliases:
 # Guia de contribuição {#contributingguide}
 
 ```{block, type="summaryblock"}
-Este capítulo descreve nosso Guia de Contribuição, que descreve como você pode fazer contribuições com código e sem código para o projeto rOpenSci.
+Este capítulo apresenta o nosso Guia de Contribuição, que descreve como você pode fazer contribuições com código e sem código para a rOpenSci.
 
 ```
+-
+Então você quer contribuir para a rOpenSci? Fantástico! Nós desenvolvemos o [Guia de contribuição da comunidade rOpenSci](https://contributing.ropensci.org/) para dar as boas-vindas a você na rOpenSci e ajudá-lo a se reconhecer como um colaborador em potencial. O guia ajudará você a descobrir o que você pode ganhar doando seu tempo, conhecimento e experiência, combinando suas necessidades com coisas que ajudarão a missão da rOpenSci, e conectando você a recursos que podem te ajudar ao longo do caminho.
 
-Então você quer contribuir com o rOpenSci? Você quer contribuir com o rOpenSci? Fantástico! Nós desenvolvemos o [Guia de contribuição da comunidade rOpenSci](https://contributing.ropensci.org/) para dar as boas-vindas a você na rOpenSci e ajudá-lo a se reconhecer como um colaborador em potencial. Ele o ajudará a descobrir o que você pode ganhar doando seu tempo, conhecimento e experiência, combinando suas necessidades com coisas que ajudarão a missão da rOpenSci e conectando-o a recursos para ajudá-lo ao longo do caminho.
+Nossa equipe e comunidade promovem ativamente um ambiente acolhedor em que usuários e desenvolvedores de diferentes origens e níveis de habilidade aprendem, compartilham ideias e inovam juntos abertamente por meio de normas e software compartilhados. A participação em todas as atividades da rOpenSci é apoiada por [nosso Código de Conduta](https://ropensci.org/code-of-conduct).
 
-Nossa equipe e comunidade promovem ativamente um ambiente acolhedor em que usuários e desenvolvedores de diferentes origens e níveis de habilidade aprendem, compartilham ideias e inovam juntos abertamente por meio de normas e software compartilhados. A participação em todas as atividades do rOpenSci é apoiada por [nosso Código de Conduta](https://ropensci.org/code-of-conduct).
-
-Aceitamos contribuições com código e sem código de programadores novos e experientes em qualquer estágio da carreira e em qualquer setor. Você não precisa ser um desenvolvedor! Talvez você queira **passar 30 minutos** compartilhando o caso de uso do seu pacote em nosso fórum público ou relatando um bug, **uma hora** você pode aprender participando de uma chamada da comunidade, **cinco horas** revisando um pacote R enviado para revisão aberta por pares, **ou talvez você queira assumir um compromisso contínuo** para ajudar a manter um pacote.
+Aceitamos contribuições com código e sem código de programadores novos e experientes em qualquer estágio da carreira e em qualquer setor. Você não precisa ser um desenvolvedor! Talvez você queira **passar 30 minutos** compartilhando o caso de uso do seu pacote em nosso fórum público ou relatando um bug, **uma hora** você pode aprender participando de uma chamada da comunidade, **cinco horas** revisando um pacote de R enviado para revisão aberta por pares, **ou talvez você queira assumir um compromisso contínuo** para ajudar a manter um pacote.
 
 Quais são alguns dos benefícios de contribuir?
 
@@ -24,11 +24,11 @@ Quais são alguns dos benefícios de contribuir?
 - Faça e responda a novas perguntas de pesquisa conhecendo novas ferramentas de software e aliados
 - Sentir-se confiante e apoiado em seus esforços para escrever código e desenvolver software
 - Ganhar visibilidade para seu trabalho de código aberto
-- Melhore o software que você usa ou constrói
+- Melhorar o software que você usa ou constrói
 - Aprimore suas habilidades em R e ajude outras pessoas a aprimorarem as delas
 - Aumente o nível de suas habilidades de escrita
-- Obter mais exposição para seu pacote
+- Obter mais exposição para o seu pacote
 
-Consulte nosso [Guia de contribuição](https://contributing.ropensci.org/) e navegue pela seção "O que traz você aqui?" para saber quais são os *Eu quero ...* se encaixam melhor em você e escolha seu caminho! Para ajudar você a se reconhecer, nós as agrupamos em: Descobrir; Conectar; Aprender; Construir; Ajudar. Para cada categoria, listamos exemplos de como essas contribuições podem ser e colocamos links para nossos recursos para obter os detalhes de que você precisa.
+Consulte nosso [Guia de contribuição](https://contributing.ropensci.org/) e navegue pela seção "O que traz você aqui?" para saber quais são os *Eu quero ...* que se encaixam melhor em você e escolha o seu caminho! Para ajudar você a se reconhecer, nós as agrupamos em: Descobrir; Conectar; Aprender; Construir; Ajudar. Para cada categoria, listamos exemplos de como essas contribuições podem ser e colocamos links para os nossos recursos para obter os detalhes de que você precisa.
 
 
