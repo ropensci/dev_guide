@@ -34,7 +34,8 @@ cat(bibentry)
 cat("\n```\n")
 ```
 
-_If you want to contribute to this book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_
+_If you want to contribute to this little book (suggestions, corrections) please refer to [the GitHub repository](https://github.com/ropensci/dev_guide) in particular [the contributing guidelines](https://github.com/ropensci/dev_guide#contributing). Thanks!_
 
 _We are thankful for all authors, reviewers and guest editors for helping us improve the system and this guide over the years. Thanks also to the following persons who made contributions to this guide and its previous incarnations: `r readLines("thanks.md")` Please tell us if we forgot to acknowledge your contribution!_
 
+Very nice right?
