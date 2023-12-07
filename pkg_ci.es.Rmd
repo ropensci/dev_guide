@@ -79,7 +79,7 @@ Puedes utilizar estos consejos para minimizar los tiempos de construcción en CI
 
 #### Dependencias del sistema {#sysdeps-ci}
 
-Puede que encuentres el post de Hugo Gruson [Dependencias del sistema en paquetes de R y pruebas automáticas](https://blog.r-hub.io/2023/09/26/system-dependency/) te resulte útil.
+Puede que encuentres útil el post de Hugo Gruson [Dependencias del sistema en paquetes de R y pruebas automáticas](https://blog.r-hub.io/2023/09/26/system-dependency/).
 
 ### Travis CI (Linux y Mac OSX) {#travis-ci-linux-and-mac-osx}
 
