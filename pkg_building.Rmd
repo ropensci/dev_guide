@@ -444,13 +444,13 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [curl], [crul], [httr] or [httr2] over [RCurl]. If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr] are better for higher level access. [crul] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr] for mocking HTTP requests, and [vcr] for caching HTTP requests in package tests.
+- For HTTP requests we recommend using [curl](https://github.com/jeroen/curl/), [crul](http://docs.ropensci.org/crul/), [httr](https://httr.r-lib.org) or [httr2](https://httr2.r-lib.org) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr](https://httr.r-lib.org) are better for higher level access. [crul](http://docs.ropensci.org/crul/) is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr](https://docs.ropensci.org/webmockr/) for mocking HTTP requests, and [vcr](https://docs.ropensci.org/vcr/) for caching HTTP requests in package tests.
 
-- For parsing JSON, use [jsonlite] instead of [rjson] or [RJSONIO].
+- For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
-- For parsing, creating, and manipulating XML, we strongly recommend [xml2] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+- For parsing, creating, and manipulating XML, we strongly recommend [xml2](https://cran.rstudio.com/web/packages/xml2/) for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- For spatial data, the [sp] package should be considered deprecated in favor of [sf], and the packages [rgdal], [maptools], and [rgeos] will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
+- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages rgdal, rgdal, and rgdal will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 ## Version Control {#version-control}
 
@@ -526,23 +526,4 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 #### MOOCs {#moo-cs}
 
 There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.
-
-[curl]: https://github.com/jeroen/curl/
-[crul]: https://github.com/ropensci/crul/
-[httr]: https://httr.r-lib.org
-[httr2]: https://httr2.r-lib.org
-[RCurl]: https://cran.rstudio.com/web/packages/RCurl/
-[webmockr]: https://github.com/ropensci/webmockr/
-[vcr]: https://github.com/ropensci/vcr/
-[jsonlite]: https://github.com/jeroen/jsonlite
-[rjson]: https://cran.rstudio.com/web/packages/rjson/
-[RJSONIO]: https://cran.rstudio.com/web/packages/RJSONIO/
-[xml2]: https://cran.rstudio.com/web/packages/xml2/
-[sp]: https://github.com/edzer/sp/
-[sf]: https://r-spatial.github.io/sf/
-[rgdal]: https://cran.r-project.org/web/packages/rgdal/index.html
-[maptools]: https://cran.r-project.org/web/packages/maptools/index.html
-[rgeos]: https://cran.r-project.org/web/packages/rgeos/index.html
-
-
-
+ 
