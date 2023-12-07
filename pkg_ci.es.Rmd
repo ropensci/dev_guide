@@ -35,7 +35,7 @@ Los paquetes de R deben tener CI para todos los sistemas operativos (Linux, Mac 
 
 - Procesamiento de texto, por ejemplo obtener nombres de personas (para encontrar problemas de codificación).
 
-- Cualquier cosa que incluya llamadas al sistema de archivos / rutas de acceso
+- Cualquier cosa que incluya llamadas al sistema de archivos / rutas de acceso.
 
 Ante la duda de si estos criterios se aplican a tu paquete, es mejor añadir CI para todos los sistemas operativos.
 La mayoría de los servicios de CI para paquetes de R lo permiten sin mucha complicación utilizando la configuración estándar.
