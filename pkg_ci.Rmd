@@ -68,6 +68,10 @@ You can use these tips to minimize build time on CI:
 
 - Cache installation of packages. The default [r-lib/actions workflows](https://github.com/r-lib/actions) do this.
 
+#### System dependencies {#sysdeps-ci}
+
+You might find Hugo Gruson's post [System Dependencies in R Packages & Automatic Testing](https://blog.r-hub.io/2023/09/26/system-dependency/) useful.
+
 ### Travis CI (Linux and Mac OSX) {#travis-ci-linux-and-mac-osx}
 
 We recommend [moving away from Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
