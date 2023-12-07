@@ -1,3 +1,8 @@
+---
+aliases:
+  - ci.html
+---
+
 # Buenas prácticas de integración continua  {#ci}
 
 ```{block, type="summaryblock"}
@@ -71,6 +76,10 @@ Si desarrollas un paquete que depende o está destinado para Bioconductor, puede
 Puedes utilizar estos consejos para minimizar los tiempos de construcción en CI:
 
 - Guardar los paquetes instalados en una caché. La acción [r-lib/actions](https://github.com/r-lib/actions) lo hace por defecto.
+
+#### Dependencias del sistema {#sysdeps-ci}
+
+Puede que encuentres el post de Hugo Gruson [Dependencias del sistema en paquetes de R y pruebas automáticas](https://blog.r-hub.io/2023/09/26/system-dependency/) te resulte útil.
 
 ### Travis CI (Linux y Mac OSX) {#travis-ci-linux-and-mac-osx}
 
