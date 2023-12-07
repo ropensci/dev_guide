@@ -19,12 +19,12 @@ We strongly recommend that package developers read Hadley Wickham and Jenny Brya
 ### Naming your package {#naming-your-package}
 
 * We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available). In particular, do _not_ choose a package name that's already used on CRAN or Bioconductor.
-* 
+
 * There is a trade-off between the advantages of a unique package name and a less original package name. 
     - A more unique package name might be easier to track (for you and us to assess package use for instance, less false positives when typing its name in GitHub code search) and search (for users to ask "how to use package blah" in a search engine). 
     - On the other hand a _too_ unique package name might make the package less discoverable (that is to say, to find it by searching "how to do this-thing in R"). It might be an argument for naming your package something very close to its topic such as [geojson](https://github.com/ropensci/geojson)).
 
-- Find other interesting aspects of naming your package [in this blog post by Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+* Find other interesting aspects of naming your package [in this blog post by Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
 ### Creating metadata for your package {#creating-metadata-for-your-package}
 
