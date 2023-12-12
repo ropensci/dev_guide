@@ -15,7 +15,7 @@ Ten en cuenta que el proceso de actualización de *NEWS* y de versionado de tu p
 
 ## Versionar {#versioning}
 
-- Recomendamos encarecidamente que los paquetes rOpenSci utilicen el versionado semántico. Puedes encontrar una explicación detallada en el [del libro de paquetes de R](https://r-pkgs.org/lifecycle.html).
+- Recomendamos encarecidamente que los paquetes rOpenSci utilicen el versionado semántico. Hay una explicación detallada en el [capitulo "lifecyle" del libro "R packages" (en inglés)](https://r-pkgs.org/lifecycle.html).
 
 ## Publicar {#releasing}
 
