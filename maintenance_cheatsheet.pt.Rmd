@@ -1,50 +1,50 @@
-# rOpenSci package maintenance cheatsheet {#maintainer-cheatsheet}
+# Folha de dicas de manutenção do pacote rOpenSci {#maintainer-cheatsheet}
 
 ```{block, type="summaryblock"}
-A reminder of infrastructure and contact channels for maintainers of rOpenSci packages.
+Um lembrete da infraestrutura e dos canais de contato para mantenedores de pacotes rOpenSci.
 
 ```
 
-## Help needed? {#help-needed}
+## Você precisa de ajuda? {#help-needed}
 
-If you need punctual help (say, a PR review; or some CI troubleshooting), or help looking for co-maintainers or a new maintainer, or if you need us to retire your package, ping us in GitHub via `@ropensci/admin` or email `info@ropensci.org`.
-You can also use our slack package maintenance channel.
+Se você precisar de ajuda pontual (por exemplo, uma revisão de PR; ou alguma solução de problemas de CI), ou ajuda para procurar co-mantenedores ou um novo mantenedor, ou se precisar que retiremos seu pacote, envie-nos um ping no GitHub via `@ropensci/admin` ou envie um e-mail para você `info@ropensci.org`.
+Você também pode usar nosso canal de manutenção de pacotes no Slack.
 
-Never hesitate to ask for help.
+Nunca hesite em pedir ajuda.
 
-## GitHub repository access {#git-hub-repository-access}
+## Acesso ao repositório do GitHub {#git-hub-repository-access}
 
-You should have administrative access to your package's GitHub repository.
-If that is no longer the case (say, the automated process failed; or you lost access after having to temporarily deactivate two-factor authentication),
-please contact us via `info@ropensci.org`.
+Você deve ter acesso administrativo ao repositório do GitHub do seu pacote.
+Se esse não for mais o caso (por exemplo, o processo automatizado falhou ou você perdeu o acesso depois de ter que desativar temporariamente a autenticação de dois fatores),
+entre em contato conosco via `info@ropensci.org`.
 
-## Other GitHub topics {#other-git-hub-topics}
+## Outros tópicos do GitHub {#other-git-hub-topics}
 
-If you have any GitHub question or request (adding a collaborator to the GitHub organization for instance) you can use a public channel of the rOpenSci slack workspace or ping `@ropensci/admin` on GitHub.
+Se tiver alguma pergunta ou solicitação sobre o GitHub (por exemplo, adicionar um colaborador à organização do GitHub), você pode usar um canal público do espaço de trabalho slack do rOpenSci ou enviar um ping para `@ropensci/admin` no GitHub.
 
-## pkgdown documentation {#pkgdown-documentation}
+## Documentação do pkgdown {#pkgdown-documentation}
 
-See [rOpenSci docs](#rodocsci).
+Veja [Documentos do rOpenSci](#rodocsci).
 
-## Access to rOpenSci slack workspace {#access-to-ropensci-slack-workspace}
+## Acesso ao espaço de trabalho do rOpenSci no Slack {#access-to-ropensci-slack-workspace}
 
-Package maintainers and developers should get access to [rOpenSci slack](https://contributing.ropensci.org/resources.html#channels).
-If you did not get the invitation or did not accept it in time,
-or if you want a new regular contributor receive an invitation please email `info@ropensci.org`,
-indicating to which email address you wish to receive the invitation.
+Os mantenedores e desenvolvedores de pacotes devem ter acesso a [Slack do rOpenSci](https://contributing.ropensci.org/resources.html#channels).
+Se você não recebeu o convite ou não o aceitou a tempo,
+ou se você quiser que um novo colaborador regular receba um convite, envie um e-mail para `info@ropensci.org`,
+indicando para qual endereço de e-mail você deseja receber o convite.
 
-You might find the #package-maintenance channel relevant for Q\&A as well as friendly commiseration when needed.
+Você pode achar que o canal #package-maintenance é relevante para perguntas e respostas, bem como para uma comiseração amigável quando necessário.
 
-## Package blog posts {#package-blog-posts}
+## Publicações no blog sobre pacotes {#package-blog-posts}
 
-Refer to our [blog guide](https://blogguide.ropensci.org/).
+Consulte nosso [guia do blog](https://blogguide.ropensci.org/).
 
-## Package issues promotion {#package-issues-promotion}
+## Promoção de problemas de pacotes {#package-issues-promotion}
 
-Label issues with "help wanted" to get them [broadcasted to the community](https://ropensci.org/help-wanted/).
+Rotular as edições com "procura-se ajuda" para obtê-las [para que sejam transmitidos à comunidade](https://ropensci.org/help-wanted/).
 
-## Package use cases promotion {#package-use-cases-promotion}
+## Promoção de casos de uso de pacotes {#package-use-cases-promotion}
 
-You can report use cases of your package or encourage users to report them via our forum to get them [published on our website](https://ropensci.org/usecases/) and in our newsletter.
+Você pode relatar casos de uso do seu pacote ou incentivar os usuários a relatá-los por meio do nosso fórum para obtê-los [publicados em nosso site](https://ropensci.org/usecases/) e em nosso boletim informativo.
 
 
