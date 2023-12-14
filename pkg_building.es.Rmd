@@ -3,7 +3,7 @@
 ```{block, type="summaryblock"}
 rOpenSci acepta paquetes que cumplen con nuestras recomendaciones a través de un proceso fluido de [Revisión por pares de software](#whatissoftwarereview). Para garantizar un estilo consistente entre todas nuestras herramientas, hemos escrito este capítulo en el que se destacan recomendaciones para el desarrollo de paquetes. Por favor, también lee y aplica nuestro [capítulo sobre integración continua (CI)](#ci). En la tercera sección de este libro, que comienza con [un capítulo sobre la colaboración](#colaboración), ofrecemos una guía para continuar luego del proceso de revisión.
 
-Recomendamos fuertemente a quienes desarrollen paquetes que lean el libro de Hadley Wickham y Jenny Bryan sobre el desarrollo de paquetes. Es conciso pero exhaustivo y está disponible [gratis en línea (pero en inglés)](https://r-pkgs.org/). Algunas partes de nuestra guía son redundantes con respecto a otros recursos, pero destaca las recomendaciones propias de rOpenSci.
+Recomendamos a quienes desarrollen paquetes que lean el libro de Hadley Wickham y Jenny Bryan sobre el desarrollo de paquetes. Es exhaustivo y está disponible [gratis en línea (pero en inglés)](https://r-pkgs.org/). Algunas partes de nuestra guía son redundantes con respecto a otros recursos, pero destaca las recomendaciones propias de rOpenSci.
 
 Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recomendaciones, echa un vistazo a [razones para enviar un paquete](#whysubmit). 
 
