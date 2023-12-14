@@ -2,4 +2,5 @@
 [Hao Ye](https://github.com/ha0ye),
 [Sébastien Rochette](https://github.com/statnmap),
 [Edward Wallace](https://github.com/ewallace/),
-[Alexander Fischer](https://github.com/s3alfisc/).
+[Alexander Fischer](https://github.com/s3alfisc/),
+[Maxime Jaunatre](https://github.com/gowachin).

@@ -83,10 +83,12 @@ Your tools for searching reviewers in the Airtable are
 
 ![Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration](images/airtable.png)
 
-- creating a duplicated [view](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), depending on your Airtable skills.
+* creating a personal [view](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), depending on your Airtable skills.
 
 Have a look at the `last_time_contacted` and `last_answer` columns before contacting someone!
 If someone recently refused because they were busy, it might be best to abstain, whereas someone who refused because of a COI could be contacted again without waiting too long.
+
+Also, please check if a first-time reviewers have indicated that they `require_mentorship`.  If so, please use the mentorship portion of the email template and be prepared to provide additional guidance.
 
 ##### Storing information from the reviewer search in Airtable {#airtable-info}
 
