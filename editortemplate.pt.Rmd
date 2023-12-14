@@ -2,7 +2,7 @@
 repo-actions: true
 ---
 
-# Editor's template {#editortemplate}
+# Modelo para o(a) editor(a) {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 
@@ -10,7 +10,7 @@ repo-actions: true
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/editor.md"
+#| child: "templates/editor.pt.md"
 ```
 ````
 
@@ -19,7 +19,7 @@ repo-actions: true
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/editor.md"
+#| child: "templates/editor.pt.md"
 
 ```
 
