@@ -78,10 +78,12 @@ Tus herramientas para buscar personas para la revisión en *Airtable* son
 
 ![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y en áreas técnicas tienen que incluir integración continua (interfaz y etiquetas en inglés)](images/airtable.png)
 
-- crear una [visualización duplicada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views), dependiendo de tus conocimientos de Airtable.
+- crear una [visualización personalizada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views) dependiendo de tus habilidades en Airtable.
 
 Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
 Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que no hace falta esperar demasiado para volver a invitar a alguien que se negó debido a conflictos de interés.
+
+Además, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.  En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Almacenar la información de la búsqueda en Airtable  {#airtable-info}
 

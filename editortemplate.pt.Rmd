@@ -2,7 +2,7 @@
 repo-actions: true
 ---
 
-# Modelo de comentário de aprovação do(a) revisor(a) {#approval2template}
+# Editor's template {#editortemplate}
 
 ::: {.content-hidden when-format="pdf"}
 
@@ -10,7 +10,7 @@ repo-actions: true
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/reviewer-approval.pt.md"
+#| child: "templates/editor.md"
 ```
 ````
 
@@ -19,7 +19,7 @@ repo-actions: true
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/reviewer-approval.pt.md"
+#| child: "templates/editor.md"
 
 ```
 

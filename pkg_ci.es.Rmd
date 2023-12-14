@@ -1,3 +1,8 @@
+---
+aliases:
+  - ci.html
+---
+
 # Buenas prácticas de integración continua  {#ci}
 
 ```{block, type="summaryblock"}
@@ -35,7 +40,7 @@ Los paquetes de R deben tener CI para todos los sistemas operativos (Linux, Mac 
 
 - Procesamiento de texto, por ejemplo obtener nombres de personas (para encontrar problemas de codificación).
 
-- Cualquier cosa que incluya llamadas al sistema de archivos / rutas de acceso
+- Cualquier cosa que incluya llamadas al sistema de archivos / rutas de acceso.
 
 Ante la duda de si estos criterios se aplican a tu paquete, es mejor añadir CI para todos los sistemas operativos.
 La mayoría de los servicios de CI para paquetes de R lo permiten sin mucha complicación utilizando la configuración estándar.
@@ -71,6 +76,10 @@ Si desarrollas un paquete que depende o está destinado para Bioconductor, puede
 Puedes utilizar estos consejos para minimizar los tiempos de construcción en CI:
 
 - Guardar los paquetes instalados en una caché. La acción [r-lib/actions](https://github.com/r-lib/actions) lo hace por defecto.
+
+#### Dependencias del sistema {#sysdeps-ci}
+
+Puede que encuentres útil el post de Hugo Gruson [Dependencias del sistema en paquetes de R y pruebas automáticas](https://blog.r-hub.io/2023/09/26/system-dependency/).
 
 ### Travis CI (Linux y Mac OSX) {#travis-ci-linux-and-mac-osx}
 
