@@ -11,3 +11,4 @@ _book
 pdfbook
 
 /.quarto/
+.vscode
