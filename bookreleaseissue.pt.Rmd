@@ -1,5 +1,5 @@
 ---
-repo-actions: yes
+repo-actions: true
 ---
 
 # Orientação para lançamento de livros {#bookreleaseissue}
