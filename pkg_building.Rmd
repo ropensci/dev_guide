@@ -18,11 +18,12 @@ We strongly recommend that package developers read Hadley Wickham and Jenny Brya
 
 ### Naming your package {#naming-your-package}
 
-* We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available). In particular, do _not_ choose a package name that's already used on CRAN or Bioconductor.
-* 
-* There is a trade-off between the advantages of a unique package name and a less original package name. 
-    - A more unique package name might be easier to track (for you and us to assess package use for instance, less false positives when typing its name in GitHub code search) and search (for users to ask "how to use package blah" in a search engine). 
-    - On the other hand a _too_ unique package name might make the package less discoverable (that is to say, to find it by searching "how to do this-thing in R"). It might be an argument for naming your package something very close to its topic such as [geojson](https://github.com/ropensci/geojson)).
+- We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available). In particular, do *not* choose a package name that's already used on CRAN or Bioconductor.
+
+- There is a trade-off between the advantages of a unique package name and a less original package name.
+  
+  - A more unique package name might be easier to track (for you and us to assess package use for instance, less false positives when typing its name in GitHub code search) and search (for users to ask "how to use package blah" in a search engine).
+  - On the other hand a *too* unique package name might make the package less discoverable (that is to say, to find it by searching "how to do this-thing in R"). It might be an argument for naming your package something very close to its topic such as [geojson](https://github.com/ropensci/geojson)).
 
 - Find other interesting aspects of naming your package [in this blog post by Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
@@ -62,6 +63,23 @@ If providing graphical user interface (GUI) (such as a Shiny app), to facilitate
 
 The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/), and [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
 
+### Input checking
+
+We recommend your package use a consistent method of your choice for [checking inputs](https://blog.r-hub.io/2022/03/10/input-checking/) -- either base R, an R package, or custom helpers.
+
+### Packages wrapping web resources (API clients)
+
+If your package accesses a web API or another web resource,
+
+- Make sure requests send an [user agent](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), that is, a way to identify what (your package) or who sent the request. The users should be able to override the package's default user agent. Ideally the user agent should be different on continuous integration services, and in development (based on, for instance, the GitHub usernames of the developers).
+- You might choose different (better) defaults than the API, in which case you should document them.
+- Your package should help with pagination, by allowing the users to not worry about it at all since your package does all necessary requests.
+- Your package should help with rate limiting according to the API rules.
+- Your package should reproduce API errors, and possibly explain them in informative error messages.
+- Your package could export high-level functions and low-level functions, the latter allowing users to call API endpoints directly with more control (like `gh::gh()`).
+
+For more information refer to the blog post [Why You Should (or Shouldn't) Build an API Client](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
+
 ## Code Style {#code-style}
 
 - For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in The R Packages book](https://r-pkgs.org/Code.html). We recommend the [`styler` package](https://github.com/r-lib/styler) for automating part of the code styling. We suggest reading the [Tidyverse style guide](https://style.tidyverse.org/).
@@ -75,7 +93,9 @@ The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an int
 - CRAN requires CITATION files to be declared as [`bibentry` items](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html), and not in the previously-accepted form of [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
 
 - If you archive each release of your GitHub repo on Zenodo, add the [Zenodo top-level DOI](https://help.zenodo.org/#versioning) to the CITATION file.
+
 - If one day [**after** review at rOpenSci](#authors-guide) you publish a software publication about your package, add it to the CITATION file.
+
 - Less related to your package itself but to what supports it: if your package wraps a particular resource such as data source or, say, statistical algorithm, remind users of how to cite that resource via e.g. `citHeader()`. [Maybe even add the reference for the resource](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
 
 As an example see [the dynamite CITATION file](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) which refers to the R manual as well as other associated publications.
@@ -424,13 +444,13 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [curl], [crul], [httr] or [httr2] over [RCurl]. If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr] are better for higher level access. [crul] is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr] for mocking HTTP requests, and [vcr] for caching HTTP requests in package tests.
+- For HTTP requests we recommend using [curl](https://github.com/jeroen/curl/), [crul](http://docs.ropensci.org/crul/), [httr](https://httr.r-lib.org) or [httr2](https://httr2.r-lib.org) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr](https://httr.r-lib.org) are better for higher level access. [crul](http://docs.ropensci.org/crul/) is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr](https://docs.ropensci.org/webmockr/) for mocking HTTP requests, and [vcr](https://docs.ropensci.org/vcr/) for caching HTTP requests in package tests.
 
-- For parsing JSON, use [jsonlite] instead of [rjson] or [RJSONIO].
+- For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
-- For parsing, creating, and manipulating XML, we strongly recommend [xml2] for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+- For parsing, creating, and manipulating XML, we strongly recommend [xml2](https://cran.rstudio.com/web/packages/xml2/) for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- For spatial data, the [sp] package should be considered deprecated in favor of [sf], and the packages [rgdal], [maptools], and [rgeos] will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
+- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages rgdal, rgdal, and rgdal will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 ## Version Control {#version-control}
 
@@ -506,23 +526,4 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 #### MOOCs {#moo-cs}
 
 There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.
-
-[curl]: https://github.com/jeroen/curl/
-[crul]: https://github.com/ropensci/crul/
-[httr]: https://httr.r-lib.org
-[httr2]: https://httr2.r-lib.org
-[RCurl]: https://cran.rstudio.com/web/packages/RCurl/
-[webmockr]: https://github.com/ropensci/webmockr/
-[vcr]: https://github.com/ropensci/vcr/
-[jsonlite]: https://github.com/jeroen/jsonlite
-[rjson]: https://cran.rstudio.com/web/packages/rjson/
-[RJSONIO]: https://cran.rstudio.com/web/packages/RJSONIO/
-[xml2]: https://cran.rstudio.com/web/packages/xml2/
-[sp]: https://github.com/edzer/sp/
-[sf]: https://r-spatial.github.io/sf/
-[rgdal]: https://cran.r-project.org/web/packages/rgdal/index.html
-[maptools]: https://cran.r-project.org/web/packages/maptools/index.html
-[rgeos]: https://cran.r-project.org/web/packages/rgeos/index.html
-
-
-
+ 

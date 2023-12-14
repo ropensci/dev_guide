@@ -2,6 +2,12 @@
 
 ## dev (0.9.0)
 
+- 2023-09-15, add suggestions for API packages (#496).
+
+- Translation to Spanish!
+
+- 2023-07-17, Update Aims and Scope to include translation packages, remove experimental text-processing categories, and provide clarifications around API wrappers
+
 - 2023-05-04, Added link to Bioconductor book (#663, `@llrs`).
 
 - 2023-04-26, Changed suggested lifecycle stage in authors guide (#661, `@bart1`).
