@@ -6,6 +6,7 @@
 
 
 ```{r} 
+#| eval: fase
 #| echo: false
 #| results: 'asis' 
 #| warning: false
