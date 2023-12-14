@@ -6,7 +6,7 @@ title-es: "Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares
 author-es: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
 description-es: |
     Guía para autoras/es de paquetes, encargadas/os, revisoras/es y editoras/es en
-    el sistem de revisión por pares de rOpenSci.
+    el sistema de revisión por pares de rOpenSci.
       La primera sección del libro contiene
       nuestras recomendaciones para crear y probar los paquetes de R.
       La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci:
