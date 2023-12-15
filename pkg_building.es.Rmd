@@ -174,8 +174,8 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
   Las secciones posibles son:
   
   - Desarrollo (estados de CI, ver el [capítulo CI](#ci), canal de Slack para la discusión, repostatus)
-  - Edición o publicación ([etiquetas de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [etiqueta de la API de chequeos de CRAN](https://github.com/ropensci/cchecksapi#badges), etiqueta de Zenodo)
-  - Estadísticas o uso (descargas, por ejemplo [etiquetas de descarga de METACRAN](https://www.r-pkg.org/services#badges))
+  - Edición o publicación ([etiquetas de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [etiqueta de la API de chequeos de CRAN](https://github.com/r-hub/cchecksbadges), etiqueta de Zenodo)
+  - Estadísticas o uso (descargas, por ejemplo [etiquetas de descarga de r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
   
   La tabla debe ser más ancha que larga para enmascarar el resto del *README*.
 
@@ -553,6 +553,8 @@ Esta es una colección de problemas en CRAN que vale la pena evitar desde el pri
 - Evita tests y ejemplos que tarden en correr. Considera usar `testthat::skip_on_cran()` en los test que toman mucho tiempo para que se omitan en CRAN pero sigan corriendo localmente y en la [integración continua](#ci).
 - Incluye archivos extra ubicados en la raíz del proyecto, como `paper.md` y archivos de configuración de integración continua, en tu archivo `.Rbuildignore`.
 
+Para más consejos, consulta la lista colaborativa mantenida por ThinkR, ["Prepárate para CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
+
 ### Comprobaciones en CRAN  {#cranchecks}
 
 Una vez que tu paquete esté en CRAN, será [comprobado regularmente en diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101).
@@ -561,7 +563,7 @@ Puedes revisar el estado de las comprobaciones de CRAN con:
 
 - el paquete [`foghorn`](https://fmichonneau.github.io/foghorn/).
 
-- la [API de comprobaciones de CRAN](https://github.com/ropenscilabs/cchecksapi) mantenida por rOpenSci, que proporciona [etiquetas de estado](https://github.com/ropenscilabs/cchecksapi#badges).
+- las [etiquetas de estado "CRAN checks Badges"](https://github.com/r-hub/cchecksbadges).
 
 ## Guía para Bioconductor {#bioconductor-gotchas}
 
