@@ -422,8 +422,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Una vez que hayas configurado [la integración continua (CI)](#ci), utiliza el informe de cobertura de tu paquete (revisa [esta sección de nuestro libro](#coverage)) para identificar las líneas no testeadas y añadir más *tests*.
 
-- Dado que a menudo algunos tests se omiten en la [integración continua](#ci), te recomendamos asegurarte de que todos se ejecuten antes de enviar tu paquete ejecutándolos localmente (puede que tengas que establecer `Sys.setenv(NOT_CRAN="true")`.
-  Además, te recomendamos que antes de enviar tu paquete utilices el paquete [`goodpractice`](https://github.com/MangoTheCat/goodpractice/) de MangoTheCat para testear tu paquete en busca de posibles fuentes de errores, y ejecutar `spelling::spell_check_package()` para encontrar errores ortográficos en la documentación.
+- Dado que a menudo algunos tests se omiten en la [integración continua](#ci), te recomendamos asegurarte de que todos se ejecuten antes de enviar tu paquete ejecutándolos localmente (puede que tengas que establecer `Sys.setenv(NOT_CRAN="true")`).
 
 ## Ejemplos {#examples}
 
@@ -571,8 +570,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 - Si envías un paquete a rOpenSci a través del [repo de software-review](https://github.com/ropensci/software-review) puedes dirigir tus preguntas al equipo de rOpenSci a través de issues o en nuestro [foro de discusión](https://discuss.ropensci.org/).
 
-- Antes de enviar un paquete, utiliza estas [**buenas prácticas**](https://github.com/MangoTheCat/goodpractice) (`goodpractice::gp()`) como guía para mejorar tu paquete, ya que la mayoría de las excepciones a estas tendrán que justificarse.
-  Por ejemplo, el uso de alguna sintaxis en particular puede no ser recomendado generalmente y, por tanto, marcado como erróneo por `goodpractice`, pero podrías tener una buena razón para utilizarla en tu paquete.
+- Lee la [guía para quienes crean paquetes](#authors-guide).
 
 - Lee, incorpora y actúa según los consejos del capítulo [*Guía de Colaboración*](#collaboration).
 

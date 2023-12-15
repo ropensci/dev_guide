@@ -360,7 +360,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - Once you've set up [continuous integration (CI)](#ci), use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
-- Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
+- Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package (you might need to set `Sys.setenv(NOT_CRAN="true")`).
 
 ## Examples {#examples}
 
@@ -489,7 +489,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 - If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
 
-- Before submitting a package use the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of `foo` might be generally bad and therefore flagged by `goodpractice` but you had a good reason to use it in your package.
+- Read the [authors guide](#authors-guide).
 
 - Read, incorporate, and act on advice from the [*Collaboration Guide* chapter](#collaboration).
 
