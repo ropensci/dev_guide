@@ -476,7 +476,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   
   - Si las dependencias tienen funcionalidades redundantes, considera depender de una sola en lo posible.
   
-  - Puedes encontrar más consejos sobre la gestión de dependencias en [el capítulo "Dependencies: Mindset and Background" (Dependencias: Mentalidad y Contexto) del libro "R packages"](https://r-pkgs.org/dependencies-mindset-background.html) y [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
+  - Puedes encontrar más consejos sobre la gestión de dependencias en [el capítulo _"Dependencies: Mindset and Background"_ (Dependencias: Mentalidad y Contexto) del libro [_"R packages"_](https://r-pkgs.org/dependencies-mindset-background.html) y [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
 
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
   Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, `roxygen2`) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
