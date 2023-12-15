@@ -5,8 +5,8 @@ project:
 title-es: "Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares"
 author-es: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
 description-es: |
-    Versión extendida de la guía de empaquetado de rOpenSci.
-      Este libro es una guía para autoras/es, encargadas/os, revisoras/es y editoras/es de rOpenSci.
+    Guía para autoras/es de paquetes, encargadas/os, revisoras/es y editoras/es en
+    el sistema de revisión por pares de rOpenSci.
       La primera sección del libro contiene
       nuestras recomendaciones para crear y probar los paquetes de R.
       La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci:
@@ -23,7 +23,8 @@ book:
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
   author: "rOpenSci software review editorial team (current and alumni): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
   description: |
-    Extended version of the rOpenSci packaging guide.
+    Guide for package authors, maintainers, reviewers and editors in rOpenSci
+    software peer-review system.
     This book is a guide for authors, maintainers, reviewers
     and editors of rOpenSci. The first section of the book contains
     our guidelines for creating and testing R packages.
