@@ -206,7 +206,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
 
 - El paquete debe contener la documentación general del paquete para `?paquete` (o ``?`paquete-package``` si hay un conflicto de nombres).
   Opcionalmente, puedes utilizar tanto `?paquete` como ``?`paquete-package``` para el archivo del manual del paquete utilizando la etiqueta `@aliases` de roxygen.
-  `usethis::use_package_doc()` añade la plantilla para generar la documentación general.
+  [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) añade la plantilla para generar la documentación general.
 
 - El paquete debe contener al menos una viñeta en formato **HTML** que cubra una parte importante de las funciones del paquete, ilustrando casos de uso realistas y cómo se supone que las funciones interactúen entre ellas.
   Si el paquete es pequeño, la viñeta y el *README* pueden tener un contenido muy similar.
@@ -236,14 +236,12 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 
 ### Uso de roxygen2 {#roxygen-2-use}
 
-- Pedimos que todos los paquetes que se presenten para revisión utilicen `roxygen2` para generar la documentación.
-  `roxygen2` es [un paquete de R](https://cran.r-project.org/web/packages/roxygen2/index.html) que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.
+- Pedimos que todos los paquetes que se presenten para revisión utilicen [roxygen2](https://roxygen2.r-lib.org/) para generar la documentación.
+  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función. Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
-- Más información sobre el uso de roxygen2 para generar documentación está disponible [en el libro *R Packages*](https://r-pkgs.org/man.html).
+- Más información sobre el uso de roxygen2 para generar documentación está disponible [en el libro *R Packages*](https://r-pkgs.org/man.html) y en [el sitio web de roxygen2](https://roxygen2.r-lib.org/).
 
 - Si escribiste los archivos .Rd a mano, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd a documentación de roxygen2.
-
-- Una ventaja clave de utilizar `roxygen2` es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
 - Todas las funciones deben documentar el tipo de objeto devuelto bajo el encabezado `@return`.
 
@@ -258,26 +256,18 @@ f <- function(a = TRUE) {
 ```
 
 - La documentación debe ayudar a la navegación incluyendo links entre funciones relacionadas y agrupando la documentación de funciones relacionadas en página de ayuda comunes.
-  Para esto recomendamos las etiquetas `@seealso` y `@family` (esta última crea automáticamente enlaces "See also" y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown).
+  Para esto recomendamos la etiqueta `@seealso`, que crea automáticamente enlaces _"See also"_ (ver también, en inglés) y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown.
   Consulta [la sección "manual" del libro *R Packages*](https://r-pkgs.org/man.html) y [la sección "Agrupación de funciones" de este capítulo](#function-grouping) para más detalles.
 
 - Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual.
-  Una forma de hacerlo es [usando fragmentos de R Markdown](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/).
-  Usando "documentos hijos" con kintr puedes guardar fragmentos de código en la carpeta `man` y reutilizarlos en el *README*, las viñetas y la documentación (usando la etiqueta `@includeRmd`, [disponible desde la versión 0.7.0 de roxygen2](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files)).
-
-- Añade `#' @noRd` a las funciones internas.
-
-- Si prefieres no abarrotar el código con una documentación muy larga, puedes colocar más ejemplos fuera del *script* de R.
-  Coloca la documentación extra en archivos en la carpeta `man-roxygen` en la raiz de tu paquete e insértala en el archivo de ayuda con `@template <nombre de archivo>` debajo de la etiqueta `@example`.
+  Consulta la [viñeta de roxygen2 sobre la reutilización de documentación](https://roxygen2.r-lib.org/articles/reuse.html).
   
-  - Coloca la documentación de cualquier objeto en un archivo `.R` en la carpeta `man-roxygen` (en la raíz de tu paquete). Por ejemplo [este archivo](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Vincula ese archivo de plantilla desde el código de tu función ([por ejemplo](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) con la etiqueta `@template` ([por ejemplo](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). El contenido de la plantilla se insertará cuando se construya la documentación en el archivo resultante `.Rd` que se mostrará al acceder a la documentación de la función.
-  - Ten en cuenta que actualmente el formato de markdown no funciona en las plantillas, así que asegúrate de utilizar formato LaTeX.
-  - En la mayoría de los casos puedes ignorar las plantillas y `man-roxygen` pero hay dos casos en los que aprovecharlos será de gran ayuda:
-    1. Si tienes mucha documentación en una función, clase u objeto, separar ciertos trozos de esa documentación puede mantener tu archivo `.R` ordenado. Esto es especialmente útil cuando tienes mucho código en ese archivo `.R`. Por otro lado, significa que la documentación no será legible "en el código fuente", ya que estará en otro archivo.
-    2. Cuando utilizas la misma documentación en muchas funciones y archivos `.R` es útil utilizar una plantilla. Esto reduce el texto duplicado y ayuda a evitar que por error se actualice la documentación de una función pero no la de otra. Utilizar un archivo de plantilla para la documentación de un parámetro es una alternativa a definir el parámetro para una función y utilizar `@inheritParams` para otras funciones que utilicen el mismo parámetro.
+- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural _"examples"_), pero también la etiqueta `@example <path>` (en singular _"example"_) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- A partir de la versión 7.0.0 de `roxygen2`, las clases `R6` son oficialmente compatibles.
-  Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd.html#r6) para saber cómo documentar las clases `R6`.
+- Añade `#' @noRd` a las funciones internas. Quizá te interese el [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
+
+- A partir de la versión 7.0.0 de roxygen2, las clases `R6` son oficialmente compatibles.
+  Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para saber cómo documentar las clases `R6`.
 
 ### URLs en la documentación {#ur-ls-in-documentation}
 
@@ -313,7 +303,7 @@ En cualquier caso, no olvides actualizar la URL del sitio web en todos los lados
 
 Cuando tu paquete tenga muchas funciones, es conveniente que aparezcan agrupadas en el índice de la documentación, lo cual se puede hacer de forma más o menos automática.
 
-Si utilizas `roxygen2` versión 6.1.1 o mayor, puedes utilizar la etiqueta `@family` en la documentación de tus funciones para indicar un grupo al que pertenecen.
+Si utilizas roxygen2 versión 6.1.1 o mayor, puedes utilizar la etiqueta `@family` en la documentación de tus funciones para indicar un grupo al que pertenecen.
 Esto generará enlaces las funciones en la documentación local del paquete instalado (en la sección "See also") *y* te permitirá utilizar la función `has_concept` de `pkgdown` en el archivo de configuración de tu sitio web.
 Puedes ver un ejemplo (de un paquete no perteneciente a rOpenSci) cortesía de [`optiRum`](https://github.com/lockedata/optiRum): [etiqueta family](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [archivo de configuración de `pkgdown`](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) y [la sección en el índice resultante](https://itsalocke.com/optirum/reference/).
 Para personalizar el texto del título de la referencia cruzada creada por roxygen2 (`Other {family}:`), puedes consultar la documentación de [roxygen2 sobre cómo proporcionar una lista `rd_family_title` en `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
@@ -447,7 +437,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 ## Dependencias del paquete  {#pkgdependencies}
 
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
-  Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, `roxygen2`) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
+  Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, roxygen2) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
   Si utilizas algún paquete en los ejemplos o *tests* de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
 
 - Si tu paquete no está en Bioconductor pero depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el *README* y la viñeta sean lo suficientemente claras incluso para una persona que no esté familiarizada con el ciclo de publicación de Bioconductor.
