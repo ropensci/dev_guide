@@ -256,7 +256,7 @@ f <- function(a = TRUE) {
 ```
 
 - La documentación debe ayudar a la navegación incluyendo links entre funciones relacionadas y agrupando la documentación de funciones relacionadas en página de ayuda comunes.
-  Para esto recomendamos la etiqueta `@seealso`, que crea automáticamente enlaces "See also" y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown.
+  Para esto recomendamos la etiqueta `@seealso`, que crea automáticamente enlaces _"See also"_ (ver también, en inglés) y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown.
   Consulta [la sección "manual" del libro *R Packages*](https://r-pkgs.org/man.html) y [la sección "Agrupación de funciones" de este capítulo](#function-grouping) para más detalles.
 
 - Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual.
