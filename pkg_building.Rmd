@@ -193,7 +193,7 @@ where issue\_id is the number of the issue in the software-review repository. Fo
 
 - If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Examples in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), and the non-rOpensci package [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
-- The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
+- The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adds the template for the top-level documentation.
 
 - The package should contain at least one **HTML** vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content.
 
@@ -215,13 +215,11 @@ The general vignette should present a series of examples progressing in complexi
 
 ### roxygen2 use {#roxygen-2-use}
 
-- We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](https://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
 
-- More information on using roxygen2 [documentation](https://r-pkgs.org/man.html) is available in the R packages book.
+- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
 
 - If you were writing Rd by hand, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
-
-- One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
 
 - All functions should document the type of object returned under the `@return` heading.
 
@@ -233,21 +231,15 @@ f <- function(a = TRUE) {
 }
 ```
 
-- Documentation should support user navigation by including useful cross-links between related functions and documenting related functions together in groups or in common help pages.  The `@seealso` and `@family` tags (the latter of which automatically creates "See also" links and [can help group](https://pkgdown.r-lib.org/reference/build_reference.html) functions together on pkgdown sites), are recommended for this purpose. See [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
+- Documentation should support user navigation by including useful [cross-links](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) between related functions and documenting related functions together in groups or in common help pages.  In particular, the `@family` tags, that automatically creates "See also" links and [can help group](https://pkgdown.r-lib.org/reference/build_reference.html) functions together on pkgdown sites, is recommended for this purpose. See [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
 
-- You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
+- You can re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. Refer to [roxygen2 vignette on documentation reuse](https://roxygen2.r-lib.org/articles/reuse.html).
 
-- Add `#' @noRd` to internal functions.
+- For including examples, you can use the classic `@examples` tag (plural "examples") but also the  `@example <path>` tag (singular "example") for storing the example code in a separate R script (ideally under `man/`), and the `@exampleIf` tag for running examples conditionally and avoiding R CMD check failures. Refer to [roxygen2 documentation about examples](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- If you prefer not to clutter up code with extensive documentation, you can place further examples outside of the R script and use the `@example` tag; and you place further documentation in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
-  
-  - Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function.
-  - Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
-  - In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help:
-    1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file. On the other hand, it means the docs are not readable "in-source" since they're in another file.
-    2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other. Using a template file for a parameter documentation is an alternative to defining the parameter for one function and using `@inheritParams` for other functions using the same parameter.
+- Add `#' @noRd` to internal functions. You might be interested in the [devtag experimental package](https://github.com/moodymudskipper/devtag) for getting local manual pages when using `#' @noRd`.
 
-- Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
+- Starting from roxygen2 version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd-other.html#r6) for details on how to document `R6` classes.
 
 ### URLs in documentation {#ur-ls-in-documentation}
 
@@ -274,7 +266,7 @@ Before submission and before transfer, you could use the [approach documented by
 
 When your package has many functions, use grouping in the reference, which you can do more or less automatically.
 
-If you use `roxygen2` above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) *and* allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
+If you use roxygen2 above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) *and* allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
 To customize the text of the cross-reference title created by roxygen2 (`Other {family}:`), refer to [roxygen2 docs regarding how to provide a `rd_family_title` list in `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
 
 Less automatically, see the example of [`drake` website](https://docs.ropensci.org/drake/) and [associated config file
@@ -374,7 +366,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 ## Package dependencies {#pkgdependencies}
 
-- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
 - If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.
   
