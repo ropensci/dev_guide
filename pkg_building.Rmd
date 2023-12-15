@@ -352,7 +352,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
   - [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
   - [httptest](https://enpiar.com/r/httptest/) ([httr](https://httr.r-lib.org/));
   - [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
-  - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://github.com/jeroen/curl)).
+  - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://jeroen.r-universe.dev/curl#)).
 
 - testthat has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration. Note that from testthat 3.1.2 `skip_if_offline()` automatically calls `skip_on_cran()`. More info on [CRAN preparedness for API wrappers](https://books.ropensci.org/http-testing/cran-preparedness.html).
 
@@ -444,7 +444,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [curl](https://github.com/jeroen/curl/), [crul](http://docs.ropensci.org/crul/), [httr](https://httr.r-lib.org) or [httr2](https://httr2.r-lib.org) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr](https://httr.r-lib.org) are better for higher level access. [crul](http://docs.ropensci.org/crul/) is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr](https://docs.ropensci.org/webmockr/) for mocking HTTP requests, and [vcr](https://docs.ropensci.org/vcr/) for caching HTTP requests in package tests.
+- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher level access.
 
 - For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
