@@ -18,7 +18,7 @@ We strongly recommend that package developers read Hadley Wickham and Jenny Brya
 
 ### Naming your package {#naming-your-package}
 
-- We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available). In particular, do *not* choose a package name that's already used on CRAN or Bioconductor.
+- We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`pak::pkg_name_check()` function](https://pak.r-lib.org/reference/pkg_name_check.html); also use a search engine as you'd thus see if it's offensive in a language other than English. In particular, do *not* choose a package name that's already used on CRAN or Bioconductor.
 
 - There is a trade-off between the advantages of a unique package name and a less original package name.
   
