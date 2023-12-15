@@ -262,7 +262,7 @@ f <- function(a = TRUE) {
 - Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual.
   Consulta la [viñeta de roxygen2 sobre la reutilización de documentación](https://roxygen2.r-lib.org/articles/reuse.html).
   
-- Para incluir ejemplos, puedes utilizar el clásico `@examples` (plural "examples"), pero también la etiqueta `@example <path>` (singular "example") para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
+- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural _"examples"_), pero también la etiqueta `@example <path>` (en singular _"example"_) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
 - Añade `#' @noRd` a las funciones internas. Quizá te interese el [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
 
