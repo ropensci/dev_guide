@@ -2,6 +2,8 @@
 
 ## dev (0.9.0)
 
+- 2023-12-15, update roxygen2 advice, mainly linking to roxygen2 website (#750).
+
 - 2023-09-15, add suggestions for API packages (#496).
 
 - Translation to Spanish!
