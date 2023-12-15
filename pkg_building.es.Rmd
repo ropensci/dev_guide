@@ -580,7 +580,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 #### Tutoriales {#tutorials}
 
-- ["Your first R package in 1 hour"](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) de Shannon Pileggi.
+- ["Your first R package in 1 hour" (tu primero paquete R en una hora)](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) de Shannon Pileggi.
 
 - [Esta descripción del flujo de trabajo por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
