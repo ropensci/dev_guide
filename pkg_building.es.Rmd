@@ -43,7 +43,7 @@ CodeMeta utiliza [términos de Schema.org](https://schema.org/) por lo que, a me
   
   - Considera un esquema de nomenclatura `objeto_verbo()` para las funciones de tu paquete que toman un tipo de datos común o interactúan con una API común. `objeto` se refiere a los datos/API y `verbo` a la acción principal. Este esquema ayuda a evitar conflictos de nombres con paquetes que pueden tener verbos similares, y hace que el código sea legible y fácil de autocompletar. Por ejemplo, en **stringi** las funciones que empiezan con `stri_` manipulan cadenas de texto (`stri_join()`, `stri_sort()`y en **googlesheets** las funciones que empiezan con `gs_` son llamadas a la API de Google Sheets (`gs_auth()`, `gs_user()`, `gs_download()`).
 
-- Para las funciones que manipulan un objeto o dato y devuelven un objeto o dato del mismo tipo, haz que el objeto o dato sea el primer argumento de la función para mejorar la compatibilidad con el operador pipe (`%>%` o `|>`).
+- Para las funciones que manipulan un objeto o dato y devuelven un objeto o dato del mismo tipo, haz que el objeto o dato sea el primer argumento de la función para mejorar la compatibilidad con el operador pipe (`|>` de R base, `%>%` del paquete magrittr).
 
 - Recomendamos fuertemente usar `snake_case` por sobre todos los otros estilos, a menos que estés usando funciones de un paquete que ya se utilice ampliamente.
 
