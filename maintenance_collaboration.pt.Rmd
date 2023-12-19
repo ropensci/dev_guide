@@ -159,7 +159,7 @@ Se você conceder a alguém permissões de escrita no repositório,
 
 ## Outros recursos {#further-resources}
 
-- Chamada da comunidade rOpenSci [Configure seu pacote para promover uma comunidade](https://ropensci.org/commcalls/apr2021-pkg-community/).
+- Chamada da comunidade rOpenSci: [Configure seu pacote para promover uma comunidade](https://ropensci.org/commcalls/apr2021-pkg-community/).
 - Para reutilizar respostas gentis e usuais, considere a funcionalidade de [respostas salvas](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/using-saved-replies) do GitHub.
 
 
