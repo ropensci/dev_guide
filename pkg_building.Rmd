@@ -489,7 +489,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 #### Books {#books}
 
-- [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2022](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+- [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and can be bought in [print](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
 
 - [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
@@ -497,9 +497,13 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 - [*Advanced R* by Hadley Wickham](https://adv-r.hadley.nz/)
 
+- [*Tidyverse style guide*](https://style.tidyverse.org/)
+
+- [*Tidyverse design guide*](https://design.tidyverse.org/) (WIP) and the accompanying [newsletter](http://tidydesign.substack.com/).
+
 #### Tutorials {#tutorials}
 
-- [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
+- [Your first R package in 1 hour](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) by Shannon Pileggi.
 
 - [this workflow description by Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 

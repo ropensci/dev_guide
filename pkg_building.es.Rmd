@@ -566,7 +566,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 #### Libros {#books}
 
-- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (e [impreso - link a la versión anterior de Hadley Wickham, ya que, hasta junio de 2022, la nueva versión aún no se ha publicado](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (y [se puede comprar impreso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
 
 - [*Writing R Extensions* (Escribiendo extensiones de R)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) es la referencia canónica y normalmente más actualizada, para crear paquetes de R.
 
@@ -574,9 +574,13 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 - [*Advanced R* (R avanzado) de Hadley Wickham](https://adv-r.hadley.nz/)
 
+- [*Tidyverse style guide* (guía de estilo del equipo Tidyverse)](https://style.tidyverse.org/)
+
+- [*Tidyverse design guide* (guía de diseño del equipo tidyverse)](https://design.tidyverse.org/) (trabajo en elaboración) con su [boletín de noticias](http://tidydesign.substack.com/).
+
 #### Tutoriales {#tutorials}
 
-- [El famoso artículo de Hilary Parker *Writing an R package from scratch* (Escribiendo tu propio paquete de R desde cero)](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) o [su versión actualizada por Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) que muestra cómo hacer lo mismo de forma más eficiente utilizando `usethis`.
+- ["Your first R package in 1 hour" (tu primer paquete de R en una hora)](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) de Shannon Pileggi.
 
 - [Esta descripción del flujo de trabajo por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
