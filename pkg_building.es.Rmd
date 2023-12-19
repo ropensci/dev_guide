@@ -348,7 +348,7 @@ Si crees que quienes revisaron tu paquete han hecho una contribución sustancial
 ```
 
 No incluyas a nadie en tu paquete sin antes pedir su consentimiento.
-Lee más en [esta entrada del blog *Thanking Your Reviewers: Gratitude through Semantic Metadata* (Agradeciendo las revisiones: La gratitud a través de los metadatos semánticos)](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
+Lee más en este artículo de blog [*Thanking Your Reviewers: Gratitude through Semantic Metadata* (Agradeciendo las revisiones: La gratitud a través de los metadatos semánticos)](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
 Por favor, no agregues al equipo editorial.
 ¡Su participación y contribución a rOpenSci es suficiente agradecimiento!
 
