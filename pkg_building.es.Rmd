@@ -523,7 +523,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   Puede que el paquete [gert](https://docs.ropensci.org/gert/) te resulte útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
 
 - Asegúrate de listar archivos innecesarios, como `.DS_Store`, en .gitignore.
-  El paquete [gitignore](https://docs.ropensci.org/gitignore/) puede resultarte útil para esto.
+  La función [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html), y el paquete [gitignore](https://docs.ropensci.org/gitignore/) pueden resultarte útil para esto.
 
 - Una sección posterior de este libro incluye algunos [consejos sobre el flujo de trabajo con git](#gitflow).
 
