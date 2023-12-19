@@ -9,7 +9,7 @@ aliases:
 Ter pessoas colaborando vai trazer melhorias para o seu pacote e, se você integrar algumas delas como autoras do pacotes com [permissões de escrita no repositório](https://help.github.com/articles/repository-permission-levels-for-an-organization/), seu pacote será desenvolvido de forma mais sustentável.
 Também pode ser muito agradável trabalhar em equipe!
 
-Este capítulo contém nossa orientação para colaboração, em uma [seção sobre como tornar o seu repositório amigável para contribuições e colaborações](#friendlyfiles) por infraestrutura (código de conduta, diretrizes de contribuição, rótulos de problemas); e [ uma seção sobre como colaborar com novos colaboradores](#workingcollaborators), em particular no contexto da organização da rOpenSci no GitHub.
+Este capítulo contém nossa orientação para colaboração, em uma [seção sobre como tornar o seu repositório amigável para contribuições e colaborações](#friendlyfiles) por infraestrutura (código de conduta, diretrizes de contribuição, rótulos de problemas); e [uma seção sobre como colaborar com novos colaboradores](#workingcollaborators), em particular no contexto da organização da rOpenSci no GitHub.
 
 Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em conta a perspectiva dos outros, especialmente quando as prioridades deles forem diferentes das suas.
 ```
