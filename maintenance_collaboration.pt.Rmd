@@ -55,7 +55,7 @@ A rOpenSci também incentiva os guias de contribuição a incluírem uma declara
 Esses links fornecem um modelo para uma declaração de ciclo de vida simples.
 Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as contribuições (consulte [esta seção](#attributions)).
 
-Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para o [Fórum da rOpenSci](https://discuss.ropensci.org/) após certificar-se de que você verá essas perguntas no fórum. Os usuários podem usar o fórum para fazer perguntas sobre o uso e relatar seus casos de uso, e você pode se inscrever em categorias e tags individuais para receber notificações sobre o seu pacote.  Sinta-se à vontade para mencionar isso nos documentos do seu pacote e/ou nas diretrizes de contribuição/modelo de *issue*. Oriente os seus usuários a marcar as mensagens com o nome do pacote.
+Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para o [Fórum da rOpenSci](https://discuss.ropensci.org/) após certificar-se de que você verá essas perguntas no fórum. As pessoas usuárias podem usar o fórum para fazer perguntas sobre o uso e relatar seus casos de uso, e você pode se inscrever em categorias e tags individuais para receber notificações sobre o seu pacote.  Sinta-se à vontade para mencionar isso nos documentos do seu pacote e/ou nas diretrizes de contribuição/modelo de *issue*. Oriente as pessoas que usam seu pacote a marcar as mensagens com o nome do pacote.
 
 Quando uma pull request estiver mais perto de ser mesclada, você poderá usar [um *GitHub Actions PR workflow* para estilizar o código com o pacote `styler`](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
 
