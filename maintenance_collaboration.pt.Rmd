@@ -11,7 +11,7 @@ Também pode ser muito agradável trabalhar em equipe!
 
 Este capítulo contém nossa orientação para colaboração, em uma [seção sobre como tornar o seu repositório amigável para contribuições e colaborações](#friendlyfiles) por infraestrutura (código de conduta, diretrizes de contribuição, rótulos de problemas); e [uma seção sobre como colaborar com novos colaboradores](#workingcollaborators), em particular no contexto da organização da rOpenSci no GitHub.
 
-Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em conta a perspectiva dos outros, especialmente quando as prioridades deles forem diferentes das suas.
+Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em conta a perspectiva das outras pessoas, especialmente quando as prioridades delas forem diferentes das suas.
 ```
 
 ## Torne a contribuição e a colaboração do seu repositório amigáveis {#friendlyfiles}
