@@ -40,7 +40,7 @@ Em geral, esses e outros modelos precisarão ser modificados para serem usados c
 Modificar um guia de contribuição genérico para adicionar um toque pessoal também tende a fazer com que ele pareça menos genérico e mais sincero.
 As preferências pessoais em um guia de contribuição incluem:
 
-- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de codificação do tidyverse](https://style.tidyverse.org/).
+- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
 
 - Infraestrutura como a do `roxygen2`?
 
