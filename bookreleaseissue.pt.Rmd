@@ -2,7 +2,7 @@
 repo-actions: true
 ---
 
-# Orientação para lançamento de livros {#bookreleaseissue}
+# Orientação para o lançamento de livros {#bookreleaseissue}
 
 Os(as) editores(as) que estão se preparando para um lançamento podem executar o script `prelease.R` na pasta `inst` deste repositório para abrir automaticamente um problema no GitHub com os pontos de verificação para todos os problemas atuais atribuídos ao marco da próxima versão, juntamente com a seguinte lista de verificação.
 Antes de executar o script, verifique manualmente a atribuição de problemas ao marco.
