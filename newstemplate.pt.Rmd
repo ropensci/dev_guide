@@ -1,0 +1,15 @@
+---
+repo-actions: true
+---
+
+# NEWS template {#newstemplate}
+
+````markdown
+```{r}
+#| child: "templates/news.md"
+````
+
+```
+```
+
+
