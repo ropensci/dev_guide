@@ -250,7 +250,7 @@ Others have used the option to escape some URLs (change `<https://ropensci.org/>
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). Neal Richardson wrote [a good tutorial to get started with `pkgdown`](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/), and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
 

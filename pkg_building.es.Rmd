@@ -280,7 +280,7 @@ Además, no se podrá hacer click en los enlaces desde la documentación local.
 ## Sitio web de documentación  {#website}
 
 Te recomendamos que crees un sitio web con la documentación de tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown).
-Neal Richardson escribió [un tutorial para dar los primeros pasos con `pkgdown` (en inglés)](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/) y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
+Hay un [capítulo sobre pkgdown (en inglés)](https://r-pkgs.org/website.html) en libro "R packages", y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
 
 Hay algunos elementos que nos gustaría destacar aquí.
 
