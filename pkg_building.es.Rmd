@@ -392,7 +392,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Los paquetes con aplicaciones Shiny deberán generar *tests* unitarios usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas funcionan como es esperado.
 
-- Para testear las funciones que crean gráficos, sugerimos utilizar [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html), una extensión del paquete testthat que esta basada en [tests con instantáneas de testthat](https://testthat.r-lib.org/articles/snapshotting.html).
+- Para testear las funciones que crean gráficos, sugerimos utilizar [vdiffr](https://vdiffr.r-lib.org/), una extensión del paquete testthat que esta basada en [tests con instantáneas de testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
 - Si tu paquete interactúa con recursos web (APIs web y otras fuentes de datos en la web) el libro [*HTTP testing in R* (Testeando HTTP en R) de Scott Chamberlain y Maëlle Salmon](https://books.ropensci.org/http-testing/) puede resultarte relevante.
   Algunos paquetes que ayudan a realizar *tests* HTTP (y sus clientes HTTP correspondientes) son:
