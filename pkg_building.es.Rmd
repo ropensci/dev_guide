@@ -435,6 +435,38 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Dependencias del paquete  {#pkgdependencies}
 
+- Pensa en las ventajas y desventajas de depender de un paquete.
+  Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
+  Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
+  También aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en el ciclo de desarrollo tuyo y del resto, y en los sistemas de compilación automatizados.
+  Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo.
+  He aquí algunos enfoques para reducir las dependencias:
+  
+  - Si sólo utilizas unas pocas funciones de una dependencia grande o pesada, puedes copiarlas en tu propio paquete.
+    (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer la autoría del código copiado).
+    Por otro lado, las funciones complejas con muchos casos especiales (por ejemplo, los analizadores sintácticos) requieren considerable testeo y revisión.
+    
+    - Un ejemplo común de esto es devolver "tibbles" usadas por el tidyverse en las funciones del paquete que proporcionan datos.
+      Se puede evitar el uso del paquete **tibble** devolviendo un tibble creado modificando un data.frame de la siguiente manera
+      
+      ```
+      class(df) <- c("tbl_df", "tbl", "data.frame") 
+      ```
+      
+      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
+  
+  - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
+    Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.
+    La función `%>%` debe importarse de **magrittr** donde está definida, en lugar de **dplyr** que la reexporta y es mucho más pesado.
+  
+  - Algunas dependencias proporcionan nombres de funciones y sintaxis más fáciles de interpretar que los nombres de las funciones y la sintaxis de R base.
+    Si ésta es la razón principal para usar una función en una dependencia pesada, considera incluir el código de R base en una función interna bien nombrada en tu paquete.
+    Consulta, por ejemplo, el [script de R de rlang que proporciona funciones con una sintaxis similar a las funciones de purrr](https://github.com/r-lib/rlang/blob/9b50b7a86698332820155c268ad15bc1ed71cc03/R/standalone-purrr.R).
+  
+  - Si las dependencias tienen funcionalidades redundantes, considera depender de una sola en lo posible.
+  
+  - Puedes encontrar más consejos sobre la gestión de dependencias en [el capítulo _"Dependencies: Mindset and Background"_ (Dependencias: Mentalidad y Contexto) del libro [_"R packages"_](https://r-pkgs.org/dependencies-mindset-background.html) y [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
+
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
   Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, roxygen2) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
   Si utilizas algún paquete en los ejemplos o *tests* de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
@@ -469,38 +501,6 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
     Los scripts `configure` pueden ser difíciles de escribir, ya que a menudo requieren soluciones rebuscadas para asegurarse de que dependencias del sistema muy distintas funcionen en todos los sistemas.
     Utiliza ejemplos como punto de partida ([más aquí](https://github.com/search?q=org%3Acran+anticonf&type=Code)), pero ten en cuenta que es habitual encontrar errores y casos límite y que a menudo violan las políticas de CRAN.
     No dudes en [pedir ayuda en nuestro foro](https://discuss.ropensci.org/).
-
-- Pensa en las ventajas y desventajas de depender de un paquete.
-  Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
-  Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
-  También aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en el ciclo de desarrollo tuyo y del resto, y en los sistemas de compilación automatizados.
-  Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo.
-  He aquí algunos enfoques para reducir las dependencias:
-  
-  - Si sólo utilizas unas pocas funciones de una dependencia grande o pesada, puedes copiarlas en tu propio paquete.
-    (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer la autoría del código copiado).
-    Por otro lado, las funciones complejas con muchos casos especiales (por ejemplo, los analizadores sintácticos) requieren considerable testeo y revisión.
-    
-    - Un ejemplo común de esto es devolver "tibbles" usadas por el tidyverse en las funciones del paquete que proporcionan datos.
-      Se puede evitar el uso del paquete **tibble** devolviendo un tibble creado modificando un data.frame de la siguiente manera
-      
-      ```
-      class(df) <- c("tbl_df", "tbl", "data.frame") 
-      ```
-      
-      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
-  
-  - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
-    Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.
-    La función `%>%` debe importarse de **magrittr** donde está definida, en lugar de **dplyr** que la reexporta y es mucho más pesado.
-  
-  - Algunas dependencias proporcionan nombres de funciones y sintaxis más fáciles de interpretar que los nombres de las funciones y la sintaxis de R base.
-    Si ésta es la razón principal para usar una función en una dependencia pesada, considera incluir el código de R base en una función interna bien nombrada en tu paquete.
-    Consulta, por ejemplo, el [script de R de rlang que proporciona funciones con una sintaxis similar a las funciones de purrr](https://github.com/r-lib/rlang/blob/9b50b7a86698332820155c268ad15bc1ed71cc03/R/standalone-purrr.R).
-  
-  - Si las dependencias tienen funcionalidades redundantes, considera depender de una sola en lo posible.
-  
-  - Puedes encontrar más consejos sobre la gestión de dependencias [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
 
 ## Andamiaje recomendado {#recommended-scaffolding}
 
