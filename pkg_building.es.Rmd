@@ -566,7 +566,7 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 
 #### Libros {#books}
 
-- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (e [se puede comprar impreso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
+- [*R Packages* (Paquetes de R) de Hadley Wickham y Jenny Bryan](https://r-pkgs.org/) es un recurso excelente y fácil de leer sobre el desarrollo de paquetes que está disponible [gratis en línea](https://r-pkgs.org/) (y [se puede comprar impreso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
 
 - [*Writing R Extensions* (Escribiendo extensiones de R)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) es la referencia canónica y normalmente más actualizada, para crear paquetes de R.
 
