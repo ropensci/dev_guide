@@ -165,8 +165,8 @@ where issue\_id is the number of the issue in the software-review repository. Fo
 - If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake` repo](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are
   
   - Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
-  - Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
-  - Stats/Usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
+  - Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/r-hub/cchecksbadges), Zenodo badge)
+  - Stats/Usage (downloads e.g. [download badges from r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
     The table should be more wide than it is long in order to mask the rest of the README.
 
 - If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
@@ -465,13 +465,15 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 - Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
 - Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.
 
+For further gotchas, refer to the collaborative list maintained by ThinkR, ["Prepare for CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
+
 ### CRAN checks {#cranchecks}
 
 Once your package is on CRAN, it will be [regularly checked on different platforms](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Failures of such checks, when not false positives, can lead to the CRAN team's reaching out. You can monitor the state of the CRAN checks via
 
 - the [`foghorn` package](https://fmichonneau.github.io/foghorn/).
 
-- the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges).
+- the [CRAN checks badges](https://github.com/r-hub/cchecksbadges).
 
 ## Bioconductor gotchas {#bioconductor-gotchas}
 
