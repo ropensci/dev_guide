@@ -136,7 +136,7 @@ Se alguém contribuir para o seu repositório, considere adicioná-lo em `DESCRI
 
 No mínimo, considere adicionar o nome dos colaboradores próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
 
-Recomendamos que você seja generoso com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
+Recomendamos que você seja generoso(a) com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
 
 Como um lembrete de [nossas diretrizes de empacotamento](#building) se o seu pacote foi revisado e você acha que os revisores fizeram uma contribuição substancial para o desenvolvimento do seu pacote, você pode listá-los na seção `Authors@R` com um tipo de contribuinte "Revisor" (`"rev"`), da seguinte forma:
 
