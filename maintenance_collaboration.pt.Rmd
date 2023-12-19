@@ -145,7 +145,7 @@ Como um lembrete de [nossas diretrizes de empacotamento](#building) se o seu pac
     comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Inclua os revisores somente após solicitar o consentimento deles. Leia mais em [esta postagem do blog "Agradecendo seus revisores: Gratidão por meio de metadados semânticos"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Observe que 'rev' gerará uma CRAN NOTE, a menos que o pacote seja criado usando o R v3.5. Certifique-se de que você use `roxygen2` na versão mais recente disponível no CRAN.
+Inclua as pessoas revisoras somente após solicitar o consentimento delas. Leia mais [nesta postagem do blog "Agradecendo seus revisores: Gratidão por meio de metadados semânticos"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Observe que 'rev' gerará uma CRAN NOTE, a menos que o pacote seja criado usando o R v3.5. Certifique-se de que você use `roxygen2` na versão mais recente disponível no CRAN.
 
 Por favor, não liste os editores como colaboradores. Sua participação e contribuição para a rOpenSci são agradecimentos suficientes!
 
