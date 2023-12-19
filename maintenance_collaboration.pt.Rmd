@@ -32,7 +32,7 @@ Em seguida, exclua o código de conduta atual do pacote, caso exista algum.
 
 ### Guia de contribuição {#contributing-guide}
 
-Você pode usar o *issue*, a solicitação de *pull request* e as diretrizes de contribuição.
+Você pode usar a *issue*, a solicitação de *pull request* e as diretrizes de contribuição.
 Ter um arquivo sobre contribuição como `.github/CONTRIBUTING.md` ou `docs/CONTRIBUTING.md` é obrigatório.
 Uma maneira fácil de inserir um modelo para um guia de contribuição é usar a função [`use_tidy_contributing()` do pacote `usethis`](https://usethis.r-lib.org/reference/tidyverse.html) que insere [este modelo](https://github.com/r-lib/usethis/blob/main/inst/templates/tidy-contributing.md) como `.github/CONTRIBUTING.md`.
 Um exemplo mais completo é [este modelo de Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c) ou as abrangentes [páginas da wiki do pacote `mlr3` no GitHub](https://github.com/mlr-org/mlr3/wiki).
