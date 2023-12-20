@@ -1,5 +1,5 @@
 ---
-repo-actions: yes
+repo-actions: true
 aliases: marketing.html
 ---
 
