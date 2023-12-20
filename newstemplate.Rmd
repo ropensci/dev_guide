@@ -7,9 +7,8 @@ repo-actions: true
 ````markdown
 ```{r}
 #| child: "templates/news.md"
+```
 ````
 
-```
-```
 
 
