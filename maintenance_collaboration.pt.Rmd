@@ -106,7 +106,7 @@ Não existe uma regra geral da rOpenSci sobre como você deve integrar colaborad
 
 Você pode pedir a um novo colaborador que crie PRs (consulte a seção a seguir para avaliar um PR localmente, ou seja, além das verificações de CI) para dev/main e avalie-os antes de mesclá-los e, depois de algum tempo, deixe-os enviar para o main, embora você possa querer manter um sistema de revisões de PRs... mesmo para si mesmo quando tiver colegas de equipe!
 
-Um modelo possível para a integração de colaboradores é fornecido por Jim Hester em [seu `lintr` repo](https://github.com/jimhester/lintr/issues/318).
+Um modelo possível para a integração de pessoas colaboradoras é fornecido por Jim Hester em [seu `lintr` repo](https://github.com/jimhester/lintr/issues/318).
 
 Se o seu problema for o recrutamento de colaboradores, você pode publicar uma chamada aberta como a de Jim Hester [no Twitter](https://twitter.com/jimhester_/status/997109466674819074), ou no [GitHub](https://github.com/jimhester/lintr/issues/318) e, como autor de um pacote da rOpenSci, você pode pedir ajuda no slack da rOpenSci e pedir à equipe da rOpenSci por ideias para recrutar novos colaboradores.
 
