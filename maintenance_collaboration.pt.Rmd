@@ -100,7 +100,7 @@ Em primeiro lugar: mantenha contato com o seu repositório do GitHub!
 
 - desative os testes com falha se você não puder corrigí-los, pois eles criam ruído nos PRs que podem confundir colaboradores iniciantes.
 
-### Integração de colaboradores {#onboarding-collaborators}
+### Integração de pessoas colaboradoras {#onboarding-collaborators}
 
 Não existe uma regra geral da rOpenSci sobre como você deve integrar colaboradores. Você deve aumentar os direitos deles sobre o repositório à medida que ganhar confiança e, sem dúvida, deve reconhecer as contribuições deles (consulte [esta seção](#attributions)).
 
