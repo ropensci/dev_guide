@@ -98,7 +98,7 @@ Em primeiro lugar: mantenha contato com o seu repositório do GitHub!
 
 - não se esqueça de enviar as atualizações que você tem localmente.
 
-- desative os testes com falha se você não puder corrigí-los, pois eles criam ruído nos PRs que podem confundir novos colaboradores.
+- desative os testes com falha se você não puder corrigí-los, pois eles criam ruído nos PRs que podem confundir colaboradores iniciantes.
 
 ### Integração de colaboradores {#onboarding-collaborators}
 
