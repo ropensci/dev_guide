@@ -87,7 +87,7 @@ Você pode [criar marcos](https://docs.github.com/en/issues/using-labels-and-mil
 
 ### Comunicação com os usuários {#communication-with-users}
 
-Você pode indicar aos usuários o fórum da rOpenSci se você monitorar ou ativar as [Discussões no GitHub](https://docs.github.com/en/discussions) para o seu repositório de pacotes.
+Você pode indicar para as pessoas usuárias o fórum da rOpenSci se você monitorar ou ativar as [Discussões no GitHub](https://docs.github.com/en/discussions) para o repositório do seu pacote.
 Cada discussão do GitHub pode ser convertida em um *issue*, se necessário (e vice-versa, os *issues* podem ser convertidos em discussões).
 
 ## Trabalhando com colaboradores {#workingcollaborators}
