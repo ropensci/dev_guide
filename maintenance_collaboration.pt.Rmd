@@ -94,7 +94,7 @@ Cada discussão do GitHub pode ser convertida em um *issue*, se necessário (e v
 
 Em primeiro lugar: mantenha contato com o seu repositório do GitHub!
 
-- Não se esqueça de [**observar o seu repositório do GitHub**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) para ser notificado sobre *issues* ou *pull requests* (como alternativa, se você trabalha em rajadas, talvez adicione as informações ao guia de contribuição).
+- Não se esqueça de [**observar o seu repositório do GitHub**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) para receber notificações sobre *issues* ou *pull requests* (como alternativa, se você trabalha de forma concentrada em certas épocas, talvez adicione essas informações ao guia de contribuição).
 
 - não se esqueça de enviar as atualizações que você tem localmente.
 
