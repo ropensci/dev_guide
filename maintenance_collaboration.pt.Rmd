@@ -114,7 +114,7 @@ Se o seu problema for o recrutamento de colaboradores, você pode publicar uma c
 
 [*Branchs* (ou ramificações)](https://happygitwithr.com/git-branches.html) são baratas. Use-as extensivamente ao desenvolver recursos, testar novas ideias e corrigir problemas.
 
-Uma das ramificações é a ramificação `main` (que é a ramificação padrão/principal), na qual, se você seguir [desenvolvimento baseado no tronco](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) você "mescla atualizações pequenas e frequentes".
+Uma das *branches* é a *branch* `main` (que é a ramificação padrão/principal), na qual, se você seguir [desenvolvimento baseado no tronco](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) você "faz *merge* de atualizações pequenas e frequentes".
 Veja também as documentações do [Fluxo do GitHub](https://docs.github.com/en/get-started/quickstart/github-flow) e do [fluxo do GitLab](https://docs.gitlab.com/ee/topics/gitlab_flow.html).
 Talvez você também queira incrementar frequentemente os números da versão de seu pacote (em `DESCRIPTION`).
 Um aspecto específico do trabalho com colaboradores é a revisão de solicitações de *pull*, com algumas orientações úteis em:
