@@ -117,7 +117,7 @@ Se o seu problema for o recrutamento de colaboradores, você pode publicar uma c
 Uma das *branches* é a *branch* `main` (que é a ramificação padrão/principal), na qual, se você seguir [desenvolvimento baseado no tronco](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) você "faz *merge* de atualizações pequenas e frequentes".
 Veja também as documentações do [Fluxo do GitHub](https://docs.github.com/en/get-started/quickstart/github-flow) e do [fluxo do GitLab](https://docs.gitlab.com/ee/topics/gitlab_flow.html).
 Talvez você também queira incrementar frequentemente os números da versão de seu pacote (em `DESCRIPTION`).
-Um aspecto específico do trabalho com colaboradores é a revisão de solicitações de *pull*, com algumas orientações úteis em:
+Um aspecto específico do trabalho com colaboradores é a revisão de *Pull requests*, com algumas orientações úteis em:
 
 - [The Art of Giving and Receiving Code Reviews (Gracefully) (A arte de dar e receber revisões de código (graciosamente)), de Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/);
 - [Documentação do GitHub sobre revisões de PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
