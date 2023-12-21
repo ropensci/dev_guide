@@ -85,7 +85,7 @@ Isso pode ajudar a divulgar quais são suas prioridades.
 
 Você pode [criar marcos](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) e atribuir problemas a eles, o que ajuda outras pessoas a verem o que você planeja para a próxima versão do seu pacote, por exemplo.
 
-### Comunicação com os usuários {#communication-with-users}
+### Comunicação com as pessoas usuárias {#communication-with-users}
 
 Você pode indicar para as pessoas usuárias o fórum da rOpenSci se você monitorar ou ativar as [Discussões no GitHub](https://docs.github.com/en/discussions) para o repositório do seu pacote.
 Cada discussão do GitHub pode ser convertida em um *issue*, se necessário (e vice-versa, os *issues* podem ser convertidos em discussões).
