@@ -130,7 +130,7 @@ Para fazer e revisar *pull requests*, recomendamos que você [que você explore 
 Para que você configure o "git remote", consulte [Happy Git and GitHub for the useR](https://happygitwithr.com/common-remote-setups.html).
 Veja também a seção [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) no mesmo livro.
 
-### Seja generoso com as atribuições {#attributions}
+### Seja generoso(a) com as atribuições {#attributions}
 
 Se alguém contribuir para o seu repositório, considere adicioná-la em `DESCRIPTION`, como contribuinte ("ctb") para pequenas contribuições, e autor ("aut") para contribuições maiores. Tradicionalmente, ao citar um pacote em uma publicação científica, apenas as pessoas autoras "aut" são listados, e não as contribuidores "ctb"; e em `pkgdown` e, nos sites, somente os nomes "aut" são listados na página inicial, e todas as pessoas autoras são listados na página de autores.
 
