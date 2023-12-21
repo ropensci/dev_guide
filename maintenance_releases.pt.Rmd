@@ -1,47 +1,47 @@
 ---
-aliases:
+aliases: 
   - releasing.html
 ---
 
-# Releasing a package {#releasing}
+# Liberação de um pacote {#releasing}
 
 ```{block, type="summaryblock"}
-Your package should have different versions over time: snapshots of a state of the package that you can release to CRAN for instance. These versions should be properly _numbered_, _released_ and _described in a NEWS file_. More details below.
+Seu pacote deve ter versões diferentes ao longo do tempo: instantâneos de um estado do pacote que você pode lançar no CRAN, por exemplo. Essas versões devem ser devidamente _numeradas_, _lançadas_ e _descritas em um arquivo NEWS_. Mais detalhes abaixo.
 
-Note that you could streamline the process of updating NEWS and versioning your package by using [the `fledge` package](https://github.com/cynkra/fledge).
+Observe que você pode simplificar o processo de atualização do NEWS e do controle de versão do seu pacote usando [o pacote `fledge`] (https://github.com/cynkra/fledge).
 ```
 
-## Versioning {#versioning}
+## Controle de versão {#versioning}
 
-- We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [description chapter](https://r-pkgs.org/description.html#version).
+- Recomendamos enfaticamente que os pacotes rOpenSci usem controle de versão semântico. Uma explicação detalhada está disponível na seção [capítulo de descrição](https://r-pkgs.org/description.html#version).
 
-## Releasing {#releasing}
+## Liberação {#releasing}
 
-- Using `usethis::use_release_issue()` and `devtools::release()` will help you remember about more checks.
+- Usando `usethis::use_release_issue()` e `devtools::release()` ajudará você a se lembrar de mais verificações.
 
-- Git tag each release after every submission to CRAN. [more info](https://help.github.com/articles/creating-releases/)
+- Marque cada versão no Git após cada envio ao CRAN. [Mais informações](https://help.github.com/articles/creating-releases/)
 
-- CRAN does not like too frequent updates. That said, if you notice a major problem one week after a CRAN release, explain it in cran-comments.md and try releasing a newer version.
+- O CRAN não gosta de atualizações muito frequentes. Dito isso, se você notar um grande problema uma semana após o lançamento do CRAN, explique-o no cran-comments.md e tente lançar uma versão mais recente.
 
-## News file {#news}
+## Arquivo de notícias {#news}
 
-A NEWS file describing changes associated with each version makes it easier for users to see what's changing in the package and how it might impact their workflow. You must add one for your package, and make it easy to read.
+Um arquivo NEWS que descreve as alterações associadas a cada versão facilita para os usuários verem o que está mudando no pacote e como isso pode afetar seu fluxo de trabalho. Você deve adicionar um para o seu pacote e torná-lo fácil de ler.
 
-- It is mandatory to use a `NEWS` or `NEWS.md` file in the root of your package. We recommend using `NEWS.md` to make the file [more browsable](https://happygitwithr.com/workflows-browsability.html).
-- Please use our example [NEWS file](#newstemplate) as a model. You can find a good NEWS file in the wild [in the `taxize` package repo](https://github.com/ropensci/taxize/blob/master/NEWS.md) for instance.
-- If you use `NEWS`, add it to `.Rbuildignore`, but not if you use `NEWS.md`
-- Update the news file before every CRAN release, with a section with the package name, version and date of release, like (as seen in our example [NEWS file](#newstemplate)):
+- É obrigatório usar um arquivo `NEWS` ou `NEWS.md` na raiz do seu pacote. Recomendamos que você use o arquivo `NEWS.md` para tornar o arquivo [mais navegável](https://happygitwithr.com/workflows-browsability.html).
+- Por favor, use nosso exemplo [Arquivo NEWS](#newstemplate) como modelo. Você pode encontrar um bom arquivo NEWS na natureza [na seção `taxize` repositório de pacotes](https://github.com/ropensci/taxize/blob/master/NEWS.md) por exemplo.
+- Se você usar `NEWS` adicione-o a `.Rbuildignore` mas não se você usar `NEWS.md`
+- Atualize o arquivo de notícias antes de cada lançamento do CRAN, com uma seção com o nome do pacote, a versão e a data de lançamento, como (como visto em nosso exemplo) [Arquivo NEWS](#newstemplate)):
 
 ```
 foobar 0.2.0 (2016-04-01)
 =========================
 ```
 
-- Under that header, put in sections as needed, including: `NEW FEATURES`, `MINOR IMPROVEMENTS`, `BUG FIXES`, `DEPRECATED AND DEFUNCT`, `DOCUMENTATION FIXES` and any special heading grouping a large number of changes. Under each header, list items as needed (as seen in our example [NEWS file](#newstemplate)). For each item give
-  a description of the new feature, improvement, bug fix, or deprecated function/feature. Link
-  to any related GitHub issue like `(#12)`. The `(#12)` will resolve on GitHub in Releases to a link to that issue in the repo.
-- After you have added a `git tag` and pushed up to GitHub, add the news items for that tagged version to the Release notes of a release in your GitHub repo with a title like `pkgname v0.1.0`. See [GitHub docs about creating a release](https://help.github.com/articles/creating-releases/).
-- New CRAN releases will be written about [in our newsletter](https://news.ropensci.org/) but see [next chapter about marketing](#marketing) about how to inform more potential users about the release.
-- For more guidance about the NEWS file we suggest reading the [tidyverse NEWS style guide](https://style.tidyverse.org/news.html).
+- Sob esse cabeçalho, coloque as seções conforme necessário, incluindo: `NEW FEATURES`, `MINOR IMPROVEMENTS`, `BUG FIXES`, `DEPRECATED AND DEFUNCT`, `DOCUMENTATION FIXES` e qualquer título especial que agrupe um grande número de alterações. Em cada cabeçalho, liste os itens conforme necessário (como visto em nosso exemplo [Arquivo NEWS](#newstemplate)). Para cada item, forneça
+  uma descrição do novo recurso, melhoria, correção de bug ou função/característica obsoleta. Link
+  para qualquer problema relacionado no GitHub, como `(#12)`. O problema `(#12)` será resolvido no GitHub em Releases para um link para esse problema no repositório.
+- Depois que você tiver adicionado um `git tag` e enviado para o GitHub, adicione os itens de notícias para essa versão marcada às notas de versão de uma versão no seu repositório do GitHub com um título como `pkgname v0.1.0`. Você pode ver [Documentos do GitHub sobre a criação de uma versão](https://help.github.com/articles/creating-releases/).
+- Novos lançamentos do CRAN serão escritos sobre [em nosso boletim informativo](https://news.ropensci.org/) mas veja [próximo capítulo sobre marketing](#marketing) sobre como informar mais usuários em potencial sobre o lançamento.
+- Para obter mais orientações sobre o arquivo NEWS, sugerimos que você leia o documento [guia de estilo do tidyverse NEWS](https://style.tidyverse.org/news.html).
 
 
