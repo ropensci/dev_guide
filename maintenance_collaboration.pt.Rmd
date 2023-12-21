@@ -108,7 +108,7 @@ Você pode pedir a um novo colaborador que crie PRs (consulte a seção a seguir
 
 Um modelo possível para a integração de pessoas colaboradoras é fornecido por Jim Hester em [seu `lintr` repo](https://github.com/jimhester/lintr/issues/318).
 
-Se o seu problema for o recrutamento de colaboradores, você pode publicar uma chamada aberta como a de Jim Hester [no Twitter](https://twitter.com/jimhester_/status/997109466674819074), ou no [GitHub](https://github.com/jimhester/lintr/issues/318) e, como autor de um pacote da rOpenSci, você pode pedir ajuda no slack da rOpenSci e pedir à equipe da rOpenSci por ideias para recrutar novos colaboradores.
+Se o seu problema for o recrutamento de pessoas colaboradoras, você pode publicar uma chamada aberta como a de Jim Hester [no Twitter](https://twitter.com/jimhester_/status/997109466674819074), ou no [GitHub](https://github.com/jimhester/lintr/issues/318) e, como autor(a) de um pacote da rOpenSci, você pode pedir ajuda no slack da rOpenSci e pedir à equipe da rOpenSci por ideias para recrutar novas pessoas colaboradoras.
 
 ### Trabalhando com colaboradores (incluindo você) {#git-workflow}
 
