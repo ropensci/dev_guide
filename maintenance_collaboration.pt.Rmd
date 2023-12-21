@@ -134,7 +134,7 @@ Veja também a seção [Useful Git patterns for real life](https://happygitwithr
 
 Se alguém contribuir para o seu repositório, considere adicioná-lo em `DESCRIPTION`, como contribuinte ("ctb") para pequenas contribuições, autor ("aut") para contribuições maiores. Tradicionalmente, ao citar um pacote em uma publicação científica, apenas os autores "aut" são listados, e não os contribuidores "ctb"; e em `pkgdown` e, nos sites, somente os nomes "aut" são listados na página inicial, e todos os autores são listados na página de autores.
 
-No mínimo, considere adicionar o nome dos colaboradores próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
+No mínimo, considere adicionar o nome das pessoas colaboradoras próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
 
 Recomendamos que você seja generoso(a) com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
 
