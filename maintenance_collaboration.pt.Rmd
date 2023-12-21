@@ -155,7 +155,7 @@ Se você conceder a alguém permissões de escrita no repositório,
 
 - entre em contato com um [membro da equipe](https://ropensci.org/about#team) para que esse novo colaborador possa receber **um convite para a organização da rOpenSci no GitHub** (em vez de ser [um colaborador externo](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
 
-- entre em contato com a equipe da rOpenSci [ou um outro membro da equipe](https://ropensci.org/about#team) para que esse novo colaborador possa receber **um convite para o espaço de trabalho do Slack da rOpenSci**.
+- entre em contato com a equipe da rOpenSci [ou um outro membro da equipe](https://ropensci.org/about#team) para que esse novo colaborador possa receber **um convite para o *workspace* do Slack da rOpenSci**.
 
 ## Outros recursos {#further-resources}
 
