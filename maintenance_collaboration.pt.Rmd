@@ -102,7 +102,7 @@ Em primeiro lugar: mantenha contato com o seu repositório do GitHub!
 
 ### Integração de pessoas colaboradoras {#onboarding-collaborators}
 
-Não existe uma regra geral da rOpenSci sobre como você deve integrar colaboradores. Você deve aumentar os direitos deles sobre o repositório à medida que ganhar confiança e, sem dúvida, deve reconhecer as contribuições deles (consulte [esta seção](#attributions)).
+Não existe uma regra geral da rOpenSci sobre como você deve integrar pessoas colaboradoras. Você deve aumentar os direitos delas sobre o repositório à medida que ganhar confiança e, sem dúvida, deve reconhecer as contribuições que fizerem (consulte [esta seção](#attributions)).
 
 Você pode pedir a um novo colaborador que crie PRs (consulte a seção a seguir para avaliar um PR localmente, ou seja, além das verificações de CI) para dev/main e avalie-os antes de mesclá-los e, depois de algum tempo, deixe-os enviar para o main, embora você possa querer manter um sistema de revisões de PRs... mesmo para si mesmo quando tiver colegas de equipe!
 
