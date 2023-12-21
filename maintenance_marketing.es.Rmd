@@ -14,7 +14,7 @@ Te ayudaremos a promocionar tu paquete, pero aquí hay algunas cosas más para t
   
 - Comparte sobre el paquete en Mastodon utilizando el hashtag "#rstats" y etiqueta a rOpenSci!
     Esto puede ayudar llegar a gente que pueda colaborar o usar el paquete.
-   Ejemplos enviados desde rOpenSci mismo: ["A package a day" (un paquete al dia)](hachyderm.io/@rOpenSci/111611705648653729), [Help wanted (ayuda necesitada)](hachyderm.io/@rOpenSci/111460729804231877), [Use case (caso de uso)](hachyderm.io/@rOpenSci/111371091053569287), [Welcome post (mensaje de bienvenida)]( hachyderm.io/@rOpenSci/111342069863172097).
+   Ejemplos enviados desde rOpenSci mismo: ["A package a day" (un paquete al dia)](hachyderm.io/@rOpenSci/111611705648653729), [Help wanted (se necesita ayuda)](hachyderm.io/@rOpenSci/111460729804231877), [Use case (caso de uso)](hachyderm.io/@rOpenSci/111371091053569287), [Welcome post (mensaje de bienvenida)]( hachyderm.io/@rOpenSci/111342069863172097).
     
   - haz un *pull request* a [R Weekly](https://github.com/rweekly/rweekly.org) con una mensaje sobre la versión en la sección "*New Releases*" (o "*New Packages*" para la primera versión de GitHub/CRAN).
   
