@@ -73,7 +73,7 @@ When these sources of information are not enough,
 - look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter).
 - You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
 - R-Ladies has a [directory](https://rladies.org/directory/) specifying skills and interests of people listed.
-- You might tweet about the reviewer search.
+- You may post a request for reviewers in the #general and/or #software-review channels on the rOpenSci Slack, or on social media.
 
 ##### Tips for reviewer search in Airtable {#tips-for-reviewer-search-in-airtable}
 
