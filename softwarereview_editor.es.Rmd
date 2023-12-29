@@ -77,7 +77,7 @@ Puedes utilizar filtros, clasificación y búsqueda para identificar personas pa
 ![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable.png)
 
 Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
-Asimismo, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.
+Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo`require_mentorship`.
 En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
