@@ -70,28 +70,17 @@ Cuando estas fuentes de información no sean suficientes,
 - R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
 - Puedes publicar la búsqueda en las redes sociales.
 
-##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}*Airtable*
+- Puedes tuitear sobre la búsqueda de revisores.
 
-Tus herramientas para buscar personas para la revisión en *Airtable* son
+##### Consejos para la búsqueda de revisores en Airtable {#tips-for-reviewer-search-in-airtable}
 
-- filtros (por favor, elimínalos una vez que hayas terminado), ver ejemplo más abajo.
+Puedes utilizar los filtros, la clasificación y la búsqueda para identificar a los revisores con una experiencia concreta:
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y en áreas técnicas tienen que incluir integración continua (interfaz y etiquetas en inglés)](images/airtable.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en dominios que tienen que incluir la química y áreas técnicas que tienen que incluir la integración continua](images/airtable.png)
 
-- crear una [visualización personalizada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views) dependiendo de tus habilidades en Airtable.
-
-Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
-Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que no hace falta esperar demasiado para volver a invitar a alguien que se negó debido a conflictos de interés.
-
-Además, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.  En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
-
-##### Almacenar la información de la búsqueda en Airtable  {#airtable-info}
-
-Si contactas a alguien desde Airtable, actualiza el campo `last_time_contacted` e introduce la categoría correspondiente a su respuesta en `last_answer`.
-
-Sólo añade personas a Airtable si aceptan revisar (de lo contrario, las personas deben ofrecerse voluntariamente rellenando el formulario de Airtable).
-No introduzcas más información que su nombre de usuario de GitHub, su nombre y su dirección de correo electrónico.
-Pide a quienes que podrían potencialmente revisar que completen el [formulario de Airtable](https://ropensci.org/software-reviewer).
+Comprueba la opinión más reciente del revisor y evita a cualquiera que haya revisado a alguien en los últimos seis meses.
+Asimismo, comprueba si un revisor primerizo ha indicado que `require_mentorship`.
+En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
 
