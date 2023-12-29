@@ -70,16 +70,16 @@ Cuando estas fuentes de información no sean suficientes,
 - R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
 - Puedes publicar la búsqueda en las redes sociales.
 
-- Puedes tuitear sobre la búsqueda de revisores.
+- Puedes publicar la búsqueda en las redes sociales.
 
-##### Consejos para la búsqueda de revisores en Airtable {#tips-for-reviewer-search-in-airtable}
+##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
-Puedes utilizar los filtros, la clasificación y la búsqueda para identificar a los revisores con una experiencia concreta:
+Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en dominios que tienen que incluir la química y áreas técnicas que tienen que incluir la integración continua](images/airtable.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable.png)
 
-Comprueba la opinión más reciente del revisor y evita a cualquiera que haya revisado a alguien en los últimos seis meses.
-Asimismo, comprueba si un revisor primerizo ha indicado que `require_mentorship`.
+Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
+Asimismo, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.
 En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
