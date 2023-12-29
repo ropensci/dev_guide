@@ -68,7 +68,7 @@ Cuando estas fuentes de información no sean suficientes,
 - busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en redes sociales).
 - También puedes buscar personas con paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
-- Puedes publicar una solicitud de revisores en los canales #general y/o #software-review del Slack de rOpenSci, o en las redes sociales.
+- Puedes publicar la búsqueda en los canales #general y/o #software-review del Slack de rOpenSci, o en las redes sociales.
 
 ##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
