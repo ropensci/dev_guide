@@ -6,19 +6,19 @@ repo-actions: true
 
 Boas vindas! Este livro é um guia para autores, mantenedores, revisores e editores da rOpenSci.
 
-O livro [primeira seção do livro](#building) contém nossas diretrizes para criar e testar os pacotes do R.
+A [primeira seção do livro](#building) contém as nossas diretrizes para criar e testar pacotes do R.
 
-A seção [segunda seção](#softwarereviewintro) é dedicada ao processo de revisão por pares de software da rOpenSci: o que é, nossas políticas e guias específicos para autores, editores e revisores durante todo o processo. Para *revisão de software estatístico* consulte a seção [página da Web e recursos do projeto](https://ropensci.org/stat-software-review/).
+A [segunda seção](#softwarereviewintro) é dedicada ao processo de revisão por pares de software da rOpenSci: o que é esse processo, quais são as nossas políticas e guias específicos para autores, editores e revisores durante todo o processo. Para *revisão de software estatístico*, consulte a [página da Web e os recursos do projeto](https://ropensci.org/stat-software-review/).
 
-A página [terceira e última seção](#collaboration) apresenta nossas práticas recomendadas para você cuidar do seu pacote depois que ele tiver sido integrado: como colaborar com outros desenvolvedores, como documentar lançamentos, como promover seu pacote e como aproveitar o GitHub como uma plataforma de desenvolvimento. A terceira seção também apresenta um [capítulo para quem deseja começar a contribuir com os pacotes do rOpenSci](#contributingguide).
+A [terceira e última seção](#collaboration) apresenta as nossas práticas recomendadas para você cuidar do seu pacote depois que ele tiver sido integrado: como colaborar com outros desenvolvedores, como documentar lançamentos, como promover o seu pacote e como aproveitar o GitHub como uma plataforma de desenvolvimento. A terceira seção também apresenta um [capítulo para quem deseja começar a contribuir com os pacotes do rOpenSci](#contributingguide).
 
-Esperamos que você ache o guia útil e claro, e agradecemos suas sugestões no [rastreador de problemas do livro](https://github.com/ropensci/dev_guide/issues). Feliz embalagem R!
+Esperamos que você ache o guia útil e claro, e agradecemos suas sugestões no [*issue tracker* do livro](https://github.com/ropensci/dev_guide/issues). Feliz embalagem R!
 
 A equipe editorial da rOpenSci.
 
 Este livro é um documento vivo.
-Você pode ver as atualizações das nossas práticas recomendadas e políticas no site [notas de versão](#booknews).  
-Você pode citar este livro usando [seus metadados Zenodo e DOI](https://doi.org/10.5281/zenodo.2553043).
+Você pode ver as atualizações das nossas práticas recomendadas e políticas nas [notas de versão](#booknews).  
+Você pode citar este livro usando [os metadados Zenodo e DOI](https://doi.org/10.5281/zenodo.2553043).
 
 ````{r}
 #| echo: false
