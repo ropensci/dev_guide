@@ -4,7 +4,7 @@ repo-actions: true
 
 # Prefácio {.unnumbered}
 
-Você é bem-vindo! Este livro é um guia para autores, mantenedores, revisores e editores da rOpenSci.
+Boas vindas! Este livro é um guia para autores, mantenedores, revisores e editores da rOpenSci.
 
 O livro [primeira seção do livro](#building) contém nossas diretrizes para criar e testar os pacotes do R.
 
