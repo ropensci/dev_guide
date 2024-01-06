@@ -36,6 +36,6 @@ cat("\n```\n")
 
 *Se você quiser contribuir com este livro (sugestões, correções), consulte [o repositório do GitHub](https://github.com/ropensci/dev_guide) em particular [as diretrizes de contribuição](https://github.com/ropensci/dev_guide#contributing). Obrigado a você!*
 
-*Somos gratos a todos os autores, revisores e editores convidados por nos ajudarem a aprimorar o sistema e este guia ao longo dos anos. Agradecemos também às seguintes pessoas que fizeram contribuições para este guia e suas versões anteriores: `r readLines("thanks.md")` Informe-nos se esquecemos de reconhecer a sua contribuição!*
+*Agradecemos a todos os autores, revisores e editores convidados por nos ajudarem a aprimorar o sistema e este guia ao longo dos anos. Agradecemos também às seguintes pessoas que fizeram contribuições para este guia e suas versões anteriores: `r readLines("thanks.md")` Informe-nos se esquecemos de reconhecer a sua contribuição!*
 
 
