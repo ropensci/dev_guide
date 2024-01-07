@@ -297,7 +297,7 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ### Avoid duplication with CRAN package vignettes
 
-If your package on CRAN and you also have a package website then try to avoid duplication. Having the same vignettes in both places leads to inconsistencies as both are not always updated simultaneously, which leads to ambiguity about where the real package documentation should be found. Ideally you should have one place for all your documentation. Further, make sure your CRAN vignettes clearly link to your website. To ensure that website vignettes do not end up on CRAN add these vignettes to your `.Rbuildignore` file.
+If your package is on CRAN and you also have a package website then try to avoid duplication. Having the same vignettes in both places leads to inconsistencies as both are not always updated simultaneously, which leads to ambiguity about where the real package documentation should be found. Ideally you should have one place for all your documentation. Further, make sure your CRAN vignettes clearly link to your website. To ensure that website vignettes do not end up on CRAN add these vignettes to your `.Rbuildignore` file.
 
 ## Authorship {#authorship}
 
