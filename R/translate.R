@@ -1,3 +1,28 @@
+#' Function translating one placeholder to actual content
+#'
+#' Also helps opening the PR
+#'
+#' @param page_path Path to the placeholder. First create on main,
+#' for instance to translate index.Rmd to Portuguese,
+#' first create a copy of index.Rmd as index.pt.Rmd on main.
+#' @param language Language to which to translate.
+#' See [docs of the `source_lang` and `target_lang` API parameters](https://www.deepl.com/docs-api/translate-text).
+#' @param glossary Glossary name.
+#'
+#' @details
+#' First follow babeldown docs to set the two environment variables.
+#'
+#' ```r
+#' Sys.setenv("DEEPL_API_URL" = "https://api.deepl.com")
+#' Sys.setenv(DEEPL_API_KEY = keyring::key_get("deepl"))
+#' ```
+#'
+#'
+#' @return Nothing
+#' @export
+#'
+#' @examples
+#' translate_page("index.pt.Rmd", "PT-BR")
 translate_page <- function(page_path, language, glossary = NULL) {
   git_branch_name <- sprintf(
     "%s-%s-auto",
