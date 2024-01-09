@@ -59,7 +59,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 - Highlights of the cli package include: automatic wrapping, respect of the [NO_COLOR convention](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), many [semantic elements](https://cli.r-lib.org/articles/semantic-cli.html), and extensive documentation. Read more in a [blog post](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
-- Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for the user to suppress.
+- Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for users to suppress.
 
 - Provide a way for the user to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none, "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests! More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
 
