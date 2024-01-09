@@ -58,7 +58,8 @@ CodeMeta utiliza [términos de Schema.org](https://schema.org/) por lo que, a me
 
 - Utiliza el [paquete cli](https://cli.r-lib.org/) o las herramientas de R base (`message()` y `warning()`) para comunicarte con las personas que usen tus funciones.
 
-- Lo más destacado del paquete cli incluye: envoltorio automático, respeto de la [convención NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [entrada del blog](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [este 
+artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar. 
 
