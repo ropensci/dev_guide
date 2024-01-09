@@ -11,7 +11,8 @@ translate_page(page_path, language, glossary = NULL)
 for instance to translate index.Rmd to Portuguese,
 first create a copy of index.Rmd as index.pt.Rmd on main.}
 
-\item{language}{Language to which to translate.}
+\item{language}{Language to which to translate.
+See \href{https://www.deepl.com/docs-api/translate-text}{docs of the \code{source_lang} and \code{target_lang} API parameters}.}
 
 \item{glossary}{Glossary name.}
 }
