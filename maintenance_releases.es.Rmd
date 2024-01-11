@@ -1,3 +1,8 @@
+---
+aliases:
+  - releasing.html
+---
+
 # Publicar un paquete  {#releasing}
 
 ```{block, type="summaryblock"}
@@ -10,7 +15,7 @@ Ten en cuenta que el proceso de actualización de *NEWS* y de versionado de tu p
 
 ## Versionar {#versioning}
 
-- Recomendamos encarecidamente que los paquetes de rOpenSci utilicen el versionado semántico. Hay una explicación detallada en el [capítulo sobre el archivo *DESCRIPTION* (en inglés)](https://r-pkgs.org/description.html#version).
+- Recomendamos encarecidamente que los paquetes de rOpenSci utilicen el versionado semántico. Hay una explicación detallada en el [capitulo "lifecyle" del libro "R packages" (en inglés)](https://r-pkgs.org/lifecycle.html).
 
 ## Publicar {#releasing}
 
