@@ -13,7 +13,7 @@ Observe que você pode simplificar o processo de atualização do NEWS e do cont
 
 ## Controle de versão {#versioning}
 
-- Recomendamos enfaticamente que os pacotes rOpenSci usem controle de versão semântico. Uma explicação detalhada está disponível na seção [capítulo de descrição](https://r-pkgs.org/description.html#version).
+- Recomendamos enfaticamente que os pacotes rOpenSci usem controle de versão semântico. Uma explicação detalhada está disponível no [capítulo de ciclo de vida do livro *R Packages*](https://r-pkgs.org/lifecycle.html).
 
 ## Publicação {#releasing}
 
