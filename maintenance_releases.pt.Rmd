@@ -6,7 +6,7 @@ aliases:
 # Publicação de um pacote {#releasing}
 
 ```{block, type="summaryblock"}
-Seu pacote deve ter versões diferentes ao longo do tempo: instantâneos de um estado do pacote que você pode lançar no CRAN, por exemplo. Essas versões devem ser devidamente _numeradas_, _lançadas_ e _descritas em um arquivo NEWS_. Mais detalhes abaixo.
+Seu pacote deve ter versões diferentes ao longo do tempo: *snapshots* de um estado do pacote que você pode publicar no CRAN, por exemplo. Essas versões devem ser devidamente _numeradas_, _publicadas_ e _descritas em um arquivo NEWS_. Mais detalhes abaixo.
 
 Observe que você pode simplificar o processo de atualização do NEWS e do controle de versão do seu pacote usando [o pacote `fledge`] (https://github.com/cynkra/fledge).
 ```
