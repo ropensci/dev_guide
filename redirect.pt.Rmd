@@ -2,7 +2,7 @@
 
 ## Site que não seja de páginas do Github Pages (por exemplo, Netlify) {#non-git-hub-pages-site-e-g-netlify}
 
-Substitua o conteúdo do site atual por um arquivos com o nome `index.html` e um com nome  `404.html` contendo ambos os arquivos:
+Substitua o conteúdo do site atual por dois arquivos chamados `index.html` e `404.html`. Ambos os arquivos devem conter o seguinte conteúdo:
 
 ```html
 <html>
