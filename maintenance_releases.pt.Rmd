@@ -13,7 +13,7 @@ Note that you could streamline the process of updating NEWS and versioning your 
 
 ## Versioning {#versioning}
 
-- We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [lifecycle chapter of the R packages book](https://r-pkgs.org/lifecycle.html).
+- We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [description chapter](https://r-pkgs.org/description.html#version).
 
 ## Releasing {#releasing}
 
