@@ -145,7 +145,7 @@ bibentry(
   
   - The package name.
   - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
-  - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered, that is to say directly readable, cf [the documentation website section](#website)).
+  - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered and readable, see [the "documentation website" section](#website)).
   - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
   - Any additional setup required (authentication tokens, etc).
   - Brief demonstration usage.
