@@ -237,11 +237,11 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 ### Uso de roxygen2 {#roxygen-2-use}
 
 - Pedimos que todos los paquetes que se presenten para revisión utilicen [roxygen2](https://roxygen2.r-lib.org/) para generar la documentación.
-  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función. Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
+  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.  roxygen2 tiene [soporte para la sintaxis Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
 - Más información sobre el uso de roxygen2 para generar documentación está disponible [en el libro *R Packages*](https://r-pkgs.org/man.html) y en [el sitio web de roxygen2](https://roxygen2.r-lib.org/).
 
-- Si escribiste los archivos .Rd a mano, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd a documentación de roxygen2.
+- Si escribiste los archivos .Rd directamente sin roxygen2, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd a documentación de roxygen2.
 
 - Todas las funciones deben documentar el tipo de objeto devuelto bajo el encabezado `@return`.
 
