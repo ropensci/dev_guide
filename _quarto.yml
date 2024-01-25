@@ -38,7 +38,6 @@ book:
     The third section also features a chapter for anyone wishing
     to start contributing to rOpenSci packages.
   cover-image: images/cover.png
-  reader-mode: true
   site-url: https://devguide.ropensci.org/
   repo-url: https://github.com/ropensci/dev_guide/
   repo-actions: [edit, issue]
