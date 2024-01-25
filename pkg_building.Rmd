@@ -221,11 +221,11 @@ The general vignette should present a series of examples progressing in complexi
 
 ### roxygen2 use {#roxygen-2-use}
 
-- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that compiles `.Rd` files to your `man` folder in your package from tags written above each function. roxygen2 has [support for Markdown syntax](https://roxygen2.r-lib.org/articles/rd-formatting.html). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
 
-- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
+- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/).
 
-- If you were writing Rd by hand, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
+- If you were writing Rd directly without roxygen2, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
 
 - All functions should document the type of object returned under the `@return` heading.
 
