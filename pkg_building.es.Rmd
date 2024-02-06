@@ -56,7 +56,14 @@ CodeMeta utiliza [términos de Schema.org](https://schema.org/) por lo que, a me
 
 ### Mensajes de la consola {#console-messages}
 
-- Utiliza `message()` y `warning()` en tus funciones para comunicarte con la persona en frente al teclado. No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar.
+- Utiliza el [paquete cli](https://cli.r-lib.org/) o las herramientas de R base (`message()` y `warning()`) para comunicarte con las personas que usen tus funciones.
+
+- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [este 
+artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+
+- No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar. 
+
+- Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usaresto.silencioso"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
 
 ### Interfaces interactivas o gráficas {#interactive-graphical-interfaces}
 
@@ -148,8 +155,8 @@ bibentry(
   El *README* debe incluir, en este orden:
   
   - El nombre del paquete.
-  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)). Si el *README* tiene muchas etiquetas, puedes considerar el uso de una tabla de etiquetas (ver [este ejemplo](https://github.com/ropensci/ijtiff#ijtiff-), [este otro](https://github.com/ropensci/drake) o [este otro](https://github.com/ropensci/qualtRics/)). Esta tabla debe ser más ancha que alta.
-  - Una breve descripción de los objetivos del paquete con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, por ejemplo [el sitio web de documentación](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el *README*.
+  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Una breve descripción de los objetivos del paquete (¿qué hace? ¿por qué seria interesante usarlo?) con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, por ejemplo [el sitio web de documentación](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el *README*. Asegúrate también de que las viñetas estén renderizadas y sean legibles, consulta [la sección "sitio web de documentación"](#website)).
   - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [pak](https://pak.r-lib.org/) o [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
   - Cualquier configuración adicional necesaria (tokens de autenticación, etc).
   - Una breve demostración de uso.
@@ -237,11 +244,11 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 ### Uso de roxygen2 {#roxygen-2-use}
 
 - Pedimos que todos los paquetes que se presenten para revisión utilicen [roxygen2](https://roxygen2.r-lib.org/) para generar la documentación.
-  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función. Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
+  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.  roxygen2 tiene [soporte para la sintaxis Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
 - Más información sobre el uso de roxygen2 para generar documentación está disponible [en el libro *R Packages*](https://r-pkgs.org/man.html) y en [el sitio web de roxygen2](https://roxygen2.r-lib.org/).
 
-- Si escribiste los archivos .Rd a mano, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd a documentación de roxygen2.
+- Si escribiste los archivos .Rd directamente sin roxygen2, el paquete [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contiene funciones para convertir la documentación de Rd a documentación de roxygen2.
 
 - Todas las funciones deben documentar el tipo de objeto devuelto bajo el encabezado `@return`.
 
