@@ -30,7 +30,7 @@ Para otras formas de contribuir, consulta la [Guía de contribución de rOpenSci
 ## Preparar tu revisión  {#preparereview}
 
 Las revisiones deben basarse en la versión actual de GitHub en la rama por defecto, a menos que se indique lo contrario.
-Todos los envíos generan un informe detallado sobre la estructura y funcionalidad del paquete, generado por [nuestro paquete `pkgcheck`](https://docs.ropensci.org/pkgcheck/). Si el paquete ha cambiado sustancialmente desde las últimas revisiones, puedes solicitar una nueva revisión con el comando `@ropensci-review-bot check package`. Ten en cuenta que, al instalar el paquete para revisarlo, debes utilizar el argumento `dependencies = TRUE` de `remotes::install()` para asegurarte de que tienes todas las dependencias necesarias.
+Todos los envíos generan un informe detallado sobre la estructura y funcionalidad del paquete, generado por [nuestro paquete `pkgcheck`](https://docs.ropensci.org/pkgcheck/). Si el paquete ha cambiado sustancialmente desde las últimas revisiones, puedes solicitar una nueva revisión con el comando `@ropensci-review-bot check package`. Ten en cuenta que, al instalar el paquete para revisarlo, debes asegurarte de que tienes todas las dependencias necesarias (por ejemplo usa `pak::pak()`).
 
 ### Directrices generales {#general-guidelines}
 

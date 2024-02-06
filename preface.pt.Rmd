@@ -1,0 +1,41 @@
+---
+repo-actions: true
+---
+
+# Prefácio {.unnumbered}
+
+Boas vindas! Este livro é um guia para autores, mantenedores, revisores e editores da rOpenSci.
+
+A [primeira seção do livro](#building) contém as nossas diretrizes para criar e testar pacotes do R.
+
+A [segunda seção](#softwarereviewintro) é dedicada ao processo de revisão por pares de software da rOpenSci: o que é esse processo, quais são as nossas políticas e guias específicos para autores, editores e revisores durante todo o processo. Para *revisão de software estatístico*, consulte a [página da Web e os recursos do projeto](https://ropensci.org/stat-software-review/).
+
+A [terceira e última seção](#collaboration) apresenta as nossas práticas recomendadas para você cuidar do seu pacote depois que ele tiver sido integrado: como colaborar com outros desenvolvedores, como documentar lançamentos, como promover o seu pacote e como aproveitar o GitHub como uma plataforma de desenvolvimento. A terceira seção também apresenta um [capítulo para quem deseja começar a contribuir com os pacotes do rOpenSci](#contributingguide).
+
+Esperamos que você ache o guia útil e claro, e agradecemos suas sugestões no [*issue tracker* do livro](https://github.com/ropensci/dev_guide/issues). Feliz embalagem R!
+
+A equipe editorial da rOpenSci.
+
+Este livro é um documento vivo.
+Você pode ver as atualizações das nossas práticas recomendadas e políticas nas [notas de versão](#booknews).  
+Você pode citar este livro usando [os metadados Zenodo e DOI](https://doi.org/10.5281/zenodo.2553043).
+
+````{r}
+#| echo: false
+#| results: 'asis' 
+#| warning: false
+cat("\n```bibtex\n")
+u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
+s <- rvest::session(u)
+u <- paste0(s$url, "/export/hx") # redirected
+out <- rvest::read_html(u)
+bibentry <- rvest::html_text(rvest::html_element(out, "pre"))
+cat(bibentry)
+cat("\n```\n")
+````
+
+*Se você quiser contribuir com este livro (sugestões, correções), consulte [o repositório do GitHub](https://github.com/ropensci/dev_guide) em particular [as diretrizes de contribuição](https://github.com/ropensci/dev_guide#contributing). Obrigado!*
+
+*Agradecemos a todos os autores, revisores e editores convidados por nos ajudarem a aprimorar  o  sistema e este guia ao longo dos anos. Agradecemos também às seguintes pessoas que fizeram contribuições para este guia e suas versões anteriores: `r readLines("thanks.md")` Informe-nos se esquecemos de reconhecer a sua contribuição!*
+
+

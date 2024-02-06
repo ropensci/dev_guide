@@ -68,30 +68,17 @@ Cuando estas fuentes de información no sean suficientes,
 - busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de *issues* en el repositorio, destacándolo, citándolo en artículos, hablando de él en redes sociales).
 - También puedes buscar personas con paquetes relacionados en [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tiene un [directorio](https://rladies.org/directory/) en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.
-- Puedes publicar la búsqueda en las redes sociales.
+- Puedes publicar la búsqueda en los canales #general y/o #software-review del Slack de rOpenSci, o en las redes sociales.
 
-##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}*Airtable*
+##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
-Tus herramientas para buscar personas para la revisión en *Airtable* son
+Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:
 
-- filtros (por favor, elimínalos una vez que hayas terminado), ver ejemplo más abajo.
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable.png)
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre conocimientos técnicos que tiene que incluir química y en áreas técnicas tienen que incluir integración continua (interfaz y etiquetas en inglés)](images/airtable.png)
-
-- crear una [visualización personalizada](https://support.airtable.com/hc/en-us/articles/202624989-Guide-to-views) dependiendo de tus habilidades en Airtable.
-
-Echa un vistazo a los campos `last_time_contacted` (último contacto) y `last_answer` (última respuesta) antes de ponerte en contacto con alguien.
-Si alguien se ha negado recientemente porque no tenía tiempo, podría ser mejor abstenerse, mientras que no hace falta esperar demasiado para volver a invitar a alguien que se negó debido a conflictos de interés.
-
-Además, comprueba si una persona que es nueva revisando ha indicado que `require_mentorship`.  En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
-
-##### Almacenar la información de la búsqueda en Airtable  {#airtable-info}
-
-Si contactas a alguien desde Airtable, actualiza el campo `last_time_contacted` e introduce la categoría correspondiente a su respuesta en `last_answer`.
-
-Sólo añade personas a Airtable si aceptan revisar (de lo contrario, las personas deben ofrecerse voluntariamente rellenando el formulario de Airtable).
-No introduzcas más información que su nombre de usuario de GitHub, su nombre y su dirección de correo electrónico.
-Pide a quienes que podrían potencialmente revisar que completen el [formulario de Airtable](https://ropensci.org/software-reviewer).
+Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
+Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo`require_mentorship`.
+En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.
 
 ##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
 

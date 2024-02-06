@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 rOpenSci accepts packages that meet our guidelines via a streamlined [Software Peer Review process](#whatissoftwarereview). To ensure a consistent style across all of our tools we have written this chapter highlighting our guidelines for package development. Please also read and apply our [chapter about continuous integration (CI)](#ci). Further guidance for after the review process is provided in the third section of this book starting with [a chapter about collaboration](#collaboration).
 
-We strongly recommend that package developers read Hadley Wickham and Jenny Bryan's concise but thorough book on package development which is available for [free online](https://r-pkgs.org/). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
+We recommend that package developers read Hadley Wickham and Jenny Bryan's thorough book on package development which is available for [free online](https://r-pkgs.org/). Our guide is partially redundant with other resources but highlights rOpenSci's guidelines.
 
  To read why submitting a package to rOpenSci is worth the effort to meet guidelines, have a look at [reasons to submit](#whysubmit). 
 
@@ -18,7 +18,7 @@ We strongly recommend that package developers read Hadley Wickham and Jenny Brya
 
 ### Naming your package {#naming-your-package}
 
-- We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`available` package](https://github.com/ropenscilabs/available). In particular, do *not* choose a package name that's already used on CRAN or Bioconductor.
+- We strongly recommend short, descriptive names in lower case. If your package deals with one or more commercial services, please make sure the name does not violate branding guidelines. You can check if your package name is available, informative and not offensive by using the [`pak::pkg_name_check()` function](https://pak.r-lib.org/reference/pkg_name_check.html); also use a search engine as you'd thus see if it's offensive in a language other than English. In particular, do *not* choose a package name that's already used on CRAN or Bioconductor.
 
 - There is a trade-off between the advantages of a unique package name and a less original package name.
   
@@ -43,7 +43,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
   
   - Consider an `object_verb()` naming scheme for functions in your package that take a common data type or interact with a common API. `object` refers to the data/API and `verb` the primary action.  This scheme helps avoid namespace conflicts with packages that may have similar verbs, and makes code readable and easy to auto-complete.  For instance, in **stringi**, functions starting with `stri_` manipulate strings (`stri_join()`, `stri_sort()`, and in **googlesheets** functions starting with `gs_` are calls to the Google Sheets API (`gs_auth()`, `gs_user()`, `gs_download()`).
 
-- For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operator (`%>%`).
+- For functions that manipulate an object/data and return an object/data of the same type, make the object/data the first argument of the function so as to enhance compatibility with the pipe operators (base R's `|>`, magrittr's `%>%`).
 
 - We strongly recommend `snake_case` over all other styles unless you are porting over a package that is already in wide use.
 
@@ -55,7 +55,13 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Console messages {#console-messages}
 
-- Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for the user to suppress.
+- Use either the [cli package](https://cli.r-lib.org/), or base R's tools (`message()` and `warning()`) to communicate with the user in your functions. 
+
+- Highlights of the cli package include: automatic wrapping, respect of the [NO_COLOR convention](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), many [semantic elements](https://cli.r-lib.org/articles/semantic-cli.html), and extensive documentation. Read more in a [blog post](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+
+- Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for users to suppress.
+
+- Provide a way for users to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none, "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests. More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
 
 ### Interactive/Graphical Interfaces {#interactive-graphical-interfaces}
 
@@ -144,8 +150,8 @@ bibentry(
 - All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
   
   - The package name.
-  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)). If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table should be more wide than high.
-  - Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
+  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered and readable, see [the "documentation website" section](#website)).
   - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
   - Any additional setup required (authentication tokens, etc).
   - Brief demonstration usage.
@@ -165,8 +171,8 @@ where issue\_id is the number of the issue in the software-review repository. Fo
 - If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake` repo](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are
   
   - Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
-  - Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/ropensci/cchecksapi#badges), Zenodo badge)
-  - Stats/Usage (downloads e.g. [download badges from METACRAN](https://www.r-pkg.org/services#badges))
+  - Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/r-hub/cchecksbadges), Zenodo badge)
+  - Stats/Usage (downloads e.g. [download badges from r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
     The table should be more wide than it is long in order to mask the rest of the README.
 
 - If your package connects to a data source or online service, or wraps other software, consider that your package README may be the first point of entry for users.  It should provide enough information for users to understand the nature of the data, service, or software, and provide links to other relevant data and documentation.  For instance,
@@ -193,7 +199,7 @@ where issue\_id is the number of the issue in the software-review repository. Fo
 
 - If there is potential overlap or confusion with other packages providing similar functionality or having a similar name, add a note in the README, main vignette and potentially the Description field of DESCRIPTION. Examples in [rtweet README](https://docs.ropensci.org/rtweet/), [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird), and the non-rOpensci package [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs).
 
-- The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. `usethis::use_package_doc()` adds the template for the top-level documentation.
+- The package should contain top-level documentation for `?foobar`, (or ``?`foobar-package` `` if there is a naming conflict). Optionally, you can use	both `?foobar` and ``?`foobar-package` `` for the package level manual file, using `@aliases` roxygen tag. [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adds the template for the top-level documentation.
 
 - The package should contain at least one **HTML** vignette providing a substantial coverage of package functions, illustrating realistic use cases and how functions are intended to interact. If the package is small, the vignette and the README may have very similar content.
 
@@ -215,13 +221,11 @@ The general vignette should present a series of examples progressing in complexi
 
 ### roxygen2 use {#roxygen-2-use}
 
-- We request all submissions to use `roxygen2` for documentation.  `roxygen2` is [an R package](https://cran.r-project.org/web/packages/roxygen2/index.html) that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that compiles `.Rd` files to your `man` folder in your package from tags written above each function. roxygen2 has [support for Markdown syntax](https://roxygen2.r-lib.org/articles/rd-formatting.html). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
 
-- More information on using roxygen2 [documentation](https://r-pkgs.org/man.html) is available in the R packages book.
+- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/).
 
-- If you were writing Rd by hand, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
-
-- One key advantage of using `roxygen2` is that your `NAMESPACE` will always be automatically generated and up to date.
+- If you were writing Rd directly without roxygen2, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
 
 - All functions should document the type of object returned under the `@return` heading.
 
@@ -233,21 +237,15 @@ f <- function(a = TRUE) {
 }
 ```
 
-- Documentation should support user navigation by including useful cross-links between related functions and documenting related functions together in groups or in common help pages.  The `@seealso` and `@family` tags (the latter of which automatically creates "See also" links and [can help group](https://pkgdown.r-lib.org/reference/build_reference.html) functions together on pkgdown sites), are recommended for this purpose. See [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
+- Documentation should support user navigation by including useful [cross-links](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) between related functions and documenting related functions together in groups or in common help pages.  In particular, the `@family` tags, that automatically creates "See also" links and [can help group](https://pkgdown.r-lib.org/reference/build_reference.html) functions together on pkgdown sites, is recommended for this purpose. See [the "manual" section of The R Packages book](https://r-pkgs.org/man.html) and [the "function grouping" section of the present chapter](#function-grouping) for more details.
 
-- You could re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. A possible approach for that is the use of [R Markdown fragments, relying on knitr use of child documents so you can store the re-used parts in a folder in man/, and call them from both the README and the vignette](https://www.garrickadenbuie.com/blog/dry-vignette-and-readme/) as well [as in man pages by using the `@includeRmd` tag available from `roxygen 0.7.0`](https://roxygen2.r-lib.org/articles/rd.html#including-external--rmd-md-files).
+- You can re-use documentation pieces (e.g. details about authentication, related packages) across the vignettes/README/man pages. Refer to [roxygen2 vignette on documentation reuse](https://roxygen2.r-lib.org/articles/reuse.html).
 
-- Add `#' @noRd` to internal functions.
+- For including examples, you can use the classic `@examples` tag (plural "examples") but also the  `@example <path>` tag (singular "example") for storing the example code in a separate R script (ideally under `man/`), and the `@exampleIf` tag for running examples conditionally and avoiding R CMD check failures. Refer to [roxygen2 documentation about examples](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- If you prefer not to clutter up code with extensive documentation, you can place further examples outside of the R script and use the `@example` tag; and you place further documentation in files in a `man-roxygen` folder in the root of your package, and those will be combined into the manual file by the use of `@template <file name>`, for example.
-  
-  - Put any documentation for an object in a `.R` file in the `man-roxygen` folder (at the root of your package). For example, [this file](https://github.com/ropensci/rgbif/blob/master/man-roxygen/occ_search_egs.R). Link to that template file from your function ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r)) with the `@template` keyword ([e.g.](https://github.com/ropensci/rgbif/blob/master/R/occ_search.r#L7)). The contents of the template will be inserted when documentation is built into the resulting `.Rd` file that users will see when they ask for documentation for the function.
-  - Note that if you are using markdown documentation, markdown currently doesn't work in template files, so make sure to use latex formatting.
-  - In most cases you can ignore templates and `man-roxygen`, but there are two cases in which leveraging them will greatly help:
-    1. When you have a lot of documentation for a function/class/object separating out certain chunks of that documentation can keep your `.R` source file tidy. This is especially useful when you have a lot of code in that `.R` file. On the other hand, it means the docs are not readable "in-source" since they're in another file.
-    2. When you have the same documentation parts used across many `.R` functions it's helpful to use a template. This reduces duplicated text, and helps prevent mistakenly updating documentation for one function but not the other. Using a template file for a parameter documentation is an alternative to defining the parameter for one function and using `@inheritParams` for other functions using the same parameter.
+- Add `#' @noRd` to internal functions. You might be interested in the [devtag experimental package](https://github.com/moodymudskipper/devtag) for getting local manual pages when using `#' @noRd`.
 
-- Starting from `roxygen2` version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd.html#r6) for details on how to document `R6` classes.
+- Starting from roxygen2 version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd-other.html#r6) for details on how to document `R6` classes.
 
 ### URLs in documentation {#ur-ls-in-documentation}
 
@@ -258,7 +256,7 @@ Others have used the option to escape some URLs (change `<https://ropensci.org/>
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). Neal Richardson wrote [a good tutorial to get started with `pkgdown`](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/), and unsurprisingly `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
+We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
 
@@ -274,7 +272,7 @@ Before submission and before transfer, you could use the [approach documented by
 
 When your package has many functions, use grouping in the reference, which you can do more or less automatically.
 
-If you use `roxygen2` above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) *and* allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
+If you use roxygen2 above version 6.1.1, you should use the `@family` tag in your functions documentation to indicate grouping. This will give you links between functions in the local documentation of the installed package ("See also" section) *and* allow you to use the `pkgdown` `has_concept` function in the config file of your website. Non-rOpenSci example courtesy of [`optiRum`](https://github.com/lockedata/optiRum): [family tag](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [`pkgdown` config file](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) and [resulting reference section](https://itsalocke.com/optirum/reference/).
 To customize the text of the cross-reference title created by roxygen2 (`Other {family}:`), refer to [roxygen2 docs regarding how to provide a `rd_family_title` list in `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
 
 Less automatically, see the example of [`drake` website](https://docs.ropensci.org/drake/) and [associated config file
@@ -312,7 +310,7 @@ The `DESCRIPTION` file of a package should list package authors and contributors
     comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Only include reviewers after asking for their consent. Read more in [this blog post "Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
+Only include reviewers after asking for their consent. Read more in this blog post ["Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
 
 ### Authorship of included code {#authorship-included-code}
 
@@ -345,14 +343,14 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - Packages with Shiny apps should use a unit-testing framework such as [`shinytest2`](https://rstudio.github.io/shinytest2/) or [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
-- For testing your functions creating plots, we suggest using [vdiffr](https://cran.rstudio.com/web/packages/vdiffr/index.html), an extension of the testthat package; or [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
+- For testing your functions creating plots, we suggest using [vdiffr](https://vdiffr.r-lib.org/), an extension of the testthat package that relies on [testthat snapshot tests](https://testthat.r-lib.org/articles/snapshotting.html).
 
 - If your package interacts with web resources (web APIs and other sources of data on the web) you might find the [HTTP testing in R book by Scott Chamberlain and Maëlle Salmon](https://books.ropensci.org/http-testing/) relevant. Packages helping with HTTP testing (corresponding HTTP clients):
   
   - [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
   - [httptest](https://enpiar.com/r/httptest/) ([httr](https://httr.r-lib.org/));
   - [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
-  - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://github.com/jeroen/curl)).
+  - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://jeroen.r-universe.dev/curl#)).
 
 - testthat has a function `skip_on_cran()` that you can use to not run tests on CRAN. We recommend using this on all functions that are API calls since they are quite likely to fail on CRAN. These tests should still run on continuous integration. Note that from testthat 3.1.2 `skip_if_offline()` automatically calls `skip_on_cran()`. More info on [CRAN preparedness for API wrappers](https://books.ropensci.org/http-testing/cran-preparedness.html).
 
@@ -360,7 +358,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - Once you've set up [continuous integration (CI)](#ci), use your package's code coverage report (cf [this section of our book](#coverage)) to identify untested lines, and to add further tests.
 
-- Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package, as some tests are often skipped (you may need to set `Sys.setenv(NOT_CRAN="true")` in order to ensure all tests are run). In addition, we recommend that prior to submitting your package, you use MangoTheCat's [**goodpractice**](https://github.com/MangoTheCat/goodpractice/) package to check your package for likely sources of errors, and run `spelling::spell_check_package()` to find spelling errors in documentation.
+- Even if you use [continuous integration](#ci), we recommend that you run tests locally prior to submitting your package (you might need to set `Sys.setenv(NOT_CRAN="true")`).
 
 ## Examples {#examples}
 
@@ -373,32 +371,6 @@ For more explanations around licensing, refer to the [R packages book](https://r
 - In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the [continuous integration systems](#ci). Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can configure your continuous integration builds to run them via R CMD check arguments `--run-dontrun` and/or `--run-donttest`.
 
 ## Package dependencies {#pkgdependencies}
-
-- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, `roxygen2`) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
-
-- If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.
-  
-  - Should the user use [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recommended)? Document this.
-  
-  - Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention that the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet.
-  
-  - If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.
-
-- Specifying minimum dependencies (e.g. `glue (>= 1.3.0)` instead of just `glue`) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
-  But if you don't, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
-  An example of bad practice would be for a developer to consider the versions of their current state of dependencies to be the minimal version. That would needlessly force everyone to upgrade (causing issues with other packages) when there is no good reason behind that version choice.
-
-- For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
-
-- If your package uses a *system* dependency, you should
-  
-  - Indicate it in DESCRIPTION;
-  
-  - Check that it is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) to allow automatic tools to install it, and [submit a contribution](https://github.com/r-hub/sysreqsdb#contributing) if not;
-  
-  - Check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)).
-    `configure` scripts can be challenging as they often require hacky solutions
-    to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
 
 - Consider the trade-offs involved in relying on a package as a dependency. On one hand,
   using dependencies reduces coding effort, and can build on useful functionality developed by
@@ -439,12 +411,39 @@ For more explanations around licensing, refer to the [R packages book](https://r
   
   - If dependencies have overlapping functionality, see if you can rely on only one.
   
-  - More dependency-management tips can be found [in this post by
+  - More dependency-management tips can be found in the chapter ["Dependencies: Mindset and Background" of the R packages book](https://r-pkgs.org/dependencies-mindset-background.html) and in a [post by
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
+
+- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+
+- If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.
+  
+  - Should the user use [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recommended)? Document this.
+  
+  - Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention that the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet.
+  
+  - If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.
+
+- Specifying minimum dependencies (e.g. `glue (>= 1.3.0)` instead of just `glue`) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
+  But if you don't, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
+  An example of bad practice would be for a developer to consider the versions of their current state of dependencies to be the minimal version. That would needlessly force everyone to upgrade (causing issues with other packages) when there is no good reason behind that version choice.
+
+- For most cases where you must expose functions from dependencies to the user, you should import and re-export those individual functions rather than listing them in the `Depends` fields.  For instance, if functions in your package produce `raster` objects, you might re-export only printing and plotting functions from the **raster** package.
+
+- If your package uses a *system* dependency, you should
+  
+  - Indicate it in DESCRIPTION;
+  
+  - Check that it is listed by [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) to allow automatic tools to install it, and [submit a contribution](https://github.com/r-hub/sysreqsdb#contributing) if not;
+  
+  - Check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)).
+    `configure` scripts can be challenging as they often require hacky solutions
+    to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
+
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [curl](https://github.com/jeroen/curl/), [crul](http://docs.ropensci.org/crul/), [httr](https://httr.r-lib.org) or [httr2](https://httr2.r-lib.org) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, [curl] is best, whereas [crul] or [httr](https://httr.r-lib.org) are better for higher level access. [crul](http://docs.ropensci.org/crul/) is maintained by rOpenSci. We recommend the rOpenSci maintained packages [webmockr](https://docs.ropensci.org/webmockr/) for mocking HTTP requests, and [vcr](https://docs.ropensci.org/vcr/) for caching HTTP requests in package tests.
+- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher level access.
 
 - For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
@@ -456,7 +455,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - Your package source files have to be under version control, more specifically tracked with [Git](https://happygitwithr.com/). You might find the [gert package](https://docs.ropensci.org/gert/) relevant, as well as some of [usethis Git/GitHub related functionality](https://usethis.r-lib.org/reference/index.html#section-git-and-github); you can however use git as you want.
 
-- Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
+- Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [`usethis::git_vaccinate()` function](https://usethis.r-lib.org/reference/git_vaccinate.html), and the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
 
 - A later section of this book contains some [git workflow tips](#gitflow).
 
@@ -473,13 +472,15 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 - Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
 - Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.
 
+For further gotchas, refer to the collaborative list maintained by ThinkR, ["Prepare for CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
+
 ### CRAN checks {#cranchecks}
 
 Once your package is on CRAN, it will be [regularly checked on different platforms](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). Failures of such checks, when not false positives, can lead to the CRAN team's reaching out. You can monitor the state of the CRAN checks via
 
 - the [`foghorn` package](https://fmichonneau.github.io/foghorn/).
 
-- the [CRAN checks API](https://github.com/ropenscilabs/cchecksapi) maintained by rOpenSci, that provides [badges](https://github.com/ropenscilabs/cchecksapi#badges).
+- the [CRAN checks badges](https://github.com/r-hub/cchecksbadges).
 
 ## Bioconductor gotchas {#bioconductor-gotchas}
 
@@ -489,7 +490,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 - If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
 
-- Before submitting a package use the [**goodpractice**](https://github.com/MangoTheCat/goodpractice) package (`goodpractice::gp()`) as a guide to improve your package, since most exceptions to it will need to be justified. E.g. the use of `foo` might be generally bad and therefore flagged by `goodpractice` but you had a good reason to use it in your package.
+- Read the [authors guide](#authors-guide).
 
 - Read, incorporate, and act on advice from the [*Collaboration Guide* chapter](#collaboration).
 
@@ -497,7 +498,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 #### Books {#books}
 
-- [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and [print -- link to former version by Hadley Wickham as the new version is not published yet as of June 2022](https://www.amazon.com/Packages-Organize-Test-Document-Share/dp/1491910593)).
+- [Hadley Wickham and Jenny Bryan's *R packages* book](https://r-pkgs.org/) is an excellent, readable resource on package development which is available for [free online](https://r-pkgs.org/) (and can be bought in [print](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
 
 - [Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) is the canonical, usually most up-to-date, reference for creating R packages.
 
@@ -505,9 +506,13 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 - [*Advanced R* by Hadley Wickham](https://adv-r.hadley.nz/)
 
+- [*Tidyverse style guide*](https://style.tidyverse.org/)
+
+- [*Tidyverse design guide*](https://design.tidyverse.org/) (WIP) and the accompanying [newsletter](http://tidydesign.substack.com/).
+
 #### Tutorials {#tutorials}
 
-- [Hilary Parker's famous blog post *Writing an R package from scratch*](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/) or [its updated version by Tomas Westlake](https://r-mageddon.netlify.com/post/writing-an-r-package-from-scratch/) that shows how to do the same more efficiently using `usethis`.
+- [Your first R package in 1 hour](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) by Shannon Pileggi.
 
 - [this workflow description by Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
