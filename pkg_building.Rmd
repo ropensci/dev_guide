@@ -55,7 +55,13 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Console messages {#console-messages}
 
-- Use `message()` and `warning()` to communicate with the user in your functions. Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for the user to suppress.
+- Use either the [cli package](https://cli.r-lib.org/), or base R's tools (`message()` and `warning()`) to communicate with the user in your functions. 
+
+- Highlights of the cli package include: automatic wrapping, respect of the [NO_COLOR convention](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), many [semantic elements](https://cli.r-lib.org/articles/semantic-cli.html), and extensive documentation. Read more in a [blog post](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+
+- Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for users to suppress.
+
+- Provide a way for users to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none, "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests. More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
 
 ### Interactive/Graphical Interfaces {#interactive-graphical-interfaces}
 
@@ -144,8 +150,8 @@ bibentry(
 - All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
   
   - The package name.
-  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)). If the README has many more badges, you might want to consider using a table for badges, see [this example](https://github.com/ropensci/ijtiff#ijtiff-), [that one](https://github.com/ropensci/drake) and [that one](https://github.com/ropensci/qualtRics/). Such a table should be more wide than high.
-  - Short description of goals of package, with descriptive links to all vignettes (rendered, i.e. readable, cf [the documentation website section](#website)) unless the package is small and there's only one vignette repeating the README.
+  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered and readable, see [the "documentation website" section](#website)).
   - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
   - Any additional setup required (authentication tokens, etc).
   - Brief demonstration usage.
@@ -215,11 +221,11 @@ The general vignette should present a series of examples progressing in complexi
 
 ### roxygen2 use {#roxygen-2-use}
 
-- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that automatically compiles `.Rd` files to your `man` folder in your package from simple tags written above each function.
+- We request all submissions to use [roxygen2](https://roxygen2.r-lib.org/) for documentation.  roxygen2 is an R package that compiles `.Rd` files to your `man` folder in your package from tags written above each function. roxygen2 has [support for Markdown syntax](https://roxygen2.r-lib.org/articles/rd-formatting.html). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
 
-- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/). One key advantage of using roxygen2 is that your `NAMESPACE` will always be automatically generated and up to date.
+- More information on using roxygen2 documentation is available in the [R packages book](https://r-pkgs.org/man.html) and in [roxygen2 website itself](https://roxygen2.r-lib.org/).
 
-- If you were writing Rd by hand, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
+- If you were writing Rd directly without roxygen2, the [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) package contains functions to convert Rd to roxygen documentation.
 
 - All functions should document the type of object returned under the `@return` heading.
 
