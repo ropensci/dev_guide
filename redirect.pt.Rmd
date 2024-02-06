@@ -1,0 +1,23 @@
+# Como definir um redirecionamento {#redirect}
+
+## Site que não seja de páginas do Github Pages (por exemplo, Netlify) {#non-git-hub-pages-site-e-g-netlify}
+
+Substitua o conteúdo do site atual por dois arquivos chamados `index.html` e `404.html`. Ambos os arquivos devem conter o seguinte conteúdo:
+
+```html
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/">  
+</head>
+</html>
+```
+
+## Páginas do GitHub {#git-hub-pages}
+
+Você pode configurar o redirecionamento no repositório gh-pages do seu usuário principal:
+
+- crie um novo repositório (se você ainda não tiver um): `https://github.com/<username>/<username>.github.io`.
+- Nesse repositório, crie um diretório `<pkgname>` contendo 2 arquivos: um `index.html` e `404.html` que redirecionam para o novo local (consulte a subseção anterior).
+- Teste o endereço  `https://<username>.github.io/<pkgname>/index.html` que vai redirecionar.
+
+

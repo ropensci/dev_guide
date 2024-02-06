@@ -2,7 +2,9 @@
 repo-actions: true
 ---
 
-# Modelo de comentário de aprovação do(a) revisor(a) {#approval2template}
+# Review request template {#reviewrequesttemplate}
+
+Editors may make use of the e-mail template below in recruiting reviewers.
 
 ::: {.content-hidden when-format="pdf"}
 
@@ -10,7 +12,7 @@ repo-actions: true
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/reviewer-approval.pt.md"
+#| child: "templates/request.md"
 ```
 ````
 
@@ -19,7 +21,7 @@ repo-actions: true
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/reviewer-approval.pt.md"
+#| child: "templates/request.md"
 
 ```
 
