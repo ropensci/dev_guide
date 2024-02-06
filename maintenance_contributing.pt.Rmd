@@ -22,7 +22,7 @@ Quais são alguns dos benefícios de contribuir?
 - Conectar-se com uma comunidade que compartilha do seu interesse em tornar a ciência mais aberta
 - Aprenda com pessoas de fora de seu domínio que usam o R com desafios semelhantes aos seus
 - Faça e responda a novas perguntas de pesquisa conhecendo novas ferramentas de software e aliados
-- Sentir-se confiante e apoiado em seus esforços para escrever código e desenvolver software
+- Sentir-se confiante e com apoio em seus esforços para escrever código e desenvolver software
 - Ganhar visibilidade para seu trabalho de código aberto
 - Melhorar o software que você usa ou constrói
 - Aprimore suas habilidades em R e ajude outras pessoas a aprimorarem as delas
