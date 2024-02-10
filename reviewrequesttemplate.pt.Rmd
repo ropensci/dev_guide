@@ -12,7 +12,7 @@ Os editores podem usar o modelo de e-mail abaixo para recrutar revisores.
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/request.md"
+#| child: "templates/request.pt.md"
 ```
 ````
 
@@ -21,7 +21,7 @@ Os editores podem usar o modelo de e-mail abaixo para recrutar revisores.
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/request.md"
+#| child: "templates/request.pt.md"
 
 ```
 
