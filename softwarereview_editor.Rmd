@@ -35,6 +35,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 - If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
 - For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue.
 - Submission will automatically generate package check output from ropensci-review-bot which should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package.). If you want to re-run checks after any package change post a comment `@ropensci-review-bot check package`.
+- The checking system is rebuilt at every Tuesday at 00:01 UTC, and can take a couple of hours. If automatic checks fail around that time, wait a few hours and try again.
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
 - Check that template has been properly filled out.
 - Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
