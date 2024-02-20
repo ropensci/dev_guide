@@ -79,6 +79,7 @@ if (Sys.getenv("AIRTABLE_API_KEY") != ""){
 
 ```{r}
 #| echo: false
+#| warning: false
 #| results: 'asis'
 #| eval: !expr has_airtable_access
 editors <- c(
@@ -104,7 +105,6 @@ We are also grateful to the following individuals who have served as guest edito
 
 ```{r}
 #| echo: false
-#| warning: false
 #| results: 'asis'
 #| eval: !expr has_airtable_access
 guest_editors <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
