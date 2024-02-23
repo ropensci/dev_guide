@@ -3,4 +3,5 @@
 [Sébastien Rochette](https://github.com/statnmap),
 [Edward Wallace](https://github.com/ewallace/),
 [Alexander Fischer](https://github.com/s3alfisc/),
-[Maxime Jaunatre](https://github.com/gowachin).
+[Maxime Jaunatre](https://github.com/gowachin),
+[Thomas Zwagerman](https://github.com/thomaszwagerman).
