@@ -34,13 +34,16 @@ Then use `babelquarto::render_book()` and the book will be generated in the `_bo
 ### How to maintain translations
 
 Any commit to main that edits a page with translations (say, `index.Rmd`) needs to also update the translations. 
-If you have a PR open, with commits editing a chapter in say English, and
+If you have a PR open, with commits to a chapter in one language you can either provide your own translations, 
+generate automated translations, or request translations from the maintenance team.
 
-- a DeepL API key you can use for the dev guide, you can use [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), once per translation. Or, if there's only one sentence to be changed and you can see identify it in 
+- For your own translations, follow the guidance in the [rOpenSci Localization and Translation Guidelines](https://translationguide.ropensci.org)
 
-- no DeepL API key, please tag `@ropensci/dev-guide`.
+- To generate automated translations, you can use the {babeldown} package, wheich requires an API key from [DeepL](https://www.deepl.com). [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) generates translations to edited sections of the `.Rmd` (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), and should be used once per translated langauge. 
 
-Then, the PR needs a reviewer for each language.
+- For tiny changes, (one sentence or so), tag the `@ropensci/dev-guide` team in your PR to request translations for your changes
+
+The PR will require a reviewer for each language.
 
 # Meta
 
