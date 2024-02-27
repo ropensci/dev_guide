@@ -8,14 +8,7 @@
 #| echo: false
 #| results: 'asis' 
 #| warning: false
-cat("\n```bibtex\n")
-u <- "https://zenodo.org/record/2553043" # universal URL redirects to latest
-s <- rvest::session(u)
-u <- paste0(s$url, "/export/bibtex") # redirected
-out <- rvest::read_html(u)
-bibentry <- rvest::html_text(out)
-cat(bibentry)
-cat("\n```\n")
+source(file.path("scripts", "zenodo.R"), local = knitr::knit_global())
 ```
 
 You can also read the [PDF version](/ropensci-dev-guide.pdf) of this book.
