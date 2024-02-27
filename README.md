@@ -42,6 +42,17 @@ We shall use PRs to `main` for discussing larger updates.
 If you're an associate editor and you want to render the book locally you need to install Quarto and the other dependencies stated in [DESCRIPTION](DESCRIPTION) in particular use `pak::pak("bergant/airtabler")`, and [get and store an Airtable API key following their instructions](https://github.com/bergant/airtabler#get-and-store-the-api-key) (if you're not an editor, you don't have access to our Airtable base but you can still build the book, although the Airtable info will be missing). 
 Then use `babelquarto::render_book()` and the book will be generated in the `_book` folder; you can open the book by for instance running `servr::httw("_book")`.
 
+### How to maintain translations
+
+Any commit to main that edits a page with translations (say, `index.Rmd`) needs to also update the translations. 
+If you have a PR open, with commits editing a chapter in say English, and
+
+- a DeepL API key you can use for the dev guide, you can use [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), once per translation. Or, if there's only one sentence to be changed and you can see identify it in 
+
+- no DeepL API key, please tag `@ropensci/dev-guide`.
+
+Then, the PR needs a reviewer for each language.
+
 # Meta
 
 All of the content of this repository is licensed 
