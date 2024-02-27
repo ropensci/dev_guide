@@ -41,7 +41,7 @@ generate automated translations, or request translations from the maintenance te
 
 - To generate automated translations, you can use the {babeldown} package, wheich requires an API key from [DeepL](https://www.deepl.com). [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) generates translations to edited sections of the `.Rmd` (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), and should be used once per translated langauge. 
 
-- For tiny changes, (one sentence or so), tag the `@ropensci/dev-guide` team in your PR to request translations for your changes
+- If you are unable to provide your own or automated translations, for support for complex translations, or just tiny changes, (one sentence or so), tag the `@ropensci/dev-guide` team in your PR to request support from the maintainer team.
 
 The PR will require a reviewer for each language.
 
