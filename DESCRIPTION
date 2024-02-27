@@ -9,7 +9,7 @@ Imports:
     babelquarto,
     gert,
     humaniformat,
-    rvest,
+    purrr,
     usethis,
     withr
 Remotes: 
