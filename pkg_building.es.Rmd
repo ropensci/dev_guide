@@ -63,7 +63,7 @@ artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar. 
 
-- Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usaresto.silencioso"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
+- Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
 
 ### Interfaces interactivas o gráficas {#interactive-graphical-interfaces}
 
