@@ -11,7 +11,7 @@ Este capítulo apresenta um guia sobre como assumir a manutenção de um pacote.
 
 ## Você quer desistir da manutenção do seu pacote? {#do-you-want-to-give-up-maintenance-of-your-package}
 
-Temos uma seção em nosso boletim informativo para chamadas de novos(as) colaboradores(as) que é publicado a cada duas semanas. A seção se chama *Chamada para colaboradores*. Nessa seção, destacamos os pacotes que estão à procura de novos(as) mantenedores(as). Se você deseja desistir da função de mantenedor(a) do seu pacote, entre em contato conosco e poderemos destacar o seu pacote em nosso boletim informativo. Tivemos muito sucesso até o momento, ao encontrarmos novos(as) mantenedores(as) para seis dos seis pacotes anunciados.
+Temos uma seção em nosso boletim informativo para chamadas de novos(as) colaboradores(as) que é publicado a cada duas semanas. A seção se chama *Chamada para colaboradores*. Nessa seção, destacamos os pacotes que estão à procura de novos(as) mantenedores(as). Se você deseja desistir da função de mantenedor(a) do seu pacote, entre em contato conosco e poderemos destacar o seu pacote em nosso boletim informativo.
 
 ## Você quer assumir a manutenção de um pacote? {#do-you-want-to-take-over-maintenance-of-a-package}
 
