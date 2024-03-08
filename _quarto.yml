@@ -103,6 +103,11 @@ babelquarto:
     text: "Español"
   - name: en
     text: "English"
+  - name: pt
+    text: "Português"
   mainlanguage: en
-  languages: ['es']
+  languages: ['es', 'pt']
+title-pt: title in pt
+description-pt: description in pt
+author-pt: author in pt
 lang: en
