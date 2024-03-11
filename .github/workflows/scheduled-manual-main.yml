@@ -14,8 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2        
-          with:
-            fetch-depth: 0
+        with:
+          fetch-depth: 0
+            
+      - name: Checkout latest release tag
+        run: |
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          git checkout $LATEST_TAG
 
       - uses: r-lib/actions/setup-r@v2
 
