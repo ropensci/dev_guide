@@ -6,18 +6,18 @@ aliases:
 # Política de curadoria de pacotes {#curationpolicy}
 
 ```{block, type="summaryblock"}
-Este capítulo resume uma proposta de política de curadoria para a manutenção contínua de pacotes
-manutenção contínua de pacotes desenvolvidos como parte das atividades do rOpenSci
-e/ou sob a organização do rOpenSci no GitHub. Essa política de curadoria visa
-apoiar esses objetivos:
+Este capítulo resume uma proposta de política de curadoria para a manutenção contínua de
+pacotes desenvolvidos como parte das atividades da rOpenSci
+e/ou sob a organização da rOpenSci no GitHub. Essa política de curadoria visa
+apoiar os seguintes objetivos:
 
 - Garantir que os pacotes fornecidos pela rOpenSci estejam atualizados e sejam de alta qualidade
 
 - Fornecer clareza quanto ao status de desenvolvimento e revisão
-    de qualquer software nos repositórios do rOpenSci
+    de qualquer software nos repositórios da rOpenSci
 
-- Gerenciar o esforço de manutenção para a equipe do rOpenSci, autores de pacotes e
-    colaboradores voluntários
+- Gerenciar o esforço de manutenção para a equipe da rOpenSci, para os(as) autores(as) de pacotes e
+    para os(as) colaboradores(as) voluntários(as)
 
 - Fornecer um mecanismo para que os pacotes sejam descontinuados de forma adequada, mantendo
     o selo de revisão por pares
@@ -25,61 +25,63 @@ apoiar esses objetivos:
 ```
 
 Elementos de infraestrutura descritos
-abaixo necessários para a implementação da política são, em alguns casos, parcialmente
-parcialmente construídos e, em outros casos, ainda não foram iniciados. Nosso objetivo é adotar essa política em
+abaixo necessários para a implementação da política foram, em alguns casos, parcialmente
+construídos e, em outros casos, ainda não foram iniciados. Nosso objetivo é adotar essa política em
 parte para priorizar o trabalho nesses componentes.
 
 ## O registro de pacotes {#the-package-registry}
 
 - O pacote rOpenSci
-  [registro](https://github.com/ropensci/roregistry)
-  é uma listagem central dos pacotes R que você já usou ou usou.
-  Ele contém pacotes essenciais que você pode usar para criar um pacote R.
-  essenciais, incluindo o status de desenvolvimento e revisão, e será o
-  e será a fonte de dados para exibição em sites, crachás, etc. Ele permitirá que você
-  que essa listagem seja mantida independentemente do pacote ou do
+  [registry](https://github.com/ropensci/roregistry)
+  é uma lista centralizada dos pacotes R que são mantidos atualmente (ou que foram
+  mantidos anteriormente) pela rOpenSci.
+  Ele contém metadados essenciais sobre os pacotes, incluindo o status de desenvolvimento e de revisão,
+  e será a fonte de dados para exibição em sites, *badges*, etc. Ele permite
+  que essa lista seja mantida de forma independente do pacote ou das
   plataformas de hospedagem de infraestrutura.
 
 ## Pacotes mantidos pela equipe {#staff-maintained-packages}
 
-Os pacotes mantidos pela equipe são desenvolvidos e mantidos pela equipe da rOpenSci
-como parte dos projetos rOpenSci. Esses pacotes também podem ser revisados por pares
-mas não são necessariamente revisados por pares. Muitos são de infraestrutura
-que estão fora do escopo da revisão por pares.
+Os pacotes mantidos pela equipe são pacotes desenvolvidos e mantidos pela equipe da rOpenSci
+como parte dos projetos internos da rOpenSci. Esses pacotes também podem ser revisados por pares
+mas não são necessariamente revisados por pares. Muitos desses pacotes
+estão fora do escopo da revisão por pares.
 
 - Os pacotes mantidos pela equipe serão listados no registro com a tag
-  "staff\_maintained" e listados na página da Web de pacotes da rOpenSci ou similar
-  locais com a tag "staff-maintained" (mantido pela equipe)
+  "staff\_maintained" e listados na página da Web de pacotes da rOpenSci, ou em locais similares
+  com a tag "staff-maintained" (mantido pela equipe)
 
-- Esses pacotes serão armazenados no GitHub "ropensci"
-  organização
+- Esses pacotes serão armazenados no dentro da organização no GitHub
+  chamada "ropensci"
+  
 
-- Os pacotes mantidos pela equipe e seus documentos serão criados pela rOpenSci
-  [sistema](https://status.ropensci.org/). Esse sistema não envia notificações
-  mas gera resultados como status de commit do GitHub (marca de seleção vermelha ou cruz vermelha).
+- Os pacotes mantidos pela equipe e seus documentos serão criados pelo [sistema](https://status.ropensci.org/)
+  da rOpenSci. Esse sistema não envia notificações,
+  mas gera resultados como status de commit do GitHub (o *red check mark* ou o *red cross*).
 
 - Quando os pacotes falham nas verificações, a equipe da rOpenSci se esforça para corrigir
-  alterações, priorizando os pacotes com base na base de usuários (downloads),
-  dependências reversas ou objetivos estratégicos.
+  as alterações, priorizando os pacotes com base no volume de usuários (isto é, o volume de *downloads*), de
+  dependências reversas ou de objetivos estratégicos.
 
 - Em uma base semestral ou anual, a rOpenSci analisará todos os pacotes
-  que estão falhando há mais de um mês para determinar se você deve transferi-los para o [ organização "ropensci-archive" do GitHub](https://github.com/ropensci-archive).
+  que estão falhando há mais de um mês para determinar se você deve
+  transferi-los para a [ organização "ropensci-archive" do GitHub](https://github.com/ropensci-archive).
 
 - Pacotes que falham consistentemente e sem um plano contínuo para retornar
-  para manutenção ativa passarão para o status de "arquivo". Quando
+  para uma manutenção ativa, vão passar para o status de "archive". Quando
   arquivados, os pacotes da equipe serão movidos para o diretório "ropensci-archive"
-  (a ser criado) e ganharão o tipo "archived" em
-  no registro. Eles não serão criados no sistema rOpenSci.
+  (a ser criado) e ganharão o tipo "archived"
+  no registro. Eles não serão construídos no sistema da rOpenSci.
 
-- Os pacotes arquivados não serão exibidos por padrão na seção de pacotes
-  página da Web. Uma guia especial das páginas de pacotes exibirá
-  esses pacotes com `"type": "archived"`
-  que foram revisados por pares ou mantidos pela equipe.
+- Os pacotes arquivados não serão exibidos por padrão na seção de pacotes da
+  página da Web. Esses pacotes serão exibidos em uma guia especial das páginas de pacotes
+  com `"type": "archived"`
+  que foram revisados por pares ou que foram mantidos pela equipe.
 
 - Os pacotes arquivados podem ser desarquivados quando o mantenedor antigo ou um novo mantenedor
   estiver disposto a resolver os problemas e quiser reviver o pacote.
-  pacote. Para isso, você deve [entre em contato com a rOpenSci](https://ropensci.org/contact/).
-  Eles são transferidos para a organização ropenscilabs.
+  Para isso, você deve [entrar em contato com a rOpenSci](https://ropensci.org/contact/).
+  Esses pacotes serão transferidos para a organização ropenscilabs.
 
 ## Pacotes revisados por pares {#peer-reviewed-packages}
 
