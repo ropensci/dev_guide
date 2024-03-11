@@ -2,7 +2,7 @@
 repo-actions: true
 ---
 
-# NEWS template {#newstemplate}
+# Modelo de notícias {#newstemplate}
 
 ````markdown
 ```{r}
