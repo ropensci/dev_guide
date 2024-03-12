@@ -2,14 +2,13 @@
 
 <a href="https://doi.org/10.5281/zenodo.2553043"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.2553043.svg?branch=master" alt="DOI"></a>
 
-<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.es"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo [una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Estados Unidos de América](https://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.es). Consulta [el DOI de Zenodo](https://doi.org/10.5281/zenodo.2553043) para saber como citarla.
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.es"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Esta obra está bajo [una Licencia Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Estados Unidos de América](https://creativecommons.org/licenses/by-nc-sa/3.0/us/deed.es). Consulta [el DOI de Zenodo](https://doi.org/10.5281/zenodo.2553043) de la version original y [el DOI de la traducción](https://zenodo.org/doi/10.5281/zenodo.10797248) para saber como citarlas.
 
+Ejemplo:
 
-```{r}
-#| echo: false
-#| results: 'asis' 
-#| warning: false
-source(file.path("scripts", "zenodo.R"), local = knitr::knit_global())
+```
+rOpenSci editorial team (2024). Paquetes rOpenSci: Desarrollo, mantenimiento y revisión por pares [rOpenSci Packages: Development, Maintenance, and Peer Review] (Traducción al español: Yanina Bellini Saibene, Elio Campitelli, Paola Corrales) Zenodo. https://zenodo.org/doi/10.5281/zenodo.10797248 (Trabajo original publicado en 2024)
+
 ```
 
 También puedes leer la [versión PDF de este libro](/ropensci-dev-guide.pdf).
