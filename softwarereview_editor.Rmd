@@ -6,8 +6,7 @@ aliases:
 # Guide for Editors {#editorguide}
 
 ```{block, type="summaryblock"}
-Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
-a system of a rotating Editor-in-Chief (EiC).
+Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting a system of a rotating Editor-in-Chief (EiC). Our editorial dashboard is at [ropensci-review-tools/dashboard](https://ropensci-review-tools.github.io/dashboard/).
 
 This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
 
