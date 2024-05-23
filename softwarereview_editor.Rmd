@@ -31,9 +31,9 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 
 ### Upon submission: {#upon-submission}
 
-- Submission will automatically generate package check output from ropensci-review-bot. The check results should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package.). Checks can be re-run after any package change with the comment `@ropensci-review-bot check package`.
+- Submission will automatically generate package check output from ropensci-review-bot. The check results should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package). Checks can be re-run after any package change with the comment `@ropensci-review-bot check package`.
 - For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue (if not already added).
-- Check that issue template has been properly filled out. Most common oversights and omissions should be caught and noted by the bot, but a manual check always helps. Direct authors to fill any mandatory template fields that may be missing.
+- Check that issue template has been properly filled out. Most common oversights and omissions should be caught and noted by the bot, but a manual check always helps. Editors can edit templates directly for minor fixes, or may direct authors to fill any mandatory template fields that may be missing.
 - The checking system is rebuilt at every Tuesday at 00:01 UTC, and can take a couple of hours. If automatic checks fail around that time, wait a few hours and try again.
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
 - Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
