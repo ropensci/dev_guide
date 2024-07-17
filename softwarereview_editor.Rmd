@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 Software Peer Review at rOpenSci is managed by a team of editors.
 The Editor-in-Chief (EiC) role is rotated (generally quarterly) amongst experienced members of our editorial board.
-Information on current and recent editors and their activities can be viewed on our editorial dashboard at [ropensci-review-tools/dashboard](https://ropensci-review-tools.github.io/dashboard/).
+Information on current and recent editors and their activities can be viewed on our editorial dashboard at [dashboard.ropensci.org](https://dashboard.ropensci.org).
 
 This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
 
@@ -125,10 +125,10 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 Rotating Editors-in-Chief (EiCs) generally serve for 3 months or a time agreed to by all members of the editorial board.
 The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help and advice).
-Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://ropensci-review-tools.github.io/dashboard/).
+Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://dashboard.ropensci.org).
 The EiC is responsible for the following tasks:
 
-- On assuming EiC rotation, reviewing the status of current open reviews as detailed on the [*Dashboard* page](https://ropensci-review-tools.github.io/dashboard/reviews.html), and issuing reminders to other editors or package authors as needed. See [the following sub-section for more details](#eic-dashboard)
+- On assuming EiC rotation, reviewing the status of current open reviews as detailed on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and issuing reminders to other editors or package authors as needed. See [the following sub-section for more details](#eic-dashboard)
 
 - Watching all new issues posted to the software-review repo, for which the EiC must either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack.
 
@@ -136,7 +136,7 @@ The EiC is responsible for the following tasks:
 
 - Calling `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
 
-- Finding an editor (potentially including yourself) to handle each submission. Currently available editors are indicated on the [*Editorial Dashboard*](https://ropensci-review-tools.github.io/dashboard/), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://ropensci-review-tools.github.io/dashboard/editors.html#past-ed-load).
+- Finding an editor (potentially including yourself) to handle each submission. Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
   
 - Assigning editors by issuing the command:
   ```
@@ -144,7 +144,7 @@ The EiC is responsible for the following tasks:
   ```
   This will also add tag `1/editor-checks` to the issue.
 
-- Regularly (for instance weekly) monitoring the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://ropensci-review-tools.github.io/dashboard/reviews.html), and reminding other editors to move packages along as needed.
+- Regularly (for instance weekly) monitoring the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and reminding other editors to move packages along as needed.
 
 - Responding to issues posted to [the software-review-meta repo
 
@@ -155,12 +155,12 @@ The EiC is responsible for the following tasks:
 
 ### The rOpenSci Editorial Dashboard {#eic-dashboard}
 
-The *rOpenSci Editorial Dashboard* is updated daily, primary by extracting information on all software review issues on GitHub, along with additional information from Slack and our Airtable database.
+The [*rOpenSci Editorial Dashboard*](https://dashboard.ropensci.org) is updated daily, primary by extracting information on all software review issues on GitHub, along with additional information from Slack and our Airtable database.
 The dashboard provides an up-to-date overview of our editorial team, their recent reponsibilities, and the current state of all software review issues.
-The EiC (or any editors who are interested) can gain an overview of the editorial team status, availability, and recent workloads on [the *editors* page](https://ropensci-review-tools.github.io/dashboard/editors.html).
+The EiC (or any editors who are interested) can gain an overview of the editorial team status, availability, and recent workloads on [the *editors* page](https://dashboard.ropensci.org/editors.html).
 This should be used to find and assign editors for new software review issues.
-An overview of all current software reviews is on [the **Software Review* page](https://ropensci-review-tools.github.io/dashboard/reviews.html).
-Entries on this page are colored by a measure of "urgency", summarised in the [table at the bottom of that page](https://ropensci-review-tools.github.io/dashboard/reviews.html#urgency-of-reviews).
+An overview of all current software reviews is on [the **Software Review* page](https://dashboard.ropensci.org/reviews.html).
+Entries on this page are colored by a measure of "urgency", summarised in the [table at the bottom of that page](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
 Specific tasks for reviews in the specific review stages include:
 
