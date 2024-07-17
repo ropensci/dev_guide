@@ -6,8 +6,8 @@ aliases:
 # Guide for Editors {#editorguide}
 
 ```{block, type="summaryblock"}
-Software Peer Review at rOpenSci is managed by a team of editors.  
-The Editor-in-Chief (EiC) role is rotated (generally quarterly) amongst experienced members of our editorial board. 
+Software Peer Review at rOpenSci is managed by a team of editors.
+The Editor-in-Chief (EiC) role is rotated (generally quarterly) amongst experienced members of our editorial board.
 Information on current and recent editors and their activities can be viewed on our editorial dashboard at [ropensci-review-tools/dashboard](https://ropensci-review-tools.github.io/dashboard/).
 
 This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
@@ -166,7 +166,7 @@ Specific tasks for reviews in the specific review stages include:
 
 - Looking over submissions in "0\/presubmission" and "1\/editorial-team-prep", to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
 
-- Looking over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly. 
+- Looking over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly.
 If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
 - Looking over submissions in "3\/reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
