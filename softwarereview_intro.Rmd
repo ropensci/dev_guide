@@ -49,38 +49,61 @@ Furthermore, authors and reviewers have the ability to contact privately the edi
 
 ## Editors and reviewers {#editors-and-reviewers}
 
-### Associate editors {#associateditors}
 
-rOpenSci's Software Peer Review process is run by:
+rOpenSci's Software Peer Review process is run by our team of dedicated editors and reviewers.
+Information on the current team, and the current status of software peer review, can be seen on our [interactive dashboard](https://ropensci-review-tools.github.io/dashboard/).
 
 ```{r}
-#| child: "associate-editors.md"
+#| echo: false
+#| results: 'asis'
+source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
+
 ```
 
-### Reviewers {#reviewers}
+
+### Editor-in-Chief
+
+```{r}
+#| echo: false
+#| results: 'asis'
+source(file.path("scripts", "airtable-get-eic.R"), local = knitr::knit_global())
+
+```
+
+
+### Editorial team
+
+
+Our current team of editors for software peer-review includes:
+
+```{r}
+#| echo: false
+#| results: 'asis'
+source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+
+```
+
+### Reviewers and former editors
 
 We are grateful to the following individuals who have offered up their time and expertise to review packages submitted to rOpenSci.
 
 ```{r}
 #| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
-```
-
-```{r}
-#| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
 source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+
 ```
 
-We are also grateful to the following individuals who have served as guest editors.
+We are also grateful to the following individuals who have previously served as editors.
 
-```{r}
-#| echo: false
-#| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+```{r editors_past, echo=FALSE, results='asis'}
+cat(gen_ed_out(editors_past), sep = "")
+```
 
+And the following who have served as guest editors.
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+cat(gen_ed_out(guest_editors), sep = "")
 ```
 
 
