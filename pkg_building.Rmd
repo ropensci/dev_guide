@@ -286,15 +286,10 @@ You can make the names of (some) authors clickable by adding their URL, and you 
 
 You can make your website content easier to browse by tweaking the navbar, refer to [`pkgdown` documentation](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). In particular, note that if you name the main vignette of your package "pkg-name.Rmd", it'll be accessible from the navbar as a `Get started` link instead of via `Articles > Vignette Title`.
 
-### Mathjax {#mathjax}
+### Math rendering {#mathjax}
 
-Once your package is transferred and it gets a website using our `pkgdown` template, if you want to use Mathjax you'll need to specify it in the `pkgdown` config file like so:
-
-```yaml
-template:
-  params:
-    mathjax: true
-```
+Please refer to [pkgdown documentation](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering). 
+Our template is compatible with this configuration.
 
 ### Package logo {#package-logo}
 
