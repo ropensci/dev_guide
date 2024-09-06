@@ -287,7 +287,7 @@ Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a bar
 
 ### Renderização matemática {#mathjax}
 
-Consulte a [documentação pkgdown] (https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering). 
+Consulte a [documentação pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering). 
 
 O nosso modelo é compatível com esta configuração.
 
