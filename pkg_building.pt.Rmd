@@ -285,15 +285,11 @@ Você pode tornar os nomes de (alguns) autores clicáveis adicionando o URL dele
 
 Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a barra de navegação, consulte [`pkgdown` documentação](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). Em particular, observe que se você nomear a vinheta principal do seu pacote como "pkg-name.Rmd", ela poderá ser acessada na barra de navegação como um `Get started` em vez de via `Articles > Vignette Title`.
 
-### Mathjax {#mathjax}
+### Renderização matemática {#mathjax}
 
-Depois que seu pacote for transferido e você tiver um site usando nosso `pkgdown` se quiser usar o Mathjax, você precisará especificá-lo no campo `pkgdown` assim:
+Consulte a [documentação pkgdown] (https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering). 
 
-```yaml
-template:
-  params:
-    mathjax: true
-```
+O nosso modelo é compatível com esta configuração.
 
 ### Logotipo do pacote {#package-logo}
 
