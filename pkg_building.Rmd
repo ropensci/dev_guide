@@ -438,7 +438,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher level access.
+- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), or [curl](https://jeroen.r-universe.dev/curl#) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). (And rOpenSci's [crul](http://docs.ropensci.org/crul/) package is no longer maintained.) If you like low level clients for HTTP, curl is best, whereas httr2 and httr are better for higher level access.
 
 - For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
