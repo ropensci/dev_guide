@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Redirect</title>
+<link rel="alternate" hreflang="en" href="/authors-guide.html" />
+<link rel="alternate" hreflang="es" href="/es/authors-guide.es.html" />
+<link rel="alternate" hreflang="pt" href="/pt/authors-guide.pt.html" />
+  <script type="text/javascript">
+    var redirects = {"":"softwarereview_author.html"};
+    var hash = window.location.hash.startsWith('#') ? window.location.hash.slice(1) : window.location.hash;
+    var redirect = redirects[hash] || redirects[""] || "/";
+    window.document.title = 'Redirect to  ' +  redirect;
+    window.location.replace(redirect);
+  </script>
+</head>
+<body>
+</body>
+</html>
