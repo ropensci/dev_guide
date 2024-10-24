@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Redirect</title>
+<link rel="alternate" hreflang="en" href="/grooming.html" />
+<link rel="alternate" hreflang="es" href="/es/grooming.es.html" />
+  <script type="text/javascript">
+    var redirects = {"":"maintenance_github_grooming.html"};
+    var hash = window.location.hash.startsWith('#') ? window.location.hash.slice(1) : window.location.hash;
+    var redirect = redirects[hash] || redirects[""] || "/";
+    window.document.title = 'Redirect to  ' +  redirect;
+    window.location.replace(redirect);
+  </script>
+</head>
+<body>
+</body>
+</html>
