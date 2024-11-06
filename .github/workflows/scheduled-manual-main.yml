@@ -5,6 +5,7 @@ on:
 
 name: Rerender-released-Book
 
+
 jobs:
   bookdown:
     env:
@@ -12,11 +13,10 @@ jobs:
     name: Render-Book
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@main
+      - uses: actions/checkout@v2        
         with:
           fetch-depth: 0
-
+            
       - name: Checkout latest release tag
         run: |
           LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
@@ -24,29 +24,29 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v2
 
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-tinytex@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
-            any::bookdown
+          extra-packages: local::.
 
-      - name: Render book html
-        run: Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::bs4_book", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
+      - name: Render book
+        run: Rscript -e 'babelquarto::render_book()'
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
-      - name: Render book PDF
-        run: Rscript -e 'bookdown::render_book("index.Rmd", new_session = FALSE, "bookdown::pdf_book", output_dir = "pdfbook", params = list(AIRTABLE_API_KEY = ${{ secrets.AIRTABLE_API_KEY }}))'
-        env: # Set the secret as an input
-          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+      - name: Move English files
+        run: Rscript -e 'file.copy(from = "_book/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
 
-      - name: Move files around
-        run: Rscript -e 'file.copy(from = "pdfbook/ropensci-dev-guide.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
+      - name: Move Spanish files
+        run: Rscript -e 'file.copy(from = "_book/es/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
 
       - name: git config
         run: |
