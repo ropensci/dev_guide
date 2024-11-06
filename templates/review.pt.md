@@ -12,7 +12,7 @@ output:
 *Marque as caixas conforme aplicável e elabore nos comentários abaixo. Sua avaliação não se limita a estes tópicos, conforme descrito no guia do(a) revisor(a)*
 
 - **Descreva resumidamente qualquer relacionamento de trabalho que você tem (teve) com as pessoas autoras do pacote.**
-- [ ] Como revisor(a), confirmo que não há [conflitos de interesse](https://devguide.ropensci.org/policies.html#coi) para que eu revise este trabalho (se você não tiver certeza se está em conflito, fale com seu editor(a) _antes_ de iniciar sua revisão)
+- [ ] Como revisor(a), confirmo que não há [conflitos de interesse](https://devguide.ropensci.org/policies.html#coi) para que eu revise este trabalho (se você não tiver certeza se está em conflito, fale com seu(sua) editor(a) _antes_ de iniciar sua revisão)
 
 #### Documentação
 
