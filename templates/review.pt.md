@@ -35,7 +35,7 @@ O pacote inclui todas as seguintes formas de documentação:
 
 Horas estimadas gastas na revisão:
 
-- [ ] Caso as pessoas autoras do pacote considerem apropriado, concordo em ser reconhecido como revisor do pacote (função "rev") no arquivo DESCRIPTION do pacote.
+- [ ] Caso as pessoas autoras do pacote considerem apropriado, concordo em ser reconhecido(a) como revisor(a) do pacote (função "rev") no arquivo DESCRIPTION do pacote.
 
 ---
 
