@@ -11,7 +11,7 @@ Nosso [guia para revisores] detalha o que procuramos em uma revisão de pacote e
 A comunidade da rOpenSci é o nosso melhor ativo. Nosso objetivo é que as revisões sejam abertas, não adversas e focadas na melhoria da qualidade do software. Seja respeitoso e gentil! Consulte nosso guia para revisores e o nosso [código de conduta](https://ropensci.org/code-of-conduct/) para mais informações.
 
 
-[SE MENTORIA FOR REQUISITADA: Você indicou em seu formulário que prefere ter uma orientação para sua primeira revisão. Você é livre para me usar como recurso durante esse processo, incluindo fazer perguntas por e-mail e Slack (você receberá um convite para o Slack da rOpenSci) e compartilhar os rascunhos de sua revisão para feedback antes de postá-los. Também estarei feliz de ter uma breve videochamada para acompanhar o seu processo. Por favor, me avise em sua resposta se você deseja agendar uma videochamada dessas.]
+[SE MENTORIA FOR REQUISITADA: Você indicou em seu formulário que prefere ter uma orientação para sua primeira revisão. Você é livre para me usar como recurso durante esse processo, incluindo fazer perguntas por e-mail e Slack (você receberá um convite para o Slack da rOpenSci) e compartilhar os rascunhos de sua revisão para feedback antes de postá-los. Também estarei feliz de fazer uma breve videochamada para lhe explicar o processo. Por favor, me avise em sua resposta se você deseja agendar uma videochamada dessas.]
 
 Você consegue revisar? Caso não consiga, você tem alguma sugestão de revisor(a)? Se eu não receber uma resposta sua dentro de uma semana, vou presumir que você não pode revisar neste momento.
 
