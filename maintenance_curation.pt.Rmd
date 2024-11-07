@@ -85,7 +85,7 @@ estão fora do escopo da revisão por pares.
 
 ## Pacotes revisados por pares {#peer-reviewed-packages}
 
-Os pacotes revisados por pares são aqueles contribuídos para a rOpenSci pelo
+Os pacotes revisados por pares são aqueles contribuídos para a rOpenSci
 pela comunidade e que passaram pela revisão por pares. Eles precisam estar
 [dentro do escopo](#aims-and-scope) no momento em que eles são enviados para serem revisados.
 
