@@ -65,7 +65,7 @@ estão fora do escopo da revisão por pares.
 
 - Em uma base semestral ou anual, a rOpenSci analisará todos os pacotes
   que estão falhando há mais de um mês para determinar se você deve
-  transferi-los para a [ organização "ropensci-archive" do GitHub](https://github.com/ropensci-archive).
+  transferi-los para a [organização "ropensci-archive" no GitHub](https://github.com/ropensci-archive).
 
 - Pacotes que falham consistentemente e sem um plano contínuo para retornar
   para uma manutenção ativa, vão passar para o status de "archive". Quando
