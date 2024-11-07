@@ -137,7 +137,7 @@ pela comunidade e que passaram pela revisão por pares. Eles precisam estar
 
 ## Pacotes legado que foram adquiridos {#legacy-acquired-packages}
 
-Os pacotes "legados" são pacotes que não foram criados ou mantidos pela rOpenSci
+Os pacotes "legado" são pacotes que não foram criados ou mantidos pela rOpenSci
 e que também não são revisados por pares, mas que estão sob o controle da rOpenSci no GitHub
 devido a razões históricas. (Antes de estabelecer a organização, e o seu
 processo de revisão por pares e o seu escopo, a rOpenSci absorveu pacotes de
