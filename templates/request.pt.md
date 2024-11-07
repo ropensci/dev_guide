@@ -6,7 +6,7 @@ O pacote, [PACOTE] de [AUTOR(ES)], faz [FUNÇÃO]. Você pode encontrá-lo no Gi
 
 Se você aceitar, observe que pedimos aos revisores que concluam as avaliações em três semanas. (Descobrimos que a revisão de um pacote leva um tempo semelhante ao de um trabalho acadêmico.)
 
-Nosso [guia para revisores] detalha o que procuramos em uma revisão de pacote e inclui links para exemplos de revisão. Nossos padrões estão detalhados em nosso [guia de pacotes] e fornecemos um [modelo] de revisão para você usar. Certifique-se de que não haja um [conflito de interesses](https://devguide.ropensci.org/policies.html#coi) que o impeça de revisar este pacote. Se você tiver dúvidas ou comentários, sinta-se à vontade para me perguntar ou postar no [fórum da rOpenSci].
+Nosso [guia para revisores] detalha o que procuramos em uma revisão de pacote e inclui links para exemplos de revisão. Nossos padrões estão detalhados em nosso [guia de pacotes] e fornecemos um [modelo] de revisão para você usar. Certifique-se de que não haja um [conflito de interesses](https://devguide.ropensci.org/policies.html#coi) que lhe impeça de revisar este pacote. Se você tiver dúvidas ou comentários, sinta-se à vontade para me perguntar ou postar no [fórum da rOpenSci].
 
 A comunidade da rOpenSci é o nosso melhor ativo. Nosso objetivo é que as revisões sejam abertas, não adversas e focadas na melhoria da qualidade do software. Seja respeitoso e gentil! Consulte nosso guia para revisores e o nosso [código de conduta](https://ropensci.org/code-of-conduct/) para mais informações.
 
