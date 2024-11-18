@@ -9,37 +9,36 @@ Obrigado por você ter aceitado revisar um pacote para a rOpenSci! Este capítul
 
 Você pode entrar em contato com o(a) editor(a) responsável pela submissão para esclarecer qualquer dúvida que tenha sobre o processo ou sobre a sua revisão.
 
-Esforce-se para concluir sua avaliação em até 3 semanas após a aceitação da solicitação de avaliação. Procuraremos lembrar os revisores das datas de vencimento futuras e passadas. Os editores podem designar
-Os editores podem designar revisores adicionais ou alternativos se uma revisão estiver excessivamente atrasada.
+Tente ao máximo concluir sua avaliação em até 3 semanas após o aceite da solicitação de avaliação. Nós vamos lembrar os revisores das datas de vencimento, tanto futuras quanto passadas. Os(as) editores(as) podem designar revisores(as) adicionais ou alternativos se uma revisão estiver muito atrasada.
 
-A comunidade do **rOpenSci é o nosso melhor patrimônio. 
+**A comunidade da rOpenSci é o nosso melhor patrimônio. 
 Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software. 
 Seja respeitoso e gentil! 
-Consulte nosso guia de revisores e o [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações.** Você pode encontrar mais informações em nosso guia de revisores.
+Consulte o nosso guia para revisores e também o [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações.**
 
-_Se você usar nossos padrões/listas de verificação etc. ao revisar um software em outro lugar, informe aos destinatários (por exemplo, editores de periódicos, estudantes, revisão interna de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público] (https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail] (https://ropensci.org/contact/). 
+_Se você usar nossos processos, padrões, listas de verificação, etc. ao revisar um software em algum outro lugar, por favor, notifique os envolvidos (por exemplo, editores(as) de periódicos, estudantes, revisão interna de código) que esses processos, padrões, etc. vieram da rOpenSci, e nos informe em [nosso fórum público] (https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail] (https://ropensci.org/contact/)._
 ```
 
-## Como voluntário como revisor {#volunteering-as-a-reviewer}
+## Se voluntariando como revisor(a) {#volunteering-as-a-reviewer}
 
-Obrigado pelo seu desejo de participar da revisão por pares do software rOpenSci como revisor!
+Obrigado pelo seu desejo de participar como revisor(a) da revisão por pares de software da rOpenSci!
 
-Por favor, preencha nosso [formulário de voluntariado](https://ropensci.org/software-reviewer).
+Por favor, preencha o nosso [formulário de voluntariado](https://ropensci.org/software-reviewer).
 
-Se você vir um envio atual que seja particularmente relevante para seus interesses, envie um e-mail para `info@ropensci.org` incluindo o nome do pacote, o URL do problema do envio e o nome do editor designado.
-No entanto, lembre-se de que os convites para revisores são mantidos a critério do editor, e é bem possível que o editor já tenha enviado um e-mail para as pessoas.
-Não se voluntarie para todas as edições e não se voluntarie por meio da interface do GitHub.
+Se você ver um envio atual que seja particularmente relevante para os seus interesses, envie um e-mail para `info@ropensci.org` incluindo o nome do pacote, a URL do *issue* que corresponde a este envio e o nome do(a) editor(a) responsável.
+No entanto, lembre-se de que é bem possível que o(a) editor(a) responsável já tenha enviado um e-mail para as pessoas revisoras.
+Favor não se voluntariar para resolver todos os *issues*, e também não se voluntariar através da interface do GitHub.
 
-Para outras maneiras de contribuir, consulte [Guia de contribuição do rOpenSci](https://contributing.ropensci.org/).
+Para outras maneiras de contribuir, consulte o [Guia de contribuição da rOpenSci](https://contributing.ropensci.org/).
 
-## Preparando sua revisão {#preparereview}
+## Preparando a sua revisão {#preparereview}
 
-As revisões devem ser baseadas na versão mais recente do GitHub no branch padrão, a menos que indicado de outra forma pelos autores do pacote.
-Todos os envios acionam um relatório detalhado sobre a estrutura e a funcionalidade do pacote, gerado por [nosso `pkgcheck` pacote](https://docs.ropensci.org/pkgcheck/). Se o pacote tiver sido alterado substancialmente desde as últimas verificações, você poderá solicitar uma nova verificação com o comando `@ropensci-review-bot check package`. Observe que, ao instalar o pacote para revisá-lo, você deve se certificar de que tem todas as dependências disponíveis (por exemplo, execute `pak::pak()`).
+As revisões devem ser baseadas na versão mais recente da branch `main` no GitHub, a menos que seja indicado de alguma outra forma pelos(as) autores(as) do pacote.
+Todos os envios criam um relatório detalhado sobre a estrutura e a funcionalidade do pacote enviado. Tal relatório é gerado pelo nosso pacote [`pkgcheck`](https://docs.ropensci.org/pkgcheck/). Se o pacote tiver sido alterado substancialmente desde as últimas verificações, você pode solicitar uma nova verificação com o comando `@ropensci-review-bot check package`. Observe que, ao instalar o pacote para revisá-lo, você deve se certificar de que todas as dependências estão disponíveis em sua máquina (por exemplo, você pode executar `pak::pak()` para isso).
 
 ### Diretrizes gerais {#general-guidelines}
 
-Para revisar um pacote, comece copiando nosso [modelo de revisão](#reviewtemplate) (ou nosso [modelo de revisão em espanhol](#reviewtemplatees)) e usá-lo como uma lista de verificação de alto nível.  Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais abordando o seguinte:
+Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemplate) (ou o nosso [modelo de revisão em espanhol](#reviewtemplatees)) e use ele como uma lista de verificações que precisam ser feitas.  Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais abordando o seguinte:
 
 - O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - O pacote está de acordo com os requisitos do [guia de embalagem da rOpenSci](#building)?
