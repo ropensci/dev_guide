@@ -55,11 +55,11 @@ Pide etiquetar las publicaciones con el nombre del paquete.
 
 Una vez que un *pull request* está más cerca de ser aceptado, puedes utilizar [un flujo de trabajo de *GitHub Actions PR* para aplicar el estilo al código con styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
 
-### Gestión de issues {#issue-management}*issues*
+### Gestión de issues {#issue-management}
 
 Utilizando las funciones de GitHub en torno a los *issues* puedes hacer que sean más encontrables y que tu hoja de ruta sea pública.
 
-#### Plantillas de issue {#issue-templates}*issue*
+#### Plantillas de issue {#issue-templates}
 
 Puedes utilizar una o varias [plantilla(s) de *issue*](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-templates=) para que los informes de errores o pedido de funcionalidad sean más fáciles de completar.
 Cuando hay varias plantillas de *issue*, éstas se muestran en un menú al hacer click en el botón de "nuevo *issue*"
@@ -68,14 +68,14 @@ Incluso puedes [configurar una de las opciones](https://docs.github.com/en/commu
 
 Consulta la [documentación de GitHub (en inglés)](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
 
-#### Etiquetado de issues {#issue-labelling}*issues*
+#### Etiquetado de issues {#issue-labelling}
 
 Puedes utilizar etiquetas como "se necesita ayuda" y "buen primer *issue*" para que seas más fáciles de encontrar, incluso por gente que llega por primera vez a tu repo.
 Consulta [este artículo de GitHub (en inglés)](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/).
 También puedes utilizar la etiqueta "principiante".
 Consulta [ejemplos de issues para principiantes en todos los repos de ropensci](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
 
-#### Resaltado de issues {#pinning-issues}*issues*
+#### Resaltado de issues {#pinning-issues}
 
 Puedes [resaltar hasta 3 issues por repositorio](https://docs.github.com/en/articles/pinning-an-issue-to-your-repository) que aparecerán en la parte superior de tu gestor de *issues* como bonitas tarjetas.
 Puede ayudar a anunciar cuáles son tus prioridades.

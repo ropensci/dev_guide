@@ -6,7 +6,7 @@ Este capítulo presenta nuestra guía para asumir el mantenimiento de un paquete
 
 ## ¿Quieres dejar de mantener tu paquete? {#do-you-want-to-give-up-maintenance-of-your-package}
 
-Nuestro newsletter quincenal tiene una sección de pedidos de colaboración denominada *"Call for Contributors"* (*Pedidos de contribuciones*, en inglés). En la misma se destacan paquetes que buscan nuevas personas para encargarse del mantenimiento. Si quieres dejar de mantener tu paquete, contáctanos para que lo incluyamos en esta sección. Hasta ahora hemos tenido mucho éxito, encontrando responsables para todos los paquetes que lo necesitaron.
+Nuestro newsletter quincenal tiene una sección de pedidos de colaboración denominada *"Call for Contributors"* (*Pedidos de contribuciones*, en inglés). En la misma se destacan paquetes que buscan nuevas personas para encargarse del mantenimiento. Si quieres dejar de mantener tu paquete, contáctanos para que lo incluyamos en esta sección.
 
 ## ¿Quieres encargarte del mantenimiento de un paquete? {#do-you-want-to-take-over-maintenance-of-a-package}
 
