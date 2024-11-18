@@ -41,7 +41,7 @@ Todos os envios criam um relatório detalhado sobre a estrutura e a funcionalida
 Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemplate) (ou o nosso [modelo de revisão em espanhol](#reviewtemplatees)) e use ele como uma lista de verificações que precisam ser feitas.  Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais abordando o seguinte:
 
 - O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
-- O pacote está de acordo com os requisitos do [guia de embalagem da rOpenSci](#building)?
+- O pacote está de acordo com os requisitos do [Guia de pacotes da rOpenSci](#building)?
 - Você acha que há melhorias que poderiam ser feitas no estilo do código?
 - Há duplicação de código no pacote que deve ser reduzida?
 - Há melhorias na interface do usuário que poderiam ser feitas?
