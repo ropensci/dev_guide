@@ -7,7 +7,7 @@ aliases: reviewerguide.html
 ```{block, type="summaryblock"}
 Obrigado por você ter aceitado revisar um pacote para a rOpenSci! Este capítulo consiste em nossas diretrizes para [preparar](#preparereview), [enviar](#submitreview) e [acompanhar](#followupreviewer) a sua revisão.
 
-Você pode entrar em contato com o editor responsável pela submissão para esclarecer qualquer dúvida que tenha sobre o processo ou sobre a sua revisão.
+Você pode entrar em contato com o(a) editor(a) responsável pela submissão para esclarecer qualquer dúvida que tenha sobre o processo ou sobre a sua revisão.
 
 Esforce-se para concluir sua avaliação em até 3 semanas após a aceitação da solicitação de avaliação. Procuraremos lembrar os revisores das datas de vencimento futuras e passadas. Os editores podem designar
 Os editores podem designar revisores adicionais ou alternativos se uma revisão estiver excessivamente atrasada.
