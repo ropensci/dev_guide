@@ -33,7 +33,7 @@ Para outras maneiras de contribuir, consulte o [Guia de contribuição da rOpenS
 
 ## Preparando a sua revisão {#preparereview}
 
-As revisões devem ser baseadas na versão mais recente da branch `main` no GitHub, a menos que seja indicado de alguma outra forma pelos(as) autores(as) do pacote.
+As revisões devem ser baseadas na versão mais recente da *branch* `main` no GitHub, a menos que seja indicado de alguma outra forma pelos(as) autores(as) do pacote.
 Todos os envios criam um relatório detalhado sobre a estrutura e a funcionalidade do pacote enviado. Tal relatório é gerado pelo nosso pacote [`pkgcheck`](https://docs.ropensci.org/pkgcheck/). Se o pacote tiver sido alterado substancialmente desde as últimas verificações, você pode solicitar uma nova verificação com o comando `@ropensci-review-bot check package`. Observe que, ao instalar o pacote para revisá-lo, você deve se certificar de que todas as dependências estão disponíveis em sua máquina (por exemplo, você pode executar `pak::pak()` para isso).
 
 ### Diretrizes gerais {#general-guidelines}
@@ -42,33 +42,33 @@ Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemp
 
 - O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - O pacote está de acordo com os requisitos do [Guia de pacotes da rOpenSci](#building)?
-- Você acha que há melhorias que poderiam ser feitas no estilo do código?
+- Há melhorias que poderiam ser feitas no estilo do código?
 - Há duplicação de código no pacote que deve ser reduzida?
 - Há melhorias na interface do usuário que poderiam ser feitas?
-- Você poderia fazer melhorias no desempenho?
-- A documentação (instruções de instalação/vinhetas/exemplos/demonstrações) é clara e suficiente? Você usa o princípio de *vários pontos de entrada* ou seja, leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com a ferramenta/dados que ele contém?
+- Existem melhorias de desempenho que podem ser feitas?
+- A documentação (instruções de instalação, *vignettes*, exemplos, demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas/dados que ele contém?
 - As funções e os argumentos foram nomeados para trabalharem juntos e formarem uma API de programação comum e lógica que seja fácil de ler e de autocompletar?
-- Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você poderá encontrar arestas e casos de uso nos quais o autor não pensou.
+- Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você pode acabar encontrando casos de uso extremos nos quais o autor não pensou.
 
-Seja respeitoso e gentil com os autores em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 semanas, dependendo do prazo definido pelo editor. Entre em contato com o editor diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
+Seja respeitoso e gentil com os autores em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 semanas, dependendo do prazo definido pelo(a) editor(a). Entre em contato com o(a) editor(a) diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
 
 Incentivamos você a usar ferramentas automatizadas para facilitar a revisão.  Isso inclui:
 
 - Verificar o relatório inicial do pacote gerado pelo nosso `@ropensci-review-bot`.
-- Verificar os registros do pacote em seus serviços de integração contínua (GitHub Actions, Codecov, etc.)
-- Execução `devtools::check()` e `devtools::test()` no pacote para localizar quaisquer erros que possam ter passado despercebidos no sistema do autor.
-- Verificar se a omissão de testes é justificada (por exemplo `skip_on_cran()` testes que fazem solicitações reais de API vs. ignorar todos os testes em um sistema operacional).
-- Se o pacote não for enviado por meio do branch padrão/principal, lembre-se de mudar para o branch de revisão enviado antes de iniciar sua revisão. Nesse caso, você também terá que pesquisar o pacote localmente, pois a pesquisa no GitHub é limitada ao branch padrão. Além disso, a documentação hospedada em um branch `pkgdown` não está necessariamente atualizada, e recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
+- Verificar os logs/registros nos serviços de integração contínua utilizados pelo pacote (GitHub Actions, Codecov, etc.)
+- Executar `devtools::check()` e `devtools::test()` no pacote para localizar quaisquer erros que possam ter passado despercebidos pelo(a) autor(a).
+- Verificar se a omissão de testes é justificada (por exemplo, o uso de `skip_on_cran()` em testes que fazem solicitações reais de API vs. ignorar todos os testes em um sistema operacional).
+- Se o pacote não for enviado por meio da *branch* padrão/principal, lembre-se de mudar para a *branch* de revisão que foi submetida antes de iniciar sua revisão. Nesse caso, você também terá que pesquisar o pacote localmente, dado que a pesquisa no GitHub é limitada à *branch* padrão. Além disso, a documentação hospedada na *branch* `pkgdown` não está necessariamente atualizada, e por isso, recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
 
-Os revisores também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um problema de revisão: `@ropensci-review-bot check package`.
+Os(as) revisores(as) também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um *issue* de revisão: `@ropensci-review-bot check package`.
 
-### Interações fora da linha {#off-thread-interactions}
+### Interações feitas fora dos canais oficiais {#off-thread-interactions}
 
-Se você interagiu com os autores do pacote e falou sobre a revisão fora de um tópico de revisão (em chats, mensagens diretas, pessoalmente, problemas no repositório do projeto), certifique-se de que sua revisão capture e/ou vincule elementos dessas conversas que sejam relevantes para o processo.
+Se você interagiu com os(as) autores(as) do pacote e falou sobre a revisão fora de um tópico de revisão (em chats, mensagens diretas, pessoalmente, problemas no repositório do projeto), certifique-se de que sua revisão capture e/ou vincule elementos dessas conversas que sejam relevantes para o processo.
 
-### Experiência de revisores anteriores {#experience-from-past-reviewers}
+### Experiências de revisores(as) anteriores {#experience-from-past-reviewers}
 
-Os avaliadores iniciantes podem achar útil ler (sobre) algumas avaliações anteriores. Em geral, você pode encontrar tópicos de envio de pacotes integrados [aqui](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui estão alguns exemplos escolhidos de avaliações (observe que suas avaliações não precisam ser tão longas quanto esses exemplos):
+Os(as) avaliadores(as) iniciantes podem achar útil ler (sobre) algumas avaliações anteriores. Em geral, você pode encontrar os tópicos de envio de pacotes que já foram integrados [aqui](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui estão alguns exemplos de avaliações (observe que suas avaliações não precisam ser tão longas quanto esses exemplos):
 
 - `rtika` [revisão 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) e [revisão2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
@@ -78,13 +78,13 @@ Os avaliadores iniciantes podem achar útil ler (sobre) algumas avaliações ant
 
 - `rusda` [revisão](https://github.com/ropensci/software-review/issues/18#issuecomment-120445737) (de antes de termos um modelo de avaliação)
 
-Você pode ler publicações de blog escritas por avaliadores sobre suas experiências [por meio deste link](https://ropensci.org/tags/reviewer/). Em particular, em [esta postagem do blog de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) leia sobre o papel de "usuário ingênuo" que um revisor pode assumir para fornecer feedback útil mesmo sem ser especialista no tópico ou na implementação do pacote, perguntando a si mesmo *"O que eu achava que essa coisa faria? Ela faz isso? Quais são as coisas que me assustam?"*. Em [outra postagem do blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica como ela alternou entre usar o pacote e verificar seu código.
+Você pode ler algumas publicações escritas por avaliadores(as) sobre as suas experiências [através deste link](https://ropensci.org/tags/reviewer/). Em especial, [nesta postagem de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) você pode ler sobre o papel de "usuário ingênuo" que um(a) revisor(a) pode assumir para fornecer um feedback útil, mesmo sem ser especialista no tópico ou na implementação do pacote, ao se perguntar *"O que eu achava que essa coisa faria? Essa coisa de fato faz isso? Quais são os detalhes que me assustam?"*. Em [outra postagem](https://ropensci.org/blog/2017/09/08/first-review-experiences/), Verena Haunschmid explica a sua experiência onde ela alternou entre usar o pacote, e verificar o seu código.
 
-Como ex-revisora e autora do pacote [Adam Sparks](https://adamhsparks.netlify.app/) [escreveu o seguinte](https://twitter.com/adamhsparks/status/898132036451303425) "\[escreva\] uma boa crítica da estrutura do pacote e das práticas recomendadas de codificação. Se você souber como fazer algo melhor, diga-me. É fácil perder oportunidades de documentação como desenvolvedor; como revisor, você tem uma visão diferente. Você é um usuário que pode dar feedback. O que não está claro no pacote? Como você pode deixar isso mais claro? Se você estiver usando-o pela primeira vez, é fácil? Você conhece outro pacote R que talvez eu devesse usar? Ou há algum que eu esteja usando e que talvez não devesse usar? Se você puder contribuir com o pacote, ofereça."
+O ex-revisor e autor de pacotes [Adam Sparks](https://adamhsparks.netlify.app/) [escreveu o seguinte](https://twitter.com/adamhsparks/status/898132036451303425) "\[escreva\] uma boa crítica da estrutura do pacote e das práticas recomendadas de codificação. Se você souber como fazer algo melhor, diga-me. É fácil perder oportunidades de documentação como desenvolvedor(a); porém, como revisor(a), você tem uma visão diferente. Você é um usuário que pode dar um feedback. O que não está claro no pacote? Como você poderia deixar isso mais claro? Se você estiver usando-o pela primeira vez, é fácil? Você conhece algum outro pacote R que talvez eu devesse usar? Ou há algum que eu esteja usando e que talvez não devesse usar? Se você puder contribuir com o pacote, então contribua."
 
 ### Pacote de ajuda para revisores {#helper-package-for-reviewers}
 
-Se estiver trabalhando no RStudio, você pode otimizar o fluxo de trabalho de revisão usando o pacote [`pkgreviewr` pacote](https://github.com/ropensci-org/pkgreviewr) criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o `refnet` pacote, você escreveria
+Se estiver trabalhando no RStudio, você pode otimizar o fluxo de trabalho de revisão usando o pacote [`pkgreviewr`](https://github.com/ropensci-org/pkgreviewr) criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o pacote `refnet`. Você escreveria o seguinte:
 
 ```
 remotes::install_github("ropensci-org/pkgreviewr")
@@ -93,26 +93,26 @@ pkgreview_create(pkg_repo = "embruna/refnet",
                  review_parent = "~/Documents/workflows/rOpenSci/reviews/")
 ```
 
-e
+Como resultado:
 
 - o repositório do GitHub do `refnet` será clonado.
-- um projeto de revisão será criado, contendo um bloco de notas para você preencher e o modelo de revisão.
-- Observe que, se o pacote não for enviado por meio da ramificação padrão/principal, você precisará mudar para a ramificação enviada antes de iniciar a revisão.
+- um projeto de revisão será criado, contendo um bloco de notas para você preencher, já usando o modelo de revisão recomendado.
+- Observe que, se o pacote não for enviado por meio da *branch* padrão/principal, você precisará mudar para a *branch* enviada antes de iniciar a revisão.
 
 ### Comentários sobre o processo {#feedback-on-the-process}
 
-Incentivamos você a fazer perguntas e fornecer feedback sobre o processo de revisão em nosso [fórum](https://discuss.ropensci.org).
+Incentivamos você a fazer perguntas e fornecer feedbacks sobre o processo de revisão em nosso [fórum](https://discuss.ropensci.org).
 
 ## Envio da revisão {#submitreview}
 
-- Quando sua revisão estiver concluída, cole-a como um comentário no pacote software-review issue.
-- Outros comentários são bem-vindos na mesma edição. Esperamos que as revisões de pacotes funcionem como uma conversa contínua com os autores, em vez de uma única rodada de revisões típica de manuscritos acadêmicos.
-- Você também pode enviar problemas ou pull requests diretamente para o repositório de pacotes, se preferir, mas, se o fizer, comente sobre eles e coloque um link para eles no tópico de comentários do repositório de revisão de software para que tenhamos um registro centralizado e o texto da sua revisão.
+- Quando sua revisão estiver concluída, cole-a como um comentário na *issue* onde a revisão do pacote está sendo feita/tratada.
+- Outros comentários são bem-vindos na mesma edição. Esperamos que as revisões de pacotes funcionem como uma conversa contínua com os(as) autores(as), em vez de uma única rodada de revisões típica de manuscritos acadêmicos.
+- Você também pode enviar *issues* ou Pull Requests diretamente para o repositório dos pacotes, se preferir, mas, se o fizer, comente sobre eles e coloque um link para eles dentro do tópico onde a revisão do pacote está sendo tratada, para que tenhamos um registro centralizado da sua revisão.
 - Inclua uma estimativa de quantas horas você gastou na revisão.
 
 ## Acompanhamento da avaliação {#followupreviewer}
 
-Os autores devem responder dentro de duas semanas com as alterações feitas no pacote em resposta à sua avaliação.  Nesse estágio, pedimos que você responda se as alterações abordam suficientemente os problemas levantados na sua revisão. Incentivamos a discussão contínua entre autores de pacotes e revisores, e você também pode pedir aos editores que esclareçam os problemas no tópico de revisão.
+Os(as) autores(as) devem responder dentro de duas semanas com as alterações feitas no pacote em resposta à sua avaliação.  Nesse estágio, pedimos que você responda se as alterações abordam suficientemente os problemas levantados na sua revisão. Incentivamos a discussão contínua entre autores(as) de pacotes e revisores(as), e você também pode pedir aos editores que esclareçam os problemas no tópico de revisão.
 
 Você usará a seção [modelo de aprovação](#approval2template).
 
