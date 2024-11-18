@@ -12,9 +12,9 @@ _Se você usar nossos padrões/checklists/etc ao revisar um software em outro lu
 
 A equipe [da rOpenSci](https://ropensci.org/packages/) é parcialmente constituída por membros(as) da equipe e parcialmente constituída por membros(as) da comunidade, o que significa que o conjunto resulta de uma grande diversidade de habilidades e experiências de pessoas desenvolvedoras. Como garantir a qualidade de todo o conjunto? É aí que entra em cena a revisão por pares de software: os pacotes contribuídos pela comunidade passam por um processo de revisão transparente, construtivo, não contraditório e aberto. Para esse processo, você depende principalmente do trabalho voluntário, [editores associados](#associateditors) gerenciam o fluxo de entrada e garantem o andamento dos envios; os autores criam, enviam e aprimoram seus pacotes; [revisores](#reviewers) dois por envio, examinam o código do software e a experiência de usuário. [Esta publicação no blog](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/) escrito por editores da rOpenSci é uma boa introdução à revisão por pares de software da rOpenSci. Você pode encontrar outras postagens de blog sobre a própria revisão e os pacotes revisados [através da tag "software-peer-review" no blog da rOpenSci](https://ropensci.org/tags/software-peer-review/).
 
-Você pode reconhecer os pacotes da rOpenSci que foram revisados por pares por meio de um emblema verde "peer-reviewed" em seu README, com links para suas revisões (cf [este exemplo](https://github.com/ropensci/restez#locally-query-genbank-)); e por meio de um ícone de comentário azul próximo à sua descrição em [página de pacotes da rOpenSci](https://ropensci.org/packages/) com links para as revisões.
+Você pode reconhecer os pacotes da rOpenSci que foram revisados por pares por meio de um emblema verde "peer-reviewed" em seu README, com links para suas revisões ([por exemplo](https://github.com/ropensci/restez#locally-query-genbank-)); e por meio de um ícone de comentário azul próximo à sua descrição em [página de pacotes da rOpenSci](https://ropensci.org/packages/) com links para as revisões.
 
-Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/) cada processo de revisão de pacote é um problema no diretório [ropensci/software-review no repositório do GitHub](https://github.com/ropensci/software-review/). Por exemplo, clique em [aqui](https://github.com/ropensci/software-review/issues/24) para ler o tópico de avaliação do `ropenaq` pacote: o processo é uma conversa contínua até a aceitação do pacote, com duas revisões externas como marcos importantes. Além disso, usamos os recursos do GitHub, como o uso de modelos de problemas (como modelos de envio) e a rotulagem que usamos para acompanhar o progresso dos envios (desde as verificações do editor até a aprovação).
+Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada processo de revisão de pacote é uma *issue* no [repositório `ropensci/software-review` no GitHub](https://github.com/ropensci/software-review/). Por exemplo, clique em [aqui](https://github.com/ropensci/software-review/issues/24) para ler o tópico de avaliação do pacote `ropenaq`: o processo é uma conversa contínua até a aceitação do pacote, com duas revisões externas como marcos importantes. Além disso, usamos os recursos do GitHub, como o uso de *issue templates* (como modelos de envio) e uso de *labels* (etiquetas) que usamos para acompanhar o progresso dos envios (desde as verificações do(a) editor(a) até a aprovação).
 
 ## Por que enviar seu pacote para a rOpenSci? {#whysubmit}
 
@@ -47,9 +47,9 @@ Além disso, os autores e revisores podem entrar em contato com os editores em p
 - O repositório do seu pacote será transferido para a organização rOpenSci.
 - Se os revisores [concordarem em ser listados na DESCRIÇÃO](#authorship) seus metadados mencionarão a revisão.
 
-## Editores e revisores {#editors-and-reviewers}
+## Editores(as) e revisores(as) {#editors-and-reviewers}
 
-### Editores associados {#associateditors}
+### Editores(as) associados(as) {#associateditors}
 
 O processo de revisão por pares de software da rOpenSci é conduzido por:
 
@@ -57,7 +57,7 @@ O processo de revisão por pares de software da rOpenSci é conduzido por:
 #| child: "associate-editors.md"
 ```
 
-### Revisores {#reviewers}
+### Revisores(as) {#reviewers}
 
 Somos gratos às seguintes pessoas que ofereceram seu tempo e conhecimento para revisar os pacotes enviados à rOpenSci.
 
