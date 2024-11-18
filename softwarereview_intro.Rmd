@@ -20,7 +20,7 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 
 - First, and foremost, we hope you submit your package for review **because you value the feedback**.  We aim to provide useful feedback to package authors and for our review process to be open, non-adversarial, and focused on improving software quality.
 - Once aboard, your package will continue to receive **support from rOpenSci members**.  You'll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.
-- rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and social media (like [Mastodon](https://fosstodon.org/@ropensci) and [Twitter](https://twitter.com/ropensci)). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
+- rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and social media (like [Mastodon](https://fosstodon.org/@ropensci) and [LinkedIn](https://www.linkedin.com/company/ropensci/)). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 - rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
 - rOpenSci packages that are in scope for the [Journal of Open-Source Software](https://joss.theoj.org/) and add the necessary accompanying short paper, would, at the discretion of JOSS editors, benefit from a fast-tracked review process.
 - If you write one, rOpenSci will **promote gitbooks related to your package**: the source of such books can be transferred to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books) for books to be listed [at books.ropensci.org](https://books.ropensci.org/).
@@ -63,41 +63,14 @@ We are grateful to the following individuals who have offered up their time and 
 
 ```{r}
 #| echo: false
-has_airtable_access <- FALSE
-if (Sys.getenv("AIRTABLE_API_KEY") != ""){
-  has_airtable_access <- TRUE
-} else {
-  # if key is in params then set as envvar:
-  if ("params" %in% ls()) {
-    if ("AIRTABLE_API_KEY" %in% names(params)){
-      Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
-      has_airtable_access <- TRUE
-    }
-  }
-}
+source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
 ```
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access
-editors <- c(
-  "Noam Ross", "Karthik Ram", "Maëlle Salmon",
-  "Anna Krystalli", "Mauro Lepore", 
-  "Laura DeCicco", "Julia Gustavsen",
-  "Emily Riederer", "Adam Sparks", "Jeff Hollister"
-  )
-reviewers <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
-                                table = "reviewers-prod")
-reviewers <- reviewers$`reviewers-prod`$select_all()
-reviewers <- reviewers[purrr::map_lgl(reviewers$reviews, 
-                               ~!is.null(.)) & 
-                         !(reviewers$name %in% c(editors, "???")), ]
-# get last names
-last_names <- humaniformat::last_name(trimws(reviewers$name))
-reviewers <- reviewers[order(last_names), ]
-reviewers$name[is.na(reviewers$name)] <- reviewers$github[is.na(reviewers$name)]
-cat(paste0("[", reviewers$name, "](https://github.com/", reviewers$github, ")", collapse = " \U00B7 "))
+#| eval: !expr has_airtable_access()
+source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
 ```
 
 We are also grateful to the following individuals who have served as guest editors.
@@ -105,15 +78,9 @@ We are also grateful to the following individuals who have served as guest edito
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access
-guest_editors <- airtabler::airtable(base = "app8dssb6a7PG6Vwj", 
-                                table = "guest-editors")
-guest_editors <- guest_editors$`guest-editors`$select_all()
-guest_editors <- guest_editors[!(guest_editors$name %in% c(editors, "???")), ]
-# get last names
-last_names <- humaniformat::last_name(trimws(guest_editors$name))
-guest_editors <- guest_editors[order(last_names), ]
-cat(paste0("[", guest_editors$name, "](https://github.com/", guest_editors$github, ")", collapse = " \U00B7 "))
+#| eval: !expr has_airtable_access()
+source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+
 ```
 
 

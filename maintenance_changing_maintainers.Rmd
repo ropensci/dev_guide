@@ -11,7 +11,7 @@ This chapter presents our guidance for taking over maintenance of a package.
 
 ## Do you want to give up maintenance of your package? {#do-you-want-to-give-up-maintenance-of-your-package}
 
-We have a call for contributors section in our newsletter that comes out every two weeks. The section is called *Call For Contributors*. In that section we highlight packages looking for new maintainers. If you are looking to leave the role of maintainer of your package, get in touch with us and we can highlight your package in our newsletter. We've been very successful thus far, finding new maintainers for six out of six packages.
+We have a call for contributors section in our newsletter that comes out every two weeks. The section is called *Call For Contributors*. In that section we highlight packages looking for new maintainers. If you are looking to leave the role of maintainer of your package, get in touch with us and we can highlight your package in our newsletter.
 
 ## Do you want to take over maintenance of a package? {#do-you-want-to-take-over-maintenance-of-a-package}
 
