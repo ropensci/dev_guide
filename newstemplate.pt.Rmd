@@ -2,11 +2,11 @@
 repo-actions: true
 ---
 
-# NEWS template {#newstemplate}
+# Modelo de notícias {#newstemplate}
 
 ````markdown
 ```{r}
-#| child: "templates/news.md"
+#| child: "templates/news.pt.md"
 ```
 ````
 
