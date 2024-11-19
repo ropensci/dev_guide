@@ -182,7 +182,7 @@ em desconferências.
   revisão. Os pacotes de incubadora serão migrados para o "ropensci-archive"
   por padrão, seguindo as [orientações de transferência](#archivalguidance).
 
-- Os pacotes de incubadoras arquivados ganharão o tipo "archived".
+- Os pacotes de incubadora arquivados ganharão o tipo "archived".
 
 ### Pacotes de incubadora que não sejam pacotes de R {#incubator-non-r-packages}
 
