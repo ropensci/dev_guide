@@ -63,7 +63,7 @@ artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar. 
 
-- Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usaresto.silencioso"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
+- Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
 
 ### Interfaces interactivas o gráficas {#interactive-graphical-interfaces}
 
@@ -327,15 +327,10 @@ Ver la [documentación de `pkgdown`](https://pkgdown.r-lib.org/reference/build_h
 Puedes hacer que el contenido de tu sitio web sea más fácil de navegar modificando la barra de navegación, consulta [`pkgdown` documentación](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar).
 En particular, ten en cuenta que si el nombre de la viñeta principal de tu paquete es "pkg-name.Rmd", ésta será accesible desde la barra de navegación en la sección `Para empezar` en vez de en `Artículos > Título de la Viñeta`.
 
-### Mathjax {#mathjax}
+### Renderización de matemáticas {#mathjax}
 
-Una vez que tu paquete sea transferido y obtenga un sitio web utilizando nuestra plantilla de `pkgdown`, si quieres utilizar Mathjax tendrás que especificarlo en el archivo de configuración de `pkgdown` de la siguiente manera
-
-```yaml
-template:
-  params:
-    mathjax: true
-```
+Lee la [documentación de pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
+Nuestra plantilla es compatible con esta configuración.
 
 ### Logo del paquete {#package-logo}
 
