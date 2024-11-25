@@ -2,7 +2,7 @@
 aliases: grooming.html
 ---
 
-# GitHub Grooming {#grooming}
+# Preparação do GitHub {#grooming}
 
 ```{block, type="summaryblock"}
 Atualmente, os pacotes do rOpenSci são, em sua grande maioria, desenvolvidos no GitHub. Aqui estão algumas dicas para aproveitar a plataforma em uma seção sobre [tornar seu repositório mais detectável] (#repodiscoverability) e uma seção sobre [comercializar sua própria conta do GitHub após passar pela revisão por pares] (#marketown).
