@@ -17,9 +17,9 @@ GitHub [tópicos do repositório](https://blog.github.com/2017-01-31-introducing
 
 Recomendamos:
 
-- Adicionar "r", "r-package" e "rstats" como tópicos ao seu repositório de pacotes.
+- Adicionar "r", "r-package" e "rstats" como tópicos ao seu repositório de pacote.
 
-- Adicionar quaisquer outros tópicos relevantes ao repositório de pacotes que você possui.
+- Adicionar quaisquer outros tópicos relevantes ao repositório de pacote que você possui.
 
 Poderemos fazer sugestões a você depois que seu pacote for integrado.
 
