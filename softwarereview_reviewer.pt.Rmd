@@ -17,17 +17,15 @@ Por favor tente concluir sua avaliação em até 3 semanas após aceitar uma sol
 _Se você usar nossos guias/listas de verificação, etc. ao revisar um software em outra plataforma, informe aos interessados (e.g. editores de periódicos, estudantes, revisão interna de código) que aqueles vieram da rOpenSci e nos informe em nosso [fórum público] (https://discuss.ropensci.org/c/usecases) ou em [particular por e-mail] (https://ropensci.org/contact/)._ 
 ```
 
-## Como voluntário como revisor {#volunteering-as-a-reviewer}
+## Voluntariando como revisor {#volunteering-as-a-reviewer}
 
-Obrigado pelo seu desejo de participar da revisão por pares do software rOpenSci como revisor!
+Obrigado pelo seu desejo de participar como revisor da revisão por pares do software rOpenSci!
 
-Por favor, preencha nosso [formulário de voluntariado](https://ropensci.org/software-reviewer).
+Por favor preencha nosso [formulário de voluntariado](https://ropensci.org/software-reviewer).
 
-Se você vir um envio atual que seja particularmente relevante para seus interesses, envie um e-mail para `info@ropensci.org` incluindo o nome do pacote, o URL do problema do envio e o nome do editor designado.
-No entanto, lembre-se de que os convites para revisores são mantidos a critério do editor, e é bem possível que o editor já tenha enviado um e-mail para as pessoas.
-Não se voluntarie para todas as edições e não se voluntarie por meio da interface do GitHub.
+Se você encontrar um envio atual que seja particularmente relevante aos seus interesses, envie um e-mail para `info@ropensci.org` incluindo o nome do pacote, o URL do problema do envio e o nome do editor designado. No entanto, lembre-se de que os convites para revisores são mantidos a critério do editor, sendo possível que o editor já tenha enviado e-mails a outras pessoas. Por favor não se voluntarie em todas as edições e por meio da interface do GitHub.
 
-Para outras maneiras de contribuir, consulte [Guia de contribuição do rOpenSci](https://contributing.ropensci.org/).
+Para outras maneiras de contribuir, consulte o [guia de contribuição do rOpenSci](https://contributing.ropensci.org/).
 
 ## Preparando sua revisão {#preparereview}
 
