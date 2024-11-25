@@ -2,9 +2,9 @@
 repo-actions: true
 ---
 
-# Review template {#reviewtemplate}
+# Modelo de revisão {#reviewtemplate}
 
-You can save this as an R Markdown file, or delete the YAML and save it as a Markdown file.
+Você pode salvar isso como um arquivo RMarkdown ou excluir o YAML e salvá-lo como um arquivo Markdown.
 
 ::: {.content-hidden when-format="pdf"}
 
@@ -12,7 +12,7 @@ You can save this as an R Markdown file, or delete the YAML and save it as a Mar
 ```{r}
 #| results: 'asis'
 #| echo: false
-cat(readLines("templates/review.md"), sep = "\n")
+cat(readLines("templates/review.pt.md"), sep = "\n")
 ```
 ````
 
@@ -21,7 +21,7 @@ cat(readLines("templates/review.md"), sep = "\n")
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/review.md"
+#| child: "templates/review.pt.md"
 ```
 
 :::
