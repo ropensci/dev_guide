@@ -33,29 +33,29 @@ As revisões devem ser baseadas na versão mais recente do GitHub no _branch_ pa
 
 ### Diretrizes gerais {#general-guidelines}
 
-Para revisar um pacote, comece copiando nosso [modelo de revisão](#reviewtemplate) (ou nosso [modelo de revisão em espanhol](#reviewtemplatees)) e usá-lo como uma lista de verificação de alto nível.  Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais abordando o seguinte:
+Para revisar um pacote, comece copiando nosso [modelo de revisão](#reviewtemplate) (ou nosso [modelo de revisão em espanhol](#reviewtemplatees)) e use-o como uma lista de verificação global. Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais sobre:
 
-- O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
-- O pacote está de acordo com os requisitos do [guia de embalagem da rOpenSci](#building)?
-- Você acha que há melhorias que poderiam ser feitas no estilo do código?
+- O código está em conformidade com os princípios gerais do [guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
+- O pacote está em conformidade com o [guia de pacotes da rOpenSci](#building)?
+- Há melhorias que poderiam ser feitas no estilo do código?
 - Há duplicação de código no pacote que deve ser reduzida?
 - Há melhorias na interface do usuário que poderiam ser feitas?
-- Você poderia fazer melhorias no desempenho?
-- A documentação (instruções de instalação/vinhetas/exemplos/demonstrações) é clara e suficiente? Você usa o princípio de *vários pontos de entrada* ou seja, leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com a ferramenta/dados que ele contém?
+- Há melhorias no desempenho que poderiam ser feitas?
+- A documentação (instruções de instalação, vinhetas,  exemplos, demonstrações) é clara e suficiente? E ela usa o princípio de *vários pontos de entrada*, i.e., leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com a ferramenta/dados que ele contém?
 - As funções e os argumentos foram nomeados para trabalharem juntos e formarem uma API de programação comum e lógica que seja fácil de ler e de autocompletar?
-- Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você poderá encontrar arestas e casos de uso nos quais o autor não pensou.
+- Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você poderá encontrar pontos fracos e casos de uso nos quais o autor não pensou.
 
-Seja respeitoso e gentil com os autores em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 semanas, dependendo do prazo definido pelo editor. Entre em contato com o editor diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
+Por favor, seja respeitoso e gentil com os autores em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 semanas, dependendo do prazo definido pelo editor. Entre em contato com o editor diretamente ou no _thread_ de envio para informá-lo sobre possíveis atrasos.
 
-Incentivamos você a usar ferramentas automatizadas para facilitar a revisão.  Isso inclui:
+Incentivamos você a usar ferramentas automatizadas para facilitar a revisão. Isso inclui:
 
 - Verificar o relatório inicial do pacote gerado pelo nosso `@ropensci-review-bot`.
 - Verificar os registros do pacote em seus serviços de integração contínua (GitHub Actions, Codecov, etc.)
 - Execução `devtools::check()` e `devtools::test()` no pacote para localizar quaisquer erros que possam ter passado despercebidos no sistema do autor.
-- Verificar se a omissão de testes é justificada (por exemplo `skip_on_cran()` testes que fazem solicitações reais de API vs. ignorar todos os testes em um sistema operacional).
-- Se o pacote não for enviado por meio do branch padrão/principal, lembre-se de mudar para o branch de revisão enviado antes de iniciar sua revisão. Nesse caso, você também terá que pesquisar o pacote localmente, pois a pesquisa no GitHub é limitada ao branch padrão. Além disso, a documentação hospedada em um branch `pkgdown` não está necessariamente atualizada, e recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
+- Verificar se a omissão (_skipping_) de testes é justificada (e.g. `skip_on_cran()` realiza solicitações reais de API vs. ignora todos os testes em um sistema operacional).
+- Se o pacote não for enviado por meio do _branch_ padrão/principal, lembre-se de mudar para o _branch_ de revisão enviado antes de iniciar sua revisão. Nesse caso, você também deverá pesquisar o pacote localmente, pois a pesquisa no GitHub é limitada ao _branch_ padrão. Além disso, documentações hospedadas em um website tipo `pkgdown` não são necessariamente atualizadas, por isso recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
 
-Os revisores também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um problema de revisão: `@ropensci-review-bot check package`.
+Os revisores também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um problema de revisão (_review issue_): `@ropensci-review-bot check package`.
 
 ### Interações fora da linha {#off-thread-interactions}
 
