@@ -39,7 +39,7 @@ Mais informações sobre substituições de GitHub linguist [aqui](https://githu
 
 ## Comercialize sua própria conta {#marketown}
 
-- Como autor de um pacote integrado, você agora é membro da organização "ropensci" do rOpenSci no GitHub. Por padrão, as associações à organização são privadas; consulte [como torná-la pública nos documentos do GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+- Como autor de um pacote integrado, você agora é membro da organização "ropensci" da rOpenSci no GitHub. Por padrão, as participações da organização são privadas; consulte [como torná-la pública na documentação do GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
 
 - Mesmo depois que o repositório do seu pacote tiver sido transferido para o rOpenSci, você pode [fixá-lo em sua própria conta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
 
