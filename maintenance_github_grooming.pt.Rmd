@@ -33,9 +33,9 @@ Recomendamos que você substitua o GitHub linguist adicionando ou modificando um
 
 - Se o seu repositório contiver código que você não criou, por exemplo, código JavaScript, adicione `inst/js/* linguist-vendored` a .gitattributes ([Exemplo na natureza](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
 
-Dessa forma, a classificação da linguagem e as estatísticas do seu repositório refletirão melhor o código-fonte que ele contém, além de torná-lo mais detectável. Notavelmente, se o linguista não reconhecer corretamente o seu repositório como contendo principalmente código R, seu pacote não aparecerá nos resultados de pesquisa com a opção `language:R` você não aparecerá nos resultados da pesquisa. Da mesma forma, seu repositório não poderá ser listado entre os pacotes [repositórios R em alta](https://github.com/trending/r).
+Dessa forma, a classificação da linguagem e as estatísticas do seu repositório refletirão melhor o código-fonte que ele contém, além de torná-lo mais detectável. Notavelmente, se o linguist não reconhecer corretamente o seu repositório como contendo principalmente código R, seu pacote não aparecerá nos resultados de pesquisa com a opção `language:R` você não aparecerá nos resultados da pesquisa. Da mesma forma, seu repositório não poderá ser listado entre os pacotes [repositórios R em alta](https://github.com/trending/r).
 
-Mais informações sobre substituições de linguistas no GitHub [aqui](https://github.com/github/linguist#overrides).
+Mais informações sobre substituições de GitHub linguist [aqui](https://github.com/github/linguist#overrides).
 
 ## Comercialize sua própria conta {#marketown}
 
