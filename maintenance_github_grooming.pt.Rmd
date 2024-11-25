@@ -29,7 +29,7 @@ Poderemos fazer sugestões a você depois que seu pacote for integrado.
 
 Recomendamos que você substitua o GitHub linguist adicionando ou modificando um .gitattributes ao seu repositório em dois casos:
 
-- Se você armazenar arquivos html em locais não padrão (não em docs/, por exemplo, em vignettes/), use as substituições de documentação. Adicionar `*.html linguist-documentation=true` ao arquivo .gitattributes ([Exemplo na natureza](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
+- Se você armazenar arquivos html em locais diferentes do padrão (não em docs/, por exemplo, em vignettes/), use as substituições de documentação. Adicione `*.html linguist-documentation=true` ao arquivo .gitattributes ([Exemplo na natureza](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
 
 - Se o seu repositório contiver código que você não criou, por exemplo, código JavaScript, adicione `inst/js/* linguist-vendored` a .gitattributes ([Exemplo na natureza](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
 
