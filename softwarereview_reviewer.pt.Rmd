@@ -29,8 +29,7 @@ Para outras maneiras de contribuir, consulte o [guia de contribuição do rOpenS
 
 ## Preparando sua revisão {#preparereview}
 
-As revisões devem ser baseadas na versão mais recente do GitHub no branch padrão, a menos que indicado de outra forma pelos autores do pacote.
-Todos os envios acionam um relatório detalhado sobre a estrutura e a funcionalidade do pacote, gerado por [nosso `pkgcheck` pacote](https://docs.ropensci.org/pkgcheck/). Se o pacote tiver sido alterado substancialmente desde as últimas verificações, você poderá solicitar uma nova verificação com o comando `@ropensci-review-bot check package`. Observe que, ao instalar o pacote para revisá-lo, você deve se certificar de que tem todas as dependências disponíveis (por exemplo, execute `pak::pak()`).
+As revisões devem ser baseadas na versão mais recente do GitHub no _branch_ padrão, a menos que indicado de outra forma pelos autores do pacote. Todos os envios acionam um relatório detalhado sobre a estrutura e a funcionalidade do pacote, gerado por nosso [`pkgcheck` pacote](https://docs.ropensci.org/pkgcheck/). Se o pacote tiver sido alterado substancialmente desde as últimas verificações, você poderá solicitar uma nova verificação com o comando `@ropensci-review-bot check package`. Note que, ao instalar o pacote para revisá-lo, você deve se certificar de que tem todas as dependências estão disponíveis (por exemplo, execute `pak::pak()`).
 
 ### Diretrizes gerais {#general-guidelines}
 
