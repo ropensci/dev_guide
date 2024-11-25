@@ -1,23 +1,20 @@
 ---
-aliases: reviewerguide.html
+aliases: 
+  - reviewerguide.html
 ---
 
-# Guia para revisores {#reviewerguide}
+# Guia para Revisores {#reviewerguide}
 
 ```{block, type="summaryblock"}
-Obrigado por você ter aceitado revisar um pacote para a rOpenSci! Este capítulo consiste em nossas diretrizes para [preparar](#preparereview), [enviar](#submitreview) e [acompanhar](#followupreviewer) a sua revisão.
+Obrigado por aceitar revisar um pacote para a rOpenSci! Este capítulo consiste em nossas diretrizes para [preparar](#preparereview), [enviar](#submitreview) e [acompanhar](#followupreviewer) a sua revisão.
 
 Você pode entrar em contato com o editor responsável pela submissão para esclarecer qualquer dúvida que tenha sobre o processo ou sobre a sua revisão.
 
-Esforce-se para concluir sua avaliação em até 3 semanas após a aceitação da solicitação de avaliação. Procuraremos lembrar os revisores das datas de vencimento futuras e passadas. Os editores podem designar
-Os editores podem designar revisores adicionais ou alternativos se uma revisão estiver excessivamente atrasada.
+Por favor tente concluir sua avaliação em até 3 semanas após aceitar uma solicitação de avaliação. Nós procuraremos lembrar os revisores das datas de entrega futuras e passadas. Os editores podem designar revisores adicionais ou substitutos se uma revisão estiver excessivamente atrasada.
 
-A comunidade do **rOpenSci é o nosso melhor patrimônio. 
-Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software. 
-Seja respeitoso e gentil! 
-Consulte nosso guia de revisores e o [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações.** Você pode encontrar mais informações em nosso guia de revisores.
+**A comunidade do rOpenSci é o nosso melhor patrimônio. Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software. Seja respeitoso e gentil! Consulte nosso guia de revisores e [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações. Você pode encontrar mais informações em nosso guia de revisores.**
 
-_Se você usar nossos padrões/listas de verificação etc. ao revisar um software em outro lugar, informe aos destinatários (por exemplo, editores de periódicos, estudantes, revisão interna de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público] (https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail] (https://ropensci.org/contact/). 
+_Se você usar nossos guias/listas de verificação, etc. ao revisar um software em outra plataforma, informe aos interessados (e.g. editores de periódicos, estudantes, revisão interna de código) que aqueles vieram da rOpenSci e nos informe em nosso [fórum público] (https://discuss.ropensci.org/c/usecases) ou em [particular por e-mail] (https://ropensci.org/contact/)._ 
 ```
 
 ## Como voluntário como revisor {#volunteering-as-a-reviewer}
