@@ -79,7 +79,7 @@ Tanto como ex-revisor e autor de pacote, [Adam Sparks](https://adamhsparks.netli
 
 ### Pacote de ajuda para revisores {#helper-package-for-reviewers}
 
-Se estiver trabalhando no RStudio, você pode otimizar o fluxo de trabalho de revisão usando o pacote [`pkgreviewr` pacote](https://github.com/ropensci-org/pkgreviewr) criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o `refnet` pacote, você escreveria
+Se estiver trabalhando no RStudio, você pode otimizar seu fluxo de trabalho de revisão usando o pacote [`pkgreviewr`](https://github.com/ropensci-org/pkgreviewr) criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o pacote `refnet`, você escreveria
 
 ```
 remotes::install_github("ropensci-org/pkgreviewr")
@@ -90,9 +90,9 @@ pkgreview_create(pkg_repo = "embruna/refnet",
 
 e
 
-- o repositório do GitHub do `refnet` será clonado.
-- um projeto de revisão será criado, contendo um bloco de notas para você preencher e o modelo de revisão.
-- Observe que, se o pacote não for enviado por meio da ramificação padrão/principal, você precisará mudar para a ramificação enviada antes de iniciar a revisão.
+- o repositório do pacote `refnet` no GitHub será clonado
+- um projeto de revisão será criado, contendo um bloco de notas para você preencher e o modelo de revisão
+- observe que, se o pacote não for enviado por meio da ramificação padrão/principal, você precisará mudar para a ramificação enviada antes de iniciar sua revisão
 
 ### Comentários sobre o processo {#feedback-on-the-process}
 
