@@ -105,10 +105,10 @@ Incentivamos você a fazer perguntas e fornecer _feedback_ sobre o processo de r
 - Você também pode enviar problemas ou _pull requests_ diretamente para o repositório do pacote, se preferir, mas, se o fizer, comente sobre eles e coloque um link para eles no tópico de comentários do repositório de revisão de software para que tenhamos um registro centralizado e o texto da sua revisão.
 - Inclua uma estimativa de quantas horas você gastou na revisão.
 
-## Acompanhamento da avaliação {#followupreviewer}
+## Acompanhamento da revisão {#followupreviewer}
 
-Os autores devem responder dentro de duas semanas com as alterações feitas no pacote em resposta à sua avaliação.  Nesse estágio, pedimos que você responda se as alterações abordam suficientemente os problemas levantados na sua revisão. Incentivamos a discussão contínua entre autores de pacotes e revisores, e você também pode pedir aos editores que esclareçam os problemas no tópico de revisão.
+Os autores devem responder dentro de 2 semanas com alterações feitas no pacote em resposta a sua avaliação. Nesse estágio, pedimos que você responda se as alterações abordam suficientemente os problemas levantados na sua revisão. Incentivamos a discussão contínua entre autores de pacotes e revisores, e você também pode pedir aos editores que esclareçam os problemas no tópico (_thread_) de revisão.
 
-Você usará a seção [modelo de aprovação](#approval2template).
+Você usará o [modelo de aprovação](#approval2template).
 
 
