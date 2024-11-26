@@ -57,9 +57,9 @@ Incentivamos você a usar ferramentas automatizadas para facilitar a revisão. I
 
 Os revisores também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um problema de revisão (_review issue_): `@ropensci-review-bot check package`.
 
-### Interações fora da linha {#off-thread-interactions}
+### Interações em outros contextos {#off-thread-interactions}
 
-Se você interagiu com os autores do pacote e falou sobre a revisão fora de um tópico de revisão (em chats, mensagens diretas, pessoalmente, problemas no repositório do projeto), certifique-se de que sua revisão capture e/ou vincule elementos dessas conversas que sejam relevantes para o processo.
+Se você interagiu com os autores do pacote e falou sobre a revisão fora do contexto da revisão (em _chats_, mensagens diretas, pessoalmente, ou por problemas [_issues_] no repositório do projeto), certifique-se de que sua revisão capture e/ou vincule elementos dessas conversas que sejam relevantes para o processo.
 
 ### Experiência de revisores anteriores {#experience-from-past-reviewers}
 
