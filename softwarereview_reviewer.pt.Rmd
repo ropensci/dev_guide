@@ -100,9 +100,9 @@ Incentivamos você a fazer perguntas e fornecer _feedback_ sobre o processo de r
 
 ## Envio da revisão {#submitreview}
 
-- Quando sua revisão estiver concluída, cole-a como um comentário no pacote software-review issue.
-- Outros comentários são bem-vindos na mesma edição. Esperamos que as revisões de pacotes funcionem como uma conversa contínua com os autores, em vez de uma única rodada de revisões típica de manuscritos acadêmicos.
-- Você também pode enviar problemas ou pull requests diretamente para o repositório de pacotes, se preferir, mas, se o fizer, comente sobre eles e coloque um link para eles no tópico de comentários do repositório de revisão de software para que tenhamos um registro centralizado e o texto da sua revisão.
+- Quando sua revisão estiver concluída, cole-a como um comentário na secção de problemas do pacote (_package software-review issue_).
+- Comentários adicionais são bem-vindos na mesma edição. Esperamos que as revisões de pacotes funcionem como uma conversa contínua com os autores, em vez de uma única rodada de revisões típica de manuscritos acadêmicos.
+- Você também pode enviar problemas ou _pull requests_ diretamente para o repositório do pacote, se preferir, mas, se o fizer, comente sobre eles e coloque um link para eles no tópico de comentários do repositório de revisão de software para que tenhamos um registro centralizado e o texto da sua revisão.
 - Inclua uma estimativa de quantas horas você gastou na revisão.
 
 ## Acompanhamento da avaliação {#followupreviewer}
