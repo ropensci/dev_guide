@@ -96,7 +96,7 @@ e
 
 ### Comentários sobre o processo {#feedback-on-the-process}
 
-Incentivamos você a fazer perguntas e fornecer feedback sobre o processo de revisão em nosso [fórum](https://discuss.ropensci.org).
+Incentivamos você a fazer perguntas e fornecer _feedback_ sobre o processo de revisão em nosso [fórum](https://discuss.ropensci.org).
 
 ## Envio da revisão {#submitreview}
 
