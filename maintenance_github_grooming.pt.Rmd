@@ -1,6 +1,3 @@
----
-aliases: grooming.html
----
 
 # Preparação do GitHub {#grooming}
 
