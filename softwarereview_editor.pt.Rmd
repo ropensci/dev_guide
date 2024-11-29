@@ -1,19 +1,19 @@
 ---
-aliases: editorguide.html
+aliases: 
+   - editorguide.html
 ---
 
-# Guia para editores {#editorguide}
+# Guia para Editores {#editorguide}
 
 ```{block, type="summaryblock"}
-A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores.  Estamos testando
-um sistema rotativo de Editor-chefe (EiC).
+A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores. Estamos testando um sistema rotativo de Editor-Chefe (do inglês EiC).
 
-Este capítulo apresenta as responsabilidades [do Editor-chefe] (#eicchecklist), de [qualquer editor responsável por uma submissão] (#editorchecklist), [como responder a uma submissão fora do escopo] (#outofscoperesponse) e [como gerenciar o lançamento de um guia de desenvolvimento] (#bookrelease).
+Este capítulo apresenta as responsabilidades do [Editor-Chefe] (#eicchecklist), de [qualquer editor responsável por uma submissão] (#editorchecklist), [como responder a uma submissão fora do escopo] (#outofscoperesponse) e [como gerenciar o lançamento de um guia de desenvolvimento] (#bookrelease).
 
-Se você for um editor convidado, obrigado por ajudar! Entre em contato com o editor que o convidou para lidar com um envio para esclarecer qualquer dúvida que você possa ter.
+Se você for um editor convidado, obrigado por ajudar! Entre em contato com o editor que o convidou para lidar com uma submissão para esclarecer qualquer dúvida que você possa ter.
 ```
 
-> Sempre presuma que os participantes do sistema de revisão de software (colegas editores, remetentes, revisores) estão fazendo o melhor que podem e comunique-se com elegância, especialmente ao perguntar por que algo está atrasado.
+> Sempre presuma que os participantes do sistema de revisão de software (colegas editores, quem envia submissões, revisores) estão fazendo o melhor que podem e que se comunicam adequadamente, especialmente ao perguntar por que algo está atrasado.
 
 ## Responsabilidades dos editores {#editors-responsibilities}
 
