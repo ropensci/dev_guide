@@ -17,15 +17,15 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 
 ## Responsabilidades dos editores {#editors-responsibilities}
 
-- Além de lidar com os pacotes (cerca de 4 por ano), os editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinar atualizações em nossas políticas. Geralmente, fazemos isso por meio do Slack, que esperamos que os editores possam verificar regularmente.
+- Além de lidar com pacotes (cerca de 4 por ano), editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinam atualizações em nossas políticas. Geralmente, fazemos isso por meio do Slack, que esperamos que os editores possam verificar regularmente.
 
-- Também fazemos um rodízio de [Responsabilidades do editor-chefe](#eicchecklist) (decisões de escopo de primeira passagem e designação de editores) entre a diretoria trimestralmente.
+- Também fazemos um rodízio de [responsabilidades do Editor-Chefe](#eicchecklist) (decisões de escopo de primeira linha e designação de editores) entre a diretoria trimestralmente.
 
-- Você não precisa acompanhar outros envios, mas se notar um problema com um pacote que está sendo tratado por outro editor, sinta-se à vontade para levantar esse problema diretamente com o outro editor ou publicar a preocupação no canal somente para editores no Slack. Exemplos:
+- Você não precisa acompanhar outras submissões, mas se notar um problema com um pacote que está sendo tratado por outro editor, sinta-se à vontade para levantar esse problema diretamente com o outro editor ou publicar sua observação no canal de editores no Slack. Exemplos:
   
-  - Você sabe de um pacote sobreposto que ainda não foi mencionado no processo.
-  - Você vê uma pergunta para a qual tem uma resposta especializada que não foi dada depois de alguns dias (por exemplo, você sabe de uma publicação no blog que aborda como adicionar imagens aos documentos do pacote).
-  - Preocupações relacionadas, por exemplo, à velocidade do processo devem ser tratadas pelo editor-chefe, portanto, é a ele que você recorreria para essas perguntas.
+  - Você sabe de um pacote que gera conflitos que ainda não foi mencionado no processo.
+  - Você vê uma pergunta para a qual uma resposta especializada não foi dada depois de alguns dias (e.g., você sabe de uma publicação num blog que aborda como adicionar imagens a documentação de pacotes).
+  - Preocupações relacionadas à velocidade do processo devem ser tratadas pelo Editor-Chefe, portanto, é a ele que você recorreria para tais perguntas.
 
 ## Como lidar com a lista de verificação do editor {#editorchecklist}
 
