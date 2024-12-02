@@ -113,7 +113,7 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 
 ### Promoção de pacotes: {#package-promotion}
 
-- Direcione o autor para os capítulos do guia sobre [versões de pacotes](#releases), [marketing](#marketing) e [preparação do GitHub](#grooming).
+- Direcione o autor para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [refinamento no GitHub](#grooming).
 
 ## Responsabilidades da EiC {#eicchecklist}
 
