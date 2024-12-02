@@ -106,12 +106,10 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 
 ### Após a revisão: {#after-review}
 
-- `@ropensci-review-bot approve <package-name>`
+- `@ropensci-review-bot approve <package-name>`.
 - *Se o proprietário original do repositório se opuser à transferência, adicione uma linha com seu endereço para [esta lista de repositórios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantir que o pacote seja incluído no registro de pacotes do rOpenSci.*
-- Indique um pacote para ser apresentado em uma postagem de blog ou nota técnica da rOpenSci se você achar que ele pode ser de grande interesse. Observe na edição de revisão do software uma ou duas coisas que o autor poderia destacar e marque `@ropensci/blog-editors` para que você possa acompanhar.
-- Se os autores mantiverem um gitbook que seja, pelo menos em parte, sobre seus
-  pacote, entre em contato com [um membro da equipe do rOpenSci](https://ropensci.org/about/#team) para que eles possam entrar em contato com os autores
-  sobre a transferência para [o `ropensci-books` organização do GitHub](https://github.com/orgs/ropensci-books).
+- Indique um pacote para ser apresentado em uma postagem de blog ou nota técnica do rOpenSci se você achar que ele pode ser de grande interesse. Observe na edição de revisão do software uma ou duas coisas que o autor poderia destacar e marque `@ropensci/blog-editors` para que você possa dar acompanhamento.
+- Se os autores mantiverem um _gitbook_ que seja, pelo menos em parte, sobre seu pacote, entre em contato com [um membro da equipe do rOpenSci](https://ropensci.org/about/#team) para que este possa falar com os autores sobre a questão de transferência para [o `ropensci-books` do GitHub](https://github.com/orgs/ropensci-books).
 
 ### Promoção de pacotes: {#package-promotion}
 
