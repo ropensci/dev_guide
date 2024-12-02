@@ -115,35 +115,23 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 
 - Direcione o autor para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [refinamento no GitHub](#grooming).
 
-## Responsabilidades da EiC {#eicchecklist}
+## Responsabilidades do EiC {#eicchecklist}
 
-O EiC atua por 3 meses ou por um período acordado por todos os membros do conselho editorial.
-O EiC tem o direito de tomar decisões sobre escopo e sobreposição da forma mais independente possível (mas ainda pode solicitar ajuda/conselho).
-Em detalhes, o EiC desempenha as seguintes funções
+O EiC atua por 3 meses ou por um período combinado por todos os membros do conselho editorial. O EiC tem o direito de tomar decisões sobre escopo e sobreposição da forma mais independente possível (mas ainda pode solicitar ajuda/conselho). Em detalhe, o EiC desempenha as seguintes funções
 
-- Observa todos os problemas postados no repositório de revisão de software (assine as notificações do repositório no GitHub ou observe a seção `#software-peer-review-feed` no Slack).
-
-- Marca o problema com ` 0/editorial-team-prep`
-
-- Chamadas `@ropensci-review-bot check srr` sobre solicitações de pré-submissão de software estatístico. Ver correspondente [*Guia de desenvolvimento de estatísticas* capítulo](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para obter detalhes.
-
-- Atribui submissões de pacotes a outros editores, inclusive a você mesmo, para que cuidem delas. Na maioria das vezes, isso é feito por meio de rodízio entre os editores, a menos que a EiC considere que um editor é particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de interesses conflitantes.
-  
+- Observa todas as _issues_ postadas no repositório de revisão do software (tanto assina as notificações do repositório no GitHub ou observa o canal `#software-peer-review-feed` no Slack).
+- Marca o problema com `0/editorial-team-prep`
+- Requere `@ropensci-review-bot check srr` sobre solicitações de pré-submissão de software estatístico. Veja o capítulo do [_Stats Dev Guide_](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief), para mais detalhes.
+- Atribui submissões de pacotes a outros editores, inclusive a si mesmo, para que cuidem delas. Na maioria das vezes, isso é uma forma de rodízio entre os editores, a menos que o EiC considere que um editor seja particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de conflito de interesse. Para isso, use
   ```
   @ropensci-review-bot assign @username as editor
   ```
-
-- Monitora regularmente (por exemplo, semanalmente) o ritmo do processo de revisão graças a [devguider](#eic-report) e lembra os outros editores de mover os pacotes conforme necessário.
-
-- Ao assumir a rotação do EiC, revisa o status das revisões abertas atuais graças a [devguider](#eic-report) e lembra os editores de responderem ou atualizarem o status conforme necessário.
-
-- Responde a problemas postados no repositório software-review-meta
-
-- Toma decisões sobre escopo/sobreposição para consultas de pré-submissão, referências do JOSS ou de outros parceiros de publicação e submissões, se você vir um caso ambíguo (este último caso também pode ser feito por editores de manuseio (veja abaixo)). Para iniciar a discussão, isso é postado no canal rOpenSci Slack somente para editores, juntamente com um pequeno resumo do que se trata a submissão (pré-)submetida/referida, quais dúvidas o EiC tem, ou seja, digerir um pouco as informações. Se, depois de um ou dois dias, o EiC achar que não recebeu respostas suficientes, ele poderá enviar uma mensagem para todos os editores.
-  
-  - Qualquer editor deve se sentir à vontade para intervir nesses casos. Veja [esta seção](#outofscoperesponse) sobre como responder a envios fora do escopo (pré).
-  - Depois de explicar a decisão fora do escopo, escreva um comentário sobre o problema `@ropensci-review-bot out-of-scope`.
-
+- Monitora regularmente (por exemplo, semanalmente) o ritmo do processo de revisão graças ao [devguider](#eic-report) e lembra outros editores de mover os pacotes conforme necessário.
+- Ao assumir a rotação do EiC, revisa o status das revisões abertas atuais graças ao [devguider](#eic-report) e lembra os editores de responderem ou atualizarem o status conforme necessário.
+- Responde a _issues_ postadas no repositório software-review-meta.
+- Toma decisões sobre escopo/sobreposição para consultas de pré-submissão, referências do JOSS ou de outros parceiros de publicação e submissões, se encontrar um caso ambíguo (este último caso também pode ser feito por editores em ação, veja abaixo). Para iniciar discussão, isso é postado no canal exclusivo para editores do Slack do rOpenSci, juntamente com um pequeno resumo do que se trata a submissão (pré-)submetida/referida, quais dúvidas o EiC tem, ou seja, digerindo um pouco as informações. Se, depois de um ou dois dias, o EiC achar que não recebeu respostas suficientes, ele poderá fazer um _ping_ em todos os editores.
+  - Qualquer editor deve se sentir à vontade para intervir nesses casos. Veja [esta seção](#outofscoperesponse) sobre como responder a (pré-)subbmissões fora do escopo.
+  - Depois de explicar a decisão fora do escopo, escreva um comentário sobre a _issue_ com `@ropensci-review-bot out-of-scope`.
 - Solicite um novo EiC quando sua rotação terminar (defina um lembrete no calendário antes da data prevista para o término e peça voluntários no canal Slack dos editores)
 
 ### Usando `devguider::devguide_eic_report()` {#eic-report}
