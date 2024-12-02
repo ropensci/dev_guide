@@ -60,14 +60,14 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 
 Como editor (convidado), use
 
-- as possíveis sugestões feitas pelo(s) remetente(s), (embora os remetentes possam ter uma visão limitada dos tipos de especialização necessários.  Sugerimos que você não use mais de um dos revisores sugeridos);
-- o banco de dados Airtable de revisores e voluntários (consulte a próxima subseção);
+- as possíveis sugestões feitas por quem envia submissões, (embora estes possam ter uma visão limitada dos tipos de especialização necessários; sugerimos que você não use mais de um dos revisores sugeridos).
+- o banco de dados Airtable de revisores e voluntários (consulte a próxima subseção).
 - e os autores de [pacotes rOpenSci](https://ropensci.org/packages/).
 
-Quando essas fontes de informação não forem suficientes, você poderá usar os pacotes rOpenSci,
+Quando essas fontes de informação não forem suficientes,
 
-- peça ideias a outros editores no Slack,
-- procure usuários do pacote ou da fonte de dados/serviço de upstream ao qual o pacote se conecta (por meio da abertura de problemas no repositório, marcando-o com uma estrela, citando-o em artigos, falando sobre ele no Twitter).
+- peça ideias a outros editores no Slack.
+- procure usuários do pacote ou da fonte de dados/serviço upstream ao qual o pacote se conecta (por meio das _issues_ de abertura no repositório, marcando-o com uma estrela, citando-o em artigos, falando sobre ele na plataforma X).
 - Você também pode procurar por autores de pacotes relacionados em [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tem um [diretório](https://rladies.org/directory/) especificando as habilidades e os interesses das pessoas listadas.
 - Você pode publicar uma solicitação de revisores nos canais #general e/ou #software-review no Slack do rOpenSci ou nas mídias sociais.
