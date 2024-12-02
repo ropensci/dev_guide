@@ -136,17 +136,13 @@ O EiC atua por 3 meses ou por um período combinado por todos os membros do cons
 
 ### Usando `devguider::devguide_eic_report()` {#eic-report}
 
-Instale o devguider e execute `devguider::devguide_eic_report()` Abra o relatório HTML em um navegador.
+Instale o devguider e execute `devguider::devguide_eic_report()`. Abra o relatório HTML em um navegador.
 
-- Examine os envios em "presubmission" (pré-submissão) e "editorial-team-prep" (preparação da equipe editorial). Verifique se alguma ação precisa ser tomada (sondar editores, tomar uma decisão, colocar a questão em espera, enviar um ping ao remetente para uma atualização, encontrar e designar um editor).
-
-- As linhas em cada seção são coloridas por "urgência", de branco (ignorar) a amarelo (não urgente) e vermelho (mais urgente).
-
-- Examine os envios em "seeking-reviewer(s)". Se a busca de avaliadores estiver sendo realizada há muito tempo (cor vermelha), verifique se o envio está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se o envio passou despercebido.
-
-- Examine os envios em "revisores atribuídos". Se ainda faltarem revisões após um período de tempo excepcionalmente longo (cor vermelha), verifique se o envio está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se o envio foi ignorado.
-
-- Examine os envios em "revisão(ões) - em espera de alterações". Se alguns ainda não tiverem uma resposta do autor após um tempo incomumente longo (cor vermelha), verifique se o envio está em espera, leia o tópico e entre em contato com o editor em particular para pedir mais informações/se o envio foi esquecido.
+- Examine as submissões em "presubmission" (pré-submissão) e "editorial-team-prep" (preparação da equipe editorial). Verifique se alguma ação precisa ser tomada (sondar editores, tomar uma decisão, colocar a _issue_ em espera, enviar um _ping_ ao remetente para uma atualização, encontrar e designar um editor).
+- As linhas em cada seção são coloridas por nível de "urgência", de branco (ignorar) a amarelo (não urgente) e vermelho (mais urgente).
+- Examine as submissões em "seeking-reviewer(s)". Se a busca de avaliadores estiver sendo realizada há muito tempo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão passou despercebida.
+- Examine as submissões em "reviewer(s)-assigne". Se ainda faltarem revisões após um período de tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão foi ignorada.
+- Examine as submissões em "review(s)-in-awaiting-changes". Se algumas ainda não tiverem uma resposta do autor após um tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico e entre em contato com o editor em particular para pedir mais informações/se a submissão foi ignorada.
 
 ### Solicitação de mais detalhes {#asking-for-more-details}
 
