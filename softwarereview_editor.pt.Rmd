@@ -82,17 +82,17 @@ Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer p
 
 ##### Critérios para escolher um revisor {#criteria-for-choosing-a-reviewer}
 
-Aqui estão os critérios que você deve ter em mente ao escolher um revisor. Talvez você precise reunir essas informações pesquisando no CRAN e na página do GitHub do possível revisor e na presença on-line em geral (site pessoal, Twitter).
+Aqui estão os critérios que você deve ter em mente ao escolher um revisor. Talvez você precise reunir essas informações pesquisando no CRAN e na página do GitHub do possível revisor e em sua presença online em geral (site pessoal, X).
 
-- Você não revisou um pacote para nós nos últimos 6 meses.
-- Você tem alguma experiência em desenvolvimento de pacotes.
-- Alguma experiência de domínio no campo do pacote ou da fonte de dados
-- Não [conflitos de interesse](#coi).
+- Revisou um pacote para nós nos últimos 6 meses.
+- Tem alguma experiência em desenvolvimento de pacotes.
+- Tem alguma experiência de domínio no campo do pacote ou da fonte de dados.
+- Não tem [conflitos de interesse](#coi).
 - Tente equilibrar sua percepção da experiência do possível revisor com a complexidade do pacote.
 - Diversidade - com dois revisores, ambos não devem ser homens brancos cis.
-- Alguma evidência de que você está interessado em abertura ou em atividades da comunidade de R, embora não haja problema em enviar e-mails frios.
+- Há evidências de que o possível revisor esteja aberto a opiniões e interessado em atividades da comunidade de R, embora não tenha problema em enviar e-mails frios.
 
-Cada envio deve ser revisado por *dois* revisores de pacotes. Embora seja bom que um deles tenha menos experiência em desenvolvimento de pacotes e mais conhecimento do domínio, a revisão não deve ser dividida em dois.  Ambos os revisores precisam revisar o pacote de forma abrangente, embora sob suas perspectivas específicas.  Em geral, pelo menos um revisor deve ter experiência prévia em revisão e, é claro, convidar um novo revisor amplia nosso grupo de revisores.
+Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja aceitável que um deles tenha menos experiência em desenvolvimento de pacotes e mais conhecimento do domínio, a revisão não deve ser dividida em dois. Ambos os revisores precisam revisar o pacote de forma abrangente, embora sob suas perspectivas específicas. Em geral, pelo menos um revisor deve ter experiência prévia em revisão e, é claro, convidar um novo revisor amplia nosso grupo de revisores.
 
 ### Durante a revisão: {#during-review}
 
