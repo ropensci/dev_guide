@@ -97,13 +97,12 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 ### Durante a revisão: {#during-review}
 
 - Verifique ocasionalmente com os revisores e autores. Ofereça esclarecimentos e ajuda conforme necessário.
-- Em geral, procure enviar 3 semanas para revisão, 2 semanas para
-  alterações subsequentes e uma semana para a aprovação das alterações pelo revisor.
+- Em geral, procure calcular 3 semanas para uma revisão, 2 semanas para as alterações subsequentes e 1 semana para a aprovação das alterações pelo revisor.
 - Após o envio de cada revisão,
-  - Escreva um comentário agradecendo ao avaliador com suas palavras;
-  - Registre a avaliação digitando um novo comentário `@ropensci-review-bot submit review <review-url> time <time in hours>`. Por exemplo, para a avaliação [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) o comentário seria `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
-- Se o autor parar de responder, consulte [as políticas](#policies) e/ou envie um ping para os outros editores no canal do Slack para discussão. É importante ressaltar que, se um revisor tiver sido atribuído a um problema fechado, entre em contato com ele ao fechar o problema para explicar a decisão, agradeça-o mais uma vez por seu trabalho e faça uma anotação em nosso banco de dados para atribuí-lo a uma submissão com grandes chances de uma revisão de software tranquila da próxima vez (por exemplo, um autor de pacote que já tenha enviado pacotes para nós).
-- Quando as alterações forem feitas, altere a tag de status da revisão para `5/awaiting-reviewer-response` e solicite que os revisores indiquem a aprovação com a tag [modelo de aprovação do revisor](#approval2template).
+  - Escreva um comentário agradecendo ao revisor;
+  - Registre a revisão digitando um novo comentário `@ropensci-review-bot submit review <review-url> time <time in hours>`. Por exemplo, para a revisão [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) o comentário seria `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
+- Se o autor deixar de responder, consulte [as políticas de uso](#policies) e/ou envie um _ping_ para os outros editores no canal de discussão do Slack. É importante ressaltar que, se um revisor tiver sido atribuído a um _issue_ fechado, entre em contato com ele ao fechar o _issue_ para explicar a decisão, agradeça-o mais uma vez por seu trabalho e faça uma anotação em nosso banco de dados para atribuí-lo a uma submissão com grandes chances de um processo de revisão de software mais tranquilo da próxima vez (por exemplo, de um autor de pacote que já tenha enviado pacotes para nós anteriormente).
+- Quando as alterações forem feitas, altere a _tag_ de status da revisão para `5/awaiting-reviewer-response` e solicite que os revisores indiquem a aprovação usando o [modelo de aprovação do revisor](#approval2template).
 
 ### Após a revisão: {#after-review}
 
