@@ -202,35 +202,39 @@ Revisores podem pedir feedback sobre, por exemplo, o tom de suas avaliações. A
 
 ## Gerenciando o lançamento de um guia de desenvolvimento {#bookrelease}
 
-Se você estiver encarregado de gerenciar uma versão do livro que está lendo, use [o guia de lançamento de livros](#bookreleaseissue) como um modelo de problema a ser publicado [no rastreador de problemas do guia de desenvolvimento](https://github.com/ropensci/dev_guide/issues) Se você não tiver dúvidas, não hesite em fazer perguntas a outros editores.
+Se você estiver encarregado de gerenciar uma versão do livro que está lendo, use [o guia de lançamento de livros](#bookreleaseissue) como um modelo de _issue_ a ser publicado [no rastreador de problemas do guia de desenvolvimento](https://github.com/ropensci/dev_guide/issues). Não hesite em fazer perguntas a outros editores.
 
 ### Governança do guia de desenvolvimento {#devguidegov}
 
-Para alterações muito pequenas no guia de desenvolvimento, não é necessária nenhuma revisão de PR. Para alterações maiores, solicite a revisão de pelo menos alguns editores (se nenhum deles participou da discussão relacionada à alteração, solicite uma revisão de todos eles no GitHub e, na ausência de qualquer reação, faça o merge após uma semana).
+Para alterações muito pequenas no guia de desenvolvimento, não é necessária fazer revisão de _pull request_ (PR). Para alterações maiores, solicite a revisão de pelo menos alguns editores (se nenhum deles participou da discussão relacionada à alteração, solicite uma revisão de todos eles no GitHub e, na ausência de qualquer reação, faça o _merge_ após 1 semana).
 
-Duas semanas antes do lançamento de um guia de desenvolvimento, uma vez que o PR do dev para o master **e a postagem do blog de lançamento** estiverem prontos para revisão, todos os editores devem receber um ping do GitHub ("solicitação de revisão" no PR de dev para master) e do Slack, mas o lançamento não precisa que todos eles aprovem explicitamente o lançamento.
+Duas semanas antes do lançamento de um guia de desenvolvimento, uma vez que o PR do dev para o _master_ **e a postagem do blog de lançamento** estiverem prontos para revisão, todos os editores devem receber um _ping_ no GitHub ("solicitação de revisão" no PR de dev para _master_) e do Slack, mas o lançamento não precisa que todos eles aprovem explicitamente o lançamento.
 
 ### Postagem no blog sobre um lançamento {#releaseblogpost}
 
-A postagem do blog sobre um lançamento será revisada [por editores](#devguidegov) e um dos `@ropensci/blog-editors`.
+A postagem no blog sobre um lançamento será revisada [por editores](#devguidegov) e um dos `@ropensci/blog-editors`.
 
 #### Conteúdo {#content}
 
-Consulte o [orientação geral sobre blogs do rOpenSci](https://blogguide.ropensci.org/) e as orientações mais específicas abaixo.
+Consulte a [orientação geral sobre blogs do rOpenSci](https://blogguide.ropensci.org/) e as orientações mais específicas abaixo.
 
-[Primeiro exemplo de uma postagem desse tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [Segundo exemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+[Primeiro exemplo de uma postagem desse tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo exemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
 
-A postagem do blog deve mencionar todos os itens importantes do [changelog](#booknews) organizado em (sub)seções: por exemplo, uma seção sobre a grande mudança A, outra sobre a grande mudança B e uma sobre as mudanças menores agrupadas. Mencione as alterações mais importantes primeiro.
+A postagem no blog deve mencionar todos os itens importantes do [changelog](#booknews), organizados em (sub)seções: e.g., uma seção sobre uma grande mudança A, outra sobre uma grande mudança B e uma sobre as mudanças menores agrupadas. Mencione as alterações mais importantes primeiro.
 
-Para cada alteração feita por um colaborador externo, agradeça-o explicitamente usando as informações do changelog. Por exemplo `[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+Para cada alteração feita por um colaborador externo, agradeça-o explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
 
-No final da publicação, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide os leitores a contribuir com o guia de desenvolvimento abrindo problemas e participando de discussões abertas. Modelo de conclusão:
+No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide os leitores a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
 
 ```markdown
-In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months. 
-We are grateful for all contributions that made this release possible. 
-We are already working on updates for our next version, such as ISSUE1, ISSUE2. 
-Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+Nesta postagem, resumimos as alterações incorporadas em nosso livro [“rOpenSci Packages: Development, Maintenance, and Peer Review”] (https://devguide.ropensci.org/) nos últimos X meses. 
+
+Somos gratos por todas as contribuições que tornaram possível esse lançamento. 
+
+Já estamos trabalhando em atualizações para a nossa próxima versão, como _issue1_, _issue2_. 
+
+Confira o [issue tracker] (https://github.com/ropensci/dev_guide/issues/) se você quiser contribuir.
+
 ```
 
 #### Autoria {#authorship}
