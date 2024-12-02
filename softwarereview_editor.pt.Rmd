@@ -191,16 +191,14 @@ Agradeça aos autores pela submissão, explique os motivos da decisão e direcio
 
 [Exemplos de submissões e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
-## Como responder às perguntas dos revisores {#reviewersupport}
+## Respondendo às perguntas dos revisores {#reviewersupport}
 
-Os avaliadores podem pedir feedback sobre, por exemplo, o tom de sua avaliação.
-Além de indicar a orientação geral deste guia, você pode pedir aos editores que abram uma edição quando essa orientação estiver faltando,
-aqui estão alguns exemplos de avaliação que podem ser úteis.
+Revisores podem pedir feedback sobre, por exemplo, o tom de suas avaliações. Além de indicar as orientações gerais deste guia, você pode fazer perguntas aos editores ou abrir _issues_ quando essa orientação estiver faltando. Aqui seguem alguns exemplos de avaliação que podem ser úteis.
 
-- Exemplo difícil, porém construtivo: a parte desta revisão que sugere uma reescrita da vinheta: [ropensci/software-review#191 (comentário)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
-- [o `slopes` pacote](https://github.com/ropensci/software-review/issues/420) que acabou sendo fundamentalmente reprojetado em resposta às revisões. Todas as revisões/revisores foram sempre totalmente construtivas, o que parece ter desempenhado um papel importante na motivação dos autores para embarcar em uma revisão tão grande. Comentários como, *"este pacote não ..."* ou *"não tem ..."* eram invariavelmente seguidos de sugestões construtivas sobre o que poderia ser feito (há, por exemplo, o [várias em uma das primeiras análises](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
-- As três avaliações expressaram educadamente suas reservas: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) e [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
-- bowerbird útil ["pré-revisão"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) que resultou em uma divisão do pacote antes das revisões reais.
+- Exemplo difícil, porém construtivo: a parte desta revisão que sugere uma re-estruturação da vinheta: [ropensci/software-review#191 (comentário)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+- [o pacote `slopes`](https://github.com/ropensci/software-review/issues/420) que acabou sendo fundamentalmente redesenhado em resposta a revisões. Todas as revisões/revisores foram sempre totalmente construtivos, o que parece ter desempenhado um papel importante na motivação dos autores para embarcar numa grande reformulação. Comentários como, *"este pacote não ..."* ou *"não tem ..."* foram seguidos de sugestões construtivas sobre o que poderia ser feito (há, por exemplo, [vários casos em uma das primeiras revisões](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+- As três avaliações expressaram educadamente suas reservas: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) e [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766).
+- bowerbird útil ["pré-revisão"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) que resultou em uma divisão do pacote antes das revisões efetivas.
 
 ## Gerenciando o lançamento de um guia de desenvolvimento {#bookrelease}
 
