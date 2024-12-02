@@ -185,11 +185,11 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
 - Agradeça novamente ao editor convidado.
 - Remova-o da equipe `ropensci/editors` (mas não da organização rOpenSci).
 
-## Como responder a envios fora do escopo {#outofscoperesponse}
+## Respondendo a submissões fora do escopo {#outofscoperesponse}
 
-Agradeça aos autores pelo envio, explique os motivos da decisão e direcione-os a outros locais de publicação, se relevante, e ao fórum de discussão rOpenSci. Use o texto de [Objetivos e escopo](#aims-and-scope) especialmente em relação à evolução do escopo ao longo do tempo e à sobreposição e às diferenças entre o desenvolvimento da unconf/staff/software-review.
+Agradeça aos autores pela submissão, explique os motivos da decisão e direcione-os a outros locais de publicação, se relevante, e ao fórum de discussão rOpenSci. Use sugestões de texto de [Objetivos e escopo](#aims-and-scope) especialmente em relação à evolução do escopo ao longo do tempo e à sobreposição e às diferenças entre o desenvolvimento da unconf/staff/software-review.
 
-[Exemplos de envios e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
+[Exemplos de submissões e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
 ## Como responder às perguntas dos revisores {#reviewersupport}
 
