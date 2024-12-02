@@ -163,27 +163,27 @@ Se um pacote tiver sobreposição de funcionalidade com outros pacotes, exigimos
 
 ```
 
-### Convidar um editor convidado {#guesteditor}
+### Convidando um editor convidado {#guesteditor}
 
-Depois de discutir com outros editores, a EiC pode convidar um editor convidado para lidar com uma submissão (por exemplo, se o volume de submissões for grande, se todos os editores tiverem um conflito de interesses, se for necessária uma especialização específica ou como um teste antes de convidar uma pessoa para fazer parte do conselho editorial).
+Depois de discutir com outros editores, o EiC pode convidar um editor convidado para lidar com uma submissão (e.g., se o volume de submissões for grande, se todos os editores tiverem um conflito de interesses, se conhecimento específico for necessário ou como um teste antes de convidar uma pessoa para fazer parte do conselho editorial).
 
 Quando você convidar um editor convidado,
 
-- Pergunte sobre conflitos de interesse usando a seção [a mesma fraseologia usada para os revisores](#coi),
-- Forneça um link para o arquivo [guia para editores](#editorchecklist).
+- Pergunte sobre conflitos de interesse usando [a mesma formulação usada para os revisores](#coi).
+- Forneça o link para o [guia para editores](#editorchecklist).
 
-Se a pessoa disser que sim (eba!),
+Se a pessoa disser sim (eba!),
 
-- Certifique-se de que ela [habilitou a 2FA em sua conta do GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
-- Convide-os para a seção `ropensci/editors` equipe e para a organização ropensci,
-- Depois que ele aceitar o convite do repositório, atribua o problema a ele,
-- Certifique-se de que ele (já) esteja convidado para o espaço de trabalho do Slack do rOpenSci,
-- Adicione seu nome à tabela de editores convidados do Airtable (para que seus nomes possam aparecer neste livro e no LEIAME da revisão de software).
+- Certifique-se de que ela [habilitou a autenticação 2FA em sua conta do GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+- Convide-a para a equipe `ropensci/editors` e para a organização rOpenSci.
+- Depois que ela aceitar o convite do repositório, atribua a _issue_ a ela.
+- Certifique-se de que ela (já) esteja convidada para o espaço de trabalho do Slack do rOpenSci.
+- Adicione o nome dela a tabela de editores convidados do Airtable (para que seu nome possa aparecer neste livro e no LEIAME da revisão de software).
 
-Depois que o processo de revisão for concluído (pacote aprovado, problema fechado),
+Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fechada),
 
-- Agradeça novamente ao editor convidado,
-- Removê-lo da lista de `ropensci/editors` equipe (mas não da organização ropensci).
+- Agradeça novamente ao editor convidado.
+- Remova-o da equipe `ropensci/editors` (mas não da organização rOpenSci).
 
 ## Como responder a envios fora do escopo {#outofscoperesponse}
 
