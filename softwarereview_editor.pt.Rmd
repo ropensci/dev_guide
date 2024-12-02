@@ -50,9 +50,8 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 #### Tarefas {#tasks}
 
 - Comente com `@ropensci-review-bot seeking reviewers`.
-- Use o [modelo de e-mail](#reviewrequesttemplate) se necessário, para convidar os revisores
-  - Ao convidar os avaliadores, inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá avaliar", para dar um prazo claro para que você passe a procurar outra pessoa.
-- Designe revisores com `@ropensci-review-bot assign @username as reviewer`. `add` também pode ser usado em vez de `assign`, e `to reviewers` (plural) em vez de `as reviewer` (singular). Portanto, o seguinte também é válido: `@ropensci-review-bot add @username to reviewers`. Um comando deve ser emitido para cada revisor. Se necessário posteriormente, remova os revisores com `@ropensci-review-bot remove @username from reviewers`.
+- Use o [modelo de e-mail](#reviewrequesttemplate) se necessário, para convidar revisores. Ao convidar revisores, inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá fazer uma revisão", para dar um prazo claro no qual você irá procurar outra pessoa.
+- Designe revisores com `@ropensci-review-bot assign @username as reviewer`. Em vez de `assign`, `add` também pode ser usado, assim como `to reviewers` (plural) em vez de `as reviewer` (singular). Portanto, o seguinte também é válido: `@ropensci-review-bot add @username to reviewers`. Um comando deve ser emitido para cada revisor. Se necessário posteriormente, remova revisores com `@ropensci-review-bot remove @username from reviewers`.
 - Se você quiser alterar a data de vencimento de uma revisão, use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
 #### Como procurar revisores {#how-to-look-for-reviewers}
