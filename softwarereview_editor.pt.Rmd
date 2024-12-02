@@ -144,24 +144,22 @@ Instale o devguider e execute `devguider::devguide_eic_report()`. Abra o relató
 - Examine as submissões em "reviewer(s)-assigne". Se ainda faltarem revisões após um período de tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão foi ignorada.
 - Examine as submissões em "review(s)-in-awaiting-changes". Se algumas ainda não tiverem uma resposta do autor após um tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico e entre em contato com o editor em particular para pedir mais informações/se a submissão foi ignorada.
 
-### Solicitação de mais detalhes {#asking-for-more-details}
+### Solicitando mais detalhes {#asking-for-more-details}
 
-Em alguns casos, a documentação on-line é escassa. O mínimo de LEIAME e a ausência de um site de download dificultam a avaliação.
-Nesse caso, solicite mais detalhes: mesmo que o pacote seja considerado fora do escopo, a documentação do pacote terá melhorado, portanto, não há problema em solicitar esses esforços.
+Em alguns casos, a documentação online é escassa. LEIAME simplificado e ausência de um site pkgdown dificultam a avaliação. Nesse caso, solicite mais detalhes; mesmo que o pacote seja considerado fora do escopo, a documentação do pacote terá melhorado, portanto, não há problema em adotar esses esforços.
 
 Exemplo de texto
 
 ```markdown
-Hello <username> and many thanks for your submission.
+Olá <usuário> e muito obrigado por sua submissão.
 
-We are discussing whether the package is in scope and need a bit more information.
+Estamos discutindo se o pacote está dentro do escopo e precisamos de um pouco mais de informações.
 
-Would you mind adding more details and context to the README?
-After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
+Você se importaria de acrescentar mais detalhes e contexto ao LEIAME? Depois de lê-lo, alguém com pouco conhecimento do domínio deve ter sido informado sobre o objetivo, as metas e a funcionalidade do pacote.
 
-<optional>
-If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is best in class](https://devguide.ropensci.org/policies.html#overlap). Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
-</optional>
+<opcional>
+Se um pacote tiver sobreposição de funcionalidade com outros pacotes, exigimos que ele seja demonstrado na documentação [como é o melhor da categoria](https://devguide.ropensci.org/policies.html#overlap). Você poderia adicionar uma comparação mais detalhada com os pacotes que mencionou no LEIAME para que possamos avaliar?
+</opcional>
 
 ```
 
