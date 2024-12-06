@@ -19,11 +19,11 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 
 - Além de lidar com pacotes (cerca de 4 por ano), editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinam atualizações em nossas políticas. Geralmente, fazemos isso por meio do Slack, que esperamos que os editores possam verificar regularmente.
 
-- Também fazemos um rodízio de [responsabilidades do Editor-Chefe](#eicchecklist) (decisões de escopo de primeira linha e designação de editores) entre a diretoria trimestralmente.
+- Também fazemos um rodízio de [responsabilidades do Editor-Chefe](#eicchecklist) (decisões de escopo de primeira instância e designação de editores) entre a diretoria trimestralmente.
 
 - Você não precisa acompanhar outras submissões, mas se notar um problema com um pacote que está sendo tratado por outro editor, sinta-se à vontade para levantar esse problema diretamente com o outro editor ou publicar sua observação no canal de editores no Slack. Exemplos:
   
-  - Você sabe de um pacote que gera conflitos que ainda não foi mencionado no processo.
+  - Você sabe de um pacote que já resolve as mesmas dores/desafios de outro(s) pacote(s), que ainda não foi mencionado no processo.
   - Você vê uma pergunta para a qual uma resposta especializada não foi dada depois de alguns dias (e.g., você sabe de uma publicação num blog que aborda como adicionar imagens a documentação de pacotes).
   - Preocupações relacionadas à velocidade do processo devem ser tratadas pelo Editor-Chefe, portanto, é a ele que você recorreria para tais perguntas.
 
@@ -43,7 +43,7 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 - Sempre que possível, ao solicitar alterações, direcione os autores para ferramentas automáticas, como [`usethis`](https://usethis.r-lib.org/) e [`styler`](https://styler.r-lib.org/) e para recursos online (seções deste guia, seções do [livro de pacotes do R](https://r-pkgs.org/)) para facilitar o uso de seus comentários. [Exemplo de verificações de editor](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - O ideal é que você faça observações e estas sejam resolvidas antes que revisores comecem a revisar.
 - Se as verificações iniciais mostrarem grandes lacunas, solicite alterações antes de designar os revisores. Se o autor mencionar que as alterações podem levar tempo, [aplique o rótulo de retenção digitando `@ropensci-review-bot put on hold`](#policiesreviewprocess). Você receberá um lembrete a cada 90 dias (na _issue_) para verificar com o(s) autor(es) do pacote.
-- Se o pacote levantar um novo problema para a política de uso do rOpenSci, inicie uma conversa no Slack ou abra uma discussão na seção [fórum do rOpenSci](https://discuss.ropensci.org/) para discutí-lo com outros editores ([exemplo de discussão de política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
+- Se o pacote levantar um novo problema para a política de uso da rOpenSci, inicie uma conversa no Slack ou abra uma discussão na seção [fórum da rOpenSci](https://discuss.ropensci.org/) para discutí-lo com outros editores ([exemplo de discussão de política](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
 ### Procure e designe dois revisores: {#look-for-and-assign-two-reviewers}
 
@@ -67,10 +67,10 @@ Como editor (convidado), use
 Quando essas fontes de informação não forem suficientes,
 
 - peça ideias a outros editores no Slack.
-- procure usuários do pacote ou da fonte de dados/serviço upstream ao qual o pacote se conecta (por meio das _issues_ de abertura no repositório, marcando-o com uma estrela, citando-o em artigos, falando sobre ele na plataforma X).
+- procure usuários do pacote ou da fonte de dados/serviço de upstream ao qual o pacote se conecta (por meio das _issues_ de abertura no repositório, marcando-o com uma estrela, citando-o em artigos, falando sobre ele na plataforma X).
 - Você também pode procurar por autores de pacotes relacionados em [r-pkg.org](https://r-pkg.org/).
 - R-Ladies tem um [diretório](https://rladies.org/directory/) especificando as habilidades e os interesses das pessoas listadas.
-- Você pode publicar uma solicitação de revisores nos canais #general e/ou #software-review no Slack do rOpenSci ou nas mídias sociais.
+- Você pode publicar uma solicitação de revisores nos canais #general e/ou #software-review no Slack da rOpenSci ou nas mídias sociais.
 
 ##### Dicas para a pesquisa de revisores no Airtable {#tips-for-reviewer-search-in-airtable}
 
@@ -107,13 +107,13 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 ### Após a revisão: {#after-review}
 
 - `@ropensci-review-bot approve <package-name>`.
-- *Se o proprietário original do repositório se opuser à transferência, adicione uma linha com seu endereço para [esta lista de repositórios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantir que o pacote seja incluído no registro de pacotes do rOpenSci.*
-- Indique um pacote para ser apresentado em uma postagem de blog ou nota técnica do rOpenSci se você achar que ele pode ser de grande interesse. Observe na edição de revisão do software uma ou duas coisas que o autor poderia destacar e marque `@ropensci/blog-editors` para que você possa dar acompanhamento.
-- Se os autores mantiverem um _gitbook_ que seja, pelo menos em parte, sobre seu pacote, entre em contato com [um membro da equipe do rOpenSci](https://ropensci.org/about/#team) para que este possa falar com os autores sobre a questão de transferência para [o `ropensci-books` do GitHub](https://github.com/orgs/ropensci-books).
+- *Se o proprietário original do repositório se opuser à transferência, adicione uma linha com seu endereço para [esta lista de repositórios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantir que o pacote seja incluído no registro de pacotes da rOpenSci.*
+- Indique um pacote para ser apresentado em uma postagem de blog ou nota técnica da rOpenSci se você achar que ele pode ser de grande interesse. Observe na edição de revisão do software uma ou duas coisas que o autor poderia destacar e marque `@ropensci/blog-editors` para que você possa dar acompanhamento.
+- Se os autores mantiverem um _gitbook_ que seja, pelo menos em parte, sobre seu pacote, entre em contato com [um membro da equipe da rOpenSci](https://ropensci.org/about/#team) para que este possa falar com os autores sobre a questão de transferência para [o `ropensci-books` do GitHub](https://github.com/orgs/ropensci-books).
 
 ### Promoção de pacotes: {#package-promotion}
 
-- Direcione o autor para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [refinamento no GitHub](#grooming).
+- Direcione o autor para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [como melhorar performance no GitHub](#grooming).
 
 ## Responsabilidades do EiC {#eicchecklist}
 
@@ -129,7 +129,7 @@ O EiC atua por 3 meses ou por um período combinado por todos os membros do cons
 - Monitora regularmente (por exemplo, semanalmente) o ritmo do processo de revisão graças ao [devguider](#eic-report) e lembra outros editores de mover os pacotes conforme necessário.
 - Ao assumir a rotação do EiC, revisa o status das revisões abertas atuais graças ao [devguider](#eic-report) e lembra os editores de responderem ou atualizarem o status conforme necessário.
 - Responde a _issues_ postadas no repositório software-review-meta.
-- Toma decisões sobre escopo/sobreposição para consultas de pré-submissão, referências do JOSS ou de outros parceiros de publicação e submissões, se encontrar um caso ambíguo (este último caso também pode ser feito por editores em ação, veja abaixo). Para iniciar discussão, isso é postado no canal exclusivo para editores do Slack do rOpenSci, juntamente com um pequeno resumo do que se trata a submissão (pré-)submetida/referida, quais dúvidas o EiC tem, ou seja, digerindo um pouco as informações. Se, depois de um ou dois dias, o EiC achar que não recebeu respostas suficientes, ele poderá fazer um _ping_ em todos os editores.
+- Toma decisões sobre escopo/sobreposição para consultas de pré-submissão, referências do JOSS ou de outros parceiros de publicação e submissões, se encontrar um caso ambíguo (este último caso também pode ser feito por editores em ação, veja abaixo). Para iniciar discussão, isso é postado no canal exclusivo para editores do Slack da rOpenSci, juntamente com um pequeno resumo do que se trata a submissão (pré-)submetida/referida, quais dúvidas o EiC tem, ou seja, digerindo um pouco as informações. Se, depois de um ou dois dias, o EiC achar que não recebeu respostas suficientes, ele poderá fazer um _ping_ em todos os editores.
   - Qualquer editor deve se sentir à vontade para intervir nesses casos. Veja [esta seção](#outofscoperesponse) sobre como responder a (pré-)subbmissões fora do escopo.
   - Depois de explicar a decisão fora do escopo, escreva um comentário sobre a _issue_ com `@ropensci-review-bot out-of-scope`.
 - Solicite um novo EiC quando sua rotação terminar (defina um lembrete no calendário antes da data prevista para o término e peça voluntários no canal Slack dos editores)
@@ -138,7 +138,7 @@ O EiC atua por 3 meses ou por um período combinado por todos os membros do cons
 
 Instale o devguider e execute `devguider::devguide_eic_report()`. Abra o relatório HTML em um navegador.
 
-- Examine as submissões em "presubmission" (pré-submissão) e "editorial-team-prep" (preparação da equipe editorial). Verifique se alguma ação precisa ser tomada (sondar editores, tomar uma decisão, colocar a _issue_ em espera, enviar um _ping_ ao remetente para uma atualização, encontrar e designar um editor).
+- Examine as submissões em "presubmission" (pré-submissão) e "editorial-team-prep" (preparação da equipe editorial). Verifique se alguma ação precisa ser tomada (sondar editores, tomar uma decisão, colocar a _issue_ em espera, enviar um _ping_ a pessoa que submeteu a proposta para uma atualização, encontrar e designar um editor).
 - As linhas em cada seção são coloridas por nível de "urgência", de branco (ignorar) a amarelo (não urgente) e vermelho (mais urgente).
 - Examine as submissões em "seeking-reviewer(s)". Se a busca de avaliadores estiver sendo realizada há muito tempo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão passou despercebida.
 - Examine as submissões em "reviewer(s)-assigne". Se ainda faltarem revisões após um período de tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão foi ignorada.
@@ -177,7 +177,7 @@ Se a pessoa disser sim (eba!),
 - Certifique-se de que ela [habilitou a autenticação 2FA em sua conta do GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
 - Convide-a para a equipe `ropensci/editors` e para a organização rOpenSci.
 - Depois que ela aceitar o convite do repositório, atribua a _issue_ a ela.
-- Certifique-se de que ela (já) esteja convidada para o espaço de trabalho do Slack do rOpenSci.
+- Certifique-se de que ela (já) esteja convidada para o espaço de trabalho do Slack da rOpenSci.
 - Adicione o nome dela a tabela de editores convidados do Airtable (para que seu nome possa aparecer neste livro e no LEIAME da revisão de software).
 
 Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fechada),
@@ -187,7 +187,7 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
 
 ## Respondendo a submissões fora do escopo {#outofscoperesponse}
 
-Agradeça aos autores pela submissão, explique os motivos da decisão e direcione-os a outros locais de publicação, se relevante, e ao fórum de discussão rOpenSci. Use sugestões de texto de [Objetivos e escopo](#aims-and-scope) especialmente em relação à evolução do escopo ao longo do tempo e à sobreposição e às diferenças entre o desenvolvimento da unconf/staff/software-review.
+Agradeça aos autores pela submissão, explique os motivos da decisão e direcione-os a outros locais de publicação, se relevante, e ao fórum de discussão rOpenSci. Use sugestões de texto de [Objetivos e escopo](#aims-and-scope) especialmente em relação à evolução do escopo ao longo do tempo e à sobreposição e às diferenças entre o desenvolvimento da _unconf/staff/software-review_.
 
 [Exemplos de submissões e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
@@ -216,7 +216,7 @@ A postagem no blog sobre um lançamento será revisada [por editores](#devguideg
 
 #### Conteúdo {#content}
 
-Consulte a [orientação geral sobre blogs do rOpenSci](https://blogguide.ropensci.org/) e as orientações mais específicas abaixo.
+Consulte a [orientação geral sobre blogs da rOpenSci](https://blogguide.ropensci.org/) e as orientações mais específicas abaixo.
 
 [Primeiro exemplo de uma postagem desse tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo exemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
 
