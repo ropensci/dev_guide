@@ -12,7 +12,7 @@ Você pode entrar em contato com o(a) editor(a) responsável pela submissão par
 Tente ao máximo concluir sua avaliação em até 3 semanas após o aceite da solicitação de avaliação. Nós vamos lembrar os(as) revisores(as) das datas de vencimento, tanto futuras quanto passadas. Os(as) editores(as) podem designar revisores(as) adicionais ou alternativos se uma revisão estiver muito atrasada.
 
 **A comunidade da rOpenSci é o nosso melhor patrimônio. 
-Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software. 
+Nosso objetivo é que as revisões sejam abertas, colaborativas e focadas na melhoria da qualidade do software.
 Seja respeitoso e gentil! 
 Consulte o nosso guia para revisores e também o [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações.**
 
