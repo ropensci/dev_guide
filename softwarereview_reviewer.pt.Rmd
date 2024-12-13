@@ -9,7 +9,7 @@ Obrigado por você ter aceitado revisar um pacote para a rOpenSci! Este capítul
 
 Você pode entrar em contato com o(a) editor(a) responsável pela submissão para esclarecer qualquer dúvida que tenha sobre o processo ou sobre a sua revisão.
 
-Tente ao máximo concluir sua avaliação em até 3 semanas após o aceite da solicitação de avaliação. Nós vamos lembrar os revisores das datas de vencimento, tanto futuras quanto passadas. Os(as) editores(as) podem designar revisores(as) adicionais ou alternativos se uma revisão estiver muito atrasada.
+Tente ao máximo concluir sua avaliação em até 3 semanas após o aceite da solicitação de avaliação. Nós vamos lembrar os(as) revisores(as) das datas de vencimento, tanto futuras quanto passadas. Os(as) editores(as) podem designar revisores(as) adicionais ou alternativos se uma revisão estiver muito atrasada.
 
 **A comunidade da rOpenSci é o nosso melhor patrimônio. 
 Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software. 
