@@ -64,7 +64,7 @@ Os(as) revisores(as) também podem gerar novamente os resultados da verificaçã
 
 ### Interações feitas fora dos canais oficiais {#off-thread-interactions}
 
-Se você interagiu com os(as) autores(as) do pacote e falou sobre a revisão fora de um tópico de revisão (em chats, mensagens diretas, pessoalmente, problemas no repositório do projeto), certifique-se de que sua revisão capture e/ou vincule elementos dessas conversas que sejam relevantes para o processo.
+Se você interagiu com os(as) autores(as) do pacote e falou sobre a revisão fora de um tópico de revisão (como em chats, mensagens diretas, pessoalmente ou issues no repositório do projeto), certifique-se de que sua revisão capture e/ou referencie elementos dessas conversas que sejam relevantes para o processo.
 
 ### Experiências de revisores(as) anteriores {#experience-from-past-reviewers}
 
