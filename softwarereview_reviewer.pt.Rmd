@@ -68,7 +68,7 @@ Se você interagiu com os(as) autores(as) do pacote e falou sobre a revisão for
 
 ### Experiências de revisores(as) anteriores {#experience-from-past-reviewers}
 
-Os(as) avaliadores(as) iniciantes podem achar útil ler (sobre) algumas avaliações anteriores. Em geral, você pode encontrar os tópicos de envio de pacotes que já foram integrados [aqui](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui estão alguns exemplos de avaliações (observe que suas avaliações não precisam ser tão longas quanto esses exemplos):
+Os(as) avaliadores(as) iniciantes podem achar útil ler (sobre) algumas avaliações anteriores. Em geral, você pode encontrar os tópicos de envio de pacotes que já foram integrados [aqui](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui, estão alguns exemplos de avaliações (observe que suas avaliações não precisam ser tão longas quanto esses exemplos):
 
 - `rtika` [revisão 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) e [revisão2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
