@@ -43,7 +43,7 @@ Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemp
 - O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - O pacote está de acordo com os requisitos do [Guia de pacotes da rOpenSci](#building)?
 - Há melhorias que poderiam ser feitas no estilo do código?
-- Há duplicação de código no pacote que deve ser reduzida?
+- Há duplicação de código no pacote que deveria ser reduzida?
 - Há melhorias na interface do usuário que poderiam ser feitas?
 - Existem melhorias de desempenho que podem ser feitas?
 - A documentação (instruções de instalação, *vignettes*, exemplos, demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas/dados que ele contém?
