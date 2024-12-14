@@ -46,7 +46,7 @@ Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemp
 - Há duplicação de código no pacote que deveria ser reduzida?
 - Há melhorias na interface do usuário que poderiam ser feitas?
 - Existem melhorias de desempenho que podem ser feitas?
-- A documentação (instruções de instalação, *vignettes*, exemplos, demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas/dados que ele contém?
+- A documentação (instruções de instalação, *vignettes*, exemplos e demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas e os dados que ele contém?
 - As funções e os argumentos foram nomeados para trabalharem juntos e formarem uma API de programação comum e lógica que seja fácil de ler e de autocompletar?
 - Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você pode acabar encontrando casos de uso extremos nos quais o autor não pensou.
 
