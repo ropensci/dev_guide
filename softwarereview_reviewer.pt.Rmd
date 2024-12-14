@@ -84,7 +84,7 @@ O ex-revisor e autor de pacotes [Adam Sparks](https://adamhsparks.netlify.app/) 
 
 ### Pacote de ajuda para revisores {#helper-package-for-reviewers}
 
-Se estiver trabalhando no RStudio, você pode otimizar o fluxo de trabalho de revisão usando o pacote [`pkgreviewr`](https://github.com/ropensci-org/pkgreviewr) criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o pacote `refnet`. Você escreveria o seguinte:
+Se estiver trabalhando no RStudio, você pode otimizar o fluxo de trabalho de revisão usando o pacote [`pkgreviewr`](https://github.com/ropensci-org/pkgreviewr), criado pela editora associada Anna Krystalli. Digamos que você tenha aceitado revisar o pacote `refnet`, então você escreveria o seguinte:
 
 ```
 remotes::install_github("ropensci-org/pkgreviewr")
