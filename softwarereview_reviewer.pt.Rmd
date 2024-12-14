@@ -29,7 +29,7 @@ Se você encontrar alguma submissão que seja particularmente relevante para seu
 No entanto, lembre-se de que o(a) editor(a) é responsável por indicar os(as) potenciais revisores(as), sendo possível que outras pessoas já tenham sido convidadas.
 Pedimos que não se candidate a todas as submissões e também evite se voluntariar diretamente pela interface do GitHub.
 
-Para outras maneiras de contribuir, consulte o [Guia de contribuição da rOpenSci](https://contributing.ropensci.org/).
+Para saber outras maneiras de contribuir, consulte o [Guia de contribuição da rOpenSci](https://contributing.ropensci.org/).
 
 ## Preparando a sua revisão {#preparereview}
 
