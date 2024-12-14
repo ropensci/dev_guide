@@ -25,7 +25,7 @@ Obrigado pelo seu desejo de participar como revisor(a) da revisão por pares de 
 
 Por favor, preencha o nosso [formulário de voluntariado](https://ropensci.org/software-reviewer).
 
-Se você ver um envio atual que seja particularmente relevante para os seus interesses, envie um e-mail para `info@ropensci.org` incluindo o nome do pacote, a URL do *issue* que corresponde a este envio e o nome do(a) editor(a) responsável.
+Se você encontrar alguma submissão que seja particularmente relevante para seus interesses, envie um e-mail para `info@ropensci.org`, incluindo o nome do pacote, a URL da *issue* que corresponde a este envio e o nome do(a) editor(a) responsável.
 No entanto, lembre-se de que é bem possível que o(a) editor(a) responsável já tenha enviado um e-mail para as pessoas revisoras.
 Favor não se voluntariar para resolver todos os *issues*, e também não se voluntariar através da interface do GitHub.
 
