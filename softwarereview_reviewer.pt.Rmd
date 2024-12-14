@@ -55,7 +55,7 @@ Seja respeitoso e gentil com os(as) autores(as) em suas avaliações. Nosso [có
 Incentivamos você a usar ferramentas automatizadas para facilitar a revisão.  Isso inclui:
 
 - Verificar o relatório inicial do pacote gerado pelo nosso `@ropensci-review-bot`.
-- Verificar os logs/registros nos serviços de integração contínua utilizados pelo pacote (GitHub Actions, Codecov, etc.)
+- Verificar os registros (logs) nos serviços de integração contínua utilizados pelo pacote (GitHub Actions, Codecov, etc.)
 - Executar `devtools::check()` e `devtools::test()` no pacote para localizar quaisquer erros que possam ter passado despercebidos pelo(a) autor(a).
 - Verificar se a omissão de testes é justificada (por exemplo, o uso de `skip_on_cran()` em testes que fazem solicitações reais de API vs. ignorar todos os testes em um sistema operacional).
 - Se o pacote não for enviado por meio da *branch* padrão/principal, lembre-se de mudar para a *branch* de revisão que foi submetida antes de iniciar sua revisão. Nesse caso, você também terá que pesquisar o pacote localmente, dado que a pesquisa no GitHub é limitada à *branch* padrão. Além disso, a documentação hospedada na *branch* `pkgdown` não está necessariamente atualizada, e por isso, recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
