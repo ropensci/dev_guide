@@ -112,7 +112,7 @@ Incentivamos você a fazer perguntas e fornecer feedbacks sobre o processo de re
 
 ## Acompanhamento da avaliação {#followupreviewer}
 
-Os(as) autores(as) devem responder dentro de duas semanas com as alterações feitas no pacote em resposta à sua avaliação.  Nesse estágio, pedimos que você responda se as alterações abordam suficientemente os problemas levantados na sua revisão. Incentivamos a discussão contínua entre autores(as) de pacotes e revisores(as), e você também pode pedir aos editores que esclareçam os problemas no tópico de revisão.
+Os(as) autores(as) devem responder dentro de 2 (duas) semanas com as alterações feitas no pacote em resposta à sua avaliação. Nesse estágio, pedimos que você avalie se as alterações são suficientes para resolver as questões levantadas em sua revisão. Incentivamos a discussão contínua entre autores(as) de pacotes e revisores(as), e você também pode pedir aos editores que esclareçam os problemas no tópico de revisão.
 
 Você usará a seção [modelo de aprovação](#approval2template).
 
