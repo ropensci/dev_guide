@@ -1,4 +1,3 @@
-aliases: reviewerguide.html
 ---
 
 # Guia para revisores {#reviewerguide}
