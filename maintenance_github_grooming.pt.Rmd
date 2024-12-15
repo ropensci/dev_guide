@@ -1,0 +1,45 @@
+
+# Preparação do GitHub {#grooming}
+
+```{block, type="summaryblock"}
+Atualmente, os pacotes da rOpenSci são, em sua grande maioria, desenvolvidos no GitHub. Aqui, estão algumas dicas para aproveitar a plataforma em uma seção sobre [tornar seu repositório mais detectável](#repodiscoverability) e uma seção sobre [comercializar sua própria conta do GitHub após passar pela revisão por pares](#marketown).
+
+```
+
+## Torne seu repositório mais detectável {#repodiscoverability}
+
+### Tópicos do repositório do GitHub {#git-hub-repo-topics}
+
+Os [tópicos de repositórios](https://blog.github.com/2017-01-31-introducing-topics/) do GitHub ajudam a navegar e pesquisar repositórios do GitHub, são usados pelo [R-universe em páginas de pacotes e para resultados de pesquisa](https://github.com/r-universe-org/help#how-to-add-keyword-labels-to-an-r-package) e são processados pelo [`codemetar`](https://github.com/ropensci/codemetar) para palavras-chave de registro da rOpenSci.
+
+Recomendamos:
+
+- Adicionar "r", "r-package" e "rstats" como tópicos ao repositório de seu pacote.
+
+- Adicionar quaisquer outros tópicos relevantes ao repositório do seu pacote.
+
+Poderemos fazer sugestões a você depois que seu pacote for integrado.
+
+### GitHub linguist {#git-hub-linguist}
+
+O [GitHub linguist](https://github.com/github/linguist) atribuirá uma linguagem ao seu repositório com base nos arquivos que ele contém. Alguns pacotes que contêm muito código em C++ podem ser classificados como pacotes C++ em vez de pacotes R, o que é bom e mostra a necessidade de adicionar os tópicos "r", "r-package" e "rstats".
+
+Recomendamos que você substitua o GitHub linguist adicionando ou modificando um .gitattributes ao seu repositório em dois casos:
+
+- Se você armazenar arquivos html em locais diferentes do padrão (não em docs/, por exemplo, em vignettes/), use as substituições de documentação. Adicione `*.html linguist-documentation=true` ao arquivo .gitattributes ([Exemplo em uso real](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5))
+
+- Se o seu repositório contiver código que você não criou, por exemplo, código JavaScript, adicione `inst/js/* linguist-vendored` a .gitattributes ([Exemplo em uso real](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1))
+
+Dessa forma, a classificação da linguagem e as estatísticas do seu repositório refletirão melhor o código-fonte que ele contém, além de torná-lo mais detectável. Notavelmente, se o GitHub linguist não reconhecer corretamente que seu repositório contém principalmente código R, seu pacote não aparecerá nos resultados de pesquisa usando o filtro `language:R`. Da mesma forma, seu repositório não poderá ser listado entre os [repositórios R em alta](https://github.com/trending/r).
+
+Mais informações sobre as substituições do GitHub linguist podem ser encontradas [aqui](https://github.com/github/linguist#overrides).
+
+## Comercialize sua própria conta {#marketown}
+
+- Como autor de um pacote integrado, você agora é membro da organização "ropensci" da rOpenSci no GitHub. Por padrão, as participações da organização são privadas; consulte [como torná-la pública na documentação do GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+
+- Mesmo após o repositório do seu pacote ser transferido para a rOpenSci, você pode [fixá-lo em sua conta pessoal](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+
+- Em geral, recomendamos que você adicione pelo menos um avatar (que não precisa ser seu rosto!) e seu nome [no seu perfil do GitHub](https://help.github.com/articles/customizing-your-profile/).
+
+

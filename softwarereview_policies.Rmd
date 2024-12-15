@@ -40,7 +40,7 @@ Last but not least, you'll find the [code of conduct of rOpenSci Software Peer R
 Following criteria are meant to be a guide for what constitutes a conflict of interest for an editor or reviewer. The potential editor or reviewer has a conflict of interest if:
 
 - The potential reviewer/editor are from the same institution or institutional component (e.g., department) as any author with a major role.
-- The potential reviewer/editor has been a collaborator or has had other professional relationships with at least one person on the package who has a major role within in the past three year.
+- The potential reviewer/editor has been a collaborator or has had other professional relationships with at least one person on the package who has a major role within in the past three years.
 - The potential reviewer/editor serves, or has served, as a member of the advisory board for the project under review.
 - The potential reviewer/editor would receive a direct or indirect financial benefit if the package were accepted.
 - The potential reviewer/editor has significantly contributed to a competitor project.

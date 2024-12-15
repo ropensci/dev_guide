@@ -2,9 +2,9 @@
 repo-actions: true
 ---
 
-# Review request template {#reviewrequesttemplate}
+# Modelo de solicitação de revisão {#reviewrequesttemplate}
 
-Editors may make use of the e-mail template below in recruiting reviewers.
+Os editores podem usar o modelo de e-mail abaixo para recrutar revisores.
 
 ::: {.content-hidden when-format="pdf"}
 
@@ -12,7 +12,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ```{r}
 #| results: 'asis'
 #| echo: false
-#| child: "templates/request.md"
+#| child: "templates/request.pt.md"
 ```
 ````
 
@@ -21,7 +21,7 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 ::: {.content-visible when-format="pdf"}
 
 ```{r}
-#| child: "templates/request.md"
+#| child: "templates/request.pt.md"
 
 ```
 
