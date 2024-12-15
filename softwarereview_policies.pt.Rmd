@@ -1,6 +1,3 @@
----
-aliases: policies.html
----
 
 # Políticas de revisão por pares de software {#policies}
 
