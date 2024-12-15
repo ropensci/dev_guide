@@ -1,4 +1,3 @@
----
 
 # Guia para revisores {#reviewerguide}
 
