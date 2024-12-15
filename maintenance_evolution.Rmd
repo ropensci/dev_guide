@@ -38,7 +38,7 @@ foo_bar(x = 5)
 #> Error in foo_bar(x = 5) : use 'y' instead of 'x' 
 ```
 
-If you want to be more helpful, you could emit a warning but automatically take the necessary action:
+If you want the function to be more helpful, you could change it to emit a warning but automatically take the necessary action:
 
 ```r
 foo_bar <- function(x, y) {
