@@ -1,6 +1,3 @@
----
-aliases: ci.html
----
 
 # Práticas recomendadas de integração contínua {#ci}
 
