@@ -1,61 +1,62 @@
 ---
-aliases: authors-guide.html
+aliases: 
+  - authors-guide.html
 ---
 
-# Guia para autores {#authors-guide}
+# Guia para Autores {#authors-guide}
 
 ```{block, type="summaryblock"}
-Este guia conciso apresenta o processo de revisão por pares de software para você como autor de um pacote.
+Este guia conciso apresenta o processo de revisão de software por pares, para você como autor de um pacote.
 ```
 
-## Planejando um envio (ou uma consulta de pré-submissão) {#planning-a-submission-or-a-pre-submission-enquiry}
+## Planejando uma Submissão (ou uma Consulta de Pré-Submissão) {#planning-a-submission-or-a-pre-submission-enquiry}
 
-- Você espera manter seu pacote por pelo menos dois anos ou ser capaz de identificar um novo mantenedor?
-- Consulte nosso [políticas](#policies) Veja se o seu pacote atende aos nossos critérios para se encaixar em nossa suíte e não se sobrepõe a outros pacotes.
-  - Se você não tiver certeza de que um pacote atende aos nossos critérios, sinta-se à vontade para abrir um problema como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
-  - [Exemplo de resposta sobre sobreposição](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considere também adicionar alguns pontos sobre pacotes semelhantes ao seu [documentação do pacote](#docs-general).
-- Considere o melhor momento para enviar seu pacote durante o desenvolvimento.  Seu pacote deve estar suficientemente maduro para que os revisores possam analisar todos os aspectos essenciais, mas lembre-se de que a revisão pode resultar em grandes alterações.
-  - Sugerimos enfaticamente que você envie seu pacote para análise *antes que* publicar no CRAN ou enviar um artigo de software descrevendo o pacote para um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeação e alterações de funções.
-  - Não envie seu pacote para revisão enquanto ele ou um manuscrito associado também estiver sendo revisado em outro local, pois isso pode resultar em solicitações conflitantes de alterações.
-- Considere também o tempo e o esforço necessários para responder às revisões: pense na sua disponibilidade ou na de seus colaboradores nas próximas semanas e meses após o envio. Observe que os revisores são voluntários e pedimos que você respeite o tempo e o esforço deles respondendo de maneira oportuna e respeitosa.
-- Se você usar [crachás do repostatus.org](https://www.repostatus.org/) (o que recomendamos), envie quando você estiver pronto para receber um *Ativo* em vez de *WIP* distintivo. Da mesma forma, se você usar [emblemas de ciclo de vida](https://www.tidyverse.org/lifecycle/) o envio deverá ocorrer quando o pacote for *Estável*.
-- Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um site pkgdown para permitir uma avaliação mais detalhada da funcionalidade on-line.
-  - No estágio de envio, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o README deve apresentar um caso forte para o pacote.
-  - Seu arquivo README deve se esforçar para explicar a funcionalidade e os objetivos do pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os itens técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
-- Seu pacote continuará a evoluir após a revisão, o capítulo sobre *Evolução do pacote* [fornece orientação sobre o tópico](#evolution).
+- Você pretende manter o seu pacote por pelo menos 2 anos ou ser capaz de identificar um(a) novo(a) mantenedor(a)?
+- Consulte nossas [políticas de uso](#policies) para ver se o seu pacote atende aos nossos critérios e se encaixa em nossa coleção, não se sobrepondo a outros pacotes já existentes.
+  - Se você não tiver certeza de que um pacote atende aos nossos critérios, sinta-se à vontade para abrir um  _issue_ no GitHub como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
+  - [Exemplo de resposta a sobreposição](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Também considere adicionar alguns pontos sobre pacotes semelhantes ao seu na sua [documentação do pacote](#docs-general).
+- Considere o melhor momento de desenvolvimento do seu pacote para enviar sua submissão. Seu pacote deve estar suficientemente maduro para que os revisores possam analisar todos os aspectos essenciais, mas tenha em mente que revisões podem resultar em grandes alterações.
+  - Sugerimos enfaticamente que você envie seu pacote para análise *antes de* publicá-lo no CRAN ou antes de enviá-lo para publicação como artigo em um periódico. O _feedback_ da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações de funções.
+  - Não envie seu pacote para revisão enquanto este ou o manuscrito associado também estiver sendo revisado em outro local, pois isso pode resultar em solicitações conflitantes de alterações.
+- Considere também o tempo e o esforço necessários para responder às revisões: pense na sua disponibilidade ou na de seus colaboradores nas próximas semanas e meses após o envio da submissão. Observe que os revisores são voluntários e pedimos que você respeite o tempo e o esforço deles, respondendo de maneira oportuna e respeitosa.
+- Se você usa [distintivos do repostatus.org](https://www.repostatus.org/) (o que recomendamos), envie uma submissão quando você estiver pronto para receber um distintivo tipo _Active_ em vez de _WIP_. Da mesma forma, se você usa [distintivos tipo _lifecycle_](https://www.tidyverse.org/lifecycle/) o envio da submissão deverá ocorrer quando o pacote for _Stable_.
+- Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um website pkgdown para permitir uma avaliação mais detalhada da funcionalidade online.
+  - No estágio de envio da submissão, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o README deve apresentar uma base segura para o pacote.
+  - Seu arquivo README deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
+- Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
 
-## Preparação para o envio {#preparing-for-submission}
+## Preparando para Submissão {#preparing-for-submission}
 
-- Leia e siga [nosso guia de estilo de embalagem](#building), [guia do revisor](#preparereview) para garantir que seu pacote atenda aos nossos critérios de estilo e qualidade.
-- Fique à vontade para fazer perguntas sobre o processo ou sobre seu pacote específico em nosso [Fórum de discussão](https://discuss.ropensci.org).
-- Todos os envios são verificados automaticamente pelo nosso [pkgcheck](https://docs.ropensci.org/pkgcheck/) para garantir que os pacotes sigam nossas diretrizes. Espera-se que todos os autores tenham executado [o sistema principal `pkgcheck` função](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que o pacote está pronto para ser enviado. Como alternativa, uma maneira ainda mais fácil de garantir que um pacote esteja pronto para ser enviado é usar [a fu `pkgcheck` Ação do GitHub](https://github.com/ropensci-review-tools/pkgcheck-action) para executar `pkgcheck` como uma GitHub Action, conforme descrito em [nossa postagem no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
-- Se o seu pacote exigir dependências de sistema incomuns (consulte [*Guia de empacotamento*](#pkgdependencies)) para que nossa Ação do GitHub seja aprovada, envie um pull request adicionando-os ao [nosso Dockerfile básico](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
-- Se houver algum aspecto do `pkgcheck` que seu pacote não possa ser aprovado, explique os motivos no seu modelo de envio.
+- Leia e siga [nosso guia de estilo de pacotes](#building) e nosso [guia do revisor](#preparereview), para garantir que seu pacote atenda aos nossos critérios de estilo e qualidade.
+- Fique à vontade para fazer perguntas sobre o processo ou sobre seu pacote em específico no nosso [Fórum de discussão](https://discuss.ropensci.org).
+- Todas as submissões são verificadas automaticamente pelo nosso [`pkgcheck`](https://docs.ropensci.org/pkgcheck/) para garantir que os pacotes seguem nossas diretrizes. Espera-se que todos os autores tenham executado a [principal função do `pkgcheck`](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que o pacote está pronto para ser submetido. Como alternativa, uma maneira ainda mais fácil de garantir que um pacote está pronto para ser submetido é usando [a função `pkgcheck` do GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action), conforme descrito em [nossa postagem no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
+- Se o seu pacote exigir dependências de sistema incomuns (consulte [*Guia de pacotes*](#pkgdependencies)) para que a _GitHub Action_ seja aprovada, envie um _pull request_ adicionando-as ao [nosso arquivo Dockerfile](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
+- Se houver algum aspecto do `pkgcheck` no qual seu pacote não possa ser aprovado, explique os motivos no seu modelo de submissão.
 - Se você acha que seu pacote está no escopo do
-  [Jornal de Software de Código Aberto](https://joss.theoj.org/) (JOSS), não o submeta à consideração do JOSS até que o processo de revisão do rOpenSci tenha terminado: se o seu pacote for considerado dentro do escopo pelos editores do JOSS, apenas o artigo curto que o acompanha será revisado (não o software que terá sido revisado extensivamente pelo rOpenSci até aquele momento). Nem todos os pacotes do rOpenSci atenderão aos critérios do JOSS.
+  [Journal of Open-Source Software](https://joss.theoj.org/) (JOSS), não o submeta a publivação no JOSS até que o processo de revisão da rOpenSci tenha terminado. Se o seu pacote for considerado dentro do escopo pelos editores do JOSS, apenas o artigo curto que o acompanha será revisado (não o software que terá sido revisado extensivamente pela rOpenSci até aquele momento). Nem todos os pacotes da rOpenSci atenderão aos critérios do JOSS.
 
-## O processo de envio {#the-submission-process}
+## O Processo de Submissão {#the-submission-process}
 
-- O software é enviado para análise por [abrindo uma nova edição](https://github.com/ropensci/software-review/issues/new/choose) no repositório de análise de software e preenchendo o modelo.
-- O modelo começa com uma seção que inclui diversas variáveis no estilo HTML (`<!---variable--->`). Elas são usadas pelo nosso `ropensci-review-bot` e devem ser deixadas no lugar, com valores preenchidos entre os pontos de início e fim indicados, assim:
+- Um software é enviado/submetido para revisão através da [abertura de uma nova _issue_](https://github.com/ropensci/software-review/issues/new/choose) no repositório de revisão do software, sendo preenchido o modelo sugerido.
+- O modelo sugerido começa com uma seção que inclui diversas variáveis no estilo HTML (`<!---variável--->`). Elas são usadas pelo nosso `ropensci-review-bot` e devem ser deixadas nos seus respectivos lugares, com valores preenchidos entre os pontos de início e fim indicados, assim:
 
 ```{bash, eval=F}
-<!---variable--->insert value here<!---end-variable>
+<!---variável--->insira valor aqui<!---variável-fim>
 ```
 
-- A comunicação entre autores, revisores e editores ocorrerá primeiramente no GitHub para que o tópico de revisão possa servir como um registro completo da revisão. Você pode optar por entrar em contato com o editor por e-mail ou Slack se for necessária uma consulta particular (por exemplo, perguntar como responder a uma pergunta de um revisor). Não entre em contato com os revisores fora do tópico sem perguntar a eles no tópico do GitHub se eles concordam com isso.
-- *Ao enviar um pacote, verifique se suas configurações de notificação do GitHub tornam improvável que você perca um comentário.*
-- Os pacotes são verificados automaticamente no envio por [nosso `pkgcheck` sistema](https://docs.ropensci.org/pkgcheck) que confirmará se um pacote está ou não pronto para ser analisado.
-- Os pacotes enviados podem ser hospedados na ramificação principal/padrão ou em qualquer outra ramificação não padrão. Nesse último caso, é recomendável, mas não obrigatório, enviar o pacote por meio de um branch `ropensci-software-review` dedicada.
+- A comunicação entre autores, revisores e editores ocorrerá primeiramente no GitHub para que o tópico de revisão possa servir como um registro completo da revisão. Você pode optar por entrar em contato com o editor por e-mail ou Slack se for necessária uma consulta particular (por exemplo, perguntar como responder a uma pergunta de um revisor). Não entre em contato com os revisores fora do tópico (_thread_ do GitHub) sem perguntar a eles de antemão se eles concordam com isso.
+- Ao submeter um pacote, certifique-se de que suas notificações do GitHub estão ativadas para que você não perca qualquer comentário relacionado a sua submissão.
+- Os pacotes são verificados automaticamente no momento de submissão pelo [nosso `pkgcheck`](https://docs.ropensci.org/pkgcheck), que confirma se um pacote está ou não pronto para ser revisado.
+- Os pacotes submetidos podem ser hospedados na ramificação principal/padrão ou em qualquer outra ramificação não padrão. Neste último caso, é recomendável, mas não obrigatório, enviar o pacote por meio de uma ramificação dedicada tipo `ropensci-software-review`.
 
-## O processo de revisão {#the-review-process}
+## O Processo de Revisão {#the-review-process}
 
-- E [editor](#editors) analisará seu envio em até 5 dias úteis e responderá com as próximas etapas. O editor poderá atribuir o pacote aos revisores, solicitar que o pacote seja atualizado para atender aos critérios mínimos antes da revisão ou rejeitar o pacote devido à falta de adequação ou sobreposição.
-- Se o seu pacote atender aos critérios mínimos, o editor designará de 1 a 3 revisores. Eles serão solicitados a fornecer revisões como comentários sobre a sua edição dentro de 3 semanas.
-- Pedimos que você responda aos comentários dos revisores em até duas semanas após a última revisão enviada, mas você pode fazer atualizações no seu pacote ou responder a qualquer momento. Sua resposta deve incluir um link para a versão atualizada do seu pacote. [NEWS.md](#news) atualizado de seu pacote. Aqui está [um exemplo de resposta do autor](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  Incentivamos conversas contínuas entre autores e revisores. Consulte a seção [guia de revisão](#reviewerguide) para obter mais detalhes.
-- Sempre que houver mudanças no pacote que possam alterar os resultados de [automatizados `pkgcheck` verificações](https://docs.ropensci.org/pkgcheck) Se você não tiver uma verificação automática, os autores podem solicitar uma nova verificação com o comando, `@ropensci-review-bot check package`.
-- Notifique-nos imediatamente se você não puder mais manter o seu pacote ou responder às revisões. Espera-se que você retire um envio ou encontre mantenedores alternativos para o pacote. Você também pode discutir questões de manutenção no espaço de trabalho rOpenSci slack.
-- Assim que seu pacote for aprovado, forneceremos mais instruções sobre a transferência do seu repositório para o repositório do rOpenSci.
+- Um editor [editor](#editors) analisará sua submissão em até 5 dias úteis e responderá com as próximas etapas. O editor poderá atribuir o pacote a revisores, solicitar que o pacote seja atualizado para atender aos critérios mínimos antes da revisão ou rejeitar o pacote devido à falta de adequação ou sobreposição.
+- Se o seu pacote atender aos critérios mínimos, o editor designará de 1 a 3 revisores. Eles serão solicitados a fornecer revisões como comentários sobre a sua _issue_ (submissão) dentro de 3 semanas.
+- Pedimos que você responda aos comentários dos revisores em até 2 semanas após a última revisão enviada, mas você pode fazer atualizações no seu pacote ou responder a qualquer momento. Sua resposta deve incluir um link para a versão atualizada da sua [NEWS.md](#news) do seu pacote. Aqui está um [exemplo de resposta de autor](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  Incentivamos conversas contínuas entre autores e revisores. Consulte a seção [guia de revisão](#reviewerguide) para obter mais detalhes.
+- Frequentemente, mudanças no pacote podem alterar os resultados automatizados [das verificações `pkgcheck`](https://docs.ropensci.org/pkgcheck). Para avaliar isso, autores podem solicitar uma nova verificação do pacote com o comando `@ropensci-review-bot check package`.
+- Notifique-nos imediatamente se você não puder mais manter o seu pacote ou responder às revisões. Nestes casos, se espera que você retire a submissão ou que encontre mantenedores alternativos para o pacote. Você também pode discutir questões de manutenção na área de trabalho da rOpenSci no Slack.
+- Assim que seu pacote for aprovado, forneceremos mais instruções sobre a transferência do seu repositório para o repositório da rOpenSci.
 
 Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de revisão.
 
