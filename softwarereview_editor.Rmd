@@ -6,8 +6,9 @@ aliases:
 # Guide for Editors {#editorguide}
 
 ```{block, type="summaryblock"}
-Software Peer Review at rOpenSci is managed by a team of editors.  We are piloting
-a system of a rotating Editor-in-Chief (EiC).
+Software Peer Review at rOpenSci is managed by a team of editors.
+The Editor-in-Chief (EiC) role is rotated (generally quarterly) amongst experienced members of our editorial board.
+Information on current and recent editors and their activities can be viewed on our editorial dashboard at [dashboard.ropensci.org](https://dashboard.ropensci.org).
 
 This chapter presents the responsabilities [of the Editor-in-Chief](#eicchecklist), of [any editor in charge of a submission](#editorchecklist), [how to respond to an out-of-scope submission](#outofscoperesponse) and [how to manage a dev guide release](#bookrelease).
 
@@ -20,32 +21,28 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 
 - In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly.
 
-- We also rotate [Editor-in-Chief responsibilities](#eicchecklist) (first-pass scope decisions and assigning editors) amongst the board about quarterly.
-
-- You do not have to keep track of other submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on slack. Examples:
+- You only need to keep track of your own submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on slack. Examples:
   
   - You know of an overlapping package, that hasn't been mentioned in the process yet.
-  - You see a question to which you have an expert answer that hasn't been given after a few days (e.g. you know of a blog post tackling how to add images to package docs).
-  - Concerns related to e.g. the speed of the process should be tackled by the editor-in-chief so that's who you'd turn to for such questions.
+  - You see a question to which you have an expert answer that hasn't been given after a few days (such as linking to a blog post which may answer a question).
+  - Concerns related to general review progress, including aspects such as the speed of the process, should be directed to the current Editor-in-Chief.
 
 ## Handling Editor's Checklist {#editorchecklist}
 
 ### Upon submission: {#upon-submission}
 
-- If you're the EiC or the first editor to respond, assign an editor with a comment of `@ropensci-review-bot assign @username as editor`. This will also add tag `1/editor-checks` to the issue.
-- For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue.
-- Submission will automatically generate package check output from ropensci-review-bot which should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package.). If you want to re-run checks after any package change post a comment `@ropensci-review-bot check package`.
+- Submission will automatically generate package check output from ropensci-review-bot. The check results should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package). Checks can be re-run after any package change with the comment `@ropensci-review-bot check package`.
+- For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue (if not already added).
+- Check that issue template has been properly filled out. Most common oversights and omissions should be caught and noted by the bot, but a manual check always helps. Editors can edit templates directly for minor fixes, or may direct authors to fill any mandatory template fields that may be missing.
 - The checking system is rebuilt at every Tuesday at 00:01 UTC, and can take a couple of hours. If automatic checks fail around that time, wait a few hours and try again.
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
-- Check that template has been properly filled out.
 - Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
   Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
   If reject, see [this section](#outofscoperesponse) about how to respond.
-- Check that mandatory parts of template are complete.  If not, direct authors toward appropriate instructions.
-- For packages needing continuous integration on multiple platforms (cf [criteria in this section of the CI chapter](#whichci)) make sure the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance).
-- Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. [Example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
-- Ideally, the remarks you make should be tackled before reviewers start reviewing.
-- If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label via typing `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder every 90 days (in the issue) to check in with the package author(s).
+- Ensure that the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance; see [criteria in this section of the CI chapter](#whichci) for further details and options).
+- Wherever possible when asking for changes, direct authors to automatic tools such as [`usethis`](https://usethis.r-lib.org/) and [`styler`](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. See this [example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Ideally, any remarks you make as editor should be addressed before assigning reviewers.
+- If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label by calling `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder in the issue every 90 days to check in with the package author(s).
 - If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
 ### Look for and assign two reviewers: {#look-for-and-assign-two-reviewers}
@@ -114,7 +111,7 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 ### After review: {#after-review}
 
 - `@ropensci-review-bot approve <package-name>`
-- *If the original repository owner opposes transfer, add a line with its address to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
+- *If the original repository wishes to keep the package in their own GitHub organization rather than transfer to ropensci, add a line with the repository URL to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
 - Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 - If authors maintain a gitbook that is at least partly about their
   package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors
@@ -126,48 +123,55 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 ## EiC Responsibilities {#eicchecklist}
 
-The EiC serves for 3 months or a time agreed to by all members of the editorial board.
-The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help/advice).
-In details, the EiC plays the following roles
+Rotating Editors-in-Chief (EiCs) generally serve for 3 months or a time agreed to by all members of the editorial board.
+The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help and advice).
+Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://dashboard.ropensci.org).
+The EiC is responsible for the following tasks:
 
-- Watches all issues posted to the software-review repo (either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack).
+- On assuming EiC rotation, reviewing the status of current open reviews as detailed on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and issuing reminders to other editors or package authors as needed. See [the following sub-section for more details](#eic-dashboard)
 
-- Tags issue with ` 0/editorial-team-prep`
+- Watching all new issues posted to the software-review repo, for which the EiC must either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack.
 
-- Calls `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
+- Tagging each new full submission with ` 0/editorial-team-prep`
 
-- Assigns package submissions to other editors, including self, to handle. Mostly this just rotates among editors, unless the EiC thinks an editor is particularly suited to a package, or an editor declines handling the submission due to being too busy or because of conflicting interests.
+- Calling `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
+
+- Finding an editor (potentially including yourself) to handle each submission. Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
   
+- Assigning editors by issuing the command:
   ```
   @ropensci-review-bot assign @username as editor
   ```
+  This will also add tag `1/editor-checks` to the issue.
 
-- Regularly (for instance weekly) monitors pace of review process thanks to [devguider](#eic-report) and reminds other editors to move packages along as needed.
+- Regularly (for instance weekly) monitoring the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and reminding other editors to move packages along as needed.
 
-- On assuming EiC rotation, reviews status of current open reviews thanks to [devguider](#eic-report) and reminds editors to respond or update status as needed.
+- Responding to issues posted to [the software-review-meta repo
 
-- Responds to issues posted to the software-review-meta repo
-
-- Makes decisions on scope/overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions if they see an ambiguous case (This last case may also be done by handling editors (see below)). To initiate discussion, this is posted to the rOpenSci Slack editors-only channel along with a small summary of what the (pre-)submitted/referred submission is about, what doubts the EiC has i.e. digesting information a bit. If after one day or two the EiC feels they haven't received enough answers, they can ping all editors.
+- Making decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions. Discussions should be initiated in the rOpenSci Slack editors-only channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have. If after the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
   
   - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
-  - After explaining the out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+  - After explaining an out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
 
-- Requests a new EiC when their rotation is up (set a calendar reminder ahead of your expected end date and ask for volunteers in the editors' Slack channel)
+### The rOpenSci Editorial Dashboard {#eic-dashboard}
 
-### Using `devguider::devguide_eic_report()` {#eic-report}
+The [*rOpenSci Editorial Dashboard*](https://dashboard.ropensci.org) is updated daily, primary by extracting information on all software review issues on GitHub, along with additional information from Slack and our Airtable database.
+The dashboard provides an up-to-date overview of our editorial team, their recent reponsibilities, and the current state of all software review issues.
+The EiC (or any editors who are interested) can gain an overview of the editorial team status, availability, and recent workloads on [the *editors* page](https://dashboard.ropensci.org/editors.html).
+This should be used to find and assign editors for new software review issues.
+An overview of all current software reviews is on [the **Software Review* page](https://dashboard.ropensci.org/reviews.html).
+Entries on this page are colored by a measure of "urgency", summarised in the [table at the bottom of that page](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
-Install devguider and run `devguider::devguide_eic_report()`, open the HTML report in a browser.
+Specific tasks for reviews in the specific review stages include:
 
-- Look over submissions in "presubmission" and "editorial-team-prep". Check whether any action needs to be taken (polling editors, making a decision, putting the issue on hold, pinging the submitter for an update, finding and assigning an editor).
+- Looking over submissions in "0\/presubmission" and "1\/editorial-team-prep", to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
 
-- Rows in each section are colored by "urgency" from white (ignore) to yellow (not urgent) to red (most urgent).
+- Looking over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly.
+If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Look over submissions in "seeking-reviewer(s)". If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
+- Looking over submissions in "3\/reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Look over submissions in "reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
-
-- Look over submissions in "review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information / whether the submission fell through the cracks.
+- Looking over submissions in "4\/review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information.
 
 ### Asking for more details {#asking-for-more-details}
 
