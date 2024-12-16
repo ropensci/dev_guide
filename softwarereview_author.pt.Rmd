@@ -11,7 +11,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ## Planejando uma Submissão (ou uma Consulta de Pré-Submissão) {#planning-a-submission-or-a-pre-submission-enquiry}
 
-- Você pretende manter seu pacote por pelo menos 2 anos ou ser capaz de identificar um novo mantenedor?
+- Você pretende manter o seu pacote por pelo menos 2 anos ou ser capaz de identificar um(a) novo(a) mantenedor(a)?
 - Consulte nossas [políticas de uso](#policies) para ver se o seu pacote atende aos nossos critérios e se encaixa em nossa coleção, não se sobrepondo a outros pacotes.
   - Se você não tiver certeza de que um pacote atende aos nossos critérios, sinta-se à vontade para abrir um problem (_issue_) como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
   - [Exemplo de resposta a sobreposição](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Também considere adicionar alguns pontos sobre pacotes semelhantes ao seu na sua [documentação do pacote](#docs-general).
