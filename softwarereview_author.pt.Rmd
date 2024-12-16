@@ -37,7 +37,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ## O Processo de Submissão {#the-submission-process}
 
-- Um software é enviado a revisão (submetido) ao ser  [aberta uma nova _issue_](https://github.com/ropensci/software-review/issues/new/choose) no repositório de revisão do software, sendo preenchido o modelo sugerido.
+- Um software é enviado/submetido para revisão através da [abertura de uma nova _issue_](https://github.com/ropensci/software-review/issues/new/choose) no repositório de revisão do software, sendo preenchido o modelo sugerido.
 - O modelo sugerido começa com uma seção que inclui diversas variáveis no estilo HTML (`<!---variável--->`). Elas são usadas pelo nosso `ropensci-review-bot` e devem ser deixadas nos seus respectivos lugares, com valores preenchidos entre os pontos de início e fim indicados, assim:
 
 ```{bash, eval=F}
