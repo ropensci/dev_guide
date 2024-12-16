@@ -22,7 +22,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Se você usa [distintivos do repostatus.org](https://www.repostatus.org/) (o que recomendamos), envie uma submissão quando você estiver pronto para receber um distintivo tipo _Active_ em vez de _WIP_. Da mesma forma, se você usa [distintivos tipo _lifecycle_](https://www.tidyverse.org/lifecycle/) o envio da submissão deverá ocorrer quando o pacote for _Stable_.
 - Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um website pkgdown para permitir uma avaliação mais detalhada da funcionalidade online.
   - No estágio de envio da submissão, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o LEIAME deve apresentar uma base segura para o pacote.
-  - Seu arquivo LEIAME deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
+  - Seu arquivo README deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
 - Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece orientação sobre o tópico](#evolution).
 
 ## Preparando para Submissão {#preparing-for-submission}
