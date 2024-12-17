@@ -1,38 +1,32 @@
 ---
-aliases: policies.html
+aliases:
+  - policies.html
 ---
 
 # Políticas de revisão por pares de software {#policies}
 
 ```{block, type="summaryblock"}
-Este capítulo contém as políticas da revisão por pares da rOpenSci Software.
+Este capítulo contém as políticas de revisão de software por pares da rOpenSci.
 
-Em particular, você lerá nossas políticas relativas à própria revisão por pares de software: o [processo de submissão de revisões](#review-submission), incluindo nossas [políticas de conflito de interesses](#coi) e os [objetivos e escopo do sistema de Revisão por Pares de Software](#aims-and-scope). Esse capítulo também apresenta nossas políticas relacionadas à [propriedade e manutenção de pacotes] (#propriedade-depois-da-revisão-de-software).  
+Em particular, você deverá ler nossas políticas relativas à revisão de software por pares por conta própria: o [processo de submissão de revisões](#review-submission), incluindo nossas [políticas de conflito de interesses](#coi) e os [objetivos e escopo do sistema de Revisão de Software por Pares](#aims-and-scope). Esse capítulo também apresenta nossas políticas relacionadas à [propriedade e manutenção de pacotes] (#propriedade-depois-da-revisão-de-software).  
 
-Por último, mas não menos importante, você encontrará o [código de conduta da Revisão por Pares de Software rOpenSci](#code-of-conduct).
+Por último, mas não menos importante, você encontrará o [código de conduta da Revisão de Software por Pares da rOpenSci](#code-of-conduct).
 ```
 
 ## Processo de revisão {#policiesreviewprocess}
 
-- Para que um pacote seja considerado para o conjunto rOpenSci, os autores do pacote devem iniciar uma solicitação no site [ropensci/software-review](https://github.com/ropensci/software-review) no repositório ropensci/software-review.
-- Os pacotes são revisados quanto à qualidade, adequação, documentação e clareza, e o processo de revisão é bastante semelhante ao de um manuscrito (consulte nosso [guia de empacotamento](#building) e [guia de revisão](#reviewerguide) para obter mais detalhes). Diferentemente de uma revisão de manuscrito, esse processo será uma conversa contínua.
-- Quando todos os principais problemas e dúvidas, e aqueles que podem ser abordados com esforço razoável, forem resolvidos, o editor designado para um pacote tomará uma decisão (aceitar, reter ou rejeitar). As rejeições geralmente são feitas com antecedência (antes do início do processo de revisão, consulte [a seção de objetivos e escopo](#aims-and-scope)), mas, em casos raros, um pacote também pode não ser aceito após a análise e a revisão. Em última análise, a decisão de rejeitar ou não o pacote é do editor, com base em como as revisões são tratadas.
-- A comunicação entre autores, revisores e editores ocorrerá principalmente no GitHub, embora você possa optar por entrar em contato com o editor por e-mail ou Slack para alguns problemas. Ao enviar um pacote, certifique-se de que suas configurações de notificação do GitHub tornam improvável que você perca um comentário.
-- O autor pode optar por ter seu envio colocado em espera (o editor aplica o rótulo de espera). O status de retenção será revisado a cada três meses e, após um ano, o problema será encerrado.
-- Se o autor não tiver solicitado um rótulo de retenção, mas simplesmente não estiver respondendo, devemos fechar a edição dentro de um mês após a última intenção de contato. Essa intenção incluirá um comentário marcando o autor, mas também um e-mail usando o endereço de e-mail listado na DESCRIÇÃO do pacote, que é um dos raros casos em que o editor tentará entrar em contato com o autor por e-mail.
-- Se um envio for encerrado e o autor desejar enviá-lo novamente, ele terá que iniciar um novo envio. Se o pacote ainda estiver no escopo, o autor terá que responder às revisões iniciais antes que o editor comece a procurar novos revisores.
+- Para que um pacote seja considerado ao conjunto da rOpenSci, os autores do pacote devem iniciar uma solicitação no repositório [ropensci/software-review](https://github.com/ropensci/software-review).
+- Pacotes são revisados quanto à qualidade, adequação, documentação e clareza, e o processo de revisão é bastante semelhante ao de um manuscrito (consulte nosso [guia de empacotamento](#building) e [guia de revisão](#reviewerguide) para obter mais detalhes). Diferentemente de uma revisão de manuscrito, esse processo se configura como uma conversa contínua.
+- Quando todos os principais problemas e dúvidas, incluindo aqueles que podem ser abordados com esforço razoável, forem resolvidos, o editor designado para um pacote tomará uma decisão (aceitar, reter ou rejeitar). Rejeições geralmente são feitas com antecedência (antes do início do processo de revisão; consulte a [seção de objetivos e escopo](#aims-and-scope)). Em casos raros, um pacote também pode não ser aceito após a análise e a revisão. Em última análise, a decisão de rejeitar ou não o pacote é do editor com base em como as revisões são tratadas.
+- A comunicação entre autores, revisores e editores ocorrerá principalmente pelo GitHub, embora você possa optar por entrar em contato com o editor por e-mail ou Slack para alguns problemas. Ao enviar um pacote, certifique-se de que suas configurações de notificação do GitHub tornam improvável que você perca um comentário.
+- O autor pode optar por ter seu envio colocado em retenção (o editor aplica o rótulo de retenção). O status de retenção será revisado a cada 3 meses e, após 1 ano, o problema será encerrado.
+- Se o(a) autor(a) não tiver solicitado um rótulo de retenção, mas simplesmente não estiver respondendo, devemos fechar a edição dentro de 1 mês após a última ocasião de contato. Esta ocasião incluirá um comentário marcando o autor, mas também um e-mail usando o endereço de e-mail listado na DESCRIÇÃO do pacote, que é um dos raros casos no qual o editor tentará entrar em contato com o autor por e-mail.
+- Se uma submissão for encerrada e o(a) autor(a) desejar reenviá-la, ele(a) terá que iniciar uma nova submissão. Se o pacote ainda estiver no escopo, o autor terá que responder às revisões iniciais antes que o editor comece a procurar novos revisores.
 
-### Publicação em outros locais {#publishing-in-other-venues}
+### Publicando em outros locais {#publishing-in-other-venues}
 
-- É altamente recomendável que você envie seu pacote para análise *antes que* publicar
-  no CRAN ou enviar um artigo de software descrevendo o pacote para um periódico.
-  O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote,
-  incluindo renomeação e alterações de quebra de funções.  Não consideramos
-  a publicação anterior no CRAN ou em outros locais razão suficiente para que você
-  não adotar as recomendações de revisores ou editores.
-- Não envie seu pacote para análise enquanto ele ou um manuscrito associado
-  também esteja sendo revisado em outro local, pois isso pode resultar em conflitos entre você e o editor.
-  solicitações de alterações conflitantes.
+- Sugerimos fortemente que você envie seu pacote para revisão *antes de* publicá-lo no CRAN ou enviar um artigo de software descrevendo o pacote em um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote,  incluindo renomeações e alterações críticas de funções. Não consideramos a publicação anterior no CRAN ou em outros locais como razão suficiente para não adotar as recomendações de revisores ou editores.
+- Não envie seu pacote para revisão se ele ou um manuscrito associado estiver sendo revisado em outro local, pois isso pode resultar em solicitações de alterações conflitantes.
 
 ### Conflito de interesses para revisores/editores {#coi}
 
@@ -49,11 +43,11 @@ No caso de nenhum dos [editores associados](#associateditors) possa atuar como e
 
 ## Objetivos e escopo {#aims-and-scope}
 
-O objetivo do rOpenSci é oferecer suporte a pacotes que possibilitem a pesquisa reproduzível e o gerenciamento do ciclo de vida dos dados para os cientistas.  Os pacotes enviados à rOpenSci devem se enquadrar em uma ou mais das categorias descritas abaixo.  O software estatístico também pode ser enviado para revisão por pares, para o qual temos uma seção separada [conjunto separado de diretrizes e padrões](https://stats-devguide.ropensci.org/index.html). As categorias abaixo são para software geral, e não estatístico, enquanto o restante deste capítulo se aplica a ambos os tipos de software. Se você não tiver certeza se o seu pacote se encaixa em uma das categorias gerais ou estatísticas, abra um problema como uma consulta de pré-submissão ([**Exemplos**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
+O objetivo da rOpenSci é oferecer suporte a pacotes que possibilitem a pesquisa reproduzível e o gerenciamento do ciclo de vida dos dados para os cientistas.  Os pacotes enviados à rOpenSci devem se enquadrar em uma ou mais das categorias descritas abaixo.  O software estatístico também pode ser enviado para revisão por pares, para o qual temos uma seção separada [conjunto separado de diretrizes e padrões](https://stats-devguide.ropensci.org/index.html). As categorias abaixo são para software geral, e não estatístico, enquanto o restante deste capítulo se aplica a ambos os tipos de software. Se você não tiver certeza se o seu pacote se encaixa em uma das categorias gerais ou estatísticas, abra um problema como uma consulta de pré-submissão ([**Exemplos**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
 Como este é um documento vivo, essas categorias podem mudar com o tempo e nem todos os pacotes previamente integrados estariam no escopo hoje. Por exemplo, os pacotes de visualização de dados não estão mais no escopo. Embora nos esforcemos para ser consistentes, avaliamos os pacotes caso a caso e podemos abrir exceções.
 
-Observe que nem todos os projetos e pacotes do rOpenSci estão dentro do escopo ou passam por revisão por pares.  Projetos desenvolvidos por [equipe](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o selo de revisão por pares - veja abaixo - para identificar pacotes revisados por pares no repositório rOpenSci.
+Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo ou passam por revisão por pares.  Projetos desenvolvidos por [equipe](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o selo de revisão por pares - veja abaixo - para identificar pacotes revisados por pares no repositório rOpenSci.
 
 ![exemplo de um selo verde de revisão por pares](images/status.png)
 
@@ -95,13 +89,13 @@ Os pacotes devem ser *gerais* no sentido de que devem resolver um problema da fo
 
 Os pacotes que incluem ferramentas interativas para facilitar os fluxos de trabalho dos pesquisadores (por exemplo, aplicativos brilhantes) devem ter um mecanismo para tornar o fluxo de trabalho interativo reproduzível, como a geração de código ou uma API com script.
 
-Para pacotes que não estão no escopo do rOpenSci, recomendamos que você os envie para o CRAN, BioConductor, bem como para outras iniciativas de desenvolvimento de pacotes do R (por exemplo, [cloudyr](https://cloudyr.github.io/)) e periódicos de software, como JOSS, JSS ou o periódico R, dependendo do escopo atual desses periódicos.
+Para pacotes que não estão no escopo da rOpenSci, recomendamos que você os envie para o CRAN, BioConductor, bem como para outras iniciativas de desenvolvimento de pacotes do R (por exemplo, [cloudyr](https://cloudyr.github.io/)) e periódicos de software, como JOSS, JSS ou o periódico R, dependendo do escopo atual desses periódicos.
 
-Observe que os pacotes desenvolvidos internamente pela rOpenSci, por meio de nossos eventos ou colaborações, não estão todos no escopo do nosso processo de Revisão por Pares de Software.
+Observe que os pacotes desenvolvidos internamente pela rOpenSci, por meio de nossos eventos ou colaborações, não estão todos no escopo do nosso processo de Revisão de Software por Pares.
 
 ### Sobreposição de pacotes {#overlap}
 
-O rOpenSci incentiva a concorrência entre pacotes, a bifurcação e a reimplementação, pois elas melhoram as opções dos usuários em geral. No entanto, como queremos que os pacotes do conjunto rOpenSci sejam nossas principais recomendações para as tarefas que realizam, nosso objetivo é evitar a duplicação da funcionalidade de pacotes R existentes em qualquer repositório sem melhorias significativas. Um pacote R que replica a funcionalidade de um pacote R existente pode ser considerado para inclusão no conjunto rOpenSci se ele melhorar significativamente as alternativas em qualquer repositório (RO, CRAN, BioC) por ser:
+A rOpenSci incentiva a concorrência entre pacotes, a bifurcação e a reimplementação, pois elas melhoram as opções dos usuários em geral. No entanto, como queremos que os pacotes do conjunto rOpenSci sejam nossas principais recomendações para as tarefas que realizam, nosso objetivo é evitar a duplicação da funcionalidade de pacotes R existentes em qualquer repositório sem melhorias significativas. Um pacote R que replica a funcionalidade de um pacote R existente pode ser considerado para inclusão no conjunto rOpenSci se ele melhorar significativamente as alternativas em qualquer repositório (RO, CRAN, BioC) por ser:
 
 - Mais aberto nas práticas de licenciamento ou desenvolvimento
 - Mais amplo em termos de funcionalidade (por exemplo, fornecer acesso a mais conjuntos de dados, fornecer um conjunto maior de funções), mas não apenas duplicando pacotes adicionais
@@ -110,15 +104,15 @@ O rOpenSci incentiva a concorrência entre pacotes, a bifurcação e a reimpleme
 
 Esses fatores devem ser considerados *como um todo* para determinar se o pacote é uma melhoria significativa. Um novo pacote não atenderia a esse padrão apenas por seguir nossas diretrizes de pacote, enquanto outros não o fazem, a menos que isso leve a uma diferença significativa nas áreas acima.
 
-Recomendamos que os pacotes destaquem as diferenças e os aprimoramentos dos pacotes que se sobrepõem em seu LEIAME e/ou vinhetas.
+Recomendamos que os pacotes destaquem as diferenças e os aprimoramentos dos pacotes que se sobrepõem em seu README e/ou vinhetas.
 
 Incentivamos os desenvolvedores cujos pacotes não forem aceitos devido à sobreposição a considerarem o envio para outros repositórios ou periódicos.
 
 ## Propriedade e manutenção de pacotes {#ownership-after-softwarereview}
 
-### Função da equipe do rOpenSci {#role-of-the-ropensci-team}
+### Função da equipe da rOpenSci {#role-of-the-ropensci-team}
 
-Os autores de pacotes contribuídos mantêm essencialmente a mesma propriedade que tinham antes de seu pacote entrar no conjunto rOpenSci. Os autores de pacotes continuarão a manter e desenvolver seus softwares após a aceitação no rOpenSci. A menos que sejam explicitamente adicionados como colaboradores, a equipe do rOpenSci não interferirá muito nas operações do dia a dia. No entanto, essa equipe poderá intervir com correções de bugs críticos ou resolver problemas urgentes se os autores dos pacotes não responderem em tempo hábil (consulte [a seção sobre a capacidade de resposta dos mantenedores](#maintainer-responsiveness)).
+Os autores de pacotes contribuídos mantêm essencialmente a mesma propriedade que tinham antes de seu pacote entrar no conjunto rOpenSci. Os autores de pacotes continuarão a manter e desenvolver seus softwares após a aceitação na rOpenSci. A menos que sejam explicitamente adicionados como colaboradores, a equipe da rOpenSci não interferirá muito nas operações do dia a dia. No entanto, essa equipe poderá intervir com correções de bugs críticos ou resolver problemas urgentes se os autores dos pacotes não responderem em tempo hábil (consulte [a seção sobre a capacidade de resposta dos mantenedores](#maintainer-responsiveness)).
 
 ### Capacidade de resposta do mantenedor {#maintainer-responsiveness}
 
@@ -133,13 +127,13 @@ O que foi dito acima é um pouco vago, portanto, a seguir estão algumas áreas 
   - Pacote `hello` não está no CRAN, ou está no CRAN, mas não tem dependências reversas.
   - Pacote `world` precisa de algumas correções. O mantenedor respondeu, mas simplesmente está muito ocupado com um novo emprego, ou por outro motivo, e você será atendido em breve.
 
-Pedimos aos mantenedores de pacotes que se certifiquem de que estão recebendo notificações do GitHub, bem como que os e-mails da equipe da rOpenSci e dos mantenedores do CRAN não estejam indo para a caixa de spam. Os autores de pacotes integrados serão convidados para o Slack do rOpenSci para conversar com a equipe do rOpenSci e com a comunidade do rOpenSci em geral. Qualquer pessoa também pode discutir com a comunidade rOpenSci no site [Fórum de discussão do rOpenSci](https://discuss.ropensci.org/).
+Pedimos aos mantenedores de pacotes que se certifiquem de que estão recebendo notificações do GitHub, bem como que os e-mails da equipe da rOpenSci e dos mantenedores do CRAN não estejam indo para a caixa de spam. Os autores de pacotes integrados serão convidados para o Slack da rOpenSci para conversar com a equipe da rOpenSci e com a comunidade da rOpenSci em geral. Qualquer pessoa também pode discutir com a comunidade rOpenSci no site [Fórum de discussão da rOpenSci](https://discuss.ropensci.org/).
 
 Se os autores abandonarem a manutenção de um pacote usado ativamente em nosso conjunto, consideraremos a possibilidade de solicitar ao CRAN a transferência do status de mantenedor do pacote para a rOpenSci.
 
 ### Compromisso com a qualidade {#quality-commitment}
 
-A rOpenSci se esforça para desenvolver e promover software de pesquisa de alta qualidade. Para garantir que o seu software atenda aos nossos critérios, analisamos todos os nossos envios como parte do processo de Revisão por Pares de Software e, mesmo após a aceitação, continuaremos a contribuir com melhorias e correções de bugs.
+A rOpenSci se esforça para desenvolver e promover software de pesquisa de alta qualidade. Para garantir que o seu software atenda aos nossos critérios, analisamos todos os nossos envios como parte do processo de Revisão de Software por Pares e, mesmo após a aceitação, continuaremos a contribuir com melhorias e correções de bugs.
 
 Apesar de nossos melhores esforços para oferecer suporte ao software contribuído, os erros são de responsabilidade dos mantenedores individuais. Os softwares com bugs e sem manutenção podem ser removidos do nosso pacote a qualquer momento.
 
@@ -277,6 +271,6 @@ e revisores na abordagem de questões éticas relacionadas à privacidade e ao s
 
 ## Código de Conduta {#code-of-conduct}
 
-A comunidade do rOpenSci é o nosso melhor patrimônio. Seja você um colaborador assíduo ou um recém-chegado, nós nos preocupamos em fazer deste um lugar seguro para você e o apoiamos. Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação on-line ou pessoalmente. O Código de Conduta [Código de Conduta](https://ropensci.org/code-of-conduct/) é mantido no site do rOpenSci.
+A comunidade da rOpenSci é o nosso melhor patrimônio. Seja você um colaborador assíduo ou um recém-chegado, nós nos preocupamos em fazer deste um lugar seguro para você e o apoiamos. Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação on-line ou pessoalmente. O Código de Conduta [Código de Conduta](https://ropensci.org/code-of-conduct/) é mantido no site da rOpenSci.
 
 
