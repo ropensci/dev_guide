@@ -40,7 +40,7 @@ Há vários serviços de integração contínua, incluindo serviços autônomos 
 
 [Ações do GitHub](https://github.com/features/actions) é uma opção conveniente para muitos desenvolvedores de R que já usam o GitHub, pois está integrada à plataforma e oferece suporte a todos os sistemas operacionais necessários. Existem [ações compatíveis com o ecossistema R](https://github.com/r-lib/actions/) bem como suporte de primeira classe no pacote [{usethis}](https://usethis.r-lib.org/reference/github_actions.html). Todos os pacotes enviados à rOpenSci para revisão por pares são verificados por nosso [sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), descrito mais detalhadamente na seção [Guia para Autores](#authors-guide). Essas verificações também são fornecidas como uma ação do GitHub no repositório [`ropensci-review-tools/pkgcheck-action`](https://github.com/ropensci-review-tools/pkgcheck-action). Os autores de pacotes são incentivados a usar essa ação para confirmar, antes do envio, que um pacote passa em todas as nossas verificações. Consulte [nossa publicação no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) para obter mais informações.
 
-[usethis oferece suporte a configuração de CI para outros sistemas](https://usethis.r-lib.org/reference/ci.html) embora essas funções estejam ligeiramente obsoletas. rOpenSci também oferece suporte ao pacote [círculo](https://docs.ropensci.org/circle/) que auxilia na configuração de pipelines CircleCI, e ao pacote [tic](https://docs.ropensci.org/tic/) para criar pipelines de CI mais complicadas.
+[usethis oferece suporte a configuração de CI para outros sistemas](https://usethis.r-lib.org/reference/ci.html) embora essas funções estejam levemente obsoletas. rOpenSci também oferece suporte ao pacote [círculo](https://docs.ropensci.org/circle/) que auxilia na configuração de pipelines CircleCI, e ao pacote [tic](https://docs.ropensci.org/tic/) para criar pipelines de CI mais complicadas.
 
 #### Testes usando diferentes versões do R {#testing-using-different-versions-of-r}
 
@@ -56,7 +56,7 @@ Se você desenvolver um pacote que dependa ou seja destinado ao Bioconductor, es
 
 Você pode usar estas dicas para minimizar o tempo de compilação na CI:
 
-- Instalação em cache de pacotes. O padrão faz isso [r-lib/actions workflows](https://github.com/r-lib/actions).
+- Instalar os pacotes em um cache que possa ser reutilizado no processo de CI/CD quando necessário (_cache installation of packages_). O padrão faz isso [r-lib/actions workflows](https://github.com/r-lib/actions).
 
 #### Dependências do sistema {#sysdeps-ci}
 
