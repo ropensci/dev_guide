@@ -37,6 +37,7 @@ jobs:
         env: # Set the secret as an input
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          BABELQUARTO_CI_URL: https://devdevguide.netlify.app
 
       - name: Move English files
         run: Rscript -e 'file.copy(from = "_book/rOpenSci-Packages--Development,-Maintenance,-and-Peer-Review.pdf", to = "_book/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/images")'
