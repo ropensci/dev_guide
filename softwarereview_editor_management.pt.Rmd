@@ -1,7 +1,4 @@
----
-aliases:
-  - editorialmanagement.html
----
+ 
 
 # Gerenciamento editorial {#editorialmanagement}
 
