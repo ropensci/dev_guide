@@ -18,7 +18,7 @@ Todos são livres para ter sua própria opinião sobre a liberdade com que parâ
 ## O pacote lifecycle {#the-lifecycle-package}
 
 Este capítulo apresenta soluções que não requerem o pacote lifecycle, mas que você ainda pode considerar úteis.
-Recomendamos que você [que você leia a documentação do lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
+Recomendamos que você [leia a documentação do lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
 
 ## Parâmetros: alteração dos nomes dos parâmetros {#parameters-changing-parameter-names}
 
@@ -53,7 +53,7 @@ foo_bar(x = 5)
 #> 25
 ```
 
-Esteja ciente do parâmetro `...`. Se sua função tiver `...` e você já tiver removido um parâmetro (vamos chamá-lo de `z`), um usuário pode ter um código mais antigo que usa `z`. Quando você passa o parâmetro `z` ele não é um parâmetro na definição da função e provavelmente será ignorado silenciosamente -- não é o que você deseja. Em vez disso, deixe o argumento por perto, lançando um erro se ele for usado.
+Esteja ciente do parâmetro `...`. Se sua função tiver `...` e você já tiver removido um parâmetro (vamos chamá-lo de `z`), um usuário pode ter um código mais antigo que usa `z`. Quando você passa o parâmetro `z` ele não é um parâmetro na definição da função e provavelmente será ignorado silenciosamente -- não é o que você deseja. Em vez disso, deixe o argumento presente, lançando um erro se ele for usado.
 
 ## Funções: alteração de nomes de funções {#functions-changing-function-names}
 
@@ -203,7 +203,7 @@ Quando uma função se torna "defunct", seus testes são simplesmente removidos.
 
 ## Arquivamento de pacotes {#archivalguidance}
 
-O software geralmente tem uma vida útil finita, e os pacotes podem precisar ser arquivados. Os pacotes arquivados são [arquivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) e movidos para uma organização dedicada no GitHub, [ropensci-archive](https://github.com/ropensci-archive). Antes do arquivamento, o conteúdo do arquivo README deve ser movido para um local alternativo (como "README-OLD.md") e substituído por um conteúdo mínimo, incluindo algo como o seguinte:
+Software geralmente tem uma vida útil finita, e os pacotes podem precisar ser arquivados. Os pacotes arquivados são [arquivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) e movidos para uma organização dedicada no GitHub, [ropensci-archive](https://github.com/ropensci-archive). Antes do arquivamento, o conteúdo do arquivo README deve ser movido para um local alternativo (como "README-OLD.md") e substituído por um conteúdo mínimo, incluindo algo como o seguinte:
 
 ```md
 # <package name>
@@ -222,7 +222,7 @@ O *badge* de status do repositório deve estar como "unsupported" (sem suporte) 
 
 Um exemplo de um README mínimo em um pacote arquivado está em [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md). Depois que o README tiver sido copiado em outro lugar e reduzido à forma mínima, você deverá seguir as etapas a seguir:
 
-- [ ] Encerre os issues com uma frase que explique a situação e faça um link para esta orientação.
+- [ ] Encerre os *issues* com uma frase que explique a situação e faça um link para este guia.
 - [ ] Arquive o repositório no GitHub (também nas configurações do repositório).
 - [ ] Transfira o repositório para [ropensci-archive](https://github.com/ropensci-archive) ou solicite um [membro da equipe do rOpenSci](https://ropensci.org/about/#team) para transferi-lo (você pode enviar um e-mail para `info@ropensci.org`).
 
