@@ -8,7 +8,7 @@ Orientações para gerenciar a equipe editorial.
 
 ## Recrutamento de novos editores {#recruiting-new-editors}
 
-O recrutamento de novos editores e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da [Líder de revisão de software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
+O recrutamento de novos editores e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da [Líder de Revisão de Software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
 
 Etapas:
 
@@ -28,27 +28,27 @@ Etapas:
 - Envie um e-mail.
 
 ```
-We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
-We think you would make a wonderful addition to the team.
+Gostaríamos de convidá-lo a fazer parte do conselho editorial da rOpenSci como membro efetivo. [RAZÕES ESPECÍFICAS PARA O CONVITE (MENCIONAR CONTRIBUIÇÕES PARA A rOpenSci)].
+Acreditamos que você seria um excelente incremento à equipe.
 
-[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one one you just finished!]).  
-We ask that editors make an informal commitment of serving for two years, and re-evaluate their participation after that.  
-On a short-term basis, any editor can decline to handle a package or say, "I'm pretty busy, I can't handle a new package for a few weeks."
+[SE FOR EDITOR CONVIDADO -> Você está familiarizado(a) com a função do editor, pois já foi editor(a) convidado(a)]. Nosso objetivo é que os editores lidem com quatro pacotes por ano ([SE FOR EDITOR CONVIDADO -> incluindo o pacote que você acabou de finalizar!]).
+Pedimos que editores assumam um compromisso informal de servir por dois anos, reavaliando sua participação depois deste período.
+Em um curto prazo, qualquer editor pode se recusar a lidar com um pacote ou argumentar por exemplo “Estou muito ocupado e não posso lidar com um novo pacote por algumas semanas”.
 
-In addition to handling packages, editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. 
-We generally do this through Slack, which we expect editors to be able to check regularly. 
-We have editorial board calls annually.  
-We also rotate Editor-in-Chief responsibilities (first-pass scope decisions and assigning editors) amongst the board about quarterly. 
-You'll have the opportunity to enter this rotation once you have been on the board for some time, usually at least six months. 
-Some of us also take on bigger projects to improve the peer-review process, though this is entirely optional. 
+Além de lidar com pacotes, os editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinando atualizações em nossas políticas. 
+Geralmente, fazemos esse trabalho por meio do Slack, que esperamos que os editores possam verificar regularmente.
+Também, fazemos chamadas com o conselho editorial anualmente.
+Ademais, alternamos as responsabilidades do editor-chefe (decisões de escopo de primeira instância e designação de editores) entre o conselho editorial a cada três meses.
+Você terá a oportunidade de participar desse rodízio depois de fazer parte do conselho por algum tempo, geralmente isso significa pelo menos seis meses. 
+Alguns de nós também assumem projetos maiores para aprimorar o processo de revisão por pares, porém isso é opcional.
 
-We hope that you'll join the board!  
-It's an exciting time for peer-review at rOpenSci.
+Esperamos que você faça parte do conselho!
+Este é um momento empolgante para a revisão por pares na rOpenSci.
 
-Please give this some thought, ask us any questions you have, and let us know whether you can join us.
+Por favor, reflita sobre a nossa oferta e faça perguntas se algo não estiver claro. Nos informe se você pode juntar-se a equipe rOpenSci.
 
-Best,
-[EDITOR], on behalf of the rOpenSci Editorial Board
+Atenciosamente,
+[EDITOR], em nome do Conselho Editorial da rOpenSci
 ```
 
 ## Integrando um(a) novo(a) editor(a) ao time {#onboarding-a-new-editor}
