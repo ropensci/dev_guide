@@ -4,25 +4,25 @@ aliases:
   - marketing.html
 ---
 
-# Marketing your package {#marketing}
+# Marketing do seu pacote {#marketing}
 
 ```{block, type="summaryblock"}
-We will help you promoting your package but here are some more things to keep in mind.
+Ajudaremos você a promover o seu pacote, mas aqui estão mais algumas coisas que você deve ter em mente.
 ```
 
-- If you hear of an use case of your package, please encourage its author to post the link to our [discussion forum in the Use Cases category](https://discuss.ropensci.org/c/usecases), [for a tweet from rOpenSci and possible inclusion in the rOpenSci biweekly newsletter](https://discuss.ropensci.org/t/about-the-usecases-category/33). We also recommend you to add a link to the use case in a "use cases in the wild" section of your README.
+- Se você souber de um caso de uso de seu pacote, incentive o autor a publicar o link em nosso [fórum de discussão na categoria *Use Cases*](https://discuss.ropensci.org/c/usecases), [para um post no Mastodon da rOpenSci e possível inclusão no boletim quinzenal da rOpenSci](https://discuss.ropensci.org/t/about-the-usecases-category/33). Também recomendamos que você adicione um link para o caso de uso em uma seção "use cases in the wild" do seu README.
 
-- When you [release](#releasing) a new version of your package or release it to CRAN for the first time,
+- Quando você [liberar](#releasing) uma nova versão do seu pacote ou você lançá-lo pela primeira vez no CRAN,
   
-  - Make a pull request to [R Weekly](https://github.com/rweekly/rweekly.org) with a line about the release under the "New Releases" section (or "New Packages" for the first GitHub/CRAN release).
+  - Faça um *pull request* para a [R Weekly](https://github.com/rweekly/rweekly.org) com uma linha sobre essa nova versão na seção "New Releases" (ou "New Packages" para a primeira versão do GitHub/CRAN).
   
-  - Tweet about it using the "#rstats" hashtag and tag rOpenSci! This might help with contributor/user engagement. [Example](https://twitter.com/opencpu/status/1003934871830622208).
+  - Tweet sobre isso usando a hashtag "#rstats" e marque rOpenSci! Isso pode ajudar no envolvimento do colaborador/usuário. [Exemplo](https://twitter.com/opencpu/status/1003934871830622208).
   
-  - Consider submitting a short post about the release to [rOpenSci tech notes](https://ropensci.org/technotes/). Contact rOpenSci Community Manager, (e.g. via Slack or [info@ropensci.org](mailto:info@ropensci.org)). Refer to [the guidelines about contributing a blog post](https://blogguide.ropensci.org)).
+  - Considere a possibilidade de enviar um breve post sobre o lançamento para as [Notas técnicas da rOpenSci](https://ropensci.org/technotes/). Entre em contato com o/a gerente da comunidade do rOpenSci (por exemplo, via Slack ou [info@ropensci.org](mailto:info@ropensci.org)). Consulte [as diretrizes sobre como contribuir com um *blog post*](https://blogguide.ropensci.org)).
   
-  - Submit your package to lists of packages such as [CRAN Task Views](https://cran.r-project.org/web/views/), and [rOpenSci non-CRAN Task Views](https://github.com/search?utf8=%E2%9C%93&q=user%3Aropensci+%22task+view%22&type=Repositories&ref=searchresults).
+  - Envie seu pacote para listas de pacotes, como a [Visão de tarefas do CRAN](https://cran.r-project.org/web/views/).
 
-- If you choose to market your package by giving a talk about it at a meetup or conference (excellent idea!)
-  read [this article of Jenny Bryan's and Mara Averick's](https://www.tidyverse.org/articles/2018/07/carpe-talk/).
+- Se você optar por divulgar o seu pacote dando uma palestra sobre ele em um encontro ou conferência (excelente ideia!)
+  leia [este artigo de Jenny Bryan e Mara Averick](https://www.tidyverse.org/articles/2018/07/carpe-talk/).
 
 
