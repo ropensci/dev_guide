@@ -1,6 +1,3 @@
----
-aliases: security.html
----
 
 # Práticas recomendadas de segurança no desenvolvimento de pacotes {#package-development-security-best-practices}
 
