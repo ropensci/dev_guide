@@ -226,6 +226,6 @@ Um exemplo de um README mínimo em um pacote arquivado está em [ropensci-archiv
 - [ ] Arquive o repositório no GitHub (também nas configurações do repositório).
 - [ ] Transfira o repositório para [ropensci-archive](https://github.com/ropensci-archive) ou solicite um [membro da equipe do rOpenSci](https://ropensci.org/about/#team) para transferi-lo (você pode enviar um e-mail para `info@ropensci.org`).
 
-Os pacotes arquivados podem ser desarquivados se os autores ou uma nova pessoa optarem por retomar a manutenção. Para isso, entre em contato com a rOpenSci. Eles serão transferidos para a organização ropenscilabs.
+Os pacotes arquivados podem ser desarquivados se os autores ou uma nova pessoa optarem por retomar a manutenção. Para isso, entre em contato com a rOpenSci.
 
 
