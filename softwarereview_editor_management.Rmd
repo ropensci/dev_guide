@@ -100,3 +100,16 @@ Best,
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
 
 Both the dev\_guide and software-review README are automatically knit via continuous integration.
+
+## Putting the system on pause {#vacation}
+
+If you want to put the system on a break for instance over the holidays, before leaving:
+
+- Add a vacation message to the `about` field of issue templates. [Example PR](https://github.com/ropensci/software-review/pull/679/files).
+- Add a vacation message to the bot's standard welcome response. [Example PR](https://github.com/ropensci-org/buffy/pull/108).
+
+Upon resuming activities:
+
+- Remove the vacation message from issue templates. [Example PR](https://github.com/ropensci/software-review/pull/680).
+- Remove the vacation message from the bot's standard welcome response. [Example commit](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
+
