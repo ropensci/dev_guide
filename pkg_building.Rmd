@@ -450,6 +450,8 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - Your package source files have to be under version control, more specifically tracked with [Git](https://happygitwithr.com/). You might find the [gert package](https://docs.ropensci.org/gert/) relevant, as well as some of [usethis Git/GitHub related functionality](https://usethis.r-lib.org/reference/index.html#section-git-and-github); you can however use git as you want.
 
+- The default branch name should be `main`, not `master` -- the latter being offensive to some people. Refer to the [statement of the Git project and the Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) for more context, and to the tidyverse blog post ["Renaming the default branch"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) to learn about usethis functionality that makes the switch easier.
+
 - Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [`usethis::git_vaccinate()` function](https://usethis.r-lib.org/reference/git_vaccinate.html), and the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
 
 - A later section of this book contains some [git workflow tips](#gitflow).
