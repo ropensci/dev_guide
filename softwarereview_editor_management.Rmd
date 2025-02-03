@@ -98,6 +98,5 @@ Best,
   
   - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-    Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
-
+Both the dev\_guide and software-review README are automatically knit via continuous integration.
