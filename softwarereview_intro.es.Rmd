@@ -67,38 +67,61 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 
 ## Personas responsables de edición y revisión   {#editors-and-reviewers}
 
-### Equipo editorial asociado  {#associateditors}
-
-El proceso de revisión por pares del software de rOpenSci está dirigido por
-
-```{r}
-#| child: "associate-editors.md"
-```
-
-### Equipo de revisión {#reviewers}
-
-Agradecemos a las siguientes personas que han ofrecido su tiempo y experiencia para revisar los paquetes enviados a rOpenSci:
-
 ```{r}
 #| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
+#| results: 'asis'
+source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
+
 ```
+
+
+### Líder Editorial
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+out <- paste0(
+    "Cambiamos lideres editoriales, aproximadamente cada 3 meses. ",
+    "Hoy es [", eic_name, "](https://github.com/",
+    eic_github, ").\n"
+)
+cat(out, sep = "")
+
 ```
 
-También agradecemos a las siguientes personas que han tomado el rol de edición de forma invitada:
+
+### Equipo editorial asociado
+
+Nuestro equipo editorial asociado incluye:
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
 source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
 
 ```
 
 
+### Revisión y edición invitada
+
+Agradecemos a las siguientes personas, quienes ofrecieron su tiempo y experiencia para revisar paquetes enviados a rOpenSci:
+
+```{r}
+#| echo: false
+#| results: 'asis'
+source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+
+```
+
+También agradecemos a las siguientes personas que tenian antes el rol de revisión. 
+
+```{r editors_past, echo=FALSE, results='asis'}
+cat(gen_ed_out(editors_past), sep = "")
+```
+
+
+También agradecemos a las siguientes personas que tomaron el rol de edición de forma invitada. 
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+cat(gen_ed_out(guest_editors), sep = "")
+```
