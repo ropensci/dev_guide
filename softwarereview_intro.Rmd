@@ -44,7 +44,7 @@ Furthermore, authors and reviewers have the ability to contact privately the edi
 
 - Your package README will feature a peer-review badge linking to the software review thread.
 - Your package will get a [`docs.ropensci.org` docs website](#rodocsci) that you can link from DESCRIPTION.
-- Your package repo will be transferred to the rOpenSci organization.
+- Your package repo might be transferred to the rOpenSci organization if you agree.
 - If reviewers [agree to be listed in DESCRIPTION](#authorship), their metadata will mention the review.
 
 ## Editors and reviewers {#editors-and-reviewers}
