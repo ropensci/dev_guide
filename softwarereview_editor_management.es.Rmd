@@ -95,4 +95,14 @@ Tanto el capítulo como el *REAMDE* de revisión de software se renderizan autom
 
 Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
 
+## Poner el sistema en pausa {#vacation}
 
+Si quieres poner el sistema en pausa, por ejemplo durante las vacaciones, antes de irte:
+
+- Añade un mensaje de vacaciones al `about` de las plantillas de emisión. [Ejemplo PR](https://github.com/ropensci/software-review/pull/679/files).
+- Añade un mensaje de vacaciones a la respuesta de bienvenida estándar del bot. [Ejemplo PR](https://github.com/ropensci-org/buffy/pull/108).
+
+Al reanudar las actividades:
+
+- Elimina el mensaje de vacaciones de las plantillas de incidencias. [Ejemplo PR](https://github.com/ropensci/software-review/pull/680).
+- Elimina el mensaje de vacaciones de la respuesta de bienvenida estándar del bot. [Ejemplo](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
