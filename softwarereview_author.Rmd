@@ -11,30 +11,52 @@ This concise guide presents the software peer review process for you as a packag
 
 ## Planning a Submission (or a Pre-Submission Enquiry) {#planning-a-submission-or-a-pre-submission-enquiry}
 
-- Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
+
+### Scope
+
 - Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
   - If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
   - [Example response regarding overlap](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Also consider adding some points about similar packages to your [package documentation](#docs-general).
+
+### Lifecycle
+
+- Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
   - We strongly suggest submitting your package for review *before* publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
   - Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
 - Please also consider the time and effort needed to respond to reviews: think about your availability or that of your collaborators in the next weeks and months following a submission. Note that reviewers are volunteers, and we ask that you respect their time and effort by responding in a timely and respectful manner.
 - If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an *Active* instead of *WIP* badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is *Stable*.
+- Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
+
+### Documentation
+
 - For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. Even better, set up a pkgdown website for allowing more detailed assessment of functionality online.
   - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
-- Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ## Preparing for Submission {#preparing-for-submission}
 
-- Read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
+### Asking for help
+
 - Feel free to ask any questions about the process, or your specific package, in our [Discussion Forum](https://discuss.ropensci.org).
+
+### Guidelines
+
+- Read and follow [our packaging style guide](#building), [reviewer's guide](#preparereview) to ensure your package meets our style and quality criteria.
+
+### Automatic checks
+
 - All submissions are automatically checked by our [pkgcheck](https://docs.ropensci.org/pkgcheck/) system to ensure packages follow our guidelines. All authors are expected to have run [the main `pkgcheck` function](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) locally to confirm that the package is ready to be submitted. Alternatively, an even easier way to ensure a package is ready for submission is to use [the `pkgcheck` GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action) to run `pkgcheck` as a GitHub Action, as described in [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
 -   If your package requires unusual system dependencies (see [*Packaging Guide*](#pkgdependencies)) for our GitHub Action to pass, please submit a pull request adding them to [our base Dockerfile](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
 - If there are any aspects of `pkgcheck` which your package is unable to pass, please explain reasons in your submission template.
-- If you intend to submit an accompanying manuscript for your package, rOpenSci has a collaborative partnership with the [Journal of Open-Source Software](https://joss.theoj.org/) and [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X):
-  - For a submission to Journal of Open-Source Software (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
-  - For a submission to Methods in Ecology and Evolution (MEE), submit it to MEE only after the rOpenSci review process is over, either before or after the package has been accepted. The review collaboration with MEE was introduced in [this blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). The relevant article type for MEE is Application, see [here](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) for more details.
+
+### Accompanying manuscript (optional)
+
+If you intend to submit an accompanying manuscript for your package, rOpenSci has a collaborative partnership with the [Journal of Open-Source Software](https://joss.theoj.org/) and [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X):
+  
+- For a submission to Journal of Open-Source Software (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
+  
+- For a submission to Methods in Ecology and Evolution (MEE), submit it to MEE only after the rOpenSci review process is over, either before or after the package has been accepted. The review collaboration with MEE was introduced in [this blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). The relevant article type for MEE is Application, see [here](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) for more details.
 
 ## The Submission Process {#the-submission-process}
 
