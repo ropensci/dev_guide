@@ -6,13 +6,15 @@ aliases:
 
 # Marketing your package {#marketing}
 
+Also refer to the blog post ["Marketing Ideas For Your Package"](https://ropensci.org/blog/2024/03/07/package-marketing/).
+
 ```{block, type="summaryblock"}
 We will help you promoting your package but here are some more things to keep in mind.
 ```
 
 - If you hear of an use case of your package, please encourage its author to post the link to our [discussion forum in the Use Cases category](https://discuss.ropensci.org/c/usecases), [for a toot (Mastodon post) from rOpenSci and inclusion in the rOpenSci monthly newsletter](https://discuss.ropensci.org/t/about-the-usecases-category/33). We also recommend you to add a link to the use case in a "use cases in the wild" section of your README.
 
-- Post about your package on Mastodon using the "#rstats" hashtag and tag rOpenSci! This might help with contributor/user engagement. Example posts from rOpenSci itself: [A package a day](hachyderm.io/@rOpenSci/111611705648653729), [Help wanted post](hachyderm.io/@rOpenSci/111460729804231877), [Use cases](hachyderm.io/@rOpenSci/111371091053569287), [Welcome post]( hachyderm.io/@rOpenSci/111342069863172097).
+- Post about your package on social media (Mastodon, Bluesky, LinkedIn...) using the "#rstats" hashtag and tag rOpenSci if rOpenSci is present on that platform! This might help with contributor/user engagement. Example posts from rOpenSci itself: [A package a day](hachyderm.io/@rOpenSci/111611705648653729), [Help wanted post](hachyderm.io/@rOpenSci/111460729804231877), [Use cases](hachyderm.io/@rOpenSci/111371091053569287), [Welcome post]( hachyderm.io/@rOpenSci/111342069863172097).
 
 - When you [release](#releasing) a new version of your package or release it to CRAN for the first time,
   
