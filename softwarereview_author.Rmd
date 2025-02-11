@@ -48,6 +48,7 @@ This concise guide presents the software peer review process for you as a packag
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 - Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
 - Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch.
+- For submissions in non-default branches, the "Repository" URL in the submission template should be the full URL to the review branch, like `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## The Review Process {#the-review-process}
 
