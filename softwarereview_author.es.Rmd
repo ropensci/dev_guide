@@ -9,10 +9,10 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 ### Alcance
 
 - Consulta nuestras [políticas](#policies) para evaluar si tu paquete cumple los criterios para ser incluido en nuestro conjunto de paquetes y no se superpone con otros.
-- Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un issue para consultarlo.
+- Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un _issue_ para consultarlo.
   - [Ejemplo de respuesta sobre solapamiento](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considera también añadir información sobre paquetes similares a tu [documentación de paquetes](#docs-general).
 
-### Cicle de desarrollo
+### Ciclo de desarrollo
 
 - ¿Esperas mantener tu paquete durante al menos 2 años, o poder encontrar a otra persona para mantenerlo?
 - Por favor, considera cuál es el mejor momento en el desarrollo de tu paquete para presentarlo. Tu paquete debe estar lo suficientemente maduro como para que quienes lo revisen puedan evaluar todos los aspectos esenciales, pero ten en cuenta que la revisión puede resultar en cambios importantes.
@@ -44,11 +44,11 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 -   Si tu paquete requiere dependencias inusuales del sistema (ver [*Guía de Empaquetado*](#pkgdependencies) para que nuestra Acción de GitHub pase, por favor envíe un _pull request_ añadiéndolas a [nuestro _Dockerfile_ base](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
 - Si hay algún test de `pkgcheck` que tu paquete no pueda aprobar, explica los motivos en la plantilla de envío.
 
-### Manuscrito de acompañamiento (opcional)
+### Artículo complementario (opcional)
 
-Si tiene intención de enviar un manuscrito adjunto para tu paquete, rOpenSci colabora con el [Journal of Open-Source Software](https://joss.theoj.org/) y [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X):
+Si tiene intención de enviar un artículo científico sobre tu paquete, rOpenSci colabora con el [Journal of Open-Source Software](https://joss.theoj.org/) y [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X):
 
-- Para un envío a [Journal of Open Source Software](https://joss.theoj.org/) (JOSS), no lo sometas a consideración de JOSS hasta que haya finalizado el proceso de revisión de rOpenSci: si el equipo de edición de JOSS considera que tu paquete está dentro de su ámbito de aplicación, sólo se revisará el breve artículo que lo acompaña (pero no el software que habrá sido revisado por rOpenSci en ese momento). No todos los paquetes de rOpenSci pueden aplicar a JOSS.
+- Envía el artículo al [Journal of Open Source Software](https://joss.theoj.org/) (JOSS),una vez que haya finalizado el proceso de revisión de rOpenSci: si el equipo de edición de JOSS considera que tu paquete está dentro de su ámbito de aplicación, sólo se revisará el artículo que lo acompaña (pero no el software que ya habrá sido revisado por rOpenSci en ese momento). No todos los paquetes de rOpenSci pueden aplicar a JOSS.
 
 - Para un envío a Methods in Ecology and Evolution (MEE), envíelo a MEE sólo después de que el proceso de revisión de rOpenSci haya terminado, ya sea antes o después de que el paquete haya sido aceptado. La colaboración de revisión con MEE se introdujo en un [blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). El tipo de artículo relevante para MEE es [Solicitud](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) para más detalles.
 
