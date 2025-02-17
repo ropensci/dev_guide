@@ -50,7 +50,7 @@ jobs:
 
       - name: Deploy to Netlify
         id: netlify-deploy
-        uses: nwtgck/actions-netlify@v1.1
+        uses: nwtgck/actions-netlify@v3.0
         with:
           publish-dir: './_book'
           production-branch: master
