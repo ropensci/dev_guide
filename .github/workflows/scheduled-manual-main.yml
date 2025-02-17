@@ -13,10 +13,10 @@ jobs:
     name: Render-Book
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2        
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-            
+
       - name: Checkout latest release tag
         run: |
           LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
@@ -39,6 +39,7 @@ jobs:
       - name: Render book
         run: Rscript -e 'babelquarto::render_book()'
         env: # Set the secret as an input
+          AIRTABLE_ID: ${{ secrets.AIRTABLE_ID }}
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 

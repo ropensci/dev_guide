@@ -29,6 +29,7 @@ jobs:
       - name: Render book
         run: Rscript -e 'babelquarto::render_book()'
         env: # Set the secret as an input
+          AIRTABLE_ID: ${{ secrets.AIRTABLE_ID }}
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
 
