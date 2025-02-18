@@ -56,7 +56,7 @@ If you intend to submit an accompanying manuscript for your package, rOpenSci ha
   
 - For a submission to Journal of Open-Source Software (JOSS), do not submit it to JOSS consideration until after the rOpenSci review process is over: if your package is deemed in scope by JOSS editors, only the accompanying short paper would be reviewed, (not the software that will have been extended reviewed by rOpenSci by that time). Not all rOpenSci packages will meet the criteria for JOSS.
   
-- For a submission to Methods in Ecology and Evolution (MEE), submit it to MEE only after the rOpenSci review process is over, either before or after the package has been accepted. The review collaboration with MEE was introduced in a [blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). The relevant article type for MEE is [Application](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) for more details.
+- For a submission to Methods in Ecology and Evolution (MEE), submit it to MEE only after the rOpenSci reviewers have submitted their reviews, either before or after the package has been accepted. The review collaboration with MEE was introduced in a [blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). The relevant article type for MEE is [Application](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) for more details.
 
 ## The Submission Process {#the-submission-process}
 
