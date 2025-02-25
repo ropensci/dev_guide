@@ -322,6 +322,10 @@ Many packages include code from other software. Whether entire files or single f
 ## Licence {#licence}
 
 The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
+
+If you bundle external code, you also need to include some standard metadata in `Authors@R`. 
+You should use `role = "cph"` to declare that the author is a copyright holder, with a comment describing what they’re the author of.
+
 For more explanations around licensing, refer to the [R packages book](https://r-pkgs.org/license.html).
 
 ## Testing {#testing}
