@@ -91,7 +91,7 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-### Paquetes que envuelven software externo
+### Paquetes que envuelven software externo {#external-software}
 
 - Documenta claramente cómo instalar el paquete.
 - Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).

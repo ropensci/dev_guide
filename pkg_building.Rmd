@@ -87,7 +87,7 @@ If your package accesses a web API or another web resource,
 For more information refer to the blog post [Why You Should (or Shouldn't) Build an API Client](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
 
-### Packages wrapping external software
+### Packages wrapping external software {#external-software}
 
 - Document clearly how to install the package.
 - Provide a situation report (sitrep) function checking whether the software has been installed, with hints in case something is missing. [Example in greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
