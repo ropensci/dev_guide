@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2025-02-25, add note about bundled code licencing (#873)
+
 - 2024-09-06, update math guidance for pkgdown based on pkgdown's update (#838)
 
 - 2024-08-30, remove mention of Twitter since rOpenSci no longer maintains an active Twitter account (`@yabellini`, #827)
