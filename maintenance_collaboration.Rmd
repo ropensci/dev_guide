@@ -18,7 +18,8 @@ Besides these mostly technical tips, it is important to remember to be kind, and
 
 ### Code of conduct {#coc-file}
 
-After transfer to our GitHub organization, [rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/) will apply to your project.
+Once your package is listed into the [rOpenSci registry](https://ropensci.org/packages/all), 
+the [rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/) will apply to your project.
 Please add this text to the README
 
 ```markdown
@@ -28,7 +29,11 @@ By
 contributing to this project, you agree to abide by its terms.
 ```
 
-And delete the package current code of conduct if there was one.
+And 
+
+- If your package was transferred to the rOpenSci GitHub organization, please delete the current code of conduct of the repository if there was one as the default code of conduct of the GitHub organization will appear.
+
+- If your package was not transferred to the rOpenSci GitHub organization, please replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Contributing guide {#contributing-guide}
 
