@@ -91,6 +91,12 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
+### Paquetes que envuelven software externo
+
+- Documenta claramente cómo instalar el paquete.
+- Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- Si es posible, proporciona una función que ayude en la instalación. [Ejemplo en hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
 ## Estilo del código {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
