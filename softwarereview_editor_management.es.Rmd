@@ -99,7 +99,7 @@ Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan aut
 
 Si quieres poner el sistema en pausa, por ejemplo durante las vacaciones, antes de irte:
 
-- Añade un mensaje de vacaciones al `about` de las plantillas de emisión. [Ejemplo PR](https://github.com/ropensci/software-review/pull/679/files).
+- Añade un mensaje de vacaciones al `about` de las plantillas de _issues_. [PR de ejemplo](https://github.com/ropensci/software-review/pull/679/files).
 - Añade un mensaje de vacaciones a la respuesta de bienvenida estándar del bot. [Ejemplo PR](https://github.com/ropensci-org/buffy/pull/108).
 
 Al reanudar las actividades:
