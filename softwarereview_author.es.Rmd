@@ -42,7 +42,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 - *Cuando envíes un paquete, por favor asegúrate de tener configuradas las notificaciones de GitHub para que no te pierdas ningún comentario.*
 - Los paquetes se checkean automáticamente al ser enviados con [nuestro sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), el cual confirmará si está listo para ser revisado o no.
 - Los paquetes enviados pueden estar en la rama *main/default*, o en cualquier otra rama no predeterminada. En este último caso, es recomendable, aunque no obligatorio, enviar el paquete a través de una rama dedicada llamada `ropensci-software-review`.
-- Para paquetes en ramas no predeterminadas, la URL del «Repository» en la plantilla de envío debe ser la URL completa de la rama de revisión, como `https://github.com/my/repo/tree/ropensci-software-review`.
+- Para paquetes que están en ramas diferentes a la rama por defecto, la URL del «Repository» en la plantilla de envío debe ser la URL completa de la rama de revisión, como por ejemplo: `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## El proceso de revisión {#the-review-process}
 
