@@ -75,7 +75,8 @@ Atenciosamente,
   - [lista de autores do Guia Dev](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
   - [capítulo do Guia Dev que introduz a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (em dois locais neste arquivo, como editores e um pouco abaixo para removê-los da lista de revisores)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
-    Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
+
+Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
 
 - Adicione os novos editores à [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
 
@@ -98,4 +99,14 @@ Atenciosamente,
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
     Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
 
+## Colocando o sistema em pausa {#vacation}
 
+Se você quiser colocar o sistema em uma pausa, por exemplo, durante as férias, antes de sair:
+
+- Adicione uma mensagem de férias ao campo `sobre` dos modelos de emissão. [Exemplo de PR](https://github.com/ropensci/software-review/pull/679/files).
+- Adicione uma mensagem de férias à resposta de boas-vindas padrão do bot. [Exemplo de RP](https://github.com/ropensci-org/buffy/pull/108).
+
+Ao retomar as atividades:
+
+- Remover a mensagem de férias dos modelos de problemas. [Exemplo de PR](https://github.com/ropensci/software-review/pull/680).
+- Remover a mensagem de férias da resposta de boas-vindas padrão do bot. [Exemplo de commit](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
