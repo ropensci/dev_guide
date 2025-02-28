@@ -104,5 +104,5 @@ Si quieres poner el sistema en pausa, por ejemplo durante las vacaciones, antes 
 
 Al reanudar las actividades:
 
-- Elimina el mensaje de vacaciones de las plantillas de incidencias. [Ejemplo PR](https://github.com/ropensci/software-review/pull/680).
+- Elimina el mensaje de vacaciones de las plantillas de _issues_. [PR de ejemplo PR](https://github.com/ropensci/software-review/pull/680).
 - Elimina el mensaje de vacaciones de la respuesta de bienvenida estándar del bot. [Ejemplo](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
