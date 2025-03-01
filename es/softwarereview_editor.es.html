@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<link rel="alternate" hreflang="en" href="https://devdevguide.netlify.app/softwarereview_editor.html" />
+<link rel="alternate" hreflang="es" href="https://devdevguide.netlify.app/es/softwarereview_editor.es.html" />
+<link rel="alternate" hreflang="pt" href="https://devdevguide.netlify.app/pt/softwarereview_editor.pt.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.13">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Guía para autoras/es de paquetes, encargadas/os, revisoras/es y editoras/es en el sistema de revisión por pares de rOpenSci. La primera sección del libro contiene nuestras recomendaciones para crear y probar los paquetes de R. La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci: qué es, nuestras políticas y guías específicas para orientar a quienes crean, mantienen, revisan y editan a lo largo del proceso. La tercera y última sección presenta nuestras buenas prácticas para hacer crecer su paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras/os desarrolladoras/es, cómo documentar cada versión de tu paquete y cómo aprovechar GitHub como plataforma de desarrollo. La tercera sección también incluye un capítulo para cualquiera que desee comenzar a contribuir a los paquetes de rOpenSci.">
+<title>8  Guía para el equipo editorial – Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script><script src="site_libs/quarto-nav/headroom.min.js"></script><script src="site_libs/clipboard/clipboard.min.js"></script><script src="site_libs/quarto-search/autocomplete.umd.js"></script><script src="site_libs/quarto-search/fuse.min.js"></script><script src="site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="./">
+<link href="./softwarereview_editor_management.es.html" rel="next">
+<link href="./softwarereview_reviewer.es.html" rel="prev">
+<link href="./images/apple-touch-icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script><script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="site_libs/quarto-html/popper.min.js"></script><script src="site_libs/quarto-html/tippy.umd.min.js"></script><script src="site_libs/quarto-html/anchor.min.js"></script><link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bf125cca3ca3fad9c749544ec73cabc5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript></noscript>
+</head>
+<body class="nav-sidebar floating">
+<p><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
+<!-- End Matomo Code -->
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./softwarereview_intro.es.html">Revisión por pares de software de paquetes</a></li>
+<li class="breadcrumb-item"><a href="./softwarereview_editor.es.html"><span class="chapter-number">8</span>  <span class="chapter-title">Guía para el equipo editorial</span></a></li>
+</ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ropensci/dev_guide/" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="dropdown" id="languages-links-parent">
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Español</button><ul class="dropdown-menu" id="languages-links">
+<li><a class="dropdown-item" href="https://devdevguide.netlify.app/pt/softwarereview_editor.pt.html" id="language-link-pt">Português</a></li>
+<li><a class="dropdown-item" href="https://devdevguide.netlify.app/softwarereview_editor.html" id="language-link-en">English</a></li>
+</ul>
+</div>
+<div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía de desarrollo de rOpenSci</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Construyendo tu paquete</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_building.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Guía de empaquetado</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_ci.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Buenas prácticas de integración continua</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_security.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Buenas prácticas de seguridad en el desarrollo de paquetes</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Revisión por pares de software de paquetes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_intro.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Revisión por pares de software, ¿por qué? ¿qué es?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_policies.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Políticas de la Revisión por Pares de Software</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_author.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Guía para quienes crean paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_reviewer.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>  <span class="chapter-title">Guía para quienes hacen una revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor.es.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>  <span class="chapter-title">Guía para el equipo editorial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor_management.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">Gestión editorial</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Manteniendo paquetes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_cheatsheet.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">Guía rápida para mantener paquetes de rOpenSci</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_collaboration.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">Guía de colaboración</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_changing_maintainers.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>  <span class="chapter-title">Cambio de quienes mantienen paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_releases.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>  <span class="chapter-title">Publicar un paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_marketing.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>  <span class="chapter-title">Promocionando tu paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_github_grooming.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>  <span class="chapter-title">Gestión de GitHub</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_evolution.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>  <span class="chapter-title">Evolución de paquetes - cambiando cosas en tu paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_curation.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>  <span class="chapter-title">Política de gestión de paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_contributing.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>  <span class="chapter-title">Guía de contribución</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./booknews.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewtemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>  <span class="chapter-title">Plantilla de revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editortemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>  <span class="chapter-title">Plantilla para quien hace la edición</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewrequesttemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>  <span class="chapter-title">Modelo de pedido de revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./approval2template.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>  <span class="chapter-title">Plantilla de comentarios de aprobación para revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./newstemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>  <span class="chapter-title">Plantilla de NEWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bookreleaseissue.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>  <span class="chapter-title">Guía para publicar el libro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./redirect.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>  <span class="chapter-title">Cómo configurar una redirección</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bot_cheatsheet.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>  <span class="chapter-title">Comandos del bot</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Apéndices</span></span>
+  </li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+<li><a href="#editors-responsibilities" id="toc-editors-responsibilities" class="nav-link active" data-scroll-target="#editors-responsibilities"><span class="header-section-number">8.1</span> Responsabilidades del rol de edición</a></li>
+  <li>
+<a href="#editorchecklist" id="toc-editorchecklist" class="nav-link" data-scroll-target="#editorchecklist"><span class="header-section-number">8.2</span> Lista de tareas para la edición de un paquete</a>
+  <ul class="collapse">
+<li><a href="#upon-submission" id="toc-upon-submission" class="nav-link" data-scroll-target="#upon-submission"><span class="header-section-number">8.2.1</span> En el momento del envío:</a></li>
+  <li><a href="#look-for-and-assign-two-reviewers" id="toc-look-for-and-assign-two-reviewers" class="nav-link" data-scroll-target="#look-for-and-assign-two-reviewers"><span class="header-section-number">8.2.2</span> Busca y asigna dos personas para revisar el paquete</a></li>
+  <li><a href="#during-review" id="toc-during-review" class="nav-link" data-scroll-target="#during-review"><span class="header-section-number">8.2.3</span> Durante la revisión:</a></li>
+  <li><a href="#after-review" id="toc-after-review" class="nav-link" data-scroll-target="#after-review"><span class="header-section-number">8.2.4</span> Después de la revisión:</a></li>
+  <li><a href="#package-promotion" id="toc-package-promotion" class="nav-link" data-scroll-target="#package-promotion"><span class="header-section-number">8.2.5</span> Promoción de paquetes:</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#eicchecklist" id="toc-eicchecklist" class="nav-link" data-scroll-target="#eicchecklist"><span class="header-section-number">8.3</span> Responsabilidades del rol de LE</a>
+  <ul class="collapse">
+<li><a href="#asking-for-more-details" id="toc-asking-for-more-details" class="nav-link" data-scroll-target="#asking-for-more-details"><span class="header-section-number">8.3.1</span> Pide más detalles</a></li>
+  <li><a href="#guesteditor" id="toc-guesteditor" class="nav-link" data-scroll-target="#guesteditor"><span class="header-section-number">8.3.2</span> Invitar a una persona para la tarea de edición</a></li>
+  </ul>
+</li>
+  <li><a href="#outofscoperesponse" id="toc-outofscoperesponse" class="nav-link" data-scroll-target="#outofscoperesponse"><span class="header-section-number">8.4</span> Responder a las presentaciones fuera del ámbito de aplicación</a></li>
+  <li><a href="#reviewersupport" id="toc-reviewersupport" class="nav-link" data-scroll-target="#reviewersupport"><span class="header-section-number">8.5</span> Responder a las preguntas de quienes revisan</a></li>
+  <li>
+<a href="#bookrelease" id="toc-bookrelease" class="nav-link" data-scroll-target="#bookrelease"><span class="header-section-number">8.6</span> Gestión de la publicación de la guía de desarrollo</a>
+  <ul class="collapse">
+<li><a href="#devguidegov" id="toc-devguidegov" class="nav-link" data-scroll-target="#devguidegov"><span class="header-section-number">8.6.1</span> Gobernanza de la guía de desarrollo</a></li>
+  <li><a href="#releaseblogpost" id="toc-releaseblogpost" class="nav-link" data-scroll-target="#releaseblogpost"><span class="header-section-number">8.6.2</span> Artículo de blog sobre una publicación</a></li>
+  </ul>
+</li>
+  </ul>
+<div class="toc-actions"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/softwarereview_editor.es.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li>
+</ul></div></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./softwarereview_intro.es.html">Revisión por pares de software de paquetes</a></li>
+<li class="breadcrumb-item"><a href="./softwarereview_editor.es.html"><span class="chapter-number">8</span>  <span class="chapter-title">Guía para el equipo editorial</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title"><span id="editorguide" class="quarto-section-identifier"><span class="chapter-number">8</span>  <span class="chapter-title">Guía para el equipo editorial</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="cell" type="summaryblock">
+<div class="summaryblock">
+<p>
+La revisión por pares de software en rOpenSci es gestionada por un equipo editorial. Estamos probando un sistema donde el rol de Líder Editorial (LE) va rotando.
+</p>
+<p>
+Este capítulo presenta las responsabilidades <a href="#eicchecklist">quien lidera el equipo editorial</a>, de <a href="#editorchecklist">cualquiera a cargo de editar un envío</a>, <a href="#outofscoperesponse">cómo responder a un envío fuera del alcance de rOpenSci</a> y <a href="#bookrelease">cómo gestionar la publicación de una nueva versión de la guía de desarrollo</a>.
+</p>
+<p>
+Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si tienes alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
+</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Asume siempre que quienes participan en el sistema de revisión de software (tanto en la edición, como la revisión y la autoría de paquetes) están dando su mayor esfuerzo, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.</p>
+</blockquote>
+<section id="editors-responsibilities" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="editors-responsibilities">
+<span class="header-section-number">8.1</span> Responsabilidades del rol de edición</h2>
+<ul>
+<li><p>Además de ocuparse de los paquetes (unos 4 al año), quienes realizan la edición intervienen en las decisiones editoriales del equipo (como si un paquete está dentro del ámbito de aplicación) y determinan las actualizaciones de nuestras políticas. Generalmente lo hacemos a través de Slack, que esperamos que los miembros del equipo puedan consultar con regularidad.</p></li>
+<li><p>También rotamos <a href="#eicchecklist">Responsabilidades del Líder Editorial</a> (decisiones de alcance en primera instancia y asignación de roles editoriales) entre los miembros del equipo aproximadamente cada tres meses.</p></li>
+<li>
+<p>No tienes que hacer un seguimiento de otros envíos, pero si observas un problema con un paquete que está siendo gestionado por otra persona, no dudes en plantear ese problema directamente a quien está a cargo de la edición, o publica la preocupación en el canal exclusivo para el equipo editorial en Slack. Por ejemplo:</p>
+<ul>
+<li>Sabes de un paquete que se solapa, que aún no se ha mencionado en el proceso.</li>
+<li>Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de un artículo en el blog que aborda cómo añadir imágenes a los documentos del paquete).</li>
+<li>Las preocupaciones relacionadas, por ejemplo, con la rapidez del proceso, deberían ser abordadas por quien sea Líder Editorial, así que es a esa persona a quien te dirigirías para tales preguntas.</li>
+</ul>
+</li>
+</ul></section><section id="editorchecklist" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="editorchecklist">
+<span class="header-section-number">8.2</span> Lista de tareas para la edición de un paquete</h2>
+<section id="upon-submission" class="level3" data-number="8.2.1"><h3 data-number="8.2.1" class="anchored" data-anchor-id="upon-submission">
+<span class="header-section-number">8.2.1</span> En el momento del envío:</h3>
+<ul>
+<li>Si eres LE o eres la primera persona que responde, asigna a una persona para la edición con un comentario de <code>@ropensci-review-bot assign @username as editor</code>. Esto también añadirá la etiqueta <code>1/editor-checks</code> al issue.</li>
+<li>Para los envíos de paquetes estadísticos (identificables como “Submission Type: Stats” en la plantilla del issue), añade la etiqueta “stats” a la edición.</li>
+<li>El envío generará automáticamente una salida de comprobación del paquete por parte de ropensci-review-bot, que deberá examinarse en busca de cualquier problema pendiente (la mayoría de las excepciones deberán ser justificadas por quien presenta el paquete en el contexto particular de su paquete). Si quieres volver a realizar comprobaciones después de cualquier cambio en el paquete, envía un comentario con el texto “<code>@ropensci-review-bot check package</code>”.</li>
+<li>Después de publicar las comprobaciones automáticas, utiliza la <a href="editortemplate.es.html">plantilla editorial</a> para guiar las comprobaciones iniciales y registrar tu respuesta sobre el envío. También puedes agilizar las comprobaciones de edición utilizando el paquete <a href="https://docs.ropensci.org/pkgreviewr/articles/editors.html"><code>pkgreviewr</code> creado por la editora asociada Anna Krystalli</a>. Procura terminar las comprobaciones y empezar a buscar personas para hacer la revisión en un plazo de 5 días laborables.</li>
+<li>Comprueba que la plantilla haya sido completada correctamente.</li>
+<li>Comprueba las políticas <a href="softwarereview_policies.es.html#aims-and-scope">de alcance</a> y <a href="softwarereview_policies.es.html#overlap">solapamiento</a>. Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas. Si se rechaza el paquete, ver <a href="#outofscoperesponse">esta sección</a> sobre cómo responder.</li>
+<li>Comprueba que las partes obligatorias de la plantilla estén completas. Si así no fuera, orienta a quienes presentaron el paquete hacia las instrucciones adecuadas.</li>
+<li>Para paquetes que necesiten integración continua en varias plataformas (ver <a href="pkg_ci.es.html#whichci">criterios en la sección del capítulo sobre CI</a>) asegúrate de que el paquete se pruebe en varias plataformas (por ejemplo, haciendo que el paquete se compruebe en varios sistemas operativos a través de GitHub Actions).</li>
+<li>Siempre que sea posible, cuando pidas cambios, sugiere herramientas automáticas como <a href="https://usethis.r-lib.org/"><code>usethis</code></a> y <a href="https://styler.r-lib.org/"><code>styler</code></a> y recursos en línea (secciones de esta guía, secciones del <a href="https://r-pkgs.org/">Libro <em>R Packages</em></a>) para facilitar tu devolución. <a href="https://github.com/ropensci/software-review/issues/207#issuecomment-379909739">Ejemplo de comprobaciones de una editora</a>.</li>
+<li>Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.</li>
+<li>Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión. Si quien envió el paquete menciona que los cambios pueden llevar tiempo, <a href="softwarereview_policies.es.html#policiesreviewprocess">usa la etiqueta de espera escribiendo <code>@ropensci-review-bot put on hold</code></a>. Recibirás un recordatorio cada 90 días (en el <em>issue</em>) para que te pongas en contacto con las personas a cargo del paquete.</li>
+<li>Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack o abre un debate en el <a href="https://discuss.ropensci.org/">foro rOpenSci</a> para discutirlo con el equipo editorial (<a href="https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368">ejemplo de discusión sobre política</a>).</li>
+</ul></section><section id="look-for-and-assign-two-reviewers" class="level3" data-number="8.2.2"><h3 data-number="8.2.2" class="anchored" data-anchor-id="look-for-and-assign-two-reviewers">
+<span class="header-section-number">8.2.2</span> Busca y asigna dos personas para revisar el paquete</h3>
+<section id="tasks" class="level4" data-number="8.2.2.1"><h4 data-number="8.2.2.1" class="anchored" data-anchor-id="tasks">
+<span class="header-section-number">8.2.2.1</span> Tareas</h4>
+<ul>
+<li>Comenta con <code>@ropensci-review-bot seeking reviewers</code>.</li>
+<li>Utiliza la <a href="reviewrequesttemplate.es.html">plantilla de correo electrónico</a> si es necesario para invitar a las personas a participar en la revisión
+<ul>
+<li>Cuando envíes la invitación, incluye algo como “si no tengo noticias tuyas en una semana, asumiré que no puedes revisar”, para dar un plazo claro en el que empezarás a buscar a alguien más.</li>
+</ul>
+</li>
+<li>Para asignar a alguien para la revisión, usa <code>@ropensci-review-bot assign @username as reviewer</code>. <code>add</code> también puede utilizarse en lugar de <code>assign</code> y <code>to reviewers</code> (plural) en lugar de <code>as reviewer</code> (singular). Por lo tanto, lo siguiente también es válido: <code>@ropensci-review-bot add @username to reviewers</code>. Debe generarse una orden para cada persona. Si es necesario sacar a alguien de la revisión, usa <code>@ropensci-review-bot remove @username from reviewers</code>.</li>
+<li>Si quieres cambiar la fecha de vencimiento de una revisión utiliza <code>@ropensci-review-bot set due date for @username to YYYY-MM-DD</code>.</li>
+</ul></section><section id="how-to-look-for-reviewers" class="level4" data-number="8.2.2.2"><h4 data-number="8.2.2.2" class="anchored" data-anchor-id="how-to-look-for-reviewers">
+<span class="header-section-number">8.2.2.2</span> Cómo buscar personas para hacer una revisión</h4>
+<section id="where-to-look-for-reviewers" class="level5" data-number="8.2.2.2.1"><h5 data-number="8.2.2.2.1" class="anchored" data-anchor-id="where-to-look-for-reviewers">
+<span class="header-section-number">8.2.2.2.1</span> ¿Dónde buscarlas?</h5>
+<p>Como responsable de la edición, utiliza</p>
+<ul>
+<li>las posibles sugerencias realizadas por quienes presentaron el paquete (aunque éstas pueden tener una visión limitada de los tipos de conocimientos necesarios; sugerimos no utilizar más de una de las personas sugeridas);</li>
+<li>la base de datos <em>Airtable</em> de revisión y voluntariado (ver siguiente subsección);</li>
+<li>y personas con <a href="https://ropensci.org/packages/">paquetes de rOpenSci</a>.</li>
+</ul>
+<p>Cuando estas fuentes de información no sean suficientes,</p>
+<ul>
+<li>pide ideas al equipo editorial en Slack,</li>
+<li>busca personas que usen el paquete o de la fuente de datos o servicio al que se conecta el paquete (a través de la apertura de <em>issues</em> en el repositorio, destacándolo, citándolo en artículos, hablando de él en redes sociales).</li>
+<li>También puedes buscar personas con paquetes relacionados en <a href="https://r-pkg.org/">r-pkg.org</a>.</li>
+<li>R-Ladies tiene un <a href="https://rladies.org/directory/">directorio</a> en el que se especifican las aptitudes e intereses de las personas incluidas en la lista.</li>
+<li>Puedes publicar la búsqueda en los canales #general y/o #software-review del Slack de rOpenSci, o en las redes sociales.</li>
+</ul></section><section id="tips-for-reviewer-search-in-airtable" class="level5" data-number="8.2.2.2.2"><h5 data-number="8.2.2.2.2" class="anchored" data-anchor-id="tips-for-reviewer-search-in-airtable">
+<span class="header-section-number">8.2.2.2.2</span> Consejos para la búsqueda en Airtable</h5>
+<p>Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/airtable.png" class="img-fluid figure-img"></p>
+<figcaption>Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua</figcaption></figure>
+</div>
+<p>Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses. Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo<code>require_mentorship</code>. En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo electrónico y prepárate para proporcionar orientación adicional.</p>
+</section><section id="criteria-for-choosing-a-reviewer" class="level5" data-number="8.2.2.2.3"><h5 data-number="8.2.2.2.3" class="anchored" data-anchor-id="criteria-for-choosing-a-reviewer">
+<span class="header-section-number">8.2.2.2.3</span> Criterios para elegir a las personas que harán la revisión</h5>
+<p>Estos son los criterios que debes tener en cuenta a la hora de elegir a alguien para realizar la revisión. Puede que tengas que reunir esta información buscando en CRAN y en su página GitHub, así como en su presencia general en Internet (sitio web personal, Twitter).</p>
+<ul>
+<li>No ha revisado ningún paquete para rOpenSci en los últimos 6 meses.</li>
+<li>Alguna experiencia en el desarrollo de paquetes.</li>
+<li>Alguna experiencia de dominio en el campo del paquete o fuente de datos.</li>
+<li>No hay <a href="softwarereview_policies.es.html#coi">conflictos de intereses</a>.</li>
+<li>Intenta equilibrar lo que sabes sobre su experiencia con la complejidad del paquete.</li>
+<li>Diversidad: las dos personas que revisen el paquete no deberían ser hombres cis blancos.</li>
+<li>Alguna prueba de que que le interesa el software libre o las actividades de la comunidad de R, aunque enviar un correo electrónico sin esta información está bien.</li>
+</ul>
+<p>Cada envío debe ser revisado por <em>dos</em> personas. Aunque está bien que una de ellas tenga menos experiencia en el desarrollo de paquetes y más conocimientos del dominio, la revisión no debe dividirse en dos. Ambas deben revisar el paquete de forma exhaustiva, aunque desde su perspectiva particular. En general, al menos una debe tener experiencia previa en revisiones y, por supuesto, invitar gente nueva amplía nuestro grupo de revisión.</p>
+</section></section></section><section id="during-review" class="level3" data-number="8.2.3"><h3 data-number="8.2.3" class="anchored" data-anchor-id="during-review">
+<span class="header-section-number">8.2.3</span> Durante la revisión:</h3>
+<ul>
+<li>Consulta de vez en cuando a tanto a quienes están revisando el paquete como a quienes lo enviaron. Ofrece aclaraciones y ayuda cuando sea necesario.</li>
+<li>En general, espera 3 semanas para la revisión, 2 semanas para cambios posteriores, y 1 semana para la aprobación de los cambios por parte de quien hace la revisión.</li>
+<li>Una vez enviada cada revisión,
+<ul>
+<li>Escribe un comentario agradeciendo a quien hizo la revisión con tus palabras;</li>
+<li>Registra la reseña escribiendo un nuevo comentario <code>@ropensci-review-bot submit review &lt;review-url&gt; time &lt;time in hours&gt;</code>. Por ejemplo, para la reseña <a href="https://github.com/ropensci/software-review/issues/329#issuecomment-809783937">https://github.com/ropensci/software-review/issues/329#issuecomment-809783937</a> el comentario sería <code>@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4</code>.</li>
+</ul>
+</li>
+<li>Si quien presentó el paquete deja de responder, consulta <a href="softwarereview_policies.es.html">las políticas</a> y/o notifica al resto del equipo editorial en el canal Slack para discutirlo. Es importante que, si se asignó una persona para hacer la revisión a un issue que se cerró, te pongas en contacto con esa persona al cerrar el issue para explicarle la decisión, agradecerle una vez más su trabajo y tomar nota en nuestra base de datos para asignarle la próxima vez un envío con altas posibilidades de que la revisión del software se realice sin problemas (por ejemplo, una persona que ya nos haya enviado paquetes).</li>
+<li>Una vez realizados los cambios, cambia la etiqueta de estado de revisión a <code>5/awaiting-reviewer-response</code> y pide a las personas a cargo de la revisión que indiquen su aprobación con la [plantilla de aprobación de revisión]{#approval2template}.</li>
+</ul></section><section id="after-review" class="level3" data-number="8.2.4"><h3 data-number="8.2.4" class="anchored" data-anchor-id="after-review">
+<span class="header-section-number">8.2.4</span> Después de la revisión:</h3>
+<ul>
+<li><code>@ropensci-review-bot approve &lt;package-name&gt;</code></li>
+<li><em>Si quien tiene la propiedad original del repositorio no quiere transferirlo a rOpenSci, añade una línea con su dirección a <a href="https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json">esta lista de repositorios</a> para garantizar que el paquete se incluya en el registro de paquetes de rOpenSci.</em></li>
+<li>Nomina el paquete para que aparezca en un artículo del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés. Por favor, anota en el <em>issue</em> de revisión una o dos cosas que destacables, y etiqueta a <code>@ropensci/blog-editors</code> para su seguimiento.</li>
+<li>Si el paquete tiene un gitbook asociado (aunque sólo sea parcialmente), ponte en contacto con <a href="https://ropensci.org/about/#team">alguien del equipo de rOpenSci</a> para que se ponga en contacto con quienes lo mantienen y hable sobre su transferencia a <a href="https://github.com/orgs/ropensci-books">la página <code>ropensci-books</code> organización de GitHub</a>.</li>
+</ul></section><section id="package-promotion" class="level3" data-number="8.2.5"><h3 data-number="8.2.5" class="anchored" data-anchor-id="package-promotion">
+<span class="header-section-number">8.2.5</span> Promoción de paquetes:</h3>
+<ul>
+<li>Dirige quien presentó el paquete a los capítulos de la guía sobre <a href="#releases">publicación de paquetes</a>, <a href="maintenance_marketing.es.html">marketing</a> y <a href="maintenance_github_grooming.es.html">preparación para GitHub</a>.</li>
+</ul></section></section><section id="eicchecklist" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="eicchecklist">
+<span class="header-section-number">8.3</span> Responsabilidades del rol de LE</h2>
+<p>Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial. Tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento). En detalle, el rol de LE implica las siguientes funciones</p>
+<ul>
+<li><p>Vigila todos los <em>issues</em> publicados en el repositorio de revisión del software (se suscribe a las notificaciones del repositorio en GitHub, o vigila la página <code>#software-peer-review-feed</code> en Slack).</p></li>
+<li><p>Etiqueta el <em>issue</em> con <code>0/editorial-team-prep</code></p></li>
+<li><p>Usa <code>@ropensci-review-bot check srr</code> sobre consultas previas a la presentación de software estadístico. Revisar los capítulos correspondientes a la <a href="https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief"><em>Guía de desarrollo de estadística</em></a> para más detalles.</p></li>
+<li>
+<p>Asigna los envíos de paquetes a otros miembros del equipo editorial, incluyéndose, para que se encarguen de ellos. En la mayoría de los casos, esta responsabilidad rota entre los miembros del equipo editorial a menos que quien sea LE considere que un miembro en particular es especialmente adecuado para algún paquete, o que alguien rechace encargarse del envío por no tener tiempo o por tener un conflicto de intereses.</p>
+<pre><code>@ropensci-review-bot assign @username as editor</code></pre>
+</li>
+<li><p>Supervisa el ritmo del proceso de revisión y recuerda a otros miembros del equipo editorial que hagan avanzar los paquetes según sea necesario.</p></li>
+<li><p>Al asumir el rol de LE, revisa el estado de las revisiones abiertas actuales y recuerda a quienes las editan que respondan o actualicen el estado según sea necesario.</p></li>
+<li><p>Responde a los <em>issues</em> publicados en el repositorio software-review-meta</p></li>
+<li>
+<p>Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)). Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus dudas, es decir, digerir un poco la información. Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todo el equipo editorial.</p>
+<ul>
+<li>Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase <a href="#outofscoperesponse">esta sección</a> sobre cómo responder a los (pre) envíos fuera de nuestro alcance temático.</li>
+<li>Tras explicar la decisión de fuera de alcance, escribe un comentario con “<code>@ropensci-review-bot out-of-scope</code>” en el <em>issue</em>.</li>
+</ul>
+</li>
+<li><p>Solicita a alguien más para cubrir el rol de LE cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide reemplazos en el canal de Slack del equipo editorial).</p></li>
+</ul>
+<section id="asking-for-more-details" class="level3" data-number="8.3.1"><h3 data-number="8.3.1" class="anchored" data-anchor-id="asking-for-more-details">
+<span class="header-section-number">8.3.1</span> Pide más detalles</h3>
+<p>En algunos casos, la documentación en línea es escasa. Un <em>README</em> mínimo y la ausencia de un sitio web de <em>pkgdown</em> dificultan la evaluación. En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.</p>
+<p>Ejemplo de texto</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Hola <span class="dt">&lt;</span><span class="kw">nombre</span><span class="dt">&gt;</span> y muchas gracias por su envío.</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>¿Le importaría añadir más detalles y contexto al *README*?</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">opcional</span><span class="dt">&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación <span class="co">[</span><span class="ot">por qué es el mejor de su clase</span><span class="co">](https://devguide.ropensci.org/policies.html#overlap)</span>. Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">opcional</span><span class="dt">&gt;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="guesteditor" class="level3" data-number="8.3.2"><h3 data-number="8.3.2" class="anchored" data-anchor-id="guesteditor">
+<span class="header-section-number">8.3.2</span> Invitar a una persona para la tarea de edición</h3>
+<p>Tras debatirlo con otros miembros del equipo, quien sea LE puede invitar a una persona externa para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de enviar una invitación a formar parte del equipo de edición).</p>
+<p>Cuando invites a alguien para realizar una edición de forma invitada:</p>
+<ul>
+<li>Pregunta sobre los conflictos de intereses utilizando el <a href="softwarereview_policies.es.html#coi">mismo texto que para quienes revisan paquetes</a>,</li>
+<li>Proporciona un enlace a la <a href="#editorchecklist">guía para quines se encargan de la edición</a>.</li>
+</ul>
+<p>Si la persona acepta (¡bien!),</p>
+<ul>
+<li>asegúrate de que <a href="https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/">haya activado la autenticación de 2 factores en su cuenta de GitHub</a>;</li>
+<li>invítala al equipo <code>ropensci/editors</code> y a la organización ropensci;</li>
+<li>una vez que haya aceptado esta invitación al repositorio, asígnale el <em>issue</em>;</li>
+<li>asegúrate de que esté invitada al espacio de trabajo en Slack de rOpenSci;</li>
+<li>añade su nombre a la tabla de <em>guest-editor</em> de Airtable (para que su nombre aparezcan en este libro y en el <em>README</em> de la revisión del software).</li>
+</ul>
+<p>Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),</p>
+<ul>
+<li>vuelve a dar las gracias a la persona invitada;</li>
+<li>elimínala del equipo <code>ropensci/editors</code> (pero no de la organización ropensci).</li>
+</ul></section></section><section id="outofscoperesponse" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="outofscoperesponse">
+<span class="header-section-number">8.4</span> Responder a las presentaciones fuera del ámbito de aplicación</h2>
+<p>Agradece a quienes presentaron el paquete por el envío, explica los motivos de la decisión y propone otros lugares de publicación, si corresponde, y al foro de debate de rOpenSci. Utiliza el texto de <a href="softwarereview_policies.es.html#aims-and-scope">Objetivos y alcance</a> en particular en lo que respecta a la evolución del alcance a lo largo del tiempo, y al solapamiento y las diferencias entre el desarrollo de unconf/personal/revisión de software.</p>
+<p><a href="https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope">Ejemplos de envíos y respuestas fuera del ámbito de aplicación</a>.</p>
+</section><section id="reviewersupport" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="reviewersupport">
+<span class="header-section-number">8.5</span> Responder a las preguntas de quienes revisan</h2>
+<p>Las personas que hacen revisiones pueden pedir devoluciones sobre, por ejemplo, el tono de su revisión. Además de darles las orientaciones generales de esta guía, pregunta a los miembros del equipo de edición o abre un issue cuando falten indicaciones. Aquí tienes algunos ejemplos de reseñas que pueden ser útiles:</p>
+<ul>
+<li>Ejemplo duro pero constructivo: la parte de esta revisión que sugiere una reescritura de la viñeta: <a href="https://github.com/ropensci/software-review/issues/191#issuecomment-368254623">ropensci/software-review#191 (comentario)</a>.</li>
+<li>
+<a href="https://github.com/ropensci/software-review/issues/420">El paquete <code>slopes</code></a> que acabó siendo rediseñado fundamentalmente en respuesta a las revisiones. Todas las revisiones fueron en todo momento totalmente constructivas, lo que parece haber desempeñado un papel importante a la hora de motivar a quienes desarrollaron el paquete a embarcarse en una revisión tan importante. Comentarios como, <em>“este paquete no…”</em> o <em>“no tiene …”</em> iban seguidas invariablemente de sugerencias constructivas sobre lo que se podría hacer (hay, por ejemplo, <a href="https://github.com/ropensci/software-review/issues/420#issuecomment-858231647">varias en una de las primeras revisiones</a>).</li>
+<li>La revisión al paquete <code>tic</code> expresaban educadamente sus reservas: <a href="https://github.com/ropensci/software-review/issues/305#issuecomment-504762517">https://github.com/ropensci/software-review/issues/305#issuecomment-504762517</a> y <a href="https://github.com/ropensci/software-review/issues/305#issuecomment-508271766">https://github.com/ropensci/software-review/issues/305#issuecomment-508271766</a>
+</li>
+<li>El paquete <code>bowerbird</code> recibió una útil <a href="https://github.com/ropensci/software-review/issues/139#issuecomment-322713737">“revisión previa”</a> que dio lugar a una división del paquete antes de las revisiones propiamente dichas.</li>
+</ul></section><section id="bookrelease" class="level2" data-number="8.6"><h2 data-number="8.6" class="anchored" data-anchor-id="bookrelease">
+<span class="header-section-number">8.6</span> Gestión de la publicación de la guía de desarrollo</h2>
+<p>Si te encargas de gestionar una versión de este mismo libro que estás leyendo, utiliza <a href="bookreleaseissue.es.html">la guía para la publicación de libros</a> como plantilla de issue para publicar <a href="https://github.com/ropensci/dev_guide/issues">en el gestor de <em>issues</em> de la guía de desarrollo</a> y no dudes en hacer preguntas al resto del equipo de edición.</p>
+<section id="devguidegov" class="level3" data-number="8.6.1"><h3 data-number="8.6.1" class="anchored" data-anchor-id="devguidegov">
+<span class="header-section-number">8.6.1</span> Gobernanza de la guía de desarrollo</h3>
+<p>Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del PR. Para enmiendas mayores, solicita la revisión de al menos varios miembros del equipo de edición (si ninguno participó en la discusión relacionada con la enmienda, solicita una revisión de todos en GitHub, y en ausencia de cualquier reacción aprueba el PR después de una semana).</p>
+<p>Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master <strong>y la publicación en el blog</strong> estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub (“solicitud de revisión” en el PR de dev a main) y Slack, pero no es necesario que todos aprueben explícitamente la publicación.</p>
+</section><section id="releaseblogpost" class="level3" data-number="8.6.2"><h3 data-number="8.6.2" class="anchored" data-anchor-id="releaseblogpost">
+<span class="header-section-number">8.6.2</span> Artículo de blog sobre una publicación</h3>
+<p>El artículo del blog sobre una nueva edición será revisado <a href="#devguidegov">por el equipo de edición</a> y por alguien de <code>@ropensci/blog-editors</code>.</p>
+<section id="content" class="level4" data-number="8.6.2.1"><h4 data-number="8.6.2.1" class="anchored" data-anchor-id="content">
+<span class="header-section-number">8.6.2.1</span> Contenido</h4>
+<p>Consulta la <a href="https://blogguide.ropensci.org/">guía general para blogs rOpenSci</a> y las orientaciones más específicas a continuación.</p>
+<p><a href="https://ropensci.org/blog/2019/05/16/dev-guide-update/">Primer ejemplo de un artículo de este tipo</a>; <a href="https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/">segundo ejemplo</a>.</p>
+<p>El artículo del blog debe mencionar todos los elementos importantes del <a href="booknews.es.html">registro de cambios</a> organizados en (sub)secciones: por ejemplo, una sección sobre el gran cambio A, otra sobre el gran cambio B, y otra sobre cambios menores agrupados. Menciona primero los cambios más importantes.</p>
+<p>Por cada cambio realizado por una persona que colabora de manera externa, agradéceselo explícitamente utilizando la información del registro de cambios. Por ejemplo <code>[Matt Fidler](https://github.com/mattfidler/) arregló nuestra sección sobre mensajes en la Consola [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).</code>.</p>
+<p>Al final del post, menciona los próximos cambios enlazando a los <em>issues</em> abiertos en el repositorio, e invita a quienes leen a contribuir a la guía de desarrollo abriendo <em>issues</em> y participando en los debates abiertos. Plantilla de conclusiones:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>En este post resumimos los cambios incorporados a nuestro libro <span class="co">[</span><span class="ot">"rOpenSci Packages: Development, Maintenance, and Peer Review"</span><span class="co">](https://devguide.ropensci.org/)</span> en los últimos X meses. </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Agradecemos todas las personas cuyas contribuciones han hecho posible esta versión. </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Ya estamos trabajando en actualizaciones para nuestra próxima versión, como *ISSUE1*, *ISSUE2.* </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>Echa un vistazo a <span class="co">[</span><span class="ot">la lista de *issues*</span><span class="co">](https://github.com/ropensci/dev_guide/issues/)</span> si quieres contribuir.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section><section id="authorship" class="level4" data-number="8.6.2.2"><h4 data-number="8.6.2.2" class="anchored" data-anchor-id="authorship">
+<span class="header-section-number">8.6.2.2</span> Autoría</h4>
+<p>Quien escribe el post lidera la lista de autoría, el resto del equipo de edición aparecen en orden alfabético.</p>
+
+
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/devguide\.ropensci\.org\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./softwarereview_reviewer.es.html" class="pagination-link" aria-label="Guía para quienes hacen una revisión">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>  <span class="chapter-title">Guía para quienes hacen una revisión</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./softwarereview_editor_management.es.html" class="pagination-link" aria-label="Gestión editorial">
+        <span class="nav-page-text"><span class="chapter-number">9</span>  <span class="chapter-title">Gestión editorial</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/softwarereview_editor.es.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li>
+</ul></div></div></div></footer>
+</body>
+</html>
