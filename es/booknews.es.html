@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+<link rel="alternate" hreflang="en" href="https://devguide.ropensci.org/booknews.html" />
+<link rel="alternate" hreflang="es" href="https://devguide.ropensci.org/es/booknews.es.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.13">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Guía para autoras/es de paquetes, encargadas/os, revisoras/es y editoras/es en el sistema de revisión por pares de rOpenSci. La primera sección del libro contiene nuestras recomendaciones para crear y probar los paquetes de R. La segunda sección está dedicada al proceso de revisión por pares de software de rOpenSci: qué es, nuestras políticas y guías específicas para orientar a quienes crean, mantienen, revisan y editan a lo largo del proceso. La tercera y última sección presenta nuestras buenas prácticas para hacer crecer su paquete una vez que ha sido incorporado a rOpenSci: cómo colaborar con otras/os desarrolladoras/es, cómo documentar cada versión de tu paquete y cómo aprovechar GitHub como plataforma de desarrollo. La tercera sección también incluye un capítulo para cualquiera que desee comenzar a contribuir a los paquetes de rOpenSci.">
+<title>19  NEWS – Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script><script src="site_libs/quarto-nav/headroom.min.js"></script><script src="site_libs/clipboard/clipboard.min.js"></script><script src="site_libs/quarto-search/autocomplete.umd.js"></script><script src="site_libs/quarto-search/fuse.min.js"></script><script src="site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="./">
+<link href="./reviewtemplate.es.html" rel="next">
+<link href="./maintenance_contributing.es.html" rel="prev">
+<link href="./images/apple-touch-icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script><script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="site_libs/quarto-html/popper.min.js"></script><script src="site_libs/quarto-html/tippy.umd.min.js"></script><script src="site_libs/quarto-html/anchor.min.js"></script><link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bf125cca3ca3fad9c749544ec73cabc5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript></noscript>
+</head>
+<body class="nav-sidebar floating">
+<p><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
+<!-- End Matomo Code -->
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./booknews.es.html">Apéndice</a></li>
+<li class="breadcrumb-item"><a href="./booknews.es.html"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></a></li>
+</ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ropensci/dev_guide/" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="dropdown" id="languages-links-parent">
+<button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Español</button><ul class="dropdown-menu" id="languages-links"><li><a class="dropdown-item" href="https://devguide.ropensci.org/booknews.html" id="language-link-en">English</a></li></ul>
+</div>
+<div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Guía de desarrollo de rOpenSci</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Construyendo tu paquete</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_building.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Guía de empaquetado</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_ci.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Buenas prácticas de integración continua</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_security.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Buenas prácticas de seguridad en el desarrollo de paquetes</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Revisión por pares de software de paquetes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_intro.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Revisión por pares de software, ¿por qué? ¿qué es?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_policies.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Políticas de la Revisión por Pares de Software</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_author.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Guía para quienes crean paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_reviewer.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>  <span class="chapter-title">Guía para quienes hacen una revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>  <span class="chapter-title">Guía para el equipo editorial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor_management.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">Gestión editorial</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Manteniendo paquetes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_cheatsheet.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">Guía rápida para mantener paquetes de rOpenSci</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_collaboration.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">Guía de colaboración</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_changing_maintainers.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>  <span class="chapter-title">Cambio de quienes mantienen paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_releases.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>  <span class="chapter-title">Publicar un paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_marketing.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>  <span class="chapter-title">Promocionando tu paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_github_grooming.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>  <span class="chapter-title">Gestión de GitHub</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_evolution.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>  <span class="chapter-title">Evolución de paquetes - cambiando cosas en tu paquete</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_curation.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>  <span class="chapter-title">Política de gestión de paquetes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_contributing.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>  <span class="chapter-title">Guía de contribución</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apéndice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./booknews.es.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewtemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>  <span class="chapter-title">Plantilla de revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editortemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>  <span class="chapter-title">Plantilla para quien hace la edición</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewrequesttemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>  <span class="chapter-title">Modelo de pedido de revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./approval2template.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>  <span class="chapter-title">Plantilla de comentarios de aprobación para revisión</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./newstemplate.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>  <span class="chapter-title">Plantilla de NEWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bookreleaseissue.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>  <span class="chapter-title">Guía para publicar el libro</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./redirect.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>  <span class="chapter-title">Cómo configurar una redirección</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bot_cheatsheet.es.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>  <span class="chapter-title">Comandos del bot</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Apéndices</span></span>
+  </li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Tabla de contenidos</h2>
+   
+  <ul>
+<li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">19.1</span> 0.9.0</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">19.2</span> 0.8.0</a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="header-section-number">19.3</span> 0.7.0</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"><span class="header-section-number">19.4</span> 0.6.0</a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"><span class="header-section-number">19.5</span> 0.5.0</a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"><span class="header-section-number">19.6</span> 0.4.0</a></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"><span class="header-section-number">19.7</span> 0.3.0</a></li>
+  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"><span class="header-section-number">19.8</span> 0.2.0</a></li>
+  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"><span class="header-section-number">19.9</span> 0.1.5</a></li>
+  <li><a href="#first-release-0.1.0" id="toc-first-release-0.1.0" class="nav-link" data-scroll-target="#first-release-0.1.0"><span class="header-section-number">19.10</span> First release 0.1.0</a></li>
+  <li><a href="#place-holder-0.0.1" id="toc-place-holder-0.0.1" class="nav-link" data-scroll-target="#place-holder-0.0.1"><span class="header-section-number">19.11</span> place-holder 0.0.1</a></li>
+  </ul>
+<div class="toc-actions"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/booknews.es.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li>
+</ul></div></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./booknews.es.html">Apéndice</a></li>
+<li class="breadcrumb-item"><a href="./booknews.es.html"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title"><span id="booknews" class="quarto-section-identifier"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><section id="section" class="level2" data-number="19.1"><h2 data-number="19.1" class="anchored" data-anchor-id="section">
+<span class="header-section-number">19.1</span> 0.9.0</h2>
+<ul>
+<li><p>2024-01-09, update roxygen2 wording (<code>@vincentvanhees</code>, #792).</p></li>
+<li><p>2023-12-15, update roxygen2 advice, mainly linking to roxygen2 website (#750).</p></li>
+<li><p>2023-09-15, add suggestions for API packages (#496).</p></li>
+<li><p>Translation to Spanish!</p></li>
+<li><p>2023-07-17, Update Aims and Scope to include translation packages, remove experimental text-processing categories, and provide clarifications around API wrappers</p></li>
+<li><p>2023-05-04, Added link to Bioconductor book (#663, <code>@llrs</code>).</p></li>
+<li><p>2023-04-26, Changed suggested lifecycle stage in authors guide (#661, <code>@bart1</code>).</p></li>
+<li><p>2023-04-25, changed the COI section to use parallel construction (#659, <code>@eliocamp</code>).</p></li>
+<li><p>2022-07-04, Add resources around GitHub workflows (#479, <code>@maurolepore</code>).</p></li>
+<li><p>2023-02-14, update instructions for CITATION to reflect new CRAN policies (#604, #609).</p></li>
+<li><p>2023-02-14, add package maintainer cheatsheet (#608).</p></li>
+<li><p>2023-01-25, add Mastodon as social media (#592, by <span class="citation" data-cites="yabellini">@yabellini</span>).</p></li>
+<li><p>2023-01-25, add Mastodon as social media (#592, by <code>@yabellini</code>).</p></li>
+<li><p>2023-01-20, fix small formating error (#590 by <code>@eliocamp</code>).</p></li>
+<li><p>2022-11-22, mention shinytest2 near shinytest.</p></li>
+<li><p>2022-09-20, add editor instruction to add “stats” label to stats submissions</p></li>
+<li><p>2022-09-20, fixed link to reviewer approval template (#548), and rendering of editor’s template (#547)</p></li>
+<li><p>2022-08-23, add recommendation to document argument default (<code>@Bisaloo</code>, #501)</p></li>
+<li><p>2022-08-06, fix link to R Packages book (#498)</p></li>
+<li><p>2022-07-21, mention GitHub Discussions and GitHub issue templates. (#482)</p></li>
+<li><p>2022-07-21, highlight values for reviewing in more places (#481)</p></li>
+<li><p>2022-07-20, Explanation of package submission via non-default branches (#485), added <code>@s3alfisc</code> to contributor list.</p></li>
+<li><p>2022-07-20, add how to volunteer as a reviewer (#457).</p></li>
+<li><p>2022-06-23, Expanded explanation of Codecov, added <code>@ewallace</code> to contributor list (#484)</p></li>
+</ul></section><section id="section-1" class="level2" data-number="19.2"><h2 data-number="19.2" class="anchored" data-anchor-id="section-1">
+<span class="header-section-number">19.2</span> 0.8.0</h2>
+<ul>
+<li><p>2022-06-03, Remove former references to now-archived “rodev” package</p></li>
+<li><p>2022-05-30, Advise that reviewers can also directly call <code>@ropensci-review-bot check package</code></p></li>
+<li><p>2022-05-27, Add Mark Padgham to list of authors</p></li>
+<li><p>2022-05-27, Add <code>devguider::prerelease_checklist</code> item to pre-release template (#463)</p></li>
+<li><p>2022-05-13, Align version number in DESCRIPTION file with actual version (#443)</p></li>
+<li><p>2022-05-13, Update guidelines for CONTRIBUTING.md (#366, #462)</p></li>
+<li><p>2022-05-09, Add section on authorship of included code, thanks to <code>@KlausVigo</code> (#388).</p></li>
+<li><p>2022-05-09, Remove mention of ‘rev’ role requiring R v3.5</p></li>
+<li><p>2022-05-05, Move all scripts from local <code>inst</code> directory to <code>ropensci-org/devguider</code> pkg.</p></li>
+<li><p>2022-05-03, Update package archiving guidance to reduce README to minimal form.</p></li>
+<li><p>2022-04-29, Advise that authors can directly call <code>@ropensci-review-bot check package</code>.</p></li>
+<li><p>2022-04-29, Describe <code>pkgcheck-action</code> in CI section.</p></li>
+<li><p>2022-04-29, Update scope in policies section to include statistical software.</p></li>
+<li><p>2022-04-29, Add <code>prelease.R</code> script to open pre-release GitHub issue &amp; ref in appendix.</p></li>
+<li><p>2022-04-26, Add GitHub 2FA recommendation to package security.</p></li>
+<li><p>2022-03-29, Remove references to Stef Butland, former community manager.</p></li>
+<li><p>2022-03-28, Add comments on submission planning about time commitment.</p></li>
+<li><p>2022-03-24, Remove approval comment template (coz it’s automatically generated by the bot now).</p></li>
+<li><p>2022-03-21, rephrase CITATION guidance to make it less strict. Also mentions CITATION.cff and the cffr package.</p></li>
+<li><p>2022-03-08, add links to blogs related to package development (#389).</p></li>
+<li><p>2022-02-17, update redirect instructions (<code>@peterdesmet</code>, #387).</p></li>
+<li><p>2022-02-14, link to Michael Lynch’s post Why Good Developers Write Bad Unit Tests.</p></li>
+<li><p>2022-02-14, mention more packages for testing like dittodb, vcr, httptest, httptest2, webfakes.</p></li>
+<li><p>2022-01-10, make review templates R Markdown files (<code>@Bisaloo</code>, #340).</p></li>
+<li><p>2022-01-14, update guidance on CI services (#377)</p></li>
+<li><p>2022-01-11, update guidance around branches, with resources suggested by <code>@ha0ye</code> and <code>@statnmap</code>.</p></li>
+<li><p>2022-01-10, divide author’s guide into sub-sections, and add extra info including <code>pkgcheck</code>.</p></li>
+<li><p>2021-11-30, adds links to examples of reviews, especially tough but constructive ones (with help from <code>@noamross</code>, <code>@mpadge</code>, #363).</p></li>
+<li><p>2021-11-19, add recommended spatial packages to scaffolding section (software-review-meta#47)</p></li>
+<li><p>2021-11-18, update advice on grouping functions for pkgdown output (#361)</p></li>
+</ul></section><section id="section-2" class="level2" data-number="19.3"><h2 data-number="19.3" class="anchored" data-anchor-id="section-2">
+<span class="header-section-number">19.3</span> 0.7.0</h2>
+<ul>
+<li><p>2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).</p></li>
+<li><p>2021-11-04, mention pkgcheck in the author guide (<span class="citation" data-cites="mpadge">@mpadge</span>, #343).</p></li>
+<li><p>2021-11-04, add editors’ responsibilities including Editor etiquette for commenting on packages on which you aren’t handling/reviewing (<span class="citation" data-cites="jhollist">@jhollist</span>, #354).</p></li>
+<li><p>2021-11-04, give precise examples of tools for installation instructions (remotes, pak, R-universe).</p></li>
+<li><p>2021-11-04, add more bot guidance (less work for editors).</p></li>
+<li><p>2021-10-07, add guidance for editorial management (recruiting, inviting, onboarding, offboarding editors).</p></li>
+<li><p>2021-09-14, add a requirement that there is at least one <em>HTML</em> vignette.</p></li>
+<li><p>2021-09-03, add some recommendations around git. (<span class="citation" data-cites="annakrystalli">@annakrystalli</span>, #341)</p></li>
+<li><p>2021-07-14, clarify the categories data extraction and munging by adding examples. (<span class="citation" data-cites="noamross">@noamross</span>, #337)</p></li>
+<li><p>2021-05-20, add guidance around setting up your package to foster a community, inspired by the recent rOpenSci community call. (with help from <code>@Bisaloo</code>, #289, #308)</p></li>
+<li><p>2021-04-27, no longer ask reviewers to ask covr as it’ll be done by automatic tools, but ask them to pay attention to tests skipped.</p></li>
+<li><p>2021-04-02, add citation guidance.</p></li>
+<li><p>2021-04-02, stop asking reviewers to run goodpractice as this is part of editorial checks.</p></li>
+<li><p>2021-03-23, launched a new form for reviewer volunteering.</p></li>
+<li><p>2021-02-24, add guidance around the use of <code>@ropensci-review-bot</code>.</p></li>
+</ul></section><section id="section-3" class="level2" data-number="19.4"><h2 data-number="19.4" class="anchored" data-anchor-id="section-3">
+<span class="header-section-number">19.4</span> 0.6.0</h2>
+<ul>
+<li><p>2021-02-04, add guidance to enforce package versioning and tracking of changes through review (<code>@annakrystalli</code>, #305)</p></li>
+<li><p>2021-01-25, add a translation of the review template in Spanish (<code>@Fvd</code>, <code>@maurolepore</code>, #303)</p></li>
+<li><p>2021-01-25, the book has now better citation guidance in case you want to cite this very guide (<code>@Bisaloo</code>, #304).</p></li>
+<li><p>2021-01-12, add some more guidance on escaping examples (#290).</p></li>
+<li><p>2021-01-12, mention the lifecycle package in the chapter about package evolution (#287).</p></li>
+<li><p>2021-01-12, require overlap information is put in documentation (#292).</p></li>
+<li><p>2021-01-12, start using the bookdown::bs4_book() template.</p></li>
+<li><p>2021-01-12, add a sentence about whether it is acceptable to push a new version of a package to CRAN within two weeks of the most recent version if you have just been made aware of, and fixed, a major bug (<code>@sckott</code>, #283)</p></li>
+<li><p>2021-01-12, mention the HTTP testing in R book.</p></li>
+<li><p>2021-01-12, mention testthat snapshot tests.</p></li>
+<li><p>2021-01-12, remove mentions of Travis CI and link to Jeroen Ooms’ blog post about moving away from Travis.</p></li>
+<li><p>2021-01-12, update the package curation policy: mention a possible exception for legacy packages that are vital parts of the R and/or rOpenSci package ecosystem which are actively monitored by staff. (<code>@noamross</code>, #293)</p></li>
+</ul></section><section id="section-4" class="level2" data-number="19.5"><h2 data-number="19.5" class="anchored" data-anchor-id="section-4">
+<span class="header-section-number">19.5</span> 0.5.0</h2>
+<ul>
+<li><p>2020-10-08, add help about link checking (<code>@sckott</code>, #281)</p></li>
+<li><p>2020-10-08, update JOSS instructions (<code>@karthik</code>, #276)</p></li>
+<li><p>2020-10-05, add links to licence resources (<code>@annakrystalli</code>, #279)</p></li>
+<li><p>2020-10-05, update information about the contributing guide (<code>@stefaniebutland</code>, #280)</p></li>
+<li><p>2020-09-11, make reviewer approval a separate template (<code>@bisaloo</code>, #264)</p></li>
+<li><p>2020-09-22, add package curation policy (<code>@noamross</code>, #263)</p></li>
+<li><p>2020-09-11, add more guidance and requirements for docs at submission (<code>@annakrystalli</code>, #261)</p></li>
+<li><p>2020-09-14, add more guidance on describing data source in DESCRIPTION (<code>@mpadge</code>, #260)</p></li>
+<li><p>2020-09-14, add more guidance about tests of deprecated functions (<code>@sckott</code>, #213)</p></li>
+<li><p>2020-09-11, update the CI guidance (<code>@bisaloo</code>, <code>@mcguinlu</code>, #269)</p></li>
+<li><p>2020-09-11, improve the redirect guidance (<code>@jeroen</code>, <code>@mcguinlu</code>, #269)</p></li>
+</ul></section><section id="section-5" class="level2" data-number="19.6"><h2 data-number="19.6" class="anchored" data-anchor-id="section-5">
+<span class="header-section-number">19.6</span> 0.4.0</h2>
+<ul>
+<li><p>2020-04-02, give less confusing code of conduct guidance: the reviewed packages’ COC is rOpenSci COC (<code>@Bisaloo</code>, <code>@cboettig</code>, #240)</p></li>
+<li><p>2020-03-27, add section on Ethics, Data Privacy and Human Subjects Research to Policies chapter</p></li>
+<li><p>2020-03-12, mention GitHub Actions as a CI provider.</p></li>
+<li><p>2020-02-24, add guide for inviting a guest editor.</p></li>
+<li><p>2020-02-14, add mentions of the ropensci-books GitHub organisation and associated subdomain.</p></li>
+<li><p>2020-02-10, add field and laboratory reproducibility tools as a category in scope.</p></li>
+<li><p>2020-02-10, add more guidance about secrets and package development in the security chapter.</p></li>
+<li><p>2020-02-06, add guidance about Bioconductor dependencies (#246).</p></li>
+<li><p>2020-02-06, add package logo guidance (#217).</p></li>
+<li><p>2020-02-06, add one CRAN gotcha: single quoting software names(#245, <a href="https://github.com/aaronwolen"><code>@aaronwolen</code></a>)</p></li>
+<li><p>2020-02-06, improve guidance regarding the replacement of “older” pkgdown website links and source (#241, <a href="https://github.com/cboettig"><code>@cboettig</code></a>)</p></li>
+<li><p>2020-02-06, rephrase the EiC role (#244).</p></li>
+<li><p>2020-02-06, remove the recommendation to add rOpenSci footer (https://github.com/ropensci/software-review-meta/issues/79).</p></li>
+<li><p>2020-02-06, remove the recommendation to add a review mention to DESCRIPTION but recommends mentioning the package version when reviewers are added as “rev” authors.</p></li>
+<li><p>2020-01-30, slightly changes the advice on documentation re-use: add a con; mention <code>@includeRmd</code> and <code>@example</code>; correct the location of Rmd fragments (#230).</p></li>
+<li><p>2020-01-30, add more guidance for the editor in charge of a dev guide release (#196, #205).</p></li>
+<li><p>2020-01-22, add guidance in the editor guide about not transferred repositories.</p></li>
+<li><p>2020-01-22, clarify forum guidance (for use cases and in general).</p></li>
+<li><p>2020-01-22, mention an approach for pre-computing vignettes so that the pkgdown website might get build on rOpenSci docs server.</p></li>
+<li><p>2020-01-22, document the use of mathjax with rotemplate (<a href="https://github.com/Bisaloo"><code>@Bisaloo</code></a>, #199).</p></li>
+<li><p>2020-01-20, add guidance for off-thread interaction and COIs (<a href="https://github.com/noamross"><code>@noamross</code></a>, #197).</p></li>
+<li><p>2020-01-20, add advice on specifying dependency minimum versions (<a href="https://github.com/karthik"><code>@karthik</code></a>, <a href="https://github.com/annakrystalli"><code>@annakrystalli</code></a>, #185).</p></li>
+<li><p>2020-01-09, start using GitHub actions instead of Travis for deployment.</p></li>
+<li><p>-2019-12-11, add note in Documentation sub-section of Packaging Guide section about referencing the new R6 support in roxygen2 (ropensci/dev_guide#189)</p></li>
+<li><p>2019-12-11, add new CRAN gotcha about having ‘in R’ or ‘with R’ in your package title (<a href="https://github.com/Bisaloo"><code>@bisaloo</code></a>, ropensci/dev_guide#221)</p></li>
+</ul></section><section id="section-6" class="level2" data-number="19.7"><h2 data-number="19.7" class="anchored" data-anchor-id="section-6">
+<span class="header-section-number">19.7</span> 0.3.0</h2>
+<ul>
+<li><p>2019-10-03, include in the approval template that maintainers should include link to the docs.ropensci.org/pkg site (ropensci/dev_guide#191)</p></li>
+<li><p>2019-09-26, add instructions for handling editors to nominate packages for blog posts (ropensci/dev_guide#180)</p></li>
+<li><p>2019-09-26, add chapter on changing package maintainers (ropensci/dev_guide#128) (ropensci/dev_guide#194)</p></li>
+<li><p>2019-09-26, update Slack room to use for editors (ropensci/dev_guide#193)</p></li>
+<li><p>2019-09-11, update instructions in README for rendering the book locally (ropensci/dev_guide#192)</p></li>
+<li><p>2019-08-05, update JOSS submission instructions (ropensci/dev_guide#187)</p></li>
+<li><p>2019-07-22, break “reproducibility” category in policies into component parts. (ropensci/software-review-meta#81)</p></li>
+<li><p>2019-06-18, add link to rOpenSci community call “Security for R” to security chapter.</p></li>
+<li><p>2019-06-17, fix formatting of Appendices B-D in the pdf version of the book (bug report by <a href="https://github.com/IndrajeetPatil"><code>@IndrajeetPatil</code></a>, #179)</p></li>
+<li><p>2019-06-17, add suggestion to use R Markdown hunks approach when the README and the vignette share content. (ropensci/dev_guide#161)</p></li>
+<li><p>2019-06-17, add mention of central building of documentation websites.</p></li>
+<li><p>2019-06-13, add explanations of CRAN checks. (ropensci/dev_guide#177)</p></li>
+<li><p>2019-06-13, add mentions of the <code>rodev</code> helper functions where relevant.</p></li>
+<li><p>2019-06-13, add recommendation about using <code>cat</code> for <code>str.*()</code> methods. RStudio assumes that <code>str</code> uses <code>cat</code>, if not when loading an R object the <code>str</code> prints to the console in RStudio and doesn’t show the correct object structure in the properties. ([<code>@mattfidler</code>] (https://github.com/mattfidler/) #178)</p></li>
+<li><p>2019-06-12, add more details about git flow.</p></li>
+<li><p>2019-06-12, remove recommendation about <code>roxygen2</code> dev version since the latest stable version has what is needed. (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #165)</p></li>
+<li><p>2019-06-11, add mention of usethis functions for adding testing or vignette infrastructure in the part about dependencies in the package building guide.</p></li>
+<li><p>2019-06-10, use the new URL for the dev guide, https://devguide.ropensci.org/</p></li>
+<li><p>2019-05-27, add more info about the importance of the repo being recognized as a R package by linguist (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #172)</p></li>
+<li><p>2019-05-22, update all links eligible to HTTPS and update links to the latest versions of Hadley Wickham and Jenny Bryan’s books (<a href="https://github.com/bisaloo/"><code>@bisaloo</code></a>, #167)</p></li>
+<li><p>2019-05-15, add book release guidance for editors. (ropensci/dev_guide#152)</p></li>
+</ul></section><section id="section-7" class="level2" data-number="19.8"><h2 data-number="19.8" class="anchored" data-anchor-id="section-7">
+<span class="header-section-number">19.8</span> 0.2.0</h2>
+<ul>
+<li><p>2019-05-23, add CRAN gotcha: in the Description field of your DESCRIPTION file, enclose URLs in angle brackets.</p></li>
+<li><p>2019-05-13, add more content to the chapter about contributing.</p></li>
+<li><p>2019-05-13, add more precise instructions about blog posts to approval template for editors.</p></li>
+<li><p>2019-05-13, add policies allowing using either <code>&lt;-</code> or <code>=</code> within a package as long as the whole package is consistent.</p></li>
+<li><p>2019-05-13, add request for people to tell us if they use our standards/checklists when reviewing software elsewhere.</p></li>
+<li><p>2019-04-29, add requirement and advice on testing packages using <code>devel</code> and <code>oldrel</code> R versions on Travis.</p></li>
+<li><p>2019-04-23, add a sentence about why being generous with attributions and more info about ctb vs aut.</p></li>
+<li><p>2019-04-23, add link to Daniel Nüst’s notes about migration from XML to xml2.</p></li>
+<li><p>2019-04-22, add use of rOpenSci forum to maintenance section.</p></li>
+<li><p>2019-04-22, ask reviewer for consent to be added to DESCRIPTION in review template.</p></li>
+<li><p>2019-04-22, use a darker blue for links (feedback by <a href="https://github.com/kwstat"><code>@kwstat</code></a>, #138).</p></li>
+<li><p>2019-04-22, add book cover.</p></li>
+<li><p>2019-04-08, improve formatting and link text in README (<a href="https://github.com/katrinleinweber"><code>@katrinleinweber</code></a>, #137)</p></li>
+<li><p>2019-03-25, add favicon (<a href="https://github.com/wlandau"><code>@wlandau</code></a>, #136).</p></li>
+<li><p>2019-03-21, improve Travis CI guidance, including link to examples. (<a href="https://github.com/mpadge"><code>@mpadge</code></a>, #135)</p></li>
+<li><p>2019-02-07, simplify code examples in Package Evolution section (maintenance_evolution.Rmd file) (<a href="https://github.com/hadley"><code>@hadley</code></a>, #129).</p></li>
+<li><p>2019-02-07, added a PDF file to export (request by <a href="https://github.com/IndrajeetPatil"><code>@IndrajeetPatil</code></a>, #131).</p></li>
+</ul></section><section id="section-8" class="level2" data-number="19.9"><h2 data-number="19.9" class="anchored" data-anchor-id="section-8">
+<span class="header-section-number">19.9</span> 0.1.5</h2>
+<ul>
+<li>2019-02-01, created a .zenodo.json to explicitly set editors as authors.</li>
+</ul></section><section id="first-release-0.1.0" class="level2" data-number="19.10"><h2 data-number="19.10" class="anchored" data-anchor-id="first-release-0.1.0">
+<span class="header-section-number">19.10</span> First release 0.1.0</h2>
+<ul>
+<li><p>2019-01-23, add details about requirements for packages running on all major platforms and added new section to package categories.</p></li>
+<li><p>2019-01-22, add details to the guide for authors about the development stage at which to submit a package.</p></li>
+<li><p>2018-12-21, inclusion of an explicit policy for conflict of interest (for reviewers and editors).</p></li>
+<li><p>2018-12-18, added more guidance for editor on how to look for reviewers.</p></li>
+<li><p>2018-12-04, onboarding was renamed Software Peer Review.</p></li>
+</ul></section><section id="place-holder-0.0.1" class="level2" data-number="19.11"><h2 data-number="19.11" class="anchored" data-anchor-id="place-holder-0.0.1">
+<span class="header-section-number">19.11</span> place-holder 0.0.1</h2>
+<ul>
+<li>Added a <code>NEWS.md</code> file to track changes to the book.</li>
+</ul></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/devguide\.ropensci\.org\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./maintenance_contributing.es.html" class="pagination-link" aria-label="Guía de contribución">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>  <span class="chapter-title">Guía de contribución</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./reviewtemplate.es.html" class="pagination-link" aria-label="Plantilla de revisión">
+        <span class="nav-page-text"><span class="chapter-number">20</span>  <span class="chapter-title">Plantilla de revisión</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/booknews.es.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar esta página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Informar de un problema</a></li>
+</ul></div></div></div></footer>
+</body>
+</html>
