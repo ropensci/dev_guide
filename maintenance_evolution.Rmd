@@ -38,7 +38,7 @@ foo_bar(x = 5)
 #> Error in foo_bar(x = 5) : use 'y' instead of 'x' 
 ```
 
-If you want to be more helpful, you could emit a warning but automatically take the necessary action:
+If you want the function to be more helpful, you could change it to emit a warning but automatically take the necessary action:
 
 ```r
 foo_bar <- function(x, y) {
@@ -226,6 +226,6 @@ An example of a minimal README in an archived package is in [ropensci-archive/mo
 - [ ] Archive the repository on GitHub (also under repo settings).
 - [ ] Transfer the repository to [ropensci-archive](https://github.com/ropensci-archive), or request an [rOpenSci staff member](https://ropensci.org/about/#team) to transfer it (you can email `info@ropensci.org`).
 
-Archived packages may be unarchived if authors or a new person opt to resume maintenance. For that please contact rOpenSci. They are transferred to the ropenscilabs organization.
+Archived packages may be unarchived if authors or a new person opt to resume maintenance. For that please contact rOpenSci. 
 
 

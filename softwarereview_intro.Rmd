@@ -49,38 +49,79 @@ Furthermore, authors and reviewers have the ability to contact privately the edi
 
 ## Editors and reviewers {#editors-and-reviewers}
 
-### Associate editors {#associateditors}
 
-rOpenSci's Software Peer Review process is run by:
+rOpenSci's Software Peer Review process is run by our team of dedicated editors and reviewers.
+Information on the current team, and the current status of software peer review, can be seen on our [interactive dashboard](https://ropensci-review-tools.github.io/dashboard/).
 
 ```{r}
-#| child: "associate-editors.md"
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
+} 
 ```
 
-### Reviewers {#reviewers}
+
+### Editor-in-Chief
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-eic.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+
+### Editorial team
+
+
+Our current team of editors for software peer-review includes:
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+### Reviewers and former editors
 
 We are grateful to the following individuals who have offered up their time and expertise to review packages submitted to rOpenSci.
 
 ```{r}
 #| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
-```{r}
-#| echo: false
-#| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+We are also grateful to the following individuals who have previously served as editors.
+
+```{r editors_past, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
-We are also grateful to the following individuals who have served as guest editors.
+And the following who have served as guest editors.
 
-```{r}
-#| echo: false
-#| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
-
+```{r guest-editors-out, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 

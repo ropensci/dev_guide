@@ -236,6 +236,6 @@ Una vez que el *README* se ha copiado en otro lugar y se ha reducido a su forma 
 - [ ] Transfiere el repositorio a [ropensci-archive](https://github.com/ropensci-archive) o solicita a un [miembro del equipo de rOpenSci](https://ropensci.org/about/#team) que lo haga (puedes enviar un correo electrónico a `info@ropensci.org`).
 
 Los paquetes archivados pueden ser desarchivados si quien lo mantenía, o una nueva persona, deciden reanudar el mantenimiento.
-Para ello, ponte en contacto con rOpenSci y se transferirá el repo a la organización ropenscilabs.
+Para ello, ponte en contacto con rOpenSci.
 
 
