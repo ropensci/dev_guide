@@ -48,7 +48,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Ao submeter um pacote, certifique-se de que suas notificações do GitHub estão ativadas para que você não perca qualquer comentário relacionado a sua submissão.
 - Os pacotes são verificados automaticamente no momento de submissão pelo [nosso `pkgcheck`](https://docs.ropensci.org/pkgcheck), que confirma se um pacote está ou não pronto para ser revisado.
 - Os pacotes submetidos podem ser hospedados na ramificação principal/padrão ou em qualquer outra ramificação não padrão. Neste último caso, é recomendável, mas não obrigatório, enviar o pacote por meio de uma ramificação dedicada tipo `ropensci-software-review`.
-- Para envios em ramificações não padrão, o URL do “Repository” no modelo de envio deve ser o URL completo da ramificação de revisão, como “https://github.com/my/repo/tree/ropensci-software-review”.
+- Para envios em ramificações (*branches*) que não sejam a padrão, o URL indicado em “Repository” no modelo de envio deve ser o URL completo da ramificação de revisão, como por exemplo: `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## O Processo de Revisão {#the-review-process}
 
