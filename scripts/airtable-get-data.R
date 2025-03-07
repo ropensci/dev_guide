@@ -1,12 +1,3 @@
-## setup ----
-
-if (Sys.getenv("AIRTABLE_API_KEY") == ""){
-  Sys.setenv(AIRTABLE_API_KEY = params$AIRTABLE_API_KEY)
-}
-if (Sys.getenv("AIRTABLE_ID") == ""){
-  Sys.setenv(AIRTABLE_ID = params$AIRTABLE_ID)
-}
-
 ## all reviewers ----
 at_rev <- airtabler::airtable(base = Sys.getenv("AIRTABLE_ID"),
                               table = "reviewers-prod")
@@ -53,8 +44,8 @@ guest_editors <- guest_editors[order(last_names), ]
 
 ## reviewers that are not editors ----
 
-reviewers <- reviewers[purrr::map_lgl(reviewers$reviews, 
-                               ~!is.null(.)) & 
+reviewers <- reviewers[purrr::map_lgl(reviewers$reviews,
+                               ~!is.null(.)) &
                          !(reviewers$name %in% c(editors_all$name, "???")), ]
 last_names <- humaniformat::last_name(trimws(reviewers$name))
 reviewers <- reviewers[order(last_names), ]

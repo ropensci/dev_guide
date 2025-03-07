@@ -70,23 +70,21 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 ```{r}
 #| echo: false
 #| results: 'asis'
-source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
+} 
 ```
 
 
 ### Líder Editorial
-
 ```{r}
 #| echo: false
 #| results: 'asis'
-out <- paste0(
-    "Cambiamos lideres editoriales, aproximadamente cada 3 meses. ",
-    "Hoy es [", eic_name, "](https://github.com/",
-    eic_github, ").\n"
-)
-cat(out, sep = "")
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-eic.es.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 
@@ -97,8 +95,11 @@ Nuestro equipo editorial asociado incluye:
 ```{r}
 #| echo: false
 #| results: 'asis'
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 
@@ -109,19 +110,29 @@ Agradecemos a las siguientes personas, quienes ofrecieron su tiempo y experienci
 ```{r}
 #| echo: false
 #| results: 'asis'
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 También agradecemos a las siguientes personas que tenian antes el rol de revisión. 
 
 ```{r editors_past, echo=FALSE, results='asis'}
-cat(gen_ed_out(editors_past), sep = "")
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
 ```
-
 
 También agradecemos a las siguientes personas que tomaron el rol de edición de forma invitada. 
 
 ```{r guest-editors-out, echo=FALSE, results='asis'}
-cat(gen_ed_out(guest_editors), sep = "")
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
 ```
