@@ -19,6 +19,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 - En la fase de envío, todas las funciones principales deben ser lo suficientemente estables como para estar completamente documentadas y testeadas. El *README* tiene que dar una buena impresión de tu paquete.
 - El archivo *README* debe esforzarse por explicar las funcionalidades y los objetivos de tu paquete asumiendo poco o ningún conocimiento del dominio. Además, debe aclarar todos los temas técnicos, incluidas las referencias a otros software.
 - Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución de paquetes* [proporciona orientación sobre el tema](#evolution).
+- Por favor, no envies varios paquetes a la vez: te rogamos que espere hasta que un paquete haya sido aprobado antes de enviar otro.
 
 ## Preparación para el envío {#preparing-for-submission}
 
