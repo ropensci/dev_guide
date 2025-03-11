@@ -456,7 +456,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Tenga en cuenta que este enfoque debe utilizarse y probarse con mucho cuidado, sobre todo porque puede romper el comportamiento esperado de los objetos reclasificados.)
   
   - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
     Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.

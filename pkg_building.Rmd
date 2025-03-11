@@ -393,7 +393,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Note that this approach is [not universally endorsed](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Note that this approach should be very carefully used and tested, especially as it may break expected behaviour of re-classed objects.)
   
   - Ensure that you are using the package where the function is defined,
     rather than one where it is re-exported. For instance many functions in **devtools** can be found in smaller specialty packages such as **sessioninfo**. The `%>%` function
