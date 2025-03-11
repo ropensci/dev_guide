@@ -364,7 +364,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 - You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run. Refer to the [summary table](https://roxygen2.r-lib.org/articles/rd.html#functions) in roxygen2 docs.
 
-- To safe-guard examples (e.g. requiring authentication) to be run on CRAN you need to use `\dontrun{}`. However, for a first submission CRAN won't let you have all examples escaped so. In this case you might add some small toy examples, or wrap example code in `try()`. Also refer to the `@exampleIf` tag present, at the time of writing, in roxygen2 development version.
+- To safe-guard examples (e.g. requiring authentication) to be run on CRAN you need to use `\dontrun{}`. However, for a first submission CRAN won't let you have all examples escaped so. In this case you might add some small toy examples, or wrap example code in `try()`. Also refer to the `@exampleIf` tag.
 
 - In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the [continuous integration systems](#ci). Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can configure your continuous integration builds to run them via R CMD check arguments `--run-dontrun` and/or `--run-donttest`.
 
@@ -452,6 +452,8 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 ## Version Control {#version-control}
 
 - Your package source files have to be under version control, more specifically tracked with [Git](https://happygitwithr.com/). You might find the [gert package](https://docs.ropensci.org/gert/) relevant, as well as some of [usethis Git/GitHub related functionality](https://usethis.r-lib.org/reference/index.html#section-git-and-github); you can however use git as you want.
+
+- The default branch name should not be `master`, as this can be offensive to some people. Refer to the [statement of the Git project and the Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) for more context. It is general practice to name a default branch `main`, although other names may also be used. See the tidyverse blog post ["Renaming the default branch"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) to learn about usethis functionality to help with renaming default branches.
 
 - Make sure to list "scrap" such as `.DS_Store` files in .gitignore. You might find the [`usethis::git_vaccinate()` function](https://usethis.r-lib.org/reference/git_vaccinate.html), and the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
 

@@ -429,7 +429,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Para evitar que los ejemplos se ejecuten en CRAN (por ejemplo, si requieren autenticación), tienes que utilizar `\dontrun{}`.
   Sin embargo, para un primer envío, CRAN no te permitirá saltearte todos los ejemplos.
   En este caso puedes añadir algunos pequeños ejemplos de juguete, o encapsular el código de los ejemplos en `try()`.
-  Consulta también la etiqueta `@exampleIf`, que al momento de escribir este artículo, se encuentra en la versión de desarrollo de roxygen2.
+  Consulta también la etiqueta `@exampleIf`.
 
 - Además de ejecutar los ejemplos localmente en tu propia computadora, te aconsejamos fuertemente que ejecutes los ejemplos en uno de los [sistemas de integración continua](#ci).
   De nuevo, se ejecutarán los ejemplos que no estén incluidos en `\dontrun{}` o `\donttest{}`.
@@ -523,6 +523,8 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Los archivos fuente de tu paquete tienen que estar bajo control de versiones, más concretamente versionados con [Git](https://happygitwithr.com/).
   Puede que el paquete [gert](https://docs.ropensci.org/gert/) te resulte útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
+  
+- El nombre de rama por defecto no debe ser `master` ya que puede resultar ofensivo para algunas personas. Consulta la [declaración del proyecto Git y de la Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para más contexto. Es práctica general nombrar a la rama por defecto `main` aunque también pueden utilizarse otros nombres. Consulta el artículo de tidyverse ["Cambiar el nombre de la rama por defecto"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para aprender a utilizar esta funcionalidad para renombrar las ramas por defecto.
 
 - Asegúrate de listar archivos innecesarios, como `.DS_Store`, en .gitignore.
   La función [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html), y el paquete [gitignore](https://docs.ropensci.org/gitignore/) pueden resultarte útil para esto.
