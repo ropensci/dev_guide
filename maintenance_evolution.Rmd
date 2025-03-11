@@ -201,6 +201,16 @@ You don't have to change the tests of deprecated functions until they are made d
 
 Once a function is made defunct, its tests are simply removed.
 
+## Renaming packages {#renaming-packages}
+
+Renaming a package that is in very early development is fine.
+It can be the opportunity, before review, to comply with our [naming advice](#naming-your-package).
+
+Now, renaming a package that has been widely adopted and/or released on CRAN is problematic as users might not hear about the new package.
+If you decide to go forward with such renaming, make sure to acknowledge authors of the package under its original name by listing them in DESCRIPTION with a comment that states they were author of the original package.
+
+Creating a newer package that is a rewrite with a better interface, like httr2 instead of httr ; or editions of a package like for thestthat, are different strategies.
+
 ## Archiving packages {#archivalguidance}
 
 Software generally has a finite lifespan, and packages may eventually need to be archived. Archived packages are [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) and moved to a dedicated GitHub organization, [ropensci-archive](https://github.com/ropensci-archive). Prior to archiving, the contents of the README file should be moved to an alternative location (such as "README-OLD.md"), and replaced with minimal contents including something like the following:
