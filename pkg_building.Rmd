@@ -322,7 +322,10 @@ Many packages include code from other software. Whether entire files or single f
 ## Licence {#licence}
 
 The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
-For more explanations around licensing, refer to the [R packages book](https://r-pkgs.org/license.html).
+The [R packages book](https://r-pkgs.org/description.html#sec-description-authors-at-r) includes a helpful [section on licenses](https://r-pkgs.org/license.html).
+
+If your package bundles code from other sources, you also need to acknowledge authors of the original code in your DESCIPTION file, generally with a copyright-holder role: `role = "cph"`.
+For how to update your DESCRIPTION file, see the [R packages book](https://r-pkgs.org/description.html#sec-description-authors-at-r).
 
 ## Testing {#testing}
 
