@@ -92,7 +92,7 @@ For more information refer to the blog post [Why You Should (or Shouldn't) Build
 
 - You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case.
 
-- You can use the [lintr package](https://lintr.r-lib.org/index.html) for identifying some possible areas of improvement. [Example workflow](https://masalmon.eu/2024/08/28/lintr-3-steps/).
+- You can use the [lintr package](https://lintr.r-lib.org/index.html) to identify some possible areas of improvement. [Example workflow](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## CITATION file {#citation-file}
 
