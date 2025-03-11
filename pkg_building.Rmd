@@ -89,7 +89,7 @@ For more information refer to the blog post [Why You Should (or Shouldn't) Build
 
 ### Packages wrapping external software {#external-software}
 
-- Document clearly how to install the package.
+- Document clearly how to install the package, including all required external packages or libraries, including where applicable explicit steps on common operating systems.
 - Provide a situation report (sitrep) function checking whether the software has been installed, with hints in case something is missing. [Example in greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
 - If possible, provide a function helping with installation. [Example in hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
 
