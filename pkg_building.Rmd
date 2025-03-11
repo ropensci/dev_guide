@@ -334,7 +334,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to *defensively* code against those. [More information](https://r-pkgs.org/tests.html).
 
-- Tests should be easy to understand. We suggest reading the blog post [*"Why Good Developers Write Bad Unit Tests"*](https://mtlynch.io/good-developers-bad-tests/) by Michael Lynch.
+- Tests should be easy to understand, and as self-contained as possible. When using testthat, avoid using top-level code, that is to say, code outside of `test_that()`. We recommend reading the [high-level principles for testing](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) in the R Packages book.
 
 - Packages with Shiny apps should use a unit-testing framework such as [`shinytest2`](https://rstudio.github.io/shinytest2/) or [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
