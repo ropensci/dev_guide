@@ -375,7 +375,7 @@ El paquete debe tener una licencia aceptada por [CRAN](https://svn.r-project.org
 El libro [R packages (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) incluye una útil sección sobre licencias.
 
 Si tu paquete incluye código de otras fuentes, también necesita reconocer a los autores del código original en su archivo DESCIPTION, generalmente con un rol de propietario del copyright: `role = "cph"`.
-Para saber cómo actualizar su archivo DESCRIPTION, consulte el libro [R packages](https://r-pkgs.org/description.html#sec-description-authors-at-r).
+Para saber cómo actualizar su archivo DESCRIPTION, consulta el libro [R packages (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r).
 
 ## Testeo {#testing}
 
