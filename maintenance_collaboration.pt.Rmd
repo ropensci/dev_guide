@@ -40,7 +40,7 @@ Em geral, esses e outros modelos precisarão ser modificados para serem usados c
 Modificar um guia de contribuição genérico para adicionar um toque pessoal também tende a fazer com que ele pareça menos genérico e mais sincero.
 As preferências pessoais em um guia de contribuição incluem:
 
-- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
+- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [lintr](https://github.com/jimhester/lintr), ) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
 
 - Infraestrutura como a do `roxygen2`?
 
@@ -57,7 +57,7 @@ Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as co
 
 Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para o [Fórum da rOpenSci](https://discuss.ropensci.org/) após certificar-se de que você verá essas perguntas no fórum. As pessoas usuárias podem usar o fórum para fazer perguntas sobre o uso e relatar seus casos de uso, e você pode se inscrever em categorias e tags individuais para receber notificações sobre o seu pacote.  Sinta-se à vontade para mencionar isso nos documentos do seu pacote e/ou nas diretrizes de contribuição/modelo de *issue*. Oriente as pessoas que usam seu pacote a marcar as mensagens com o nome do pacote.
 
-Quando uma pull request estiver mais perto de ser mesclada, você poderá usar [um *GitHub Actions PR workflow* para estilizar o código com o pacote `styler`](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Quando uma pull request estiver mais perto de ser mesclada, você poderá estilizar o código com [Air](https://posit-dev.github.io/air/) ou [styler](https://styler.r-lib.org/).
 
 ### Gerenciamento de *issues* {#issue-management}
 
