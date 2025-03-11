@@ -93,7 +93,7 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 
 ### Paquetes que envuelven software externo {#external-software}
 
-- Documenta claramente cómo instalar el paquete.
+- Documenta claramente cómo instalar el paquete, incluidos todos los paquetes o bibliotecas externos necesarios, incluyendo, en su caso, los pasos explícitos en los sistemas operativos habituales.
 - Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
 - Si es posible, proporciona una función que ayude en la instalación. [Ejemplo en hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
 
