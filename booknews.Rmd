@@ -4,6 +4,8 @@
 
 - 2025-03-11, explicitly mention need to acknolwedge authors of bundled code (#873)
 
+- 2025-03-11, mention the Air formatting tool wherever we mention the styler package (#875)
+
 - 2025-02-25, require the default git branch to not be called master (#863)
 
 - 2024-09-06, update math guidance for pkgdown based on pkgdown's update (#838)
