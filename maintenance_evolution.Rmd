@@ -206,7 +206,7 @@ Once a function is made defunct, its tests are simply removed.
 Renaming a package that is in early development is fine.
 It can be the opportunity, before review, to comply with our [naming advice](#naming-your-package).
 
-Now, renaming a package that has been widely adopted and/or released on CRAN is problematic.
+Renaming a package that is already widely adopted and/or released on CRAN is problematic.
 CRAN has a [policy](https://cran.r-project.org/web/packages/policies.html) stating that Package names on CRAN are persistent and in general it is not permitted to change a package’s name.
 The package under its old name might be a dependency of packages, scripts, and feature in documentation and blog posts, etc.
 
