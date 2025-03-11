@@ -42,15 +42,23 @@ R packages should have CI for all operating systems (Linux, Mac OSX, Windows) wh
 
 - Anything with file system / path calls
 
-In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
+In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems.
+Most CI services standards setups for R packages allow this with not much hassle.
 
 ## Which continuous integration service(s)? {#whichci}
 
-There are a number of continuous integration services, including standalone services (CircleCI, AppVeyor), and others integrated into code hosting or related services (GitHub Actions, GitLab, AWS Code Pipeline). Different services support different operating system configurations.
+There are a number of continuous integration services, including standalone services (CircleCI, AppVeyor), and others integrated into code hosting or related services (GitHub Actions, GitLab, AWS Code Pipeline).
+Different services support different operating system configurations.
 
-[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.  There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well and first-class support in the [{usethis}](https://usethis.r-lib.org/reference/github_actions.html) package. All packages submitted to rOpenSci for peer review are checked by our own [`pkgcheck` system](https://docs.ropensci.org/pkgcheck), described further in the [Guide for Authors](#authors-guide). These checks are also provided as a GitHub Action in the [`ropensci-review-tools/pkgcheck-action` repository](https://github.com/ropensci-review-tools/pkgcheck-action). Packages authors are encouraged to use that action to confirm prior to submission that a package passes all of our checks. See [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) for more information.
+[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.
+There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well and first-class support in the [{usethis}](https://usethis.r-lib.org/reference/github_actions.html) package.
+All packages submitted to rOpenSci for peer review are checked by our own [`pkgcheck` system](https://docs.ropensci.org/pkgcheck), described further in the [Guide for Authors](#authors-guide).
+These checks are also provided as a GitHub Action in the [`ropensci-review-tools/pkgcheck-action` repository](https://github.com/ropensci-review-tools/pkgcheck-action).
+Packages authors are encouraged to use that action to confirm prior to submission that a package passes all of our checks.
+See [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) for more information.
 
-[usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated. rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
+[usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated.
+rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
 
 #### Testing using different versions of R {#testing-using-different-versions-of-r}
 
@@ -66,7 +74,8 @@ If you develop a package depending on or intended for Bioconductor, you might fi
 
 You can use these tips to minimize build time on CI:
 
-- Cache installation of packages. The default [r-lib/actions workflows](https://github.com/r-lib/actions) do this.
+- Cache installation of packages.
+  The default [r-lib/actions workflows](https://github.com/r-lib/actions) do this.
 
 #### System dependencies {#sysdeps-ci}
 
@@ -78,11 +87,14 @@ We recommend [moving away from Travis](https://ropensci.org/technotes/2020/11/19
 
 ### AppVeyor CI (Windows) {#app-veyor-ci-windows}
 
-For continuous integration on Windows, see [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Set it up using `usethis::use_appveyor()`.
+For continuous integration on Windows, see [R + AppVeyor](https://github.com/krlmlr/r-appveyor).
+Set it up using `usethis::use_appveyor()`.
 
 Here are tips to minimize AppVeyor build time:
 
-- Cache installation of packages. [Example in a config file](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). It'll already be in the config file if you set AppVeyor CI up using `usethis::use_appveyor()`.
+- Cache installation of packages.
+  [Example in a config file](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13).
+  It'll already be in the config file if you set AppVeyor CI up using `usethis::use_appveyor()`.
 
 - Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
@@ -111,11 +123,15 @@ If you run coverage on several CI services [the results will be merged](https://
 
 ## Even more CI: OpenCPU {#even-more-ci-open-cpu}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email. This is an additional CI service for package authors that allows for R functions in packages to be called remotely via [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/) using the [opencpu API](https://www.opencpu.org/api.html#api-json). For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
+After transfer to rOpenSci's "ropensci" GitHub organization, each push to the repo will be built on OpenCPU and the person committing will receive a notification email.
+This is an additional CI service for package authors that allows for R functions in packages to be called remotely via [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/) using the [opencpu API](https://www.opencpu.org/api.html#api-json).
+For more details about this service, consult the OpenCPU [help page](https://www.opencpu.org/help.html) that also indicates where to ask questions.
 
 ## Even more CI: rOpenSci docs {#rodocsci}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
+After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo.
+You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works).
+The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/).
 
 Please report bugs, questions and feature requests about the central builds and about the template at [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 

@@ -15,7 +15,8 @@ We recommend the article [Ten quick tips for staying safe online](https://journa
 
 ## GitHub access security {#git-hub-access-security}
 
-- We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/). It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
+- We recommend you [secure your GitHub account with two-factor (authentication) 2FA](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
+  It is *compulsory* for all ropensci GitHub organization members and outside collaborators so make sure to enable it before your package is approved.
 
 - We also recommend you regularly check who has access to your package repository, and that you prune any unused access (such as from former collaborators).
 
@@ -25,7 +26,8 @@ We recommend the article [Ten quick tips for staying safe online](https://journa
 
 ## Secrets in packages {#pkgsecrets}
 
-This section contains guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.). Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
+This section contains guidance for when you develop a package interacting with a web resource requiring credentials (API keys, tokens, etc.).
+Also refer to [the `httr` vignette about sharing secrets](https://httr.r-lib.org/articles/secrets.html).
 
 ### Secrets in packages and user protection {#secrets-in-packages-and-user-protection}
 
@@ -33,13 +35,15 @@ Say your package needs an API key for making requests on behalf of users of your
 
 - In your package documentation, guide the user so the API key doesn't end up in the .Rhistory/script of users of your package.
   
-  - Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?). You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
+  - Encourage the use of environment variables to store the API key (or even remove the possibility to pass it as an argument to the functions?).
+    You could link [to this intro to startup files](https://rstats.wtf/r-startup.html) and [`usethis::edit_r_environ()`](https://usethis.r-lib.org/reference/edit.html).
   
   - Or your package could depend on, or encourage the use of, [`keyring` to help user store variables](https://github.com/r-lib/keyring#readme) in the specific OS' credential stores (more secure than .Renviron): i.e. you'd create a function for setting the key, and have another one for retrieving the key; or the user would write `Sys.setenv(SUPERSECRETKEY = keyring::key_get("myservice"))` at the beginning of their script.
   
   - Do not print the API key even in verbose mode in any message, warning, error.
 
-- In the GitHub issue template, it should be stated not to share any credentials. If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
+- In the GitHub issue template, it should be stated not to share any credentials.
+  If an user of your package accidentally shares credentials in an issue, make sure they're aware of that so they can revoke the key (i.e. ask them explicitly in an answer whether they realized they shared their key).
 
 ### Secrets in packages and development {#secrets-in-packages-and-development}
 
@@ -47,7 +51,8 @@ You'll need to protect your secrets as you protect secrets of users, but there's
 
 #### Secrets and recorded requests in tests {#secrets-and-recorded-requests-in-tests}
 
-If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets. Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security-chapter.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
+If you use [`vcr`](https://docs.ropensci.org/vcr/) or [`httptest`](https://enpiar.com/r/httptest/) in tests for caching API responses, you need to make sure the recorded requests / fixtures do not contain secrets.
+Refer to [`vcr` security guidance](https://books.ropensci.org/http-testing/security-chapter.html) and [`httptest` guidance "Redacting and Modifying Recorded Requests"](https://enpiar.com/r/httptest/articles/redacting.html), and inspect your recorded requests / fixtures before committing them the first time to be sure you got the setup right.
 
 `vcr` being an rOpenSci package, you can post any question you might have to [rOpenSci forum](https://discuss.ropensci.org/).
 
