@@ -206,10 +206,12 @@ Once a function is made defunct, its tests are simply removed.
 Renaming a package that is in very early development is fine.
 It can be the opportunity, before review, to comply with our [naming advice](#naming-your-package).
 
-Now, renaming a package that has been widely adopted and/or released on CRAN is problematic as users might not hear about the new package.
-If you decide to go forward with such renaming, make sure to acknowledge authors of the package under its original name by listing them in DESCRIPTION with a comment that states they were author of the original package.
+Now, renaming a package that has been widely adopted and/or released on CRAN is problematic.
+CRAN has a [policy](https://cran.r-project.org/web/packages/policies.html) stating that Package names on CRAN are persistent and in general it is not permitted to change a package’s name.
+The package under its old name might be a dependency of packages, scripts, and feature in documentation and blog posts, etc.
 
-Creating a newer package that is a rewrite with a better interface, like httr2 instead of httr ; or editions of a package like for thestthat, are different strategies.
+Creating a newer package that is a rewrite with a better interface, like [httr2 which is the second generation of httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/) ; or creating editions of a package like for [testthat](https://testthat.r-lib.org/articles/third-edition.html), are better strategies.
+If you rewrite a package, make sure to acknowledge authors of code you re-use by listing them in DESCRIPTION with a comment that states they were author of the original package.
 
 ## Archiving packages {#archivalguidance}
 
