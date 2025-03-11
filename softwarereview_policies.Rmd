@@ -177,7 +177,8 @@ The above is a bit vague, so the following are a few areas of consideration.
   - Package `bar` may not have reverse dependencies on CRAN, but is widely used, thus quickly fixing problems is of greater importance.
 - Examples where we can wait longer:
   - Package `hello` is not on CRAN, or on CRAN, but has no reverse dependencies.
-  - Package `world` needs some fixes. The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.
+  - Package `world` needs some fixes.
+    The maintainer has responded but is simply very busy with a new job, or other reason, and will attend to soon.
 
 We urge package maintainers to make sure they are receiving GitHub notifications, as well as making sure emails from rOpenSci staff and CRAN maintainers are not going to their spam box.
 Authors of onboarded packages will be invited to the rOpenSci Slack to chat with the rOpenSci team and the greater rOpenSci community.
@@ -200,11 +201,13 @@ In the unlikely scenario that a contributor of a package requests removal of the
 ## Ethics, Data Privacy and Human Subjects Research {#ethics-data-privacy-and-human-subjects-research}
 
 rOpenSci packages and other tools are used for a variety of purposes, but our focus is on tools for research.
-We expect that tools will enable ethical use by research practitioners, who are obligated to adhere to ethical codes such [Declaration of Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) and [The Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html). Researchers bear responsibility for their use of software, but software developers must consider the ethical use of their products, and developers themselves adhere to ethical codes for computer professionals such as those expressed by [IEEE](https://www.computer.org/education/code-of-ethics) and [ACM](https://ethics.acm.org/).
+We expect that tools will enable ethical use by research practitioners, who are obligated to adhere to ethical codes such [Declaration of Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) and [The Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
+Researchers bear responsibility for their use of software, but software developers must consider the ethical use of their products, and developers themselves adhere to ethical codes for computer professionals such as those expressed by [IEEE](https://www.computer.org/education/code-of-ethics) and [ACM](https://ethics.acm.org/).
 rOpenSci contributors often play both the role of both researcher and developer.
 
 We ask that software developers place themselves in researchers' role and consider the requirements of an ethical workflow using authors' software.
-Given the variation and degree of flux of ethical approaches for Internet-based analyses, judgement calls rather than recipes are required. The [Ethical Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/) provides a robust framework and we encourage authors, editors, and reviewers to use this in evaluating their work.
+Given the variation and degree of flux of ethical approaches for Internet-based analyses, judgement calls rather than recipes are required.
+The [Ethical Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/) provides a robust framework and we encourage authors, editors, and reviewers to use this in evaluating their work.
 In general, adherence to legal or regulatory minimum requirements may not be sufficient, though these (e.g., GDPR), may be relevant.
 Package authors should direct users to relevant resources for the ethical use of the software.
 
@@ -228,7 +231,8 @@ While the best response to ethical concerns will be context-specific, these gene
   Package authors should support users' acquisition of informed consent when relevant.
   This may include providing links to data source's preferred method of acquiring consent, contact information of data providers (e.g. forum moderators), documentation of informed consent protocols, or getting pre-approval for general uses of a package.
   
-  Note that consent is not implicitly granted just because data are accessible. Accessible data are not necessarily public, as different persons and contexts have different normative expectations of privacy (see work by [Social Data Lab](http://socialdatalab.net/ethics-resources)).
+  Note that consent is not implicitly granted just because data are accessible.
+  Accessible data are not necessarily public, as different persons and contexts have different normative expectations of privacy (see work by [Social Data Lab](http://socialdatalab.net/ethics-resources)).
 
 - Packages accessing personally identifiable information should take special care to follow \[security best practices\]\[Package Development Security Best Practices\] (e.g., exclusive use of secure internet protocols, strong mechanisms for storing credentials, etc.).
 

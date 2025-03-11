@@ -10,17 +10,25 @@ _If you use our standards/checklists etc. when reviewing software elsewhere, do 
 
 ## What is rOpenSci Software Peer Review? {#whatissoftwarereview}
 
-rOpenSci's [suite of packages](https://ropensci.org/packages/) is partly contributed by staff members and partly contributed by community members, which means the suite stems from a great diversity of skills and experience of developers. How to ensure quality for the whole set? That's where software peer review comes into play: packages contributed by the community undergo a transparent, constructive, non adversarial and open review process. For that process relying mostly on volunteer work, [associate editors](#associateditors) manage the incoming flow and ensure progress of submissions; authors create, submit and improve their package; [reviewers](#reviewers), two per submission, examine the software code and user experience. [This blog post](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/) written by rOpenSci editors is a good introduction to rOpenSci software peer review  Other blog posts about review itself and reviewed packages can be find [via the "software-peer-review" tag on rOpenSci blog](https://ropensci.org/tags/software-peer-review/).
+rOpenSci's [suite of packages](https://ropensci.org/packages/) is partly contributed by staff members and partly contributed by community members, which means the suite stems from a great diversity of skills and experience of developers.
+How to ensure quality for the whole set? That's where software peer review comes into play: packages contributed by the community undergo a transparent, constructive, non adversarial and open review process.
+For that process relying mostly on volunteer work, [associate editors](#associateditors) manage the incoming flow and ensure progress of submissions; authors create, submit and improve their package; [reviewers](#reviewers), two per submission, examine the software code and user experience.
+[This blog post](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/) written by rOpenSci editors is a good introduction to rOpenSci software peer review  Other blog posts about review itself and reviewed packages can be find [via the "software-peer-review" tag on rOpenSci blog](https://ropensci.org/tags/software-peer-review/).
 
 You can recognize rOpenSci packages that have been peer-reviewed via a green "peer-reviewed" badge in their README, linking to their reviews (cf [this example](https://github.com/ropensci/restez#locally-query-genbank-)); and via a blue comment icon near their description on [rOpenSci packages page](https://ropensci.org/packages/), also linking to the reviews.
 
-Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package review process is an issue in the [ropensci/software-review GitHub repository](https://github.com/ropensci/software-review/). For instance, click [here](https://github.com/ropensci/software-review/issues/24) to read the review thread of the `ropenaq` package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
+Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package review process is an issue in the [ropensci/software-review GitHub repository](https://github.com/ropensci/software-review/).
+For instance, click [here](https://github.com/ropensci/software-review/issues/24) to read the review thread of the `ropenaq` package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones.
+Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
 
 ## Why submit your package to rOpenSci? {#whysubmit}
 
-- First, and foremost, we hope you submit your package for review **because you value the feedback**.  We aim to provide useful feedback to package authors and for our review process to be open, non-adversarial, and focused on improving software quality.
-- Once aboard, your package will continue to receive **support from rOpenSci members**.  You'll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.
-- rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and social media (like [Mastodon](https://fosstodon.org/@ropensci) and [LinkedIn](https://www.linkedin.com/company/ropensci/)). Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
+- First, and foremost, we hope you submit your package for review **because you value the feedback**.
+  We aim to provide useful feedback to package authors and for our review process to be open, non-adversarial, and focused on improving software quality.
+- Once aboard, your package will continue to receive **support from rOpenSci members**.
+  You'll retain ownership and control of your package, but we can help with ongoing maintenance issues such as those associated with updates to R and dependencies and CRAN policies.
+- rOpenSci will **promote your package** through our [webpage](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/), and social media (like [Mastodon](https://fosstodon.org/@ropensci) and [LinkedIn](https://www.linkedin.com/company/ropensci/)).
+  Packages in our suite also get a [documentation website that is automatically built and deployed after each push](#docsropensci).
 - rOpenSci **packages can be cross-listed** with other repositories such as CRAN and BioConductor.
 - rOpenSci packages that are in scope for the [Journal of Open-Source Software](https://joss.theoj.org/) and add the necessary accompanying short paper, would, at the discretion of JOSS editors, benefit from a fast-tracked review process.
 - If you write one, rOpenSci will **promote gitbooks related to your package**: the source of such books can be transferred to [the `ropensci-books` GitHub organisation](https://github.com/ropensci-books) for books to be listed [at books.ropensci.org](https://books.ropensci.org/).
@@ -28,15 +36,28 @@ Technically, we make the most of [GitHub](https://github.com/) infrastructure: e
 ## Why review packages for rOpenSci? {#whyreview}
 
 - As in any peer-review process, we hope you choose to review **to give back to the rOpenSci and scientific communities.**  Our mission to expand access to scientific data and promote a culture of reproducible research is only possible through the volunteer efforts of community members like you.
-- Review is a two-way conversation. By reviewing packages, you'll have the chance to **continue to learn development practices from authors and other reviewers**.
-- The open nature of our review process allows you to **network and meet colleagues and collaborators** through the review process. Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.
-- To volunteer to be one of our reviewers, fill out [this short form](https://airtable.com/shrnfDI2S9uuyxtDw) providing your contact information and areas of expertise. We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
+- Review is a two-way conversation.
+  By reviewing packages, you'll have the chance to **continue to learn development practices from authors and other reviewers**.
+- The open nature of our review process allows you to **network and meet colleagues and collaborators** through the review process.
+  Our community is friendly and filled with supportive members expert in R development and many other areas of science and scientific computing.
+- To volunteer to be one of our reviewers, fill out [this short form](https://airtable.com/shrnfDI2S9uuyxtDw) providing your contact information and areas of expertise.
+  We are always looking for more reviewers with both general package-writing experience and domain expertise in the fields where packages are used.
 
 ## Why are reviews open? {#whyopen}
 
-Our reviewing threads are public. Authors, reviewers, and editors all know each other's identities. The broader community can view or even participate in the conversation as it happens. This provides an incentive to be thorough and provide non-adversarial, constructive reviews. Both authors and [reviewers report](https://ropensci.org/tags/reviewer/) that they enjoy and learn more from this open and direct exchange. It also has the benefit of building a community. Participants have the opportunity to meaningfully network with new peers, and new collaborations have emerged via ideas spawned during the review process.
+Our reviewing threads are public.
+Authors, reviewers, and editors all know each other's identities.
+The broader community can view or even participate in the conversation as it happens.
+This provides an incentive to be thorough and provide non-adversarial, constructive reviews.
+Both authors and [reviewers report](https://ropensci.org/tags/reviewer/) that they enjoy and learn more from this open and direct exchange.
+It also has the benefit of building a community.
+Participants have the opportunity to meaningfully network with new peers, and new collaborations have emerged via ideas spawned during the review process.
 
-We are aware that open systems can have drawbacks. For instance, in traditional academic review, [double-blind peer review can increase representation of female authors](https://www.sciencedirect.com/science/article/pii/S0169534707002704), suggesting bias in non-blind reviews. It is also possible reviewers are less critical in open review. However, we posit that the openness of the review conversation provides a check on review quality and bias; it's harder to inject unsupported or subjective comments in public and without the cover of anonymity. Ultimately, we believe that having direct and public communication between authors and reviewers improves quality and fairness of reviews.
+We are aware that open systems can have drawbacks.
+For instance, in traditional academic review, [double-blind peer review can increase representation of female authors](https://www.sciencedirect.com/science/article/pii/S0169534707002704), suggesting bias in non-blind reviews.
+It is also possible reviewers are less critical in open review.
+However, we posit that the openness of the review conversation provides a check on review quality and bias; it's harder to inject unsupported or subjective comments in public and without the cover of anonymity.
+Ultimately, we believe that having direct and public communication between authors and reviewers improves quality and fairness of reviews.
 
 Furthermore, authors and reviewers have the ability to contact privately the editors if they have any doubt or question.
 
