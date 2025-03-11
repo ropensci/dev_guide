@@ -389,7 +389,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   Esto responde a la necesidad obvia de tener *tests* adecuados para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y programar *defensivamente* contra esas fallas.
   [Más información sobre *tests*](https://r-pkgs.org/tests.html).
 
-- Los *tests* deben ser fáciles de entendery lo más autocontenidos posible. Si usas testthat, evita utilizar código de alto nivel, es decir, código fuera de `test_that()`. Recomendamos leer los ["high-level principles for testing" (principios de alto nivel para pruebas)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) en el libro R Packages (Paquetes de R).
+- Los *tests* deben ser fáciles de entendery lo más autocontenidos posible. Si usas testthat, evita utilizar código de alto nivel, es decir, código fuera de bloques `test_that()` (como pasos de preprocesamiento). Recomendamos leer los ["high-level principles for testing" (principios de alto nivel para pruebas)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) en el libro R Packages (Paquetes de R).
 
 - Los paquetes con aplicaciones Shiny deberán generar *tests* unitarios usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas funcionan como es esperado.
 
