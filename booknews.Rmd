@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2025-03-11, document drawbacks of renaming widely used package (#831)
+
 - 2025-03-11, mention the Air formatting tool wherever we mention the styler package (#875)
 
 - 2025-02-25, require the default git branch to not be called master (#863)
