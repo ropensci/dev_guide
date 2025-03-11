@@ -94,7 +94,7 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 ## Estilo del código y mejores prácticas {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
-  Recomendamos el paquete [`styler`](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
+  Recomendamos [Air](https://posit-dev.github.io/air/) o el paquete [styler](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
   También te sugerimos que leas la [Guía de estilo de Tidyverse (en inglés)](https://style.tidyverse.org/).
 
 - Puedes optar por utilizar `=` en lugar de `<-` siempre que seas coherente con esa elección dentro de tu paquete.
@@ -431,7 +431,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Para evitar que los ejemplos se ejecuten en CRAN (por ejemplo, si requieren autenticación), tienes que utilizar `\dontrun{}`.
   Sin embargo, para un primer envío, CRAN no te permitirá saltearte todos los ejemplos.
   En este caso puedes añadir algunos pequeños ejemplos de juguete, o encapsular el código de los ejemplos en `try()`.
-  Consulta también la etiqueta `@exampleIf`, que al momento de escribir este artículo, se encuentra en la versión de desarrollo de roxygen2.
+  Consulta también la etiqueta `@exampleIf`.
 
 - Además de ejecutar los ejemplos localmente en tu propia computadora, te aconsejamos fuertemente que ejecutes los ejemplos en uno de los [sistemas de integración continua](#ci).
   De nuevo, se ejecutarán los ejemplos que no estén incluidos en `\dontrun{}` o `\donttest{}`.
