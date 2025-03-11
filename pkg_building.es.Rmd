@@ -437,12 +437,13 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Dependencias del paquete  {#pkgdependencies}
 
+- En general, es mejor tener menos dependencias.
 - Pensa en las ventajas y desventajas de depender de un paquete.
   Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
   Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
   También aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en el ciclo de desarrollo tuyo y del resto, y en los sistemas de compilación automatizados.
   Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo.
-  He aquí algunos enfoques para reducir las dependencias:
+- He aquí algunos enfoques para reducir las dependencias:
   
   - Si sólo utilizas unas pocas funciones de una dependencia grande o pesada, puedes copiarlas en tu propio paquete.
     (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer la autoría del código copiado).
@@ -472,6 +473,9 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
   Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, roxygen2) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
   Si utilizas algún paquete en los ejemplos o *tests* de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
+
+- Comprueba el estado de desarrollo de cualquier dependencia que añadas.
+  Especialmente para los paquetes alojados en GitHub, es muy útil comprobar que se mantienen activamente, y que [no han sido archivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
 - Si tu paquete no está en Bioconductor pero depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el *README* y la viñeta sean lo suficientemente claras incluso para una persona que no esté familiarizada con el ciclo de publicación de Bioconductor.
   
