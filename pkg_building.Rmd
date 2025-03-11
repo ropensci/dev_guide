@@ -298,7 +298,7 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ## Authorship {#authorship}
 
-The `DESCRIPTION` file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
+The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
 ```
     person("Bea", "Hernández", role = "rev",
@@ -409,7 +409,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
   - More dependency-management tips can be found in the chapter ["Dependencies: Mindset and Background" of the R packages book](https://r-pkgs.org/dependencies-mindset-background.html) and in a [post by
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
-- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to DESCRIPTION). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
 - If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.
   
@@ -462,7 +462,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 - Do not put a period on the end of your title.
 - Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this.
 - Avoid starting the description with the package name or "This package ...".
-- Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
+- Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your DESCRIPTION file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
 - In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*).
 - Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
 - Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.
