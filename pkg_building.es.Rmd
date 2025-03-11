@@ -94,7 +94,7 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 ## Estilo del código {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
-  Recomendamos el paquete [`styler`](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
+  Recomendamos [Air](https://posit-dev.github.io/air/) o el paquete [styler](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
   También te sugerimos que leas la [Guía de estilo de Tidyverse (en inglés)](https://style.tidyverse.org/).
 
 - Puedes optar por utilizar `=` en lugar de `<-` siempre que seas coherente con esa elección dentro de tu paquete.
