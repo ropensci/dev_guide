@@ -38,8 +38,9 @@ Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#re
 
 - ¿Cumple el código con los principios generales de la [Guía de revisión de Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
-- ¿Puede mejorarse el estilo del código?
+- ¿Pueden mejorarse el estilo del código y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
+- ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones de auxiliares del paquete?
 - ¿Podría mejorarse la interfaz de usuario?
 - ¿Podría mejorarse el rendimiento?
 - ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, ¿tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de una persona con el paquete y/o la herramienta o datos que utiliza?
@@ -58,6 +59,8 @@ Te recomendamos usar herramientas automatizadas para facilitar tu revisión. És
 - Si el paquete no se envía a través de la *branch* principal o por defecto, recuerda cambiar a la *branch* enviada para revisar antes de comenzar tu revisión. En este caso, tendrás que usar la búsqueda local para revisar el código, ya que la búsqueda en GitHub está limitada a la *branch* por defecto. Además, la documentación alojada en un sitio web de `pkgdown` no va a estar necesariamente actualizada, por lo que recomendamos revisar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
 
 Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el *issue* de revisión con el contenido "`@ropensci-review-bot check package`".
+
+Algunos elementos de nuestra lista de comprobación se inspiran en la [guía de revisión de código de Mozilla](https://mozillascience.github.io/codeReview/review.html).
 
 ### Interacciones fuera del hilo {#off-thread-interactions}
 
