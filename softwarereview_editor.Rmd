@@ -119,7 +119,7 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 #### If the author want their repository to remain under its current owner
 
-- [ ] Ask them to make a pull request to the [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) that lists all repositories that have not been transferred. [Example commit](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
+- Ask them to make a pull request to the [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) that lists all repositories that have not been transferred. [Example commit](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
 
 - Ask them to replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md) (which means linking to rOpenSci's code of conduct).
 
