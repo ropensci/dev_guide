@@ -207,6 +207,12 @@ No es necesario que cambies los test de las funciones obsoletas hasta que caduqu
 
 Una vez que se caduca una función, sus tests se eliminan sin más.
 
+## Datos: obsoletos
+
+Si necesita eliminar un conjunto de datos proporcionado por tu paquete, 
+lee la [solución propuesta por Matthijs Berends en Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), que enlaza con [un método de 3 pasos en la guía de Bioconductor](https://contributions.bioconductor.org/deprecation.html#deprecate-dataset).
+La clave es el uso de `delayedAssign()` para guardar una promesa que servirá tanto de aviso, como los datos.
+
 ## Archivando paquetes  {#archivalguidance}
 
 Por lo general, el software tiene una vida útil finita, y es posible que los paquetes deban ser archivados en algún momento.
