@@ -45,7 +45,7 @@ To review a package, please begin by copying our [review template](#reviewtempla
 - Does the package comply with the [rOpenSci packaging guide](#building)?
 - Are there improvements that could be made to the code style and to code patterns? For instance, do functions need to be broken down into smaller helper functions and is the role of each helper function clear?
 - Is there code duplication in the package that should be reduced?
-- Does the package reinvent any wheel? Are there functions in base R or lightweight dependency that provide the same interface as some helper functions in the package?
+- Are there functions in base R or lightweight dependency that provide the same interface as some helper functions in the package?
 - Are there user interface improvements that could be made?
 - Are there performance improvements that could be made?
 - Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient? Does it use the principle of *multiple points of entry* i.e. takes into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps?
