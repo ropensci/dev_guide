@@ -104,7 +104,7 @@ Depois que os usuários tiverem usado a versão do pacote por algum tempo (com a
 bar <- function(x) x + 1
 ```
 
-## Funções: depreciadas e extintas {#functions-deprecate-defunct}
+## Funções: descontinuadas e removidas {#functions-deprecate-defunct}
 
 Para remover uma função de um pacote (digamos que o nome do seu pacote seja `helloworld`), você pode usar o seguinte protocolo:
 
