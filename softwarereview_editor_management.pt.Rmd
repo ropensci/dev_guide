@@ -1,0 +1,101 @@
+ 
+
+# Gerenciamento editorial {#editorialmanagement}
+
+```{block, type="summaryblock"}
+Orientações para gerenciar a equipe editorial.
+```
+
+## Recrutamento de novos editores {#recruiting-new-editors}
+
+O recrutamento de novos editores e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da [Líder de Revisão de Software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
+
+Etapas:
+
+- Inicie um canal privado para discussão (para que você não tenha um histórico no canal de editores no qual futuros editores entrarão, o que pode ser incômodo).
+
+- Marque os editores na conversa para garantir que eles recebam uma notificação, pois este é um tópico importante.
+
+- Espere que a maioria dos editores se manifeste antes de convidar alguém. Dê a eles uma semana para responder.
+
+## Convidando um(a) novo(a) editor(a) {#inviting-a-new-editor}
+
+- Um(a) candidato(a) pode começar como um(a) [editor(a) convidado(a)](#guesteditor).
+  Ao convidá-lo como um(a) editor(a) convidado(a), convide-o da mesma forma que você convidaria um(a) editor(a) convidado(a) por outros motivos.
+
+- Se um(a) candidato(a) começar como um(a) editor(a) convidado(a), avalie como foi o processo após a submissão. Peça novamente a opinião de outros editores.
+
+- Envie um e-mail.
+
+```
+Gostaríamos de convidá-lo a fazer parte do conselho editorial da rOpenSci como membro efetivo. [RAZÕES ESPECÍFICAS PARA O CONVITE (MENCIONAR CONTRIBUIÇÕES PARA A rOpenSci)].
+Acreditamos que você seria um excelente incremento à equipe.
+
+[SE FOR EDITOR CONVIDADO -> Você está familiarizado(a) com a função do editor, pois já foi editor(a) convidado(a)]. Nosso objetivo é que os editores lidem com quatro pacotes por ano ([SE FOR EDITOR CONVIDADO -> incluindo o pacote que você acabou de finalizar!]).
+Pedimos que editores assumam um compromisso informal de servir por dois anos, reavaliando sua participação depois deste período.
+Em um curto prazo, qualquer editor pode se recusar a lidar com um pacote ou argumentar por exemplo “Estou muito ocupado e não posso lidar com um novo pacote por algumas semanas”.
+
+Além de lidar com pacotes, os editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinando atualizações em nossas políticas. 
+Geralmente, fazemos esse trabalho por meio do Slack, que esperamos que os editores possam verificar regularmente.
+Também, fazemos chamadas com o conselho editorial anualmente.
+Ademais, alternamos as responsabilidades do editor-chefe (decisões de escopo de primeira instância e designação de editores) entre o conselho editorial a cada três meses.
+Você terá a oportunidade de participar desse rodízio depois de fazer parte do conselho por algum tempo, geralmente isso significa pelo menos seis meses. 
+Alguns de nós também assumem projetos maiores para aprimorar o processo de revisão por pares, porém isso é opcional.
+
+Esperamos que você faça parte do conselho!
+Este é um momento empolgante para a revisão por pares na rOpenSci.
+
+Por favor, reflita sobre a nossa oferta e faça perguntas se algo não estiver claro. Nos informe se você pode juntar-se a equipe rOpenSci.
+
+Atenciosamente,
+[EDITOR], em nome do Conselho Editorial da rOpenSci
+```
+
+## Integrando um(a) novo(a) editor(a) ao time {#onboarding-a-new-editor}
+
+- Informe o gerente da comunidade rOpenSci para que
+  
+  - novos editores sejam adicionados ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
+  - Você pode criar um novo post no blog da rOpenSci para introduzir os novos editores.
+
+- Se eles ainda não fizeram este passo como editores convidados, solicite aos novos editores que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
+
+- Convide os novos editores para integrar a organização da rOpenSci no GitHub como membro da [equipe de editores da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.  Isso dará a eles as permissões apropriadas e vai permitir que eles recebam notificações específicas da equipe.
+
+- Os editores precisam acessar o banco de dados sobre revisão de software na AirTable.
+
+- Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao gerente da comunidade da rOpenSci).
+
+- Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todos os editores na mensagem.
+
+- No espaço de trabalho do Slack, os novos editores precisam ser adicionados à "equipe de editores" para que sejam notificados também quando alguém marcar uma mensagem com `@editors`.
+
+- Adicionar os nomes dos novos editores a/ao:
+  
+  - [lista de autores do Guia Dev](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
+  - [capítulo do Guia Dev que introduz a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (em dois locais neste arquivo, como editores e um pouco abaixo para removê-los da lista de revisores)
+  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
+    Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
+
+- Adicione os novos editores à [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
+
+
+## Desvincular um(a) editor(a) {#offboarding-an-editor}
+
+- Agradeça o(a) editor(a) por seu trabalho!
+
+- Remova este(a) editor(a) do canal reservado para editores, e também da "equipe de editores" do Slack.
+
+- Remova este(a) editor(a) de [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) e da subequipe.
+
+- Informe o gerente da comunidade do rOpenSci ou outro membro da equipe para que este(a) editor(a) possa ser transferido(a) para a parte de ex-membros no site da rOpenSci.
+
+- Remova o acesso deles ao espaço de trabalho do Airtable.
+
+- Removê-los do
+  
+  - [capítulo do Guia Dev que apresenta a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (em dois locais neste arquivo, como editores e um pouco abaixo para removê-los da lista de revisores)
+  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
+    Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
+
+

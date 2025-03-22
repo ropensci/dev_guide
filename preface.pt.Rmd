@@ -20,12 +20,6 @@ Este livro é um documento vivo.
 Você pode ver as atualizações das nossas práticas recomendadas e políticas nas [notas de versão](#booknews).  
 Você pode citar este livro usando [os metadados Zenodo e DOI](https://doi.org/10.5281/zenodo.2553043).
 
-````{r}
-#| echo: false
-#| results: 'asis' 
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
-````
-
 *Se você quiser contribuir com este livro (sugestões, correções), consulte [o repositório do GitHub](https://github.com/ropensci/dev_guide) em particular [as diretrizes de contribuição](https://github.com/ropensci/dev_guide#contributing). Obrigado!*
 
 *Agradecemos a todos os autores, revisores e editores convidados por nos ajudarem a aprimorar  o  sistema e este guia ao longo dos anos. Agradecemos também às seguintes pessoas que fizeram contribuições para este guia e suas versões anteriores: `r readLines("thanks.md")` Informe-nos se esquecemos de reconhecer a sua contribuição!*

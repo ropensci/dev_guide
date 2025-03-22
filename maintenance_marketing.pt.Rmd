@@ -6,6 +6,8 @@ aliases:
 
 # Marketing do seu pacote {#marketing}
 
+Consulte também a postagem do blog [*Marketing Ideas For Your Package*](https://ropensci.org/blog/2024/03/07/package-marketing/).
+
 ```{block, type="summaryblock"}
 Ajudaremos você a promover o seu pacote, mas aqui estão mais algumas coisas que você deve ter em mente.
 ```
@@ -16,7 +18,7 @@ Ajudaremos você a promover o seu pacote, mas aqui estão mais algumas coisas qu
   
   - Faça um *pull request* para a [R Weekly](https://github.com/rweekly/rweekly.org) com uma linha sobre essa nova versão na seção "New Releases" (ou "New Packages" para a primeira versão do GitHub/CRAN).
   
-  - Tweet sobre isso usando a hashtag "#rstats" e marque rOpenSci! Isso pode ajudar no envolvimento do colaborador/usuário. [Exemplo](https://twitter.com/opencpu/status/1003934871830622208).
+  - Publique sobre seu pacote nas mídias sociais (Mastodon, Bluesky, LinkedIn...) usando a hashtag “#rstats” e marque a rOpenSci se ela estiver presente nessa plataforma! Isso pode ajudar no engajamento de pessoas colaboradoras e usuárias. [Exemplo](https://twitter.com/opencpu/status/1003934871830622208).
   
   - Considere a possibilidade de enviar um breve post sobre o lançamento para as [Notas técnicas da rOpenSci](https://ropensci.org/technotes/). Entre em contato com o/a gerente da comunidade do rOpenSci (por exemplo, via Slack ou [info@ropensci.org](mailto:info@ropensci.org)). Consulte [as diretrizes sobre como contribuir com um *blog post*](https://blogguide.ropensci.org)).
   
