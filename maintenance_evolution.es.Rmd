@@ -214,7 +214,7 @@ Puede ser la oportunidad, antes de la revisión, de cumplir con nuestros [consej
 
 Renombrar un paquete que ya está ampliamente adoptado y/o publicado en CRAN es problemático.
 CRAN tiene una [política](https://cran.r-project.org/web/packages/policies.html) que establece que los nombres de paquetes en CRAN son persistentes y en general no está permitido cambiar el nombre de un paquete.
-El paquete con su antiguo nombre puede ser una dependencia de paquetes, scripts, y aparecer en documentación y entradas de blog, etc.
+El paquete con su antiguo nombre puede ser una dependencia en otros paquetes, scripts, y aparecer en publicaciones científicas, documentación y artículos de blog, etc.
 
 Cuando se cambia radicalmente la interfaz, es mejor empezar un nuevo paquete desde cero, como [httr2 que es la segunda generación de httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/) ; o crear ediciones de un paquete como para [testthat](https://testthat.r-lib.org/articles/third-edition.html). 
 Si también mantiene el paquete antiguo, puede hacer una depreciación suave del mismo con un mensaje de inicio, como en httr.
