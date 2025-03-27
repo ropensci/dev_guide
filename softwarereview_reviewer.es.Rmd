@@ -40,7 +40,7 @@ Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#re
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
 - ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
-- ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones de auxiliares del paquete?
+- ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones auxiliares del paquete?
 - ¿Podría mejorarse la interfaz de usuario?
 - ¿Podría mejorarse el rendimiento?
 - ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, ¿tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de una persona con el paquete y/o la herramienta o datos que utiliza?
@@ -60,9 +60,9 @@ Te recomendamos usar herramientas automatizadas para facilitar tu revisión. És
 
 Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el *issue* de revisión con el contenido "`@ropensci-review-bot check package`".
 
-Algunos elementos de nuestra lista de comprobación se inspiran en la [guía de revisión de código de Mozilla](https://mozillascience.github.io/codeReview/review.html).
+Algunos elementos de nuestra lista de verificación se inspiran en la [guía de revisión de código de Mozilla](https://mozillascience.github.io/codeReview/review.html).
 
-### Interacciones fuera del hilo {#off-thread-interactions}
+### Interacciones fuera del hilo en el _issue_ {#off-thread-interactions}
 
 Si interactúas con quienes desarrollaron el paquete y hablas de la revisión fuera de un *issue* de revisión (en chats, DMs, en persona, issues en el repositorio del proyecto), asegúrate de que tu revisión refleje y/o enlace los elementos de estas conversaciones que sean relevantes para el proceso.
 
