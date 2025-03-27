@@ -14,6 +14,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 
 ### Ciclo de desarrollo
 
+- Por favor, no envies varios paquetes a la vez: te rogamos que espere hasta que un paquete haya sido aprobado antes de enviar otro.
 - ¿Esperas mantener tu paquete durante al menos 2 años, o poder encontrar a otra persona para mantenerlo?
 - Por favor, considera cuál es el mejor momento en el desarrollo de tu paquete para presentarlo. Tu paquete debe estar lo suficientemente maduro como para que quienes lo revisen puedan evaluar todos los aspectos esenciales, pero ten en cuenta que la revisión puede resultar en cambios importantes.
 - Te recomendamos fuertemente que envíes tu paquete para su revisión *antes de* publicarlo en CRAN o enviar un artículo de software que describa el paquete a una revista. Las devoluciones de las revisiones pueden dar pie a importantes mejoras y actualizaciones de tu paquete, incluso cambiar el nombre o modificaciones incompatibles con versiones previas.
@@ -27,6 +28,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 - Para cualquier envío o consulta previa al envío, el *README* de tu paquete debería proporcionar suficiente información sobre el mismo (objetivos, uso, paquetes similares) para que quienes revisan el paquete puedan evaluar su alcance sin tener que instalarlo. Mejor aún, crea un sitio web de pkgdown para que puedan evaluar las funcionalidads detalladamente en línea.
 - En la fase de envío, todas las funciones principales deben ser lo suficientemente estables como para estar completamente documentadas y testeadas. El *README* tiene que dar una buena impresión de tu paquete.
 - El archivo *README* debe esforzarse por explicar las funcionalidades y los objetivos de tu paquete asumiendo poco o ningún conocimiento del dominio. Además, debe aclarar todos los temas técnicos, incluidas las referencias a otros software.
+- Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución de paquetes* [proporciona orientación sobre el tema](#evolution).
 
 ## Preparación para el envío {#preparing-for-submission}
 
@@ -65,6 +67,7 @@ Si tiene intención de enviar un artículo científico sobre tu paquete, rOpenSc
 - *Cuando envíes un paquete, por favor asegúrate de tener configuradas las notificaciones de GitHub para que no te pierdas ningún comentario.*
 - Los paquetes se checkean automáticamente al ser enviados con [nuestro sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), el cual confirmará si está listo para ser revisado o no.
 - Los paquetes enviados pueden estar en la rama *main/default*, o en cualquier otra rama no predeterminada. En este último caso, es recomendable, aunque no obligatorio, enviar el paquete a través de una rama dedicada llamada `ropensci-software-review`.
+- Para paquetes que están en ramas diferentes a la rama por defecto, la URL del «Repository» en la plantilla de envío debe ser la URL completa de la rama de revisión, como por ejemplo: `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## El proceso de revisión {#the-review-process}
 

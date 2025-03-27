@@ -19,6 +19,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ### Ciclo de vida
 
+- Não envie vários pacotes ao mesmo tempo: solicitamos que você espere até que um pacote seja aprovado antes de enviar outro.
 - Você pretende manter o seu pacote por pelo menos 2 anos ou ser capaz de identificar um(a) novo(a) mantenedor(a)?
 - Considere o melhor momento de desenvolvimento do seu pacote para enviar sua submissão. Seu pacote deve estar suficientemente maduro para que os revisores possam analisar todos os aspectos essenciais, mas tenha em mente que revisões podem resultar em grandes alterações.
   - Sugerimos enfaticamente que você envie seu pacote para análise *antes de* publicá-lo no CRAN ou antes de enviá-lo para publicação como artigo em um periódico. O _feedback_ da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações de funções.
@@ -32,6 +33,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um website pkgdown para permitir uma avaliação mais detalhada da funcionalidade online.
   - No estágio de envio da submissão, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o README deve apresentar uma base segura para o pacote.
   - Seu arquivo README deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
+- Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
 
 ## Preparando para Submissão {#preparing-for-submission}
 
@@ -69,6 +71,7 @@ Se você pretende enviar um manuscrito de acompanhamento para seu pacote, o rOpe
 - Ao submeter um pacote, certifique-se de que suas notificações do GitHub estão ativadas para que você não perca qualquer comentário relacionado a sua submissão.
 - Os pacotes são verificados automaticamente no momento de submissão pelo [nosso `pkgcheck`](https://docs.ropensci.org/pkgcheck), que confirma se um pacote está ou não pronto para ser revisado.
 - Os pacotes submetidos podem ser hospedados na ramificação principal/padrão ou em qualquer outra ramificação não padrão. Neste último caso, é recomendável, mas não obrigatório, enviar o pacote por meio de uma ramificação dedicada tipo `ropensci-software-review`.
+- Para envios em ramificações (*branches*) que não sejam a padrão, o URL indicado em “Repository” no modelo de envio deve ser o URL completo da ramificação de revisão, como por exemplo: `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## O Processo de Revisão {#the-review-process}
 

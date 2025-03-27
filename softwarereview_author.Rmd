@@ -20,6 +20,7 @@ This concise guide presents the software peer review process for you as a packag
 
 ### Lifecycle
 
+- Please do not submit several packages at a time: we request you wait until a package has been approved before you submit another one.
 - Do you expect to maintain your package for at least 2 years, or to be able to identify a new maintainer?
 - Please consider the best time in your package's development to submit.  Your package should be sufficiently mature so that reviewers are able to review all essential aspects, but keep in mind that review may result in major changes.
   - We strongly suggest submitting your package for review *before* publishing on CRAN or submitting a software paper describing the package to a journal. Review feedback may result in major improvements and updates to your package, including renaming and breaking changes to functions.
@@ -33,6 +34,7 @@ This concise guide presents the software peer review process for you as a packag
 - For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. Even better, set up a pkgdown website for allowing more detailed assessment of functionality online.
   - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
+- Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ## Preparing for Submission {#preparing-for-submission}
 
@@ -71,6 +73,7 @@ If you intend to submit an accompanying manuscript for your package, rOpenSci ha
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 - Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
 - Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch.
+- For submissions in non-default branches, the "Repository" URL in the submission template should be the full URL to the review branch, like `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## The Review Process {#the-review-process}
 
