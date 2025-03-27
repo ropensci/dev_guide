@@ -91,7 +91,13 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-## Estilo del código {#code-style}
+### Paquetes que envuelven software externo {#external-software}
+
+- Documenta claramente cómo instalar el paquete, incluidos todos los paquetes o bibliotecas externos necesarios, incluyendo, en su caso, los pasos explícitos en los sistemas operativos habituales.
+- Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- Si es posible, proporciona una función que ayude en la instalación. [Ejemplo en hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Estilo del código y mejores prácticas {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
   Recomendamos [Air](https://posit-dev.github.io/air/) o el paquete [styler](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
@@ -100,6 +106,8 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 - Puedes optar por utilizar `=` en lugar de `<-` siempre que seas coherente con esa elección dentro de tu paquete.
   Recomendamos evitar el uso de `->` para la asignación dentro del paquete.
   Si utilizas `<-` en todo tu paquete, y también utilizas `R6` en ese paquete, debrás utilizar `=` para la asignación dentro de la generación de la clase `R6Class` - esto no se considera una incoherencia porque no puedes usar `<-` en este caso.
+
+- Puedes utilizar el [paquete lintr](https://lintr.r-lib.org/index.html) para identificar algunas posibles áreas de mejora. [Ejemplo de flujo de trabajo](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## Archivo CITATION {#citation-file}
 

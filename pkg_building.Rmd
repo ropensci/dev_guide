@@ -86,11 +86,20 @@ If your package accesses a web API or another web resource,
 
 For more information refer to the blog post [Why You Should (or Shouldn't) Build an API Client](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-## Code Style {#code-style}
+
+### Packages wrapping external software {#external-software}
+
+- Document clearly how to install the package, including all required external packages or libraries, including where applicable explicit steps on common operating systems.
+- Provide a situation report (sitrep) function checking whether the software has been installed, with hints in case something is missing. [Example in greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- If possible, provide a function helping with installation. [Example in hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Code Style and best practices {#code-style}
 
 - For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in The R Packages book](https://r-pkgs.org/Code.html). We recommend [Air](https://posit-dev.github.io/air/) or the [styler package](https://github.com/r-lib/styler) for automating part of the code styling. We suggest reading the [Tidyverse style guide](https://style.tidyverse.org/).
 
 - You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case.
+
+- You can use the [lintr package](https://lintr.r-lib.org/index.html) to identify some possible areas of improvement. [Example workflow](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## CITATION file {#citation-file}
 
