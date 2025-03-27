@@ -56,6 +56,7 @@ Information on the current team, and the current status of software peer review,
 ```{r}
 #| echo: false
 #| results: 'asis'
+#| warning: false
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
   source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
 } 
