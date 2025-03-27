@@ -33,7 +33,7 @@ Estas y otras plantillas generalmente tendrán que ser modificadas para su uso c
 Modificar una guía de contribución genérica para añadir un toque propio también tiende a hacer que parezca menos impersonal y más sincera.
 Las preferencias personales en una guía de contribución incluyen
 
-- Preferencias de estilo. Sin embargo, puedes preferir que el estilo sea uno automático (a través de [lintr](https://github.com/jimhester/lintr) o [styler](https://styler.r-lib.org/)) o bien [arreglar el estilo de código por tu cuenta](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente si no utilizas un estilo de código popular como el [estilo de código tidyverse](https://style.tidyverse.org/).
+- Preferencias de estilo. Sin embargo, puedes preferir que el estilo sea uno automático (a través de [Air](https://posit-dev.github.io/air/),  [styler](https://styler.r-lib.org/) o [lintr](https://github.com/jimhester/lintr)) o bien [arreglar el estilo de código por tu cuenta](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente si no utilizas un estilo de código popular como el [estilo de código tidyverse](https://style.tidyverse.org/).
 
 - Infraestructura, como roxygen2.
 
@@ -53,7 +53,7 @@ El foro puede usarse para hacer preguntas sobre cómo usar el paquete e informar
 No dudes en mencionar esto en los documentos de tu paquete, ya sea en la guía de contribución o en la plantilla de *issue*.
 Pide etiquetar las publicaciones con el nombre del paquete.
 
-Una vez que un *pull request* está más cerca de ser aceptado, puedes utilizar [un flujo de trabajo de *GitHub Actions PR* para aplicar el estilo al código con styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Una vez que un *pull request* está más cerca de ser aceptado, puedes mejorar el estilo con [Air](https://posit-dev.github.io/air/) o [styler](https://styler.r-lib.org/).
 
 ### Gestión de issues {#issue-management}
 

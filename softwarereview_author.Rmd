@@ -24,6 +24,7 @@ This concise guide presents the software peer review process for you as a packag
   - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
+- Please do not submit several packages at a time: we request you wait until a package has been approved before you submit another one.
 
 ## Preparing for Submission {#preparing-for-submission}
 
@@ -48,6 +49,7 @@ This concise guide presents the software peer review process for you as a packag
 - *When submitting a package please make sure your GitHub notification settings make it unlikely you will miss a comment.*
 - Packages are automatically checked on submission by [our `pkgcheck` system](https://docs.ropensci.org/pkgcheck), which will confirm whether or not a package is ready to be reviewed.
 - Submitted packages can be hosted in the main/default branch, or any other non-default branch. In the latter case, it is encouraged, but not required, to submit the package via a dedicated `ropensci-software-review` branch.
+- For submissions in non-default branches, the "Repository" URL in the submission template should be the full URL to the review branch, like `https://github.com/my/repo/tree/ropensci-software-review`.
 
 ## The Review Process {#the-review-process}
 
