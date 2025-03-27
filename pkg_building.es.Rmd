@@ -437,7 +437,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Dependencias del paquete  {#pkgdependencies}
 
-- En general, es mejor tener menos dependencias.
+- En general, es mejor tener la menor cantidad de dependencias posibles.
 - Pensa en las ventajas y desventajas de depender de un paquete.
   Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
   Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
@@ -456,7 +456,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Ten en cuenta que este enfoque debe utilizarse y probarse con mucho cuidado, sobre todo porque puede romper el comportamiento esperado de los objetos reclasificados.)
+      (Ten en cuenta que este enfoque debe utilizarse y probarse con mucho cuidado, sobre todo porque puede romper el comportamiento esperado de los objetos a los que se le cambia la clase.)
   
   - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
     Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.
