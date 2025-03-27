@@ -101,7 +101,7 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
   Recomendamos evitar el uso de `->` para la asignación dentro del paquete.
   Si utilizas `<-` en todo tu paquete, y también utilizas `R6` en ese paquete, debrás utilizar `=` para la asignación dentro de la generación de la clase `R6Class` - esto no se considera una incoherencia porque no puedes usar `<-` en este caso.
 
-- Puede utilizar el [paquete lintr](https://lintr.r-lib.org/index.html) para identificar algunas posibles áreas de mejora. [Ejemplo de flujo de trabajo](https://masalmon.eu/2024/08/28/lintr-3-steps/).
+- Puedes utilizar el [paquete lintr](https://lintr.r-lib.org/index.html) para identificar algunas posibles áreas de mejora. [Ejemplo de flujo de trabajo](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## Archivo CITATION {#citation-file}
 
