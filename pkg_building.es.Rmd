@@ -380,7 +380,10 @@ Tanto si se incluyen archivos enteros como funciones individuales de otros paque
 ## Licencia {#licence}
 
 El paquete debe tener una licencia aceptada por [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) u [OSI](https://opensource.org/licenses).
-Para más detalles sobre las licencias, consulta el libro [R packages](https://r-pkgs.org/license.html).
+El libro [_R packages_ (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) incluye una sección muy útil sobre licencias.
+
+Si tu paquete incluye código de otras fuentes, también necesitas reconocer a los autores del código original en tu archivo DESCIPTION, generalmente con un rol de propietario del copyright: `role = "cph"`.
+Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [_R packages_ (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) en Inglés o puedes consultar también el libro en español [Introducción a la programación II](https://intro-programacion.netlify.app/09_paquetes-1.html#completando-el-archivo-description).
 
 ## Testeo {#testing}
 
