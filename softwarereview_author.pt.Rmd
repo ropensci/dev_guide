@@ -24,6 +24,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
   - No estágio de envio da submissão, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o README deve apresentar uma base segura para o pacote.
   - Seu arquivo README deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
 - Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
+- Não envie vários pacotes ao mesmo tempo: solicitamos que você espere até que um pacote seja aprovado antes de enviar outro.
 
 ## Preparando para Submissão {#preparing-for-submission}
 
