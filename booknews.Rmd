@@ -2,8 +2,10 @@
 
 ## dev version
 
+- 2025-03-27, add guidance for packages wrapping external software (#866)
+
 - 2025-02-25, add official rule on submitting one package at once only (`@maurolepore`, #876)
-- 
+
 - 2025-03-11, mention the Air formatting tool wherever we mention the styler package (#875)
 
 - 2025-02-25, require the default git branch to not be called master (#863)
