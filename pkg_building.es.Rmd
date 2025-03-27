@@ -327,15 +327,10 @@ Ver la [documentación de `pkgdown`](https://pkgdown.r-lib.org/reference/build_h
 Puedes hacer que el contenido de tu sitio web sea más fácil de navegar modificando la barra de navegación, consulta [`pkgdown` documentación](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar).
 En particular, ten en cuenta que si el nombre de la viñeta principal de tu paquete es "pkg-name.Rmd", ésta será accesible desde la barra de navegación en la sección `Para empezar` en vez de en `Artículos > Título de la Viñeta`.
 
-### Mathjax {#mathjax}
+### Renderización de matemáticas {#mathjax}
 
-Una vez que tu paquete sea transferido y obtenga un sitio web utilizando nuestra plantilla de `pkgdown`, si quieres utilizar Mathjax tendrás que especificarlo en el archivo de configuración de `pkgdown` de la siguiente manera
-
-```yaml
-template:
-  params:
-    mathjax: true
-```
+Lee la [documentación de pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
+Nuestra plantilla es compatible con esta configuración.
 
 ### Logo del paquete {#package-logo}
 
