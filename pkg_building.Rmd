@@ -86,11 +86,20 @@ If your package accesses a web API or another web resource,
 
 For more information refer to the blog post [Why You Should (or Shouldn't) Build an API Client](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-## Code Style {#code-style}
+
+### Packages wrapping external software {#external-software}
+
+- Document clearly how to install the package, including all required external packages or libraries, including where applicable explicit steps on common operating systems.
+- Provide a situation report (sitrep) function checking whether the software has been installed, with hints in case something is missing. [Example in greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- If possible, provide a function helping with installation. [Example in hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Code Style and best practices {#code-style}
 
 - For more information on how to style your code, name functions, and R scripts inside the `R/` folder, we recommend reading the [code chapter in The R Packages book](https://r-pkgs.org/Code.html). We recommend [Air](https://posit-dev.github.io/air/) or the [styler package](https://github.com/r-lib/styler) for automating part of the code styling. We suggest reading the [Tidyverse style guide](https://style.tidyverse.org/).
 
 - You can choose to use `=` over `<-` as long you are consistent with one choice within your package. We recommend avoiding the use of `->` for assignment within a package. If you do use `<-` throughout your package, and you also use `R6` in that package, you'll be forced to use `=` for assignment within your `R6Class` construction - this is not considered an inconsistency because you can't use `<-` in this case.
+
+- You can use the [lintr package](https://lintr.r-lib.org/index.html) to identify some possible areas of improvement. [Example workflow](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## CITATION file {#citation-file}
 
@@ -298,7 +307,7 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ## Authorship {#authorship}
 
-The `DESCRIPTION` file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
+The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
 ```
     person("Bea", "Hernández", role = "rev",
@@ -322,7 +331,10 @@ Many packages include code from other software. Whether entire files or single f
 ## Licence {#licence}
 
 The package needs to have a [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) or [OSI](https://opensource.org/licenses) accepted license.
-For more explanations around licensing, refer to the [R packages book](https://r-pkgs.org/license.html).
+The [R packages book](https://r-pkgs.org/description.html#sec-description-authors-at-r) includes a helpful [section on licenses](https://r-pkgs.org/license.html).
+
+If your package bundles code from other sources, you also need to acknowledge authors of the original code in your DESCIPTION file, generally with a copyright-holder role: `role = "cph"`.
+For how to update your DESCRIPTION file, see the [R packages book](https://r-pkgs.org/description.html#sec-description-authors-at-r).
 
 ## Testing {#testing}
 
@@ -334,7 +346,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
 
 - We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Strive to write tests as you write each new function. This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to *defensively* code against those. [More information](https://r-pkgs.org/tests.html).
 
-- Tests should be easy to understand. We suggest reading the blog post [*"Why Good Developers Write Bad Unit Tests"*](https://mtlynch.io/good-developers-bad-tests/) by Michael Lynch.
+- Tests should be easy to understand, and as self-contained as possible. When using testthat, avoid using code outside of `test_that()` blocks (such as pre-processing steps). We recommend reading the [high-level principles for testing](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) in the R Packages book.
 
 - Packages with Shiny apps should use a unit-testing framework such as [`shinytest2`](https://rstudio.github.io/shinytest2/) or [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) to test that interactive interfaces behave as expected.
 
@@ -410,7 +422,7 @@ For more explanations around licensing, refer to the [R packages book](https://r
   - More dependency-management tips can be found in the chapter ["Dependencies: Mindset and Background" of the R packages book](https://r-pkgs.org/dependencies-mindset-background.html) and in a [post by
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
-- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to `DESCRIPTION`). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+- Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to DESCRIPTION). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
 
 - Check the development status of any dependencies you add.
   Especially for packages hosted on GitHub, it is very useful to check that they are actively maintained, and that they have [not been archived](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
@@ -468,7 +480,7 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 - Do not put a period on the end of your title.
 - Do not put 'in R' or 'with R' in your title as this is obvious from packages hosted on CRAN. If you would like this information to be displayed on your website nonetheless, check the [`pkgdown` documentation](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) to learn how to override this.
 - Avoid starting the description with the package name or "This package ...".
-- Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your `DESCRIPTION` file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
+- Make sure you include links to websites if you wrap a web API, scrape data from a site, etc. in the `Description` field of your DESCRIPTION file. URLs should be enclosed in angle brackets, e.g. `<https://www.r-project.org>`.
 - In both the `Title` and `Description` fields, the names of packages or other external software must be quoted using single quotes (e.g., *'Rcpp' Integration for the 'Armadillo' Templated Linear Algebra Library*).
 - Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
 - Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.

@@ -3,6 +3,14 @@
 ## dev version
 
 - 2025-03-11, add note in the packaging guide about checking maintenance status of dependencies (#881)
+- 
+- 2025-03-11, add item about "top level code" in packaging guide (#879)
+ 
+- 2025-03-11, explicitly mention need to acknolwedge authors of bundled code (#873)
+
+- 2025-03-27, add guidance for packages wrapping external software (#866)
+
+- 2025-02-25, add official rule on submitting one package at once only (`@maurolepore`, #876)
 
 - 2025-03-11, mention the Air formatting tool wherever we mention the styler package (#875)
 
