@@ -69,11 +69,11 @@ If providing graphical user interface (GUI) (such as a Shiny app), to facilitate
 
 The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/), and [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
 
-### Input checking
+### Input checking {#input-checking}
 
 We recommend your package use a consistent method of your choice for [checking inputs](https://blog.r-hub.io/2022/03/10/input-checking/) -- either base R, an R package, or custom helpers.
 
-### Packages wrapping web resources (API clients)
+### Packages wrapping web resources (API clients) {#api-clients}
 
 If your package accesses a web API or another web resource,
 
