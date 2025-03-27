@@ -379,14 +379,15 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 ## Package dependencies {#pkgdependencies}
 
+- It is very generally better to have fewer dependencies.
 - Consider the trade-offs involved in relying on a package as a dependency. On one hand,
   using dependencies reduces coding effort, and can build on useful functionality developed by
   others, especially if the dependency performs complex tasks, is high-performance,
   and/or is well vetted and tested. On the other hand, having many dependencies
   places a burden on the maintainer to keep up with changes in those packages, at risk
   to your package's long-term sustainability.  It also
-  increases installation time and size, primarily a consideration on your and others' development cycle, and in automated build systems. "Heavy" packages - those with many dependencies themselves, and those with large amounts of compiled code - increase this cost. Here are some approaches to reducing
-  dependencies:
+  increases installation time and size, primarily a consideration on your and others' development cycle, and in automated build systems. "Heavy" packages - those with many dependencies themselves, and those with large amounts of compiled code - increase this cost.
+- Approaches to reducing dependencies include:
   
   - Small, simple functions from a dependency package may be better copied into
     your own package if the dependency if you are using only a few functions
@@ -404,7 +405,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Note that this approach is [not universally endorsed](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Note that this approach should be very carefully used and tested, especially as it may break expected behaviour of re-classed objects.)
   
   - Ensure that you are using the package where the function is defined,
     rather than one where it is re-exported. For instance many functions in **devtools** can be found in smaller specialty packages such as **sessioninfo**. The `%>%` function
@@ -422,6 +423,9 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
     Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
 
 - Use `Imports` instead of `Depends` for packages providing functions from other packages. Make sure to list packages used for testing (`testthat`), and documentation (`knitr`, roxygen2) in your `Suggests` section of package dependencies (if you use `usethis` for adding testing infrastructure via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) or a vignette via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), the necessary packages will be added to DESCRIPTION). If you use any package in the examples or tests of your package, make sure to list it in `Suggests`, if not already listed in `Imports`.
+
+- Check the development status of any dependencies you add.
+  Especially for packages hosted on GitHub, it is very useful to check that they are actively maintained, and that they have [not been archived](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
 - If your (not Bioconductor) package depends on Bioconductor packages, make sure the installation instructions in the README and vignette are clear enough even for an user who is not familiar with the Bioconductor release cycle.
   
