@@ -218,7 +218,7 @@ El paquete con su antiguo nombre puede ser una dependencia en otros paquetes, sc
 
 Cuando se cambia radicalmente la interfaz, es mejor empezar un nuevo paquete desde cero, como [httr2 que es la segunda generación de httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/) ; o crear ediciones de un paquete como se hace para [testthat](https://testthat.r-lib.org/articles/third-edition.html). 
 Si también se mantiene el paquete antiguo, puedes hacer una depreciación suave del mismo con un mensaje de inicio, como en httr.
-Esto permite a los usuarios y a los autores de paquetes elegir cuándo y si actualizar su código al nuevo paquete o edición.
+Esto permite que las personas que  usan el paquete y a los autores de otros paquetes puedan elegir si actualizan su código al nuevo paquete o edición y cuándo hacerlo.
 Si copias código de otro paquete, asegúrate de reconocer a los autores del código que reutilizas listándolos en DESCRIPTION con un comentario que indique que fueron autores del paquete original.
 
 
