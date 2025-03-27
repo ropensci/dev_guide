@@ -208,7 +208,7 @@ It can be the opportunity, before review, to comply with our [naming advice](#na
 
 Renaming a package that is already widely adopted and/or released on CRAN is problematic.
 CRAN has a [policy](https://cran.r-project.org/web/packages/policies.html) stating that Package names on CRAN are persistent and in general it is not permitted to change a package’s name.
-The package under its old name might be a dependency of packages, scripts, and feature in documentation and blog posts, etc.
+The package under its old name might be a dependency of packages, scripts, and feature in documentation, scientific publications, and blog posts, etc.
 
 When radically changing the interface, starting a new package from scratch, like [httr2 which is the second generation of httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/) ; or creating editions of a package like for [testthat](https://testthat.r-lib.org/articles/third-edition.html), are better strategies. If you also maintain the old package, you can soft-deprecate it with a startup message, such as in httr.
 This allows users and package authors to choose when/whether to update their codebase to the new package or edition.
