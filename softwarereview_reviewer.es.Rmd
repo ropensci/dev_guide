@@ -38,7 +38,7 @@ Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#re
 
 - ¿Cumple el código con los principios generales de la [Guía de revisión de Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
-- ¿Pueden mejorarse el estilo del código y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
+- ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
 - ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones de auxiliares del paquete?
 - ¿Podría mejorarse la interfaz de usuario?
