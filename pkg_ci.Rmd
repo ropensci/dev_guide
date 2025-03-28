@@ -102,7 +102,7 @@ You also need to give Codecov access to your github repository, see [Codecov qui
 Then add a Codecov status badge to the top of your README.md, see [Codecov status badges](https://docs.codecov.com/docs/status-badges).
 
 Currently, Codecov has access to all ropensci github repositories by default.
-When your repository is accepted and transferred to ropensci, Codecov access should transfer automatically.
+If your repository is transferred to the ropensci GitHub organization, Codecov access should transfer automatically.
 You will need to update the URL of the badge to point to the rOpenSci-hosted repository.
 
 For more details, see the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well as [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) and [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
