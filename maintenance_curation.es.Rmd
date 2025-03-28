@@ -54,7 +54,7 @@ Muchos son paquetes de infraestructura que están fuera del alcance de la revisi
 Los paquetes revisados por pares son aquellos aportados a rOpenSci por la comunidad y que han pasado por la revisión por pares.
 Tienen que estar [en el ámbito de aplicación](#aims-and-scope) en el momento del envío para ser revisados.
 
-- Una vez aceptados, estos paquetes revisados por pares se transfieren desde el GitHub original a la organización de GitHub ropensci.
+- Una vez aceptados, estos paquetes revisados por pares se transfieren desde el GitHub original a la organización de GitHub ropensci o, alternativamente, se realiza un seguimiento añadiéndolos a un [archivo JSON](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
 
 - Los paquetes revisados por pares estarán en el registro etiquetados como "peer-reviewed" y tendrán una etiqueta de revisado por pares en su archivo *README*.
 

@@ -13,7 +13,7 @@ Además de estos consejos, en su mayoría técnicos, es importante recordar que 
 
 ### Código de conducta  {#coc-file}
 
-Tras el traslado a nuestra organización de GitHub, [el Código de Conducta de rOpenSci](https://ropensci.org/code-of-conduct/) se aplicará a tu proyecto.
+Una vez que tu paquete esté incluido en el [registro rOpenSci](https://ropensci.org/packages/all), [el Código de Conducta de rOpenSci](https://ropensci.org/code-of-conduct/) se aplicará a tu proyecto.
 Por favor, añade este texto al *README*
 
 ```markdown
@@ -21,7 +21,11 @@ Ten en cuenta que este paquete se publica con un [Código de Conducta para contr
 Al contribuir a este proyecto, te comprometes a cumplir sus condiciones.
 ```
 
-Y eliminar el código de conducta actual del paquete, si lo hubiera.
+Y 
+
+- Si tu paquete fue transferido a la organización GitHub de rOpenSci, por favor, elimina el código de conducta actual del repositorio si había uno, ya que aparecerá el código de conducta por defecto de la organización GitHub.
+
+- Si tu paquete no fue transferido a la organización GitHub de rOpenSci, por favor reemplaza el contenido del código de conducta actual del repositorio con el contenido del [código de conducta por defecto de la organización rOpenSci GitHub](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Guía de contribución {#contributing-guide}
 
