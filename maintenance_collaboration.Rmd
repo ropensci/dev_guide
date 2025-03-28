@@ -33,7 +33,7 @@ And
 
 - If your package was transferred to the rOpenSci GitHub organization, please delete the current code of conduct of the repository if there was one as the default code of conduct of the GitHub organization will appear.
 
-- If your package was not transferred to the rOpenSci GitHub organization, please replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
+- If your package was not transferred to the rOpenSci GitHub organization, please replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the rOpenSci GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Contributing guide {#contributing-guide}
 
