@@ -1,5 +1,29 @@
 # NEWS {#booknews}
 
+## dev version
+
+- 2025-03-11, add note in the packaging guide about checking maintenance status of dependencies (#881)
+
+- 2025-03-11, add item about "top level code" in packaging guide (#879)
+ 
+- 2025-03-11, explicitly mention need to acknowledge authors of bundled code (#873)
+
+- 2025-03-27, add guidance for packages wrapping external software (#866)
+
+- 2025-02-25, add official rule on submitting one package at once only (`@maurolepore`, #876)
+
+- 2025-03-11, mention the Air formatting tool wherever we mention the styler package (#875)
+
+- 2025-02-25, require the default git branch to not be called master (#863)
+
+- 2024-09-06, update math guidance for pkgdown based on pkgdown's update (#838)
+
+- 2024-08-30, remove mention of Twitter since rOpenSci no longer maintains an active Twitter account (`@yabellini`, #827)
+
+- 2024-07-17, document dashboard in editors' chapter (`@mpadge`, #829)
+
+- 2024-06-27, document the author's submit response step in the author guide (`@jmaspons`, #832).
+
 ## 0.9.0
 
 - 2024-01-09, update roxygen2 wording (`@vincentvanhees`, #792).
