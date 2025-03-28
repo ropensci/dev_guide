@@ -110,6 +110,13 @@ Cada submissão deve ser revisada por *dois* revisores de pacotes. Embora seja a
 - *Se o proprietário original do repositório se opuser à transferência, adicione uma linha com seu endereço para [esta lista de repositórios](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) para garantir que o pacote seja incluído no registro de pacotes da rOpenSci.*
 - Indique um pacote para ser apresentado em uma postagem de blog ou nota técnica da rOpenSci se você achar que ele pode ser de grande interesse. Observe na edição de revisão do software uma ou duas coisas que o autor poderia destacar e marque `@ropensci/blog-editors` para que você possa dar acompanhamento.
 - Se os autores mantiverem um _gitbook_ que seja, pelo menos em parte, sobre seu pacote, entre em contato com [um membro da equipe da rOpenSci](https://ropensci.org/about/#team) para que este possa falar com os autores sobre a questão de transferência para [o `ropensci-books` do GitHub](https://github.com/orgs/ropensci-books).
+#### Pacotes que permanecem nas organizações originais do GitHub
+
+Para autores de pacotes que desejam manter seus repositórios em suas organizações originais do GitHub, em vez de transferi-los para github.com/ropensci, os editores devem:
+
+- Pedir aos autores de pacotes que façam um pull request para o [arquivo JSON](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) que lista todos os repositórios que não foram transferidos. [Exemplo de commit](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
+
+- Pedir ao pacote que substitua o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci GitHub](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Promoção de pacotes: {#package-promotion}
 
