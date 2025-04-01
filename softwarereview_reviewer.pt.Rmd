@@ -37,10 +37,10 @@ Todos os envios criam um relatório detalhado, gerado pelo nosso pacote [`pkgche
 
 Para revisar um pacote, comece copiando o nosso [modelo de revisão](#reviewtemplate) (ou o nosso [modelo de revisão em espanhol](#reviewtemplatees)) e use ele como uma lista de verificações que precisam ser feitas.  Além de marcar os critérios mínimos, pedimos que você forneça comentários gerais abordando o seguinte:
 
-- O código está em conformidade com os princípios gerais do [Guia de revisão da Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - O pacote está de acordo com os requisitos do [Guia de pacotes da rOpenSci](#building)?
-- Há melhorias que poderiam ser feitas no estilo do código?
+- Há melhorias que poderiam ser feitas no estilo e nos padrões de código? Por exemplo, as funções precisam ser divididas em funções auxiliares menores e a função de cada função auxiliar está clara?
 - Há duplicação de código no pacote que deveria ser reduzida?
+- Existem funções no R básico ou na dependência leve que fornecem a mesma interface que algumas funções auxiliares no pacote?
 - Há melhorias na interface do usuário que poderiam ser feitas?
 - Existem melhorias de desempenho que podem ser feitas?
 - A documentação (instruções de instalação, *vignettes*, exemplos e demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas e os dados que ele contém?
@@ -58,6 +58,8 @@ Incentivamos você a usar ferramentas automatizadas para facilitar a revisão. I
 - Se o pacote não for enviado por meio da *branch* padrão/principal, lembre-se de mudar para a *branch* de revisão que foi submetida antes de iniciar sua revisão. Nesse caso, você também terá que pesquisar o pacote localmente, dado que a pesquisa no GitHub é limitada à *branch* padrão. Além disso, documentações hospedadas em um website tipo `pkgdown` não são necessariamente atualizadas, por isso recomendamos que você inspecione a documentação do pacote localmente, executando `pkgdown::build_site()`.
 
 Os(as) revisores(as) também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um *issue* de revisão: `@ropensci-review-bot check package`.
+
+Alguns elementos de nossa lista de verificação são inspirados no [guia de revisão de código da Mozilla] (https://mozillascience.github.io/codeReview/review.html).
 
 ### Interações feitas fora dos canais oficiais {#off-thread-interactions}
 
