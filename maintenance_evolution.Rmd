@@ -104,6 +104,12 @@ After users have used the package version for a while (with both `foo` and `bar`
 bar <- function(x) x + 1
 ```
 
+## Data: deprecate
+
+If you need to deprecate a dataset provided by your package, 
+read the [solution proposed by Matthijs Berends on Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), linking to [a 3-step method in Bioconductor guidance](https://contributions.bioconductor.org/deprecation.html#deprecate-dataset).
+Key is the usage of [`delayedAssign()`](https://stat.ethz.ch/R-manual/R-patched/library/base/html/delayedAssign.html) to save a promise that will serve both a warning, and the data.
+
 ## Functions: deprecate \& defunct {#functions-deprecate-defunct}
 
 To remove a function from a package (let's say your package name is `helloworld`), you can use the following protocol:
