@@ -91,7 +91,13 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-## Estilo del código {#code-style}
+### Paquetes que envuelven software externo {#external-software}
+
+- Documenta claramente cómo instalar el paquete, incluidos todos los paquetes o bibliotecas externos necesarios, incluyendo, en su caso, los pasos explícitos en los sistemas operativos habituales.
+- Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- Si es posible, proporciona una función que ayude en la instalación. [Ejemplo en hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Estilo del código y mejores prácticas {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
   Recomendamos [Air](https://posit-dev.github.io/air/) o el paquete [styler](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
@@ -100,6 +106,8 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 - Puedes optar por utilizar `=` en lugar de `<-` siempre que seas coherente con esa elección dentro de tu paquete.
   Recomendamos evitar el uso de `->` para la asignación dentro del paquete.
   Si utilizas `<-` en todo tu paquete, y también utilizas `R6` en ese paquete, debrás utilizar `=` para la asignación dentro de la generación de la clase `R6Class` - esto no se considera una incoherencia porque no puedes usar `<-` en este caso.
+
+- Puedes utilizar el [paquete lintr](https://lintr.r-lib.org/index.html) para identificar algunas posibles áreas de mejora. [Ejemplo de flujo de trabajo](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## Archivo CITATION {#citation-file}
 
@@ -372,7 +380,10 @@ Tanto si se incluyen archivos enteros como funciones individuales de otros paque
 ## Licencia {#licence}
 
 El paquete debe tener una licencia aceptada por [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) u [OSI](https://opensource.org/licenses).
-Para más detalles sobre las licencias, consulta el libro [R packages](https://r-pkgs.org/license.html).
+El libro [_R packages_ (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) incluye una sección muy útil sobre licencias.
+
+Si tu paquete incluye código de otras fuentes, también necesitas reconocer a los autores del código original en tu archivo DESCIPTION, generalmente con un rol de propietario del copyright: `role = "cph"`.
+Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [_R packages_ (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) en Inglés o puedes consultar también el libro en español [Introducción a la programación II](https://intro-programacion.netlify.app/09_paquetes-1.html#completando-el-archivo-description).
 
 ## Testeo {#testing}
 
@@ -389,8 +400,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   Esto responde a la necesidad obvia de tener *tests* adecuados para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y programar *defensivamente* contra esas fallas.
   [Más información sobre *tests*](https://r-pkgs.org/tests.html).
 
-- Los *tests* deben ser fáciles de entender.
-  Te sugerimos que leas el artículo de blog [*Why Good Developers Write Bad Unit Tests* (Por qué las personas que son buenas desarrollando escriben malos tests)](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
+- Los *tests* deben ser fáciles de entendery lo más autocontenidos posible. Si usas testthat, evita utilizar código de alto nivel, es decir, código fuera de bloques `test_that()` (como por ejemplo, pasos de preprocesamiento). Recomendamos leer los [_"high-level principles for testing"_ (principios de alto nivel para _tests_)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) en el libro _R Packages_ (Paquetes de R).
 
 - Los paquetes con aplicaciones Shiny deberán generar *tests* unitarios usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas funcionan como es esperado.
 
@@ -437,12 +447,13 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Dependencias del paquete  {#pkgdependencies}
 
+- En general, es mejor tener la menor cantidad de dependencias posibles.
 - Pensa en las ventajas y desventajas de depender de un paquete.
   Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
   Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
   También aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en el ciclo de desarrollo tuyo y del resto, y en los sistemas de compilación automatizados.
   Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo.
-  He aquí algunos enfoques para reducir las dependencias:
+- He aquí algunos enfoques para reducir las dependencias:
   
   - Si sólo utilizas unas pocas funciones de una dependencia grande o pesada, puedes copiarlas en tu propio paquete.
     (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer la autoría del código copiado).
@@ -455,7 +466,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Ten en cuenta que este enfoque debe utilizarse y probarse con mucho cuidado, sobre todo porque puede romper el comportamiento esperado de los objetos a los que se le cambia la clase.)
   
   - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
     Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.
@@ -472,6 +483,9 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
   Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, roxygen2) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
   Si utilizas algún paquete en los ejemplos o *tests* de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
+
+- Comprueba el estado de desarrollo de cualquier dependencia que añadas.
+  Especialmente para los paquetes alojados en GitHub, es muy útil comprobar que se mantienen activamente, y que [no han sido archivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
 - Si tu paquete no está en Bioconductor pero depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el *README* y la viñeta sean lo suficientemente claras incluso para una persona que no esté familiarizada con el ciclo de publicación de Bioconductor.
   
