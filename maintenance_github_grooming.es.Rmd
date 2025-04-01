@@ -42,7 +42,7 @@ Más información sobre las anulaciones del lingüista de GitHub [aquí](https:/
 - Como responsable de un paquete incorporado, ahora eres miembro de la organización GitHub "ropensci" de rOpenSci.
   Por defecto, la pertenencia a la organización es privada; consulta [cómo hacerla pública en la documentación de GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
 
-- Incluso después de que el repositorio de tu paquete haya sido transferido a rOpenSci, puedes [destacarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+- Incluso si el repositorio de tu paquete ha sido transferido a rOpenSci, puedes [destacarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
 
 - En general, recomendamos añadir al menos una imagen de perfil (¡que no tiene por qué ser tu cara!) y tu nombre [a tu perfil de GitHub](https://help.github.com/articles/customizing-your-profile/).
 

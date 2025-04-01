@@ -62,7 +62,7 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 
 - El *README* de tu paquete incluirá una etiqueta de revisión por pares que enlaza con el hilo de revisión.
 - Tu paquete tendrá un [sitio web de documentación en `docs.ropensci.org`](#rodocsci) que podrás enlazar en el archivo *DESCRIPTION*.
-- El repositorio de tu paquete será transferido a la organización rOpenSci.
+- Si quieres, el repositorio de tu paquete será transferido a la organización rOpenSci.
 - Si quienes realizaron la revisión [aceptan aparecer en el archivo *DESCRIPTION*](#authorship), sus metadatos mencionarán la revisión.
 
 ## Personas responsables de edición y revisión   {#editors-and-reviewers}
