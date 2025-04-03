@@ -50,7 +50,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 
 Si tiene intención de enviar un artículo científico sobre tu paquete, rOpenSci colabora con el [Journal of Open-Source Software](https://joss.theoj.org/) y [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X):
 
-- Envía el artículo al [Journal of Open Source Software](https://joss.theoj.org/) (JOSS),una vez que haya finalizado el proceso de revisión de rOpenSci: si el equipo de edición de JOSS considera que tu paquete está dentro de su ámbito de aplicación, sólo se revisará el artículo que lo acompaña (pero no el software que ya habrá sido revisado por rOpenSci en ese momento). No todos los paquetes de rOpenSci pueden aplicar a JOSS.
+- Envía el artículo al [Journal of Open Source Software](https://joss.theoj.org/) (JOSS),una vez que has recibido las revistas: si el equipo de edición de JOSS considera que tu paquete está dentro de su ámbito de aplicación, sólo se revisará el artículo que lo acompaña (pero no el software que ya habrá sido revisado por rOpenSci en ese momento). No todos los paquetes de rOpenSci pueden aplicar a JOSS.
 
 - Para un envío a Methods in Ecology and Evolution (MEE), envíelo a MEE sólo después de que el proceso de revisión de rOpenSci haya terminado, ya sea antes o después de que el paquete haya sido aceptado. La colaboración de revisión con MEE se introdujo en un [blog post](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). El tipo de artículo relevante para MEE es [Solicitud](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) para más detalles.
 
