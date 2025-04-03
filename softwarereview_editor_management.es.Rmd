@@ -74,7 +74,7 @@ Te deseamos lo mejor,
   - el [capítulo dev\_guide que introduce la revisión de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (en dos lugares de este archivo: como miembros del equipo editorial y un poco más abajo para eliminar su nombre de la lista de personas que revisan paquetes);
   - el [*README* de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd) (también en dos lugares de este archivo!).
 
-Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
+Tanto el capítulo como el *REAMDE*  se renderizan automáticamente con integración continua.
 
 ## Dar de baja a un miembro del equipo editorial {#offboarding-an-editor}
 
@@ -95,4 +95,14 @@ Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan aut
 
 Tanto la `dev_guide` como el *REAMDE* de revisión de software se renderizan automáticamente con integración continua.
 
+## Poner el sistema en pausa {#vacation}
 
+Si quieres poner el sistema en pausa, por ejemplo durante las vacaciones, antes de irte:
+
+- Añade un mensaje de vacaciones al `about` de las plantillas de _issues_. [PR de ejemplo](https://github.com/ropensci/software-review/pull/679/files).
+- Añade un mensaje de vacaciones a la respuesta de bienvenida estándar del bot. [PR de ejemplo](https://github.com/ropensci-org/buffy/pull/108).
+
+Al reanudar las actividades:
+
+- Elimina el mensaje de vacaciones de las plantillas de _issues_. [PR de ejemplo PR](https://github.com/ropensci/software-review/pull/680).
+- Elimina el mensaje de vacaciones de la respuesta de bienvenida estándar del bot. [PR de Ejemplo](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
