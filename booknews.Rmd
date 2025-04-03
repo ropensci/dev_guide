@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2025-04-03, document how to put the system on vacation(#865)
+
 - 2025-04-03, add details about MEE process and structure the author guide a bit more (`@robitalec`, #862)
 
 - 2025-03-11, add note in the packaging guide about checking maintenance status of dependencies (#881)
