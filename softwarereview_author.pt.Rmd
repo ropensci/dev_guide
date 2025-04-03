@@ -49,7 +49,9 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 - Todas as submissões são verificadas automaticamente pelo nosso [`pkgcheck`](https://docs.ropensci.org/pkgcheck/) para garantir que os pacotes seguem nossas diretrizes. Espera-se que todos os autores tenham executado a [principal função do `pkgcheck`](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que o pacote está pronto para ser submetido. Como alternativa, uma maneira ainda mais fácil de garantir que um pacote está pronto para ser submetido é usando [a função `pkgcheck` do GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action), conforme descrito em [nossa postagem no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
 - Se o seu pacote exigir dependências de sistema incomuns (consulte [*Guia de pacotes*](#pkgdependencies)) para que a _GitHub Action_ seja aprovada, envie um _pull request_ adicionando-as ao [nosso arquivo Dockerfile](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
+  Consulte [esta vinheta `pkgcheck`](https://docs.ropensci.org/pkgcheck/articles/environment.html) para obter detalhes sobre nosso ambiente de verificação e como modificá-lo para ajudar seu pacote a passar nas verificações.
 - Se houver algum aspecto do `pkgcheck` no qual seu pacote não possa ser aprovado, explique os motivos no seu modelo de submissão.
+
 
 ### Manuscrito de acompanhamento (opcional)
 
