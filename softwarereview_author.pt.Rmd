@@ -20,7 +20,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 ### Ciclo de vida
 
 - Não envie vários pacotes ao mesmo tempo: solicitamos que você espere até que um pacote seja aprovado antes de enviar outro.
-- Você pretende manter o seu pacote por pelo menos 2 anos ou ser capaz de identificar um(a) novo(a) mantenedor(a)?
+- Você pretende manter o seu pacote por pelo menos 2 anos ou ser capaz de identificar uma nova pessoa para mantê-lo?
 - Considere o melhor momento de desenvolvimento do seu pacote para enviar sua submissão. Seu pacote deve estar suficientemente maduro para que os revisores possam analisar todos os aspectos essenciais, mas tenha em mente que revisões podem resultar em grandes alterações.
   - Sugerimos enfaticamente que você envie seu pacote para análise *antes de* publicá-lo no CRAN ou antes de enviá-lo para publicação como artigo em um periódico. O _feedback_ da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações de funções.
   - Não envie seu pacote para revisão enquanto este ou o manuscrito associado também estiver sendo revisado em outro local, pois isso pode resultar em solicitações conflitantes de alterações.
@@ -43,7 +43,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ### Diretrizes
 
-- Leia e siga [nosso guia de estilo de pacotes](#building) e nosso [guia do revisor](#preparereview), para garantir que seu pacote atenda aos nossos critérios de estilo e qualidade.
+- Leia e siga [nosso guia de estilo de pacotes](#building) e nosso [guia de revisão](#preparereview), para garantir que seu pacote atenda aos nossos critérios de estilo e qualidade.
 
 ### Verificações automáticas
 
@@ -53,10 +53,10 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ### Manuscrito de acompanhamento (opcional)
 
-Se você pretende enviar um manuscrito de acompanhamento para seu pacote, o rOpenSci tem uma parceria de colaboração com o [Journal of Open-Source Software] (https://joss.theoj.org/) e o [Methods in Ecology and Evolution] (https://besjournals.onlinelibrary.wiley.com/journal/2041210X): 
+Se você pretende enviar um manuscrito de acompanhamento para seu pacote, a rOpenSci tem uma parceria de colaboração com o [Journal of Open-Source Software] (https://joss.theoj.org/) e o [Methods in Ecology and Evolution] (https://besjournals.onlinelibrary.wiley.com/journal/2041210X): 
 
-- Para enviar um pacote ao Journal of Open-Source Software (JOSS), não o envie para consideração do JOSS até que o processo de revisão do rOpenSci tenha terminado: se o seu pacote for considerado dentro do escopo pelos editores do JOSS, apenas o artigo curto que o acompanha será revisado (não o software que terá sido revisado extensivamente pelo rOpenSci até aquele momento). Nem todos os pacotes do rOpenSci atenderão aos critérios do JOSS.
-- Para uma submissão ao Methods in Ecology and Evolution (MEE), envie-a ao MEE somente depois que os revisores do rOpenSci tiverem enviado suas revisões, antes ou depois de o pacote ter sido aceito.A colaboração de revisão com a MEE foi apresentada em uma [postagem de blog] (https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). O tipo de artigo relevante para a MEE é [Application] (https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) para obter mais detalhes.
+- Para enviar um pacote ao Journal of Open-Source Software (JOSS), não o envie para consideração do JOSS até que o processo de revisão do rOpenSci tenha terminado: se o seu pacote for considerado dentro do escopo pelos editores do JOSS, apenas o artigo curto que o acompanha será revisado (não o software que terá sido revisado extensivamente pelo rOpenSci até aquele momento). Nem todos os pacotes da rOpenSci atenderão aos critérios do JOSS.
+- Para uma submissão ao Methods in Ecology and Evolution (MEE), envie-a ao MEE somente depois que as revisoras e revisores da rOpenSci tiverem enviado suas revisões, antes ou depois de o pacote ter sido aceito. A colaboração de revisão com a MEE foi apresentada em uma [postagem de blog](https://ropensci.org/blog/2017/11/29/review-collaboration-mee/). O tipo de artigo relevante para a MEE é [*Applications*](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) para obter mais detalhes.
 
 ## O Processo de Submissão {#the-submission-process}
 
