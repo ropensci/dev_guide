@@ -43,8 +43,8 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 ### Controles automáticos
 
 - Todos los envíos son revisados automáticamente por nuestro [propio sistema](https://docs.ropensci.org/pkgcheck/) para garantizar que los paquetes sigan nuestras directrices. Se espera que hayas corrido [la función `pkgcheck`](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) localmente para confirmar que el paquete está listo para ser enviado. Otra forma aún más fácil de asegurarse de que un paquete está listo para su envío es utilizar [la acción de GitHub `pkgcheck`](https://github.com/ropensci-review-tools/pkgcheck-action) para ejecutar `pkgcheck` como una Acción de GitHub, como se describe en [esta publicación en nuestro blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
-- Si tu paquete requiere dependencias inusuales del sistema (ver [*Guía de Empaquetado*](#pkgdependencies) para que nuestra Acción de GitHub pase, por favor envíe un _pull request_ añadiéndolas a [nuestro _Dockerfile_ base](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
-  Consulte [esta viñeta `pkgcheck`](https://docs.ropensci.org/pkgcheck/articles/environment.html) para obtener más información sobre nuestro entorno de comprobación y cómo modificarlo para que su paquete pase las comprobaciones.
+- Si tu paquete requiere dependencias inusuales del sistema (ver [*Guía de Empaquetado*](#pkgdependencies) para que nuestra Acción de GitHub pase, por favor envía un _pull request_ añadiéndolas a [nuestro _Dockerfile_ base](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
+  Consulta [esta viñeta `pkgcheck`](https://docs.ropensci.org/pkgcheck/articles/environment.html) para obtener más información sobre nuestro entorno de comprobación y cómo modificarlo para que tu paquete pase las verificaciones.
 - Si hay algún test de `pkgcheck` que tu paquete no pueda aprobar, explica los motivos en la plantilla de envío.
 
 ### Artículo complementario (opcional)
