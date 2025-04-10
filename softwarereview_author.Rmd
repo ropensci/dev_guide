@@ -49,7 +49,8 @@ This concise guide presents the software peer review process for you as a packag
 ### Automatic checks
 
 - All submissions are automatically checked by our [pkgcheck](https://docs.ropensci.org/pkgcheck/) system to ensure packages follow our guidelines. All authors are expected to have run [the main `pkgcheck` function](https://docs.ropensci.org/pkgcheck/reference/pkgcheck.html) locally to confirm that the package is ready to be submitted. Alternatively, an even easier way to ensure a package is ready for submission is to use [the `pkgcheck` GitHub Action](https://github.com/ropensci-review-tools/pkgcheck-action) to run `pkgcheck` as a GitHub Action, as described in [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/).
--   If your package requires unusual system dependencies (see [*Packaging Guide*](#pkgdependencies)) for our GitHub Action to pass, please submit a pull request adding them to [our base Dockerfile](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
+- If your package requires unusual system dependencies (see [*Packaging Guide*](#pkgdependencies)) for our GitHub Action to pass, please submit a pull request adding them to [our base Dockerfile](https://github.com/ropensci-review-tools/pkgcheck/blob/main/Dockerfile).
+  See [this `pkgcheck` vignette](https://docs.ropensci.org/pkgcheck/articles/environment.html) for details of our checking environment, and how to modify it to help your package pass checks.
 - If there are any aspects of `pkgcheck` which your package is unable to pass, please explain reasons in your submission template.
 
 ### Accompanying manuscript (optional)
