@@ -72,7 +72,7 @@ Para a integração contínua no Windows, consulte [R + AppVeyor](https://github
 
 Aqui estão algumas dicas para você minimizar o tempo de compilação do AppVeyor:
 
-- Instalação em cache de pacotes. [Exemplo em um arquivo de configuração](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). Ele já estará no arquivo de configuração se você configurar o AppVeyor CI usando `usethis::use_appveyor()`.
+- Instale os seus pacotes em algum tipo de cache. [Exemplo de um arquivo de configuração](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). Ele já estará no arquivo de configuração se você configurar o AppVeyor CI usando `usethis::use_appveyor()`.
 
 - Ativar [compilações contínuas](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
