@@ -6,12 +6,12 @@ aliases:
 # Práticas Recomendadas de Integração Contínua {#ci}
 
 ```{block, type="summaryblock"}
-Este capítulo resume nossas diretrizes sobre integração contínua, depois de explicar o que o termo integração contínua significa.
+Este capítulo resume as nossas diretrizes sobre a integração contínua, depois de explicar o que o termo integração contínua significa.
 
-Juntamente com o [capítulo anterior] (#construção), ele forma nossas diretrizes para a revisão de software por pares.
+Juntamente com o [capítulo anterior] (#construção), ele forma as nossas diretrizes para a revisão de software por pares.
 ```
 
-## O que é integração contínua? {#what-is-continuous-integration-ci}
+## O que é a integração contínua? {#what-is-continuous-integration-ci}
 
 A integração contínua (do inglês, CI) se refere a execução de testes automáticos em software. No caso da rOpenSci, a CI significa praticamente que um conjunto de testes será executado automaticamente por meio do GitHub, sempre que você fizer um _commit_ ou um _pull request_ ao GitHub.
 
