@@ -56,7 +56,7 @@ Se você desenvolver um pacote que dependa ou seja destinado ao Bioconductor, es
 
 Você pode usar estas dicas para minimizar o tempo de compilação na CI:
 
-- Instalar os pacotes em um cache que possa ser reutilizado no processo de CI/CD quando necessário (_cache installation of packages_). O padrão faz isso [r-lib/actions workflows](https://github.com/r-lib/actions).
+- Instalar os pacotes em um cache que possa ser reutilizado no processo de CI quando necessário (_cache installation of packages_). O padrão faz isso [r-lib/actions workflows](https://github.com/r-lib/actions).
 
 #### Dependências do sistema {#sysdeps-ci}
 
