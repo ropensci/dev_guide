@@ -38,9 +38,9 @@ Em caso de dúvida sobre a aplicabilidade desses critérios ao seu pacote, é me
 
 Há vários serviços de integração contínua, incluindo serviços autônomos (CircleCI, AppVeyor) e outros integrados à hospedagem de código ou a serviços relacionados (GitHub Actions, GitLab, AWS Code Pipeline). Diferentes serviços oferecem suporte a diferentes configurações de sistema operacional.
 
-[Ações do GitHub](https://github.com/features/actions) é uma opção conveniente para muitos desenvolvedores de R que já usam o GitHub, pois está integrada à plataforma e oferece suporte a todos os sistemas operacionais necessários. Existem [ações compatíveis com o ecossistema R](https://github.com/r-lib/actions/) bem como suporte de primeira classe no pacote [{usethis}](https://usethis.r-lib.org/reference/github_actions.html). Todos os pacotes enviados à rOpenSci para revisão por pares são verificados por nosso [sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), descrito mais detalhadamente na seção [Guia para Autores](#authors-guide). Essas verificações também são fornecidas como uma ação do GitHub no repositório [`ropensci-review-tools/pkgcheck-action`](https://github.com/ropensci-review-tools/pkgcheck-action). Os autores de pacotes são incentivados a usar essa ação para confirmar, antes do envio, que um pacote passa em todas as nossas verificações. Consulte [nossa publicação no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) para obter mais informações.
+[Ações do GitHub](https://github.com/features/actions) é uma opção conveniente para muitas pessoas desenvolvedoras de R que já usam o GitHub, pois está integrada à plataforma e oferece suporte a todos os sistemas operacionais necessários. Existem [ações compatíveis com o ecossistema R](https://github.com/r-lib/actions/) bem como suporte de primeira classe no pacote [{usethis}](https://usethis.r-lib.org/reference/github_actions.html). Todos os pacotes enviados à rOpenSci para revisão por pares são verificados por nosso [sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), descrito mais detalhadamente na seção [Guia para Autores](#authors-guide). Essas verificações também são fornecidas como uma ação do GitHub no repositório [`ropensci-review-tools/pkgcheck-action`](https://github.com/ropensci-review-tools/pkgcheck-action). Os autores e as autoras de pacotes são incentivados a usar essa ação para confirmar, antes do envio, que um pacote passa em todas as nossas verificações. Consulte [nossa publicação no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) para obter mais informações.
 
-[usethis oferece suporte a configuração de CI para outros sistemas](https://usethis.r-lib.org/reference/ci.html) embora essas funções estejam levemente obsoletas. rOpenSci também oferece suporte ao pacote [círculo](https://docs.ropensci.org/circle/) que auxilia na configuração de pipelines CircleCI, e ao pacote [tic](https://docs.ropensci.org/tic/) para criar pipelines de CI mais complicadas.
+[usethis oferece suporte a configuração de CI para outros sistemas](https://usethis.r-lib.org/reference/ci.html) embora essas funções estejam levemente obsoletas. A rOpenSci também oferece suporte ao pacote [círculo](https://docs.ropensci.org/circle/), que auxilia na configuração de pipelines CircleCI, e ao pacote [tic](https://docs.ropensci.org/tic/) para criar pipelines de CI mais complicadas.
 
 #### Testes usando diferentes versões do R {#testing-using-different-versions-of-r}
 
@@ -68,7 +68,7 @@ Recomendamos que você [afaste-se de Travis](https://ropensci.org/technotes/2020
 
 ### AppVeyor CI (Windows) {#app-veyor-ci-windows}
 
-Para integração contínua no Windows, consulte [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Configure-o usando `usethis::use_appveyor()`.
+Para a integração contínua no Windows, consulte [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Configure-o usando `usethis::use_appveyor()`.
 
 Aqui estão algumas dicas para você minimizar o tempo de compilação do AppVeyor:
 
@@ -76,7 +76,7 @@ Aqui estão algumas dicas para você minimizar o tempo de compilação do AppVey
 
 - Ativar [compilações contínuas](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
-Não transferimos mais projetos AppVeyor para a conta da rOpenSci no AppVeyor, portanto, após a transferência do seu repositório para a organização "ropensci" no GitHub, o distintivo será `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+Não transferimos mais projetos AppVeyor para a conta "ropensci" no AppVeyor, portanto, após a transferência do seu repositório para a conta "ropensci" no GitHub, o distintivo será `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
 ### Circle CI (Linux e Mac OSX) {#circle-ci-linux-and-mac-osx}
 
