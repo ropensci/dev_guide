@@ -38,8 +38,9 @@ Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#re
 
 - ¿Cumple el código con los principios generales de la [Guía de revisión de Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
-- ¿Puede mejorarse el estilo del código?
+- ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
+- ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones auxiliares del paquete?
 - ¿Podría mejorarse la interfaz de usuario?
 - ¿Podría mejorarse el rendimiento?
 - ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, ¿tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de una persona con el paquete y/o la herramienta o datos que utiliza?
@@ -59,7 +60,9 @@ Te recomendamos usar herramientas automatizadas para facilitar tu revisión. És
 
 Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el *issue* de revisión con el contenido "`@ropensci-review-bot check package`".
 
-### Interacciones fuera del hilo {#off-thread-interactions}
+Algunos elementos de nuestra lista de verificación se inspiran en la [guía de revisión de código de Mozilla](https://mozillascience.github.io/codeReview/review.html).
+
+### Interacciones fuera del hilo en el _issue_ {#off-thread-interactions}
 
 Si interactúas con quienes desarrollaron el paquete y hablas de la revisión fuera de un *issue* de revisión (en chats, DMs, en persona, issues en el repositorio del proyecto), asegúrate de que tu revisión refleje y/o enlace los elementos de estas conversaciones que sean relevantes para el proceso.
 
@@ -77,7 +80,7 @@ Si es la primera vez que revisas un paquete, puede resultarte útil leer algunas
 
 Puedes leer los artículos del blog sobre experiencias al revisar paquetes [a través de este enlace](https://ropensci.org/tags/reviewer/). En particular [esta publicación de Mara Averick](https://ropensci.org/blog/2017/08/22/first-package-review/) (en inglés) habla como puedes proporcionar una devolución útil aún careciendo de experticia en el tema o en la implementación del paquete adoptando el rol de "persona ingenua" y preguntándote *"¿Qué creo que hace esta cosa? ¿lo hace? ¿qué cosas me producen rechazo?"* En [otro artículo de blog](https://ropensci.org/blog/2017/09/08/first-review-experiences/) Verena Haunschmid explica cómo alternó entre usar el paquete y revisar el código.
 
-Como antiguo revisor y autor de paquetes, [Adam Sparks](https://adamhsparks.netlify.app/) [escribió lo siguiente](https://twitter.com/adamhsparks/status/898132036451303425) "\[escribe\] una buena crítica de la estructura del paquete y de las mejores prácticas de escritura de código. Si sabes cómo hacer algo mejor, dímelo. Como desarrollador es fácil pasar por alto oportunidades de documentación, pero como al hacer la revisión, tienes una visión diferente. Eres una persona que puede dar devolución. ¿Qué no está claro en el paquete? ¿Cómo puede hacerse más claro? Si lo utilizas por primera vez, ¿es fácil? ¿Conoces otro paquete R que quizás debería utilizar? ¿O hay alguno que esté utilizando y que quizás no debería? Si puedes contribuir al paquete, ofrécete".
+Como antiguo revisor y autor de paquetes, [Adam Sparks](https://adamhsparks.netlify.app/) escribió lo siguiente "\[escribe\] una buena crítica de la estructura del paquete y de las mejores prácticas de escritura de código. Si sabes cómo hacer algo mejor, dímelo. Como desarrollador es fácil pasar por alto oportunidades de documentación, pero como al hacer la revisión, tienes una visión diferente. Eres una persona que puede dar devolución. ¿Qué no está claro en el paquete? ¿Cómo puede hacerse más claro? Si lo utilizas por primera vez, ¿es fácil? ¿Conoces otro paquete R que quizás debería utilizar? ¿O hay alguno que esté utilizando y que quizás no debería? Si puedes contribuir al paquete, ofrécete".
 
 ### Paquete de ayuda para quienes hacen una revisión {#helper-package-for-reviewers}
 
