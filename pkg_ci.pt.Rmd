@@ -96,11 +96,11 @@ Se você executar a cobertura em vários serviços de CI [os resultados serão f
 
 ## Ainda mais CI: OpenCPU {#even-more-ci-open-cpu}
 
-Após a transferência para a organização "ropensci" do GitHub pertencente a rOpenSci, cada envio para o repositório será contruido no OpenCPU e a pessoa que fizer o _commit_ receberá um e-mail de notificação. Esse é um serviço de CI adicional para autores de pacotes que permite que as funções do R em pacotes sejam chamadas remotamente via [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/), usando o [API opencpu](https://www.opencpu.org/api.html#api-json). Para obter mais detalhes sobre esse serviço, consulte a [página de ajuda do OpenCPU](https://www.opencpu.org/help.html) que também indica onde você pode fazer perguntas.
+Após a transferência para a organização "ropensci" no GitHub pertencente a rOpenSci, cada envio para o repositório será contruido no OpenCPU e a pessoa que fizer o _commit_ receberá um e-mail de notificação. Esse é um serviço de CI adicional para autores e autoras de pacotes que permite que as funções do R em pacotes sejam chamadas remotamente via [https://ropensci.ocpu.io/](https://ropensci.ocpu.io/), usando o [API opencpu](https://www.opencpu.org/api.html#api-json). Para obter mais detalhes sobre esse serviço, consulte a [página de ajuda do OpenCPU](https://www.opencpu.org/help.html) que também indica onde você pode fazer perguntas.
 
 ## Ainda mais CI: documentos da rOpenSci {#rodocsci}
 
-Após a transferência para a organização "ropensci" do GitHub pertencente a rOpenSci, um site pkgdown será criado para o seu pacote após cada envio para o repositório do GitHub. Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [ `rotemplate`](https://github.com/ropensci-org/rotemplate/).
+Após a transferência para a organização "ropensci" no GitHub pertencente a rOpenSci, um site pkgdown será criado para o seu pacote após cada envio para o repositório no GitHub. Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [ `rotemplate`](https://github.com/ropensci-org/rotemplate/).
 
 Por favor, informe bugs, perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
