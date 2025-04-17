@@ -17,9 +17,9 @@ A integração contínua (do inglês, CI) se refere a execução de testes autom
 
 A CI automatiza a execução de verificações gerais de pacotes, como `R CMD check`; Veja [testando](/building.html#testing). É possível configurar a CI antes que os testes sejam escritos, assim a CI executará os testes quando você os enviar para o repositório por meio de _commits_.
 
-## Por que usar integração contínua (CI)? {#why-use-continuous-integration-ci}
+## Por que usar a integração contínua (CI)? {#why-use-continuous-integration-ci}
 
-Todos os pacotes da rOpenSci devem usar uma forma de integração contínua. Isso garante que todos os commits, pull requests e novas ramificações sejam executados por `R CMD check`. Os resultados de todos os testes são exibidos na página de _pull requests_ no GitHub, fornecendo outra camada de informações sobre problemas e proteção contra a quebra do seu pacote antes de fazer a fusão das alterações. A integração contínua dos pacotes da rOpenSci também deve ser vinculada a um serviço de cobertura de código, indicando quantas linhas são cobertas por testes de unidade.
+Todos os pacotes da rOpenSci devem usar uma forma de integração contínua. Isso garante que todos os commits, pull requests e novas ramificações sejam executados pelo `R CMD check`. Os resultados de todos os testes são exibidos na página de _pull requests_ no GitHub, fornecendo outra camada de informações sobre os problemas e a proteção contra a quebra do seu pacote antes de fazer a fusão das alterações. A integração contínua dos pacotes da rOpenSci também deve ser vinculada a um serviço de cobertura de código, indicando quantas linhas são cobertas por testes de unidade.
 
 Tanto o status do teste quanto a cobertura do código devem ser relatados por meio de distintivos no README do seu pacote.
 
@@ -34,7 +34,7 @@ Os pacotes R devem ter CI para todos os sistemas operacionais (Linux, Mac OSX, W
 
 Em caso de dúvida sobre a aplicabilidade desses critérios ao seu pacote, é melhor adicionar CI para todos os sistemas operacionais. A maioria das configurações de padrões de serviços de CI para pacotes R permite que isso seja feito sem muito trabalho.
 
-## Qual serviço de integração contínua? {#whichci}
+## Qual(is) serviço(s) de integração contínua? {#whichci}
 
 Há vários serviços de integração contínua, incluindo serviços autônomos (CircleCI, AppVeyor) e outros integrados à hospedagem de código ou a serviços relacionados (GitHub Actions, GitLab, AWS Code Pipeline). Diferentes serviços oferecem suporte a diferentes configurações de sistema operacional.
 
