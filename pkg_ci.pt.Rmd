@@ -88,7 +88,7 @@ A integração contínua também deve incluir relatórios de cobertura de teste 
 
 Recomendamos que você use Codecov. Para ativar Codecov em seu repositório, execute `usethis::use_github_action("test-coverage")` para criar um arquivo `.github/workflows/test-coverage.yaml`. Você também precisa dar ao Codecov acesso ao seu repositório do GitHub, consulte [Guia de início rápido do Codecov](https://docs.codecov.com/docs/quick-start) para saber como configurar o acesso. Em seguida, adicione um distintivo de status do Codecov à parte superior do seu README.md, consulte [Distintivos de status do Codecov](https://docs.codecov.com/docs/status-badges).
 
-Atualmente, Codecov tem acesso a todos os repositórios do GitHub da rOpenSci por padrão. Quando o seu repositório for aceito e transferido para a rOpenSci, o acesso ao Codecov deverá ser transferido automaticamente. Você precisará atualizar o URL do distintivo para apontar ao repositório hospedado na rOpenSci.
+Se o seu repositório for transferido para a organização GitHub ropensci, o acesso ao Codecov deverá ser transferido automaticamente. Você precisará atualizar o URL do distintivo para apontar ao repositório hospedado na rOpenSci.
 
 Para mais detalhes e instruções, consulte a seção [README do pacote **covr**](https://github.com/r-lib/covr), bem como [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) e [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
 
