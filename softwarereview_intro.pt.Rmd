@@ -34,11 +34,11 @@ Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada proc
 
 ## Por que as avaliações estão abertas? {#whyopen}
 
-Nossos tópicos de avaliação são públicos. Autores, avaliadores e editores conhecem as identidades uns dos outros. A comunidade em geral pode ver ou até mesmo participar da conversa enquanto ela acontece. Isso incentiva você a ser minucioso e a fazer revisões construtivas e não contraditórias. Tanto os autores quanto os [revisores relatam](https://ropensci.org/tags/reviewer/) que gostam e aprendem mais com essa troca aberta e direta. Isso também traz o benefício de criar uma comunidade. Os participantes têm a oportunidade de se relacionar de forma significativa com novos colegas, e novas colaborações surgiram por meio de ideias geradas durante o processo de revisão.
+Nossas discussões de revisão são públicas. As pessoas autoras, revisoras e editoras conhecem as identidades umas das outras. A comunidade mais ampla pode visualizar ou até participar da conversa conforme ela acontece. Isso incentiva a atenção aos detalhes e o fornecimento de avaliações construtivas e não adversariais. Tanto autores(as) quanto [revisores(as) relatam](https://ropensci.org/tags/reviewer/) que apreciam e aprendem mais com essa troca aberta e direta. Também traz o benefício de fortalecer a comunidade. Participantes têm a oportunidade de estabelecer conexões significativas com colegas, e novas colaborações surgiram a partir de ideias geradas durante o processo de revisão.
 
-Estamos cientes de que os sistemas abertos podem ter desvantagens. Por exemplo, na revisão acadêmica tradicional, [a revisão por pares duplo-cega pode aumentar a representação de autores do sexo feminino](https://www.sciencedirect.com/science/article/pii/S0169534707002704) sugerindo preconceito em revisões não cegas. Também é possível que os revisores sejam menos críticos na revisão aberta. No entanto, afirmamos que a abertura da conversa sobre a revisão proporciona uma verificação da qualidade e da parcialidade da revisão; é mais difícil injetar comentários subjetivos ou sem embasamento em público e sem a cobertura do anonimato. Em última análise, acreditamos que a comunicação direta e pública entre autores e revisores melhora a qualidade e a imparcialidade das revisões.
+Estamos cientes de que sistemas abertos podem ter desvantagens. Por exemplo, na revisão acadêmica tradicional, [a revisão por pares duplo-cega pode aumentar a representação de pessoas autoras do gênero feminino](https://www.sciencedirect.com/science/article/pii/S0169534707002704), sugerindo viés em revisões não-cegas. Também é possível que revisores(as) sejam menos críticos em revisões abertas. No entanto, sustentamos que a abertura da conversa de revisão funciona como um controle de qualidade e viés; é mais difícil inserir comentários subjetivos ou sem embasamento em público e sem o manto do anonimato. Em última análise, acreditamos que a comunicação direta e pública entre autores(as) e revisores(as) melhora a qualidade e a equidade das avaliações.
 
-Além disso, os autores e revisores podem entrar em contato com os editores em particular se tiverem alguma dúvida ou pergunta.
+Além disso, os(as) autores(as) e revisores(as) podem entrar em contato com os(as) editores(as) em particular se tiverem alguma dúvida ou questão.
 
 ## Como os usuários saberão que um pacote foi revisado? {#how-will-users-know-a-package-has-been-reviewed}
 
@@ -72,6 +72,8 @@ source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
 #| eval: !expr has_airtable_access()
 source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
 ```
+
+### Editores(as) Convidados(as) {#guesteditors}
 
 Também somos gratos às seguintes pessoas que atuaram como editores convidados.
 
