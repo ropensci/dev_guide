@@ -42,10 +42,10 @@ Além disso, os(as) autores(as) e revisores(as) podem entrar em contato com os(a
 
 ## Como os usuários saberão que um pacote foi revisado? {#how-will-users-know-a-package-has-been-reviewed}
 
-- O LEIAME do seu pacote apresentará um selo de revisão por pares com um link para o tópico de revisão do software.
-- Seu pacote receberá um selo [`docs.ropensci.org` site de documentos](#rodocsci) que você pode vincular a partir da DESCRIÇÃO.
+- O README do seu pacote apresentará um selo de revisão por pares com um link para o tópico de revisão do software.
+- Seu pacote terá um [site de documentação em `docs.ropensci.org`](#rodocsci) que você pode referenciar no DESCRIPTION.  
 - Se você quiser, o repositório do seu pacote poderá ser transferido para a organização rOpenSci.
-- Se os revisores [concordarem em ser listados na DESCRIÇÃO](#authorship) seus metadados mencionarão a revisão.
+- Se os(as) revisores(as) [concordarem em ser listados(as) no DESCRIPTION](#authorship), seus metadados mencionarão a revisão.
 
 ## Editores(as) e revisores(as) {#editors-and-reviewers}
 
