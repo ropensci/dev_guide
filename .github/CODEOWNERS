@@ -1,0 +1,4 @@
+*.pt.Rmd @ropensci/pt-translators
+*.pt.qmd @ropensci/pt-translators
+*.es.Rmd @ropensci/es-translators
+*.es.qmd @ropensci/es-translators

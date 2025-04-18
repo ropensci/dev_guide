@@ -40,7 +40,7 @@ These and other templates will generally need to be modified for use with an rOp
 Modifying a generic contributing guide to add a personal touch also tends to make it look less generic and more sincere.
 Personal preferences in a contributing guide include:
 
-- Style preferences? You might however prefer to make style a configuration (of [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
+- Style preferences? You might however prefer to make style a configuration (of [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [lintr](https://github.com/jimhester/lintr)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
 
 - Infrastructure like roxygen2?
 
@@ -57,7 +57,7 @@ CONTRIBUTING.md files can also describe how you acknowledge contributions (see [
 
 We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
 
-Once a pull request is closer to being merged, you could use [a GitHub Actions PR workflow to style the code with styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Once a pull request is closer to being merged, you could style the code using [Air](https://posit-dev.github.io/air/) or [styler](https://styler.r-lib.org).
 
 ### Issue management {#issue-management}
 
