@@ -29,7 +29,7 @@ Además, utilizamos funcionalidades de GitHub como las plantillas de *issues* (c
 
 - En primer lugar, y sobre todo, esperamos que envíes tu paquete para su revisión **porque valoras la devolución**. Nuestro objetivo es proporcionar una devolución útil a las personas que crearon el paquetes y que nuestro proceso de revisión sea abierto, no conflictivo y centrado en la mejora de la calidad del software.
 - Una vez a aceptado, tu paquete seguirá recibiendo **apoyo de los miembros de rOpenSci**. Mantendrás la propiedad y el control de tu paquete, pero podemos ayudarte con los problemas de mantenimiento continuo, como los relacionados con las actualizaciones de R y las dependencias, y las políticas de CRAN.
-- rOpenSci **promoverá tu paquete** a través de nuestra [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) y redes sociales (como [Mastodon](https://fosstodon.org/@ropensci) y [Twitter](https://twitter.com/ropensci)). Los paquetes de nuestra suite también tienen un [sitio web de documentación que se construye y despliega automáticamente después de cada *push*](#docsropensci).
+- rOpenSci **promoverá tu paquete** a través de nuestra [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) y redes sociales (como [Mastodon](https://fosstodon.org/@ropensci) y [LinkedIn](https://www.linkedin.com/company/ropensci/)). Los paquetes de nuestra suite también tienen un [sitio web de documentación que se construye y despliega automáticamente después de cada *push*](#docsropensci).
 - Los paquete de rOpenSci **se pueden incluir** en otros repositorios como CRAN y BioConductor.
 - Los paquetes de rOpenSci que son relevantes para el [Journal of Open-Source Software](https://joss.theoj.org/) y añaden un artículo corto de acompañamiento pueden beneficiarse, a discreción del equipo editorial de JOSS, de un proceso de revisión acelerado.
 - Si escribes un ***gitbook* relacionado a tu paquete**, rOpenSci lo difundirá: se puede transferir su código fuente a [la organización de GitHub `ropensci-books`](https://github.com/ropensci-books) para ser listado en [books.ropensci.org](https://books.ropensci.org/).
@@ -67,38 +67,72 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 
 ## Personas responsables de edición y revisión   {#editors-and-reviewers}
 
-### Equipo editorial asociado  {#associateditors}
-
-El proceso de revisión por pares del software de rOpenSci está dirigido por
-
-```{r}
-#| child: "associate-editors.md"
-```
-
-### Equipo de revisión {#reviewers}
-
-Agradecemos a las siguientes personas que han ofrecido su tiempo y experiencia para revisar los paquetes enviados a rOpenSci:
-
 ```{r}
 #| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
+} 
 ```
+
+
+### Líder Editorial
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-eic.es.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+
+### Equipo editorial asociado
+
+Nuestro equipo editorial asociado incluye:
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
-También agradecemos a las siguientes personas que han tomado el rol de edición de forma invitada:
+
+### Revisión y edición invitada
+
+Agradecemos a las siguientes personas, quienes ofrecieron su tiempo y experiencia para revisar paquetes enviados a rOpenSci:
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
+También agradecemos a las siguientes personas que tenian antes el rol de revisión. 
 
+```{r editors_past, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+También agradecemos a las siguientes personas que tomaron el rol de edición de forma invitada. 
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```

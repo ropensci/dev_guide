@@ -23,13 +23,6 @@ Este libro es un documento vivo.
 Puedes ver las actualizaciones de nuestras buenas prácticas y políticas a través de las [notas de cada versión](#booknews).  
 Puedes citar este libro utilizando [sus metadatos de Zenodo y su DOI](https://doi.org/10.5281/zenodo.2553043).
 
-```{r}
-#| echo: false
-#| results: 'asis' 
-#| warning: false
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
-```
-
 *Si quieres contribuir sugerencias o correcciones a este libro, visita [el repositorio de GitHub](https://github.com/ropensci/dev_guide) y, en particular, [la guía de contribución](https://github.com/ropensci/dev_guide#contributing). ¡Gracias!*
 
 *Agradecemos a quienes crean, mantienen, revisan y editan paquetes por ayudarnos a mejorar el sistema y esta guía a lo largo de los años. Gracias también a las siguientes personas que han contribuido a esta guía y a sus versiones anteriores: `r readLines("thanks.md")`. Por favor, avísanos si nos olvidamos de reconocer tu contribución.*
