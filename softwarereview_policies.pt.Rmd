@@ -32,7 +32,7 @@ Por último, mas não menos importante, você encontrará o [código de conduta 
 
 Os critérios a seguir devem servir de guia para o que constitui um conflito de interesses envolvendo quem faz a edição ou revisão. Existe um conflito de interesses se:
 
-- O possível revisor/editor for da mesma instituição ou componente institucional (por exemplo, departamento) que qualquer autor(a) que tenha uma função importante.
+- Quem potencialmente revisará ou editará for da mesma instituição ou componente institucional (por exemplo, departamento) que qualquer autor(a) que tenha um papel importante no pacote.
 - O possível revisor/editor foi colaborador(a) ou teve outros laços profissionais com pelo menos uma pessoa que tenha uma função importante no pacote nos últimos 3 anos.
 - O possível revisor/editor atua ou atuou como membro do conselho consultivo do projeto em análise.
 - O possível revisor/editor receberia um benefício financeiro direto ou indireto se o pacote fosse aceito.
