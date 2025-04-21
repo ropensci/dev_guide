@@ -21,7 +21,7 @@ Por último, mas não menos importante, você encontrará o [código de conduta 
 - A comunicação entre as pessoas envolvidas na autoria, revisão e edição ocorrerá principalmente pelo GitHub, embora você possa optar por entrar em contato com a pessoa responsável pela edição por e-mail ou Slack para alguns problemas. Ao submeter um pacote, certifique-se de que suas configurações de notificação do GitHub estejam ajustadas para que seja improvável você perder algum comentário.
 - O(a) autor(a) pode optar por ter seu envio colocado em espera (o(a) editor(a) aplica a etiqueta (*label*) de espera). O status de espera será revisado a cada 3 meses e, após 1 ano, a *issue* será encerrada.
 - Se o(a) autor(a) não tiver solicitado uma etiqueta de espera, mas simplesmente não estiver respondendo, devemos fechar a edição dentro de 1 mês após a última ocasião de contato. Esta ocasião incluirá um comentário marcando o(a) autor(a), mas também um e-mail usando o endereço de e-mail listado no *DESCRIPTION* do pacote, que é um dos raros casos no qual o(a) editor(a) tentará entrar em contato com o(a) autor(a) por e-mail.
-- Se uma submissão for encerrada e o(a) autor(a) desejar reenviá-la, ele(a) terá que iniciar uma nova submissão. Se o pacote ainda estiver no escopo, o autor terá que responder às revisões iniciais antes que o editor comece a procurar novos revisores.
+- Se uma submissão for encerrada e o(a) autor(a) desejar reenviá-la, ele(a) terá que iniciar uma nova submissão. Se o pacote ainda estiver no escopo, o(a) autor(a) terá que responder às revisões iniciais antes que o(a) editor(a) comece a procurar novos(as) revisores(as).
 
 ### Publicando em outros locais {#publishing-in-other-venues}
 
