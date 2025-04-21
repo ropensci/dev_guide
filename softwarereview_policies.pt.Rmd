@@ -47,7 +47,7 @@ O objetivo da rOpenSci é oferecer suporte a pacotes que possibilitem replicabil
 
 Como este é um documento dinâmico, essas categorias podem mudar com o tempo e nem todos os pacotes previamente integrados podem estar no escopo atual. Por exemplo, os pacotes de visualização de dados não estão mais no escopo. Embora nos esforcemos para ser consistentes, avaliamos os pacotes caso a caso e podemos abrir exceções.
 
-Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo ou passam por revisão por pares. Projetos desenvolvidos pela [equipe da rOpenSci](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o distintivo de revisão por pares -- veja abaixo -- para identificar pacotes revisados por pares no repositório da rOpenSci.
+Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo ou passam por revisão por pares. Projetos desenvolvidos pela [equipe da rOpenSci](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o selo (*badge*) de revisão por pares -- veja abaixo -- para identificar pacotes revisados por pares no repositório da rOpenSci.
 
 ![exemplo de um distintivo verde de revisão por pares](images/status.png)
 
