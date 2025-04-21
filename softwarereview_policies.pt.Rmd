@@ -167,7 +167,7 @@ Embora a melhor resposta às preocupações éticas seja específica para cada c
 
 ### Recursos {#resources}
 
-Os recursos a seguir podem ser úteis para pesquisadores, autores de pacotes, editores e revisores na abordagem de questões éticas relacionadas à privacidade e ao software de pesquisa.
+Os recursos a seguir podem ser úteis para pesquisadores(as), autores(as) de pacotes, editores(as) e revisores(as) na abordagem de questões éticas relacionadas à privacidade e ao software de pesquisa.
 
 - Os [Declaração de Helsinque](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) e o [Relatório Belmont](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html)fornecem princípios fundamentais para a prática ética dos pesquisadores
 - Várias organizações fornecem orientações sobre como traduzir esses princípios para o contexto da pesquisa na internet. Entre elas estão a [Diretrizes Éticas da Associação de Pesquisadores da Internet](https://aoir.org/ethics/), a [Guia NESH para a Ética de Pesquisa na Internet](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/) e a [Diretrizes de Ética para pesquisas mediadas pela Internet da BPS](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017). [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) que fornecem uma visão geral útil sobre isso
