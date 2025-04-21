@@ -39,7 +39,7 @@ Os critérios a seguir devem servir de guia para o que constitui um conflito de 
 - Quem potencialmente revisará ou editará contribuiu significativamente para um projeto concorrente.
 - Também existe um conflito de interesses vitalício para familiares, relações comerciais/negócios e pessoas envolvidas em relações de orientação, sejam estudantes ou orientação/mentoria.
 
-No caso em que nenhum dos [editores associados](#associateditors) possa atuar como editor, um editor externo convidado será recrutado.
+No caso em que nenhuma das pessoas da [equipe editorial](#associateditors) possa realizar a edição, uma pessoa externa será convidada para realizá-la.
 
 ## Objetivos e Escopo {#aims-and-scope}
 
