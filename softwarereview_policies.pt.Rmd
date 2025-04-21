@@ -25,7 +25,7 @@ Por último, mas não menos importante, você encontrará o [código de conduta 
 
 ### Publicando em outros locais {#publishing-in-other-venues}
 
-- Sugerimos fortemente que você envie seu pacote para revisão *antes de* publicá-lo no CRAN ou enviar um artigo de software descrevendo o pacote em um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações críticas de funções. Não consideramos a publicação anterior no CRAN ou em outros locais como razão suficiente para não adotar as recomendações de revisores ou editores.
+- Sugerimos fortemente que você envie seu pacote para revisão *antes de* publicá-lo no CRAN ou enviar um artigo de software descrevendo o pacote em um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações críticas de funções. Não consideramos a publicação anterior no CRAN ou em outros locais como razão suficiente para não adotar as recomendações de revisores(as) ou editores(as).
 - Não envie seu pacote para revisão se ele ou um manuscrito associado estiver sendo revisado em outro local, pois isso pode resultar em solicitações de alterações conflitantes.
 
 ### Conflito de interesses para revisores/editores {#coi}
