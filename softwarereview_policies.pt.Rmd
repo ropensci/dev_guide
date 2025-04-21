@@ -49,7 +49,7 @@ Como este é um documento dinâmico, essas categorias podem mudar com o tempo e 
 
 Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo ou passam por revisão por pares. Projetos desenvolvidos pela [equipe da rOpenSci](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o selo (*badge*) de revisão por pares -- veja abaixo -- para identificar pacotes revisados por pares no repositório da rOpenSci.
 
-![exemplo de um distintivo verde de revisão por pares](images/status.png)
+![exemplo de um selo (*badge*) verde de revisão por pares](images/status.png)
 
 ### Categorias de pacotes {#package-categories}
 
