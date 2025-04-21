@@ -59,7 +59,7 @@ Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo 
 
 - **processamento de dados**: Pacotes para processamento de dados dos formatos acima. Essa área não inclui ferramentas de manipulação de dados amplas, como **reshape2** ou **tidyr** ou ferramentas para extração de dados do próprio código R. Em vez disso, ele se concentra em ferramentas para lidar com dados em formatos científicos específicos, gerados a partir de fluxos de trabalho científicos ou exportados de instrumentos científicos. (Exemplos: [**plateR**](https://github.com/ropensci/software-review/issues/60) para leitura de dados estruturados como mapas de placas para instrumentos científicos, ou [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) para processar arquivos de áudio anotados para pesquisa fonética)
 
-- **depósito de dados**: Pacotes que suportam o depósito de dados em repositórios de pesquisa, incluindo a formatação de dados e a geração de metadados. (Exemplo: [**EML**](https://github.com/ropensci/software-review/issues/80))
+- **depósito de dados**: Pacotes que possibilitam o depósito de dados em repositórios de pesquisa, incluindo a formatação de dados e a geração de metadados. (Exemplo: [**EML**](https://github.com/ropensci/software-review/issues/80))
 
 - **validação e teste de dados**: Ferramentas que permitem a validação e a verificação automatizadas da qualidade e da integridade dos dados como parte dos fluxos de trabalho científicos (Exemplo: [**assertr**](https://github.com/ropensci/software-review/issues/23))
 
