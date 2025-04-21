@@ -28,7 +28,7 @@ Por último, mas não menos importante, você encontrará o [código de conduta 
 - Sugerimos fortemente que você envie seu pacote para revisão *antes de* publicá-lo no CRAN ou enviar um artigo de software descrevendo o pacote em um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações críticas de funções. Não consideramos a publicação anterior no CRAN ou em outros locais como razão suficiente para não adotar as recomendações de revisores(as) ou editores(as).
 - Não envie seu pacote para revisão se ele ou um manuscrito associado estiver sendo revisado em outro local, pois isso pode resultar em solicitações de alterações conflitantes.
 
-### Conflito de interesses para revisores/editores {#coi}
+### Conflito de interesses para a equipe de revisão e edição {#coi}
 
 Os critérios a seguir devem servir de guia para o que constitui um conflito de interesses envolvendo um editor ou revisor. O possível editor ou revisor tem um conflito de interesses se:
 
