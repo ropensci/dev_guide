@@ -36,7 +36,7 @@ Os critérios a seguir devem servir de guia para o que constitui um conflito de 
 - Quem potencialmente revisará ou editará colaborou ou teve outros laços profissionais com pelo menos uma pessoa que tenha um papel importante no pacote nos últimos 3 anos.
 - Quem potencialmente revisará ou editará atua ou atuou membro(a) do conselho consultivo do projeto em análise.
 - Quem potencialmente revisará ou editará receberia um benefício financeiro direto ou indireto se o pacote fosse aceito.
-- O possível revisor/editor contribuiu significativamente para um projeto concorrente.
+- Quem potencialmente revisará ou editará contribuiu significativamente para um projeto concorrente.
 - Há também conflito de interesses vitalício para os membros da família, parceiros de negócios, aluno/orientador ou mentor de tese.
 
 No caso em que nenhum dos [editores associados](#associateditors) possa atuar como editor, um editor externo convidado será recrutado.
