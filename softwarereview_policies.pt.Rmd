@@ -182,6 +182,6 @@ Os recursos a seguir podem ser úteis para pesquisadores(as), autores(as) de pac
 
 ## Código de Conduta {#code-of-conduct}
 
-A comunidade da rOpenSci é o nosso melhor patrimônio. Seja você um colaborador assíduo ou um recém-chegado, nós nos preocupamos em fazer deste um lugar seguro para você, por isso o apoiamos. Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação online ou pessoalmente. O [Código de Conduta](https://ropensci.org/code-of-conduct/) é mantido no site da rOpenSci.
+A comunidade da rOpenSci é o nosso melhor patrimônio. Seja você uma pessoa colaboradora assídua ou recém-chegada, nós nos preocupamos em fazer deste um lugar seguro para você, por isso te apoiamos. Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação online ou pessoalmente. O [Código de Conduta](https://ropensci.org/pt/c%C3%B3digo-de-conduta/) é mantido no site da rOpenSci.
 
 
