@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 Este capítulo contém as políticas de revisão de software por pares da rOpenSci.
 
-Em particular, você deverá ler nossas políticas relativas à revisão de software por pares por conta própria: o [processo de submissão de revisões](#review-submission), incluindo nossas [políticas de conflito de interesses](#coi) e os [objetivos e escopo do sistema de Revisão de Software por Pares](#aims-and-scope). Esse capítulo também apresenta nossas políticas relacionadas à [propriedade e manutenção de pacotes] (#propriedade-depois-da-revisão-de-software).
+Em particular, você deverá ler nossas políticas relativas à revisão de software por pares por conta própria: o [processo de submissão de revisões](#review-submission), incluindo nossas [políticas de conflito de interesses](#coi) e os [objetivos e escopo do sistema de Revisão de Software por Pares](#aims-and-scope). Esse capítulo também apresenta nossas políticas relacionadas à [propriedade e manutenção de pacotes](#ownership-after-softwarereview).
 
 Por último, mas não menos importante, você encontrará o [código de conduta da Revisão de Software por Pares da rOpenSci](#code-of-conduct).
 ```
