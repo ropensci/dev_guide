@@ -204,15 +204,15 @@ Quando uma função se torna "defunct", seus testes são simplesmente removidos.
 ## Renomeando pacotes {#renaming-packages}
 
 Não há problema em renomear um pacote que está em desenvolvimento inicial.
-Pode ser a oportunidade, antes da revisão, de estar em conformidade com o nosso [conselho de nomenclatura] (#naming-your-package).
+Pode ser a oportunidade, antes da revisão, de estar em conformidade com os nossos [conselhos de nomenclatura](#naming-your-package).
 
 Renomear um pacote que já foi amplamente adotado e/ou lançado no CRAN é problemático.
-O CRAN tem uma [política] (https://cran.r-project.org/web/packages/policies.html) que afirma que os nomes de pacotes no CRAN são persistentes e, em geral, não é permitido alterar o nome de um pacote.
-O pacote com seu nome antigo pode ser uma dependência de pacotes, scripts e recursos em documentação, publicações científicas, postagens em blogs etc.
+O CRAN tem uma [política](https://cran.r-project.org/web/packages/policies.html) que afirma que os nomes de pacotes no CRAN são persistentes e, em geral, não é permitido alterar o nome de um pacote.
+O pacote com seu nome antigo pode ser uma dependência de outros pacotes, scripts e recursos em documentações, publicações científicas, postagens em blogs, entre outros.
 
-Ao mudar radicalmente a interface, é melhor começar um novo pacote do zero, como o [httr2, que é a segunda geração do httr] (https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/); ou criar edições de um pacote, como o [testthat] (https://testthat.r-lib.org/articles/third-edition.html). Se você também mantiver o pacote antigo, poderá fazer uma depreciação suave com uma mensagem de inicialização, como em httr.
-Isso permite que os usuários e autores de pacotes escolham quando/se devem atualizar sua base de código para o novo pacote ou edição.
-Se você copiar o código de outro pacote, certifique-se de reconhecer os autores do código que você reutiliza, listando-os em DESCRIPTION com um comentário que declare que eles foram autores do pacote original.
+Ao mudar radicalmente a interface, é melhor começar um novo pacote do zero, como o [httr2, que é a segunda geração do httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/); ou criar edições de um pacote, como o [testthat](https://testthat.r-lib.org/articles/third-edition.html). Se você também mantiver o pacote antigo, poderá fazer uma depreciação suave com uma mensagem de inicialização, como no pacote httr.
+Isso permite que as pessoas usuárias e autores(as) de pacotes escolham quando/se devem atualizar sua base de código para o novo pacote ou edição.
+Se você copiar o código de outro pacote, certifique-se de reconhecer os(as) autores(as) do código que você reutiliza, listando seus nomes no arquivo DESCRIPTION com um comentário que declare que essas pessoas foram autoras do pacote original.
 
 
 ## Arquivamento de pacotes {#archivalguidance}
