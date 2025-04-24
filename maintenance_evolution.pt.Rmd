@@ -104,6 +104,11 @@ Depois que os usuários tiverem usado a versão do pacote por algum tempo (com a
 bar <- function(x) x + 1
 ```
 
+## Dados: descontinuar
+
+Se você precisar descontinuar (*deprecate*) um conjunto de dados fornecido pelo seu pacote, 
+leia a [solução proposta por Matthijs Berends no Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), com link para [um método de três etapas na orientação do Bioconductor] (https://contributions.bioconductor.org/deprecation.html#deprecate-dataset).
+O ponto principal é o uso de [`delayedAssign()`](https://stat.ethz.ch/R-manual/R-patched/library/base/html/delayedAssign.html) para criar uma *promise* que servirá tanto para emitir um aviso (*warning*) quanto para fornecer os dados.
 ## Funções: descontinuadas e removidas {#functions-deprecate-defunct}
 
 Para remover uma função de um pacote (digamos que o nome do seu pacote seja `helloworld`), você pode usar o seguinte protocolo:

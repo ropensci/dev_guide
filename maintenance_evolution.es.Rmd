@@ -221,6 +221,11 @@ Si también mantienes el paquete antiguo, puedes hacer una depreciación suave i
 Esto permite que las personas que usan el paquete y las/los autores de otros paquetes puedan elegir si actualizan su código al nuevo paquete o edición y cuándo hacerlo.
 Si copias código de otro paquete, asegúrate de reconocer a quienes desarrollaron el código que reutilizas listándolos en DESCRIPTION con un comentario que indique que son autoras/es del paquete original.
 
+## Datos: obsoletos
+
+Si necesita eliminar un conjunto de datos proporcionado por tu paquete, 
+lee la [solución propuesta por Matthijs Berends en Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), que enlaza con [un método de 3 pasos en la guía de Bioconductor](https://contributions.bioconductor.org/deprecation.html#deprecate-dataset).
+La clave es el uso de [`delayedAssign()`](https://stat.ethz.ch/R-manual/R-patched/library/base/html/delayedAssign.html) para guardar una promesa que servirá tanto de aviso, como para poder disponible los datos.
 
 ## Archivando paquetes  {#archivalguidance}
 
