@@ -1,0 +1,189 @@
+---
+aliases:
+  - policies.html
+---
+
+# Políticas de revisão de software por pares {#policies}
+
+```{block, type="summaryblock"}
+Este capítulo contém as políticas de revisão de software por pares da rOpenSci.
+
+Em particular, você deverá ler nossas políticas relativas à revisão de software por pares por conta própria: o [processo de submissão de revisões](#review-submission), incluindo nossas [políticas de conflito de interesses](#coi) e os [objetivos e escopo do sistema de Revisão de Software por Pares](#aims-and-scope). Esse capítulo também apresenta nossas políticas relacionadas à [propriedade e manutenção de pacotes](#ownership-after-softwarereview).
+
+Por último, mas não menos importante, você encontrará o [código de conduta da Revisão de Software por Pares da rOpenSci](#code-of-conduct).
+```
+
+## Processo de revisão {#policiesreviewprocess}
+
+- Para que um pacote seja considerado para a coleção da rOpenSci, os(as) autores(as) do pacote devem iniciar uma solicitação no repositório [ropensci/software-review](https://github.com/ropensci/software-review).
+- Os pacotes são revisados quanto à qualidade, adequação, documentação e clareza, e o processo de revisão é bastante semelhante ao de um manuscrito (consulte nosso [guia de desenvolvimento de pacotes](#building) e [guia de revisão](#reviewerguide) para obter mais detalhes). Diferentemente de uma revisão de manuscrito, esse processo se configura como uma conversa contínua.
+- Quando todos os principais problemas e dúvidas, incluindo aqueles que podem ser abordados com esforço razoável, forem resolvidos, o(a) editor(a) designado para o pacote tomará uma decisão (aceitar, esperar ou rejeitar). Rejeições geralmente são feitas com antecedência (antes do início do processo de revisão; consulte a [seção de objetivos e escopo](#aims-and-scope)). Em casos raros, um pacote também pode não ser aceito após a análise e a revisão. Em última análise, a decisão de rejeitar ou não o pacote é do(a) editor(a), com base em como as revisões são tratadas.
+- A comunicação entre as pessoas envolvidas na autoria, revisão e edição ocorrerá principalmente pelo GitHub, embora você possa optar por entrar em contato com a pessoa responsável pela edição por e-mail ou Slack para alguns problemas. Ao submeter um pacote, certifique-se de que suas configurações de notificação do GitHub estejam ajustadas para que seja improvável você perder algum comentário.
+- O(a) autor(a) pode optar por ter seu envio colocado em espera (o(a) editor(a) aplica a etiqueta (*label*) de espera). O status de espera será revisado a cada 3 meses e, após 1 ano, a *issue* será encerrada.
+- Se o(a) autor(a) não tiver solicitado uma etiqueta de espera, mas simplesmente não estiver respondendo, devemos fechar a edição dentro de 1 mês após a última ocasião de contato. Esta ocasião incluirá um comentário marcando o(a) autor(a), mas também um e-mail usando o endereço de e-mail listado no *DESCRIPTION* do pacote, que é um dos raros casos no qual o(a) editor(a) tentará entrar em contato com o(a) autor(a) por e-mail.
+- Se uma submissão for encerrada e o(a) autor(a) desejar reenviá-la, ele(a) terá que iniciar uma nova submissão. Se o pacote ainda estiver no escopo, o(a) autor(a) terá que responder às revisões iniciais antes que o(a) editor(a) comece a procurar novos(as) revisores(as).
+
+### Publicando em outros locais {#publishing-in-other-venues}
+
+- Sugerimos fortemente que você envie seu pacote para revisão *antes de* publicá-lo no CRAN ou enviar um artigo de software descrevendo o pacote em um periódico. O feedback da revisão pode resultar em grandes aprimoramentos e atualizações do seu pacote, incluindo renomeações e alterações críticas de funções. Não consideramos a publicação anterior no CRAN ou em outros locais como razão suficiente para não adotar as recomendações de revisores(as) ou editores(as).
+- Não envie seu pacote para revisão se ele ou um manuscrito associado estiver sendo revisado em outro local, pois isso pode resultar em solicitações de alterações conflitantes.
+
+### Conflito de interesses para a equipe de revisão e edição {#coi}
+
+Os critérios a seguir devem servir de guia para o que constitui um conflito de interesses envolvendo quem faz a edição ou revisão. Existe um conflito de interesses se:
+
+- Quem potencialmente revisará ou editará for da mesma instituição ou componente institucional (por exemplo, departamento) que qualquer autor(a) que tenha um papel importante no pacote.
+- Quem potencialmente revisará ou editará colaborou ou teve outros laços profissionais com pelo menos uma pessoa que tenha um papel importante no pacote nos últimos 3 anos.
+- Quem potencialmente revisará ou editará atua ou atuou membro(a) do conselho consultivo do projeto em análise.
+- Quem potencialmente revisará ou editará receberia um benefício financeiro direto ou indireto se o pacote fosse aceito.
+- Quem potencialmente revisará ou editará contribuiu significativamente para um projeto concorrente.
+- Também existe um conflito de interesses vitalício para familiares, relações comerciais/negócios e pessoas envolvidas em relações de orientação, sejam estudantes ou orientação/mentoria.
+
+No caso em que nenhuma das pessoas da [equipe editorial](#associateditors) possa realizar a edição, uma pessoa externa será convidada para realizá-la.
+
+## Objetivos e Escopo {#aims-and-scope}
+
+O objetivo da rOpenSci é oferecer suporte a pacotes que possibilitem replicabilidade na pesquisa, assim como gerenciamento do ciclo de vida de dados para cientistas. Os pacotes enviados à rOpenSci devem se enquadrar em uma ou mais das categorias descritas abaixo. Software estatístico também pode ser enviado para revisão por pares, para o qual temos uma seção separada de [diretrizes e padrões](https://stats-devguide.ropensci.org/index.html). As categorias abaixo são para software em geral, e não estatístico, enquanto o restante deste capítulo se aplica a ambos os tipos de software. Se você não tiver certeza se o seu pacote se encaixa em uma das categorias citadas, abra uma _issue_ como uma consulta de pré-submissão ([**Exemplos**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
+
+Como este é um documento dinâmico, essas categorias podem mudar com o tempo e nem todos os pacotes previamente integrados podem estar no escopo atual. Por exemplo, os pacotes de visualização de dados não estão mais no escopo. Embora nos esforcemos para ser consistentes, avaliamos os pacotes caso a caso e podemos abrir exceções.
+
+Observe que nem todos os projetos e pacotes da rOpenSci estão dentro do escopo ou passam por revisão por pares. Projetos desenvolvidos pela [equipe da rOpenSci](https://ropensci.org/about/#team) ou em conferências podem ser experimentais, exploratórios, tratar de prioridades essenciais de infraestrutura e, portanto, não se enquadram nessas categorias. Procure o selo (*badge*) de revisão por pares -- veja abaixo -- para identificar pacotes revisados por pares no repositório da rOpenSci.
+
+![exemplo de um selo (*badge*) verde de revisão por pares](images/status.png)
+
+### Categorias de pacotes {#package-categories}
+
+- **recuperação de dados**: Pacotes para acessar e fazer download de dados de fontes online com aplicações científicas. Nossa definição de aplicações científicas é ampla, incluindo serviços de armazenamento de dados, periódicos e outros servidores remotos, já que muitas fontes de dados podem ser de interesse de pesquisadores(as). Entretanto, os pacotes de recuperação devem se concentrar em *fontes de dados* / *tópicos* em vez de *serviços*. Por exemplo, um cliente comum para armazenamento de dados na *Amazon Web Services* não estaria no escopo. (Exemplos: [**rotl**](https://github.com/ropensci/software-review/issues/17), [**gutenbergr**](https://github.com/ropensci/software-review/issues/41))
+
+- **extração de dados**: Pacotes que auxiliam na obtenção de dados de fontes não estruturadas, como texto, imagens e PDFs, bem como na análise de tipos de dados científicos e _outputs_ (saídas) de equipamentos científicos. Bibliotecas estatísticas ou de aprendizado automático para modelagem ou previsão normalmente não são incluídas nesta categoria, nem os analisadores de código (*code parsers*). Os modelos treinados que atuam como utilitários (por exemplo, para reconhecimento óptico de caracteres) podem se qualificar. (Exemplos: [**tabulizer**](https://github.com/ropensci/software-review/issues/42) para extrair tabelas de documentos PDF, [**genbankr**](https://github.com/ropensci/software-review/issues/47) para analisar arquivos do GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) para leitura de arquivos de árvores filogenéticas, [**lightr**](https://github.com/ropensci/software-review/issues/267) para analisar arquivos de instrumentos espectroscópicos)
+
+- **processamento de dados**: Pacotes para processamento de dados dos formatos acima. Essa área não inclui ferramentas de manipulação de dados amplas, como **reshape2** ou **tidyr**, ou ferramentas para extração de dados do próprio código R. Em vez disso, ele se concentra em ferramentas para lidar com dados em formatos científicos específicos, gerados a partir de fluxos de trabalho científicos ou exportados de instrumentos científicos. (Exemplos: [**plateR**](https://github.com/ropensci/software-review/issues/60) para leitura de dados estruturados como mapas de placas para instrumentos científicos, ou [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) para processar arquivos de áudio anotados para pesquisa fonética)
+
+- **depósito de dados**: Pacotes que possibilitam o depósito de dados em repositórios de pesquisa, incluindo a formatação de dados e a geração de metadados. (Exemplo: [**EML**](https://github.com/ropensci/software-review/issues/80))
+
+- **validação e teste de dados**: Ferramentas que permitem a validação e a verificação automatizadas da qualidade e da integridade dos dados como parte dos fluxos de trabalho científicos (Exemplo: [**assertr**](https://github.com/ropensci/software-review/issues/23))
+
+- **automação de fluxo de trabalho**: Ferramentas que automatizam e vinculam fluxos de trabalho, como sistemas de compilação e ferramentas para gerenciar a integração contínua. Não inclui ferramentas gerais para programação letrada (*literate programming*) (por exemplo, extensões de R Markdown não incluídas nos tópicos anteriores) (Exemplo: [**drake**](https://github.com/ropensci/software-review/issues/156))
+
+- **controle de versão**: Ferramentas que facilitam o uso de controle de versões em fluxos de trabalho científicos. Observe que isso não inclui todas as ferramentas que interagem com serviços de controle de versão online (por exemplo, GitHub), a menos que elas se enquadrem em outra categoria (Exemplo: [**git2rdata**](https://github.com/ropensci/software-review/issues/263))
+
+- **gerenciamento de citações e bibliometria**: Ferramentas que facilitam o gerenciamento de referências, como para escrever manuscritos, criar currículos ou atribuir contribuições científicas, ou acessar, manipular ou trabalhar com dados bibliométricos (Exemplo: [**RefManageR**](https://github.com/ropensci/software-review/issues/119))
+
+- **_wrappers_ de software científico**: Pacotes que envelopam (_wrap_) programas utilitários fora do ambiente R, usados para pesquisa científica. Esses programas devem ser específicos para campos de pesquisa, e não utilitários gerais de computação. Os _wrappers_ devem ser não triviais, ou seja, devem ter um valor agregado significativo em relação ao simples uso de chamadas ou vinculações do `system()`, seja na análise de argumentos (_inputs_) e resultados (_outputs_), no manuseio de dados, etc. Um processo de instalação aprimorado ou a extensão da compatibilidade para mais plataformas pode constituir um valor agregado se a instalação for complexa. Isso não inclui _wrappers_ de outros pacotes do R ou bibliotecas de C/C++ que podem ser incluídas nos pacotes do R. Isso também não inclui pacotes que são clientes para APIs na internet, que devem se enquadrar em uma das outras categorias. Recomendamos enfaticamente que você inclua utilitários de código aberto e de licença aberta. Exceções serão avaliadas caso a caso, considerando se opções de código aberto existem (Exemplos: [**babette**](https://github.com/ropensci/software-review/issues/208), [**nlrx**](https://github.com/ropensci/software-review/issues/262))
+
+- **ferramentas de reprodutibilidade de campo e laboratório**: Pacotes que melhoram a reprodutibilidade de fluxos de trabalho do mundo real por meio da padronização e automação de protocolos de campo e laboratório, como rastreamento e marcação de amostras, geração de formulários e planilhas de dados, interface com equipamentos de laboratório ou sistemas de informação e execução de desenhos experimentais (Exemplo: [**baRcodeR**](https://github.com/ropensci/software-review/issues/336))
+
+- **vinculações de software de banco de dados**: Vinculações (*bindings*) e _wrappers_ para APIs de bancos de dados genéricos (Exemplo: [**rrlite**](https://github.com/ropensci/software-review/issues/6))
+
+Além disso, temos alguns *tópicos especializados* com um escopo um pouco mais amplo.
+
+- **dados geoespaciais**: Aceitamos pacotes focados no acesso, na manipulação e na conversão entre formatos de dados geoespaciais (Exemplos: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174))
+
+- **tradução**: Como parte de nosso trabalho em [publicações multilíngue](https://ropensci.org/multilingual-publishing/), temos um interesse especial em pacotes que facilitem a tradução e a publicação de recursos científicos e de programação em vários idiomas (humanos) para que sejam acessíveis ao público em maior alcance e diversidade. Isso pode incluir interfaces para programas de tradução automática, estruturas para gerenciar documentação em vários idiomas ou programas que acessem recursos linguísticos especializados. Este é um escopo novo e experimental, portanto, crie uma [consulta de pré-submissão](https://github.com/ropensci/software-review/issues/new/choose) se você tiver interesse em enviar um pacote nesta categoria.
+
+### Outras considerações sobre o escopo {#other-scope-considerations}
+
+Os pacotes devem ser **gerais** no sentido de que devem resolver um problema da forma mais ampla possível, enquanto mantém uma interface de usuário e uma base de código coerentes. Por exemplo, se várias fontes de dados usam uma API idêntica, preferimos um pacote que forneça acesso a todas estas fontes de dados, em vez de acesso a apenas uma.
+
+Os pacotes que incluem ferramentas interativas para facilitar os fluxos de trabalho de pesquisadores(as) (por exemplo, aplicativos em _shiny_) devem ter um mecanismo para tornar o fluxo de trabalho interativo reprodutível, como a geração de código ou uma API com script.
+
+Para pacotes que não estão no escopo da rOpenSci, recomendamos que você os envie para o CRAN, Bioconductor, bem como para outras iniciativas de desenvolvimento de pacotes do R (por exemplo, [cloudyr](https://cloudyr.github.io/)) e periódicos de software, como JOSS, JSS ou o R journal, dependendo do escopo atual desses periódicos.
+
+Observe que os pacotes desenvolvidos internamente pela rOpenSci, por meio de nossos eventos ou colaborações, não estão necessariamente no escopo do nosso processo de revisão de software por pares.
+
+### Sobreposição de pacotes {#overlap}
+
+A rOpenSci incentiva a competição entre pacotes, como _forking_ e reimplementação, pois isto melhora as opções dos usuários em geral. No entanto, como queremos que os pacotes da coleção rOpenSci tenham nossas principais recomendações para as tarefas que realizam, nosso objetivo é evitar a duplicação da funcionalidade de pacotes R existentes em qualquer repositório, se estes não apresentam melhorias significativas. Um pacote R que replica a funcionalidade de um pacote R já existente pode ser considerado a inclusão no conjunto rOpenSci, se ele melhorar significativamente as alternativas em qualquer repositório (RO, CRAN, BioC) por ser:
+
+- Mais aberto nas práticas de licenciamento ou desenvolvimento
+- Mais amplo em termos de funcionalidade (por exemplo, fornecendo acesso a mais conjuntos de dados ou um conjunto maior de funções), mas não apenas duplicando pacotes adicionais
+- Melhor em termos de usabilidade e desempenho
+- Mantido mais ativamente, enquanto as alternativas são pouco ou não são mais mantidas
+
+Esses fatores devem ser considerados **como um todo** para determinar se o pacote representa uma melhoria significativa. Um novo pacote não atenderia a esse padrão apenas por seguir nossas diretrizes, enquanto outros não o fazem, a menos que isso leve a uma diferença significativa como mencionado acima.
+
+Recomendamos que os pacotes destaquem as diferenças e os aprimoramentos quanto aos pacotes aos quais se sobrepõem em seu README e/ou *vignettes*.
+
+Incentivamos as pessoas desenvolvedoras cujos pacotes não forem aceitos devido à sobreposição com outros pacotes a considerarem submissões para outros repositórios ou periódicos.
+
+## Propriedade e manutenção de pacotes {#ownership-after-softwarereview}
+
+### Função da equipe da rOpenSci {#role-of-the-ropensci-team}
+
+Os(as) autores(as) de pacotes contribuídos a rOpenSci mantêm essencialmente a mesma propriedade que tinham antes de seu pacote entrar no conjunto rOpenSci. Os(as) autores(as) de pacotes continuarão a manter e desenvolver seu _software_ após a aceitação na rOpenSci. A menos que sejam explicitamente adicionados como colaboradores, a equipe da rOpenSci não interferirá muito nas operações corriqueiras. No entanto, essa equipe poderá intervir com correções de _bugs_ críticos ou resolver problemas urgentes se os(as) autores(as) dos pacotes não responderem em tempo hábil (consulte abaixo a [seção sobre responsividade de mantenedores](#maintainer-responsiveness)).
+
+### Responsividade de mantenedores {#maintainer-responsiveness}
+
+Se as pessoas que mantém o pacote não responderem em tempo hábil às solicitações de correções de pacotes feitas pelo CRAN ou por nós, lembraremos algumas vezes, mas depois de 3 meses (ou em um período mais curto, dependendo da importância da correção) a equipe da rOpenSci fará as alterações.
+
+O que foi dito acima é um pouco vago, portanto, a seguir estão alguns aspectos a serem considerados.
+
+- Exemplos em que gostaríamos de agir rapidamente:
+  - Pacote `foo` é importado por um ou mais pacotes no CRAN. `foo` está quebrado e, portanto, quebraria suas dependências reversas
+  - Pacote `bar` pode não ter dependências reversas no CRAN, mas é amplamente usado e, portanto, a correção rápida de problemas que ele apresenta é de grande importância
+- Exemplos em que podemos esperar um pouco mais:
+  - Pacote `hello` está ou não está no CRAN, porém não tem dependências reversas
+  - Pacote `world` precisa de algumas correções. A pessoa que mantém o pacote respondeu, mas simplesmente está muito ocupada, porém atenderá a solicitação em breve
+
+Pedimos aos(as) mantenedores(as) de pacotes que se certifiquem de que estão recebendo notificações do GitHub, bem como que os e-mails da equipe da rOpenSci e dos mantenedores do CRAN não estejam indo para a caixa de _spam_. Os(as) autores(as) de pacotes integrados à rOpenSci serão convidados ao Slack da rOpenSci para poder conversar com a equipe da rOpenSci e com a comunidade em geral. Qualquer pessoa também pode discutir com a comunidade rOpenSci no site [Fórum de discussão da rOpenSci](https://discuss.ropensci.org/).
+
+Se os(as) autores(as) abandonarem a manutenção de um pacote usado ativamente na rOpenSci, consideraremos a possibilidade de solicitar ao CRAN a transferência do status de mantenedor do pacote para a rOpenSci.
+
+### Compromisso com a qualidade {#quality-commitment}
+
+A rOpenSci se esforça para desenvolver e promover software de pesquisa de alta qualidade. Para garantir que o seu software atende aos nossos critérios, analisamos todas as nossas submissões dentro do processo de Revisão de Software por Pares. Mesmo após a aceitação do pacote, continuaremos a contribuir com melhorias e correções de _bugs_.
+
+Apesar de nossos melhores esforços em oferecer suporte ao software contribuído, erros são de responsabilidade dos(as) mantenedores(as) individuais. Os softwares com muitos _bugs_ e sem manutenção adequada podem ser removidos da nossa coleção a qualquer momento.
+
+### Remoção de pacotes {#package-removal}
+
+No caso improvável de um(a) colaborador(a) de um pacote solicitar a remoção de seu pacote da coleção da rOpenSci, temos o direito de manter uma versão do pacote em nossa coleção para fins de arquivamento.
+
+## Ética, Privacidade de Dados e Pesquisa com Seres Humanos {#ethics-data-privacy-and-human-subjects-research}
+
+Os pacotes da rOpenSci e outras ferramentas são usados para uma variedade de finalidades, mas nosso foco são ferramentas para pesquisa. Esperamos que as ferramentas possibilitem o uso ético por profissionais da pesquisa, que são obrigados a aderir a códigos de ética, como a [Declaração de Helsinque](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) e o [Relatório Belmont](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html). Os(as) pesquisadores(as) são responsáveis pelo uso de software, mas desenvolvedores(as) de software devem considerar o uso ético de seus produtos. Desenvolvedores(as) de software também aderem a códigos de ética direcionados a profissionais de computação, como aqueles mencionados pela [IEEE](https://www.computer.org/education/code-of-ethics) e [ACM](https://ethics.acm.org/). Os(as) contribuidores(as) da rOpenSci frequentemente desempenham tanto o papel de pesquisador(a) como desenvolvedor(a).
+
+Pedimos que os(as) desenvolvedores(as) de software se coloquem no papel de pesquisadores(as) e considerem os requisitos de um fluxo de trabalho ético usando o software dos(as) autores(as). Dada a variação e o grau de fluxo das abordagens éticas para análises baseadas na Internet, são necessários julgamentos em vez de receitas. As [Diretrizes Éticas da Associação de Pesquisadores da Internet](https://aoir.org/ethics/) fornece uma estrutura robusta, a qual incentivamos autores(as), editores(as) e revisores(as) usar para que avaliem seus trabalhos. Em geral, a adesão a normas legais ou requerimentos mínimos regulamentares (por exemplo, GDPR) pode não ser suficiente, embora relevantes. Os(as) autores(as) de pacotes devem direcionar os usuários a recursos relevantes para o uso ético do software.
+
+Nota de tradução: GDPR é a sigla para *General Data Protection Regulation*, a lei de proteção de dados pessoas vigente na Europa. É similar à LGPD - Lei Geral de Proteção de Dados Pessoais, existente no Brasil.
+
+Alguns pacotes, devido à natureza dos dados que manipulam, podem ser considerados pelos(as) editores(as) como necessitando um exame mais minucioso. Para esses pacotes, os(as) editores(as) podem exigir funcionalidades adicionais (ou reduzidas), uma documentação robusta, padrões e avisos para direcionar os usuários a práticas éticas relevantes. Os tópicos a seguir podem merecer um exame minucioso:
+
+- ***Populações vulneráveis***. Autores(as) de pacotes e fluxos de trabalho que lidam com informações relacionadas a populações vulneráveis têm a responsabilidade de proteger essas populações de possíveis danos.
+
+- ***Dados sensíveis ou de identificação pessoal***: A liberação de dados sensíveis ou de identificação pessoal é potencialmente prejudicial. Isso inclui dados "razoavelmente reidentificáveis", onde um indivíduo poderia rastrear determinada pessoa proprietária ou criadora, mesmo que os dados sejam anônimos. Isso inclui ambos casos em que identificadores (por exemplo, nome, data de nascimento) estão disponíveis como parte dos dados ou se pseudônimos/_nicknames_ exclusivos estiverem vinculados a postagens de texto completo, por meio das quais alguém pode vincular indivíduos por meio de referências cruzadas com outros conjuntos de dados.
+
+Embora a melhor resposta às preocupações éticas seja específica para cada contexto, essas diretrizes gerais devem ser seguidas pelos pacotes quando os desafios acima surgirem:
+
+- Os pacotes devem aderir aos termos de uso da fonte de dados, conforme expresso em Termos e condições do site, arquivos ["robots.txt"](https://docs.ropensci.org/robotstxt/), políticas de privacidade e e outras restrições relevantes, e coloque um link para eles de forma destacada na documentação do pacote. Os pacotes devem fornecer ou documentar a funcionalidade para aderir a a essas restrições (por exemplo, raspar somente de *endpoints* permitidos, usar o limite de taxa (*rate limiting*) apropriado nos códigos, exemplos ou vinhetas). Observe que, embora os Termos e Condições, Políticas de Privacidade, etc., não forneçam limites suficientes para a uso ético, eles podem fornecer um limite externo.
+
+- Uma ferramenta fundamental para lidar com os riscos apresentados ao estudar populações vulneráveis ou no uso de dados pessoalmente identificáveis é o ***consentimento informado***. Autores(as) do pacote devem apoiar a obtenção do consentimento informado dos usuários, quando relevante. Isso pode incluir o fornecimento de links para o método preferido da fonte de dados para a obtenção do consentimento, informações de contato dos provedores de dados (por exemplo, moderadores do fórum), documentação de protocolos de consentimento informado ou a obtenção de pré-aprovação para usos gerais de um pacote.
+  
+  Observe que o consentimento não é concedido implicitamente apenas pelo fato de os dados estarem acessíveis. Dados acessíveis não são necessariamente públicos, já que diferentes pessoas e contextos têm diferentes expectativas normativas de privacidade (consulte o trabalho do [Social Data Lab](http://socialdatalab.net/ethics-resources)).
+
+- Os pacotes que acessam informações pessoais identificáveis devem ter um cuidado especial para seguir as práticas recomendadas de segurança (por exemplo, uso exclusivo de protocolos de internet seguros, mecanismos fortes para armazenamento de credenciais, etc.)
+
+- Pacotes que acessam ou manipulam dados pessoais identificáveis ou dados sensíveis devem permitir, documentar e demonstrar fluxos de trabalho para desidentificação, armazenamento seguro e outras práticas recomendadas para minimizar o risco de danos.
+
+À medida que os padrões de privacidade de dados e pesquisa continuam a evoluir, damos boas-vindas as contribuições dos(as) autores(as) sobre considerações específicas de seu software e documentações suplementares, como aprovação de comitês de ética universitária. Essas podem ser anexadas à _issue_ de submissão de pacote ou consulta de pré-submissão, ou transmitidas diretamente aos(as) editores(as), se necessário. Sugestões genéricas podem ser registradas como [_issues_ no repositório deste livro](https://github.com/ropensci/dev_guide/issues).
+
+### Recursos {#resources}
+
+Os recursos a seguir podem ser úteis para pesquisadores(as), autores(as) de pacotes, editores(as) e revisores(as) na abordagem de questões éticas relacionadas à privacidade e ao software de pesquisa.
+
+- Os [Declaração de Helsinque](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) e o [Relatório Belmont](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html) fornecem princípios fundamentais para a prática ética de pesquisadores(as).
+- Várias organizações fornecem orientações sobre como traduzir esses princípios para o contexto da pesquisa na internet. Entre elas estão a [Diretrizes Éticas da Associação de Pesquisadores da Internet](https://aoir.org/ethics/), o [Guia NESH para a Ética de Pesquisa na Internet](https://www.forskningsetikk.no/en/guidelines/social-sciences-humanities-law-and-theology/a-guide-to-internet-research-ethics/) e as [Diretrizes de Ética para pesquisas mediadas pela Internet da BPS](https://www.bps.org.uk/news-and-policy/ethics-guidelines-internet-mediated-research-2017). [Anabo et al (2019)](https://doi.org/10.1007/s10676-018-9495-z) fornece uma visão geral útil sobre isso.
+- O _Social Data Science Lab_ fornece uma [visão geral](http://socialdatalab.net/ethics-resources) com dados sobre expectativas normativas de privacidade e uso em fóruns sociais.
+- Bechmann A., Kim J.Y. (2019) Big Data: A Focus on Social Media Research Dilemmas. Em: Iphofen R. (org.) Handbook of Research Ethics and Scientific Integrity. [https://doi.org/10.1007/978-3-319-76040-7\_18-1](https://doi.org/10.1007/978-3-319-76040-7_18-1)
+- Chu, K.-H., Colditz, J., Sidani, J., Zimmer, M., \& Primack, B. (2021). Re-evaluating standards of human subjects protection for sensitive health data in social media networks. Social Networks, 67, 41-46. [https://dx.doi.org/10.1016/j.socnet.2019.10.010](https://dx.doi.org/10.1016/j.socnet.2019.10.010)
+- Lomborg, S., \& Bechmann, A. (2014). Using APIs for Data Collection on Social Media. The Information Society, 30(4), 256--265. [https://dx.doi.org/10.1080/01972243.2014.915276](https://dx.doi.org/10.1080/01972243.2014.915276)
+- Flick, C. (2016). Informed consent and the Facebook emotional manipulation study. Research Ethics, 12(1), 14--28. [https://doi.org/10.1177/1747016115599568](https://doi.org/10.1177/1747016115599568)
+- Sugiura, L., Wiles, R., \& Pope, C. (2017). Ethical challenges in online research: Public/private perceptions. Research Ethics, 13(3--4), 184--199. [https://doi.org/10.1177/1747016116650720](https://doi.org/10.1177/1747016116650720)
+- Taylor, J., \& Pagliari, C. (2018). Mining social media data: How are research sponsors and researchers addressing the ethical challenges? Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
+- Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313--325 [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
+
+## Código de Conduta {#code-of-conduct}
+
+A comunidade da rOpenSci é o nosso melhor patrimônio. Seja você uma pessoa colaboradora assídua ou recém-chegada, nós nos preocupamos em fazer deste um lugar seguro para você, por isso te apoiamos. Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação online ou pessoalmente. O [Código de Conduta](https://ropensci.org/pt/c%C3%B3digo-de-conduta/) é mantido no site da rOpenSci.
+
+
