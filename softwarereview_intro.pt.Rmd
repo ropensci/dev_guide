@@ -57,30 +57,38 @@ O processo de revisão por pares de software da rOpenSci é conduzido por:
 #| child: "associate-editors.md"
 ```
 
-### Revisores {#reviewers}
+### Revisores(as) e editores(as) passados(as)
 
-Somos gratos às seguintes pessoas que ofereceram seu tempo e conhecimento para revisar os pacotes enviados à rOpenSci.
-
-```{r}
-#| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
-```
+Agradecemos as seguintes pessoas que dedicaram seu tempo e conhecimento para revisar pacotes submetidos à rOpenSci.
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
-Também somos gratos às seguintes pessoas que atuaram como editores convidados.
+Também agradecemos aos seguintes editores(as) que atuaram anteriormente.
 
-```{r}
-#| echo: false
-#| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+```{r editors_past, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```
 
+E aos(as) seguintes que atuaram como editores(as) convidados(as).
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 
