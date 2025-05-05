@@ -18,7 +18,7 @@ Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em 
 
 ### Código de conduta {#coc-file}
 
-Depois que o seu pacote for listado no [rOpenSci registry] (https://ropensci.org/packages/all), o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto.
+Depois que o seu pacote for listado na [rOpenSci registry](https://ropensci.org/packages/all) (a lista oficial de pacotes da rOpenSci), o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto.
 Você deve adicionar este texto ao README:
 
 ```markdown
@@ -30,9 +30,9 @@ contributing to this project, you agree to abide by its terms.
 
 E 
 
-- Se o seu pacote foi transferido para a organização rOpenSci GitHub, exclua o código de conduta atual do repositório, se houver um, pois o código de conduta padrão da organização GitHub será exibido.
+- Se o seu pacote foi transferido para a organização da rOpenSci no GitHub, exclua o código de conduta atual do repositório, se houver um, pois o código de conduta padrão da organização GitHub será exibido.
 
-- Se o seu pacote não foi transferido para a organização rOpenSci GitHub, substitua o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci GitHub] (https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
+- Se o seu pacote não for transferido para a organização da rOpenSci no GitHub, substitua o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci no GitHub] (https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Guia de contribuição {#contributing-guide}
 

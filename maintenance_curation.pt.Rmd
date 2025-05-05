@@ -89,8 +89,8 @@ Os pacotes revisados por pares são aqueles contribuídos para a rOpenSci
 pela comunidade e que passaram pela revisão por pares. Eles precisam estar
 [dentro do escopo](#aims-and-scope) no momento em que eles são enviados para serem revisados.
 
-- Após a aceitação, esses pacotes revisados por pares são transferidos
-  do GitHub do(a) autor(a) para dentro da organização "ropensci" no GitHub ou, alternativamente, rastreados adicionando-os a um [arquivo JSON] (https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
+- Após o aceite, esses pacotes revisados por pares são transferidos
+  do GitHub do(a) autor(a) para dentro da organização "ropensci" no GitHub ou, alternativamente, passam a ser monitorados pela adição deles a um [arquivo JSON](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
 
 - Os pacotes revisados por pares estarão marcados no registro como
   "peer-reviewed", e terão um selo de revisão por pares em seu README.
