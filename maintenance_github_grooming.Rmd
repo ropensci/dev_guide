@@ -42,7 +42,7 @@ More info about GitHub linguist overrides [here](https://github.com/github/lingu
 
 - As the author of an onboarded package, you are now a member of rOpenSci's "ropensci" GitHub organization. By default, organization memberships are private; see [how to make it public in GitHub docs](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
 
-- Even after your package repo has been transferred to rOpenSci, you can [pin it under your own account](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+- Even if your package repo has been transferred to rOpenSci, you can [pin it under your own account](https://help.github.com/articles/pinning-repositories-to-your-profile/).
 
 - In general we recommend adding at least an avatar (which doesn't need to be your face!) and your name [to your GitHub profile](https://help.github.com/articles/customizing-your-profile/).
 

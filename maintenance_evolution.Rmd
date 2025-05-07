@@ -104,6 +104,12 @@ After users have used the package version for a while (with both `foo` and `bar`
 bar <- function(x) x + 1
 ```
 
+## Data: deprecate
+
+If you need to deprecate a dataset provided by your package, 
+read the [solution proposed by Matthijs Berends on Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), linking to [a 3-step method in Bioconductor guidance](https://contributions.bioconductor.org/deprecation.html#deprecate-dataset).
+Key is the usage of [`delayedAssign()`](https://stat.ethz.ch/R-manual/R-patched/library/base/html/delayedAssign.html) to save a promise that will serve both a warning, and the data.
+
 ## Functions: deprecate \& defunct {#functions-deprecate-defunct}
 
 To remove a function from a package (let's say your package name is `helloworld`), you can use the following protocol:
@@ -200,6 +206,19 @@ You don't have to change the tests of deprecated functions until they are made d
 - [`suppressWarnings()` could be used](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) to suppress the warning thrown from `.Deprecated`, but tests are not user facing, so it is not that bad if the warning is thrown in tests, and the warning could even be used as a reminder to the maintainer.
 
 Once a function is made defunct, its tests are simply removed.
+
+## Renaming packages {#renaming-packages}
+
+Renaming a package that is in early development is fine.
+It can be the opportunity, before review, to comply with our [naming advice](#naming-your-package).
+
+Renaming a package that is already widely adopted and/or released on CRAN is problematic.
+CRAN has a [policy](https://cran.r-project.org/web/packages/policies.html) stating that Package names on CRAN are persistent and in general it is not permitted to change a package’s name.
+The package under its old name might be a dependency of packages, scripts, and feature in documentation, scientific publications, and blog posts, etc.
+
+When radically changing the interface, starting a new package from scratch, like [httr2 which is the second generation of httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/) ; or creating editions of a package like for [testthat](https://testthat.r-lib.org/articles/third-edition.html), are better strategies. If you also maintain the old package, you can soft-deprecate it with a startup message, such as in httr.
+This allows users and package authors to choose when/whether to update their codebase to the new package or edition.
+If you copy code from another package, make sure to acknowledge authors of code you re-use by listing them in DESCRIPTION with a comment that states they were authors of the original package.
 
 ## Archiving packages {#archivalguidance}
 

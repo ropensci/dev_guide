@@ -113,7 +113,7 @@ También tienes que dar acceso a Codecov a tu repositorio de GitHub, ver [la gu�
 Luego añade una etiqueta de estado de Codecov en la parte superior de tu README.md, puedes consultar [*Status Badges* (etiquetas de estado)](https://docs.codecov.com/docs/status-badges) en la documentación de Codecov.
 
 Actualmente, Codecov tiene acceso a todos los repositorios de GitHub de la organización ropensci por defecto.
-Cuando tu repositorio sea aceptado y transferido a ropensci, el acceso de Codecov debería transferirse automáticamente.
+Si tu repositorio es transferido a la organización ropensci en GitHub, el acceso de Codecov debería transferirse automáticamente.
 Tendrás que actualizar la URL de la etiqueta para que apunte al repositorio alojado en ropensci.
 
 Para más detalles, consulta el [README del paquete **covr**](https://github.com/r-lib/covr), así como la documentación de [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) y [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
