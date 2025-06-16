@@ -1,4 +1,4 @@
-# Revisão por pares de software, por quê? O que é? {#softwarereviewintro}
+# Revisão de software por pares, por quê? O que é? {#softwarereviewintro}
 
 ```{block, type="summaryblock"}
 Este capítulo contém uma [introdução geral](#whatissoftwarereview) ao nosso sistema de revisão por pares de software para pacotes, [razões para submeter um pacote](#whysubmit), [razões para se voluntariar como revisor(a)](#whyreview), [por que nossas revisões são abertas](#whyopen) e agradecimentos às pessoas [que participam do sistema de revisão](#editors-and-reviewers).
