@@ -16,7 +16,7 @@ Você pode reconhecer os pacotes da rOpenSci que foram revisados por pares por m
 
 Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada processo de revisão de pacote é uma *issue* no [repositório `ropensci/software-review` no GitHub](https://github.com/ropensci/software-review/). Por exemplo, clique [aqui](https://github.com/ropensci/software-review/issues/24) para ler o tópico de revisão do pacote `ropenaq`: o processo é uma conversa contínua até a aceitação do pacote, com duas revisões externas como marcos importantes. Além disso, usamos os recursos do GitHub, como o uso de *issue templates* (como templates de submissão) e uso de *labels* (etiquetas) que usamos para acompanhar o progresso dos envios (desde as verificações do(a) editor(a) até a aprovação).
 
-## Por que enviar seu pacote para a rOpenSci? {#whysubmit}
+## Por que enviar o seu pacote para a rOpenSci? {#whysubmit}
 
 - Em primeiro lugar, e acima de tudo, esperamos que você envie seu pacote para análise **porque você valoriza o feedback**.  Nosso objetivo é fornecer feedbacks úteis para os(as) autores(as) de pacotes e fazer com que nosso processo de revisão seja aberto, não contraditório e focado na melhoria da qualidade do software.
 - Ao fazer parte da coleção de pacotes da rOpenSci, seu pacote continuará a receber **suporte da equipe da rOpenSci**.  Você manterá a propriedade e o controle do seu pacote, mas podemos ajudar com questões de manutenção contínua, como as associadas a atualizações do R, dependências e políticas do CRAN.
