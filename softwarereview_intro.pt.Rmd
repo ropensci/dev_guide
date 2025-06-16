@@ -73,7 +73,7 @@ if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
 ```
 
 
-### Editores associados {#associateditors}
+### Editores(as) associados(as) {#associateditors}
 
 O processo de revisão por pares de software da rOpenSci é conduzido por:
 
