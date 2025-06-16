@@ -83,7 +83,7 @@ O processo de revisão de software por pares da rOpenSci é conduzido por:
 
 ### Revisores(as) e editores(as) passados(as)
 
-Agradecemos as seguintes pessoas que dedicaram seu tempo e conhecimento para revisar pacotes submetidos à rOpenSci.
+Agradecemos as seguintes pessoas que dedicaram o seu tempo e conhecimento para revisar os pacotes submetidos à rOpenSci.
 
 ```{r}
 #| echo: false
