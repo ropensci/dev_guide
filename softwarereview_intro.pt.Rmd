@@ -40,7 +40,7 @@ Estamos cientes de que sistemas abertos podem ter desvantagens. Por exemplo, na 
 
 Além disso, os(as) autores(as) e revisores(as) podem entrar em contato com os(as) editores(as) em particular se tiverem alguma dúvida ou questão.
 
-## Como os usuários saberão que um pacote foi revisado? {#how-will-users-know-a-package-has-been-reviewed}
+## Como os(as) usuários(as) saberão que um pacote foi revisado? {#how-will-users-know-a-package-has-been-reviewed}
 
 - O README do seu pacote apresentará um selo de revisão por pares com um link para o tópico de revisão do software.
 - Seu pacote terá um [site de documentação em `docs.ropensci.org`](#rodocsci) que você pode referenciar no DESCRIPTION.
