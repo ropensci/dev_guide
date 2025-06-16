@@ -23,7 +23,7 @@ Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada proc
 - A rOpenSci irá **divulgar o seu pacote** através da nossa [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) e mídias sociais (como [Mastodon](https://fosstodon.org/@ropensci) e [LinkedIn](https://www.linkedin.com/company/ropensci/)). Os pacotes em nossa coleção também recebem um [site de documentação que é renderizado e publicado automaticamente após cada envio](#docsropensci).
 - Os pacotes da rOpenSci **podem ser incluídos em uma lista cruzada** com outros repositórios, como o CRAN e o BioConductor.
 - Os pacotes da rOpenSci que estão no escopo do [Journal of Open-Source Software](https://joss.theoj.org/) e que tenham um artigo curto relacionado, poderão, a critério dos(as) editores(as) do JOSS, beneficiar-se de um processo de revisão acelerado (*fast-track*).
-- Se você escrever um, a rOpenSci irá **divulgar os livros relacionado ao seu pacote**: você pode transferir o código-fonte de tais livros para [a organização `ropensci-books` no GitHub](https://github.com/ropensci-books) para que os livros sejam listados em [books.ropensci.org](https://books.ropensci.org/).
+- Se você escrever um, a rOpenSci irá **divulgar os livros relacionados ao seu pacote**: você pode transferir o código-fonte de tais livros para [a organização `ropensci-books` no GitHub](https://github.com/ropensci-books) para que os livros sejam listados em [books.ropensci.org](https://books.ropensci.org/).
 
 ## Por que revisar pacotes para o rOpenSci? {#whyreview}
 
