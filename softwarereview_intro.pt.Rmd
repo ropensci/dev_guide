@@ -3,7 +3,7 @@
 ```{block, type="summaryblock"}
 Este capítulo contém uma [introdução geral](#whatissoftwarereview) ao nosso sistema de revisão de software por pares para pacotes, [razões para submeter um pacote](#whysubmit), [razões para se voluntariar como revisor(a)](#whyreview), [por que as nossas revisões são abertas](#whyopen) e agradecimentos às pessoas [que participam do sistema de revisão](#editors-and-reviewers).
 
-Nosso sistema foi recentemente ampliado para [revisão por pares de software estatístico](https://ropensci.org/stat-software-review/).
+Nosso sistema foi recentemente ampliado para a [revisão de software estatístico por pares](https://ropensci.org/stat-software-review/).
 
 _Se você usar nossos padrões/checklists/etc ao revisar um software em outro lugar, informe aos destinatários (por exemplo, editores(as) de periódicos, estudantes, revisão interna de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público](https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail](https://ropensci.org/contact/). 
 ```
