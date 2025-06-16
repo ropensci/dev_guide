@@ -30,7 +30,7 @@ Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada proc
 - Como em qualquer processo de revisão por pares, esperamos que você opte por revisar **para que você retribua à rOpenSci e às comunidades científicas.** Nossa missão de expandir o acesso a dados científicos e promover uma cultura de pesquisa reprodutível só é possível por meio dos esforços voluntários de membros(as) da comunidade como você.
 - A revisão é uma conversa de mão dupla. Ao revisar os pacotes, você terá a chance de **continuar aprendendo as práticas de desenvolvimento com os(as) autores(as) e outros(as) revisores(as)**.
 - A natureza aberta do nosso processo de revisão permite que você **faça contatos e conheça colegas e colaboradores(as)** durante o processo de revisão. Nossa comunidade é acolhedora e composta por pessoas prestativas, especialistas em desenvolvimento em R e em diversas outras áreas da ciência e da computação científica.
-- Para se voluntariar para ser um(a) de nossos(as) revisores(as), preencha [este breve formulário](https://airtable.com/shrnfDI2S9uuyxtDw) fornecendo suas informações de contato e áreas de especialização. Estamos sempre procurando mais revisores(as) com experiência geral em desenvolvimento de pacotes e com conhecimento especializado nas áreas em que os pacotes são usados.
+- Para se voluntariar para ser um(a) de nossos(as) revisores(as), preencha [este breve formulário](https://airtable.com/shrnfDI2S9uuyxtDw) fornecendo as suas informações de contato e áreas de especialização. Estamos sempre procurando mais revisores(as) com experiência geral em desenvolvimento de pacotes e com conhecimento especializado nas áreas em que os pacotes são usados.
 
 ## Por que as avaliações são abertas? {#whyopen}
 
