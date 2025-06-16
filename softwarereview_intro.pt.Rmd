@@ -60,7 +60,7 @@ if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
 } 
 ```
 
-### Editoria-Chefe
+### Editor(a)-Chefe
 
 ```{r}
 #| echo: false
