@@ -25,7 +25,7 @@ Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada proc
 - Os pacotes da rOpenSci que estão no escopo do [Journal of Open-Source Software](https://joss.theoj.org/) e que tenham um artigo curto relacionado, poderão, a critério dos(as) editores(as) do JOSS, beneficiar-se de um processo de revisão acelerado (*fast-track*).
 - Se você escrever um, a rOpenSci irá **divulgar os livros relacionados ao seu pacote**: você pode transferir o código-fonte de tais livros para [a organização `ropensci-books` no GitHub](https://github.com/ropensci-books) para que os livros sejam listados em [books.ropensci.org](https://books.ropensci.org/).
 
-## Por que revisar pacotes para o rOpenSci? {#whyreview}
+## Por que revisar pacotes para a rOpenSci? {#whyreview}
 
 - Como em qualquer processo de revisão por pares, esperamos que você opte por revisar **para que você retribua à rOpenSci e às comunidades científicas.**  Nossa missão de expandir o acesso a dados científicos e promover uma cultura de pesquisa reprodutível só é possível por meio dos esforços voluntários de membros(as) da comunidade como você.
 - A revisão é uma conversa de mão dupla. Ao revisar os pacotes, você terá a chance de **continuar aprendendo práticas de desenvolvimento com os(as) autores(as) e outros(as) revisores(as)**.
