@@ -43,7 +43,7 @@ We have a call for contributors section in our newsletter that comes out every t
   For general help on changing code in a package, see the [Package evolution](#evolution)
   section.
   
-  When thinking though this, there are many considerations.
+  When thinking through this, there are many considerations.
   
   How much time do you have to spend on the package? If you have very limited time, it'd be best to focus on the most critical tasks, whatever those are for the package in question. If you have ample amount of time, your goals can be larger in scope.
   

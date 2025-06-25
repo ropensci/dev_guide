@@ -19,7 +19,7 @@ We welcome code and non-code contributions from new and seasoned coders at any c
 
 What are some benefits of contributing?
 
-- Connect with a community  who shares your interest in making science more open
+- Connect with a community that shares your interest in making science more open
 - Learn from people outside your domain who use R with challenges similar to yours
 - Ask and answer new research questions by getting to know new software tools and allies
 - Feel confident and supported in your efforts to write code and develop software

@@ -90,7 +90,7 @@ See [editorial policy](#policiesreviewprocess).
 
 ### Check package with pkgcheck {#check-package-with-pkgcheck}
 
-Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+Generally only on pre-submission inquiries, or when authors otherwise indicate that the package has substantially changed.
 
 ```markdown
 @ropensci-review-bot check package
@@ -98,7 +98,7 @@ Generally only on pre-submission inquiries, or when authors otherwise indicate t
 
 ### Check statistical standards {#check-statistical-standards}
 
-Generally only on pre-submission inquiries, or when authors otherwise indicate that package has substantially changed.
+Generally only on pre-submission inquiries, or when authors otherwise indicate that the package has substantially changed.
 
 ```markdown
 @ropensci-review-bot check srr

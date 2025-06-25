@@ -11,9 +11,9 @@ ongoing maintenance of packages developed as part of rOpenSci activities
 and/or under the rOpenSci GitHub organization. This curation policy aims
 to support these goals:
 
--   Ensure packages provided by rOpenSci are up-to-date and high quality
+-   Ensure packages provided by rOpenSci are up-to-date and of high quality
 
--   Provide clarity as to the development status and and review status
+-   Provide clarity as to the development status and review status
     of any software in rOpenSci repositories
 
 -   Manage maintenance effort for rOpenSci staff, package authors, and
@@ -24,8 +24,8 @@ to support these goals:
 
 ```
 
-Elements of infrastructure described
-below needed for implementation of the policy are in some cases partly
+The elements of infrastructure described
+below needed for the implementation of the policy are in some cases partly
 built and in other cases not yet begun. We aim to adopt this policy in
 part to prioritize work on these components.
 
@@ -47,7 +47,7 @@ as part of rOpenSci projects. These packages may also be peer-reviewed
 packages, but are not necessarily peer reviewed. Many are infrastructure
 packages that fall out of scope for peer review.
 
-- Staff-maintained packages will be listed in the registry with tag
+- Staff-maintained packages will be listed in the registry with the tag
   "staff\_maintained" and listed on rOpenSci's packages web page or similar
   venues with tag "staff-maintained"
 
@@ -68,8 +68,8 @@ packages that fall out of scope for peer review.
 - Packages consistently failing and without an ongoing plan to return
   to active maintenance will move to "archive" status. When
   archived, staff packages will move to the "ropensci-archive"
-  repository (to be created) and and gain the "archived" type in
-  the registry. They will not be built on rOpenSci system.
+  repository (to be created) and gain the "archived" type in
+  the registry. They will not be built on the rOpenSci system.
 
 - Archived packages will not be displayed by default on the packages
   web page. A special tab of packages pages will display
@@ -79,7 +79,7 @@ packages that fall out of scope for peer review.
 - Archived packages can be unarchived when the old or a new maintainer
   is willing to address the problems and wants to revive the
   package. For that please [contact rOpenSci](https://ropensci.org/contact/).
-  They are transferred to the ropenscilabs organization.
+  They are transferred to the rOpenSci Labs organization.
 
 ## Peer-reviewed packages {#peer-reviewed-packages}
 
@@ -89,20 +89,20 @@ community and have passed through peer review. They need to be
 at the time of submission to be reviewed.
 
 - Upon acceptance, these peer-reviewed packages are transferred from
-  the author's GitHub to the "ropensci" GitHub organization 
+  the author's GitHub to the rOpenSci GitHub organization 
   or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
 
 - Peer-reviewed packages will be in the registry tagged as
   "peer-reviewed" and have a peer-reviewed badge in their README.
 
 - Peer-reviewed packages will be listed on rOpenSci's web page or
-  similar venues with tag "peer-reviewed"
+  similar venues with the tag "peer-reviewed"
 
 - Peer-reviewed packages and their docs will be built by rOpenSci
   [system](https://status.ropensci.org/). This system does not send notifications
   but it outputs results as GitHub commit status (red check mark or red cross).
 
-- Annually or bi-annually, rOpenSci staff will review packages in a
+- Annually or biannually, rOpenSci staff will review packages in a
   failing state or have been failing for extended periods, and
   contact the authors to determine ongoing maintenance status and
   expected updates. Based on this exchange, rOpenSci may opt to
@@ -169,22 +169,22 @@ at unconferences
 - Incubator packages and their docs will be built by rOpenSci
   [system](https://status.ropensci.org/). This system does not send notifications
   but it outputs results as GitHub commit status (red check mark or red cross).
-  The docs will indicate clearly the package is experimental.
+  The docs will indicate clearly that the package is experimental.
 
 - Biannually or annually, rOpenSci will contact incubator maintainers
   about repositories at least three months old, inquiring about
   development status and author preferences for migration to
-  peer-review, ropensci-archive, or to author organizations. Based
-  on response, package will be migrated immediately, peer review
+  peer-review, rOpenSci-archive, or to author organizations. Based
+  on the response, the package will be migrated immediately, peer review
   will be initiated, or migration will be deferred to the next
-  review. Incubator packages will be migrated to ropensci-archive by
+  review. Incubator packages will be migrated to the ROpenSci-archive by
   default after one year, following [transfer guidance](#archivalguidance).
 
 - Archived incubator packages will gain the "archived" type.
 
 ### Incubator non-R-packages {#incubator-non-r-packages}
 
-- The "incubator" organization will also include non-R-package
+- The "incubator" organization will also include non-R package
   projects.
 
 - These projects will not be listed in the registry or appear on a web
@@ -205,7 +205,7 @@ rOpenSci staff and community members.
 
 - Books will be hosted at books.ropensci.org
 
-- Books may be mature or in-development, but must have minimal
+- Books may be mature or in development, but must have minimal
   outlines/content before migrating into "ropensci-books" (e.g.
   from "ropenscilabs").
 
