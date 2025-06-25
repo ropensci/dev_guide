@@ -32,7 +32,7 @@ Last but not least, you'll find the [code of conduct of rOpenSci Software Peer R
   previous publication on CRAN or in other venues sufficient reason to
   not adopt reviewer or editor recommendations.
 - Do not submit your package for review while it or an associated manuscript
-  is also under review at another venue, as this may result on conflicting
+  is also under review at another venue, as this may result in conflicting
   requests for changes.
 
 ### Conflict of interest for reviewers/editors {#coi}
@@ -50,9 +50,9 @@ In the case where none of the [associate editors](#associateditors) can serve as
 
 ## Aims and Scope {#aims-and-scope}
 
-rOpenSci aims to support packages that enable reproducible research and managing the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the categories outlined either below.  Statistical software may also be submitted for peer review, for which we have a separate [set of guidelines and standards](https://stats-devguide.ropensci.org/index.html). The categories below are for general, and not statistical, software, while the remainder of this chapter applies to both kinds of software. If you are unsure whether your package fits into one of the general or statistical categories, please open an issue as a pre-submission inquiry ([**Examples**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
+rOpenSci aims to support packages that enable reproducible research and manage the data lifecycle for scientists.  Packages submitted to rOpenSci should fit into one or more of the categories outlined below.  Statistical software may also be submitted for peer review, for which we have a separate [set of guidelines and standards](https://stats-devguide.ropensci.org/index.html). The categories below are for general, and not statistical, software, while the remainder of this chapter applies to both kinds of software. If you are unsure whether your package fits into one of the general or statistical categories, please open an issue as a pre-submission inquiry ([**Examples**](https://github.com/ropensci/software-review/issues?q=is%3Aissue+label%3A0%2Fpresubmission)).
 
-As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today. For instance, data visualization packages are no longer in-scope. While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
+As this is a living document, these categories may change through time and not all previously onboarded packages would be in-scope today. For instance, data visualization packages are no longer in scope. While we strive to be consistent, we evaluate packages on a case-by-case basis and may make exceptions.
 
 Note that not all rOpenSci projects and packages are in-scope or go through peer review.  Projects developed by [staff](https://ropensci.org/about/#team) or at conferences may be experimental, exploratory, address core infrastructure priorities and thus not fall into these categories. Look for the peer-review badge -  see below -  to identify peer-reviewed packages in the rOpenSci repository.
 
@@ -63,9 +63,9 @@ Note that not all rOpenSci projects and packages are in-scope or go through peer
 - **data retrieval**: Packages for accessing and downloading data from online sources with scientific applications.  Our definition of scientific applications is broad, including data storage services, journals, and other remote servers, as many data sources may be of interest to researchers. However, retrieval packages should be focused on data *sources* / *topics*, rather than *services*. For example a general client for Amazon Web Services data storage would not be in-scope. (Examples: [**rotl**](https://github.com/ropensci/software-review/issues/17),
   [**gutenbergr**](https://github.com/ropensci/software-review/issues/41))
 
-- **data extraction**: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modeling or prediction are typically not included in this category, nor are code parsers. Trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/software-review/issues/42) for extracting tables from PDF documents, [**genbankr**](https://github.com/ropensci/software-review/issues/47) for parsing files from GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) for phylogentic reading in phylogentic tree files, [**lightr**](https://github.com/ropensci/software-review/issues/267) for parsing files from spectroscopic instruments))
+- **data extraction**: Packages that aid in retrieving data from unstructured sources such as text, images and PDFs, as well as parsing scientific data types and outputs from scientific equipment. Statistical/ML libraries for modelling or prediction are typically not included in this category, nor are code parsers. Trained models that act as utilities (e.g., for optical character recognition), may qualify. (Examples: [**tabulizer**](https://github.com/ropensci/software-review/issues/42) for extracting tables from PDF documents, [**genbankr**](https://github.com/ropensci/software-review/issues/47) for parsing files from GenBank, [**treeio**](https://github.com/ropensci/software-review/issues/179) for phylogentic reading in phylogentic tree files, [**lightr**](https://github.com/ropensci/software-review/issues/267) for parsing files from spectroscopic instruments))
 
-- **data munging**: Packages for processing data from formats above. This area does not include broad data manipulations tools such as **reshape2** or **tidyr**, or tools for extracting data from R code itself. Rather, it focuses on tools for handling data in specific scientific formats generated from scientific workflows or exported from scientific instruments. (Examples: [**plateR**](https://github.com/ropensci/software-review/issues/60) for reading in data structured as plate maps for scientific instruments, or [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) for processing annotated audio files for phonics research)
+- **data munging**: Packages for processing data from formats above. This area does not include broad data manipulation tools such as **reshape2** or **tidyr**, or tools for extracting data from R code itself. Rather, it focuses on tools for handling data in specific scientific formats generated from scientific workflows or exported from scientific instruments. (Examples: [**plateR**](https://github.com/ropensci/software-review/issues/60) for reading in data structured as plate maps for scientific instruments, or [**phonfieldwork**](https://github.com/ropensci/software-review/issues/385) for processing annotated audio files for phonics research)
 
 - **data deposition**: Packages that support deposition of data  into research repositories, including data formatting and metadata generation.
   (Example: [**EML**](https://github.com/ropensci/software-review/issues/80))
@@ -123,7 +123,7 @@ Authors of contributed packages essentially maintain the same ownership they had
 
 ### Maintainer responsiveness {#maintainer-responsiveness}
 
-If package maintainers do not respond in a timely manner to requests for package fixes from CRAN or from us, we will remind the maintainer a number of times, but after 3 months (or shorter time frame, depending on how critical the fix is) we will make the changes ourselves.
+If package maintainers do not respond in a timely manner to requests for package fixes from CRAN or from us, we will remind the maintainer a number of times, but after 3 months (or a shorter time frame, depending on how critical the fix is) we will make the changes ourselves.
 
 The above is a bit vague, so the following are a few areas of consideration.
 
@@ -152,7 +152,7 @@ In the unlikely scenario that a contributor of a package requests removal of the
 
 rOpenSci packages and other tools are used for a variety of purposes, but our focus is on
 tools for research. We expect that tools will enable ethical use by research
-practitioners, who are obligated to adhere to ethical codes such [Declaration of
+practitioners, who are obligated to adhere to ethical codes such as [Declaration of
 Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/)
 and [The Belmont
 Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html).
@@ -160,13 +160,13 @@ Researchers bear responsibility for their use of software, but software
 developers must consider the ethical use of their products, and developers
 themselves adhere to ethical codes for computer professionals such as those
 expressed by [IEEE](https://www.computer.org/education/code-of-ethics) and
-[ACM](https://ethics.acm.org/). rOpenSci contributors often play both the role
+[ACM](https://ethics.acm.org/). rOpenSci contributors often play the role
 of both researcher and developer.
 
 We ask that software developers place themselves in researchers' role and
 consider the requirements of an ethical workflow using authors' software.
 Given the variation and degree of flux of ethical approaches for Internet-based
-analyses, judgement calls rather than recipes are required. The [Ethical
+analyses, judgment calls rather than recipes are required. The [Ethical
 Guidelines of The Association of Internet Researchers](https://aoir.org/ethics/)
 provides a robust framework and we encourage authors, editors, and reviewers to use
 this in evaluating their work. In general, adherence to legal or regulatory
