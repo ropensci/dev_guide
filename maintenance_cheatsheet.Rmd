@@ -8,7 +8,7 @@ A reminder of infrastructure and contact channels for maintainers of rOpenSci pa
 ## Help needed? {#help-needed}
 
 If you need punctual help (say, a PR review; or some CI troubleshooting), or help looking for co-maintainers or a new maintainer, or if you need us to retire your package, ping us in GitHub via `@ropensci/admin` or email `info@ropensci.org`.
-You can also use our slack package maintenance channel.
+You can also use our Slack package maintenance channel.
 
 Never hesitate to ask for help.
 
@@ -20,7 +20,7 @@ please contact us via `info@ropensci.org`.
 
 ## Other GitHub topics {#other-git-hub-topics}
 
-If you have any GitHub question or request (adding a collaborator to the GitHub organization for instance) you can use a public channel of the rOpenSci slack workspace or ping `@ropensci/admin` on GitHub.
+If you have any GitHub questions or requests (adding a collaborator to the GitHub organization for instance) you can use a public channel of the rOpenSci Slack workspace or ping `@ropensci/admin` on GitHub.
 
 ## pkgdown documentation {#pkgdown-documentation}
 
@@ -28,9 +28,9 @@ See [rOpenSci docs](#rodocsci).
 
 ## Access to rOpenSci slack workspace {#access-to-ropensci-slack-workspace}
 
-Package maintainers and developers should get access to [rOpenSci slack](https://contributing.ropensci.org/resources.html#channels).
+Package maintainers and developers should get access to [rOpenSci Slack](https://contributing.ropensci.org/resources.html#channels).
 If you did not get the invitation or did not accept it in time,
-or if you want a new regular contributor receive an invitation please email `info@ropensci.org`,
+or if you want a new regular contributor to receive an invitation please email `info@ropensci.org`,
 indicating to which email address you wish to receive the invitation.
 
 You might find the #package-maintenance channel relevant for Q\&A as well as friendly commiseration when needed.
