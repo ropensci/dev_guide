@@ -34,7 +34,7 @@ Steps:
 We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
 We think you would make a wonderful addition to the team.
 
-[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one one you just finished!]).  
+[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one you just finished!]).  
 We ask that editors make an informal commitment of serving for two years, and re-evaluate their participation after that.  
 On a short-term basis, any editor can decline to handle a package or say, "I'm pretty busy, I can't handle a new package for a few weeks."
 
@@ -90,7 +90,7 @@ Best,
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
-- Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
+- Inform rOpenSci community manager or some other staff member so that they might be moved to the alumni team members on the website.
 
 - Remove their access to the Airtable workspace.
 
