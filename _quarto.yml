@@ -17,7 +17,21 @@ description-es: |
       cómo documentar cada versión de tu paquete y cómo aprovechar GitHub como plataforma de desarrollo.
       La tercera sección también incluye un capítulo para cualquiera que desee
       comenzar a contribuir a los paquetes de rOpenSci.
-
+title-pt: "Pacotes rOpenSci: Desenvolvimento, manutenção e revisão por pares"
+author-pt: "Equipe editorial para a revisão do software rOpenSci (atual e anterior): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+description-pt: |
+        Guia para autores de pacotes, responsáveis, revisores e editores no
+    sistema de revisão por pares da rOpenSci.
+      A primeira seção do livro contém
+      nossas recomendações para criar e testar pacotes R.
+      A segunda seção é dedicada ao processo de revisão por pares de software da rOpenSci:
+      o que é, nossas políticas e guias específicos para orientar
+      quem cria, mantém, revisa e edita ao longo do processo.
+      A terceira e última seção apresenta nossas boas práticas para fazer crescer
+      seu pacote depois que ele for incorporado ao rOpenSci: como colaborar com outros desenvolvedores,
+      como documentar cada versão do seu pacote e como aproveitar o GitHub como plataforma de desenvolvimento.
+      A terceira seção também inclui um capítulo para quem deseja
+      começar a contribuir com os pacotes do rOpenSci.
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
@@ -107,7 +121,5 @@ babelquarto:
     text: "Português"
   mainlanguage: en
   languages: ['es', 'pt']
-title-pt: title in pt
-description-pt: description in pt
-author-pt: author in pt
+
 lang: en
