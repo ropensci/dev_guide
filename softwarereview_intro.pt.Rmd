@@ -54,19 +54,25 @@ O processo de revisão de software por pares da rOpenSci é conduzido pela nossa
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| warning: false
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
-} 
+  source(
+    file.path("scripts", "airtable-get-data.R"),
+    local = knitr::knit_global()
+  )
+}
 ```
 
 ### Editor(a)-Chefe
+
 
 ```{r}
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-eic.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-eic.pt.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
@@ -78,7 +84,16 @@ if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
 O processo de revisão de software por pares da rOpenSci é conduzido por:
 
 ```{r}
-#| child: "associate-editors.md"
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-editors.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
 ### Revisores(as) e editores(as) passados(as)
@@ -89,11 +104,15 @@ Agradecemos as seguintes pessoas que dedicaram o seu tempo e conhecimento para r
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-reviewers.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
 ```
+
 
 Também agradecemos aos seguintes editores(as) que atuaram anteriormente.
 
