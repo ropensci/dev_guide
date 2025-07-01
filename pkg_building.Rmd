@@ -22,7 +22,7 @@ We recommend that package developers read Hadley Wickham and Jenny Bryan's thoro
 
 - There is a trade-off between the advantages of a unique package name and a less original package name.
   
-  - A more unique package name might be easier to track (for you and us to assess package use for instance, less false positives when typing its name in GitHub code search) and search (for users to ask "how to use package blah" in a search engine).
+  - A more unique package name might be easier to track (for you and us to assess package use for instance, fewer false positives when typing its name in GitHub code search) and search (for users to ask "how to use package blah" in a search engine).
   - On the other hand a *too* unique package name might make the package less discoverable (that is to say, to find it by searching "how to do this-thing in R"). It might be an argument for naming your package something very close to its topic such as [geojson](https://github.com/ropensci/geojson)).
 
 - Find other interesting aspects of naming your package [in this blog post by Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/), and in case you change your mind, find out [how to rename your package in this other blog post of Nick's](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
@@ -61,11 +61,11 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 - Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for users to suppress.
 
-- Provide a way for users to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none, "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests. More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
+- Provide a way for users to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none", "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests. More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
 
 ### Interactive/Graphical Interfaces {#interactive-graphical-interfaces}
 
-If providing graphical user interface (GUI) (such as a Shiny app), to facilitate workflow, include a mechanism to automatically reproduce steps taken in the GUI.  This could include auto-generation of code to reproduce the same outcomes, output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
+If providing a graphical user interface (GUI) (such as a Shiny app), to facilitate workflow, include a mechanism to automatically reproduce steps taken in the GUI. This could include auto-generation of code to reproduce the same outcomes, the output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
 
 The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/), and [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
 
@@ -77,7 +77,7 @@ We recommend your package use a consistent method of your choice for [checking i
 
 If your package accesses a web API or another web resource,
 
-- Make sure requests send an [user agent](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), that is, a way to identify what (your package) or who sent the request. The users should be able to override the package's default user agent. Ideally the user agent should be different on continuous integration services, and in development (based on, for instance, the GitHub usernames of the developers).
+- Make sure requests send an [user agent](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), that is, a way to identify what (your package) or who sent the request. The users should be able to override the package's default user agent. Ideally, the user agent should be different on continuous integration services, and in development (based on, for instance, the GitHub usernames of the developers).
 - You might choose different (better) defaults than the API, in which case you should document them.
 - Your package should help with pagination, by allowing the users to not worry about it at all since your package does all necessary requests.
 - Your package should help with rate limiting according to the API rules.
@@ -177,7 +177,7 @@ If you use another repo status badge such as a [lifecycle](https://www.tidyverse
 
 where issue\_id is the number of the issue in the software-review repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/software-review/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded (issue labelled "approved" and closed), and will link to the review issue.
 
-- If your README has many badges consider ordering them in an html table to make it easier for newcomers to gather information at a glance. See examples in [`drake` repo](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are
+- If your README has many badges consider ordering them in an HTML table to make it easier for newcomers to gather information at a glance. See examples in [`drake` repo](https://github.com/ropensci/drake) and in [`qualtRics` repo](https://github.com/ropensci/qualtRics/). Possible sections are
   
   - Development (CI statuses cf [CI chapter](#ci), Slack channel for discussion, repostatus)
   - Release/Published ([CRAN version and release date badges from METACRAN](https://www.r-pkg.org/services#badges), [CRAN checks API badge](https://github.com/r-hub/cchecksbadges), Zenodo badge)
@@ -222,7 +222,7 @@ The general vignette should present a series of examples progressing in complexi
 
 - The vignette(s) should include citations to software and papers where appropriate.
 
-- If your package provides access to a data source, we require that DESCRIPTION contains both (1) A brief identification and/or description of the organisation responsible for issuing data; and (2) The URL linking to public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).
+- If your package provides access to a data source, we require that DESCRIPTION contains both (1) A brief identification and/or description of the organisation responsible for issuing data; and (2) The URL linking to a public-facing page providing, describing, or enabling data access (which may often differ from URL leading directly to data source).
 
 - Only use package startup messages when necessary (function masking for instance). Avoid package startup messages like "This is foobar 2.4-0" or citation guidance because they can be annoying to the user. Rely on documentation for such guidance.
 
@@ -302,8 +302,8 @@ Our template is compatible with this configuration.
 
 ### Package logo {#package-logo}
 
-To use your package logo in the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
-If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use rOpenSci logo instead.
+To use your package logo on the pkgdown homepage, refer to [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci) will use the rOpenSci logo instead.
 
 ## Authorship {#authorship}
 
@@ -322,9 +322,9 @@ Many packages include code from other software. Whether entire files or single f
 
 > The ownership of copyright and intellectual property rights of all components of the package must be clear and unambiguous (including from the authors specification in the DESCRIPTION file). Where code is copied (or derived) from the work of others (including from R itself), care must be taken that any copyright/license statements are preserved and authorship is not misrepresented.
 > 
-> Preferably, an ‘Authors@R' field would be used with ‘ctb' roles for the authors of such code. Alternatively, the ‘Author' field should list these authors as contributors.
+> Preferably, an 'Authors@R' field would be used with ‘ctb' roles for the authors of such code. Alternatively, the 'Author' field should list these authors as contributors.
 > 
-> Where copyrights are held by an entity other than the package authors, this should preferably be indicated via ‘cph' roles in the ‘Authors@R' field, or using a ‘Copyright' field (if necessary referring to an inst/COPYRIGHTS file).
+> Where copyrights are held by an entity other than the package authors, this should preferably be indicated via 'cph' roles in the 'Authors@R' field, or using a 'Copyright' field (if necessary referring to an inst/COPYRIGHTS file).
 > 
 > Trademarks must be respected.
 
@@ -373,7 +373,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 - You can run examples with `devtools::run_examples()`. Note that when you run R CMD CHECK or equivalent (e.g., `devtools::check()`) your examples that are not wrapped in `\dontrun{}` or `\donttest{}` are run. Refer to the [summary table](https://roxygen2.r-lib.org/articles/rd.html#functions) in roxygen2 docs.
 
-- To safe-guard examples (e.g. requiring authentication) to be run on CRAN you need to use `\dontrun{}`. However, for a first submission CRAN won't let you have all examples escaped so. In this case you might add some small toy examples, or wrap example code in `try()`. Also refer to the `@exampleIf` tag.
+- To safeguard examples (e.g. requiring authentication) to be run on CRAN you need to use `\dontrun{}`. However, for a first submission, CRAN won't let you have all examples escaped. In this case, you might add some small toy examples, or wrap the example code in `try()`. Also refer to the `@exampleIf` tag present, at the time of writing, in the roxygen2 development version.
 
 - In addition to running examples locally on your own computer, we strongly advise that you run examples on one of the [continuous integration systems](#ci). Again, examples that are not wrapped in `\dontrun{}` or `\donttest{}` will be run, but for those that are you can configure your continuous integration builds to run them via R CMD check arguments `--run-dontrun` and/or `--run-donttest`.
 
@@ -390,13 +390,13 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 - Approaches to reducing dependencies include:
   
   - Small, simple functions from a dependency package may be better copied into
-    your own package if the dependency if you are using only a few functions
+    your own package if the dependency is used only for a few functions
     in an otherwise large or heavy dependency.  (See [*Authorship* section
     above](#authorship-included-code) for how to acknowledge original authors
     of copied code.) On the other hand, complex functions with many edge
     cases (e.g. parsers) require considerable testing and vetting.
     
-    - An common example of this is in returning tidyverse-style "tibbles" from package
+    - A common example of this is in returning tidyverse-style "tibbles" from package
       functions that provide data.
       One can avoid the modestly heavy **tibble** package dependency by returning
       a tibble created by modifying a data frame like so:
@@ -433,7 +433,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
   
   - Is the automatic installation of Bioconductor packages by `install.packages()` enough? In that case, mention that the user needs to run `setRepositories()` if they haven't set the necessary Bioconductor repositories yet.
   
-  - If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and in the installation instructions.
+  - If your package depends on Bioconductor after a certain version, mention it in DESCRIPTION and the installation instructions.
 
 - Specifying minimum dependencies (e.g. `glue (>= 1.3.0)` instead of just `glue`) should be a conscious choice. If you know for a fact that your package will break below a certain dependency version, specify it explicitly.
   But if you don't, then no need to specify a minimum dependency. In that case when a user reports a bug which is explicitly related to an older version of a dependency then address it then.
@@ -454,7 +454,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
-- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher level access.
+- For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low-level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher-level access.
 
 - For parsing JSON, use [jsonlite](https://github.com/jeroen/jsonlite) instead of [rjson](https://cran.rstudio.com/web/packages/rjson/) or [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
