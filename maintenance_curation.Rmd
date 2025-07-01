@@ -79,7 +79,7 @@ packages that fall out of scope for peer review.
 - Archived packages can be unarchived when the old or a new maintainer
   is willing to address the problems and wants to revive the
   package. For that please [contact rOpenSci](https://ropensci.org/contact/).
-  They are transferred to the rOpenSci Labs organization.
+  They are transferred to the ropenscilabs organization.
 
 ## Peer-reviewed packages {#peer-reviewed-packages}
 
@@ -89,7 +89,7 @@ community and have passed through peer review. They need to be
 at the time of submission to be reviewed.
 
 - Upon acceptance, these peer-reviewed packages are transferred from
-  the author's GitHub to the rOpenSci GitHub organization 
+  the author's GitHub to the "ropensci" GitHub organization 
   or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
 
 - Peer-reviewed packages will be in the registry tagged as
@@ -174,10 +174,10 @@ at unconferences
 - Biannually or annually, rOpenSci will contact incubator maintainers
   about repositories at least three months old, inquiring about
   development status and author preferences for migration to
-  peer-review, rOpenSci-archive, or to author organizations. Based
+  peer-review, ropensci-archive, or to author organizations. Based
   on the response, the package will be migrated immediately, peer review
   will be initiated, or migration will be deferred to the next
-  review. Incubator packages will be migrated to the ROpenSci-archive by
+  review. Incubator packages will be migrated to the ropensci-archive by
   default after one year, following [transfer guidance](#archivalguidance).
 
 - Archived incubator packages will gain the "archived" type.
