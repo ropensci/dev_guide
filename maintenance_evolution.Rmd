@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 This chapter presents our guidance for changing stuff in your package: changing parameter names, changing function names, deprecating functions, and even retiring and archiving packages.
 
-_This chapter was initially contributed as a tech note on rOpenSci website by [Scott Chamberlain](https://github.com/sckott); you can read the original version [here](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
+_This chapter was initially contributed as a tech note on rOpenSci website by [Scott Chamberlain](https://github.com/sckott); you can read the [original version](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
 
 ## Philosophy of changes {#philosophy-of-changes}
