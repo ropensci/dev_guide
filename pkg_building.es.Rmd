@@ -177,7 +177,7 @@ Si utilizas otra etiqueta de estado del repo, como el [ciclo de vida](https://ww
 - Una vez que hayas enviado el paquete y haya completado la revisión editorial, añade la insignia de revisión por pares como
 
 ```
-[![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
+[![Revisión de software por pares de rOpenSci](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
 donde issue\_id es el número del *issue* en el repositorio donde se hizo la revisión del software.
