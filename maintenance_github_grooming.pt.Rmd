@@ -10,7 +10,7 @@ Atualmente, os pacotes da rOpenSci são, em sua grande maioria, desenvolvidos no
 
 ### Tópicos do repositório do GitHub {#git-hub-repo-topics}
 
-Os [tópicos de repositórios](https://blog.github.com/2017-01-31-introducing-topics/) do GitHub ajudam a navegar e pesquisar repositórios do GitHub, são usados pelo [R-universe em páginas de pacotes e para resultados de pesquisa](https://github.com/r-universe-org/help#how-to-add-keyword-labels-to-an-r-package) e são processados pelo [`codemetar`](https://github.com/ropensci/codemetar) para palavras-chave de registro da rOpenSci.
+Os [tópicos de repositórios](https://blog.github.com/2017-01-31-introducing-topics/) do GitHub ajudam a navegar e pesquisar repositórios do GitHub, são usados pelo [R-universe em páginas de pacotes e para resultados de pesquisa](https://docs.r-universe.dev/publish/metadata.html#keywords) e são processados pelo [`codemetar`](https://github.com/ropensci/codemetar) para palavras-chave de registro da rOpenSci.
 
 Recomendamos:
 
