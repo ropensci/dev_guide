@@ -35,8 +35,8 @@ Debes añadir uno para tu paquete, y hacerlo fácil de leer.
 - Es obligatorio utilizar un `NEWS` o `NEWS.md` en la raíz de tu paquete.
   Recomendamos utilizar `NEWS.md` para que el archivo sea [más navegable](https://happygitwithr.com/workflows-browsability.html).
 
-- Utiliza nuestro [archivo *NEWS* de ejemplo](#newstemplate) como modelo.
-  Puedes encontrar un buen archivo *NEWS* real [en el repositorio del paquete `taxize`](https://github.com/ropensci/taxize/blob/master/NEWS.md) por ejemplo.
+- Puedes utilizar nuestro [archivo *NEWS* de ejemplo](#newstemplate) como modelo.
+  Puedes encontrar un buen archivo *NEWS* real [en el repositorio del paquete `taxize`](https://github.com/ropensci/targets/blob/main/NEWS.md) por ejemplo.
 
 - Si utilizas `NEWS`, añádelo a `.Rbuildignore`, pero no si usas `NEWS.md`.
 

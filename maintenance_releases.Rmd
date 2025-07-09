@@ -28,7 +28,7 @@ Note that you could streamline the process of updating NEWS and versioning your 
 A NEWS file describing changes associated with each version makes it easier for users to see what's changing in the package and how it might impact their workflow. You must add one for your package, and make it easy to read.
 
 - It is mandatory to use a `NEWS` or `NEWS.md` file in the root of your package. We recommend using `NEWS.md` to make the file [more browsable](https://happygitwithr.com/workflows-browsability.html).
-- Please use our example [NEWS file](#newstemplate) as a model. You can find a good NEWS file in the wild [in the `taxize` package repo](https://github.com/ropensci/taxize/blob/master/NEWS.md) for instance.
+- You can use our example [NEWS file](#newstemplate) as a model. You can find a good NEWS file in the wild [in the targets package repo](https://github.com/ropensci/targets/blob/main/NEWS.md) for instance.
 - If you use `NEWS`, add it to `.Rbuildignore`, but not if you use `NEWS.md`
 - Update the news file before every CRAN release, with a section with the package name, version and date of release, like (as seen in our example [NEWS file](#newstemplate)):
 
