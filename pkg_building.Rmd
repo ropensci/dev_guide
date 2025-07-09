@@ -253,7 +253,7 @@ f <- function(a = TRUE) {
 
 - For including examples, you can use the classic `@examples` tag (plural "examples") but also the  `@example <path>` tag (singular "example") for storing the example code in a separate R script (ideally under `man/`), and the `@exampleIf` tag for running examples conditionally and avoiding R CMD check failures. Refer to [roxygen2 documentation about examples](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- Add `#' @noRd` to internal functions that aren't worth documenting for end users. For development purposes, you might be interested in the [devtag experimental package](https://github.com/moodymudskipper/devtag) for getting local manual pages when using `#' @noRd`. If you want to build documentation for certain internal functions, you can use `#' @keywords internal` instead of `#' @noRd`. Note that functions with `#' @keywords internal` do not require an `#' @example` section for CRAN submission.
+- Add `#' @noRd` to internal functions that aren't worth documenting for end users. If you want to build documentation for certain internal functions, you can use `#' @keywords internal` instead of `#' @noRd`. Note that functions with `#' @keywords internal` do not require an `#' @example` section for CRAN submission. For development purposes, you might be interested in the [devtag experimental package](https://github.com/moodymudskipper/devtag) for getting local manual pages when using `#' @noRd`.
 
 - Starting from roxygen2 version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd-other.html#r6) for details on how to document `R6` classes.
 
