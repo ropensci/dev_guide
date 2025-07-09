@@ -36,7 +36,7 @@ We recommend overriding GitHub linguist by adding or modifying a .gitattributes 
 
 This way the language classification and statistics of your repository will more closely reflect the source code it contains, as well as making it more discoverable. Notably, if linguist does not correctly recognize your repo as containing mainly R code, your package won't appear in search results with the `language:R` filter. Similarly, your repo cannot be listed among the [trending R repos](https://github.com/trending/r).
 
-More info about GitHub linguist overrides [here](https://github.com/github/linguist#overrides).
+More info about [GitHub linguist overrides](https://github.com/github/linguist#overrides).
 
 ## Market your own account {#marketown}
 

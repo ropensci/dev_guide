@@ -32,7 +32,7 @@ Recomendamos que você substitua o GitHub linguist adicionando ou modificando um
 
 Dessa forma, a classificação da linguagem e as estatísticas do seu repositório refletirão melhor o código-fonte que ele contém, além de torná-lo mais detectável. Notavelmente, se o GitHub linguist não reconhecer corretamente que seu repositório contém principalmente código R, seu pacote não aparecerá nos resultados de pesquisa usando o filtro `language:R`. Da mesma forma, seu repositório não poderá ser listado entre os [repositórios R em alta](https://github.com/trending/r).
 
-Mais informações sobre as substituições do GitHub linguist podem ser encontradas [aqui](https://github.com/github/linguist#overrides).
+Mais informações sobre as [substituições do GitHub linguist](https://github.com/github/linguist#overrides).
 
 ## Comercialize sua própria conta {#marketown}
 
