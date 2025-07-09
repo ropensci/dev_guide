@@ -21,7 +21,7 @@ Puedes reconocer los paquetes de rOpenSci que han sido revisados por pares media
 Ambos contienen links a la revisión.
 
 En cuanto a la parte técnica, le sacamos el jugo a [GitHub](https://github.com/): cada proceso de revisión es un *issue* en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review/).
-Por ejemplo, haz click [aquí](https://github.com/ropensci/software-review/issues/24) para leer el hilo de revisión del paquete `ropenaq`.
+Por ejemplo, puedes leer el [hilo de revisión del paquete `ropenaq`](https://github.com/ropensci/software-review/issues/24).
 El proceso es una conversación activa hasta que el paquete es aceptado, con dos revisiones externas como momentos importantes.
 Además, utilizamos funcionalidades de GitHub como las plantillas de *issues* (como plantilla de envío), y el etiquetado que utilizamos para seguir el progreso de los envíos (desde las revisiones iniciales hasta la aprobación).
 
@@ -71,8 +71,11 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
-} 
+  source(
+    file.path("scripts", "airtable-get-data.R"),
+    local = knitr::knit_global()
+  )
+}
 ```
 
 
@@ -81,7 +84,10 @@ if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-eic.es.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-eic.es.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
@@ -96,7 +102,10 @@ Nuestro equipo editorial asociado incluye:
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-editors.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
@@ -111,7 +120,10 @@ Agradecemos a las siguientes personas, quienes ofrecieron su tiempo y experienci
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-reviewers.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
