@@ -75,10 +75,8 @@ Best,
 
 - We add editors' names to
   
-  - [dev\_guide authors list](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
-  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-    Both the dev\_guide and software-review README are automatically knit via continuous integration.
+  - [dev\_guide's Zenodo file](https://github.com/ropensci/dev_guide/blob/main/.zenodo.json)
+  - Airtable.
 
 - Add editors to [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
 
@@ -93,11 +91,6 @@ Best,
 - Inform rOpenSci community manager or some other staff member so that they might be moved to the alumni team members on the website.
 
 - Remove their access to the Airtable workspace.
-
-- Remove them from
-  
-  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
 
 Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
