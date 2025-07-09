@@ -68,7 +68,7 @@ Si interactúas con quienes desarrollaron el paquete y hablas de la revisión fu
 
 ### Experiencia de revisiones anteriores {#experience-from-past-reviewers}
 
-Si es la primera vez que revisas un paquete, puede resultarte útil leer algunas revisiones anteriores. En general, puedes encontrar *issues* de presentación de paquetes aceptados [aquí](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Estas son algunas revisiones seleccionadas en inglés (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
+Si es la primera vez que revisas un paquete, puede resultarte útil leer algunas revisiones anteriores. En general, puedes encontrar [*issues* de presentación de paquetes aceptados](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Estas son algunas revisiones seleccionadas en inglés (ten en cuenta que tus reseñas no tienen que ser tan largas como estos ejemplos):
 
 - `rtika` [revisión 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) y [revisión 2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
