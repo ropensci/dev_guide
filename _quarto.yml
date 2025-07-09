@@ -3,7 +3,7 @@ project:
 
 
 title-es: "Paquetes de rOpenSci: Desarrollo, mantenimiento y revisión por pares"
-author-es: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+author-es: "Equipo editorial para la revisión de software de rOpenSci (actuales y pasados)"
 description-es: |
     Guía para autoras/es de paquetes, encargadas/os, revisoras/es y editoras/es en
     el sistema de revisión por pares de rOpenSci.
