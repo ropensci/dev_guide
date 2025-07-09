@@ -137,9 +137,12 @@ See also [Useful Git patterns for real life](https://happygitwithr.com/workflows
 
 ### Be generous with attributions {#attributions}
 
-If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. Traditionally when citing a package in a scientific publication only "aut" authors are listed, not "ctb" contributors; and on `pkgdown` websites only "aut" names are listed on the homepage, all authors being listed on the authors/ page.
+If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. 
+Traditionally when citing a package in a scientific publication only "aut" authors are listed, not "ctb" contributors; and on `pkgdown` websites only "aut" names are listed on the homepage, all authors being listed on the authors/ page.
 
 At a minimum consider adding the name of contributors near the feature/bug fix line in [NEWS.md](#news).
+
+You could use the [allcontributors R package](https://docs.ropensci.org/allcontributors/) to acknowledge all contributors in the README file.
 
 We recommend your being generous with such acknowledgements, because it is a nice thing to do and because it will make folks more likely to contribute again to your package or other repos of the organization.
 
