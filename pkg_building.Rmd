@@ -485,7 +485,10 @@ This is a collection of CRAN gotchas that are worth avoiding at the outset.
 - Avoid long running tests and examples.  Consider `testthat::skip_on_cran` in tests to skip things that take a long time but still test them locally and on [continuous integration](#ci).
 - Include top-level files such as `paper.md`, continuous integration configuration files, in your `.Rbuildignore` file.
 
-For further gotchas, refer to the collaborative list maintained by ThinkR, ["Prepare for CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
+For further gotchas, refer to 
+- the CRAN [cookbook](https://contributor.r-project.org/cran-cookbook),
+- the ["extrachecks" list](https://github.com/DavisVaughan/extrachecks) maintained by Davis Vaughan,
+- the collaborative list maintained by ThinkR, ["Prepare for CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
 
 ### CRAN checks {#cranchecks}
 
