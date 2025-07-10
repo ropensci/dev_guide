@@ -40,7 +40,7 @@ Debes añadir uno para tu paquete, y hacerlo fácil de leer.
 
 - Si utilizas `NEWS`, añádelo a `.Rbuildignore`, pero no si usas `NEWS.md`.
 
-- Actualiza el archivo de noticias antes de cada envío a CRAN, con una sección con el nombre del paquete, la versión y la fecha de envío, como (como se ve en nuestro [archivo *NEWS* de ejemplo](#newstemplate)):
+- Actualiza el archivo de noticias antes de cada envío a CRAN, con una sección con el nombre del paquete, la versión y la fecha de envío, (como se ve en nuestro [archivo *NEWS* de ejemplo](#newstemplate)):
 
 ```
 foobar 0.2.0 (2016-04-01)
