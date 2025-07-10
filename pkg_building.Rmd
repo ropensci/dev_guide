@@ -307,7 +307,7 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ## Authorship {#authorship}
 
-The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.), and using the comment field to indicate the [ORCID ID](https://ropensci.org/technotes/2018/10/08/orcid/) of each author who is a person and the [ROR ID](https://ropensci.org/blog/2025/05/09/ror/) of each author that is an organization, if they have one.. 
+The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.), and using the comment field to indicate the [ORCID ID](https://ropensci.org/technotes/2018/10/08/orcid/) of each author who is a person and the [ROR ID](https://ropensci.org/blog/2025/05/09/ror/) of each author that is an organization, if they have one.
 See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  
 If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
