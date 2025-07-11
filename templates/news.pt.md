@@ -20,7 +20,7 @@ foobar 0.2.0 (2016-04-01)
 
 ### Correções em documentação
 
-  * Papel de `hello_mars()` versus `goodbye_mars()` está melhor esclarecido.
+  * Esclareceu o papel de `hello_mars()` versus `goodbye_mars()`.
 
 
 ### (um especial: qualquer cabeçalho que agrupa um número grande de mudanças sobre uma única coisa)
