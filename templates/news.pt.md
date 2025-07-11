@@ -32,4 +32,4 @@ foobar 0.1.0 (2016-01-01)
 
 ### Novas funcionalidades
 
-  * lançamento no CRAN
+  * publicado no CRAN
