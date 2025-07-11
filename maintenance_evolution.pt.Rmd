@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 Este capítulo apresenta nossa orientação para alterar coisas em seu pacote: alterar nomes de parâmetros, alterar nomes de funções, descontinuar funções e até mesmo retirar e arquivar pacotes.
 
-_Este capítulo foi inicialmente contribuído como uma nota técnica no site da rOpenSci por [Scott Chamberlain](https://github.com/sckott); você pode ler a [versão original](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
+_Este capítulo foi inicialmente contribuído como uma nota técnica no site da rOpenSci por [Scott Chamberlain](https://github.com/sckott); você pode ler a [versão original em inglês](https://ropensci.org/technotes/2017/01/05/package-evolution/)._
 ```
 
 ## Filosofia das alterações {#philosophy-of-changes}
