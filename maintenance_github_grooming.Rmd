@@ -14,7 +14,7 @@ rOpenSci packages are currently in their vast majority developed on GitHub. Here
 
 ### GitHub repo topics {#git-hub-repo-topics}
 
-GitHub [repo topics](https://blog.github.com/2017-01-31-introducing-topics/) help browsing and searching GitHub repos, are used by [R-universe on package pages and for search results](https://github.com/r-universe-org/help#how-to-add-keyword-labels-to-an-r-package), and are digested by [`codemetar`](https://github.com/ropensci/codemetar) for rOpenSci registry keywords.
+GitHub [repo topics](https://blog.github.com/2017-01-31-introducing-topics/) help browsing and searching GitHub repos, are used by [R-universe on package pages and for search results](https://docs.r-universe.dev/publish/metadata.html#keywords), and are digested by [`codemetar`](https://github.com/ropensci/codemetar) for rOpenSci registry keywords.
 
 We recommend:
 
