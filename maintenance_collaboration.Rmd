@@ -142,7 +142,7 @@ Traditionally when citing a package in a scientific publication only "aut" autho
 
 At a minimum consider adding the name of contributors near the feature/bug fix line in [NEWS.md](#news).
 
-You could use the [allcontributors R package](https://docs.ropensci.org/allcontributors/) to acknowledge all contributors in the README file.
+You could also use the [allcontributors R package](https://docs.ropensci.org/allcontributors/) to acknowledge all contributors in the README file.
 
 We recommend your being generous with such acknowledgements, because it is a nice thing to do and because it will make folks more likely to contribute again to your package or other repos of the organization.
 
