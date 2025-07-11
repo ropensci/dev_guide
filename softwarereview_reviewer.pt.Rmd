@@ -67,9 +67,9 @@ Se você interagiu com os(as) autores(as) do pacote e falou sobre a revisão for
 
 ### Experiências de revisores(as) anteriores {#experience-from-past-reviewers}
 
-Revisores (as) iniciantes podem achar útil ler (sobre) algumas revisões anteriores. Em geral, você pode encontrar os tópicos de envio de pacotes que já foram integrados [aqui](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui, estão alguns exemplos de revisões (observe que suas revisões não precisam ser tão longas quanto esses exemplos):
+Revisores(as) iniciantes podem achar útil ler sobre algumas revisões anteriores. Em geral, você pode encontrar os [tópicos de envio de pacotes que já foram integrados](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Aqui, estão alguns exemplos de revisões (observe que suas revisões não precisam ser tão longas quanto esses exemplos):
 
-- [revisão 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) e [revisão2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623) de `rtika`
+- [revisão 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) e [revisão 2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623) de `rtika`
 
 - `NLMR` [revisão 1](https://github.com/ropensci/software-review/issues/188#issuecomment-368042693) e [revisão2](https://github.com/ropensci/software-review/issues/188#issuecomment-369310831)
 

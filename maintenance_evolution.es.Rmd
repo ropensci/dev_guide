@@ -3,7 +3,7 @@
 ```{block, type="summaryblock"}
 Este capítulo presenta nuestra guía para realizar modificaciones a tu paquete: cambiar los nombres de los parámetros, cambiar los nombres de las funciones, eliminar funciones, e incluso retirar y archivar paquetes.
 
-Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la versión original en inglés [aquí](https://ropensci.org/technotes/2017/01/05/package-evolution/).
+Este capítulo fue aportado inicialmente como nota técnica en el sitio web de rOpenSci por [Scott Chamberlain](https://github.com/sckott); puedes leer la [versión original en inglés](https://ropensci.org/technotes/2017/01/05/package-evolution/).
 ```
 
 ## Filosofía de los cambios {#philosophy-of-changes}
