@@ -159,9 +159,9 @@ bibentry(
 - All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
   
   - The package name.
-  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
   - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered and readable, see [the "documentation website" section](#website)).
-  - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
+  - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://docs.r-universe.dev/publish/set-up.html).
   - Any additional setup required (authentication tokens, etc).
   - Brief demonstration usage.
   - If applicable, how the package compares to other similar packages and/or how it relates to other packages.
@@ -307,14 +307,19 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ## Authorship {#authorship}
 
-The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
+The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.), and using the comment field to indicate the [ORCID ID](https://ropensci.org/technotes/2018/10/08/orcid/) of each author who is a person and the [ROR ID](https://ropensci.org/blog/2025/05/09/ror/) of each author that is an organization, if they have one.
+See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  
+If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
 ```
     person("Bea", "Hernández", role = "rev",
     comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Only include reviewers after asking for their consent. Read more in this blog post ["Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
+Only include reviewers after asking for their consent. 
+Read more in this blog post ["Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). 
+Please do not list editors as contributors. 
+Your participation in and contribution to rOpenSci is thanks enough!
 
 ### Authorship of included code {#authorship-included-code}
 

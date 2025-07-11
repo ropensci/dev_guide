@@ -14,7 +14,7 @@ rOpenSci's [suite of packages](https://ropensci.org/packages/) is partly contrib
 
 You can recognize rOpenSci packages that have been peer-reviewed via a green "peer-reviewed" badge in their README, linking to their reviews (cf [this example](https://github.com/ropensci/restez#locally-query-genbank-)); and via a blue comment icon near their description on [rOpenSci packages page](https://ropensci.org/packages/), also linking to the reviews.
 
-Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package review process is an issue in the [ropensci/software-review GitHub repository](https://github.com/ropensci/software-review/). For instance, click [here](https://github.com/ropensci/software-review/issues/24) to read the review thread of the `ropenaq` package: the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
+Technically, we make the most of [GitHub](https://github.com/) infrastructure: each package review process is an issue in the [ropensci/software-review GitHub repository](https://github.com/ropensci/software-review/). For instance, read the [review thread of the `ropenaq` package](https://github.com/ropensci/software-review/issues/24): the process is an ongoing conversation until acceptance of the package, with two external reviews as important milestones. Furthermore, we use GitHub features such as the use of issue templates (as submission templates), and labelling which we use to track progress of submissions (from editor checks to approval).
 
 ## Why submit your package to rOpenSci? {#whysubmit}
 
@@ -58,8 +58,11 @@ Information on the current team, and the current status of software peer review,
 #| results: 'asis'
 #| warning: false
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-data.R"), local = knitr::knit_global())
-} 
+  source(
+    file.path("scripts", "airtable-get-data.R"),
+    local = knitr::knit_global()
+  )
+}
 ```
 
 
@@ -69,7 +72,10 @@ if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-eic.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-eic.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
@@ -85,7 +91,10 @@ Our current team of editors for software peer-review includes:
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-editors.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
@@ -99,7 +108,10 @@ We are grateful to the following individuals who have offered up their time and 
 #| echo: false
 #| results: 'asis'
 if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
-  source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+  source(
+    file.path("scripts", "airtable-get-reviewers.R"),
+    local = knitr::knit_global()
+  )
 } else {
   cat("_No Airtable data available._")
 }
