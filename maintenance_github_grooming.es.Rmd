@@ -35,7 +35,7 @@ De este modo, la clasificación lingüística y las estadísticas de tu reposito
 En particular, si el lingüista no reconoce correctamente que tu repositorio contiene principalmente código R, tu paquete no aparecerá en los resultados de búsqueda con el filtro `language:R`.
 Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R populares](https://github.com/trending/r).
 
-Más información sobre las anulaciones del lingüista de GitHub [aquí](https://github.com/github/linguist#overrides).
+Más información sobre las [anulaciones del lingüista de GitHub](https://github.com/github/linguist#overrides).
 
 ## Publicita tu propia cuenta  {#marketown}
 
