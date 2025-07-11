@@ -465,7 +465,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 - For parsing, creating, and manipulating XML, we strongly recommend [xml2](https://cran.rstudio.com/web/packages/xml2/) for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages rgdal, rgdal, and rgdal will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
+- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) and [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) were retired in 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 ## Version Control {#version-control}
 
