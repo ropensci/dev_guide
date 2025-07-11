@@ -347,8 +347,8 @@ Si tu paquete no tiene ningún logotipo, el [generador de documentación de rOpe
 
 ## Autoría  {#authorship}
 
-El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.) si hay más de una persona listada.
-Utiliza el campo de comentarios para indicar el ID ORCID de cada persona, si tuviera (ver [este post](https://ropensci.org/technotes/2018/10/08/orcid/)).
+El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.).
+Utiliza el campo de comentarios para indicar el [ID ORCID](https://ropensci.org/technotes/2018/10/08/orcid/) de cada persona o el [ID ROR](https://ropensci.org/blog/2025/05/09/ror/) de cada organización, si tuvieron.
 Revisa [esta sección de "Writing R Extensions" (Escribiendo extensiones de R)](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para más detalles.
 Si crees que quienes revisaron tu paquete han hecho una contribución sustancial al desarrollo de tu paquete, puedes agregar sus nombres en el campo `Authors@R` usando el tipo de contribución `"rev"`, por ejemplo:
 
