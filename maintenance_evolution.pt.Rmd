@@ -218,7 +218,7 @@ O pacote com seu nome antigo pode ser uma dependência de outros pacotes, script
 Ao mudar radicalmente a interface, é melhor começar um novo pacote do zero, como o [httr2, que é a segunda geração do httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/); ou criar edições de um pacote, como o [testthat](https://testthat.r-lib.org/articles/third-edition.html). Se você também mantiver o pacote antigo, poderá fazer uma depreciação suave com uma mensagem de inicialização, como no pacote httr.
 Isso permite que as pessoas usuárias e autores(as) de pacotes escolham quando/se devem atualizar sua base de código para o novo pacote ou edição.
 Se você copiar o código de outro pacote, certifique-se de reconhecer os(as) autores(as) do código que você reutiliza, listando seus nomes no arquivo DESCRIPTION com um comentário que declare que essas pessoas foram autoras do pacote original.
-
+[Exemplo](https://github.com/ropensci/agroclimatico/blob/2bc820cee201e27977a8a3ffa24cf7fedefe6bbd/DESCRIPTION#L25).
 
 ## Arquivamento de pacotes {#archivalguidance}
 

@@ -219,6 +219,7 @@ The package under its old name might be a dependency of packages, scripts, and f
 When radically changing the interface, starting a new package from scratch, like [httr2 which is the second generation of httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/); or creating editions of a package like for [testthat](https://testthat.r-lib.org/articles/third-edition.html), are better strategies. If you also maintain the old package, you can soft-deprecate it with a startup message, such as in httr.
 This allows users and package authors to choose when/whether to update their codebase to the new package or edition.
 If you copy code from another package, make sure to acknowledge authors of the code you reuse by listing them in DESCRIPTION with a comment that states they were authors of the original package.
+[Example](https://github.com/ropensci/agroclimatico/blob/2bc820cee201e27977a8a3ffa24cf7fedefe6bbd/DESCRIPTION#L25).
 
 ## Archiving packages {#archivalguidance}
 
