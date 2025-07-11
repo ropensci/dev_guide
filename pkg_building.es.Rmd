@@ -529,7 +529,7 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [_R packag
   [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2 (en Inglés)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
 - Para datos espaciales, el paquete [sp](https://github.com/edzer/sp/) debe considerarse obsoleto en favor de [sf](https://r-spatial.github.io/sf/).
-  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retirarán a finales de 2023.
+  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retiraron en 2023.
   Recomendamos el uso de las suites espaciales desarrolladas por las comunidades [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial).
   Consulta [este issue de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
 
