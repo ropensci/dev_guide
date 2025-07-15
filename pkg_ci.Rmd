@@ -117,6 +117,24 @@ After transfer to rOpenSci's "ropensci" GitHub organization, each push to the re
 
 After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
 
+If your documentation includes code that relies on, for instance, credentials, here's how to ensure pkgdown docs are rendered in the best possible way.
+
+- For function examples, use the  `examplesIf` roxygen2 tag with the `IN_PKGDOWN` variable e.g. `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`
+- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option e.g.
+
+```r
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = Sys.getenv("IN_PKGDOWN") == "true"
+)
+```
+
+Examples:
+
+- `examplesIf`:  https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (see also Docs of the roxygen2 tag: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
+- Vignette, knitr eval option:   https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16
+
 Please report bugs, questions and feature requests about the central builds and about the template at [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
 

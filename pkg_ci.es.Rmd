@@ -133,6 +133,24 @@ Puedes encontrar el estado de este proceso en la URL `https://ropensci.r-univers
 El sitio web estará en `https://docs.ropensci.org/package_name` (por ejemplo [para `magick`](https://docs.ropensci.org/magick)).
 Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo usará para crear el sitio web, excepto para el tema, que se utilizará [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/).
 
+Si tu documentación incluye código que depende, por ejemplo, de credenciales, aquí te explicamos cómo asegurarte de que los documentos pkgdown se representen de la mejor manera posible.
+
+- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 «examplesIf» con la variable «IN_PKGDOWN», por ejemplo, «#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")».
+- Para viñetas, precompile si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consulte https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval, por ejemplo
+
+```r
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = Sys.getenv("IN_PKGDOWN") == "true"
+)
+```
+
+Ejemplos:
+
+- `examplesIf`:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (véase también la documentación de la etiqueta roxygen2: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
+- Vignette, opción knitr eval:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e
+
 Por favor, informa sobre errores, haz preguntas y solicita nuevas funcionalidades sobre este servicio y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
 
