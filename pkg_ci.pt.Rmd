@@ -118,7 +118,7 @@ knitr::opts_chunk$set(
 Exemplos:
 
 - `examplesIf`:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (veja também a documentação da tag roxygen2: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
-
+- Vignette, opção knitr eval: https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e
 
 Por favor, informe bugs, perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
