@@ -60,7 +60,7 @@ Statistical packages are required to have a lifecycle statement, as specified in
 That links provides a template for a simple lifecycle statement.
 CONTRIBUTING.md files can also describe how you acknowledge contributions (see [this section](#attributions)).
 
-We encourage you to direct feedback that is not a bug report or a feature request to the discussion tools that your Git platform provides, like [GitHub discussions](https://docs.github.com/en/discussions) for GitHub.
+We encourage you to direct feedback that is not a bug report or a feature request to the discussion tools that your Git platform provides, like [GitHub Discussions](https://docs.github.com/en/discussions) for GitHub.
 
 Once a pull request is closer to being merged, you could style the code using [Air](https://posit-dev.github.io/air/) or [styler](https://styler.r-lib.org).
 

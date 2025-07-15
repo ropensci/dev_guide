@@ -59,7 +59,7 @@ A rOpenSci também incentiva os guias de contribuição a incluírem uma declara
 Esses links fornecem um modelo para uma declaração de ciclo de vida simples.
 Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as contribuições (consulte [esta seção](#attributions)).
 
-Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para os ferramentas de discussão que sua plataforma Git oferece, como [discussões do GitHub](https://docs.github.com/en/discussions) para o GitHub.
+Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para as ferramentas de discussão que sua plataforma Git oferece, como [Discussões do GitHub](https://docs.github.com/en/discussions) para o GitHub.
 
 Quando uma pull request estiver mais perto de ser mesclada, você poderá estilizar o código com [Air](https://posit-dev.github.io/air/) ou [styler](https://styler.r-lib.org/).
 
