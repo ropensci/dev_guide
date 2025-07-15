@@ -108,8 +108,8 @@ Após a transferência para a organização "ropensci" no GitHub pertencente a r
 
 - Uma vez por mês.
 
-Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [ `rotemplate`](https://github.com/ropensci-org/rotemplate/).
+Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará o seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [`rotemplate`](https://github.com/ropensci-org/rotemplate/).
 
-Por favor, informe bugs, perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
+Por favor, informe bugs, faça perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
 
