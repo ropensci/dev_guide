@@ -4,6 +4,10 @@
 
 - 2025-07-09, add more details on how to safeguard docs building for rOpenSci packages (#910, `@rmgpanw`)
 
+- 2025-07-09, add a mention of ROR IDs (#909).
+
+- 2025-07-09, remove the upper-case from the NEWS.md template and update the real example link. (#896)
+
 - 2025-07-01, many typo fixes and English language improvements (#912, `@Moohan`)
 
 - 2025-03-11, document drawbacks of renaming widely used package (#831)

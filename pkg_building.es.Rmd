@@ -163,9 +163,9 @@ bibentry(
   El *README* debe incluir, en este orden:
   
   - El nombre del paquete.
-  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
   - Una breve descripción de los objetivos del paquete (¿qué hace? ¿por qué seria interesante usarlo?) con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, por ejemplo [el sitio web de documentación](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el *README*. Asegúrate también de que las viñetas estén renderizadas y sean legibles, consulta [la sección "sitio web de documentación"](#website)).
-  - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [pak](https://pak.r-lib.org/) o [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
+  - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [pak](https://pak.r-lib.org/) o [R-universe](https://docs.r-universe.dev/publish/set-up.html).
   - Cualquier configuración adicional necesaria (tokens de autenticación, etc).
   - Una breve demostración de uso.
   - Si aplica, cómo se compara el paquete con otros paquetes similares y/o cómo se relaciona con otros paquetes.
@@ -177,7 +177,7 @@ Si utilizas otra etiqueta de estado del repo, como el [ciclo de vida](https://ww
 - Una vez que hayas enviado el paquete y haya completado la revisión editorial, añade la insignia de revisión por pares como
 
 ```
-[![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
+[![Revisión de software por pares de rOpenSci](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
 donde issue\_id es el número del *issue* en el repositorio donde se hizo la revisión del software.
@@ -347,8 +347,8 @@ Si tu paquete no tiene ningún logotipo, el [generador de documentación de rOpe
 
 ## Autoría  {#authorship}
 
-El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.) si hay más de una persona listada.
-Utiliza el campo de comentarios para indicar el ID ORCID de cada persona, si tuviera (ver [este post](https://ropensci.org/technotes/2018/10/08/orcid/)).
+El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.).
+Utiliza el campo de comentarios para indicar el [ID ORCID](https://ropensci.org/technotes/2018/10/08/orcid/) de cada persona o el [ID ROR](https://ropensci.org/blog/2025/05/09/ror/) de cada organización, si tuvieron.
 Revisa [esta sección de "Writing R Extensions" (Escribiendo extensiones de R)](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para más detalles.
 Si crees que quienes revisaron tu paquete han hecho una contribución sustancial al desarrollo de tu paquete, puedes agregar sus nombres en el campo `Authors@R` usando el tipo de contribución `"rev"`, por ejemplo:
 
@@ -529,7 +529,7 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [_R packag
   [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2 (en Inglés)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
 - Para datos espaciales, el paquete [sp](https://github.com/edzer/sp/) debe considerarse obsoleto en favor de [sf](https://r-spatial.github.io/sf/).
-  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retirarán a finales de 2023.
+  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retiraron en 2023.
   Recomendamos el uso de las suites espaciales desarrolladas por las comunidades [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial).
   Consulta [este issue de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
 

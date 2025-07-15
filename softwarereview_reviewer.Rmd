@@ -73,7 +73,7 @@ If you interact with the package authors and talk about the review outside a rev
 
 ### Experience from past reviewers {#experience-from-past-reviewers}
 
-First-time reviewers may find it helpful to read (about) some previous reviews. In general you can find submission threads of onboarded packages [here](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples of reviews (note that your reviews do not need to be as long as these examples):
+First-time reviewers may find it helpful to read about some previous reviews. In general you can find [submission threads of onboarded packages](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3A6%2Fapproved). Here are a few chosen examples of reviews (note that your reviews do not need to be as long as these examples):
 
 - `rtika` [review 1](https://github.com/ropensci/software-review/issues/191#issuecomment-367166658) and [review 2](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623)
 
