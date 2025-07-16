@@ -68,8 +68,7 @@ Como se trata de un documento vivo, estas categorías pueden cambiar con el tiem
 Por ejemplo, los paquetes de visualización de datos ya no están incluidos.
 Aunque nos esforzamos por ser coherentes, evaluamos los paquetes caso por caso y podemos hacer excepciones.
 
-Ten en cuenta que no todos los proyectos y paquetes de rOpenSci están incluidos en el ámbito de aplicación o pasan por una revisión por pares.\\
-
+Ten en cuenta que no todos los proyectos y paquetes de rOpenSci están incluidos en el ámbito de aplicación o pasan por una revisión por pares.
 Los proyectos desarrollados por el [personal](https://ropensci.org/about/#team) o en conferencias pueden ser experimentales, exploratorios, abordar las prioridades de la infraestructura básica y, por tanto, no entrar en estas categorías.
 Busca la etiqueta de revisión por pares (ver más abajo) para identificar los paquetes revisados por pares en el repositorio de rOpenSci.
 
