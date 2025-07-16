@@ -60,7 +60,7 @@ Statistical packages are required to have a lifecycle statement, as specified in
 That links provides a template for a simple lifecycle statement.
 CONTRIBUTING.md files can also describe how you acknowledge contributions (see [this section](#attributions)).
 
-We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
+We encourage you to direct feedback that is not a bug report or a feature request to the discussion tools that your Git platform provides, like [GitHub Discussions](https://docs.github.com/en/discussions) for GitHub.
 
 Once a pull request is closer to being merged, you could style the code using [Air](https://posit-dev.github.io/air/) or [styler](https://styler.r-lib.org).
 
