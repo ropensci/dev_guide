@@ -52,10 +52,7 @@ Los paquetes estadísticos deben tener una declaración de ciclo de vida, como s
 Ese enlace proporciona una plantilla para una declaración de ciclo de vida sencilla.
 Los archivos CONTRIBUTING.md también pueden describir cómo se reconocen las contribuciones (ver [esta sección](#attributions)).
 
-Te animamos a que dirijas las consultas y comentarios que no sean informes de errores o pedidos de nueva funcionalidad al [foro de rOpenSci](https://discuss.ropensci.org/) después de asegurarte de que verás esas preguntas en el foro.
-El foro puede usarse para hacer preguntas sobre cómo usar el paquete e informar de sus casos de uso, y puedes suscribirte a categorías y etiquetas individuales para recibir notificaciones sobre tu paquete.
-No dudes en mencionar esto en los documentos de tu paquete, ya sea en la guía de contribución o en la plantilla de *issue*.
-Pide etiquetar las publicaciones con el nombre del paquete.
+Te animamos a que dirijas las consultas y comentarios que no sean informes de errores o pedidos de nueva funcionalidad a las herramientas de discussión que ofrece tu plataforma Git, como [GitHub Discussions](https://docs.github.com/en/discussions) para GitHub.
 
 Una vez que un *pull request* está más cerca de ser aceptado, puedes mejorar el estilo con [Air](https://posit-dev.github.io/air/) o [styler](https://styler.r-lib.org/).
 
