@@ -146,7 +146,7 @@ El resto están listadas en una página dedicada.
 
 Como mínimo, considera la posibilidad de añadir el nombre de quien contribuyó cerca de la línea de la función o corrección de errores en el archivo [NEWS.md](#news).
 
-También puedes utilizar el paquete R [allcontributors](https://docs.ropensci.org/allcontributors/) para agradecer a todas las personas que contribuyeron en el archivo README.
+También puedes utilizar el paquete R [allcontributors](https://docs.ropensci.org/allcontributors/) para agradecer en el archivo README a todas las personas que contribuyeron.
 
 Te recomendamos reconozcas estas contribuciones generosamente, ya que es algo agradable y porque hará que sea más probable que la gente vuelva a contribuir a tu paquete o a otros repos de la organización.
 
