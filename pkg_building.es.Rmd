@@ -286,7 +286,7 @@ f <- function(a = TRUE) {
 - A partir de la versión 7.0.0 de roxygen2, las clases `R6` son oficialmente compatibles.
   Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para saber cómo documentar las clases `R6`.
 
-- Todavía no hay soporte para proporcionar páginas de manual en diferentes idiomas, pero se han producido avances interesantes en el paquete R [rhelpi18n](https://github.com/eliocamp/rhelpi18n).
+- Todavía no hay soporte para proporcionar páginas web de manual en diferentes idiomas, pero se han producido avances interesantes en el paquete [rhelpi18n](https://github.com/eliocamp/rhelpi18n).
 
 ### URLs en la documentación {#ur-ls-in-documentation}
 
