@@ -132,6 +132,8 @@ Además, tenemos algunos *temas especializados* con un alcance algo más amplio.
 
 - **traducción**: Como parte de nuestro trabajo en [publicación multilingüe](https://ropensci.org/multilingual-publishing/) tenemos especial interés en paquetes que faciliten la traducción y publicación de recursos científicos y de programación a múltiples lenguages (humanos) para que sean accesibles a públicos más amplios y diversos. Podría tratarse de interfaces para programas de traducción automática, infraestructura para gestionar la documentación en varios lenguages o programas que accedan a recursos lingüísticos especializados.  Se trata de un ámbito nuevo y experimental, por lo que te rogamos que abras un [issue para preguntar si el software está dentro del alcance de rOpenSci](https://github.com/ropensci/software-review/issues/new/choose) si te interesa presentar un paquete en esta categoría.
 
+- **Herramientas internas de rOpenSci** paquetes creados y/o utilizados por el equipo de rOpenSci para apoyar la revisión por pares del software y otras iniciativas relacionadas.
+
 ### Otras consideraciones sobre el ámbito de aplicación {#other-scope-considerations}
 
 Los paquetes deben ser *generales* en el sentido de que deben resolver un problema de la forma más amplia posible, manteniendo una interfaz de usuario y una base de código coherentes.

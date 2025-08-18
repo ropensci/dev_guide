@@ -81,6 +81,8 @@ Além disso, temos alguns *tópicos especializados* com um escopo um pouco mais 
 
 - **tradução**: Como parte de nosso trabalho em [publicações multilíngue](https://ropensci.org/multilingual-publishing/), temos um interesse especial em pacotes que facilitem a tradução e a publicação de recursos científicos e de programação em vários idiomas (humanos) para que sejam acessíveis ao público em maior alcance e diversidade. Isso pode incluir interfaces para programas de tradução automática, estruturas para gerenciar documentação em vários idiomas ou programas que acessem recursos linguísticos especializados. Este é um escopo novo e experimental, portanto, crie uma [consulta de pré-submissão](https://github.com/ropensci/software-review/issues/new/choose) se você tiver interesse em enviar um pacote nesta categoria.
 
+- **Ferramentas internas do rOpenSci** pacotes criados e/ou usados pela equipe do rOpenSci para apoiar a revisão por pares de software e outras iniciativas relacionadas.
+
 ### Outras considerações sobre o escopo {#other-scope-considerations}
 
 Os pacotes devem ser **gerais** no sentido de que devem resolver um problema da forma mais ampla possível, enquanto mantém uma interface de usuário e uma base de código coerentes. Por exemplo, se várias fontes de dados usam uma API idêntica, preferimos um pacote que forneça acesso a todas estas fontes de dados, em vez de acesso a apenas uma.
