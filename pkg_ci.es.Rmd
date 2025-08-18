@@ -135,8 +135,8 @@ Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo us
 
 Si tu documentación incluye código que depende, por ejemplo, de credenciales, aquí te explicamos cómo asegurarte de que los documentos pkgdown se representen de la mejor manera posible.
 
-- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 «examplesIf» con la variable «IN_PKGDOWN», por ejemplo, «#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")».
-- Para viñetas, precompile si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consulte https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval, por ejemplo
+- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 `examplesIf` con la variable `IN_PKGDOWN`, por ejemplo, `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`.
+- Para viñetas, precompila si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consultq https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval, por ejemplo
 
 ```r
 knitr::opts_chunk$set(
