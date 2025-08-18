@@ -321,7 +321,7 @@ En cualquier caso, no olvides actualizar la URL del sitio web en todos los lados
 
 ### Idioma
 
-Si la documentación de tu paquete está escrita en un idioma distinto del inglés (pero compatible con el sistema de revisión por pares del software rOpenSci), puedes declarar ese idioma para que el sitio web pkgdown se [localice](https://pkgdown.r-lib.org/articles/translations.html).
+Si la documentación de tu paquete está escrita en un idioma distinto del inglés (pero compatible con el sistema de revisión de software por pares de rOpenSci), puedes declarar ese idioma para que el sitio web pkgdown se [localice](https://pkgdown.r-lib.org/articles/translations.html).
 
 Todavía no es posible obtener un sitio web pkgdown multilingüe listo para usar (https://github.com/r-lib/pkgdown/issues/2258).
 
