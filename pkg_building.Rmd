@@ -55,9 +55,9 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 ### Console messages {#console-messages}
 
-- Use either the [cli package](https://cli.r-lib.org/), or base R's tools (`message()` and `warning()`) to communicate with the user in your functions. 
+- Use either the [cli package](https://cli.r-lib.org/), or base R's tools (`message()` and `warning()`) to communicate with the user in your functions.
 
-- Highlights of the cli package include: automatic wrapping, respect of the [NO_COLOR convention](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), many [semantic elements](https://cli.r-lib.org/articles/semantic-cli.html), and extensive documentation. Read more in a [blog post](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+- Highlights of the cli package include: automatic wrapping, respect of the [NO\_COLOR convention](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), many [semantic elements](https://cli.r-lib.org/articles/semantic-cli.html), and extensive documentation. Read more in a [blog post](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - Please do not use `print()` or `cat()` unless it's for a `print.*()` or `str.*()` methods, as these methods of printing messages are harder for users to suppress.
 
@@ -67,7 +67,7 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 If providing a graphical user interface (GUI) (such as a Shiny app), to facilitate workflow, include a mechanism to automatically reproduce steps taken in the GUI. This could include auto-generation of code to reproduce the same outcomes, the output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
 
-The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/), and [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
+The [`tabulizer` package](https://github.com/ropensci/tabulizer) e.g. has an interactive workflow to extract tables, but can also only extract coordinates so one can re-run things as a script. Besides, two examples of shiny apps that do code generation are <https://gdancik.shinyapps.io/shinyGEO/>, and <https://github.com/wallaceEcoMod/wallace/>.
 
 ### Input checking
 
@@ -85,7 +85,6 @@ If your package accesses a web API or another web resource,
 - Your package could export high-level functions and low-level functions, the latter allowing users to call API endpoints directly with more control (like `gh::gh()`).
 
 For more information refer to the blog post [Why You Should (or Shouldn't) Build an API Client](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
-
 
 ### Packages wrapping external software {#external-software}
 
@@ -159,9 +158,9 @@ bibentry(
 - All packages should have a README file, named `README.md`, in the root of the repository. The README should include, from top to bottom:
   
   - The package name.
-  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Badges for continuous integration and test coverage, the badge for rOpenSci peer-review once it has started (see below), a repostatus.org badge, and any other badges (e.g. [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
   - Short description of goals of package (what does it do? why should a potential user care?), with descriptive links to all vignettes unless the package is small and there's only one vignette repeating the README.  Please also ensure the vignettes are rendered and readable, see [the "documentation website" section](#website)).
-  - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
+  - Installation instructions using e.g. the [remotes package](https://remotes.r-lib.org/), [pak package](https://pak.r-lib.org/), or [R-universe](https://docs.r-universe.dev/publish/set-up.html).
   - Any additional setup required (authentication tokens, etc).
   - Brief demonstration usage.
   - If applicable, how the package compares to other similar packages and/or how it relates to other packages.
@@ -172,7 +171,7 @@ If you use another repo status badge such as a [lifecycle](https://www.tidyverse
 - Once you have submitted a package and it has passed editor checks, add a peer-review badge via
 
 ```
-[![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
+[![rOpenSci software peer-review](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
 where issue\_id is the number of the issue in the software-review repository. For instance, the badge for [`rtimicropem`](https://github.com/ropensci/rtimicropem) review uses the number 126 since it's the [review issue number](https://github.com/ropensci/software-review/issues/126). The badge will first indicated "under review" and then "peer-reviewed" once your package has been onboarded (issue labelled "approved" and closed), and will link to the review issue.
@@ -271,7 +270,7 @@ There are a few elements we'd like to underline here.
 
 ### Automatic deployment of the documentation website {#docsropensci}
 
-You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). The resulting website will have a local search bar. Please report bugs, questions and feature requests about the central builds at [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) and about the template at [https://github.com/ropensci/rotemplate/](https://github.com/ropensci/rotemplate/).
+You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). The resulting website will have a local search bar. Please report bugs, questions and feature requests about the central builds at <https://github.com/ropensci/docs/> and about the template at <https://github.com/ropensci/rotemplate/>.
 
 *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
@@ -297,7 +296,7 @@ You can make your website content easier to browse by tweaking the navbar, refer
 
 ### Math rendering {#mathjax}
 
-Please refer to [pkgdown documentation](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering). 
+Please refer to [pkgdown documentation](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
 Our template is compatible with this configuration.
 
 ### Package logo {#package-logo}
@@ -307,14 +306,19 @@ If your package doesn't have any logo, the [rOpenSci docs builder](#docsropensci
 
 ## Authorship {#authorship}
 
-The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.) if there is more than one author, and using the comment field to indicate the ORCID ID of each author, if they have one (cf [this post](https://ropensci.org/technotes/2018/10/08/orcid/)). See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
+The DESCRIPTION file of a package should list package authors and contributors to a package, using the `Authors@R` syntax to indicate their roles (author/creator/contributor etc.), and using the comment field to indicate the [ORCID ID](https://ropensci.org/technotes/2018/10/08/orcid/) of each author who is a person and the [ROR ID](https://ropensci.org/blog/2025/05/09/ror/) of each author that is an organization, if they have one.
+See [this section of "Writing R Extensions"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) for details.  
+If you feel that your reviewers have made a substantial contribution to the development of your package, you may list them in the `Authors@R` field with a Reviewer contributor type (`"rev"`), like so:
 
 ```
     person("Bea", "Hernández", role = "rev",
     comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Only include reviewers after asking for their consent. Read more in this blog post ["Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Please do not list editors as contributors. Your participation in and contribution to rOpenSci is thanks enough!
+Only include reviewers after asking for their consent.
+Read more in this blog post ["Thanking Your Reviewers: Gratitude through Semantic Metadata"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
+Please do not list editors as contributors.
+Your participation in and contribution to rOpenSci is thanks enough!
 
 ### Authorship of included code {#authorship-included-code}
 
@@ -322,7 +326,7 @@ Many packages include code from other software. Whether entire files or single f
 
 > The ownership of copyright and intellectual property rights of all components of the package must be clear and unambiguous (including from the authors specification in the DESCRIPTION file). Where code is copied (or derived) from the work of others (including from R itself), care must be taken that any copyright/license statements are preserved and authorship is not misrepresented.
 > 
-> Preferably, an 'Authors@R' field would be used with ‘ctb' roles for the authors of such code. Alternatively, the 'Author' field should list these authors as contributors.
+> Preferably, an 'Authors@R' field would be used with 'ctb' roles for the authors of such code. Alternatively, the 'Author' field should list these authors as contributors.
 > 
 > Where copyrights are held by an entity other than the package authors, this should preferably be indicated via 'cph' roles in the 'Authors@R' field, or using a 'Copyright' field (if necessary referring to an inst/COPYRIGHTS file).
 > 
@@ -382,6 +386,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 ## Package dependencies {#pkgdependencies}
 
 - It is very generally better to have fewer dependencies.
+
 - Consider the trade-offs involved in relying on a package as a dependency. On one hand,
   using dependencies reduces coding effort, and can build on useful functionality developed by
   others, especially if the dependency performs complex tasks, is high-performance,
@@ -389,6 +394,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
   places a burden on the maintainer to keep up with changes in those packages, at risk
   to your package's long-term sustainability.  It also
   increases installation time and size, primarily a consideration on your and others' development cycle, and in automated build systems. "Heavy" packages - those with many dependencies themselves, and those with large amounts of compiled code - increase this cost.
+
 - Approaches to reducing dependencies include:
   
   - Small, simple functions from a dependency package may be better copied into
@@ -453,7 +459,6 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
     `configure` scripts can be challenging as they often require hacky solutions
     to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
 
-
 ## Recommended scaffolding {#recommended-scaffolding}
 
 - For HTTP requests we recommend using [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#), or [crul](http://docs.ropensci.org/crul/) over [RCurl](https://cran.rstudio.com/web/packages/RCurl/). If you like low-level clients for HTTP, curl is best, whereas httr2, httr and crul are better for higher-level access.
@@ -462,7 +467,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 - For parsing, creating, and manipulating XML, we strongly recommend [xml2](https://cran.rstudio.com/web/packages/xml2/) for most cases. [You can refer to Daniel Nüst's notes about migration from XML to xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages rgdal, rgdal, and rgdal will be retired by the end of 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
+- For spatial data, the [sp](https://github.com/edzer/sp/) package should be considered deprecated in favor of [sf](https://r-spatial.github.io/sf/), and the packages [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) and [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) were retired in 2023. We recommend use of the spatial suites developed by the [r-spatial](https://github.com/r-spatial) and [rspatial](https://github.com/rspatial) communities. See [this GitHub issue](https://github.com/ropensci/software-review-meta/issues/47) for relevant discussions.
 
 ## Version Control {#version-control}
 
@@ -546,4 +551,5 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 #### MOOCs {#moo-cs}
 
 There is a [Coursera specialization corresponding to the book by Roger Peng, Sean Kross and Brooke Anderson](https://fr.coursera.org/specializations/r), with a course specifically about R packages.
- 
+
+

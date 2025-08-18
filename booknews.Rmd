@@ -2,7 +2,15 @@
 
 ## dev version
 
-- 2025/07/09, add mention of tinytest. (#904)
+- 2025-07-09, add mention of tinytest. (#904)
+
+- 2025-07-09, add mention of the allcontributors package. (#899)
+
+- 2025-07-09, stop recommending the use of the rOpenSci forum for package discussions. (#898)
+
+- 2025-07-09, add a mention of ROR IDs (#909).
+
+- 2025-07-09, remove the upper-case from the NEWS.md template and update the real example link. (#896)
 
 - 2025-07-01, many typo fixes and English language improvements (#912, `@Moohan`)
 
