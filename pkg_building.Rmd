@@ -63,6 +63,8 @@ We recommend you to use the [`codemetar` package](https://github.com/ropensci/co
 
 - Provide a way for users to opt out of verbosity, preferably at the package level: make message creation dependent on an environment variable or option (like ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) in the usethis package), rather than on a function parameter. The control of messages could be on several levels ("none", "inform", "debug") rather than logical (no messages at all / all messages). Control of verbosity is useful for end users but also in tests. More interesting comments can be found in an [issue of the tidyverse design guide](https://github.com/tidyverse/design/issues/42).
 
+- You can provide translations for your package's messages. The [potools](https://michaelchirico.github.io/potools/) R package can help you with that task.
+
 ### Interactive/Graphical Interfaces {#interactive-graphical-interfaces}
 
 If providing a graphical user interface (GUI) (such as a Shiny app), to facilitate workflow, include a mechanism to automatically reproduce steps taken in the GUI. This could include auto-generation of code to reproduce the same outcomes, the output of intermediate values produced in the interactive tool, or simply clear and well-documented mapping between GUI actions and scripted functions. (See also ["Testing"](#testing) below.)
@@ -255,6 +257,8 @@ f <- function(a = TRUE) {
 
 - Starting from roxygen2 version 7.0.0, `R6` classes are officially supported. See the [roxygen2 docs](https://roxygen2.r-lib.org/articles/rd-other.html#r6) for details on how to document `R6` classes.
 
+- There is no support for providing manual pages in different languages yet, but some interesting progress in the [rhelpi18n R package](https://github.com/eliocamp/rhelpi18n).
+
 ### URLs in documentation {#ur-ls-in-documentation}
 
 This subsection is particularly relevant to authors wishing to submit their package to CRAN.
@@ -275,6 +279,12 @@ You only need to worry about automatic deployment of your website until approval
 *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) since credentials cannot be used on the docs server.*
 
 Before submission and before transfer, you could use the [approach documented by `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) or the [`tic` package](https://docs.ropensci.org/tic/) for automatic deployment of the package's website. This would save you the hassle of running (and remembering to run) `pkgdown::build_site()` yourself every time the site needs to be updated. First refer to our [chapter on continuous integration](#ci) if you're not familiar with continuous integration. In any case, do not forget to update all occurrences of the website URL after transfer to the ropensci organization.
+
+### Language
+
+If your package's documentation is written in a language other than English (but supported by the rOpenSci software peer-review system), you can declare that language for your pkgdown website to be [localized](https://pkgdown.r-lib.org/articles/translations.html).
+
+It is [not yet possible to get a multilingual pkgdown website](https://github.com/r-lib/pkgdown/issues/2258) out of the box.
 
 ### Grouping functions in the reference {#function-grouping}
 
