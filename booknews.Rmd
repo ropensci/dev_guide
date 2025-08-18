@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2025-07-09, add more details on how to safeguard docs building for rOpenSci packages (#910, `@rmgpanw`)
+
 - 2025-07-11, add mentions of tools useful for translation and localization (#812).
 
 - 2025-07-09, add mention of tinytest. (#904)
