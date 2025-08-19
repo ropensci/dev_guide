@@ -130,7 +130,7 @@ Para más detalles sobre este servicio, consulta [la página de ayuda de OpenCPU
 
 Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada *push* al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown:
 
-- Por cada nueva confirmación en la rama predeterminada (se comprueba aproximadamente una vez por hora).
+- Por cada nuevo _commit_ en la rama predeterminada (se comprueba aproximadamente una vez por hora).
 
 - Cuando alguna de las dependencias fuertes del mismo universo actualiza el número de versión.
 
