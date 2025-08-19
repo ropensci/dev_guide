@@ -286,7 +286,7 @@ f <- function(a = TRUE) {
 
 ### Datos de ejemplo {#example-datasets}
 
-Para documentar la interfaz de su paquete, es posible que necesites utilizar datos de ejemplo.
+Para documentar la interfaz de tu paquete, es posible que necesites utilizar datos de ejemplo.
 Puedes utilizar datos de R base (en el paquete datasets), como penguins, o [redistribuir y documentar datos](https://r-pkgs.org/data.html), con las atribuciones adecuadas.
 Ten cuidado de elegir datos que cumplan con el [código de conducta de rOpenSci](https://ropensci.org/code-of-conduct/) y que, en general, no sean perjudiciales ni alienantes para nadie.
 
