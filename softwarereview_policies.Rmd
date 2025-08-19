@@ -90,6 +90,8 @@ In addition, we have some *specialty topics* with a slightly broader scope.
 
 - **translation**:  As part of our work in [multilingual publishing](https://ropensci.org/multilingual-publishing/), we have a special interest in packages that facilitate the translation and publication of scientific and programming resources into multiple (human) languages so they are accessible to larger and more diverse audiences. These could include interfaces to automated translation programs, frameworks for managing documentation in multiple languages, or programs accessing specialized linguistic resources.  This is a new and experimental scope, so please open a [pre-submission inquiry](https://github.com/ropensci/software-review/issues/new/choose) if you are interested in submitting a package in this category.
 
+- **rOpenSci internal tools**: packages created and/or used by the rOpenSci team to support software peer review and other related initiatives.
+
 ### Other scope considerations {#other-scope-considerations}
 
 Packages should be *general* in the sense that they should solve a problem as broadly as possible while maintaining a coherent user interface and code base. For instance, if several data sources use an identical API, we prefer a package that provides access to all the data sources, rather than just one.
