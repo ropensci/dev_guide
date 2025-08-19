@@ -36,7 +36,6 @@ Todos los envíos generan un informe detallado sobre la estructura y funcionalid
 
 Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) y utilízala como lista de verificación general. Además de marcar los criterios mínimos, te pedimos que hagas comentarios generales sobre lo siguiente:
 
-- ¿Cumple el código con los principios generales de la [Guía de revisión de Mozilla](https://mozillascience.github.io/codeReview/review.html)?
 - ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
 - ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
