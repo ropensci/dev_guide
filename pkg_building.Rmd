@@ -259,6 +259,12 @@ f <- function(a = TRUE) {
 
 - There is no support for providing manual pages in different languages yet, but some interesting progress in the [rhelpi18n R package](https://github.com/eliocamp/rhelpi18n).
 
+### Example datasets {#example-datasets}
+
+To document your package's interface, you might need to use example datasets.
+You can either use base R datasets (in the datasets package) such as penguins, or [re-distribute and document data](https://r-pkgs.org/data.html), with proper attributions.
+Be careful to choose data that comply with the [rOpenSci's code of conduct](https://ropensci.org/code-of-conduct/) and generally is not hurtful or alienating to anyone.
+
 ### URLs in documentation {#ur-ls-in-documentation}
 
 This subsection is particularly relevant to authors wishing to submit their package to CRAN.

@@ -287,6 +287,13 @@ f <- function(a = TRUE) {
 
 - Todavía no hay soporte para proporcionar páginas web de manual en diferentes idiomas, pero se han producido avances interesantes en el paquete [rhelpi18n](https://github.com/eliocamp/rhelpi18n).
 
+### Datos de ejemplo {#example-datasets}
+
+Para documentar la interfaz de tu paquete, es posible que necesites utilizar datos de ejemplo.
+Puedes utilizar datos de R base (en el paquete datasets), como penguins, o [redistribuir y documentar datos](https://r-pkgs.org/data.html), con las atribuciones adecuadas.
+Si quieres usar conjuntos de datos en español, puedes utilizar el paquete [datos](https://cran.r-project.org/web/packages/datos/readme/README.html) que provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R, como pinguinos.
+Ten cuidado de elegir datos que cumplan con el [código de conducta de rOpenSci](https://ropensci.org/code-of-conduct/) y que, en general, no sean perjudiciales ni alienantes para nadie.
+
 ### URLs en la documentación {#ur-ls-in-documentation}
 
 Esta subsección es especialmente relevante para quienes deseen enviar su paquete a CRAN.
