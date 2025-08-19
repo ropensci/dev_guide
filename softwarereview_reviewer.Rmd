@@ -40,7 +40,7 @@ All submissions trigger a detailed report on package structure and functionality
 
 ### General guidelines {#general-guidelines}
 
-To review a package, please begin by copying our [review template](#reviewtemplate) (or our [review template in Spanish](#reviewtemplatees)) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
+To review a package, please begin by copying our [review template](#reviewtemplate) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the package comply with the [rOpenSci packaging guide](#building)?
 - Are there improvements that could be made to the code style and to code patterns? For instance, do functions need to be broken down into smaller helper functions and is the role of each helper function clear?
