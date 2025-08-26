@@ -59,7 +59,7 @@ A rOpenSci também incentiva os guias de contribuição a incluírem uma declara
 Esses links fornecem um modelo para uma declaração de ciclo de vida simples.
 Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as contribuições (consulte [esta seção](#attributions)).
 
-Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para o [Fórum da rOpenSci](https://discuss.ropensci.org/) após certificar-se de que você verá essas perguntas no fórum. As pessoas usuárias podem usar o fórum para fazer perguntas sobre o uso e relatar seus casos de uso, e você pode se inscrever em categorias e tags individuais para receber notificações sobre o seu pacote.  Sinta-se à vontade para mencionar isso nos documentos do seu pacote e/ou nas diretrizes de contribuição/modelo de *issue*. Oriente as pessoas que usam seu pacote a marcar as mensagens com o nome do pacote.
+Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para as ferramentas de discussão que sua plataforma Git oferece, como [Discussões do GitHub](https://docs.github.com/en/discussions) para o GitHub.
 
 Quando uma pull request estiver mais perto de ser mesclada, você poderá estilizar o código com [Air](https://posit-dev.github.io/air/) ou [styler](https://styler.r-lib.org/).
 
@@ -140,9 +140,11 @@ Se alguém contribuir para o seu repositório, considere adicioná-la em `DESCRI
 
 No mínimo, considere adicionar o nome das pessoas colaboradoras próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
 
+Você também pode usar o pacote R [allcontributors](https://docs.ropensci.org/allcontributors/) para agradecer a todos os colaboradores no arquivo README.
+
 Recomendamos que você seja generoso(a) com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
 
-Como um lembrete de [nossas diretrizes de empacotamento](#building) se o seu pacote foi revisado e você acha que as pessoas revisoras fizeram uma contribuição substancial para o desenvolvimento do seu pacote, você pode listá-las na seção `Authors@R` com um tipo de contribuinte "Revisor" (`"rev"`), da seguinte forma:
+Como um lembrete de [nossas diretrizes de empacotamento](#building), se o seu pacote foi revisado e você acha que as pessoas revisoras fizeram uma contribuição substancial para o desenvolvimento dele, você pode listá-las na seção `Authors@R` com um tipo de contribuinte "Revisor(a)" (`"rev"`), da seguinte forma:
 
 ```
     person("Bea", "Hernández", role = "rev",
