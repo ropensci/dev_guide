@@ -115,7 +115,15 @@ After transfer to rOpenSci's "ropensci" GitHub organization, each push to the re
 
 ## Even more CI: rOpenSci docs {#rodocsci}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
+After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package:
+
+- For each new commit to the default branch (checked approx once per hour).
+
+- When any of the strong dependencies in the same universe updates the version number.
+
+- Once per month.
+
+You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
 
 If your documentation includes code that relies on, for instance, credentials, here's how to ensure pkgdown docs are rendered in the best possible way.
 

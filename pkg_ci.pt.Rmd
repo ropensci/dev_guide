@@ -100,8 +100,15 @@ Após a transferência para a organização "ropensci" no GitHub pertencente a r
 
 ## Ainda mais CI: documentos da rOpenSci {#rodocsci}
 
-Após a transferência para a organização "ropensci" no GitHub pertencente a rOpenSci, um site pkgdown será criado para o seu pacote após cada envio para o repositório no GitHub. Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [ `rotemplate`](https://github.com/ropensci-org/rotemplate/).
+Após a transferência para a organização "ropensci" no GitHub pertencente a rOpenSci, um site pkgdown será criado para o seu pacote:
 
+- Para cada novo commit no ramo padrão (verificado aproximadamente uma vez por hora).
+
+- Quando qualquer uma das dependências fortes no mesmo universo atualiza o número da versão.
+
+- Uma vez por mês.
+
+Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará o seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [`rotemplate`](https://github.com/ropensci-org/rotemplate/).
 Se sua documentação incluir código que dependa, por exemplo, de credenciais, veja aqui como garantir que os documentos pkgdown sejam renderizados da melhor maneira possível.
 
 - Para exemplos de funções, use a tag roxygen2 `examplesIf` com a variável `IN_PKGDOWN`, por exemplo, `#' @examplesIf identical(Sys.getenv(“IN_PKGDOWN”), “true”)`
@@ -120,6 +127,6 @@ Exemplos:
 - `examplesIf`:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (veja também a documentação da tag roxygen2: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
 - Vignette, opção knitr eval: https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e
 
-Por favor, informe bugs, perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
+Por favor, informe bugs, faça perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
 
