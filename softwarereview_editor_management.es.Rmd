@@ -60,7 +60,7 @@ Te deseamos lo mejor,
 
 - Invítalo a la organización GitHub de rOpenSci y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda. Esto le dará los permisos adecuados y le permitirá recibir notificaciones específicas del equipo.
 
-- Dale acceso a la base de datos de revisión de software de AirTable.
+- Dale acceso a la base de datos de revisión de software de AirTable (enlazada en la descripción del canal 'editors-only' en Slack).
 
 - Dale acceso al canal privado del equipo editorial en el espacio de trabajo de Slack de rOpenSci (y al espacio de trabajo de Slack en general si no lo tenía previamente, en ese caso pregunta a quien maneja la comunidad de rOpenSci).
 
