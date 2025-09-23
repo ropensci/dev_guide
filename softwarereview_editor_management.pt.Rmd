@@ -62,7 +62,7 @@ Atenciosamente,
 
 - Convide os novos editores para integrar a organização da rOpenSci no GitHub como membro da [equipe de editores da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.  Isso dará a eles as permissões apropriadas e vai permitir que eles recebam notificações específicas da equipe.
 
-- Os editores precisam acessar o banco de dados sobre revisão de software na AirTable.
+- Os editores precisam acessar o banco de dados sobre revisão de software na AirTable(vinculado na descrição do canal apenas para editores do Slack).
 
 - Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao gerente da comunidade da rOpenSci).
 
