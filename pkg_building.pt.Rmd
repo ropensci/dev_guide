@@ -558,7 +558,7 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 - [Blog do R-hub](https://blog.r-hub.io/post).
 
-- Algumas postagens do [blog rOpenSci](https://ropensci.org/archive/) por exemplo ["Como pré-computar vinhetas de pacotes ou artigos pkgdown"](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
+- Algumas postagens do [blog da rOpenSci](https://ropensci.org/archive/), por exemplo [*How to precompute package vignettes or pkgdown articles* ("Como pré-computar vinhetas de pacotes ou artigos pkgdown")](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
 
 - Seção Package Development Corner do [boletim informativo rOpenSci](https://ropensci.org/news/).
 
