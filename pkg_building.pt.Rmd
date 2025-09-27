@@ -49,7 +49,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - Evite conflitos de nomes de funções com pacotes básicos ou outros pacotes populares (por exemplo `ggplot2`, `dplyr`, `magrittr`, `data.table`)
 
-- A nomeação e a ordem dos argumentos devem ser consistentes entre as funções que usam entradas semelhantes.
+- A nomenclatura e a ordem dos argumentos devem ser consistentes entre as funções que usam entradas semelhantes.
 
 - As funções do pacote que importam dados não devem importar dados para o ambiente global, mas, em vez disso, devem retornar objetos. As atribuições ao ambiente global devem ser evitadas em geral.
 
