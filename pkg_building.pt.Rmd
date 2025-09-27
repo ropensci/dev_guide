@@ -59,7 +59,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - Os destaques do pacote cli incluem: empacotamento automático, respeito a [convenção NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), muitos [elementos semânticos](https://cli.r-lib.org/articles/semantic-cli.html) e ampla documentação. Mais informações [neste texto em inglês](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
-- Por favor, não use `print()` ou `cat()` a menos que seja para um `print.*()` ou `str.*()` pois esses métodos de impressão de mensagens são mais difíceis de serem suprimidos pelos usuários.
+- Por favor, não use `print()` ou `cat()` a menos que seja para um `print.*()` ou `str.*()`, pois esses métodos de impressão de mensagens são mais difíceis de serem silenciados.
 
 - Forneça uma maneira de suprimir a verbosidade, de preferência em nível de pacote: torne a criação de mensagens dependente de uma variável ou opção de ambiente (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) no pacote usethis), em vez de um parâmetro da função. O controle das mensagens poderia ser feito em vários níveis ("nenhum", "informar", "debugar") em vez de ser lógico (nenhuma mensagem / todas as mensagens). O controle da verbosidade é útil para quem utiliza a função, mas também em testes. Você pode encontrar mais comentários interessantes [nesta issue do guia de design do tidyverse](https://github.com/tidyverse/design/issues/42)
 
