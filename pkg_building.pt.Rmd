@@ -20,7 +20,7 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
 
 - Recomendamos fortemente nomes curtos e descritivos em letras minúsculas. Se o seu pacote tratar de um ou mais serviços comerciais, verifique se o nome não viola as diretrizes de marca. Você pode verificar se o nome do seu pacote está disponível, é informativo e não é ofensivo usando a função [`pak::pkg_name_check()`](https://pak.r-lib.org/reference/pkg_name_check.html); use também um mecanismo de pesquisa para ver se é ofensivo em um idioma diferente do inglês. Em particular, *não* escolha um nome de pacote que já esteja sendo usado no CRAN ou no Bioconductor.
 
-- Há uma compensação entre as vantagens de um nome de pacote exclusivo e um nome de pacote menos original.
+- Existe um equilíbrio entre as vantagens de um nome de pacote exclusivo e um nome de pacote menos original.
   
   - Um nome de pacote mais exclusivo pode ser mais fácil de rastrear (para você e nós avaliarmos o uso do pacote, por exemplo, menos falsos positivos ao digitar seu nome na pesquisa de código do GitHub) e pesquisar (para os usuários perguntarem "como usar o pacote blah" em um mecanismo de pesquisa).
   - Por outro lado, um *também* único demais pode fazer com que o pacote seja menos detectável (ou seja, não é possível encontrá-lo pesquisando "como fazer isso em R"). Isso pode ser um argumento para nomear seu pacote com algo muito próximo ao tópico, como [geojson](https://github.com/ropensci/geojson)).
