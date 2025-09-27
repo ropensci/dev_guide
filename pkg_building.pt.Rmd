@@ -69,7 +69,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 Se estiver fornecendo uma interface gráfica de usuário (GUI) (como um aplicativo Shiny), para facilitar o fluxo de trabalho, inclua um mecanismo para reproduzir automaticamente as etapas realizadas na GUI. Isso pode incluir a geração automática de código para reproduzir os mesmos resultados, a saída de valores intermediários produzidos na ferramenta interativa ou simplesmente um mapeamento claro e bem documentado entre as ações da GUI e as funções usadas. (Consulte também a seção ["Testes"](#testing) abaixo).
 
-O [`tabulizer` pacote](https://github.com/ropensci/tabulizer) por exemplo, tem um fluxo de trabalho interativo para extrair tabelas, mas também pode extrair apenas coordenadas para que seja possível executar novamente as coisas como um script. Além disso, dois exemplos de aplicativos brilhantes que fazem geração de código são <https://gdancik.shinyapps.io/shinyGEO/> e <https://github.com/wallaceEcoMod/wallace/>.
+O [pacote `tabulizer`](https://github.com/ropensci/tabulizer) por exemplo, tem um fluxo de trabalho interativo para extrair tabelas, mas também pode extrair apenas coordenadas para que seja possível executar novamente como um script. Além disso, dois exemplos de aplicativos brilhantes que geram código são <https://gdancik.shinyapps.io/shinyGEO/> e <https://github.com/wallaceEcoMod/wallace/>.
 
 ### Verificação de entrada
 
