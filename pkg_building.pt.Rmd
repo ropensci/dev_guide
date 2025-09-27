@@ -86,7 +86,7 @@ Se o seu pacote acessar uma API da Web ou outro recurso da Web,
 - Seu pacote deve reproduzir erros de API e possivelmente explicá-los em mensagens de erro informativas.
 - Seu pacote pode exportar funções de alto nível e funções de baixo nível, sendo que estas últimas permitem que os usuários chamem os pontos de extremidade da API diretamente com mais controle (como `gh::gh()`).
 
-Para obter mais informações, consulte a postagem do blog [Por que você deve (ou não deve) criar um cliente de API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
+Para obter mais informações, consulte a postagem do blog: [Por que você deve (ou não deve) criar um cliente de API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no) (em inglês).
 
 ### Pacotes que envolvem software externo {#external-software}
 
