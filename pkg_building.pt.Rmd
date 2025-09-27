@@ -18,7 +18,7 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
 
 ### Como nomear seu pacote {#naming-your-package}
 
-- Recomendamos fortemente nomes curtos e descritivos em letras minúsculas. Se o seu pacote tratar de um ou mais serviços comerciais, verifique se o nome não viola as diretrizes de marca. Você pode verificar se o nome do seu pacote está disponível, é informativo e não é ofensivo usando o [`pak::pkg_name_check()` função](https://pak.r-lib.org/reference/pkg_name_check.html) use também um mecanismo de pesquisa para ver se é ofensivo em um idioma diferente do inglês. Em particular, faça *não* escolha um nome de pacote que já esteja sendo usado no CRAN ou no Bioconductor.
+- Recomendamos fortemente nomes curtos e descritivos em letras minúsculas. Se o seu pacote tratar de um ou mais serviços comerciais, verifique se o nome não viola as diretrizes de marca. Você pode verificar se o nome do seu pacote está disponível, é informativo e não é ofensivo usando a função [`pak::pkg_name_check()`](https://pak.r-lib.org/reference/pkg_name_check.html); use também um mecanismo de pesquisa para ver se é ofensivo em um idioma diferente do inglês. Em particular, *não* escolha um nome de pacote que já esteja sendo usado no CRAN ou no Bioconductor.
 
 - Há uma compensação entre as vantagens de um nome de pacote exclusivo e um nome de pacote menos original.
   
