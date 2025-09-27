@@ -29,7 +29,7 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
 
 ### Criando metadados para seu pacote {#creating-metadata-for-your-package}
 
-Recomendamos que você use o [`codemetar` pacote](https://github.com/ropensci/codemetar) para criar e atualizar um arquivo JSON [CodeMeta](https://codemeta.github.io/) para seu pacote por meio de `codemetar::write_codemeta()`. Ele incluirá automaticamente todas as informações úteis, incluindo [Tópicos do GitHub](#grooming). O CodeMeta usa [Termos do Schema.org](https://schema.org/) portanto, à medida que ganha popularidade, os metadados JSON do seu pacote podem ser usados por serviços de terceiros, talvez até por mecanismos de pesquisa.
+Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/codemetar) para criar e atualizar um arquivo JSON [CodeMeta](https://codemeta.github.io/) para seu pacote por meio de `codemetar::write_codemeta()`. Ele incluirá automaticamente todas as informações úteis, incluindo [tópicos do GitHub](#grooming). O CodeMeta usa [termos do Schema.org](https://schema.org/), portanto, à medida que ganha popularidade, os metadados JSON do seu pacote podem ser usados por serviços de terceiros, talvez até por mecanismos de pesquisa.
 
 ## Plataformas {#platforms}
 
