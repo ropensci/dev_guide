@@ -550,7 +550,7 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 - [Seu primeiro pacote R em 1 hora](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) por Shannon Pileggi.
 
-- [descrição deste fluxo de trabalho por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
+- [essa descrição de fluxo de trabalho por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
 - [Esta foto de Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
 
