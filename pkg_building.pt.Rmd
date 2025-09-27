@@ -41,7 +41,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - A nomenclatura das funções e dos argumentos deve ser escolhida de modo a trabalhar em conjunto para formar uma API de programação comum e lógica que seja fácil de ler e de autocompletar.
   
-  - Considere uma `object_verb()` para as funções do seu pacote que usam um tipo de dados comum ou interagem com uma API comum. `object` refere-se aos dados/API e `verb` a ação principal.  Esse esquema ajuda a evitar conflitos de espaço de nome com pacotes que podem ter verbos semelhantes e torna o código legível e fácil de preencher automaticamente.  Por exemplo, em **stringi** as funções que começam com `stri_` manipulam strings (`stri_join()`, `stri_sort()`, e em **googlesheets** funções que começam com `gs_` são chamadas para a API do Google Sheets (`gs_auth()`, `gs_user()`, `gs_download()`).
+  - Considere um esquema de nomenclatura `objeto_verbo()` para as funções do seu pacote que usam um tipo de dados comum ou interagem com uma API comum. `objeto` refere-se aos dados/API e `verbo` a ação principal.  Esse esquema ajuda a evitar conflitos de nome com pacotes que podem ter verbos semelhantes e torna o código legível e fácil de preencher automaticamente.  Por exemplo, em **stringi** as funções que começam com `stri_` manipulam strings (`stri_join()`, `stri_sort()`, e em **googlesheets** funções que começam com `gs_` são chamadas para a API do Google Sheets (`gs_auth()`, `gs_user()`, `gs_download()`).
 
 - Para funções que manipulam um objeto/dado e retornam um objeto/dado do mesmo tipo, faça com que o objeto/dado seja o primeiro argumento da função para aumentar a compatibilidade com os operadores de pipe (base R's `|>`, magrittr's `%>%`).
 
