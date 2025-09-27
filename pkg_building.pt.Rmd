@@ -566,6 +566,6 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 #### MOOCs {#moo-cs}
 
-Existe um [especialização do Coursera correspondente ao livro de Roger Peng, Sean Kross e Brooke Anderson](https://fr.coursera.org/specializations/r) com um curso específico sobre pacotes R.
+Existe um [especialização do Coursera correspondente ao livro escrito por Roger Peng, Sean Kross e Brooke Anderson](https://fr.coursera.org/specializations/r), com um curso específico sobre pacotes R.
 
 
