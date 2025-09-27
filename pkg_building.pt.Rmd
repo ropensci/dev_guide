@@ -560,7 +560,7 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 - Algumas postagens do [blog da rOpenSci](https://ropensci.org/archive/), por exemplo [*How to precompute package vignettes or pkgdown articles* ("Como pré-computar vinhetas de pacotes ou artigos pkgdown")](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
 
-- Seção Package Development Corner do [boletim informativo rOpenSci](https://ropensci.org/news/).
+- Seção *Package Development Corner* ("Espaço de desenvolvimento de pacotes") do [boletim informativo da rOpenSci](https://ropensci.org/news/).
 
 - Algumas postagens do [blog do tidyverse](https://www.tidyverse.org) por exemplo ["Atualizando para o testthat edition 3"](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
 
