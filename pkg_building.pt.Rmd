@@ -3,7 +3,7 @@ aliases:
 - building.html
 ---
 
-# Guia de embalagem {#building}
+# Guia de desenvolvimento de pacotes {#building}
 
 ```{block, type="summaryblock"}
 A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um processo simplificado de [Revisão por Pares de Software](#whatissoftwarereview). Para garantir um estilo consistente em todas as nossas ferramentas, escrevemos este capítulo destacando nossas diretrizes para o desenvolvimento de pacotes. Leia e aplique também nosso [capítulo sobre integração contínua (CI)](#ci). Outras orientações para depois do processo de revisão são fornecidas na terceira seção deste livro, começando com [um capítulo sobre colaboração](#collaboration).
