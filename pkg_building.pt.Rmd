@@ -73,7 +73,7 @@ O [`tabulizer` pacote](https://github.com/ropensci/tabulizer) por exemplo, tem u
 
 ### Verificação de entrada
 
-Recomendamos que seu pacote use um método consistente de sua escolha para [verificação de entradas](https://blog.r-hub.io/2022/03/10/input-checking/) -- seja o R básico, um pacote R ou ajudantes personalizados.
+Recomendamos que seu pacote use um método consistente de sua escolha para [verificação de entradas (*inputs*)](https://blog.r-hub.io/2022/03/10/input-checking/) -- seja o R básico, um pacote em R ou ajudantes personalizados.
 
 ### Pacotes que envolvem recursos da Web (clientes de API)
 
