@@ -25,7 +25,7 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
   - Um nome de pacote mais exclusivo pode ser mais fácil de rastrear (para você e nós avaliarmos o uso do pacote, por exemplo, menos falsos positivos ao digitar seu nome na pesquisa de código do GitHub) e pesquisar (para quando as pessoas usuárias perguntarem "como usar o pacote blah" em um mecanismo de pesquisa).
   - Por outro lado, um nome único *demais* pode fazer com que o pacote seja menos detectável (ou seja, não seja possível encontrá-lo ao pesquisar "como fazer isso em R"). Isso pode ser um argumento para nomear seu pacote com algo muito próximo ao tópico, como [geojson](https://github.com/ropensci/geojson)).
 
-- Encontre outros aspectos interessantes sobre como nomear seu pacote [nesta postagem do blog de Nick Tierney](https://www.njtierney.com/post/2018/06/20/naming-things/) e, caso você mude de ideia, descubra [como renomear seu pacote nesta outra postagem do blog de Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+- Encontre outros aspectos interessantes sobre como nomear seu pacote [neste texto do blog do Nick Tierney (em inglês)](https://www.njtierney.com/post/2018/06/20/naming-things/) e, caso você mude de ideia, descubra [como renomear seu pacote nesta outra postagem do blog do Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
 ### Criação de metadados para seu pacote {#creating-metadata-for-your-package}
 
