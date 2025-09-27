@@ -57,7 +57,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - Use o [pacote cli](https://cli.r-lib.org/) ou as ferramentas do R básico (`message()` e `warning()`) para se comunicar com as pessoas que usam suas funções.
 
-- Os destaques do pacote cli incluem: empacotamento automático, respeito ao [convenção NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), muitos [elementos semânticos](https://cli.r-lib.org/articles/semantic-cli.html) e ampla documentação. Leia mais em um [postagem no blog](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+- Os destaques do pacote cli incluem: empacotamento automático, respeito a [convenção NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), muitos [elementos semânticos](https://cli.r-lib.org/articles/semantic-cli.html) e ampla documentação. Mais informações [neste texto em inglês](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - Por favor, não use `print()` ou `cat()` a menos que seja para um `print.*()` ou `str.*()` pois esses métodos de impressão de mensagens são mais difíceis de serem suprimidos pelos usuários.
 
