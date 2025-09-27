@@ -562,7 +562,7 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 - Seção *Package Development Corner* ("Espaço de desenvolvimento de pacotes") do [boletim informativo da rOpenSci](https://ropensci.org/news/).
 
-- Algumas postagens do [blog do tidyverse](https://www.tidyverse.org) por exemplo ["Atualizando para o testthat edition 3"](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
+- Algumas postagens do [blog do tidyverse](https://www.tidyverse.org), por exemplo [*Upgrading to testthat edition 3* ("Atualizando para o testthat edition 3")](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
 
 #### MOOCs {#moo-cs}
 
