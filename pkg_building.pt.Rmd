@@ -37,7 +37,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 ## API do pacote {#package-api}
 
-### Nomeação de funções e argumentos {#function-and-argument-naming}
+### Nomeando funções e argumentos {#function-and-argument-naming}
 
 - A nomenclatura das funções e dos argumentos deve ser escolhida de modo a trabalhar em conjunto para formar uma API de programação comum e lógica que seja fácil de ler e de autocompletar.
   
