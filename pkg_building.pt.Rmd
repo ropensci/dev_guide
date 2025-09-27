@@ -45,7 +45,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - Para funções que manipulam um objeto/dado e retornam um objeto/dado do mesmo tipo, faça com que o objeto/dado seja o primeiro argumento da função para aumentar a compatibilidade com o operador pipe (`|>` do R base, `%>%` do pacote magrittr).
 
-- Recomendamos enfaticamente `snake_case` em vez de todos os outros estilos, a menos que esteja fazendo a portabilidade de um pacote que já esteja sendo amplamente utilizado.
+- Recomendamos fortemente usar `snake_case` em vez de todos os outros estilos, a menos que esteja fazendo a portabilidade de um pacote que já esteja sendo amplamente utilizado.
 
 - Evite conflitos de nomes de funções com pacotes básicos ou outros pacotes populares (por exemplo `ggplot2`, `dplyr`, `magrittr`, `data.table`)
 
