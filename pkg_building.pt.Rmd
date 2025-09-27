@@ -6,7 +6,7 @@ aliases:
 # Guia de embalagem {#building}
 
 ```{block, type="summaryblock"}
-A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um processo simplificado de [Revisão por Pares de Software] (#whatissoftwarereview). Para garantir um estilo consistente em todas as nossas ferramentas, escrevemos este capítulo destacando nossas diretrizes para o desenvolvimento de pacotes. Leia e aplique também nosso [capítulo sobre integração contínua (CI)](#ci). Outras orientações para depois do processo de revisão são fornecidas na terceira seção deste livro, começando com [um capítulo sobre colaboração](#collaboration).
+A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um processo simplificado de [Revisão por Pares de Software](#whatissoftwarereview). Para garantir um estilo consistente em todas as nossas ferramentas, escrevemos este capítulo destacando nossas diretrizes para o desenvolvimento de pacotes. Leia e aplique também nosso [capítulo sobre integração contínua (CI)](#ci). Outras orientações para depois do processo de revisão são fornecidas na terceira seção deste livro, começando com [um capítulo sobre colaboração](#collaboration).
 
 Recomendamos que os desenvolvedores de pacotes leiam o livro completo de Hadley Wickham e Jenny Bryan sobre desenvolvimento de pacotes, que está disponível [gratuitamente on-line](https://r-pkgs.org/). Nosso guia é parcialmente redundante em relação a outros recursos, mas destaca as diretrizes da rOpenSci.
 
