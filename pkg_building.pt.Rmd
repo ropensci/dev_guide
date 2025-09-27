@@ -51,7 +51,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - A nomeação e a ordem dos argumentos devem ser consistentes entre as funções que usam entradas semelhantes.
 
-- As funções de pacote que importam dados não devem importar dados para o ambiente global, mas, em vez disso, devem retornar objetos. As atribuições ao ambiente global devem ser evitadas em geral.
+- As funções do pacote que importam dados não devem importar dados para o ambiente global, mas, em vez disso, devem retornar objetos. As atribuições ao ambiente global devem ser evitadas em geral.
 
 ### Mensagens do console {#console-messages}
 
