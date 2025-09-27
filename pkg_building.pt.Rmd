@@ -90,7 +90,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 ### Pacotes que envolvem software externo {#external-software}
 
-- Documente claramente como instalar o pacote, incluindo todos os pacotes ou bibliotecas externos necessários, incluindo, quando aplicável, etapas explícitas em sistemas operacionais comuns.
+- Documente claramente como instalar o pacote, incluindo todos os pacotes ou bibliotecas externas necessários, incluindo, quando aplicável, etapas explícitas em sistemas operacionais comuns.
 - Forneça uma função de relatório de situação (sitrep) para verificar se o software foi instalado, com dicas caso algo esteja faltando. [Exemplo em greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
 - Se possível, forneça uma função que ajude na instalação. [Exemplo no hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
 
