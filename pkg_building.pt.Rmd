@@ -10,7 +10,7 @@ A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um proce
 
 Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de Hadley Wickham e Jenny Bryan sobre desenvolvimento de pacotes, que está disponível [gratuitamente on-line](https://r-pkgs.org/) (em inglês). Nosso guia é parcialmente redundante em relação a outros recursos, mas destaca as diretrizes da rOpenSci.
 
- Para saber por que vale a pena enviar um pacote para a rOpenSci para atender às diretrizes, dê uma olhada em [reasons to submit](#whysubmit). 
+ Para saber por que vale a pena enviar um pacote para a rOpenSci para atender às diretrizes, dê uma olhada em [motivos para submeter](#whysubmit). 
 
 ```
 
