@@ -33,7 +33,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 ## Plataformas {#platforms}
 
-- Os pacotes devem ser executados em todas as principais plataformas (Windows, macOS, Linux).  Exceções podem ser concedidas a pacotes que interagem com funções específicas do sistema ou invólucros para utilitários que operam apenas em plataformas limitadas, mas os autores devem fazer todos os esforços para obter compatibilidade entre plataformas, incluindo compilação específica do sistema ou conteinerização de utilitários externos.
+- Os pacotes devem funcionar em todas as principais plataformas (Windows, macOS, Linux).  Pode haver exceções para pacotes que interajam com funções específicas do sistema ou que adaptem utilitários que só funcionam em plataformas limitadas, mas deve-se fazer todo o possível para garantir a compatibilidade entre plataformas, incluindo a compilação específica em cada sistema ou a containerização de utilitários externos.
 
 ## API do pacote {#package-api}
 
