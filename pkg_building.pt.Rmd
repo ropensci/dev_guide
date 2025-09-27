@@ -63,7 +63,7 @@ Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/co
 
 - Forneça uma maneira de suprimir a verbosidade, de preferência em nível de pacote: torne a criação de mensagens dependente de uma variável ou opção de ambiente (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) no pacote usethis), em vez de um parâmetro da função. O controle das mensagens poderia ser feito em vários níveis ("nenhum", "informar", "debugar") em vez de ser lógico (nenhuma mensagem / todas as mensagens). O controle da verbosidade é útil para quem utiliza a função, mas também em testes. Você pode encontrar mais comentários interessantes [nesta issue do guia de design do tidyverse](https://github.com/tidyverse/design/issues/42)
 
-- Você pode fornecer traduções para as mensagens do seu pacote. As [potools](https://michaelchirico.github.io/potools/) R pode ajudá-lo com essa tarefa.
+- Você pode fornecer traduções para as mensagens do seu pacote. O pacote [potools](https://michaelchirico.github.io/potools/) pode te ajudar com essa tarefa.
 
 ### Interfaces interativas/gráficas {#interactive-graphical-interfaces}
 
