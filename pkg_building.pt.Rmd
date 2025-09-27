@@ -188,7 +188,7 @@ onde issue\_id é o número do problema no repositório de revisão de software.
 - Se o seu pacote se conectar a uma fonte de dados ou serviço on-line, ou envolver outro software, considere que o LEIAME do seu pacote pode ser o primeiro ponto de entrada para os usuários.  Ele deve fornecer informações suficientes para que os usuários entendam a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes.  Por exemplo,
   um LEIAME não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir,
   "..., um repositório on-line de avistamentos de Goober na América do Sul.  Mais
-  informações sobre o GooberDB e documentação da estrutura e dos metadados do banco de dados
+  informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados
   podem ser encontrados em *link*".
 
 - Recomendamos não criar `README.md` diretamente, mas a partir de um `README.Rmd` (um arquivo R Markdown) se você tiver algum código de demonstração. A vantagem do `.Rmd` é que você pode combinar texto com código que pode ser facilmente atualizado sempre que seu pacote for atualizado.
