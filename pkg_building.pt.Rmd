@@ -249,7 +249,7 @@ f <- function(a = TRUE) {
 
 - A documentação deve dar suporte à navegação, incluindo [links cruzados](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) úteis entre funções relacionadas e documentando funções relacionadas em grupos ou em páginas de ajuda comuns. Recomendamos o uso da etiqueta `@family` que cria automaticamente links do tipo *"See also"* e [podem ajudar a agrupar](https://pkgdown.r-lib.org/reference/build_reference.html) funções em sites com pkgdown. Veja [o capítulo sobre documentação de funções do livro *R Packages* (em inglês)](https://r-pkgs.org/man.html) e [a seção "agrupamento de funções" do presente capítulo](#function-grouping) para obter mais detalhes.
 
-- Você pode reutilizar partes da documentação (por exemplo, detalhes sobre autenticação, pacotes relacionados) nas páginas vignettes/README/man. Consulte [vinheta do roxygen2 sobre reutilização de documentação](https://roxygen2.r-lib.org/articles/reuse.html).
+- Você pode reutilizar partes da documentação (por exemplo, detalhes sobre autenticação, pacotes relacionados) nas páginas de vinhetas, README e de documentação. Consulte a [vinheta do roxygen2 sobre reutilização de documentação](https://roxygen2.r-lib.org/articles/reuse.html).
 
 - Para incluir exemplos, você pode usar o clássico `@examples` (plural "examples"), mas também a tag `@example <path>` (singular "example") para armazenar o código de exemplo em um script R separado (de preferência em `man/`), e a tag `@exampleIf` para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte [documentação do roxygen2 sobre exemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
