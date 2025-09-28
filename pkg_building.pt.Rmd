@@ -304,7 +304,7 @@ De forma menos automática, veja o exemplo de [`drake` site](https://docs.ropens
 
 ### Marca dos autores {#branding-of-authors}
 
-Você pode tornar os nomes de (alguns) autores clicáveis, adicionando o URL deles, e pode até mesmo substituir os nomes por um logotipo (pense na rOpenSci... ou na sua organização/empresa!). Veja [`pkgdown` documentação](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
+Você pode tornar os nomes de (algumas) das pessoas autoras clicáveis, adicionando um URL, e pode até mesmo substituir os nomes por um logotipo (pense na rOpenSci... ou na sua organização/empresa!). Veja [a documentação do `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
 
 ### Ajuste da barra de navegação {#tweaking-the-navbar}
 
