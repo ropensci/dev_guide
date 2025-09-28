@@ -170,7 +170,7 @@ bibentry(
 
 Se você usar outro selo de status de repositório, como o [ciclo de vida](https://www.tidyverse.org/lifecycle/), adicione também um selo do [repostatus.org](https://www.repostatus.org/). [Exemplo de um README de repositório com dois selos de status de repositório](https://github.com/ropensci/ijtiff#ijtiff-).
 
-- Depois de enviar um pacote e ele ter sido aprovado nas verificações do editor, adicione um selo de revisão por pares por meio do
+- Depois de enviar um pacote e ele ter sido aprovado na verificação editorial, adicione um selo de revisão por pares por meio do
 
 ```
 [![rOpenSci software peer-review](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
