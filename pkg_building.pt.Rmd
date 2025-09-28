@@ -270,7 +270,7 @@ Tenha o cuidado de escolher dados que estejam em conformidade com o [código de 
 Esta subseção é particularmente relevante para quem deseja enviar seu pacote para o CRAN.
 O CRAN verificará os URLs em sua documentação e não permite códigos de status de redirecionamento, como 301.
 Você pode usar o pacote [urlchecker](https://github.com/r-lib/urlchecker) para reproduzir essas verificações e, em particular, substituir os URLs pelos URLs para os quais eles redirecionam.
-Outros usaram a opção para escapar de alguns URLs (alterar `<https://ropensci.org/>` para `https://ropensci.org/`, ou `\url{https://ropensci.org/}` para `https://ropensci.org/`.), mas se você fizer isso, precisará implementar algum tipo de verificação de URL para evitar que eles sejam quebrados sem que você perceba. Além disso, os links não poderão ser clicados nos documentos locais.
+Outras pessoas já usaram a opção para escapar de alguns URLs (alterar `<https://ropensci.org/>` para `https://ropensci.org/`, ou `\url{https://ropensci.org/}` para `https://ropensci.org/`.), mas se você fizer isso, precisará implementar algum tipo de verificação de URL para evitar que eles sejam quebrados sem que você perceba. Além disso, os links não poderão ser clicados nos documentos locais.
 
 ## Site de documentação {#website}
 
