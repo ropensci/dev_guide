@@ -288,7 +288,7 @@ Antes do envio e da transferência, você pode usar o comando [documentada por `
 
 ### Idioma
 
-Se a documentação do seu pacote estiver escrita em um idioma diferente do inglês (mas suportado pelo sistema de revisão por pares do software rOpenSci), você poderá declarar esse idioma para o site do pkgdown como [localizado](https://pkgdown.r-lib.org/articles/translations.html).
+Se a documentação do seu pacote estiver escrita em um idioma diferente do inglês (mas suportado pelo sistema de revisão por pares do software rOpenSci), você poderá declarar esse idioma para que o site do pkgdown [seja localizado](https://pkgdown.r-lib.org/articles/translations.html).
 
 É [ainda não é possível obter um site pkgdown multilíngue](https://github.com/r-lib/pkgdown/issues/2258) fora da caixa.
 
