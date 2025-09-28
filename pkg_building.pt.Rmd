@@ -98,7 +98,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Para obter mais informações sobre como estilizar seu código, nomear funções e scripts R dentro da seção `R/` recomendamos a leitura do [capítulo *R Code* do livro *R Packages*](https://r-pkgs.org/Code.html) (em inglês). Recomendamos o uso do [Air](https://posit-dev.github.io/air/) ou do [pacote styler](https://github.com/r-lib/styler) para automatizar parte do estilo do código. Também sugerimos a leitura do [Guia de estilo do Tidyverse (em inglês)](https://style.tidyverse.org/).
 
-- Você pode optar por usar `=` sobre `<-` desde que seja consistente com uma escolha em seu pacote. Recomendamos evitar o uso de `->` para atribuição em um pacote. Se você usar `<-` em seu pacote e também usar `R6` nesse pacote, você será forçado a usar `=` para atribuição em seu `R6Class` isso não é considerado uma inconsistência porque você não pode usar `<-` nesse caso.
+- Você pode optar por usar `=` ao invés de `<-` desde que seja consistente com uma escolha em seu pacote. Recomendamos evitar o uso de `->` para atribuição em um pacote. Se você usar `<-` em seu pacote e também usar `R6` nesse pacote, você será forçado a usar `=` para atribuição em seu `R6Class` - isso não é considerado uma inconsistência porque você não pode usar `<-` nesse caso.
 
 - Você pode usar o [pacote lintr](https://lintr.r-lib.org/index.html) para identificar algumas possíveis áreas de aprimoramento. [Exemplo de fluxo de trabalho](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
