@@ -178,7 +178,7 @@ Se você usar outro selo de status de repositório, como o [ciclo de vida](https
 
 onde issue\_id é o número da *Issue* no repositório `software-review`. Por exemplo, o selo para [`rtimicropem`](https://github.com/ropensci/rtimicropem) usa o número 126, pois é o [número da Issue de revisão](https://github.com/ropensci/software-review/issues/126). O selo indicará primeiro "under review" (em revisão) e depois "peer-reviewed" (revisado por pares) assim que o seu pacote tiver sido integrado (Issue marcada como "approved" (aprovada) e fechada), e será vinculado à Issue de revisão.
 
-- Se o seu README tiver muitos emblemas, considere ordená-los em uma tabela HTML para facilitar aos novatos a obtenção de informações em um piscar de olhos. Veja exemplos em [`drake` repo](https://github.com/ropensci/drake) e em [`qualtRics` repo](https://github.com/ropensci/qualtRics/). As seções possíveis são
+- Se o seu README tiver muitos selos, considere ordená-los em uma tabela HTML para facilitar a obtenção de informações. Veja exemplos no [repositórion`drake`](https://github.com/ropensci/drake) e no [repositório `qualtRics`](https://github.com/ropensci/qualtRics/). As seções possíveis são:
   
   - Desenvolvimento (status de CI cf [Capítulo do IC](#ci) canal do Slack para discussão, repostatus)
   - Lançamento/Publicado ([Crachás de versão do CRAN e data de lançamento do METACRAN](https://www.r-pkg.org/services#badges), [CRAN verifica o selo da API](https://github.com/r-hub/cchecksbadges), selo Zenodo)
