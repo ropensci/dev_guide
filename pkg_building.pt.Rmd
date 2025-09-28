@@ -274,7 +274,7 @@ Outros usaram a opção para escapar de alguns URLs (alterar `<https://ropensci.
 
 ## Site de documentação {#website}
 
-Recomendamos a criação de um site de documentação para seu pacote usando [`pkgdown`](https://github.com/r-lib/pkgdown). O livro de pacotes do R apresenta um [capítulo sobre pkgdown](https://r-pkgs.org/website.html) e, é claro `pkgdown` tem [seu próprio site de documentação](https://pkgdown.r-lib.org/).
+Recomendamos a criação de um site de documentação para seu pacote usando o pacote [`pkgdown`](https://github.com/r-lib/pkgdown). O livro *R packages* (em inglês) apresenta um [capítulo sobre pkgdown](https://r-pkgs.org/website.html) e também o `pkgdown` tem [seu próprio site de documentação](https://pkgdown.r-lib.org/).
 
 Há alguns elementos que gostaríamos de destacar aqui.
 
