@@ -112,7 +112,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Se um dia [**depois de** revisão na rOpenSci](#authors-guide) se você publicar um software sobre seu pacote, adicione-o ao arquivo CITATION.
 
-- Menos relacionado ao seu pacote em si, mas ao que o suporta: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre os usuários de como citar esse recurso por meio de, por exemplo `citHeader()`. [Talvez até mesmo adicione a referência do recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
+- Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, `citHeader()`. [Talvez até mesmo adicione a referência do recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
 
 Como exemplo, veja [o arquivo CITATION do dynamite](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) que faz referência ao manual do R, bem como a outras publicações associadas.
 
