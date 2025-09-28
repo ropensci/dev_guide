@@ -231,7 +231,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 ### roxygen2 use {#roxygen-2-use}
 
-- Solicitamos que todos os envios usem [roxygen2](https://roxygen2.r-lib.org/) para a documentação. roxygen2 é um pacote R que compila `.Rd` para o seu arquivo `man` em seu pacote a partir de tags escritas acima de cada função. O roxygen2 tem [suporte à sintaxe Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Uma das principais vantagens de usar o roxygen2 é que seu `NAMESPACE` sempre será gerado automaticamente e estará atualizado.
+- Solicitamos que todos os envios usem o [roxygen2](https://roxygen2.r-lib.org/) para a documentação. O roxygen2 é um pacote R que compila automaticamente os arquivos `.Rd` para a pasta `man` em seu pacote a partir de etiquetas escritas acima de cada função. O roxygen2 tem [suporte à sintaxe Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Uma das principais vantagens de usar o roxygen2 é que seu `NAMESPACE` sempre será gerado automaticamente e estará atualizado.
 
 - Mais informações sobre o uso da documentação do roxygen2 estão disponíveis na seção [livro de pacotes do R](https://r-pkgs.org/man.html) e em [próprio site do roxygen2](https://roxygen2.r-lib.org/).
 
