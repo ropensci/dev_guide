@@ -209,7 +209,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Se houver possível sobreposição ou confusão com outros pacotes que forneçam funcionalidade semelhante ou que tenham um nome semelhante, adicione uma nota no README, na vinheta principal e, potencialmente, no campo Descrição do DESCRIPTION. Exemplos em [README do rtweet](https://docs.ropensci.org/rtweet/), [README do rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird) e o pacote [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs) (que não é parte da rOpenSci).
 
-- O pacote deve conter documentação de nível superior para `?foobar`(ou ``?`foobar-package` `` se houver um conflito de nomes). Opcionalmente, você pode usar ambos `?foobar` e ``?`foobar-package` `` para o arquivo de manual no nível do pacote, usando `@aliases` tag roxygen. [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adiciona o modelo para a documentação de nível superior.
+- O pacote deve conter documentação geral para `?pacote`(ou ``?`pacote-package` `` se houver um conflito de nomes). Opcionalmente, você pode usar ambos `?pacote e ``?`pacote-package` `` para o arquivo de manual do pacote, usando a etiqueta`@aliases` do roxygen. [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adiciona o modelo para a documentação geral.
 
 - O pacote deve conter pelo menos um **HTML** que ofereça uma cobertura substancial das funções do pacote, ilustrando casos de uso realistas e como as funções devem interagir. Se o pacote for pequeno, a vinheta e o README poderão ter conteúdo muito semelhante.
 
