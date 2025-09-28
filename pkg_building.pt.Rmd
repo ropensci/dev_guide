@@ -195,7 +195,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Considere o uso de `usethis::use_readme_rmd()` para obter um modelo para um arquivo `README.Rmd` e para configurar automaticamente um gancho de pré-compromisso para garantir que o arquivo `README.md` seja sempre mais recente que `README.Rmd`.
 
-- Exemplos extensos devem ser mantidos para uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
+- Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
 
 - Adicionar um [código de conduta e diretrizes de contribuição](#friendlyfiles).
 
