@@ -180,7 +180,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Se o seu README tiver muitos selos, considere ordená-los em uma tabela HTML para facilitar a obtenção de informações. Veja exemplos no [repositórion`drake`](https://github.com/ropensci/drake) e no [repositório `qualtRics`](https://github.com/ropensci/qualtRics/). As seções possíveis são:
   
-  - Desenvolvimento (status de CI cf [Capítulo do IC](#ci) canal do Slack para discussão, repostatus)
+  - Desenvolvimento (status de integração contínua (CI), ver o [Capítulo sobre CI](#ci), canal do Slack para discussão, repostatus)
   - Lançamento/Publicado ([Crachás de versão do CRAN e data de lançamento do METACRAN](https://www.r-pkg.org/services#badges), [CRAN verifica o selo da API](https://github.com/r-hub/cchecksbadges), selo Zenodo)
   - Estatísticas/Uso (downloads, por exemplo [baixar emblemas do r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
     A tabela deve ser mais larga do que longa para mascarar o restante do README.
