@@ -199,7 +199,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Adicionar um [código de conduta e diretrizes de contribuição](#friendlyfiles).
 
-- Veja o [`gistr` LEIAME](https://github.com/ropensci/gistr#gistr) para um bom exemplo de README a ser seguido em um pacote pequeno, e [`bowerbird` README](https://github.com/ropensci/bowerbird) para um bom exemplo de README para um pacote maior.
+- Veja o [README do pacote `gistr`](https://github.com/ropensci/gistr#gistr) para um bom exemplo de README a ser seguido em um pacote pequeno, e [o README do pacote `bowerbird`](https://github.com/ropensci/bowerbird) para um bom exemplo de README para um pacote maior.
 
 ## Documentação {#documentation}
 
