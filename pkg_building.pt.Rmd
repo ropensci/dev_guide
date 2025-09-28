@@ -284,7 +284,7 @@ Você só precisa se preocupar com a implementação automática (*automatic dep
 
 *Se as vinhetas do seu pacote precisarem de credenciais (chaves de API, tokens, etc.) para serem ativadas, talvez você queira [pré-computá-las](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) já que as credenciais não podem ser usadas no servidor de documentos.*
 
-Antes do envio e da transferência, você pode usar o comando [documentada por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) ou a abordagem [`tic` pacote](https://docs.ropensci.org/tic/) para a implantação automática do site do pacote. Isso evitaria o incômodo de executar (e lembrar de executar) `pkgdown::build_site()` toda vez que o site precisar ser atualizado. Primeiro, consulte nosso [capítulo sobre integração contínua](#ci) se você não estiver familiarizado com a integração contínua. De qualquer forma, não se esqueça de atualizar todas as ocorrências do URL do site após a transferência para a organização ropensci.
+Antes do envio e da transferência do pacote, você pode usar a [abordagem documentada por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) ou o [pacote `tic`](https://docs.ropensci.org/tic/) para a implantação automática do site do pacote. Isso evitaria o incômodo de executar (e lembrar de executar) `pkgdown::build_site()` toda vez que o site precisar ser atualizado. Primeiro, consulte nosso [capítulo sobre integração contínua](#ci) se você não estiver familiarizado com a integração contínua. De qualquer forma, não se esqueça de atualizar todas as ocorrências do URL do site após a transferência para a organização ropensci.
 
 ### Idioma
 
