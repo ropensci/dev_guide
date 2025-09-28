@@ -243,7 +243,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 ```{r, eval=FALSE}
 f <- function(a = TRUE) {
-  # function code
+  # código da função
 }
 ```
 
