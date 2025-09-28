@@ -225,7 +225,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 - Se o seu pacote fornecer acesso a uma fonte de dados, exigimos que o arquivo DESCRIPTION contenha (1) uma breve identificação e/ou descrição da organização responsável pela emissão dos dados; e (2) o URL com link para uma página pública que forneça, descreva ou permita o acesso aos dados (que muitas vezes pode ser diferente do URL que leva diretamente à fonte de dados).
 
-- Use mensagens de inicialização de pacote somente quando necessário (mascaramento de função, por exemplo). Evite mensagens de inicialização de pacotes como "This is foobar 2.4-0" ou orientação de citação, pois elas podem ser irritantes para o usuário. Confie na documentação para obter essa orientação.
+- Use mensagens de inicialização de pacote somente quando necessário (mascaramento de função, por exemplo). Evite mensagens de inicialização de pacotes como "Esse é o pacote 2.4-0" ou orientação de citação, pois elas podem ser irritantes para quem o utiliza. Confie na documentação para obter essa orientação.
 
 - Você pode optar por ter uma seção README sobre casos de uso do seu pacote (outros pacotes, publicações em blogs etc.), [exemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
 
