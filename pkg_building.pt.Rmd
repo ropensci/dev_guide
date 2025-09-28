@@ -186,7 +186,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
     A tabela deve ser mais larga do que longa para mascarar o restante do README.
 
 - Se o seu pacote se conectar a uma fonte de dados ou serviço on-line, ou envolver outro software, considere que o README do seu pacote pode ser o ponto de partida de quem usa o utiliza pela primeira vez.  Ele deve fornecer informações suficientes para entender a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes. Por exemplo,
-  um LEIAME não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir,
+  um README não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir,
   "..., um repositório on-line de avistamentos de Goober na América do Sul.  Mais
   informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados
   podem ser encontrados em *link*".
