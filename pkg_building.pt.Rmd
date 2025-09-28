@@ -263,7 +263,7 @@ f <- function(a = TRUE) {
 
 Para documentar a interface do seu pacote, talvez seja necessário usar conjuntos de dados de exemplo.
 Você pode usar conjuntos de dados básicos do R (no pacote datasets), como `penguins`, ou [redistribuir e documentar os dados](https://r-pkgs.org/data.html) com as devidas atribuições.
-Tenha o cuidado de escolher dados que estejam em conformidade com as [código de conduta da rOpenSci](https://ropensci.org/code-of-conduct/) e que, em geral, não sejam prejudiciais ou alienantes para ninguém.
+Tenha o cuidado de escolher dados que estejam em conformidade com o [código de conduta da rOpenSci](https://ropensci.org/code-of-conduct/) e que, em geral, não sejam prejudiciais ou alienantes para ninguém.
 
 ### URLs na documentação {#ur-ls-in-documentation}
 
