@@ -193,7 +193,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Recomendamos não criar o `README.md` diretamente, mas a partir de um `README.Rmd` (um arquivo R Markdown) se você tiver algum código de demonstração. A vantagem do `.Rmd` é que você pode combinar texto com código que pode ser facilmente atualizado sempre que seu pacote for atualizado.
 
-- Considere o uso de `usethis::use_readme_rmd()` para obter um modelo para um arquivo `README.Rmd` e para configurar automaticamente um gancho de pré-compromisso para garantir que o arquivo `README.md` seja sempre mais recente que `README.Rmd`.
+- Considere o uso da função `usethis::use_readme_rmd()` para obter um modelo para o arquivo `README.Rmd` e para configurar automaticamente uma verificação para garantir que o arquivo `README.md` seja sempre mais recente que o `README.Rmd` antes de fazer um commit.
 
 - Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
 
