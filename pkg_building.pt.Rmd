@@ -100,7 +100,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Você pode optar por usar `=` ao invés de `<-` desde que seja consistente com uma escolha em seu pacote. Recomendamos evitar o uso de `->` para atribuição em um pacote. Se você usar `<-` em seu pacote e também usar `R6` nesse pacote, você será forçado a usar `=` para atribuição em seu `R6Class` - isso não é considerado uma inconsistência porque você não pode usar `<-` nesse caso.
 
-- Você pode usar o [pacote lintr](https://lintr.r-lib.org/index.html) para identificar algumas possíveis áreas de aprimoramento. [Exemplo de fluxo de trabalho](https://masalmon.eu/2024/08/28/lintr-3-steps/).
+- Você pode usar o [pacote lintr](https://lintr.r-lib.org/index.html) para identificar algumas possíveis áreas de melhoria. [Exemplo de fluxo de trabalho](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## Arquivo CITATION {#citation-file}
 
