@@ -219,7 +219,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 - A funcionalidade que provavelmente será usada apenas para desenvolvimento mais avançado pode ser melhor colocada em uma vinheta separada (por exemplo, a programação usando NSE (*non-standard evaluation*) com dplyr).
 
-- O LEIAME, a documentação de nível superior do pacote, as vinhetas, os sites etc. devem ter informações suficientes no início para obter uma visão geral de alto nível do pacote e dos serviços/dados aos quais ele se conecta e fornecer navegação para outras partes relevantes da documentação. Isso é para seguir o princípio de *vários pontos de entrada* ou seja, levar em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro que o usuário tem com o pacote e/ou com a ferramenta/dados que ele envolve.
+- O README, a documentação geral do pacote, as vinhetas, os sites etc. devem ter informações suficientes no início para obter uma visão geral de alto nível do pacote e dos serviços/dados aos quais ele se conecta e fornecer navegação para outras partes relevantes da documentação. Isso é para seguir o princípio de *vários pontos de entrada* ou seja, levar em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro que alguém tem com o pacote e/ou com a ferramenta/dados que ele envolve.
 
 - A(s) vinheta(s) deve(m) incluir citações de software e documentos, quando apropriado.
 
