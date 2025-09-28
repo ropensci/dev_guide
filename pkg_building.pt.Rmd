@@ -155,7 +155,7 @@ bibentry(
 
 - Você também pode criar e armazenar um `CITATION.cff` graças ao [pacote cffr](https://docs.ropensci.org/cffr/). Ele também fornece um [fluxo de trabalho do GitHub Action](https://docs.ropensci.org/cffr/reference/cff_gha_update.html) para manter o `CITATION.cff` atualizado.
 
-## LEIAME {#readme}
+## README {#readme}
 
 - Todos os pacotes devem ter um arquivo README, denominado `README.md` na raiz do repositório. O README deve incluir, de cima para baixo:
   
