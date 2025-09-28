@@ -239,7 +239,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 - Todas as funções devem documentar o tipo de objeto retornado com a etiqueta `@return`.
 
-- O valor padrão de cada parâmetro deve ser claramente documentado. Por exemplo, em vez de escrever `A logical value determining if ...`, você deve escrever ``A logical value (default `TRUE`) determining if ...``. Também é uma boa prática indicar os valores padrão diretamente em sua definição de função:
+- O valor padrão de cada parâmetro deve ser claramente documentado. Por exemplo, em vez de escrever "Um valor lógico que determina se ...", você deve escrever "Um valor lógico (por padrão `TRUE`) que determina se ...".  Também é uma boa prática indicar os valores padrão diretamente na definição da função:
 
 ```{r, eval=FALSE}
 f <- function(a = TRUE) {
