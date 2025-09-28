@@ -166,7 +166,7 @@ bibentry(
   - Qualquer configuração adicional necessária (tokens de autenticação, etc.).
   - Breve demonstração de uso.
   - Se aplicável, como o pacote se compara a outros pacotes semelhantes e/ou como ele se relaciona com outros pacotes.
-  - Informações de citação, ou seja, direcione os usuários para a citação preferida no LEIAME adicionando o texto padrão "aqui está como citar meu pacote". Veja, por exemplo [ecmwfr LEIAME](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
+  - Informações de citação, ou seja, direcione a forma de citação preferida no README adicionando o texto padrão "aqui está como citar meu pacote". Veja, por exemplo [o README do pacote ecmwfr](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
 
 Se você usar outro selo de status de repo, como um [ciclo de vida](https://www.tidyverse.org/lifecycle/) adicione também um emblema [repostatus.org](https://www.repostatus.org/) emblema. [Exemplo de um README de repositório com dois selos de status de repositório](https://github.com/ropensci/ijtiff#ijtiff-).
 
