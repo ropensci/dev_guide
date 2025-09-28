@@ -110,7 +110,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione a tag [DOI principal do Zenodo](https://help.zenodo.org/#versioning) ao arquivo CITATION.
 
-- Se um dia [**depois de** revisão na rOpenSci](#authors-guide) se você publicar um software sobre seu pacote, adicione-o ao arquivo CITATION.
+- Se um dia [**depois de** revisão na rOpenSci](#authors-guide) você publicar um artigo sobre seu pacote, adicione-o ao arquivo CITATION.
 
 - Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, `citHeader()`. [Talvez até mesmo adicione a referência do recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
 
