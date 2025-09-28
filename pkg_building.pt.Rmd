@@ -106,7 +106,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Se o seu pacote ainda não tiver um arquivo CITATION, você poderá criar um com `usethis::use_citation()` e preenchê-lo com os valores gerados pela função `citation()`.
 
-- O CRAN exige que os arquivos CITATION sejam declarados como [`bibentry` itens](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html) e não na forma previamente aceita de [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
+- O CRAN exige que os arquivos CITATION sejam declarados como [itens `bibentry`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html) e não na forma previamente aceita de [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
 
 - Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione a tag [DOI de nível superior do Zenodo](https://help.zenodo.org/#versioning) ao arquivo CITATION.
 
