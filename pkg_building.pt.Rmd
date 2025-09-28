@@ -237,7 +237,7 @@ A vinheta geral deve apresentar uma série de exemplos que progridam em complexi
 
 - Se você estivesse escrevendo o `.Rd` diretamente sem o roxygen2, o [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contém funções para converter o `.Rd` em documentação do roxygen.
 
-- Todas as funções devem documentar o tipo de objeto retornado na função `@return` título.
+- Todas as funções devem documentar o tipo de objeto retornado com a etiqueta `@return`.
 
 - O valor padrão de cada parâmetro deve ser claramente documentado. Por exemplo, em vez de escrever `A logical value determining if ...`, você deve escrever ``A logical value (default `TRUE`) determining if ...``. Também é uma boa prática indicar os valores padrão diretamente em sua definição de função:
 
