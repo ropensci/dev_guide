@@ -257,7 +257,7 @@ f <- function(a = TRUE) {
 
 - A partir da versão 7.0.0 do roxygen2, as classes `R6` são oficialmente suportadas. Consulte a [documentação do roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para obter detalhes sobre como documentar classes `R6`.
 
-- Ainda não há suporte para o fornecimento de páginas de manual em diferentes idiomas, mas há um progresso interessante no projeto [pacote rhelpi18n R](https://github.com/eliocamp/rhelpi18n).
+- Ainda não há suporte para o fornecimento de páginas de manual em diferentes idiomas, mas há um progresso interessante no projeto de [pacote em R rhelpi18n](https://github.com/eliocamp/rhelpi18n).
 
 ### Exemplos de conjuntos de dados {#example-datasets}
 
