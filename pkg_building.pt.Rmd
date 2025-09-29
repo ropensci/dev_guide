@@ -328,7 +328,7 @@ Se você achar que as pessoas que revisaram fizeram uma contribuição substanci
 
 ```
     person("Bea", "Hernández", role = "rev",
-    comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
+    comment = "Bea revisou o pacote (v. X.X.XX) para rOpenSci, veja <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
 Somente inclua revisores depois de pedir seu consentimento.
