@@ -308,7 +308,7 @@ Você pode tornar os nomes de (algumas) das pessoas autoras clicáveis, adiciona
 
 ### Ajustando a barra de navegação {#tweaking-the-navbar}
 
-Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a barra de navegação, consulte [`pkgdown` documentação](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). Em particular, observe que, se você nomear a vinheta principal de seu pacote como "pkg-name.Rmd", ela poderá ser acessada na barra de navegação como um `Get started` em vez de via `Articles > Vignette Title`.
+Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a barra de navegação, consulte [a documentação do `pkgdown`](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). Em particular, observe que, se você nomear a vinheta principal de seu pacote como "pkg-name.Rmd", ela poderá ser acessada na barra de navegação como `Para começar` (*Get started*) em vez de via `Artigos > Título da vinheta` (*Articles > Vignette Title*).
 
 ### Renderização matemática {#mathjax}
 
