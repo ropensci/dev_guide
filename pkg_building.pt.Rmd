@@ -324,7 +324,7 @@ Se o seu pacote não tiver um logotipo, o [construtor de documentos da rOpenSci]
 
 O arquivo DESCRIPTION de um pacote deve listar as pessoas que participaram da autoria e que colaboraram com o pacote, usando o parâmetro `Authors@R` para indicar suas funções (*author*/*creator*/*contributor*, etc.) e usando o campo de comentário para indicar o [ID do ORCID](https://ropensci.org/technotes/2018/10/08/orcid/) de cada pessoa e o [ID ROR](https://ropensci.org/blog/2025/05/09/ror/) de cada organização, se houver.
 Veja [esta seção de "Escrevendo extensões R"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para obter detalhes.  
-Se você achar que os revisores fizeram uma contribuição substancial para o desenvolvimento do seu pacote, poderá listá-los na seção `Authors@R` com um tipo de contribuidor Revisor (`"rev"`), da seguinte forma:
+Se você achar que as pessoas que revisaram fizeram uma contribuição substancial para o desenvolvimento do seu pacote, poderá listá-los na seção `Authors@R` com o tipo de contribuição `"rev"`, da seguinte forma:
 
 ```
     person("Bea", "Hernández", role = "rev",
