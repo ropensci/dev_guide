@@ -292,7 +292,7 @@ Se a documentação do seu pacote estiver escrita em um idioma diferente do ingl
 
 Porém, [ainda não é possível obter um site pkgdown multilíngue](https://github.com/r-lib/pkgdown/issues/2258) diretamente.
 
-### Funções de agrupamento na referência {#function-grouping}
+### Agrupamento de funções no índice {#function-grouping}
 
 Quando seu pacote tiver muitas funções, use o agrupamento na referência, o que pode ser feito de forma mais ou menos automática.
 
