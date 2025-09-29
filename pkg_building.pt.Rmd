@@ -318,7 +318,7 @@ Nosso modelo é compatível com essa configuração.
 ### Logotipo do pacote {#package-logo}
 
 Para usar o logotipo de seu pacote na página inicial do pkgdown, consulte [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
-Se o seu pacote não tiver um logotipo, a opção [construtor de documentos do rOpenSci](#docsropensci) usará o logotipo do rOpenSci em seu lugar.
+Se o seu pacote não tiver um logotipo, o [construtor de documentos da rOpenSci](#docsropensci) usará o logotipo da rOpenSci em seu lugar.
 
 ## Autoria {#authorship}
 
