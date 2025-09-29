@@ -299,7 +299,7 @@ Quando seu pacote tiver muitas funções, use o agrupamento na referência, o qu
 Se você usa o roxygen2 acima da versão 6.1.1, deve usar a tag `@family` na documentação de suas funções para indicar o agrupamento. Isso lhe dará links entre as funções na documentação local do pacote instalado (seção *"See also"*) *e* permitirá que você use a função `has_concept` do pacote `pkgdown` no arquivo de configuração do seu site. Exemplo não relacionado a rOpenSci, cortesia de [`optiRum`](https://github.com/lockedata/optiRum): [tag family](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [arquivo de configuração do `pkgdown`](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) e [seção no índice resultante](https://itsalocke.com/optirum/reference/).
 Para personalizar o texto do título da referência cruzada criada pelo roxygen2 (`Other {family}:`), consulte [a documentação do roxygen2 sobre como fornecer uma lista `rd_family_title` no arquivo `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
 
-De forma menos automática, veja o exemplo de [`drake` site](https://docs.ropensci.org/drake/) e [arquivo de configuração associado
+De forma menos automática, veja o exemplo do [website do pacote `drake`](https://docs.ropensci.org/drake/) e [arquivo de configuração associado
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
 ### Marca dos autores {#branding-of-authors}
