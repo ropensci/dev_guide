@@ -332,7 +332,7 @@ Se você achar que as pessoas que revisaram fizeram uma contribuição substanci
 ```
 
 Somente inclua revisores(as) depois de pedir seu consentimento.
-Leia mais nesta postagem do blog ["Agradecendo a seus revisores: Gratidão por meio de metadados semânticos"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
+Leia mais nesta postagem do blog [*Thanking Your Reviewers: Gratitude through Semantic Metadata* ("Agradecendo as revisões: Gratidão por meio de metadados semânticos")](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
 Não liste os editores como colaboradores.
 Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!
 
