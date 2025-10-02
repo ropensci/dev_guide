@@ -407,7 +407,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
   o uso de dependências reduz o esforço de codificação e pode se basear em funcionalidades úteis desenvolvidas por
   outros, especialmente se a dependência executar tarefas complexas e tiver alto desempenho,
   e/ou for bem avaliada e testada. Por outro lado, ter muitas dependências
-  sobrecarrega o mantenedor para acompanhar as alterações nesses pacotes, correndo o risco de
+  sobrecarrega a pessoa mantenedora ao ter que acompanhar as alterações nesses pacotes, arriscando
   para a sustentabilidade de longo prazo do seu pacote.  Isso também
   aumenta o tempo e o tamanho da instalação, o que leva em consideração principalmente o seu ciclo de desenvolvimento e o de outras pessoas, bem como os sistemas de compilação automatizados. Pacotes "pesados" - aqueles com muitas dependências e aqueles com grandes quantidades de código compilado - aumentam esse custo.
 
