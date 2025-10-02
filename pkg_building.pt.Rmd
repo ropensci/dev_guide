@@ -413,12 +413,10 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - As abordagens para reduzir as dependências incluem:
   
-  - Funções pequenas e simples de um pacote de dependências podem ser melhor copiadas para
-    seu próprio pacote se a dependência for usada somente para algumas funções
-    em uma dependência grande ou pesada.  (Consulte [*Autoria* seção
-    acima](#authorship-included-code) para saber como reconhecer os autores originais
-    do código copiado). Por outro lado, funções complexas com muitas bordas
-    casos extremos (por exemplo, analisadores) exigem testes e verificações consideráveis.
+  - Se você usar apenas algumas funções de uma dependência grande ou pesada, poderá copiá-las para seu próprio pacote.  (Consulte [a seção *Autoria*
+    acima](#authorship-included-code) para saber como reconhecer a autoria original
+    do código copiado). Por outro lado, funções complexas com muitos 
+    casos especiais (por exemplo, analisadores sintáticos) exigem testes e verificações consideráveis.
     
     - Um exemplo comum disso é o retorno de "tibbles" no estilo tidyverse do pacote
       que fornecem dados.
