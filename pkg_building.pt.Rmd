@@ -358,7 +358,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 ## Testes {#testing}
 
-- Todos os pacotes devem ser aprovados `R CMD check`/`devtools::check()` em todas as principais plataformas.
+- Todos os pacotes devem passar nas verificações do `R CMD check`/`devtools::check()` em todas as principais plataformas.
 
 - Todos os pacotes devem ter um conjunto de testes que abranja a funcionalidade principal do pacote. Os testes também devem abranger o comportamento do pacote em caso de erros.
 
