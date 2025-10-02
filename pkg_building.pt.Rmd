@@ -397,7 +397,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Para proteger os exemplos (por exemplo, exigir autenticação) a serem executados no CRAN, você precisa usar `\dontrun{}`. No entanto, para uma primeira submissão, o CRAN não permitirá que você tenha todos os exemplos escapados. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo ou envolver o código de exemplo em `try()`. Consulte também a seção `@exampleIf` presente, no momento em que este artigo foi escrito, na versão de desenvolvimento do roxygen2.
 
-- Além de executar exemplos localmente em seu próprio computador, é altamente recomendável que você execute exemplos em um dos [sistemas de integração contínua](#ci). Mais uma vez, os exemplos que não são agrupados em `\dontrun{}` ou `\donttest{}` serão executados, mas para aqueles que são, você pode configurar suas compilações de integração contínua para executá-los por meio dos argumentos de verificação do R CMD `--run-dontrun` e/ou `--run-donttest`.
+- Além de executar exemplos localmente em seu próprio computador, é altamente recomendável que você execute exemplos em um dos [sistemas de integração contínua](#ci). Mais uma vez, os exemplos que não estão incluídos em `\dontrun{}` ou `\donttest{}` serão executados, mas para aqueles que estão, você pode configurar suas compilações de integração contínua para executá-los por meio dos argumentos de verificação do R CMD `--run-dontrun` e/ou `--run-donttest`.
 
 ## Dependências de pacotes {#pkgdependencies}
 
