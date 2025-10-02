@@ -336,7 +336,7 @@ Leia mais nesta postagem do blog [*Thanking Your Reviewers: Gratitude through Se
 Não liste os editores como colaboradores.
 Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!
 
-### Autoria do código incluído {#authorship-included-code}
+### Autoria do código incluído no pacote {#authorship-included-code}
 
 Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou funções individuais forem incluídos de outros pacotes, os pacotes rOpenSci devem seguir [o CRAN *Política de Repositório*](https://cran.r-project.org/web/packages/policies.html):
 
