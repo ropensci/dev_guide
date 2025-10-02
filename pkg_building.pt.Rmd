@@ -387,7 +387,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Depois de configurar a [integração contínua (CI)](#ci) use o relatório de cobertura de código do seu pacote (veja [esta seção do nosso livro](#coverage)) para identificar linhas não testadas e adicionar mais testes.
 
-- Mesmo que você use [integração contínua](#ci) recomendamos que você execute testes localmente antes de enviar seu pacote (talvez seja necessário definir `Sys.setenv(NOT_CRAN="true")`).
+- Mesmo que você use a [integração contínua](#ci), recomendamos que você execute testes localmente antes de enviar seu pacote (talvez seja necessário definir `Sys.setenv(NOT_CRAN="true")`).
 
 ## Exemplos {#examples}
 
