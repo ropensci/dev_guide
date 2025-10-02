@@ -366,7 +366,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Recomendamos o uso do [pacote testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é o [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
 
-- Esforce-se para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e para *defensivamente* e codificar defensivamente contra elas. [Mais informações](https://r-pkgs.org/tests.html).
+- Se esforce para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e programe *defensivamente* contra essas falhas. [Mais informações sobre testes](https://r-pkgs.org/tests.html).
 
 - Os testes devem ser fáceis de entender e tão autônomos quanto possível. Ao usar o testthat, evite usar código fora do `test_that()` (como etapas de pré-processamento). Recomendamos a leitura da seção [princípios de alto nível para testes](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) no livro R Packages.
 
