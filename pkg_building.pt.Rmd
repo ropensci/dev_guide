@@ -374,7 +374,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Para testar as funções que criam gráficos, sugerimos usar o [vdiffr](https://vdiffr.r-lib.org/), uma extensão do pacote testthat que se baseia em [testes com snapshots do testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
-- Se o seu pacote interagir com recursos da Web (APIs da Web e outras fontes de dados na Web), você poderá encontrar a opção [Livro HTTP testing in R, de Scott Chamberlain e Maëlle Salmon](https://books.ropensci.org/http-testing/) relevante. Pacotes que ajudam nos testes de HTTP (clientes HTTP correspondentes):
+- Se o seu pacote interagir com recursos da Web (APIs da Web e outras fontes de dados na Web), você poderá achar o livro [*HTTP testing in R*, de Scott Chamberlain e Maëlle Salmon](https://books.ropensci.org/http-testing/) relevante. Alguns pacotes que ajudam nos testes de HTTP (e seus clientes HTTP correspondentes) são:
   
   - [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
   - [httptest](https://enpiar.com/r/httptest/) ([httr](https://httr.r-lib.org/));
