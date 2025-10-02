@@ -338,7 +338,7 @@ Sua participação e contribuição para a rOpenSci já são agradecimentos sufi
 
 ### Autoria do código incluído no pacote {#authorship-included-code}
 
-Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou funções individuais forem incluídos de outros pacotes, os pacotes rOpenSci devem seguir [o CRAN *Política de Repositório*](https://cran.r-project.org/web/packages/policies.html):
+Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou funções individuais forem incluídos de outros pacotes, os pacotes rOpenSci devem seguir [a *Política de Repositório* do CRAN](https://cran.r-project.org/web/packages/policies.html):
 
 > A propriedade dos direitos autorais e de propriedade intelectual de todos os componentes do pacote deve ser clara e inequívoca (inclusive a partir da especificação dos autores no arquivo DESCRIPTION). Quando o código for copiado (ou derivado) do trabalho de outros (inclusive do próprio R), deve-se tomar cuidado para que quaisquer declarações de direitos autorais/licenças sejam preservadas e a autoria não seja deturpada.
 > 
