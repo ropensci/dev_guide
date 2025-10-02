@@ -381,7 +381,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
   - [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
   - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://jeroen.r-universe.dev/curl#)).
 
-- testthat tem uma função `skip_on_cran()` que você pode usar para não executar testes no CRAN. Recomendamos usar isso em todas as funções que são chamadas de API, pois é muito provável que elas falhem no CRAN. Esses testes ainda devem ser executados na integração contínua. Observe que a partir do testthat 3.1.2 `skip_if_offline()` chama automaticamente `skip_on_cran()`. Mais informações sobre [Preparação do CRAN para wrappers de API](https://books.ropensci.org/http-testing/cran-preparedness.html).
+- O pacote testthat tem uma função `skip_on_cran()` que você pode usar para não executar testes no CRAN. Recomendamos usar isso em todas as funções que são chamadas de API, pois é muito provável que elas falhem no CRAN. Esses testes ainda devem ser executados na integração contínua. Observe que a partir do testthat 3.1.2 `skip_if_offline()` chama automaticamente `skip_on_cran()`. Mais informações sobre em [*CRAN preparedness for API wrappers*  (Preparação do CRAN para utilização de APIs)](https://books.ropensci.org/http-testing/cran-preparedness.html).
 
 - Se o seu pacote interagir com um banco de dados, você poderá encontrar [dittodb](https://docs.ropensci.org/dittodb) útil.
 
