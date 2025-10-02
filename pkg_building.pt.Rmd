@@ -331,7 +331,7 @@ Se você achar que as pessoas que revisaram fizeram uma contribuição substanci
     comment = "Bea revisou o pacote (v. X.X.XX) para rOpenSci, veja <https://github.com/ropensci/software-review/issues/116>"),
 ```
 
-Somente inclua revisores depois de pedir seu consentimento.
+Somente inclua revisores(as) depois de pedir seu consentimento.
 Leia mais nesta postagem do blog ["Agradecendo a seus revisores: Gratidão por meio de metadados semânticos"](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
 Não liste os editores como colaboradores.
 Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!
