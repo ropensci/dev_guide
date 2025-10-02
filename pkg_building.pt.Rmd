@@ -160,7 +160,7 @@ bibentry(
 - Todos os pacotes devem ter um arquivo README, denominado `README.md` na raiz do repositório. O README deve incluir, de cima para baixo:
   
   - O nome do pacote.
-  - Distintivos para integração contínua e cobertura de testes, o distintivo para revisão por pares do rOpenSci assim que ele for iniciado (veja abaixo), um distintivo do repostatus.org e quaisquer outros distintivos (por exemplo [R-universo](https://docs.r-universe.dev/publish/set-up.html#document-install)).
+  - Selos (*badges*) para integração contínua e cobertura de testes, o selo para revisão por pares da rOpenSci assim que ele for iniciado (veja abaixo), um selo do repostatus.org e quaisquer outros selos (por exemplo do [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
   - Uma breve descrição dos objetivos do pacote (o que ele faz? por que seria interessante usá-lo?), com links descritivos para todas as vinhetas (*vignettes*), a menos que o pacote seja pequeno e haja apenas uma vinheta repetindo o README.  Certifique-se também de que as vinhetas sejam renderizadas e legíveis, consulte [a seção "site de documentação"](#website)).
   - Instruções de instalação usando, por exemplo, o [pacote remotes](https://remotes.r-lib.org/), [pacote pak](https://pak.r-lib.org/) ou [R-universe](https://docs.r-universe.dev/publish/set-up.html).
   - Qualquer configuração adicional necessária (tokens de autenticação, etc.).
