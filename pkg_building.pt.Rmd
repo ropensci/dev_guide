@@ -372,7 +372,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Os pacotes com aplicativos Shiny devem usar uma estrutura de testes unitários, como [`shinytest2`](https://rstudio.github.io/shinytest2/) ou [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para testar se as interfaces interativas se comportam conforme o esperado.
 
-- Para testar suas funções que criam gráficos, sugerimos usar [vdiffr](https://vdiffr.r-lib.org/) uma extensão do pacote testthat que se baseia em [testes de snapshot do testthat](https://testthat.r-lib.org/articles/snapshotting.html).
+- Para testar as funções que criam gráficos, sugerimos usar o [vdiffr](https://vdiffr.r-lib.org/), uma extensão do pacote testthat que se baseia em [testes com snapshots do testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
 - Se o seu pacote interagir com recursos da Web (APIs da Web e outras fontes de dados na Web), você poderá encontrar a opção [Livro HTTP testing in R, de Scott Chamberlain e Maëlle Salmon](https://books.ropensci.org/http-testing/) relevante. Pacotes que ajudam nos testes de HTTP (clientes HTTP correspondentes):
   
