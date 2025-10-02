@@ -393,7 +393,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Inclua exemplos abrangentes na documentação. Além de demonstrar como usar o pacote, eles podem funcionar como uma maneira fácil de testar a funcionalidade do pacote antes de haver testes adequados. No entanto, lembre-se de que exigimos testes em pacotes contribuídos.
 
-- Você pode executar exemplos com `devtools::run_examples()`. Observe que quando você executa o R CMD CHECK ou equivalente (por exemplo, `devtools::check()`), seus exemplos que não estão incluídos no `\dontrun{}` ou `\donttest{}` são executados. Consulte a seção [tabela de resumo](https://roxygen2.r-lib.org/articles/rd.html#functions) nos documentos do roxygen2.
+- Você pode executar exemplos com `devtools::run_examples()`. Observe que quando você executa o R CMD CHECK ou equivalente (por exemplo, `devtools::check()`), seus exemplos que não estão incluídos no `\dontrun{}` ou `\donttest{}` são executados. Consulte a seção [tabela de resumo](https://roxygen2.r-lib.org/articles/rd.html#functions) na documentação do roxygen2.
 
 - Para proteger os exemplos (por exemplo, exigir autenticação) a serem executados no CRAN, você precisa usar `\dontrun{}`. No entanto, para uma primeira submissão, o CRAN não permitirá que você tenha todos os exemplos escapados. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo ou envolver o código de exemplo em `try()`. Consulte também a seção `@exampleIf` presente, no momento em que este artigo foi escrito, na versão de desenvolvimento do roxygen2.
 
