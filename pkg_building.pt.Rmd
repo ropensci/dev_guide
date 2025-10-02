@@ -302,7 +302,7 @@ Para personalizar o texto do título da referência cruzada criada pelo roxygen2
 De forma menos automática, veja o exemplo do [website do pacote `drake`](https://docs.ropensci.org/drake/) e [arquivo de configuração associado
 ](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
 
-### Marca dos autores {#branding-of-authors}
+### Marca de autoria {#branding-of-authors}
 
 Você pode tornar os nomes de (algumas) das pessoas autoras clicáveis, adicionando um URL, e pode até mesmo substituir os nomes por um logotipo (pense na rOpenSci... ou na sua organização/empresa!). Veja [a documentação do `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
 
