@@ -364,7 +364,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. A cobertura de testes abaixo de 75% provavelmente exigirá testes adicionais ou explicações antes de ser enviada para revisão.
 
-- Recomendamos o uso de [testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
+- Recomendamos o uso do [pacote testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é o [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
 
 - Esforce-se para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e para *defensivamente* e codificar defensivamente contra elas. [Mais informações](https://r-pkgs.org/tests.html).
 
