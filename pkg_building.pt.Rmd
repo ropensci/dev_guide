@@ -370,7 +370,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Os testes devem ser fáceis de entender e ser tão autocontidos quanto possível. Ao usar o testthat, evite usar código fora do `test_that()` (como etapas de pré-processamento). Recomendamos a leitura da seção [*"high-level principles for testing"* (princípios de alto nível para testes)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) no *livro R Packages*.
 
-- Os pacotes com aplicativos Shiny devem usar uma estrutura de teste de unidade, como [`shinytest2`](https://rstudio.github.io/shinytest2/) ou [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para testar se as interfaces interativas se comportam conforme o esperado.
+- Os pacotes com aplicativos Shiny devem usar uma estrutura de testes unitários, como [`shinytest2`](https://rstudio.github.io/shinytest2/) ou [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para testar se as interfaces interativas se comportam conforme o esperado.
 
 - Para testar suas funções que criam gráficos, sugerimos usar [vdiffr](https://vdiffr.r-lib.org/) uma extensão do pacote testthat que se baseia em [testes de snapshot do testthat](https://testthat.r-lib.org/articles/snapshotting.html).
 
