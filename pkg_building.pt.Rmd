@@ -351,7 +351,7 @@ Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou fun
 ## Licença {#licence}
 
 O pacote precisa ter uma licença aceita pelo [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) ou [OSI](https://opensource.org/licenses).
-O [livro de pacotes do R](https://r-pkgs.org/description.html#sec-description-authors-at-r) inclui uma útil seção [seção sobre licenças](https://r-pkgs.org/license.html).
+O [livro *R packages* (em inglês)](https://r-pkgs.org/description.html#sec-description-authors-at-r) inclui uma seção útil [sobre licenças](https://r-pkgs.org/license.html).
 
 Se o seu pacote agrupar código de outras fontes, você também precisará reconhecer os autores do código original no seu arquivo DESCIPTION, geralmente com uma função de detentor de direitos autorais: `role = "cph"`.
 Para saber como atualizar seu arquivo DESCRIPTION, consulte a seção [livro de pacotes do R](https://r-pkgs.org/description.html#sec-description-authors-at-r).
