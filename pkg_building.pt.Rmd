@@ -342,7 +342,7 @@ Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou fun
 
 > A propriedade dos direitos autorais e de propriedade intelectual de todos os componentes do pacote deve ser clara e inequívoca (inclusive a partir da especificação de autoria no arquivo DESCRIPTION). Quando o código for copiado (ou derivado) do trabalho de outros (inclusive do próprio R), deve-se tomar cuidado para que quaisquer declarações de direitos autorais/licenças sejam preservadas e a autoria não seja deturpada.
 > 
-> De preferência, um campo 'Authors@R' seria usado com funções 'ctb' para os autores desse código. Como alternativa, o campo "Autor" deve listar esses autores como colaboradores.
+> De preferência, um campo 'Authors@R' seria usado com funções 'ctb' para quem tem a autoria deste código. Como alternativa, o campo "Autor" deve listar essas pessoas como colaboradoras.
 > 
 > Quando os direitos autorais forem detidos por uma entidade que não seja os autores do pacote, isso deve ser indicado preferencialmente por meio das funções 'cph' no campo 'Authors@R' ou usando um campo 'Copyright' (se necessário, referindo-se a um arquivo inst/COPYRIGHTS).
 > 
