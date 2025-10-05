@@ -449,7 +449,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 - Verifique o status de desenvolvimento de todas as dependências que você adicionar.
   Especialmente para pacotes hospedados no GitHub, é muito útil verificar se eles são mantidos ativamente e se [não foram arquivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
-- Se o seu pacote (não do Bioconductor) depender de pacotes do Bioconductor, certifique-se de que as instruções de instalação no LEIAME e na vinheta sejam claras o suficiente, mesmo para um usuário que não esteja familiarizado com o ciclo de lançamento do Bioconductor.
+- Se o seu pacote (não do Bioconductor) depender de pacotes do Bioconductor, certifique-se de que as instruções de instalação no README e na vinheta sejam claras o suficiente, mesmo para uma pessoa não esteja familiarizada com o ciclo de publicação do Bioconductor.
   
   - Se o usuário usar [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recomendado)? Documente isso.
   
