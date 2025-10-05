@@ -447,7 +447,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 - Usar `Imports` em vez de `Depends` para pacotes que fornecem funções de outros pacotes. Certifique-se de listar os pacotes usados para o teste (`testthat`) e a documentação (`knitr`, roxygen2) em seu `Suggests` das dependências do pacote (se você usar `usethis` para adicionar a infraestrutura de teste via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) ou uma vinheta via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), os pacotes necessários serão adicionados ao DESCRIPTION). Se você usar algum pacote nos exemplos ou testes do seu pacote, certifique-se de listá-lo em `Suggests` se ainda não estiver listado em `Imports`.
 
 - Verifique o status de desenvolvimento de todas as dependências que você adicionar.
-  Especialmente para pacotes hospedados no GitHub, é muito útil verificar se eles são mantidos ativamente e se têm [não foram arquivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
+  Especialmente para pacotes hospedados no GitHub, é muito útil verificar se eles são mantidos ativamente e se [não foram arquivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
 - Se o seu pacote (não do Bioconductor) depender de pacotes do Bioconductor, certifique-se de que as instruções de instalação no LEIAME e na vinheta sejam claras o suficiente, mesmo para um usuário que não esteja familiarizado com o ciclo de lançamento do Bioconductor.
   
