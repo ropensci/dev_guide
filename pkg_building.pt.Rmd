@@ -197,7 +197,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
 
-- Adicionar um [código de conduta e diretrizes de contribuição](#friendlyfiles).
+- Adicionar um [código de conduta e as diretrizes de contribuição](#friendlyfiles).
 
 - Veja o [README do pacote `gistr`](https://github.com/ropensci/gistr#gistr) para um bom exemplo de README a ser seguido em um pacote pequeno, e [o README do pacote `bowerbird`](https://github.com/ropensci/bowerbird) para um bom exemplo de README para um pacote maior.
 
@@ -205,7 +205,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 ### Geral {#docs-general}
 
-- Todas as funções de pacote exportadas devem ser totalmente documentadas com exemplos.
+- Todas as funções exportadas de pacote devem ser totalmente documentadas com exemplos.
 
 - Se houver possível sobreposição ou confusão com outros pacotes que forneçam funcionalidade semelhante ou que tenham um nome semelhante, adicione uma nota no README, na vinheta principal e, potencialmente, no campo Descrição do DESCRIPTION. Exemplos em [README do rtweet](https://docs.ropensci.org/rtweet/), [README do rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird) e o pacote [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs) (que não é parte da rOpenSci).
 
@@ -312,7 +312,7 @@ Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a bar
 
 ### Renderização matemática {#mathjax}
 
-Consulte [documentação do pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
+Consulte a [documentação do pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
 Nosso modelo é compatível com essa configuração.
 
 ### Logotipo do pacote {#package-logo}
@@ -362,7 +362,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Todos os pacotes devem ter um conjunto de testes que abranja a funcionalidade principal do pacote. Os testes também devem abranger o comportamento do pacote em caso de erros.
 
-- É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. A cobertura de testes abaixo de 75% provavelmente exigirá testes adicionais ou explicações antes de ser enviada para revisão.
+- É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. Se a cobertura de testes em seu pacote está abaixo de 75%, provavelmente exigirá testes adicionais ou explicações antes de ser enviado para revisão.
 
 - Recomendamos o uso do [pacote testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é o [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
 
@@ -403,9 +403,9 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Em geral, é melhor ter menos dependências.
 
-- Considere as vantagens e desvantagens envolvidas no fato de depender de um pacote como dependência. Por um lado,
+- Considere as vantagens e desvantagens envolvidas no fato de depender de um pacote. Por um lado,
   o uso de dependências reduz o esforço de codificação e pode se basear em funcionalidades úteis desenvolvidas por
-  outros, especialmente se a dependência executar tarefas complexas e tiver alto desempenho,
+  outras pessoas, especialmente se a dependência executar tarefas complexas e tiver alto desempenho,
   e/ou for bem avaliada e testada. Por outro lado, ter muitas dependências
   sobrecarrega a pessoa mantenedora ao ter que acompanhar as alterações nesses pacotes, arriscando
 a sustentabilidade de longo prazo do seu pacote.  Isso também
@@ -459,98 +459,98 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 
 - Especificar dependências mínimas (por exemplo `glue (>= 1.3.0)` em vez de apenas `glue`) deve ser uma escolha consciente. Se tiver certeza de que seu pacote quebrará abaixo de uma determinada versão de dependência, especifique-a explicitamente.
   Mas se não souber, então não há necessidade de especificar uma dependência mínima. Nesse caso, quando um usuário relatar um bug que esteja explicitamente relacionado a uma versão mais antiga de uma dependência, resolva-o.
-  Um exemplo de prática ruim seria um desenvolvedor considerar as versões de seu estado atual de dependências como a versão mínima. Isso forçaria desnecessariamente todos a atualizar (causando problemas com outros pacotes) quando não há um bom motivo por trás dessa escolha de versão.
+  Um exemplo de prática ruim seria, ao desenvolver o pacote, considerar as versões atuais de suas dependências como sendo a versão mínima. Isso forçaria desnecessariamente todos a atualizar (causando problemas com outros pacotes) quando não há um bom motivo por trás dessa escolha de versão.
 
-- Na maioria dos casos em que é necessário expor as funções das dependências ao usuário, você deve importar e reexportar essas funções individuais em vez de listá-las na seção `Depends` campos.  Por exemplo, se as funções em seu pacote produzem `raster` você pode reexportar apenas as funções de impressão e plotagem do pacote **raster** do pacote raster.
+- Na maioria dos casos em que é necessário expor as funções das dependências, você deve importar e reexportar essas funções individuais em vez de listá-las no campo `Depends`.  Por exemplo, se as funções do seu pacote produzem objetos do tipo `raster`, você pode reexportar do pacote **raster** apenas as funções de impressão e plotagem.
 
-- Se seu pacote usar um *sistema* do sistema, você deve
+- Se seu pacote usar uma dependência de *sistema*, você deve
   
-  - Indicá-la em DESCRIPTION;
+  - Indicá-la no DESCRIPTION;
   
-  - Verifique se ele está listado por [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) para permitir que ferramentas automáticas o instalem, e [envie uma contribuição](https://github.com/r-hub/sysreqsdb#contributing) caso contrário;
+  - Verifique se ele está listado por [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) para permitir que ferramentas automáticas o instalem, ou [envie uma contribuição](https://github.com/r-hub/sysreqsdb#contributing) caso contrário;
   
-  - Verificar se há em um `configure` script ([exemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) e fornecerá uma mensagem de erro útil se ele não puder ser encontrado ([exemplo](https://github.com/cran/webp/blob/master/configure)).
-    `configure` Os scripts podem ser desafiadores, pois geralmente exigem soluções improvisadas
+  - Verificar se está listado em um script `configure`  ([exemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) e que fornecerá uma mensagem de erro útil caso não seja encontrado ([exemplo](https://github.com/cran/webp/blob/master/configure)).
+    Os scripts `configure` podem ser desafiadores, pois geralmente exigem soluções improvisadas
     para fazer com que as diversas dependências do sistema funcionem em todos os sistemas. Use exemplos ([mais aqui](https://github.com/search?q=org%3Acran+anticonf&type=Code)) como ponto de partida, mas observe que é comum encontrar bugs e casos extremos e, muitas vezes, violar as políticas do CRAN. Não hesite em [pedir ajuda em nosso fórum](https://discuss.ropensci.org/).
 
-## Andaimes recomendados {#recommended-scaffolding}
+## Estruturas recomendadas {#recommended-scaffolding}
 
-- Para solicitações HTTP, recomendamos o uso de [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#) ou [crul](http://docs.ropensci.org/crul/) sobre [RCurl](https://cran.rstudio.com/web/packages/RCurl/). Se você gosta de clientes de baixo nível para HTTP, o curl é melhor, enquanto o httr2, o httr e o crul são melhores para acesso de alto nível.
+- Para solicitações HTTP, recomendamos o uso dos pacotes [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#) ou [crul](http://docs.ropensci.org/crul/) ao invés do [RCurl](https://cran.rstudio.com/web/packages/RCurl/). Se você gosta de clientes de baixo nível para HTTP, o curl é melhor, enquanto o httr2, o httr e o crul são melhores para acesso de alto nível.
 
-- Para analisar JSON, use [jsonlite](https://github.com/jeroen/jsonlite) em vez de [rjson](https://cran.rstudio.com/web/packages/rjson/) ou [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
+- Para converter JSON (*parsing*) , use [jsonlite](https://github.com/jeroen/jsonlite) em vez de [rjson](https://cran.rstudio.com/web/packages/rjson/) ou [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
 
-- Para analisar, criar e manipular XML, recomendamos enfaticamente [xml2](https://cran.rstudio.com/web/packages/xml2/) para a maioria dos casos. [Você pode consultar as observações de Daniel Nüst sobre a migração de XML para xml2](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+- Para converter, criar e manipular XML, recomendamos enfaticamente o pacote [xml2](https://cran.rstudio.com/web/packages/xml2/) para a maioria dos casos. [Você pode consultar as observações de Daniel Nüst sobre a migração de XML para xml2 (em inglês)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- Para dados espaciais, o [sp](https://github.com/edzer/sp/) deve ser considerado obsoleto em favor do pacote [sf](https://r-spatial.github.io/sf/) e os pacotes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) e [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) foram aposentados em 2023. Recomendamos o uso das suítes espaciais desenvolvidas pelo [r-spatial](https://github.com/r-spatial) e [rspatial](https://github.com/rspatial) comunidades. Veja [esta edição do GitHub](https://github.com/ropensci/software-review-meta/issues/47) para discussões relevantes.
+- Para dados espaciais, o pacote [sp](https://github.com/edzer/sp/) deve ser considerado obsoleto em favor do pacote [sf](https://r-spatial.github.io/sf/) e os pacotes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) e [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) foram aposentados em 2023. Recomendamos o uso do conjunto de ferramentas espaciais desenvolvidas pelas comunidades [r-spatial](https://github.com/r-spatial) e [rspatial](https://github.com/rspatial). Veja [esta edição do GitHub](https://github.com/ropensci/software-review-meta/issues/47) para discussões relevantes.
 
 ## Controle de versão {#version-control}
 
-- Os arquivos de origem do seu pacote devem estar sob controle de versão, mais especificamente rastreados com [Git](https://happygitwithr.com/). Você pode encontrar o [pacote gert](https://docs.ropensci.org/gert/) relevante, bem como alguns dos pacotes [usethis funcionalidade relacionada ao Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github) No entanto, você pode usar o git como quiser.
+- Os arquivos de origem do seu pacote devem estar sob controle de versão, mais especificamente rastreados com [Git](https://happygitwithr.com/). Você pode achar o [pacote gert](https://docs.ropensci.org/gert/) relevante, bem como algumas das funções do [pacote usethis relacionadas ao Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); no entanto, você pode usar o git como quiser.
 
-- O nome padrão do ramo não deve ser `master` pois isso pode ser ofensivo para algumas pessoas. Consulte a seção [do projeto Git e da Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para obter mais contexto. É prática geral nomear uma ramificação padrão `main` embora outros nomes também possam ser usados. Consulte a postagem do blog do tidyverse ["Renomeando a ramificação padrão"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para saber mais sobre como usar essa funcionalidade para ajudar a renomear as ramificações padrão.
+- O nome da ramificação (*branch*) padrão não deve ser `master`, pois isso pode ser ofensivo para algumas pessoas. Consulte a seção [do projeto Git e da Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para obter mais contexto. É uma prática geral nomear uma ramificação padrão `main`, embora outros nomes também possam ser usados. Consulte a postagem do blog do tidyverse ["Renomeando a ramificação padrão"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para saber mais sobre como usar essa funcionalidade para ajudar a renomear as ramificações padrão.
 
-- Certifique-se de listar "sucata", como `.DS_Store` em .gitignore. Você pode encontrar o arquivo [`usethis::git_vaccinate()` função](https://usethis.r-lib.org/reference/git_vaccinate.html) e a função [pacote gitignore](https://docs.ropensci.org/gitignore/) relevantes.
+- Certifique-se de listar arquivos desnecessários, como `.DS_Store`, no arquivo .gitignore. Você pode achar a função [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html) e o [pacote gitignore](https://docs.ropensci.org/gitignore/) relevantes.
 
-- Uma seção posterior deste livro contém alguns [dicas de fluxo de trabalho do git](#gitflow).
+- Uma seção posterior deste livro contém algumas [dicas de fluxo de trabalho com git](#gitflow).
 
 ## Problemas diversos do CRAN {#crangotchas}
 
 Esta é uma coleção de problemas do CRAN que vale a pena evitar desde o início.
 
-- Certifique-se de que o título do seu pacote esteja em Title Case.
+- Certifique-se de que as palavras do título do seu pacote comecem com letra maiúscula (o que em inglês é chamado de *[Title Case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)*.
 - Não coloque um ponto final no final do título.
-- Não coloque "in R" ou "with R" em seu título, pois isso é óbvio nos pacotes hospedados no CRAN. Se, mesmo assim, quiser que essas informações sejam exibidas em seu site, verifique a opção [`pkgdown` documentação](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber como substituir isso.
+- Não coloque "no R" ou "com R" em seu título, pois isso é óbvio nos pacotes hospedados no CRAN. Se, mesmo assim, quiser que essas informações sejam exibidas em seu site, verifique a [documentação do `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber como substituir isso.
 - Evite iniciar a descrição com o nome do pacote ou "Este pacote ...".
-- Certifique-se de incluir links para sites se você envolver uma API da Web, extrair dados de um site etc. na seção `Description` do seu arquivo DESCRIPTION. Os URLs devem ser colocados entre colchetes angulares, por exemplo `<https://www.r-project.org>`.
-- Em ambos os `Title` e `Description` os nomes de pacotes ou outros softwares externos devem ser colocados entre aspas simples (por exemplo, * Integração do 'Rcpp' para a biblioteca de álgebra linear com modelo 'Armadillo'*).
-- Evite testes e exemplos de longa duração.  Considere `testthat::skip_on_cran` nos testes para pular coisas que demoram muito, mas ainda assim testá-las localmente e em [integração contínua](#ci).
-- Inclua arquivos de nível superior, como `paper.md` arquivos de configuração de integração contínua, em seu `.Rbuildignore` arquivo.
+- Certifique-se de incluir links para sites se você envolver uma API da Web, extrair dados de um site etc. na seção `Description` do seu arquivo DESCRIPTION. Os URLs devem ser colocados entre colchetes angulares (`<>`), por exemplo `<https://www.r-project.org>`.
+- Em ambos os `Title` e `Description`, os nomes de pacotes ou outros softwares externos devem ser colocados entre aspas simples (por exemplo, *Integração do 'Rcpp' para a biblioteca de álgebra linear com modelo 'Armadillo'*).
+- Evite testes e exemplos que sejam demorados. Considere usar `testthat::skip_on_cran` nos testes para pular coisas que demoram muito, mas ainda assim testá-las localmente e em [integração contínua](#ci).
+- Inclua arquivos de nível superior, como `paper.md` e arquivos de configuração de integração contínua, no arquivo `.Rbuildignore`.
 
 Para obter mais dicas, consulte a lista colaborativa mantida pelo ThinkR, ["Prepare-se para o CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
 
 ### Verificações do CRAN {#cranchecks}
 
-Quando seu pacote estiver no CRAN, ele será [verificado regularmente em diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). As falhas nessas verificações, quando não são falsos positivos, podem levar a equipe do CRAN a entrar em contato. Você pode monitorar o estado das verificações do CRAN por meio de
+Quando seu pacote estiver no CRAN, ele será [checado regularmente em diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). As falhas nessas verificações, quando não são falsos positivos, podem levar a equipe do CRAN a entrar em contato com você. Você pode monitorar o estado das verificações do CRAN por meio
 
-- o [`foghorn` pacote](https://fmichonneau.github.io/foghorn/).
+- do [`foghorn` pacote](https://fmichonneau.github.io/foghorn/).
 
-- o [CRAN verifica os crachás](https://github.com/r-hub/cchecksbadges).
+- das [etiquetas de checagem do CRAN (*"CRAN checks Badges"*)](https://github.com/r-hub/cchecksbadges).
 
 ## Problemas do Bioconductor {#bioconductor-gotchas}
 
-Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote estiver no Bioconductor, consulte [Diretrizes de empacotamento do Bioconductor](https://www.bioconductor.org/developers/package-guidelines/) e as [livro do desenvolvedor atualizado](https://contributions.bioconductor.org/).
+Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote estiver no Bioconductor, consulte as [Diretrizes de empacotamento do Bioconductor](https://www.bioconductor.org/developers/package-guidelines/) e o [livro de desenvolvimento atualizado](https://contributions.bioconductor.org/).
 
 ## Orientações adicionais {#further-guidance}
 
-- Se você estiver enviando um pacote para o rOpenSci por meio do [repositório de revisão de software](https://github.com/ropensci/software-review) poderá encaminhar outras perguntas à equipe da rOpenSci no rastreador de problemas ou em nosso [fórum de discussão](https://discuss.ropensci.org/).
+- Se você estiver enviando um pacote para a rOpenSci por meio do [repositório de revisão de software](https://github.com/ropensci/software-review), poderá encaminhar outras perguntas à equipe da rOpenSci usando as *issues* ou em nosso [fórum de discussão](https://discuss.ropensci.org/).
 
-- Leia o [guia do autor](#authors-guide).
+- Leia o [guia de autoria](#authors-guide).
 
-- Leia, incorpore e aja de acordo com os conselhos do [*Guia de Colaboração* capítulo](#collaboration).
+- Leia, incorpore e aja de acordo com os conselhos do [capítulo *Guia de Colaboração*](#collaboration).
 
 ### Aprendendo sobre o desenvolvimento de pacotes {#learning-about-package-development}
 
 #### Livros {#books}
 
-- [Hadley Wickham e Jenny Bryan's *Pacotes R* livro](https://r-pkgs.org/) é um recurso excelente e de fácil leitura sobre o desenvolvimento de pacotes que está disponível para [gratuitamente on-line](https://r-pkgs.org/) (e pode ser comprado em [impresso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
+- O livro [*R packages* (Pacotes em R) escrito por Hadley Wickham e Jenny Bryan](https://r-pkgs.org/) é um recurso excelente e de fácil leitura sobre o desenvolvimento de pacotes, está disponível [gratuitamente on-line](https://r-pkgs.org/) (e pode ser comprado [impresso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
 
-- [Escrevendo extensões do R](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) é a referência canônica, geralmente a mais atualizada, para a criação de pacotes R.
+- [*Writing R Extensions* (Escrevendo extensões do R)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) (em inglês) é a referência canônica, geralmente a mais atualizada, para a criação de pacotes em R.
 
-- [*Dominando o desenvolvimento de software em R* por Roger D. Peng, Sean Kross e Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/).
+- O livro [*Mastering Software Development in R* (Dominando o desenvolvimento de software em R) por Roger D. Peng, Sean Kross e Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/).
 
-- [*R avançado* por Hadley Wickham](https://adv-r.hadley.nz/)
+- [*Advanced R* (R avançado) por Hadley Wickham](https://adv-r.hadley.nz/).
 
-- [*Guia de estilo do Tidyverse*](https://style.tidyverse.org/)
+- [*Tidyverse style guide* (Guia de estilo do Tidyverse)](https://style.tidyverse.org/).
 
-- [*Guia de design do Tidyverse*](https://design.tidyverse.org/) (WIP) e o guia de design [newsletter](http://tidydesign.substack.com/).
+- [*Tidyverse design guide* (Guia de design do Tidyverse)](https://design.tidyverse.org/) (em elaboração) e o [boletim de notícias (*newsletter*)](http://tidydesign.substack.com/) que o acompanha.
 
 #### Tutoriais {#tutorials}
 
-- [Seu primeiro pacote R em 1 hora](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) por Shannon Pileggi.
+- [*Your first R package in 1 hour* (Seu primeiro pacote R em 1 hora)](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) por Shannon Pileggi.
 
 - [essa descrição de fluxo de trabalho por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
 
-- [Esta foto de Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
+- [Esta ilustração de Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
 
 #### Blogs {#blogs}
 
