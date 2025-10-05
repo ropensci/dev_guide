@@ -430,7 +430,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
       (Observe que essa abordagem deve ser usada e testada com muito cuidado, especialmente porque pode quebrar o comportamento esperado de objetos reclassificados).
   
   - Certifique-se de que esteja usando o pacote em que a função está definida,
-    e não aquele em que ela é reexportada. Por exemplo, muitas funções em **devtools** podem ser encontradas em pacotes especializados menores, como **sessioninfo**. O `%>%` função
+    e não aquele em que ela é reexportada. Por exemplo, muitas funções do **devtools** podem ser encontradas em pacotes especializados menores, como **sessioninfo**. A função `%>%`
     deve ser importada de **magrittr** onde ele é definido, em vez do mais pesado
     **dplyr** mais pesado, que o reexporta.
   
