@@ -453,7 +453,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
   
   - É necessário usar o [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recomendado)? Documente isso.
   
-  - A instalação automática de pacotes do Bioconductor por `install.packages()` é suficiente? Nesse caso, mencione que o usuário precisa executar `setRepositories()` se ainda não tiver definido os repositórios do Bioconductor necessários.
+  - A instalação automática de pacotes do Bioconductor usando `install.packages()` é suficiente? Nesse caso, mencione que é necessário executar `setRepositories()` se ainda não tiver definido os repositórios necessários do Bioconductor.
   
   - Se o seu pacote depender do Bioconductor após uma determinada versão, mencione isso na DESCRIPTION e nas instruções de instalação.
 
