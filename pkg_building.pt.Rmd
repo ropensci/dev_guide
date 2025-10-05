@@ -418,10 +418,10 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
     do código copiado). Por outro lado, funções complexas com muitos 
     casos especiais (por exemplo, analisadores sintáticos) exigem testes e verificações consideráveis.
     
-    - Um exemplo comum disso é o retorno de "tibbles" no estilo tidyverse do pacote
-      que fornecem dados.
-      É possível evitar o modesto e pesado **tibble** retornando
-      um tibble criado pela modificação de um quadro de dados da seguinte forma:
+    - Um exemplo comum disso é o retorno de "tibbles" no estilo tidyverse 
+     em funções do pacote que fornecem dados.
+      É possível evitar o uso do pacote **tibble** retornando
+      um tibble criado pela modificação de um *data.frame* da seguinte forma:
       
       ```
       class(df) <- c("tbl_df", "tbl", "data.frame") 
