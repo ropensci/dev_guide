@@ -181,7 +181,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 - Se o seu README tiver muitos selos, considere ordená-los em uma tabela HTML para facilitar a obtenção de informações. Veja exemplos no [repositórion`drake`](https://github.com/ropensci/drake) e no [repositório `qualtRics`](https://github.com/ropensci/qualtRics/). As seções possíveis são:
   
   - Desenvolvimento (status de integração contínua (CI), ver o [Capítulo sobre CI](#ci), canal do Slack para discussão, repostatus)
-  - Lançamento/Publicado ([Crachás de versão do CRAN e data de lançamento do METACRAN](https://www.r-pkg.org/services#badges), [CRAN verifica o selo da API](https://github.com/r-hub/cchecksbadges), selo Zenodo)
+  - Edição ou Publicação ([selos de versão do CRAN e data de lançamento do METACRAN](https://www.r-pkg.org/services#badges), [selo de checagem da API do CRAN](https://github.com/r-hub/cchecksbadges), selo do Zenodo)
   - Estatísticas/Uso (downloads, por exemplo: [selos de quantidade de downloads do r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
     A tabela deve ser mais larga do que longa para mascarar o restante do README.
 
@@ -189,7 +189,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
   um README não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir,
   "..., um repositório on-line de avistamentos de Goober na América do Sul.  Mais
   informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados
-  podem ser encontrados em *link*".
+  podem ser encontradas em *link*".
 
 - Recomendamos não criar o `README.md` diretamente, mas a partir de um `README.Rmd` (um arquivo R Markdown) se você tiver algum código de demonstração. A vantagem do `.Rmd` é que você pode combinar texto com código que pode ser facilmente atualizado sempre que seu pacote for atualizado.
 
@@ -333,7 +333,7 @@ Se você achar que as pessoas que revisaram fizeram uma contribuição substanci
 
 Somente inclua revisores(as) depois de pedir seu consentimento.
 Leia mais nesta postagem do blog [*Thanking Your Reviewers: Gratitude through Semantic Metadata* ("Agradecendo as revisões: Gratidão por meio de metadados semânticos")](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
-Não liste os editores como colaboradores.
+Por favor, não liste pessoas editoras como colaboradoras.
 Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!
 
 ### Autoria do código incluído no pacote {#authorship-included-code}
