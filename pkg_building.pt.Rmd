@@ -431,7 +431,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
   
   - Certifique-se de que esteja usando o pacote em que a função está definida,
     e não aquele em que ela é reexportada. Por exemplo, muitas funções do **devtools** podem ser encontradas em pacotes especializados menores, como **sessioninfo**. A função `%>%`
-    deve ser importada de **magrittr** onde ele é definido, em vez do mais pesado
+    deve ser importada do pacote **magrittr** onde ela é definida, em vez do mais pesado
     **dplyr** mais pesado, que o reexporta.
   
   - Algumas dependências são preferidas porque fornecem uma interpretação mais fácil de
