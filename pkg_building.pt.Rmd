@@ -79,7 +79,7 @@ Recomendamos que seu pacote use um método consistente de sua escolha para [veri
 
 Se o seu pacote acessar uma API da Web ou outro recurso da Web,
 
-- Certifique-se de que as solicitações enviem um [agente de usuário](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent) ou seja, uma maneira de identificar o que (seu pacote) ou quem enviou a solicitação. Os usuários devem ser capazes de substituir o agente de usuário padrão do pacote. Idealmente, o agente de usuário deve ser diferente nos serviços de integração contínua e no desenvolvimento (com base, por exemplo, nos nomes de usuário do GitHub dos desenvolvedores).
+- Certifique-se de que as solicitações enviem um [agente de usuário](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), ou seja, uma maneira de identificar o que (seu pacote) ou quem enviou a solicitação. Deve ser possível substituir o agente de usuário padrão do pacote. Idealmente, o agente de usuário deve ser diferente nos serviços de integração contínua e no desenvolvimento (com base, por exemplo, nos nomes de usuário do GitHub das pessoas desenvolvedoras).
 - Você pode escolher padrões diferentes (melhores) do que os da API e, nesse caso, deve documentá-los.
 - Seu pacote deve ajudar com a paginação, permitindo que os usuários não se preocupem com isso, pois o pacote faz todas as solicitações necessárias.
 - Seu pacote deve ajudar a limitar a taxa de acordo com as regras da API.
