@@ -195,7 +195,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
   - Edición o publicación ([etiquetas de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [etiqueta de la API de chequeos de CRAN](https://github.com/r-hub/cchecksbadges), etiqueta de Zenodo)
   - Estadísticas o uso (descargas, por ejemplo [etiquetas de descarga de r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
   
-  La tabla debe ser más ancha que larga para enmascarar el resto del *README*.
+  La tabla debe ser más ancha que larga para no enmascarar el resto del *README*.
 
 - Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o utiliza otro software, ten en cuenta que el *README* de tu paquete puede ser el punto de entrada para alguien que lo usa por primera vez.
   Debe proporcionar suficiente información para poder entender la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.
