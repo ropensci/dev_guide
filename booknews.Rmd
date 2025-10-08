@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2025-09-23, Add section on challenges (non-responding reviewers). Also move text on non-responding authors to this section. (#955).
+
 - 2025-07-11, document better when the pkgdown websites of rOpenSci packages are re-built (#919).
 
 - 2025-07-11, add minimal mention of example datasets (#868).

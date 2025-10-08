@@ -105,9 +105,17 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 - Upon each review being submitted,
   - Write a comment thanking the reviewer in your own words.
   - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`. E.g. for the review [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
-- If the author stops responding, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, thank them once again for their work, and make a note in our database to assign them to a submission with high chances of smooth software review next time (e.g. a package author who has already submitted packages to us).
 - Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 - If the authors intend to submit an accompanying [Applications](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) manuscript at [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicate to the authors can submit their manuscript after the review has been completed. 
+
+#### Challenges during review {#challenges-during-review}
+
+-   **If the author stops responding**, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, and thank them once again for their work.  Let the other editors know in the Slack channel to consider them for a package in the future with high chances of smooth software review (e.g. a package author who has already submitted packages to us).
+-   **If a reviewer is late with review or stops responding**, send a reminder after 1 week, and again after 2 weeks. The first reminding can be a `@tag` on GitHub. After that use email or other direct communication. If after 3 weeks there is still no response, determine how best to move ahead without them:
+    -   If the reviewer has already submitted their primary review, and another reviewer is active and providing substantial feedback, the editor can proceed with the review process, and should take the role of the absent reviewer in determining if the authors' changes are sufficient.
+    -   If the absent reviewer has not submitted their review, the editor should try to find a new reviewer, and proceed with the review process once two reviews are in. At this point, the editor should prioritize finding experienced reviewers who can commit to a quick turnaround. Be sure to ping other editors on Slack.
+        - At their discretion, the editor _may_ opt to act as the second reviewer themselves, but should only do so after multiple failed attempts to find a new reviewer, and if the editor has sufficient expertise to do so. We discourage editors from doing this with any frequency, as it increases workload and reduces the diversity of views brought into the community by reviewers.
+        - Make a comment thanking the original reviewer in any case, and remove them with `@ropensci-review-bot remove @username from reviewers`.
 
 ### After review: {#after-review}
 
