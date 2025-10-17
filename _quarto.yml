@@ -62,6 +62,7 @@ book:
 
   - part: Building Your Package
     part-es: Construyendo tu paquete
+    part-pt: Criando
     chapters:
     - pkg_building.Rmd
     - pkg_ci.Rmd
@@ -69,6 +70,7 @@ book:
 
   - part: Software Peer Review of Packages
     part-es: Revisión por pares de software de paquetes
+    part-pt: Revisão por pares de pacotes de software
     chapters:
     - softwarereview_intro.Rmd
     - softwarereview_policies.Rmd
@@ -79,6 +81,7 @@ book:
 
   - part: Maintaining Packages
     part-es: Manteniendo paquetes
+    part-pt: Manutenção de pacotes
     chapters:
     - maintenance_cheatsheet.Rmd
     - maintenance_collaboration.Rmd
@@ -92,6 +95,7 @@ book:
 
   - part: Appendix
     part-es: Apéndice
+    part-pt: Apêndice
     chapters:
     - booknews.Rmd
     - reviewtemplate.Rmd
