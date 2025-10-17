@@ -16,6 +16,8 @@ Besides these mostly technical tips, it is important to remember to be kind, and
 
 ## Make your repo contribution and collaboration friendly {#friendlyfiles}
 
+Making your repository collaboration friendly is part of what might help it [outlive your job](https://arxiv.org/pdf/2505.06484).
+
 ### Code of conduct {#coc-file}
 
 Once your package is listed into the [rOpenSci registry](https://ropensci.org/packages/all), 
