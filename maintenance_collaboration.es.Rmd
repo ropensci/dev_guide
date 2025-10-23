@@ -11,7 +11,7 @@ Además de estos consejos, en su mayoría técnicos, es importante recordar que 
 
 ## Haz que tu repositorio sea accesible a las contribuciones y la colaboración  {#friendlyfiles}
 
-Hacer que tu repositorio facilite la colaboración es parte de lo que puede ayudarle [sobrevivir a tu trabajo](https://arxiv.org/pdf/2505.06484).
+Hacer que tu repositorio facilite la colaboración es parte de lo que puede ayudar [a que perdure más allá de tu trabajo](https://arxiv.org/pdf/2505.06484).
 
 ### Código de conducta  {#coc-file}
 
