@@ -144,8 +144,8 @@ Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo us
 
 Si tu documentación incluye código que depende, por ejemplo, de credenciales, aquí te explicamos cómo asegurarte de que los documentos pkgdown se representen de la mejor manera posible.
 
-- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 `examplesIf` con la variable `IN_PKGDOWN`, por ejemplo, `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`.
-- Para viñetas, precompila si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consulta https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval, por ejemplo
+- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 `examplesIf` con la variable `IN_PKGDOWN`, por ejemplo, `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`. Ejemplo: [gtexr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14) (véase también el [docs de la etiqueta roxygen2](https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)).
+- Para viñetas, precompila si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consulta https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval. Ejemplo: 60d1fdb/vignettes/gtexr.Rmd#L16 o:
 
 ```r
 knitr::opts_chunk$set(
@@ -155,10 +155,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Ejemplos:
-
-- `examplesIf`:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (véase también la documentación de la etiqueta roxygen2: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
-- Vignette, opción knitr eval:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e
+- En el caso de viñetas/artículos que realizan peticiones HTTP, puede utilizar paquetes específicos de R como [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html) para almacenar en caché las respuestas. Ejemplo: [nettskjemar](https://github.com/capro-uio/nettskjemar/blob/261260e2510f51d8dc0af5e4c9c386a7e459de4b/vignettes/metadata.Rmd#L22).
 
 Por favor, informa sobre errores, haz preguntas y solicita nuevas funcionalidades sobre este servicio y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
