@@ -71,7 +71,7 @@ Documente o comportamento do seu pacote em relação a PRs externos no arquivo [
 
 No CRAN, ignore quaisquer testes (`skip_on_cran()`) e exemplos (`dontrun`) que exijam credenciais.
 
-[Gere previamente as vinhetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) que requerem credenciais.
+[Gere previamente as vinhetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) que requerem credenciais, ou use [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html).
 
 ## Leitura adicional {#furthersecreading}
 
