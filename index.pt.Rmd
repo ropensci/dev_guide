@@ -4,11 +4,12 @@
 
 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br /> Este trabalho está licenciado com uma licença [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United States License](https://creativecommons.org/licenses/by-nc-sa/3.0/us/). Utilize o [Zenodo DOI](https://doi.org/10.5281/zenodo.2553043) para citar esta obra.
 
-```{r}
-#| echo: false
-#| results: 'asis' 
-#| warning: false
-source(file.path("scripts", "zenodo.R"), local = knitr::knit_global())
+
+Exemplo
+
+```
+rOpenSci editorial team (2024). Pacotes rOpenSci: Desenvolvimento, manutenção e revisão por pares [rOpenSci Packages: Development, Maintenance, and Peer Review] (Tradução para o português: Pedro Faria, Beatriz Milz, Francesca Palmeira, Samuel Carleial, Marcelo S. Perlin,  Ariana Cabral, Ildeberto Vasconcelos, Daniel Vartanian, Rafael Fontenelle, João Granja-Correia) Zenodo. https://doi.org/10.5281/zenodo.2553043 (Trabalho original publicado em 2025)
+
 ```
 
 Você também pode ler a [versão em PDF](/ropensci-dev-guide.pdf) deste livro.
