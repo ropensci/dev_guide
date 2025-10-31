@@ -16,6 +16,8 @@ Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em 
 
 ## Torne a contribuição e a colaboração do seu repositório amigáveis {#friendlyfiles}
 
+Tornar seu repositório fácil de colaborar é parte do que pode ajudá-lo a [sobreviver ao seu trabalho](https://arxiv.org/pdf/2505.06484).
+
 ### Código de conduta {#coc-file}
 
 Depois que o seu pacote for listado na [rOpenSci registry](https://ropensci.org/packages/all) (a lista oficial de pacotes da rOpenSci), o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto.
