@@ -15,7 +15,8 @@ Imports:
 Remotes: 
     bergant/airtabler,
     ropensci-review-tools/babeldown,
-    ropensci-review-tools/babelquarto
+    ropensci-review-tools/babelquarto,
+    quarto-dev/quarto-r
 URL: https://github.com/ropensci/dev_guide
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)

@@ -27,8 +27,6 @@ jobs:
 
       - uses: r-lib/actions/setup-tinytex@v2
 
-      - name: text fix
-        run: tlmgr update --all --self
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
