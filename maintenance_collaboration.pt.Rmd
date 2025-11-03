@@ -16,7 +16,7 @@ Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em 
 
 ## Torne a contribuição e a colaboração do seu repositório amigáveis {#friendlyfiles}
 
-Tornar seu repositório fácil de colaborar é parte do que pode ajudá-lo a [sobreviver ao seu trabalho](https://arxiv.org/pdf/2505.06484).
+Tornar seu repositório fácil de colaborar é parte do que pode ajudar a garantir que ele [perdure para além do seu trabalho](https://arxiv.org/pdf/2505.06484).
 
 ### Código de conduta {#coc-file}
 
