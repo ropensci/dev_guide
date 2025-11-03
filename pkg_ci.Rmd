@@ -128,7 +128,7 @@ You can find the status of these builds at `https://ropensci.r-universe.dev/ui#p
 If your documentation includes code that relies on, for instance, credentials, here's how to ensure pkgdown docs are rendered in the best possible way.
 
 - For function examples, use the  `examplesIf` roxygen2 tag with the `IN_PKGDOWN` variable e.g. `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`. Example: [gtexr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14) (see also the [docs of the roxygen2 tag](https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)).
-- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option. Example: 60d1fdb/vignettes/gtexr.Rmd#L16 or:
+- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option. Example: [gtextr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16) or:
 
 ```r
 knitr::opts_chunk$set(
