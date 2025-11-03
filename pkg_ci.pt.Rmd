@@ -122,7 +122,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-- No caso de vinhetas/artigos que executam solicitações HTTP, você pode usar pacotes específicos do R, como [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html) para armazenar as respostas em cache. Exemplo: [nettskjemar](https://github.com/capro-uio/nettskjemar/blob/261260e2510f51d8dc0af5e4c9c386a7e459de4b/vignettes/metadata.Rmd#L22).
+- No caso de vinhetas/artigos que executam requisições HTTP, você pode usar pacotes específicos do R, como o [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html) para armazenar as respostas em cache. Exemplo: [nettskjemar](https://github.com/capro-uio/nettskjemar/blob/261260e2510f51d8dc0af5e4c9c386a7e459de4b/vignettes/metadata.Rmd#L22).
 
 Por favor, informe bugs, faça perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
