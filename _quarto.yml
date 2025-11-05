@@ -18,7 +18,7 @@ description-es: |
       La tercera sección también incluye un capítulo para cualquiera que desee
       comenzar a contribuir a los paquetes de rOpenSci.
 title-pt: "Pacotes rOpenSci: Desenvolvimento, manutenção e revisão por pares"
-author-pt: "Equipe editorial para a revisão de software rOpenSci (atual e anterior): Brooke Anderson, Scott Chamberlain, Laura DeCicco, Julia Gustavsen, Jeff Hollister, Anna Krystalli, Mauro Lepore, Lincoln Mullen, Mark Padgham, Karthik Ram, Emily Riederer, Noam Ross, Maëlle Salmon, Adam Sparks, Melina Vidoni"
+author-pt: "Equipe editorial para a revisão de software rOpenSci (atual e anterior)"
 description-pt: |
     Guia para pessoas autoras, responsáveis, revisoras e editoras de pacotes no
     sistema de revisão por pares da rOpenSci.
