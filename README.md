@@ -5,7 +5,7 @@ rOpenSci Packages: Development, Maintenance, and Peer Review
 [![DOI](https://zenodo.org/badge/126815002.svg)](https://zenodo.org/badge/latestdoi/126815002)
 
 rOpenSci's [guide for packages in our suite](https://devguide.ropensci.org/).
-[Development version](https://devdevguide.netl).
+[Development version](https://devdevguide.netlify.app).
 
 ## Contributing
 
