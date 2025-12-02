@@ -11,6 +11,84 @@ Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si ti
 
 > Asume siempre que quienes participan en el sistema de revisión de software (tanto en la edición, como la revisión y la autoría de paquetes) están dando su mayor esfuerzo, y comunícate con amabilidad, especialmente cuando preguntes por qué hay un retraso.
 
+## Responsabilidades del rol de LE  {#eicchecklist}
+
+Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
+Tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento).
+En detalle, el rol de LE implica las siguientes funciones
+
+- Vigila todos los *issues* publicados en el repositorio de revisión del software (se suscribe a las notificaciones del repositorio en GitHub, o vigila la página `#software-peer-review-feed` en Slack).
+
+- Etiqueta el *issue* con `0/editorial-team-prep`
+
+- Usa `@ropensci-review-bot check srr` sobre consultas previas a la presentación de software estadístico.
+  Revisar los capítulos correspondientes a la [*Guía de desarrollo de estadística*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para más detalles.
+
+- Asigna los envíos de paquetes a otros miembros del equipo editorial, incluyéndose, para que se encarguen de ellos.
+  En la mayoría de los casos, esta responsabilidad rota entre los miembros del equipo editorial a menos que quien sea LE considere que un miembro en particular es especialmente adecuado para algún paquete, o que alguien rechace encargarse del envío por no tener tiempo o por tener un conflicto de intereses.
+
+  ```
+  @ropensci-review-bot assign @username as editor
+  ```
+
+- Supervisa el ritmo del proceso de revisión y recuerda a otros miembros del equipo editorial que hagan avanzar los paquetes según sea necesario.
+
+- Al asumir el rol de LE, revisa el estado de las revisiones abiertas actuales y recuerda a quienes las editan que respondan o actualicen el estado según sea necesario.
+
+- Responde a los *issues* publicados en el repositorio software-review-meta
+
+- Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)).
+  Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus dudas, es decir, digerir un poco la información.
+  Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todo el equipo editorial.
+
+  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera de nuestro alcance temático.
+  - Tras explicar la decisión de fuera de alcance, escribe un comentario con "`@ropensci-review-bot out-of-scope`" en el *issue*.
+
+- Solicita a alguien más para cubrir el rol de LE cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide reemplazos en el canal de Slack del equipo editorial).
+
+### Pide más detalles {#asking-for-more-details}
+
+En algunos casos, la documentación en línea es escasa.
+Un *README* mínimo y la ausencia de un sitio web de *pkgdown* dificultan la evaluación.
+En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.
+
+Ejemplo de texto
+
+```markdown
+Hola <nombre> y muchas gracias por su envío.
+
+Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
+
+¿Le importaría añadir más detalles y contexto al *README*?
+Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.
+
+<opcional>
+Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es el mejor de su clase](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
+</opcional>
+```
+
+### Invitar a una persona para la tarea de edición  {#guesteditor}
+
+Tras debatirlo con otros miembros del equipo, quien sea LE puede invitar a una persona externa para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de enviar una invitación a formar parte del equipo de edición).
+
+Cuando invites a alguien para realizar una edición de forma invitada:
+
+- Pregunta sobre los conflictos de intereses utilizando el [mismo texto que para quienes revisan paquetes](#coi),
+- Proporciona un enlace a la [guía para quines se encargan de la edición](#editorchecklist).
+
+Si la persona acepta (¡bien!),
+
+- asegúrate de que [haya activado la autenticación de 2 factores en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/);
+- invítala al equipo `ropensci/editors` y a la organización ropensci;
+- una vez que haya aceptado esta invitación al repositorio, asígnale el *issue*;
+- asegúrate de que esté invitada al espacio de trabajo en Slack de rOpenSci;
+- añade su nombre a la tabla de *guest-editor* de Airtable (para que su nombre aparezcan en este libro y en el *README* de la revisión del software).
+
+Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
+
+- vuelve a dar las gracias a la persona invitada;
+- elimínala del equipo `ropensci/editors` (pero no de la organización ropensci).
+
 ## Responsabilidades del rol de edición {#editors-responsibilities}
 
 - Además de ocuparse de los paquetes (unos 4 al año), quienes realizan la edición intervienen en las decisiones editoriales del equipo (como si un paquete está dentro del ámbito de aplicación) y determinan las actualizaciones de nuestras políticas.
@@ -135,84 +213,6 @@ Para quienes deseen mantener sus repositorios en sus organizaciones originales d
 ### Promoción de paquetes: {#package-promotion}
 
 - Dirige quien presentó el paquete a los capítulos de la guía sobre [publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
-
-## Responsabilidades del rol de LE  {#eicchecklist}
-
-Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
-Tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento).
-En detalle, el rol de LE implica las siguientes funciones
-
-- Vigila todos los *issues* publicados en el repositorio de revisión del software (se suscribe a las notificaciones del repositorio en GitHub, o vigila la página `#software-peer-review-feed` en Slack).
-
-- Etiqueta el *issue* con `0/editorial-team-prep`
-
-- Usa `@ropensci-review-bot check srr` sobre consultas previas a la presentación de software estadístico.
-  Revisar los capítulos correspondientes a la [*Guía de desarrollo de estadística*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) para más detalles.
-
-- Asigna los envíos de paquetes a otros miembros del equipo editorial, incluyéndose, para que se encarguen de ellos.
-  En la mayoría de los casos, esta responsabilidad rota entre los miembros del equipo editorial a menos que quien sea LE considere que un miembro en particular es especialmente adecuado para algún paquete, o que alguien rechace encargarse del envío por no tener tiempo o por tener un conflicto de intereses.
-  
-  ```
-  @ropensci-review-bot assign @username as editor
-  ```
-
-- Supervisa el ritmo del proceso de revisión y recuerda a otros miembros del equipo editorial que hagan avanzar los paquetes según sea necesario.
-
-- Al asumir el rol de LE, revisa el estado de las revisiones abiertas actuales y recuerda a quienes las editan que respondan o actualicen el estado según sea necesario.
-
-- Responde a los *issues* publicados en el repositorio software-review-meta
-
-- Toma decisiones sobre el alcance y solapamiento de las consultas previas a la presentación, las recomendaciones desde JOSS u otros socios de publicación, y las presentaciones si ven un caso ambiguo (este último caso también puede ser realizado por personas que están a cargo de la edición de un paquete (ver más abajo)).
-  Para iniciar el debate, debe publicar en el canal exclusivo para el equipo editorial del Slack de rOpenSci junto con un pequeño resumen de lo que trata la presentación (pre)enviada/remitida, y sus dudas, es decir, digerir un poco la información.
-  Si al cabo de uno o dos días considera que no ha recibido suficientes respuestas, puede enviar una notificación a todo el equipo editorial.
-  
-  - Cualquier miembro del equipo editorial debería sentirse libre de intervenir en estos casos. Véase [esta sección](#outofscoperesponse) sobre cómo responder a los (pre) envíos fuera de nuestro alcance temático.
-  - Tras explicar la decisión de fuera de alcance, escribe un comentario con "`@ropensci-review-bot out-of-scope`" en el *issue*.
-
-- Solicita a alguien más para cubrir el rol de LE cuando finalice su rotación (establece un recordatorio en el calendario antes de la fecha prevista de finalización y pide reemplazos en el canal de Slack del equipo editorial).
-
-### Pide más detalles {#asking-for-more-details}
-
-En algunos casos, la documentación en línea es escasa.
-Un *README* mínimo y la ausencia de un sitio web de *pkgdown* dificultan la evaluación.
-En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.
-
-Ejemplo de texto
-
-```markdown
-Hola <nombre> y muchas gracias por su envío.
-
-Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
-
-¿Le importaría añadir más detalles y contexto al *README*?
-Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.
-
-<opcional>
-Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es el mejor de su clase](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
-</opcional>
-```
-
-### Invitar a una persona para la tarea de edición  {#guesteditor}
-
-Tras debatirlo con otros miembros del equipo, quien sea LE puede invitar a una persona externa para que se encargue de un envío (por ejemplo, si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de enviar una invitación a formar parte del equipo de edición).
-
-Cuando invites a alguien para realizar una edición de forma invitada:
-
-- Pregunta sobre los conflictos de intereses utilizando el [mismo texto que para quienes revisan paquetes](#coi),
-- Proporciona un enlace a la [guía para quines se encargan de la edición](#editorchecklist).
-
-Si la persona acepta (¡bien!),
-
-- asegúrate de que [haya activado la autenticación de 2 factores en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/);
-- invítala al equipo `ropensci/editors` y a la organización ropensci;
-- una vez que haya aceptado esta invitación al repositorio, asígnale el *issue*;
-- asegúrate de que esté invitada al espacio de trabajo en Slack de rOpenSci;
-- añade su nombre a la tabla de *guest-editor* de Airtable (para que su nombre aparezcan en este libro y en el *README* de la revisión del software).
-
-Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
-
-- vuelve a dar las gracias a la persona invitada;
-- elimínala del equipo `ropensci/editors` (pero no de la organización ropensci).
 
 ## Responder a las presentaciones fuera del ámbito de aplicación  {#outofscoperesponse}
 
