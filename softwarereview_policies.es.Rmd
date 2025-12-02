@@ -68,8 +68,7 @@ Como se trata de un documento vivo, estas categorías pueden cambiar con el tiem
 Por ejemplo, los paquetes de visualización de datos ya no están incluidos.
 Aunque nos esforzamos por ser coherentes, evaluamos los paquetes caso por caso y podemos hacer excepciones.
 
-Ten en cuenta que no todos los proyectos y paquetes de rOpenSci están incluidos en el ámbito de aplicación o pasan por una revisión por pares.\\
-
+Ten en cuenta que no todos los proyectos y paquetes de rOpenSci están incluidos en el ámbito de aplicación o pasan por una revisión por pares.
 Los proyectos desarrollados por el [personal](https://ropensci.org/about/#team) o en conferencias pueden ser experimentales, exploratorios, abordar las prioridades de la infraestructura básica y, por tanto, no entrar en estas categorías.
 Busca la etiqueta de revisión por pares (ver más abajo) para identificar los paquetes revisados por pares en el repositorio de rOpenSci.
 
@@ -132,6 +131,8 @@ Además, tenemos algunos *temas especializados* con un alcance algo más amplio.
   (Ejemplos: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
 
 - **traducción**: Como parte de nuestro trabajo en [publicación multilingüe](https://ropensci.org/multilingual-publishing/) tenemos especial interés en paquetes que faciliten la traducción y publicación de recursos científicos y de programación a múltiples lenguages (humanos) para que sean accesibles a públicos más amplios y diversos. Podría tratarse de interfaces para programas de traducción automática, infraestructura para gestionar la documentación en varios lenguages o programas que accedan a recursos lingüísticos especializados.  Se trata de un ámbito nuevo y experimental, por lo que te rogamos que abras un [issue para preguntar si el software está dentro del alcance de rOpenSci](https://github.com/ropensci/software-review/issues/new/choose) si te interesa presentar un paquete en esta categoría.
+
+- **Herramientas internas de rOpenSci** paquetes creados y/o utilizados por el equipo de rOpenSci como herramientas para la revisión por pares del software y otras iniciativas relacionadas.
 
 ### Otras consideraciones sobre el ámbito de aplicación {#other-scope-considerations}
 

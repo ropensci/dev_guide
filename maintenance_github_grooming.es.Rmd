@@ -9,7 +9,7 @@ Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobr
 
 ### Áreas de repositorio en GitHub {#git-hub-repo-topics}
 
-Las [áreas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) de GitHub ayudan a navegar y buscar en los repositorios de GitHub, son usadas por [R-universe en paginas de paquetes y para resultados de busquedas](https://github.com/r-universe-org/help#how-to-add-keyword-labels-to-an-r-package). También son usadas por [`codemetar`](https://github.com/ropensci/codemetar) en las palabras clave del registro de rOpenSci.
+Las [áreas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) de GitHub ayudan a navegar y buscar en los repositorios de GitHub, son usadas por [R-universe en paginas de paquetes y para resultados de busquedas](https://docs.r-universe.dev/publish/metadata.html#keywords). También son usadas por [`codemetar`](https://github.com/ropensci/codemetar) en las palabras clave del registro de rOpenSci.
 
 Recomendamos:
 
@@ -35,14 +35,14 @@ De este modo, la clasificación lingüística y las estadísticas de tu reposito
 En particular, si el lingüista no reconoce correctamente que tu repositorio contiene principalmente código R, tu paquete no aparecerá en los resultados de búsqueda con el filtro `language:R`.
 Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R populares](https://github.com/trending/r).
 
-Más información sobre las anulaciones del lingüista de GitHub [aquí](https://github.com/github/linguist#overrides).
+Más información sobre las [anulaciones del lingüista de GitHub](https://github.com/github/linguist#overrides).
 
 ## Publicita tu propia cuenta  {#marketown}
 
 - Como responsable de un paquete incorporado, ahora eres miembro de la organización GitHub "ropensci" de rOpenSci.
   Por defecto, la pertenencia a la organización es privada; consulta [cómo hacerla pública en la documentación de GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
 
-- Incluso después de que el repositorio de tu paquete haya sido transferido a rOpenSci, puedes [destacarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+- Incluso si el repositorio de tu paquete ha sido transferido a rOpenSci, puedes [destacarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
 
 - En general, recomendamos añadir al menos una imagen de perfil (¡que no tiene por qué ser tu cara!) y tu nombre [a tu perfil de GitHub](https://help.github.com/articles/customizing-your-profile/).
 

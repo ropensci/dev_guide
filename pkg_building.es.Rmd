@@ -19,8 +19,9 @@ Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recom
   En particular, *no* elijas un nombre de paquete que no esté disponible en CRAN o en Bioconductor.
 
 - Existe un equilibrio entre las ventajas de un nombre de paquete único y un nombre de paquete menos original.
-    - Un nombre poco común tiene la ventaja de que su uso es más fácil de detectar (habrá menos falsos positivos al buscar el nombre en la búsqueda de código de GitHub para que tú o rOpenSci evalúen su uso) y de buscar (para que quienes lo usen puedan buscar "cómo usar el paquete \<nombre\_paquete>?" en internet).
-    - Por otro lado, un nombre *demasiado* único puede hacer que el paquete sea más difícil de descubrir (es decir, difícil de que aparezca como resultado de la búsqueda "cómo hago esto en R"). Es un argumento para que el nombre de tu paquete sea algo muy cercano al tema, como [geojson](https://github.com/ropensci/geojson).
+  
+  - Un nombre poco común tiene la ventaja de que su uso es más fácil de detectar (habrá menos falsos positivos al buscar el nombre en la búsqueda de código de GitHub para que tú o rOpenSci evalúen su uso) y de buscar (para que quienes lo usen puedan buscar "cómo usar el paquete \<nombre\_paquete>?" en internet).
+  - Por otro lado, un nombre *demasiado* único puede hacer que el paquete sea más difícil de descubrir (es decir, difícil de que aparezca como resultado de la búsqueda "cómo hago esto en R"). Es un argumento para que el nombre de tu paquete sea algo muy cercano al tema, como [geojson](https://github.com/ropensci/geojson).
 
 - [Este artículo de Nick Tierney (en inglés)](https://www.njtierney.com/post/2018/06/20/naming-things/) lista otras consideraciones interesantes a tener en cuenta al nombrar paquetes de R.
   En caso de que cambies de opinión sobre el nombre de tu paquete, este segundo artículo de Nick explica [cómo cambiar el nombre de tu paquete](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
@@ -58,12 +59,14 @@ CodeMeta utiliza [términos de Schema.org](https://schema.org/) por lo que, a me
 
 - Utiliza el [paquete cli](https://cli.r-lib.org/) o las herramientas de R base (`message()` y `warning()`) para comunicarte con las personas que usen tus funciones.
 
-- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [este 
-artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [este
+  artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
-- No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar. 
+- No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar.
 
 - Proporciona una forma para suprimir la verbosidad, preferiblemente a nivel de paquete: haz que la creación de mensajes dependa de una variable u opción de entorno (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) en el paquete usethis), en lugar de en un parámetro de la función. El control de los mensajes podría ser a varios niveles ("ninguno, "informar", "depurar") en lugar de lógico (ningún mensaje / todos los mensajes). El control de la verbosidad es útil para usuarios/as finales, pero también en las pruebas. Puedes encontrar más comentarios interesantes en [este issue de la guía de diseño de tidyverse](https://github.com/tidyverse/design/issues/42).
+
+- Puedes proporcionar traducciones para los mensajes de tu paquete. El paquete [potools](https://michaelchirico.github.io/potools/) puede ayudarte con esa tarea.
 
 ### Interfaces interactivas o gráficas {#interactive-graphical-interfaces}
 
@@ -72,7 +75,7 @@ Esto puede incluir la generación automática del código necesario para reprodu
 (Ver también ["Tests"](#testing) más abajo).
 
 El paquete [`tabulizer`](https://github.com/ropensci/tabulizer) por ejemplo, tiene un flujo de trabajo interactivo para extraer tablas, pero también puede extraer sólo coordenadas, por lo que se pueden volver a ejecutar los mismos pasos como un script.
-Otros dos ejemplos de aplicaciones shiny que generan código son [https://gdancik.shinyapps.io/shinyGEO/](https://gdancik.shinyapps.io/shinyGEO/)y [https://github.com/wallaceEcoMod/wallace/](https://github.com/wallaceEcoMod/wallace/).
+Otros dos ejemplos de aplicaciones shiny que generan código son <https://gdancik.shinyapps.io/shinyGEO/>y <https://github.com/wallaceEcoMod/wallace/>.
 
 ### Comprobación de entradas
 
@@ -91,15 +94,23 @@ Si tu paquete accede a una API web o a otro recurso web,
 
 Para más información, consulta el artículo del blog [Por qué deberías (o no) crear un cliente API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
 
-## Estilo del código {#code-style}
+### Paquetes que envuelven software externo {#external-software}
+
+- Documenta claramente cómo instalar el paquete, incluidos todos los paquetes o bibliotecas externos necesarios, incluyendo, en su caso, los pasos explícitos en los sistemas operativos habituales.
+- Proporciona una función de informe de situación (sitrep) que compruebe si se ha instalado el software, con pistas en caso de que falte algo. [Ejemplo en greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- Si es posible, proporciona una función que ayude en la instalación. [Ejemplo en hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Estilo del código y mejores prácticas {#code-style}
 
 - Para más información sobre cómo dar estilo a tu código, nombrar funciones y scripts de R dentro de la carpeta `R` te recomendamos que leas el [capítulo "Code" (Código) del libro R Packages](https://r-pkgs.org/Code.html).
-  Recomendamos el paquete [`styler`](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
+  Recomendamos [Air](https://posit-dev.github.io/air/) o el paquete [styler](https://github.com/r-lib/styler) para automatizar parte del estilo del código.
   También te sugerimos que leas la [Guía de estilo de Tidyverse (en inglés)](https://style.tidyverse.org/).
 
 - Puedes optar por utilizar `=` en lugar de `<-` siempre que seas coherente con esa elección dentro de tu paquete.
   Recomendamos evitar el uso de `->` para la asignación dentro del paquete.
   Si utilizas `<-` en todo tu paquete, y también utilizas `R6` en ese paquete, debrás utilizar `=` para la asignación dentro de la generación de la clase `R6Class` - esto no se considera una incoherencia porque no puedes usar `<-` en este caso.
+
+- Puedes utilizar el [paquete lintr](https://lintr.r-lib.org/index.html) para identificar algunas posibles áreas de mejora. [Ejemplo de flujo de trabajo](https://masalmon.eu/2024/08/28/lintr-3-steps/).
 
 ## Archivo CITATION {#citation-file}
 
@@ -155,9 +166,9 @@ bibentry(
   El *README* debe incluir, en este orden:
   
   - El nombre del paquete.
-  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://ropensci.org/blog/2021/10/14/runiverse-badges/)).
+  - Etiquetas de integración continua y la cobertura de tests, la etiqueta de revisión por pares de rOpenSci una vez que haya comenzado (ver más abajo), una etiqueta de repostatus.org, y cualquier otra (por ejemplo [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
   - Una breve descripción de los objetivos del paquete (¿qué hace? ¿por qué seria interesante usarlo?) con enlaces descriptivos a todas las viñetas (renderizadas, es decir, legibles, por ejemplo [el sitio web de documentación](#website)) a menos que el paquete sea pequeño y sólo haya una viñeta que repita el *README*. Asegúrate también de que las viñetas estén renderizadas y sean legibles, consulta [la sección "sitio web de documentación"](#website)).
-  - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [pak](https://pak.r-lib.org/) o [R-universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/).
+  - Instrucciones de instalación utilizando, por ejemplo, el paquete [remotes](https://remotes.r-lib.org/), [pak](https://pak.r-lib.org/) o [R-universe](https://docs.r-universe.dev/publish/set-up.html).
   - Cualquier configuración adicional necesaria (tokens de autenticación, etc).
   - Una breve demostración de uso.
   - Si aplica, cómo se compara el paquete con otros paquetes similares y/o cómo se relaciona con otros paquetes.
@@ -169,7 +180,7 @@ Si utilizas otra etiqueta de estado del repo, como el [ciclo de vida](https://ww
 - Una vez que hayas enviado el paquete y haya completado la revisión editorial, añade la insignia de revisión por pares como
 
 ```
-[![](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
+[![Revisión de software por pares de rOpenSci](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
 ```
 
 donde issue\_id es el número del *issue* en el repositorio donde se hizo la revisión del software.
@@ -184,7 +195,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
   - Edición o publicación ([etiquetas de la versión de CRAN y de la fecha de publicación de METACRAN](https://www.r-pkg.org/services#badges), [etiqueta de la API de chequeos de CRAN](https://github.com/r-hub/cchecksbadges), etiqueta de Zenodo)
   - Estadísticas o uso (descargas, por ejemplo [etiquetas de descarga de r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
   
-  La tabla debe ser más ancha que larga para enmascarar el resto del *README*.
+  La tabla debe ser más ancha que larga para no enmascarar el resto del *README*.
 
 - Si tu paquete se conecta a una fuente de datos o a un servicio en línea, o utiliza otro software, ten en cuenta que el *README* de tu paquete puede ser el punto de entrada para alguien que lo usa por primera vez.
   Debe proporcionar suficiente información para poder entender la naturaleza de los datos, el servicio o el software, y proporcionar enlaces a otros datos y documentación relevantes.
@@ -211,9 +222,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
 - Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION.
   Por ejemlo, el *README* de [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird) o del paquete [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs) (que no es parte de rOpensci).
 
-- El paquete debe contener la documentación general del paquete para `?paquete` (o ``?`paquete-package``` si hay un conflicto de nombres).
-  Opcionalmente, puedes utilizar tanto `?paquete` como ``?`paquete-package``` para el archivo del manual del paquete utilizando la etiqueta `@aliases` de roxygen.
-  [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) añade la plantilla para generar la documentación general.
+- El paquete debe contener la documentación general del paquete para `?paquete` (o ````?`paquete-package``` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?paquete` como ````?````paquete-package``` para el archivo del manual del paquete utilizando la etiqueta ````@aliases` de roxygen. [`usethis::use\_package\_doc()\`\](<https://usethis.r-lib.org/reference/use_package_doc.html>) añade la plantilla para generar la documentación general.
 
 - El paquete debe contener al menos una viñeta en formato **HTML** que cubra una parte importante de las funciones del paquete, ilustrando casos de uso realistas y cómo se supone que las funciones interactúen entre ellas.
   Si el paquete es pequeño, la viñeta y el *README* pueden tener un contenido muy similar.
@@ -263,18 +272,27 @@ f <- function(a = TRUE) {
 ```
 
 - La documentación debe ayudar a la navegación incluyendo links entre funciones relacionadas y agrupando la documentación de funciones relacionadas en página de ayuda comunes.
-  Para esto recomendamos la etiqueta `@seealso`, que crea automáticamente enlaces _"See also"_ (ver también, en inglés) y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown.
+  Para esto recomendamos la etiqueta `@seealso`, que crea automáticamente enlaces *"See also"* (ver también, en inglés) y [puede agrupan las funciones](https://pkgdown.r-lib.org/reference/build_reference.html) en sitios web generados con pkgdown.
   Consulta [la sección "manual" del libro *R Packages*](https://r-pkgs.org/man.html) y [la sección "Agrupación de funciones" de este capítulo](#function-grouping) para más detalles.
 
 - Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual.
   Consulta la [viñeta de roxygen2 sobre la reutilización de documentación](https://roxygen2.r-lib.org/articles/reuse.html).
-  
-- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural _"examples"_), pero también la etiqueta `@example <path>` (en singular _"example"_) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
+
+- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural *"examples"*), pero también la etiqueta `@example <path>` (en singular *"example"*) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
 - Añade `#' @noRd` a las funciones internas. Quizá te interese el [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
 
 - A partir de la versión 7.0.0 de roxygen2, las clases `R6` son oficialmente compatibles.
   Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para saber cómo documentar las clases `R6`.
+
+- Todavía no hay soporte para proporcionar páginas web de manual en diferentes idiomas, pero se han producido avances interesantes en el paquete [rhelpi18n](https://github.com/eliocamp/rhelpi18n).
+
+### Datos de ejemplo {#example-datasets}
+
+Para documentar la interfaz de tu paquete, es posible que necesites utilizar datos de ejemplo.
+Puedes utilizar datos de R base (en el paquete datasets), como penguins, o [redistribuir y documentar datos](https://r-pkgs.org/data.html), con las atribuciones adecuadas.
+Si quieres usar conjuntos de datos en español, puedes utilizar el paquete [datos](https://cran.r-project.org/web/packages/datos/readme/README.html) que provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R, como pinguinos.
+Ten cuidado de elegir datos que cumplan con el [código de conducta de rOpenSci](https://ropensci.org/code-of-conduct/) y que, en general, no sean perjudiciales ni alienantes para nadie.
 
 ### URLs en la documentación {#ur-ls-in-documentation}
 
@@ -297,7 +315,7 @@ Sólo tendrás que preocuparte por la construcción automática de tu sitio web 
 Puedes encontrar el estado de estas acciones en `https://dev.ropensci.org/job/nombre_paquete` (por ejemplo [para `magick`](https://dev.ropensci.org/job/magick)) y el sitio web en `https://docs.ropensci.org/nombre_paquete` (por ejemplo [para `magick`](https://docs.ropensci.org/magick)).
 La construcción del sitio web utilizará el archivo de configuración de pkgdown si tienes uno, excepto para el estilo, ya que utilizará el [paquete `rotemplate`](https://github.com/ropensci-org/rotemplate/).
 El sitio web resultante tendrá una barra de búsqueda local.
-Por favor, informa de los errores, y haz preguntas o pedidos de nuevas características sobre la construcción del sitio centralizada en [https://github.com/ropensci/docs/](https://github.com/ropensci/docs/) y sobre la plantilla en [https://github.com/ropensci/rotemplate/](https://github.com/ropensci/rotemplate/).
+Por favor, informa de los errores, y haz preguntas o pedidos de nuevas características sobre la construcción del sitio centralizada en <https://github.com/ropensci/docs/> y sobre la plantilla en <https://github.com/ropensci/rotemplate/>.
 
 *Si las viñetas de tus paquetes necesitan credenciales (claves de API, tokens, etc.) para generarse, es posible que quieras [pregenerar las viñetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) ya que las credenciales no se pueden utilizar en el servidor que genera la documentación.*
 
@@ -305,6 +323,13 @@ Antes de presentar y transferir tu paquete, puedes utilizar el [enfoque document
 Esto te ahorrará el trabajo de ejecutar (y acordarte de ejecutar) `pkgdown::build_site()` cada vez que haya que actualizar el sitio.
 Consulta nuestro [capítulo sobre integración continua](#ci) si ésto no te resulta familiar.
 En cualquier caso, no olvides actualizar la URL del sitio web en todos los lados donde aparezca después de hacer la transferencia a la organización ropensci.
+
+
+### Idioma
+
+Si la documentación de tu paquete está escrita en un idioma distinto del inglés (pero compatible con el sistema de revisión de software por pares de rOpenSci), puedes declarar ese idioma para que el sitio web pkgdown se [localice](https://pkgdown.r-lib.org/articles/translations.html).
+
+Todavía no es posible obtener un sitio web pkgdown multilingüe listo para usar (https://github.com/r-lib/pkgdown/issues/2258).
 
 ### Agrupar funciones en el índice  {#function-grouping}
 
@@ -339,8 +364,8 @@ Si tu paquete no tiene ningún logotipo, el [generador de documentación de rOpe
 
 ## Autoría  {#authorship}
 
-El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.) si hay más de una persona listada.
-Utiliza el campo de comentarios para indicar el ID ORCID de cada persona, si tuviera (ver [este post](https://ropensci.org/technotes/2018/10/08/orcid/)).
+El archivo `DESCRIPTION` de un paquete debe enumerar las personas que participaron de la autoría y quienes colaboraron en el paquete, utilizando la sintaxis `Authors@R` para indicar sus funciones (*author*/*creator*/*contributor*, etc.).
+Utiliza el campo de comentarios para indicar el [ID ORCID](https://ropensci.org/technotes/2018/10/08/orcid/) de cada persona o el [ID ROR](https://ropensci.org/blog/2025/05/09/ror/) de cada organización, si tuvieron.
 Revisa [esta sección de "Writing R Extensions" (Escribiendo extensiones de R)](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para más detalles.
 Si crees que quienes revisaron tu paquete han hecho una contribución sustancial al desarrollo de tu paquete, puedes agregar sus nombres en el campo `Authors@R` usando el tipo de contribución `"rev"`, por ejemplo:
 
@@ -372,7 +397,10 @@ Tanto si se incluyen archivos enteros como funciones individuales de otros paque
 ## Licencia {#licence}
 
 El paquete debe tener una licencia aceptada por [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) u [OSI](https://opensource.org/licenses).
-Para más detalles sobre las licencias, consulta el libro [R packages](https://r-pkgs.org/license.html).
+El libro [*R packages* (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) incluye una sección muy útil sobre licencias.
+
+Si tu paquete incluye código de otras fuentes, también necesitas reconocer a los autores del código original en tu archivo DESCIPTION, generalmente con un rol de propietario del copyright: `role = "cph"`.
+Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [*R packages* (Paquetes de R)](https://r-pkgs.org/description.html#sec-description-authors-at-r) en Inglés o puedes consultar también el libro en español [Introducción a la programación II](https://intro-programacion.netlify.app/09_paquetes-1.html#completando-el-archivo-description).
 
 ## Testeo {#testing}
 
@@ -384,13 +412,13 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Es una buena práctica escribir *tests* unitarios para todas las funciones, y para todo el código del paquete en general, asegurando que se cubra las funcionalidades clave.
   Si la cobertura de los *tests* en tu paquete está por debajo del 75% probablemente requerirá *tests* adicionales o una explicación de la baja cobertura antes de ser enviado para su revisión.
 
-- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir los *tests*.
-  Intenta escribir *tests* a medida que escribas cada nueva función.
+- Recomendamos utilizar [testthat](https://testthat.r-lib.org/) para escribir los *tests*. Otro paquete que se puede usar es [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
+
+-  Intenta escribir *tests* a medida que escribas cada nueva función.
   Esto responde a la necesidad obvia de tener *tests* adecuados para el paquete, pero te permite pensar en varias formas en las que una función puede fallar, y programar *defensivamente* contra esas fallas.
   [Más información sobre *tests*](https://r-pkgs.org/tests.html).
 
-- Los *tests* deben ser fáciles de entender.
-  Te sugerimos que leas el artículo de blog [*Why Good Developers Write Bad Unit Tests* (Por qué las personas que son buenas desarrollando escriben malos tests)](https://mtlynch.io/good-developers-bad-tests/) de Michael Lynch.
+- Los *tests* deben ser fáciles de entendery lo más autocontenidos posible. Si usas testthat, evita utilizar código de alto nivel, es decir, código fuera de bloques `test_that()` (como por ejemplo, pasos de preprocesamiento). Recomendamos leer los [*"high-level principles for testing"* (principios de alto nivel para *tests*)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) en el libro *R Packages* (Paquetes de R).
 
 - Los paquetes con aplicaciones Shiny deberán generar *tests* unitarios usando [`shinytest2`](https://rstudio.github.io/shinytest2/) o [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para comprobar que las interfaces interactivas funcionan como es esperado.
 
@@ -429,7 +457,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 - Para evitar que los ejemplos se ejecuten en CRAN (por ejemplo, si requieren autenticación), tienes que utilizar `\dontrun{}`.
   Sin embargo, para un primer envío, CRAN no te permitirá saltearte todos los ejemplos.
   En este caso puedes añadir algunos pequeños ejemplos de juguete, o encapsular el código de los ejemplos en `try()`.
-  Consulta también la etiqueta `@exampleIf`, que al momento de escribir este artículo, se encuentra en la versión de desarrollo de roxygen2.
+  Consulta también la etiqueta `@exampleIf`.
 
 - Además de ejecutar los ejemplos localmente en tu propia computadora, te aconsejamos fuertemente que ejecutes los ejemplos en uno de los [sistemas de integración continua](#ci).
   De nuevo, se ejecutarán los ejemplos que no estén incluidos en `\dontrun{}` o `\donttest{}`.
@@ -437,12 +465,15 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 ## Dependencias del paquete  {#pkgdependencies}
 
+- En general, es mejor tener la menor cantidad de dependencias posibles.
+
 - Pensa en las ventajas y desventajas de depender de un paquete.
   Por un lado, las dependencias reducen el esfuerzo de desarrollo, y permite construir en base a funcionalidades útiles desarrolladas por otras personas, especialmente si la dependencia realiza tareas complejas, es de alto rendimiento y/o está bien revisada y probada.
   Por otro lado, tener muchas dependencias supone una carga de mantenimiento ya que requiere estar al día con los cambios en esos paquetes, con riesgo para la sostenibilidad de tu paquete a largo plazo.
   También aumenta el tiempo y el tamaño de la instalación, lo que supone principalmente una consideración en el ciclo de desarrollo tuyo y del resto, y en los sistemas de compilación automatizados.
   Los paquetes "pesados" -los que tienen muchas dependencias, y los que tienen grandes cantidades de código compilado- aumentan este costo.
-  He aquí algunos enfoques para reducir las dependencias:
+
+- He aquí algunos enfoques para reducir las dependencias:
   
   - Si sólo utilizas unas pocas funciones de una dependencia grande o pesada, puedes copiarlas en tu propio paquete.
     (Ver la sección [*Autoría*](#authorship-included-code) para saber cómo reconocer la autoría del código copiado).
@@ -455,7 +486,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
       class(df) <- c("tbl_df", "tbl", "data.frame") 
       ```
       
-      (Ten en cuenta que este enfoque [no está universalmente aceptado](https://twitter.com/krlmlr/status/1067856118385381377).)
+      (Ten en cuenta que este enfoque debe utilizarse y probarse con mucho cuidado, sobre todo porque puede romper el comportamiento esperado de los objetos a los que se le cambia la clase.)
   
   - Asegúrate de que utilizas la función del paquete donde está definida originalmente y no de un paquete que la re-exporta.
     Por ejemplo, muchas funciones de **devtools** pueden encontrarse en paquetes especializados más pequeños, como **sessioninfo**.
@@ -467,11 +498,14 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   
   - Si las dependencias tienen funcionalidades redundantes, considera depender de una sola en lo posible.
   
-  - Puedes encontrar más consejos sobre la gestión de dependencias en [el capítulo _"Dependencies: Mindset and Background"_ (Dependencias: Mentalidad y Contexto) del libro [_"R packages"_](https://r-pkgs.org/dependencies-mindset-background.html) y [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
+  - Puedes encontrar más consejos sobre la gestión de dependencias en \[el capítulo *"Dependencies: Mindset and Background"* (Dependencias: Mentalidad y Contexto) del libro [*"R packages"*](https://r-pkgs.org/dependencies-mindset-background.html) y [en este artículo de Scott Chamberlain (en Inglés)](https://recology.info/2018/10/limiting-dependencies/).
 
 - Utiliza la sección `Imports` en lugar de `Depends` para listar los paquetes cuyas funciones usas en tu paquete.
   Utiliza sección `Suggests` para listar los paquetes que usas en los *tests* (`testthat`), y para generar la documentación (`knitr`, roxygen2) (si utilizas `usethis` para añadir la infraestructura de *tests* con [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) o una viñeta mediante [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html) los paquetes necesarios se añadirán a `DESCRIPTION`).
   Si utilizas algún paquete en los ejemplos o *tests* de tu paquete, asegúrate de listarlo en `Suggests` si no aparece ya en `Imports`.
+
+- Comprueba el estado de desarrollo de cualquier dependencia que añadas.
+  Especialmente para los paquetes alojados en GitHub, es muy útil comprobar que se mantienen activamente, y que [no han sido archivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
 
 - Si tu paquete no está en Bioconductor pero depende de paquetes de Bioconductor, asegúrate de que las instrucciones de instalación en el *README* y la viñeta sean lo suficientemente claras incluso para una persona que no esté familiarizada con el ciclo de publicación de Bioconductor.
   
@@ -515,7 +549,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
   [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2 (en Inglés)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
 - Para datos espaciales, el paquete [sp](https://github.com/edzer/sp/) debe considerarse obsoleto en favor de [sf](https://r-spatial.github.io/sf/).
-  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retirarán a finales de 2023.
+  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retiraron en 2023.
   Recomendamos el uso de las suites espaciales desarrolladas por las comunidades [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial).
   Consulta [este issue de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
 
@@ -523,7 +557,7 @@ Para más detalles sobre las licencias, consulta el libro [R packages](https://r
 
 - Los archivos fuente de tu paquete tienen que estar bajo control de versiones, más concretamente versionados con [Git](https://happygitwithr.com/).
   Puede que el paquete [gert](https://docs.ropensci.org/gert/) te resulte útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
-  
+
 - El nombre de rama por defecto no debe ser `master` ya que puede resultar ofensivo para algunas personas. Consulta la [declaración del proyecto Git y de la Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para más contexto. Es práctica general nombrar a la rama por defecto `main` aunque también pueden utilizarse otros nombres. Consulta el artículo de tidyverse ["Cambiar el nombre de la rama por defecto"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para aprender a utilizar esta funcionalidad para renombrar las ramas por defecto.
 
 - Asegúrate de listar archivos innecesarios, como `.DS_Store`, en .gitignore.

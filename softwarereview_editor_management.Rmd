@@ -34,7 +34,7 @@ Steps:
 We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
 We think you would make a wonderful addition to the team.
 
-[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one one you just finished!]).  
+[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one you just finished!]).  
 We ask that editors make an informal commitment of serving for two years, and re-evaluate their participation after that.  
 On a short-term basis, any editor can decline to handle a package or say, "I'm pretty busy, I can't handle a new package for a few weeks."
 
@@ -65,7 +65,7 @@ Best,
 
 - Invite editors to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications.
 
-- Editors need access to the AirTable database of software review.
+- Editors need access to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
 
 - Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
 
@@ -90,7 +90,7 @@ Best,
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
-- Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
+- Inform rOpenSci community manager or some other staff member so that they might be moved to the alumni team members on the website.
 
 - Remove their access to the Airtable workspace.
 
@@ -98,6 +98,18 @@ Best,
   
   - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-    Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
+Both the dev\_guide and software-review README are automatically knit via continuous integration.
+
+## Putting the system on pause {#vacation}
+
+If you want to put the system on a break for instance over the holidays, before leaving:
+
+- Add a vacation message to the `about` field of issue templates. [Example PR](https://github.com/ropensci/software-review/pull/679/files).
+- Add a vacation message to the bot's standard welcome response. [Example PR](https://github.com/ropensci-org/buffy/pull/108).
+
+Upon resuming activities:
+
+- Remove the vacation message from issue templates. [Example PR](https://github.com/ropensci/software-review/pull/680).
+- Remove the vacation message from the bot's standard welcome response. [Example commit](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
 

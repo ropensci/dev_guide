@@ -16,9 +16,11 @@ Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em 
 
 ## Torne a contribuição e a colaboração do seu repositório amigáveis {#friendlyfiles}
 
+Tornar seu repositório fácil de colaborar é parte do que pode ajudar a garantir que ele [perdure para além do seu trabalho](https://arxiv.org/pdf/2505.06484).
+
 ### Código de conduta {#coc-file}
 
-Após a transferência para a nossa organização no GitHub, o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto.
+Depois que o seu pacote for listado na [rOpenSci registry](https://ropensci.org/packages/all) (a lista oficial de pacotes da rOpenSci), o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto.
 Você deve adicionar este texto ao README:
 
 ```markdown
@@ -28,7 +30,11 @@ By
 contributing to this project, you agree to abide by its terms.
 ```
 
-Em seguida, exclua o código de conduta atual do pacote, caso exista algum.
+E 
+
+- Se o seu pacote foi transferido para a organização da rOpenSci no GitHub, exclua o código de conduta atual do repositório, se houver um, pois o código de conduta padrão da organização GitHub será exibido.
+
+- Se o seu pacote não for transferido para a organização da rOpenSci no GitHub, substitua o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci no GitHub] (https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Guia de contribuição {#contributing-guide}
 
@@ -40,7 +46,7 @@ Em geral, esses e outros modelos precisarão ser modificados para serem usados c
 Modificar um guia de contribuição genérico para adicionar um toque pessoal também tende a fazer com que ele pareça menos genérico e mais sincero.
 As preferências pessoais em um guia de contribuição incluem:
 
-- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
+- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [lintr](https://github.com/jimhester/lintr), ) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
 
 - Infraestrutura como a do `roxygen2`?
 
@@ -55,9 +61,9 @@ A rOpenSci também incentiva os guias de contribuição a incluírem uma declara
 Esses links fornecem um modelo para uma declaração de ciclo de vida simples.
 Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as contribuições (consulte [esta seção](#attributions)).
 
-Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para o [Fórum da rOpenSci](https://discuss.ropensci.org/) após certificar-se de que você verá essas perguntas no fórum. As pessoas usuárias podem usar o fórum para fazer perguntas sobre o uso e relatar seus casos de uso, e você pode se inscrever em categorias e tags individuais para receber notificações sobre o seu pacote.  Sinta-se à vontade para mencionar isso nos documentos do seu pacote e/ou nas diretrizes de contribuição/modelo de *issue*. Oriente as pessoas que usam seu pacote a marcar as mensagens com o nome do pacote.
+Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para as ferramentas de discussão que sua plataforma Git oferece, como [Discussões do GitHub](https://docs.github.com/en/discussions) para o GitHub.
 
-Quando uma pull request estiver mais perto de ser mesclada, você poderá usar [um *GitHub Actions PR workflow* para estilizar o código com o pacote `styler`](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Quando uma pull request estiver mais perto de ser mesclada, você poderá estilizar o código com [Air](https://posit-dev.github.io/air/) ou [styler](https://styler.r-lib.org/).
 
 ### Gerenciamento de *issues* {#issue-management}
 
@@ -136,9 +142,11 @@ Se alguém contribuir para o seu repositório, considere adicioná-la em `DESCRI
 
 No mínimo, considere adicionar o nome das pessoas colaboradoras próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
 
+Você também pode usar o pacote R [allcontributors](https://docs.ropensci.org/allcontributors/) para agradecer a todos os colaboradores no arquivo README.
+
 Recomendamos que você seja generoso(a) com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
 
-Como um lembrete de [nossas diretrizes de empacotamento](#building) se o seu pacote foi revisado e você acha que as pessoas revisoras fizeram uma contribuição substancial para o desenvolvimento do seu pacote, você pode listá-las na seção `Authors@R` com um tipo de contribuinte "Revisor" (`"rev"`), da seguinte forma:
+Como um lembrete de [nossas diretrizes de empacotamento](#building), se o seu pacote foi revisado e você acha que as pessoas revisoras fizeram uma contribuição substancial para o desenvolvimento dele, você pode listá-las na seção `Authors@R` com um tipo de contribuinte "Revisor(a)" (`"rev"`), da seguinte forma:
 
 ```
     person("Bea", "Hernández", role = "rev",

@@ -14,7 +14,7 @@ Along with the [previous chapter](#building), it forms our guidelines for Softwa
 ## What is continuous integration (CI)? {#what-is-continuous-integration-ci}
 
 Continuous integration automatically runs tests on software.
-In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time that you make a commit or pull request to GitHub.
+In the case of rOpenSci, CI practically means that a set of tests will be automatically run via GitHub, every time you make a commit or pull request to GitHub.
 
 CI automates the running of general package checks such as `R CMD check`, see [testing](/building.html#testing).
 It is possible to set up CI before your tests are written, then CI will run the tests as you commit them to the repository.
@@ -42,13 +42,13 @@ R packages should have CI for all operating systems (Linux, Mac OSX, Windows) wh
 
 - Anything with file system / path calls
 
-In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services standards setups for R packages allow this with not much hassle.
+In case of any doubt regarding the applicability of these criteria to your package, it's better to add CI for all operating systems. Most CI services' standard setups for R packages allow this with not much hassle.
 
 ## Which continuous integration service(s)? {#whichci}
 
 There are a number of continuous integration services, including standalone services (CircleCI, AppVeyor), and others integrated into code hosting or related services (GitHub Actions, GitLab, AWS Code Pipeline). Different services support different operating system configurations.
 
-[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.  There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well and first-class support in the [{usethis}](https://usethis.r-lib.org/reference/github_actions.html) package. All packages submitted to rOpenSci for peer review are checked by our own [`pkgcheck` system](https://docs.ropensci.org/pkgcheck), described further in the [Guide for Authors](#authors-guide). These checks are also provided as a GitHub Action in the [`ropensci-review-tools/pkgcheck-action` repository](https://github.com/ropensci-review-tools/pkgcheck-action). Packages authors are encouraged to use that action to confirm prior to submission that a package passes all of our checks. See [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) for more information.
+[GitHub Actions](https://github.com/features/actions) is a convenient option for many R developers who already use GitHub as it is integrated into the platform and supports all needed operating Systems.  There are [actions supported for the R ecosystem](https://github.com/r-lib/actions/), as well as first-class support in the [{usethis}](https://usethis.r-lib.org/reference/github_actions.html) package. All packages submitted to rOpenSci for peer review are checked by our own [`pkgcheck` system](https://docs.ropensci.org/pkgcheck), described further in the [Guide for Authors](#authors-guide). These checks are also provided as a GitHub Action in the [`ropensci-review-tools/pkgcheck-action` repository](https://github.com/ropensci-review-tools/pkgcheck-action). Package authors are encouraged to use that action to confirm prior to submission that a package passes all of our checks. See [our blog post](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) for more information.
 
 [usethis supports CI setup for other systems](https://usethis.r-lib.org/reference/ci.html), though these functions are soft-deprecated. rOpenSci also supports the [circle](https://docs.ropensci.org/circle/) package, which aids in setting up CircleCI pipelines, and the [tic](https://docs.ropensci.org/tic/) package for building more complicated CI pipelines.
 
@@ -58,7 +58,7 @@ We require that rOpenSci packages are tested against the latest, previous and de
 
 Details of how to run tests/checks using different versions of R locally can be found in the R-hub vignette on running [Local Linux checks with Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
 
-You can fine tune the deployment of tests with each versions by using a testing matrix.
+You can fine tune the deployment of tests with each version by using a testing matrix.
 
 If you develop a package depending on or intended for Bioconductor, you might find [biocthis](https://lcolladotor.github.io/biocthis/index.html) relevant.
 
@@ -86,11 +86,11 @@ Here are tips to minimize AppVeyor build time:
 
 - Enable [rolling builds](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
 
-We no longer transfer AppVeyor projects to ropensci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+We no longer transfer AppVeyor projects to rOpenSci AppVeyor account so after transfer of your repo to rOpenSci's "ropensci" GitHub organization the badge will be `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
 
 ### Circle CI (Linux and Mac OSX) {#circle-ci-linux-and-mac-osx}
 
-[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as continuous integration service.
+[Circle CI](https://circleci.com/) is used, for example, by rOpenSci package [`bomrang`](https://github.com/ropensci/bomrang) as a continuous integration service.
 
 ## Test coverage {#coverage}
 
@@ -98,11 +98,11 @@ Continuous integration should also include reporting of test coverage via a test
 
 We recommend using Codecov.
 To activate Codecov for your repo, run `usethis::use_github_action("test-coverage")` to create a file `.github/workflows/test-coverage.yaml`.
-You also need to give Codecov access to your github repository, see [Codecov quick start guide](https://docs.codecov.com/docs/quick-start) for how to set up access.
+You also need to give Codecov access to your GitHub repository, see [Codecov quick start guide](https://docs.codecov.com/docs/quick-start) for how to set up access.
 Then add a Codecov status badge to the top of your README.md, see [Codecov status badges](https://docs.codecov.com/docs/status-badges).
 
-Currently, Codecov has access to all ropensci github repositories by default.
-When your repository is accepted and transferred to ropensci, Codecov access should transfer automatically.
+Currently, Codecov has access to all rOpenSci GitHub repositories by default.
+If your repository is transferred to the rOpenSci GitHub organization, Codecov access should transfer automatically.
 You will need to update the URL of the badge to point to the rOpenSci-hosted repository.
 
 For more details, see the [README for the **covr** package](https://github.com/r-lib/covr) for instructions, as well as [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) and [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
@@ -115,7 +115,33 @@ After transfer to rOpenSci's "ropensci" GitHub organization, each push to the re
 
 ## Even more CI: rOpenSci docs {#rodocsci}
 
-After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
+After transfer to rOpenSci's "ropensci" GitHub organization, a pkgdown website will be built for your package:
+
+- For each new commit to the default branch (checked approx once per hour).
+
+- When any of the strong dependencies in the same universe updates the version number.
+
+- Once per month.
+
+You can find the status of these builds at `https://ropensci.r-universe.dev/ui#packages` and in the [commit status](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). 
+
+If your documentation includes code that relies on, for instance, credentials, here's how to ensure pkgdown docs are rendered in the best possible way.
+
+- For function examples, use the  `examplesIf` roxygen2 tag with the `IN_PKGDOWN` variable e.g. `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`
+- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option e.g.
+
+```r
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = Sys.getenv("IN_PKGDOWN") == "true"
+)
+```
+
+Examples:
+
+- `examplesIf`:  https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (see also Docs of the roxygen2 tag: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
+- Vignette, knitr eval option:   https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16
 
 Please report bugs, questions and feature requests about the central builds and about the template at [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
