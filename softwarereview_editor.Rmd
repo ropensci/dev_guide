@@ -8,7 +8,7 @@ aliases:
 ```{block, type="summaryblock"}
 Software Peer Review at rOpenSci is managed by a team of editors.
 The Editor-in-Chief (EiC) role is rotated (generally quarterly) amongst experienced members of our editorial board.
-Information on current and recent editors and their activities can be viewed on our editorial dashboard at [dashboard.ropensci.org](https://dashboard.ropensci.org).
+Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://dashboard.ropensci.org).
 
 This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklist), and of [handling editors in charge of submissions](#editorchecklist).
 It also describes [how to respond to an out-of-scope submission](#outofscoperesponse), and provides guidance on [answering reviewers' questions](#reviewersupport).
@@ -21,34 +21,52 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 ## EiC Responsibilities {#eicchecklist}
 
 Rotating Editors-in-Chief (EiCs) generally serve for 3 months or a time agreed to by all members of the editorial board.
-The EiC is entitled to taking scope and overlap decisions as independently as possible (but can still request help and advice).
-Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://dashboard.ropensci.org).
-The EiC is responsible for the following tasks:
+The EiC is responsible for [general management](#eic-general) of the review process, and for the initial stages of all submissions.
 
-- On assuming EiC rotation, reviewing the status of current open reviews as detailed on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and issuing reminders to other editors or package authors as needed. See [the following sub-section for more details](#eic-dashboard)
+### General EiC duties {#eic-general}
 
-- Watching all new issues posted to the software-review repo, for which the EiC must either subscribe to repo notifications on GitHub, or watch the `#software-peer-review-feed` channel on Slack.
+The EiC provides general management of all [software-review issues](https://github.com/ropensci/software-review/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen) with the help of our [editorial dashboard](https://dashboard.ropensci.org), as described in the following [dashboard sub-section](#eic-dashboard).
+The EiC is responsible for the following general tasks:
 
-- Tagging each new full submission with ` 0/editorial-team-prep`
+- On assuming EiC rotation, reviewing the status of current open reviews as detailed on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and issuing reminders to other editors or package authors as needed.
 
-- Calling `@ropensci-review-bot check srr` on pre-submission enquiries for statistical software. See corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief) for details.
+- Watching all new issues posted to the software-review repo, for which the EiC must either subscribe to repo notifications on GitHub, or watch the `#editors-only` channel on Slack (ideally both).
 
-- Finding an editor (potentially including yourself) to handle each submission. Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
+- Regularly (for instance weekly) monitoring the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and reminding other editors to move packages along as needed.
 
-- Assigning editors by issuing the command:
+- Responding where appropriate to issues posted to the [software-review-meta repo](https://github.com/ropensci/software-review-meta/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen).
+
+### EiC duties for each initial submission {#eic-submission}
+
+The EiC is reponsible for initial processing of all new submissions.
+The primary duties are to decide whether or not a submission should be considered in scope and proceed to review, and if so, to assign a handling editor.
+The EiC is entitled to take scope and overlap decisions as independently as possible, but is recommended to request opinions on the #editors-only channel on Slack.
+For each new pre-submission or submission, the EiC should:
+
+- Make decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions. Discussions should be initiated in the rOpenSci Slack `#editors-only` channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have. If the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
+
+  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
+  - After explaining an out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+
+- Tag each new full submission with ` 0/editorial-team-prep`
+
+- Find a handling editor (potentially including yourself). Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
+
+- Assign the handling editor to the review issue by issuing the command:
   ```
   @ropensci-review-bot assign @username as editor
   ```
   This will also add the tag `1/editor-checks` to the issue.
 
-- Regularly (for instance weekly) monitoring the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and reminding other editors to move packages along as needed.
+#### Statistical software submissions
 
-- Responding to issues posted to [the software-review-meta repo
+Statistical software should be considered in scope as long as it complies with > 50% of all [applicable standards](https://stats-devguide.ropensci.org/standards.html).
+If a pre-submission inquiry indicates that standards have already been complied with, the EiC should:
 
-- Making decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions. Discussions should be initiated in the rOpenSci Slack editors-only channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have. If after the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
+- Call `@ropensci-review-bot check srr` to confirm that standards have been complied with.
+- Consider whether the package is best placed in the nominated statistical category, or whether alternative or additional categories might be appropriate.
 
-  - Any editor should feel free to step in on these. See [this section](#outofscoperesponse) about how to respond to out-of-scope (pre-) submissions.
-  - After explaining an out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
+Details for EiC handling of statistical software submissions are provided in the corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
 
 ### The rOpenSci Editorial Dashboard {#eic-dashboard}
 
