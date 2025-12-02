@@ -38,10 +38,13 @@ EiC responsibilities include the following general tasks:
 
 ### EiC duties for each initial submission {#eic-submission}
 
-The EiC is reponsible for initial processing of all new submissions.
+The EiC is responsible for initial processing of all new submissions.
 The primary duties are:
+
 1. to decide whether or not a submission should be considered in scope and proceed to review, and if so,
-2. to assign a handling editor.
+2. to proceed to a full submission and assign a handling editor.
+
+#### Deciding on scope and overlap
 
 The EiC is entitled to take scope and overlap decisions as independently as possible, but is recommended to request opinions on the `#editors-only` channel on Slack.
 Scope decisions for statistical software are generally easier than for general (non-statistical) submissions, as [desribed below](#eic-stats-submissions).
@@ -52,12 +55,33 @@ For each new pre-submission or submission, the EiC should:
   If the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
 
 - If a pre-submission, referral, or submission is deemed out of scope, the EiC should thank authors for their submission, explain the reasons for the decision, and direct them to other publication venues if relevant.
-  Use wording from [Aims and scope](#aims-and-scope) in particular regarding the evolution of scope over time.
+  Where relevant, use wording from [_Aims and scope_](#aims-and-scope) regarding the evolution of scope over time.
   - After explaining an out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
 
 - If a pre-submission inquiry is considered within scope, the EiC _may_ perform preliminary checks.
   The [_Editors Template_](#editortemplate) may be used for this.
   To aid authors' responses to EiC comments, it helps to use unambiguous notation like [this example from one of our editors, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
+
+Decisions on scope may be require further information from submitting authors.
+The EiC should minimally ensure that documentation is sufficient to judge scope, including an accompanying website.
+If not, please ask for more details; even if a package is deemed out-of-scope, requesting improvements to package documentation can only help others to understand the package.
+This is an example request:
+
+```markdown
+Hello <username> and many thanks for your submission.
+
+We are discussing whether the package is in scope and need a bit more information.
+
+Would you mind adding more details and context to the README?
+After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
+
+<optional>
+If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is unique in comparison to similar packages](https://devguide.ropensci.org/policies.html#overlap).
+Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
+</optional>
+```
+
+#### Initial EiC duties for full submissions
 
 - Once the EiC is satisified that a package may proceed to a full submission, invite the authors to open a full submission issue, and then close the pre-submission enquiry.
 
@@ -90,40 +114,20 @@ The [*rOpenSci Editorial Dashboard*](https://dashboard.ropensci.org) is updated 
 The dashboard provides an up-to-date overview of our editorial team, their recent responsibilities, and the current state of all software review issues.
 The EiC (or any editors who are interested) can gain an overview of the editorial team status, availability, and recent workloads on [the *editors* page](https://dashboard.ropensci.org/editors.html).
 This should be used to find and assign editors for new software review issues.
-An overview of all current software reviews is on [the **Software Review* page](https://dashboard.ropensci.org/reviews.html).
-Entries on this page are colored by a measure of "urgency", summarised in the [table at the bottom of that page](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
+An overview of all current software reviews is on [the *Software Review* page](https://dashboard.ropensci.org/reviews.html), with entries are colored by a measure of "urgency", summarised in the [table at the bottom of that page](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
-Specific tasks for reviews in the specific review stages include:
+Tasks for reviews in the specific review stages include:
 
-- Looking over submissions in "0\/presubmission" and "1\/editorial-team-prep", to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
+- Look over submissions in "0\/presubmission" and "1\/editorial-team-prep", to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
 
-- Looking over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly.
-If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
+- Look over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly.
+  If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Looking over submissions in "3\/reviewer(s)-assigned". If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
+- Look over submissions in "3\/reviewer(s)-assigned".
+  If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Looking over submissions in "4\/review(s)-in-awaiting-changes". If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information.
-
-### Asking for more details {#asking-for-more-details}
-
-In some cases online documentation is sparse. Minimal README, no pkgdown website make assessment harder.
-In that case please ask for more details: even if the package is deemed out-of-scope, the package docs will have gotten better so we are fine asking for these efforts.
-
-Example text
-
-```markdown
-Hello <username> and many thanks for your submission.
-
-We are discussing whether the package is in scope and need a bit more information.
-
-Would you mind adding more details and context to the README?
-After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
-
-<optional>
-If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is best in class](https://devguide.ropensci.org/policies.html#overlap). Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
-</optional>
-
-```
+- Look over submissions in "4\/review(s)-in-awaiting-changes".
+  If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information.
 
 ### Inviting a guest editor {#guesteditor}
 
