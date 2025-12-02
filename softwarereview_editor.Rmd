@@ -89,6 +89,7 @@ Could you add a more detailed comparison to the packages you mention in the READ
 
 - Find a handling editor (potentially including yourself).
   Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
+  The EiC may also recruit a guest editor to handle any submission, as described in the [sub-section below](#guesteditor).
 
 - Assign the handling editor to the review issue by issuing the command:
   ```
@@ -131,16 +132,17 @@ Tasks for reviews in the specific review stages include:
 
 ### Inviting a guest editor {#guesteditor}
 
-After discussion with other editors the EiC might invite a guest editor to handle a submission (e.g. if the submission volume is large, if all editors have a conflict of interest, if specific expertise is needed, or as a trial prior to inviting a person to join the editorial board).
+After discussion with other editors the EiC may invite a guest editor to handle a submission.
+Guest editors may be desired or needed if specific domain expertise is needed, if the current submission volume is large, if potential editors have conflicts of interest, or as a trial prior to inviting a person to join the editorial board.
 
 When inviting a guest editor,
 
 - Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
 - Give a link to the [guide for editors](#editorchecklist).
 
-If the person said yes (yay!),
+If a guest editor accepts an invitation (yay!),
 
-- Make sure they [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
+- Make sure they have [enabled 2FA for their GitHub account](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/),
 - Invite them to the `ropensci/editors` team and to the ropensci organization,
 - Once they've accepted this repo invitation, assign the issue to them,
 - Ensure they're (already) invited to rOpenSci Slack workspace,
