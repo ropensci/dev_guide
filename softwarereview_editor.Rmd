@@ -192,6 +192,22 @@ Editors should be assigned no more than one issue per quarter-year, or maximum o
 - The checking system is rebuilt every Tuesday at 00:01 UTC, and can take a couple of hours.
   If automatic checks fail around that time, wait a few hours and try again.
 
+The automated checks also include a _Statistical Properties_ section with a fold-out providing details.
+The fold-out section flags any "noteworthy" properties, defined as aspects lying in the upper or lower fifth percentile compared with values from all current CRAN packages.
+Please pay particular attention to:
+
+- Extremely large or small values for lines-of-code ("loc").
+- Extremely large or small values for numbers of functions ("n_fns_...").
+
+The automated report will also include a link to an _interactive network visualisation of calls between objects in package_.
+This visualisation can provide useful insight into how functions within a package are structured.
+Please use all of this information to judge whether:
+
+- A package has too few functions or lines of code, in which case it may be insufficiently developed for peer review.
+- A package is extremely large, in which case it may be too burdensome for reviewers.
+  For example, [these initial checks](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
+
+
 #### Initial editorial comments
 
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.
