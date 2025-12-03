@@ -249,31 +249,40 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 #### Assign reviewers {#assign-reviewers}
 
-- Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single).
+- Assign each reviewer with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single).
   The following is thus also valid: `@ropensci-review-bot add @username to reviewers`.
   One command should be issued for each reviewer.
   If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
+- Due dates for reviews are set by default to [21 days](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 weeks) after the date of assignment.
 - If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
 ### During review: {#during-review}
 
 - Check in with reviewers and authors occasionally. Offer clarification and help as needed.
-- In general aim for 3 weeks for review, 2 weeks for
-  subsequent changes, and 1 week for reviewer approval of changes.
+- In general aim for 3 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
 - Upon each review being submitted,
   - Write a comment thanking the reviewer in your own words.
-  - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`. E.g. for the review [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
+  - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`.
+    For example, for the review [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
 - Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 - If the authors intend to submit an accompanying [Applications](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) manuscript at [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicate to the authors can submit their manuscript after the review has been completed. 
 
 #### Challenges during review {#challenges-during-review}
 
--   **If the author stops responding**, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion. Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, and thank them once again for their work.  Let the other editors know in the Slack channel to consider them for a package in the future with high chances of smooth software review (e.g. a package author who has already submitted packages to us).
--   **If a reviewer is late with review or stops responding**, send a reminder after 1 week, and again after 2 weeks. The first reminding can be a `@tag` on GitHub. After that use email or other direct communication. If after 3 weeks there is still no response, determine how best to move ahead without them:
-    -   If the reviewer has already submitted their primary review, and another reviewer is active and providing substantial feedback, the editor can proceed with the review process, and should take the role of the absent reviewer in determining if the authors' changes are sufficient.
-    -   If the absent reviewer has not submitted their review, the editor should try to find a new reviewer, and proceed with the review process once two reviews are in. At this point, the editor should prioritize finding experienced reviewers who can commit to a quick turnaround. Be sure to ping other editors on Slack.
-        - At their discretion, the editor _may_ opt to act as the second reviewer themselves, but should only do so after multiple failed attempts to find a new reviewer, and if the editor has sufficient expertise to do so. We discourage editors from doing this with any frequency, as it increases workload and reduces the diversity of views brought into the community by reviewers.
-        - Make a comment thanking the original reviewer in any case, and remove them with `@ropensci-review-bot remove @username from reviewers`.
+- **If the author stops responding**, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion.
+  Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, and thank them once again for their work.
+  Let the other editors know in the Slack channel to consider them for a package in the future with high chances of smooth software review.
+- **If a reviewer is late with review or stops responding**, send a reminder after 1 week, and again after 2 weeks.
+  The first reminding can be a `@tag` on GitHub.
+  After that use email or other direct communication.
+  If after 3 weeks there is still no response, determine how best to move ahead without them:
+  - If the reviewer has already submitted their primary review, and another reviewer is active and providing substantial feedback, the editor can proceed with the review process, and should take the role of the absent reviewer in determining if the authors' changes are sufficient.
+  - If the absent reviewer has not submitted their review, the editor should try to find a new reviewer, and proceed with the review process once two reviews are in.
+    At this point, the editor should prioritize finding experienced reviewers who can commit to a quick turnaround.
+    Be sure to ping other editors on Slack.
+    - At their discretion, the editor _may_ opt to act as the second reviewer themselves, but should only do so after multiple failed attempts to find a new reviewer, and if the editor has sufficient expertise to do so.
+      We discourage editors from doing this with any frequency, as it increases workload and reduces the diversity of views brought into the community by reviewers.
+    - Make a comment thanking the original reviewer in any case, and remove them with `@ropensci-review-bot remove @username from reviewers`.
 
 ### After review: {#after-review}
 
