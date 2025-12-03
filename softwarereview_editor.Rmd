@@ -170,42 +170,50 @@ After the review process is finished (package approved, issue closed),
 ## Handling editors' responsibilities {#editorchecklist}
 
 Handling editors are responsible for guiding each assigned submission through the entire process from initial submission to final acceptance.
+Editors should be assigned no more than one issue per quarter-year, or maximum of four per year.
 
 ### Upon submission: {#upon-submission}
 
-- Submission will automatically generate package check output from the ropensci-review-bot. The check results should be examined for any outstanding issues (most exceptions will need to be justified by the author in the particular context of their package). Checks can be re-run after any package change with the comment `@ropensci-review-bot check package`.
+- Submission will automatically generate package check output from the ropensci-review-bot.
+  All check failures (&#10060;) should be rectified prior to proceeding, although exceptions may be justified at the handling editor's discretion.
+  Encourage authors themselves to trigger checks by calling `@ropensci-review-bot check package` to confirm that all checks pass (&#9989;).
+- Examine all items flagged with &#128064;, and request further information or action from author where appropriate.
 - For statistical submissions (identifiable as "Submission Type: Stats" in issue template), add the "stats" label to the issue (if not already added).
-- Check that the issue template has been properly filled out. Most common oversights and omissions should be caught and noted by the bot, but a manual check always helps. Editors can edit templates directly for minor fixes, or may direct authors to fill any mandatory template fields that may be missing.
-- The checking system is rebuilt every Tuesday at 00:01 UTC, and can take a couple of hours. If automatic checks fail around that time, wait a few hours and try again.
-- After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks and record your response to the submission. You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).  Please strive to finish the checks and start looking for reviewers within 5 working days.
+  - If the author has identified that they have "incorporated documentation of standards ... via the [srr](https://docs.ropensci.org/srr) package", then call `@ropensci-review-bot check srr` to confirm that at least 50% of all standards have been complied with.
+- Check that the issue template has been properly filled out. Most common oversights and omissions should be caught and noted by the bot, but a manual check always helps.
+  Editors can edit templates directly for minor fixes, or may direct authors to fill any mandatory template fields that may be missing.
+- The checking system is rebuilt every Tuesday at 00:01 UTC, and can take a couple of hours.
+  If automatic checks fail around that time, wait a few hours and try again.
+- After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.
+  You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
+  Please strive to finish the checks and start looking for reviewers within 5 working days.
 - Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
   Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
   If rejected, see [this section](#outofscoperesponse) about how to respond.
 - Ensure that the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance; see [criteria in this section of the CI chapter](#whichci) for further details and options).
-- Wherever possible when asking for changes, direct authors to automatic tools such as [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/) and [styler](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use. See this [example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Wherever possible when asking for changes, direct authors to automatic tools such as [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/) and [styler](https://styler.r-lib.org/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use.
+  See this [example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - Ideally, any remarks you make as editor should be addressed before assigning reviewers.
-- If initial checks show major gaps, request changes before assigning reviewers. If the author mentions changes might take time, [apply the holding label by calling `@ropensci-review-bot put on hold`](#policiesreviewprocess). You'll get a reminder in the issue every 90 days to check in with the package author(s).
+- If initial checks show major gaps, request changes before assigning reviewers.
+  If the author mentions changes might take time, [apply the holding label by calling `@ropensci-review-bot put on hold`](#policiesreviewprocess).
+  You'll get a reminder in the issue every 90 days to check in with the package author(s).
 - If the package raises a new issue for rOpenSci policy, start a conversation in Slack or open a discussion on the [rOpenSci forum](https://discuss.ropensci.org/) to discuss it with other editors ([example of policy discussion](https://discuss.ropensci.org/t/overlap-policy-for-package-onboarding/368)).
 
 ### Look for and assign two reviewers: {#look-for-and-assign-two-reviewers}
 
-#### Tasks {#tasks}
+#### Finding reviewers {#finding-reviewers}
 
 - Comment with `@ropensci-review-bot seeking reviewers`.
 - Use the [email template](#reviewrequesttemplate) if needed for inviting reviewers
   - When inviting reviewers, include something like "if I don't hear from you in a week, I'll assume you are unable to review," so as to give a clear deadline when you'll move on to looking for someone else.
-- Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single). The following is thus also valid: `@ropensci-review-bot add @username to reviewers`. One command should be issued for each reviewer. If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
-- If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+  - You may send multiple invitations at the same time, especially as this often helps find reviewers more quickly.
+    You can always reply to say a reviewer has already been found, and thank people for offering regardless.
 
-#### How to look for reviewers {#how-to-look-for-reviewers}
+Sources of information for finding reviewers include:
 
-##### Where to look for reviewers? {#where-to-look-for-reviewers}
-
-As a (guest) editor, use
-
-- the potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed.  We suggest not using more than one of the suggested reviewers);
-- the Airtable database of reviewers and volunteers (see next subsection);
-- and the authors of [rOpenSci packages](https://ropensci.org/packages/).
+- Potential suggestions made by the submitter(s), (although submitters may have a narrow view of the types of expertise needed.  We suggest not using more than one of the suggested reviewers);
+- Our Airtable database of reviewers and volunteers (see next subsection);
+- Authors of similar [rOpenSci packages](https://ropensci.org/packages/).
 
 When these sources of information are not enough,
 
@@ -238,6 +246,14 @@ Here are criteria to keep in mind when choosing a reviewer. You might need to pi
 - Some evidence that they are interested in openness or R community activities, although cold emailing is fine.
 
 Each submission should be reviewed by *two* package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two.  Both reviewers need to review the package comprehensively, though from their particular perspective.  In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
+
+#### Assign reviewers {#assign-reviewers}
+
+- Assign reviewers with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single).
+  The following is thus also valid: `@ropensci-review-bot add @username to reviewers`.
+  One command should be issued for each reviewer.
+  If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
+- If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
 ### During review: {#during-review}
 
