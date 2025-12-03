@@ -17,7 +17,7 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 ```
 
 This chapter is structured to reflect the typical progression of an rOpenSci software review.
-All submissions are intially considered by the Editor-in-Chief, who makes the initial decision on whether a package is in scope.
+All submissions are initially considered by the Editor-in-Chief, who makes the initial decision on whether a package is in scope.
 If so, a handling editor is assigned who is then responsible for guiding the actual review process.
 
 Please be aware that all people involved in the review process are volunteers who are freely and willingly devoting their own time.
@@ -46,13 +46,13 @@ EiC responsibilities include the following general tasks:
 The EiC is responsible for initial processing of all new submissions.
 The primary duties are:
 
-1. to decide whether or not a submission should be considered in scope and proceed to review, and if so,
-2. to proceed to a full submission and assign a handling editor.
+1. To decide whether or not a submission should be considered in scope and proceed to review, and if so,
+2. To proceed to a full submission and assign a handling editor.
 
 #### Deciding on scope and overlap
 
 The EiC is entitled to take scope and overlap decisions as independently as possible, but is recommended to request opinions on the `#editors-only` channel on Slack.
-Scope decisions for statistical software are generally easier than for general (non-statistical) submissions, as [desribed below](#eic-stats-submissions).
+Scope decisions for statistical software are generally easier than for general (non-statistical) submissions, as [described below](#eic-stats-submissions).
 For each new pre-submission or submission, the EiC should:
 
 - Refer to the categories described in the [_Aims and Scope_](#aims-and-scope) section to make decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions.
@@ -91,7 +91,7 @@ Could you add a more detailed comparison to the packages you mention in the READ
 
 #### Initial EiC duties for full submissions
 
-- Once the EiC is satisified that a package may proceed to a full submission, invite the authors to open a full submission issue, and then close the pre-submission enquiry.
+- Once the EiC is satisfied that a package may proceed to a full submission, invite the authors to open a full submission issue, and then close the pre-submission enquiry.
 
 - Initially tag each new full submission with ` 0/editorial-team-prep`
 
@@ -179,6 +179,8 @@ Editors should be assigned no more than one issue per quarter-year, or maximum o
 
 ### Upon submission: {#upon-submission}
 
+#### Automatic checks
+
 - Submission will automatically generate package check output from the ropensci-review-bot.
   All check failures (&#10060;) should be rectified prior to proceeding, although exceptions may be justified at the handling editor's discretion.
   Encourage authors themselves to trigger checks by calling `@ropensci-review-bot check package` to confirm that all checks pass (&#9989;).
@@ -189,6 +191,9 @@ Editors should be assigned no more than one issue per quarter-year, or maximum o
   Editors can edit templates directly for minor fixes, or may direct authors to fill any mandatory template fields that may be missing.
 - The checking system is rebuilt every Tuesday at 00:01 UTC, and can take a couple of hours.
   If automatic checks fail around that time, wait a few hours and try again.
+
+#### Initial editorial comments
+
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.
   You can also streamline your editor checks by using the [`pkgreviewr` package created by  associate editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
   Please strive to finish the checks and start looking for reviewers within 5 working days.
