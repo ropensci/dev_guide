@@ -16,7 +16,12 @@ It also describes [how to respond to an out-of-scope submission](#outofscoperesp
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
 ```
 
-> Always assume participants in the software review system (fellow editors, submitters, reviewers) are doing their best, and communicate gracefully accordingly, especially when inquiring why a thing is delayed.
+This chapter is structured to reflect the typical progression of an rOpenSci software review.
+All submissions are intially considered by the Editor-in-Chief, who makes the initial decision on whether a package is in scope.
+If so, a handling editor is assigned who is then responsible for guiding the actual review process.
+
+Please be aware that all people involved in the review process are volunteers who are freely and willingly devoting their own time.
+Always assume all participants in the software review system (fellow editors, submitters, reviewers) are doing their best, and communicate gracefully at all times.
 
 ## EiC Responsibilities {#eicchecklist}
 
