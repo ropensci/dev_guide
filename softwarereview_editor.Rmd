@@ -269,6 +269,23 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 #### Challenges during review {#challenges-during-review}
 
+
+## Answering reviewers' questions {#reviewersupport}
+
+Both authors or reviewers might ask for feedback on aspects of a review process, including for example the tone or substance of reviews or author responses.
+While this guide strives to provide sufficient guidance for most cases, other editors are always available for questions.
+If you note anything that might be productively edited in, or added to, this _Dev Guide_, then please open an issue or pull request.
+Aside from those general principles, these reviews provide useful examples:
+
+- A tough-but-constructive example suggesting a re-write of the vignette: [ropensci/software-review#191 (comment)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+- The [`slopes` package](https://github.com/ropensci/software-review/issues/420), which ended up being fundamentally redesigned in response to the reviews.
+  All reviews/reviewers were at all times entirely constructive, which seems to have played a major role in motivating the authors to embark on such a major overhaul.
+  Comments such as, *"this package does not ..."* or *"has not ..."* were invariably followed by constructive suggestions for what could be done (there are, for example, [several in one of the first reviews](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
+- Reviews of the [tic package](https://docs.ropensci.org/tic/) politely expressed reservations: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) and [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
+- [bowerbird](https://docs.ropensci.org/bowerbird)'s useful ["pre-review"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) resulted in a package being split before the actual reviews.
+
+Additional challenges that may arise during review include:
+
 - **If the author stops responding**, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion.
   Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, and thank them once again for their work.
   Let the other editors know in the Slack channel to consider them for a package in the future with high chances of smooth software review.
@@ -286,12 +303,11 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 
 ### After review: {#after-review}
 
-- `@ropensci-review-bot approve <package-name>`
-- *If the original repository wishes to keep the package in their own GitHub organization rather than transfer to ropensci, add a line with the repository URL to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.*
-- Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest. Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
-- If authors maintain a gitbook that is at least partly about their
-  package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors
-  about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
+- Approve the package with `@ropensci-review-bot approve <package-name>`
+- If the original repository wishes to keep the package in their own GitHub organization rather than transfer to rOpenSci, open a pull request adding the repository URL to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.
+- Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest.
+  Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
+- If authors maintain a gitbook that is at least partly about their package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
 
 #### Packages remaining in original GitHub organizations
 
@@ -302,19 +318,6 @@ For package authors who wish to retain their repositories in their original GitH
 - Ask package to replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the rOpenSci GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 
-
 ### Package promotion: {#package-promotion}
 
 - Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
-
-## Answering reviewers' questions {#reviewersupport}
-
-Reviewers might ask for feedback on e.g. the tone of their review.
-Besides pointing them at general guidance in this guide, asking editors / opening an issue when such guidance is lacking,
-here are some review examples that might be useful.
-
-- tough-but-constructive example: the part of this review suggesting a re-write of the vignette: [ropensci/software-review#191 (comment)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
-- [the `slopes` package](https://github.com/ropensci/software-review/issues/420), which ended up being fundamentally redesigned in response to the reviews. All reviews/reviewers were at all times entirely constructive, which seems to have played a major role in motivating the authors to embark on such a major overhaul. Comments such as, *"this package does not ..."* or *"has not ..."* were invariably followed by constructive suggestions for what could be done (there are, for example, [several in one of the first reviews](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
-- tic reviews politely expressed reservations: [https://github.com/ropensci/software-review/issues/305#issuecomment-504762517](https://github.com/ropensci/software-review/issues/305#issuecomment-504762517) and [https://github.com/ropensci/software-review/issues/305#issuecomment-508271766](https://github.com/ropensci/software-review/issues/305#issuecomment-508271766)
-- bowerbird useful ["pre-review"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) that resulted in a package split before the actual reviews.
-
