@@ -56,6 +56,9 @@ For each new pre-submission or submission, the EiC should:
 
 - If a pre-submission, referral, or submission is deemed out of scope, the EiC should thank authors for their submission, explain the reasons for the decision, and direct them to other publication venues if relevant.
   Where relevant, use wording from [_Aims and scope_](#aims-and-scope) regarding the evolution of scope over time.
+
+  - [Examples of out-of-scope submissions and responses](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
+
   - After explaining an out-of-scope decision, write an issue comment `@ropensci-review-bot out-of-scope`.
 
 - If a pre-submission inquiry is considered within scope, the EiC _may_ perform preliminary checks.
@@ -153,17 +156,20 @@ After the review process is finished (package approved, issue closed),
 - Thank the guest editor again,
 - Remove them from the `ropensci/editors` team (but not from the ropensci organization).
 
-## Editors' responsibilities {#editors-responsibilities}
+## Editors' general responsibilities {#editors-responsibilities}
 
-- In addition to handling packages (about 4 a year), editors weigh in on group editorial decisions, such as whether a package is in-scope, and determining updates to our policies. We generally do this through Slack, which we expect editors to be able to check regularly.
+- In addition to handling submissions as described in the following section, editors weigh in on group editorial decisions, such as whether submissions are in-scope, and guiding updates to our policies.
+  We generally do this through Slack, which we expect editors to be able to check regularly.
 
-- You only need to keep track of your own submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on Slack. Examples:
-  
-  - You know of an overlapping package, that hasn't been mentioned in the process yet.
+- You only need to keep track of your own submissions, but if you do notice an issue with a package that is being handled by another editor, feel free to raise that issue directly with the other editor, or post the concern to editors-only channel on Slack.
+  Examples might include:
+
+  - You know of an overlapping package that hasn't been mentioned in the process yet.
   - You see a question to which you have an expert answer that hasn't been given after a few days (such as linking to a blog post which may answer a question).
-  - Concerns related to general review progress, including aspects such as the speed of the process, should be directed to the current Editor-in-Chief.
 
-## Handling Editor's Checklist {#editorchecklist}
+## Handling editors' responsibilities {#editorchecklist}
+
+Handling editors are responsible for guiding each assigned submission through the entire process from initial submission to final acceptance.
 
 ### Upon submission: {#upon-submission}
 
@@ -275,12 +281,6 @@ For package authors who wish to retain their repositories in their original GitH
 ### Package promotion: {#package-promotion}
 
 - Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
-
-## Responding to out-of-scope submissions {#outofscoperesponse}
-
-Thank authors for their submission, explain the reasons for the decision, and direct them to other publication venues if relevant, and to the rOpenSci discussion forum. Use wording from [Aims and scope](#aims-and-scope) in particular regarding the evolution of scope over time, and the overlap and differences between unconf/staff/software-review development.
-
-[Examples of out-of-scope submissions and responses](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
 
 ## Answering reviewers' questions {#reviewersupport}
 
