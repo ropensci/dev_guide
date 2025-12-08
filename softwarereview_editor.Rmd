@@ -284,7 +284,6 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 #### Assign reviewers {#assign-reviewers}
 
 - Assign each reviewer with `@ropensci-review-bot assign @username as reviewer`. `add` can also be used instead of `assign`, and `to reviewers` (plural) instead of `as reviewer` (single).
-  The following is thus also valid: `@ropensci-review-bot add @username to reviewers`.
   One command should be issued for each reviewer.
   If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
 - Due dates for reviews are set by default to [21 days](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 weeks) after the date of assignment.
