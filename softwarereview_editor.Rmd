@@ -225,7 +225,7 @@ Please use all of this information to judge whether:
   Initiate discussion via Slack #software-review channel if needed for edge cases that haven't been caught by previous checks by the EiC.
   If rejected, see [this section](#outofscoperesponse) about how to respond.
 - Ensure that the package gets tested on multiple platforms (having the package built on several operating systems via GitHub Actions for instance; see [criteria in this section of the CI chapter](#whichci) for further details and options).
-- Wherever possible when asking for changes, direct authors to automatic tools such as [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [Jarl](https://jarl.etiennebacher.com/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use.
+- Wherever possible when asking for changes, direct authors to automatic tools such as [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/), [Jarl](https://jarl.etiennebacher.com/), [flir](https://flir.etiennebacher.com/), and to online resources (sections of this guide, sections of the [R packages book](https://r-pkgs.org/)) to make your feedback easier to use.
   See this [example of editor's checks](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - Ideally, any remarks you make as editor should be addressed before assigning reviewers.
 - If initial checks show major gaps, request changes before assigning reviewers.
