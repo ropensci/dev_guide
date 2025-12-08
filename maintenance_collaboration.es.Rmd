@@ -11,6 +11,8 @@ Además de estos consejos, en su mayoría técnicos, es importante recordar que 
 
 ## Haz que tu repositorio sea accesible a las contribuciones y la colaboración  {#friendlyfiles}
 
+Hacer que tu repositorio facilite la colaboración es parte de lo que puede ayudar [a que perdure más allá de tu trabajo](https://arxiv.org/pdf/2505.06484).
+
 ### Código de conducta  {#coc-file}
 
 Una vez que tu paquete esté incluido en el [registro de rOpenSci](https://ropensci.org/packages/all), [el Código de Conducta de rOpenSci](https://ropensci.org/code-of-conduct/) se aplicará a tu proyecto.
@@ -173,5 +175,4 @@ Si das a alguien permisos de escritura en el repositorio
 
 - Llamada comunitaria de rOpenSci [*Set Up Your Package to Foster a Community* (Configura tu paquete para fomentar una comunidad)](https://ropensci.org/commcalls/apr2021-pkg-community/).
 - Para reutilizar respuestas amables y habituales, considera las [respuestas guardadas](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/using-saved-replies).
-
 

@@ -27,6 +27,7 @@ jobs:
 
       - uses: r-lib/actions/setup-tinytex@v2
 
+
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 3
@@ -45,6 +46,9 @@ jobs:
 
       - name: Move Spanish files
         run: Rscript -e 'file.copy(from = "_book/es/Paquetes-de-rOpenSci--Desarrollo,-mantenimiento-y-revisión-por-pares.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
+
+      - name: Move Portuguese files
+        run: Rscript -e 'file.copy(from = dir("_book/pt", pattern = "*.pdf")[1], to = "_book/pt/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/pt/images")'
 
       - name: git config
         run: |
