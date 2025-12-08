@@ -338,7 +338,7 @@ Additional challenges that may arise during review include:
 ### After review: {#after-review}
 
 - Approve the package with `@ropensci-review-bot approve <package-name>`
-- If the original repository wishes to keep the package in their own GitHub organization rather than transfer to rOpenSci, open a pull request adding the repository URL to [this repos list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.
+- If the original repository wishes to keep the package in their own GitHub organization rather than transfer to rOpenSci, open a pull request adding the repository URL to this [list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.
 - Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest.
   Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 - If authors maintain a gitbook that is at least partly about their package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
