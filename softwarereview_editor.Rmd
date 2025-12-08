@@ -322,7 +322,7 @@ Additional challenges that may arise during review include:
 
 - **If the author stops responding**, refer to [the policies](#policies) and/or ping the other editors in the Slack channel for discussion.
   Importantly, if a reviewer was assigned to a closed issue, contact them when closing the issue to explain the decision, and thank them once again for their work.
-  Let the other editors know in the Slack channel to consider them for a package in the future with high chances of smooth software review.
+  Let the other editors know in the Slack channel to consider them as reviewers for a package in the future with high chances of smooth software review.
 - **If a reviewer is late with review or stops responding**, send a reminder after 1 week, and again after 2 weeks.
   The first reminding can be a `@tag` on GitHub.
   After that use email or other direct communication.
