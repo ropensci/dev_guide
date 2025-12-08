@@ -113,6 +113,7 @@ format:
     code-link: true
     include-in-header: "matomo.html"
   pdf:
+    documentclass: book
     include-in-header: "preamble.tex"
     output-file: "ropensci-dev-guide"
 babelquarto:
