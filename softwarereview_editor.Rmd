@@ -55,7 +55,7 @@ Scope decisions for statistical software are generally easier than for general (
 For each new pre-submission or submission, the EiC should:
 
 - Refer to the categories described in the [_Aims and Scope_](#aims-and-scope) section to make decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions.
-  - Initiate discussions in the rOpenSci Slack `#editors-only` channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have.
+  - Initiate discussions in the rOpenSci Slack `#editors-only` channel through summarising the (pre-)submitted software, along with any concerns the EiC might have.
   - If the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
   - The EiC should seek other opinions on submissions which are beyond their own areas of expertise.
   - Statistical software should be considered in scope as long as it can comply with at least half of all [applicable standards (general and at least one category)](https://stats-devguide.ropensci.org/standards.html).
