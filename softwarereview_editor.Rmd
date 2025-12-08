@@ -163,7 +163,7 @@ If a guest editor accepts an invitation (yay!),
 - Invite them to the `ropensci/editors` team and to the ropensci organization,
 - Once they've accepted this repo invitation, assign the issue to them,
 - Ensure they're (already) invited to rOpenSci Slack workspace,
-- Add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
+- Ask a staff member to add their name to the Airtable guest-editor table (so their names might appear in this book and in the software-review README).
 
 After the review process is finished (package approved, issue closed),
 
@@ -253,7 +253,7 @@ Sources of information for finding reviewers include:
 When these sources of information are not enough,
 
 - Ping other editors in Slack for ideas,
-- Look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on Twitter).
+- Look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on social media).
 - You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
 - R-Ladies has a [directory](https://rladies.org/directory/) specifying skills and interests of people listed.
 - You may post a request for reviewers in the #general and/or #software-review channels on the rOpenSci Slack, or on social media.
@@ -270,7 +270,7 @@ If so, please use the mentorship portion of the email template and be prepared t
 
 ##### Criteria for choosing a reviewer {#criteria-for-choosing-a-reviewer}
 
-Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching CRAN and the potential reviewer's GitHub page and general online presence (personal website, Twitter).
+Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching [r-universe](https://r-universe.dev) and the potential reviewer's GitHub page and general online presence (personal website, social media).
 
 - Has not reviewed a package for us within the last 6 months.
 - Some package development experience.
@@ -280,7 +280,10 @@ Here are criteria to keep in mind when choosing a reviewer. You might need to pi
 - Diversity - with two reviewers both shouldn't be cis white males.
 - Some evidence that they are interested in openness or R community activities, although cold emailing is fine.
 
-Each submission should be reviewed by *two* package reviewers. Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two.  Both reviewers need to review the package comprehensively, though from their particular perspective.  In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
+Each submission should be reviewed by *two* package reviewers.
+Although it is fine for one of them to have less package development experience and more domain knowledge, the review should not be split in two. 
+Both reviewers need to review the package comprehensively, though from their particular perspective.
+In general, at least one reviewer should have prior reviewing experience, and of course inviting one new reviewer expands our pool of reviewers.
 
 #### Assign reviewers {#assign-reviewers}
 
@@ -296,13 +299,9 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 - In general, aim for 3 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
 - Upon each review being submitted,
   - Write a comment thanking the reviewer in your own words.
-  - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`.
-    For example, for the review [https://github.com/ropensci/software-review/issues/329#issuecomment-809783937](https://github.com/ropensci/software-review/issues/329#issuecomment-809783937) the comment would be `@ropensci-review-bot submit review https://github.com/ropensci/software-review/issues/329#issuecomment-809783937 time 4`.
+  - Record the review by typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`, like in [this example](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
 - Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 - If the authors intend to submit an accompanying [Applications](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) manuscript at [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicate to the authors can submit their manuscript after the review has been completed. 
-
-#### Challenges during review {#challenges-during-review}
-
 
 ## Answering reviewers' questions {#reviewersupport}
 
@@ -338,12 +337,12 @@ Additional challenges that may arise during review include:
 ### After review: {#after-review}
 
 - Approve the package with `@ropensci-review-bot approve <package-name>`
-- If the original repository wishes to keep the package in their own GitHub organization rather than transfer to rOpenSci, open a pull request adding the repository URL to this [list](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) to ensure the package gets included in rOpenSci package registry.
+- See the [following section]{#non-transferred-packages} for how to enable authors to keep the package in their own GitHub organization if they prefer not to transfer to rOpenSci.
 - Nominate a package to be featured in an rOpenSci blog post or tech note if you think it might be of high interest.
   Please note in the software review issue one or two things the author could highlight, and tag `@ropensci/blog-editors` for follow-up.
 - If authors maintain an online book that is at least partly about their package, contact [an rOpenSci staff member](https://ropensci.org/about/#team) so they might contact the authors about transfer to [the `ropensci-books` GitHub organisation](https://github.com/orgs/ropensci-books).
 
-#### Packages remaining in original GitHub organizations
+#### Packages remaining in original GitHub organizations {#non-transferred-packages}
 
 For package authors who wish to retain their repositories in their original GitHub organizations, rather than transfer to github.com/ropensci, editors should:
 
