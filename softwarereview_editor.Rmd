@@ -14,14 +14,15 @@ This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklis
 It also describes [how to respond to an out-of-scope submission](#outofscoperesponse), and provides guidance on [answering reviewers' questions](#reviewersupport).
 
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
+
+**rOpenSci's community is our best asset.
+We aim for reviews to be open, non-adversarial, and focused on improving software quality.
+Be respectful and kind!**
 ```
 
 This chapter is structured to reflect the typical progression of an rOpenSci software review.
 All submissions are initially considered by the Editor-in-Chief, who makes the initial decision on whether a package is in scope.
 If so, a handling editor is assigned who is then responsible for guiding the actual review process.
-
-Please be aware that all people involved in the review process are volunteers who are freely and willingly devoting their own time.
-Always assume all participants in the software review system (fellow editors, submitters, reviewers) are doing their best, and communicate gracefully at all times.
 
 ## EiC Responsibilities {#eicchecklist}
 
@@ -35,11 +36,9 @@ EiC responsibilities include the following general tasks:
 
 - At the start of a rotation, the EiC should review the status of current open reviews on the [editorial dashboard](https://dashboard.ropensci.org/reviews.html), and issue reminders to other editors or package authors as needed.
 
-- Watch all new issues posted to the software-review repo, for which the EiC must either subscribe to repo notifications on GitHub, or watch the `#editors-only` channel on Slack (ideally both).
+- Watch all new issues posted to the software-review repo, for which the EiC must subscribe to repo notifications on GitHub, and also watch the `#editors-only` channel on Slack.
 
 - Regularly (for instance weekly) monitor the pace of all open reviews by keeping an eye on the [*Dashboard* page](https://dashboard.ropensci.org/reviews.html), and reminding other editors to move packages along as needed.
-
-- Respond where appropriate to issues posted to the [software-review-meta repo](https://github.com/ropensci/software-review-meta/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen).
 
 ### EiC duties for each initial submission {#eic-submission}
 
@@ -56,8 +55,10 @@ Scope decisions for statistical software are generally easier than for general (
 For each new pre-submission or submission, the EiC should:
 
 - Refer to the categories described in the [_Aims and Scope_](#aims-and-scope) section to make decisions on scope and overlap for pre-submission inquiries, referrals from JOSS or other publication partners, and submissions.
-  Initiate discussions in the rOpenSci Slack `#editors-only` channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have.
-  If the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
+  - Initiate discussions in the rOpenSci Slack `#editors-only` channel through summarising the (pre-)submitted/referred software, along with any concerns the EiC might have.
+  - If the EiC feels they haven't received enough answers after a day or two, they can ping all editors.
+  - The EiC should seek other opinions on submissions which are beyond their own areas of expertise.
+  - Statistical software should be considered in scope as long as it can comply with at least half of all [applicable standards (general and at least one category)](https://stats-devguide.ropensci.org/standards.html).
 
 - If a pre-submission, referral, or submission is deemed out of scope, the EiC should thank authors for their submission, explain the reasons for the decision, and direct them to other publication venues if relevant.
   Where relevant, use wording from [_Aims and scope_](#aims-and-scope) regarding the evolution of scope over time.
@@ -68,7 +69,14 @@ For each new pre-submission or submission, the EiC should:
 
 - If a pre-submission inquiry is considered within scope, the EiC _may_ perform preliminary checks.
   The [_Editors Template_](#editortemplate) may be used for this.
-  To aid authors' responses to EiC comments, it helps to use unambiguous notation like [this example from one of our editors, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
+  To aid authors' responses to editorial comments, it helps to use unambiguous notation for each comment, like:
+  ```
+  My comments are tagged with "EIC" and a numbered sequence. Please refer to this notation in your responses."
+
+  **EIC01** Please improve README
+  ```
+  It may also help to distinguish requirements from recommendations, for example through formatting requirements as checkboxes (`- [ ] **EIC01**`).
+  You may of course use any prefixes you like, including your own initials like in [this example from one of our editors, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
 
 Decisions on scope may be require further information from submitting authors.
 The EiC should minimally ensure that documentation is sufficient to judge scope, including an accompanying website.
