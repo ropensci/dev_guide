@@ -293,7 +293,7 @@ Each submission should be reviewed by *two* package reviewers. Although it is fi
 ### During review: {#during-review}
 
 - Check in with reviewers and authors occasionally. Offer clarification and help as needed.
-- In general aim for 3 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
+- In general, aim for 3 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
 - Upon each review being submitted,
   - Write a comment thanking the reviewer in your own words.
   - Record the review via typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`.
