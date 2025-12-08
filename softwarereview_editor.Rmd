@@ -78,7 +78,7 @@ For each new pre-submission or submission, the EiC should:
   It may also help to distinguish requirements from recommendations, for example through formatting requirements as checkboxes (`- [ ] **EIC01**`).
   You may of course use any prefixes you like, including your own initials like in [this example from one of our editors, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
 
-Decisions on scope may be require further information from submitting authors.
+Decisions on scope may require further information from submitting authors.
 The EiC should minimally ensure that documentation is sufficient to judge scope, including an accompanying website.
 If not, please ask for more details; even if a package is deemed out-of-scope, requesting improvements to package documentation can only help others to understand the package.
 This is an example request:
