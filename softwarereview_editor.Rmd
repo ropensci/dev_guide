@@ -123,6 +123,7 @@ If a pre-submission inquiry indicates that standards have already been complied 
 
 If standards have not yet been complied with, the EiC should ask the authors to judge whether they think their package will be able to comply with at least half of all general and category-specific standards.
 This may require discussion of the appropriate category or categories.
+If author has not complied with standards but agrees to do so, a "Holding" label should generally be applied until `@ropensci-review-bot check srr` gives a pass (&#9989;).
 Full details for EiC handling of statistical software submissions are provided in the corresponding [*Stats Dev Guide* chapter](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
 
 ### The rOpenSci Editorial Dashboard {#eic-dashboard}
