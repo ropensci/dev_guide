@@ -10,7 +10,7 @@ Software Peer Review at rOpenSci is managed by a team of editors.
 The Editor-in-Chief (EiC) role is rotated quarterly amongst experienced members of our editorial board.
 Information on current status of all editorial team members is presented on our [*Editorial Dashboard*](https://dashboard.ropensci.org).
 
-This chapter presents the responsibilities [of the Editor-in-Chief](#eicchecklist), and of [handling editors in charge of submissions](#editorchecklist).
+This chapter presents the responsibilities of the [Editor-in-Chief](#eicchecklist), and of [handling editors in charge of submissions](#editorchecklist).
 It also describes [how to respond to an out-of-scope submission](#outofscoperesponse), and provides guidance on [answering reviewers' questions](#reviewersupport).
 
 If you're a guest editor, thanks for helping! Please contact the editor who invited you to handle a submission for any question you might have.
