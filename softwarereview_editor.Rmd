@@ -186,7 +186,7 @@ After the review process is finished (package approved, issue closed),
 Handling editors are responsible for guiding each assigned submission through the entire process from initial submission to final acceptance.
 Editors should be assigned no more than one issue per quarter-year, or maximum of four per year.
 
-### Upon submission: {#upon-submission}
+### Upon submission {#upon-submission}
 
 #### Automatic checks
 
@@ -234,7 +234,7 @@ Please use all of this information to judge whether:
   You'll get a reminder in the issue every 90 days to check in with the package author(s).
 - If the package raises a new issue for rOpenSci policy, start a conversation in Slack.
 
-### Look for and assign two reviewers: {#look-for-and-assign-two-reviewers}
+### Look for and assign two reviewers {#look-for-and-assign-two-reviewers}
 
 #### Finding reviewers {#finding-reviewers}
 
@@ -293,7 +293,7 @@ In general, at least one reviewer should have prior reviewing experience, and of
 - Due dates for reviews are set by default to [21 days](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 weeks) after the date of assignment.
 - If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
-### During review: {#during-review}
+### During review {#during-review}
 
 - Check in with reviewers and authors occasionally. Offer clarification and help as needed.
 - In general, aim for 3 weeks for review, 2 weeks for subsequent changes, and 1 week for reviewer approval of changes.
@@ -303,7 +303,7 @@ In general, at least one reviewer should have prior reviewing experience, and of
 - Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 - If the authors intend to submit an accompanying [Applications](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) manuscript at [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicate to the authors can submit their manuscript after the review has been completed. 
 
-## Answering reviewers' questions {#reviewersupport}
+#### Answering reviewers' questions {#reviewersupport}
 
 Both authors or reviewers might ask for feedback on aspects of a review process, including for example the tone or substance of reviews or author responses.
 While this guide strives to provide sufficient guidance for most cases, other editors are always available for questions.
@@ -334,7 +334,7 @@ Additional challenges that may arise during review include:
       We discourage editors from doing this with any frequency, as it increases workload and reduces the diversity of views brought into the community by reviewers.
     - Make a comment thanking the original reviewer in any case, and remove them with `@ropensci-review-bot remove @username from reviewers`.
 
-### After review: {#after-review}
+### After review {#after-review}
 
 - Approve the package with `@ropensci-review-bot approve <package-name>`
 - See the [following section]{#non-transferred-packages} for how to enable authors to keep the package in their own GitHub organization if they prefer not to transfer to rOpenSci.
@@ -351,6 +351,6 @@ For package authors who wish to retain their repositories in their original GitH
 - Ask package to replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the rOpenSci GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 
-### Package promotion: {#package-promotion}
+#### Package promotion {#package-promotion}
 
 - Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
