@@ -280,8 +280,7 @@ f <- function(a = TRUE) {
 
 - Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural *"examples"*), pero también la etiqueta `@example <path>` (en singular *"example"*) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@exampleIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- Añade `#' @noRd` a las funciones internas. Quizá te interese el [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
-
+- Añade `#' @keywords internal` para marcar una función como interna sin dejar de generar su documentación. Si no quieres que se genere documentación de la función, utiliza `#' noRd` en su lugar. Consulta la documentación de [`roxygen2`  sobre etiquetas para indexación y referencias cruzadas](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) y [etiquetas para documentar funciones](https://roxygen2.r-lib.org/reference/tags-rd.html). Para fines de desarrollo, puede que te interese la etiqueta [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
 - A partir de la versión 7.0.0 de roxygen2, las clases `R6` son oficialmente compatibles.
   Consulta la [documentación de roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para saber cómo documentar las clases `R6`.
 
@@ -316,14 +315,11 @@ Puedes encontrar el estado de estas acciones en `https://dev.ropensci.org/job/no
 La construcción del sitio web utilizará el archivo de configuración de pkgdown si tienes uno, excepto para el estilo, ya que utilizará el [paquete `rotemplate`](https://github.com/ropensci-org/rotemplate/).
 El sitio web resultante tendrá una barra de búsqueda local.
 Por favor, informa de los errores, y haz preguntas o pedidos de nuevas características sobre la construcción del sitio centralizada en <https://github.com/ropensci/docs/> y sobre la plantilla en <https://github.com/ropensci/rotemplate/>.
-
-*Si las viñetas de tus paquetes necesitan credenciales (claves de API, tokens, etc.) para generarse, es posible que quieras [pregenerar las viñetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) ya que las credenciales no se pueden utilizar en el servidor que genera la documentación.*
-
+*Si las viñetas de tus paquetes necesitan credenciales (claves API, tokens, etc.) para generarse, puede que quieras [pregenerar las viñetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) o bien [almacenar en caché las respuestas](https://docs.ropensci.org/vcr/reference/setup_knitr.html) ya que las credenciales no se pueden utilizar en el servidor que genera la documentación.*
 Antes de presentar y transferir tu paquete, puedes utilizar el [enfoque documentado por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) o el [paquete `tic`](https://docs.ropensci.org/tic/) para construir el sitio web de tu paquete automáticamente.
 Esto te ahorrará el trabajo de ejecutar (y acordarte de ejecutar) `pkgdown::build_site()` cada vez que haya que actualizar el sitio.
 Consulta nuestro [capítulo sobre integración continua](#ci) si ésto no te resulta familiar.
 En cualquier caso, no olvides actualizar la URL del sitio web en todos los lados donde aparezca después de hacer la transferencia a la organización ropensci.
-
 
 ### Idioma
 
@@ -639,5 +635,3 @@ Si deseas que tu paquete se envíe a Bioconductor, o si tu paquete está en Bioc
 #### MOOCs {#moo-cs}
 
 Existe una [especialización en Coursera correspondiente al libro de Roger Peng, Sean Kross y Brooke Anderson](https://fr.coursera.org/specializations/r) con un curso específico sobre paquetes de R.
-
-

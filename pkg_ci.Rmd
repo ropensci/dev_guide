@@ -127,8 +127,8 @@ You can find the status of these builds at `https://ropensci.r-universe.dev/ui#p
 
 If your documentation includes code that relies on, for instance, credentials, here's how to ensure pkgdown docs are rendered in the best possible way.
 
-- For function examples, use the  `examplesIf` roxygen2 tag with the `IN_PKGDOWN` variable e.g. `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`
-- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option e.g.
+- For function examples, use the  `examplesIf` roxygen2 tag with the `IN_PKGDOWN` variable e.g. `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`. Example: [gtexr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14) (see also the [docs of the roxygen2 tag](https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)).
+- For vignettes, either pre-build if special tools/data/credentials are required which are unavailable on generic build servers (see https://ropensci.org/blog/2019/12/08/precompute-vignettes/), or use the `IN_PKGDOWN` variable with knitr eval option. Example: [gtextr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16) or:
 
 ```r
 knitr::opts_chunk$set(
@@ -138,10 +138,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Examples:
-
-- `examplesIf`:  https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (see also Docs of the roxygen2 tag: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
-- Vignette, knitr eval option:   https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16
+- In the case of vignettes/articles performing HTTP requests, you can use specific R packages like [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html) to cache responses. Example: [nettskjemar](https://github.com/capro-uio/nettskjemar/blob/261260e2510f51d8dc0af5e4c9c386a7e459de4b/vignettes/metadata.Rmd#L22).
 
 Please report bugs, questions and feature requests about the central builds and about the template at [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 
