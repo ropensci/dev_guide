@@ -152,6 +152,13 @@ Tasks for reviews in the specific review stages include:
 After discussion with other editors the EiC may invite a guest editor to handle a submission.
 Guest editors may be desired or needed if specific domain expertise is needed, if the current submission volume is large, if potential editors have conflicts of interest, or as a trial prior to inviting a person to join the editorial board.
 
+To decide on a guest editor for a submission:
+
+- Create a private slack channel named #guest-editor-<package-name>.
+- Invite editors to it.
+- Look through similar archived slack channels for potential recommendations.
+- After a decision has been reached and a guest editor has accepted, archive the channel.
+
 When inviting a guest editor,
 
 - Ask about conflicts of interest using the [same phrasing as for reviewers](#coi),
