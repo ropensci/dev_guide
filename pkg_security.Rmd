@@ -75,7 +75,7 @@ Document the behavior of your package for external PRs in [CONTRIBUTING.md](#fri
 
 On CRAN, skip any tests (`skip_on_cran()`) and examples (`dontrun`) requiring credentials.
 
-[Precompute vignettes](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) requiring credentials.
+[Precompute vignettes](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) requiring credentials, or use [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html).
 
 ## Further reading {#furthersecreading}
 
