@@ -51,7 +51,7 @@ Furthermore, authors and reviewers can contact the editors privately if they hav
 
 
 rOpenSci's Software Peer Review process is run by our team of dedicated editors and reviewers.
-Information on the current team, and the current status of software peer review, can be seen on our [interactive dashboard](https://ropensci-review-tools.github.io/dashboard/).
+Information on the current team, and the current status of software peer review, can be seen on our [interactive dashboard](https://dashboard.ropensci.org).
 
 ```{r}
 #| echo: false
