@@ -21,7 +21,7 @@ Puedes reconocer los paquetes de rOpenSci que han sido revisados por pares media
 Ambos contienen links a la revisión.
 
 En cuanto a la parte técnica, le sacamos el jugo a [GitHub](https://github.com/): cada proceso de revisión es un *issue* en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review/).
-Por ejemplo, haz click [aquí](https://github.com/ropensci/software-review/issues/24) para leer el hilo de revisión del paquete `ropenaq`.
+Por ejemplo, puedes leer el [hilo de revisión del paquete `ropenaq`](https://github.com/ropensci/software-review/issues/24).
 El proceso es una conversación activa hasta que el paquete es aceptado, con dos revisiones externas como momentos importantes.
 Además, utilizamos funcionalidades de GitHub como las plantillas de *issues* (como plantilla de envío), y el etiquetado que utilizamos para seguir el progreso de los envíos (desde las revisiones iniciales hasta la aprobación).
 
@@ -62,43 +62,89 @@ Además, tanto quienes envían paquete y quienes los revisan tienen la posibilid
 
 - El *README* de tu paquete incluirá una etiqueta de revisión por pares que enlaza con el hilo de revisión.
 - Tu paquete tendrá un [sitio web de documentación en `docs.ropensci.org`](#rodocsci) que podrás enlazar en el archivo *DESCRIPTION*.
-- El repositorio de tu paquete será transferido a la organización rOpenSci.
+- Si quieres, el repositorio de tu paquete será transferido a la organización rOpenSci.
 - Si quienes realizaron la revisión [aceptan aparecer en el archivo *DESCRIPTION*](#authorship), sus metadatos mencionarán la revisión.
 
 ## Personas responsables de edición y revisión   {#editors-and-reviewers}
 
-### Equipo editorial asociado  {#associateditors}
-
-El proceso de revisión por pares del software de rOpenSci está dirigido por
-
-```{r}
-#| child: "associate-editors.md"
-```
-
-### Equipo de revisión {#reviewers}
-
-Agradecemos a las siguientes personas que han ofrecido su tiempo y experiencia para revisar los paquetes enviados a rOpenSci:
-
 ```{r}
 #| echo: false
-source(file.path("scripts", "airtable-access.R"), local = knitr::knit_global())
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-data.R"),
+    local = knitr::knit_global()
+  )
+}
 ```
+
+
+### Líder Editorial
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-eic.es.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+
+### Equipo editorial asociado
+
+Nuestro equipo editorial asociado incluye:
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-reviewers.R"), local = knitr::knit_global())
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-editors.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
-También agradecemos a las siguientes personas que han tomado el rol de edición de forma invitada:
+
+### Revisión y edición invitada
+
+Agradecemos a las siguientes personas, quienes ofrecieron su tiempo y experiencia para revisar paquetes enviados a rOpenSci:
 
 ```{r}
 #| echo: false
 #| results: 'asis'
-#| eval: !expr has_airtable_access()
-source(file.path("scripts", "airtable-get-editors.R"), local = knitr::knit_global())
-
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-reviewers.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
 ```
 
+También agradecemos a las siguientes personas que tenian antes el rol de revisión. 
 
+```{r editors_past, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+También agradecemos a las siguientes personas que tomaron el rol de edición de forma invitada. 
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```

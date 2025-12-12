@@ -6,7 +6,7 @@ aliases:
 # Editorial management {#editorialmanagement}
 
 ```{block, type="summaryblock"}
-Guidance for managing the editorial team.
+Guidance for managing the editorial team and the [dev guide](#bookrelease).
 ```
 
 ## Recruiting new editors {#recruiting-new-editors}
@@ -34,7 +34,7 @@ Steps:
 We would like to invite you to join the rOpenSci editorial board as a full member. [SPECIFIC REASONS FOR INVITATION (MENTION CONTRIBUTIONS TO ROPENSCI)]. 
 We think you would make a wonderful addition to the team.
 
-[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one one you just finished!]).  
+[IF GUEST EDITOR:You are familiar with the editor's role as you've been a guest editor].  We aim for editors to handle four packages per year ([IF GUEST EDITOR including the one you just finished!]).  
 We ask that editors make an informal commitment of serving for two years, and re-evaluate their participation after that.  
 On a short-term basis, any editor can decline to handle a package or say, "I'm pretty busy, I can't handle a new package for a few weeks."
 
@@ -65,7 +65,7 @@ Best,
 
 - Invite editors to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.  This will give them appropriate permissions and allow them to get team-specific notifications.
 
-- Editors need access to the AirTable database of software review.
+- Editors need access to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
 
 - Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
 
@@ -90,7 +90,7 @@ Best,
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
-- Inform rOpenSci community manager or some other staff emember so that they might be moved to alumni team members on the website.
+- Inform rOpenSci community manager or some other staff member so that they might be moved to the alumni team members on the website.
 
 - Remove their access to the Airtable workspace.
 
@@ -98,6 +98,54 @@ Best,
   
   - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-    Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
+Both the dev\_guide and software-review README are automatically knit via continuous integration.
 
+## Putting the system on pause {#vacation}
+
+If you want to put the system on a break for instance over the holidays, before leaving:
+
+- Add a vacation message to the `about` field of issue templates. [Example PR](https://github.com/ropensci/software-review/pull/679/files).
+- Add a vacation message to the bot's standard welcome response. [Example PR](https://github.com/ropensci-org/buffy/pull/108).
+
+Upon resuming activities:
+
+- Remove the vacation message from issue templates. [Example PR](https://github.com/ropensci/software-review/pull/680).
+- Remove the vacation message from the bot's standard welcome response. [Example commit](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
+
+## Managing a dev guide release {#bookrelease}
+
+If you are in charge of managing a release of the very book you are reading, use [the book release guidance](#bookreleaseissue) as an issue template to be posted [in the dev guide issue tracker](https://github.com/ropensci/dev_guide/issues), and do not hesitate to ask questions to other editors.
+
+### Dev guide governance {#devguidegov}
+
+For very small amendments to the dev guide, no PR review is needed. For larger amendments, request review from at least a few editors (if none participated in the discussion related to the amendment, request a review from all of them on GitHub, and in the absence of any reaction merge after a week).
+
+Two weeks before a dev guide release, once the PR from dev to master **and the release blog post** are ready for review, all editors should be pinged by GitHub ("review request" on the PR from dev to master) and Slack, but the release doesn't need all of them to explicitly approve the release.
+
+### Blog post about a release {#releaseblogpost}
+
+The blog post about a release will be reviewed [by editors](#devguidegov), and one of `@ropensci/blog-editors`.
+
+#### Content {#content}
+
+Refer to the [general rOpenSci blogging guidance](https://blogguide.ropensci.org/), and the more specific guidance below.
+
+[First example of such a post](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [second example](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+
+The blog post should mention all important items from the [changelog](#booknews) organized in (sub)sections: e.g. a section about big change A, another one about big change B, and one about smaller changes lumped together. Mention the most important changes first.
+
+For each change made by an external contributor, thank them explicitly using the information from the changelog. E.g. `[Matt Fidler](https://github.com/mattfidler/) amended our section on Console messages [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+
+At the end of the post, mention upcoming changes by linking to open issues in the issue tracker, and invite readers to contribute to the dev guide by opening issues and participating in open discussions. Conclusion template:
+
+```markdown
+In this post we summarized the changes incorporated into our book ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) over the last X months.
+We are grateful for all contributions that made this release possible.
+We are already working on updates for our next version, such as ISSUE1, ISSUE2.
+Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
+```
+
+#### Authorship {#authorship}
+
+The editor writing the post is the first author, other editors are listed in alphabetical order.

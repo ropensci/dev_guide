@@ -1,0 +1,137 @@
+# Revisão de software por pares, por quê? O que é? {#softwarereviewintro}
+
+```{block, type="summaryblock"}
+Este capítulo contém uma [introdução geral](#whatissoftwarereview) ao nosso sistema de revisão de software por pares para pacotes, [razões para submeter um pacote](#whysubmit), [razões para se voluntariar como revisor(a)](#whyreview), [por que as nossas revisões são abertas](#whyopen) e agradecimentos às pessoas [que participam do sistema de revisão](#editors-and-reviewers).
+
+Nosso sistema foi recentemente ampliado para a [revisão de software estatístico por pares](https://ropensci.org/stat-software-review/).
+
+_Se você usar os nossos padrões/checklists/etc ao revisar um software em outro lugar, informe as pessoas destinatárias (por exemplo, editores(as) de periódicos, estudantes, revisores(as) internos(as) de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público](https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail](https://ropensci.org/contact/). 
+```
+
+## O que é a revisão de software por pares da rOpenSci? {#whatissoftwarereview}
+
+A [coleção de pacotes](https://ropensci.org/packages/) da rOpenSci é resultado parcialmente das contribuições de membros(as) da equipe e parcialmente das contribuições de membros(as) da comunidade, o que significa que a coleção provém de uma grande diversidade de habilidades e de experiência de pessoas desenvolvedoras. Como garantir a qualidade de toda a coleção? É aí que entra a revisão de software por pares: os pacotes contribuídos pela comunidade passam por um processo de revisão transparente, construtivo, não adversarial e aberto. Para esse processo, que depende principalmente de trabalho voluntário, os(as) [editores(as) associados(as)](#associateditors) gerenciam o fluxo de submissões e garantem o andamento dos envios; os(as) autores(as) criam, submetem e aprimoram os seus pacotes; os(as) [revisores(as)](#reviewers), duas pessoas por submissão, examinam o código e a experiência do(a) usuário(a). [Esta publicação no blog](https://www.numfocus.org/blog/how-ropensci-uses-code-review-to-promote-reproducible-science/), escrita por editores(as) da rOpenSci, é uma boa introdução à revisão de software por pares da rOpenSci. Outras postagens sobre a própria revisão e sobre os pacotes revisados podem ser encontradas [através da tag "software-peer-review" no blog da rOpenSci](https://ropensci.org/tags/software-peer-review/).
+
+Você pode reconhecer os pacotes da rOpenSci que foram revisados por pares por meio de um selo (*badge*) verde com o texto "peer-reviewed" em seu README, com os links para as suas revisões ([por exemplo](https://github.com/ropensci/restez#locally-query-genbank-)); e por meio de um botão azul com o texto *"Peer-reviewed"* próximo à sua descrição na [página de pacotes da rOpenSci](https://ropensci.org/packages/) com os links para as revisões.
+
+Tecnicamente, aproveitamos ao máximo o [GitHub](https://github.com/): cada processo de revisão de pacote é uma *issue* no [repositório `ropensci/software-review` no GitHub](https://github.com/ropensci/software-review/). Por exemplo, você pode ler o [tópico de revisão do pacote `ropenaq`](https://github.com/ropensci/software-review/issues/24): o processo é uma conversa contínua até a aceitação do pacote, com duas revisões externas como marcos importantes. Além disso, usamos os recursos do GitHub, como o uso de *issue templates* (como templates de submissão) e uso de *labels* (etiquetas) para acompanhar o progresso dos envios (desde as verificações do(a) editor(a) até a aprovação).
+
+## Por que enviar o seu pacote para a rOpenSci? {#whysubmit}
+
+- Em primeiro lugar, e acima de tudo, esperamos que você envie o seu pacote para análise **porque você valoriza o feedback**. Nosso objetivo é fornecer feedbacks úteis para os(as) autores(as) de pacotes e fazer com que o nosso processo de revisão seja aberto, não contraditório e focado na melhoria da qualidade do software.
+- Ao fazer parte da coleção de pacotes da rOpenSci, o seu pacote continuará a receber **suporte da equipe da rOpenSci**.  Você manterá a propriedade e o controle do seu pacote, mas podemos ajudar com as questões de manutenção contínua, como as associadas a atualizações do R, dependências e políticas do CRAN.
+- A rOpenSci irá **divulgar o seu pacote** através da nossa [página web](https://ropensci.org/packages/), [blog](https://ropensci.org/blog/) e mídias sociais (como [Mastodon](https://fosstodon.org/@ropensci) e [LinkedIn](https://www.linkedin.com/company/ropensci/)). Os pacotes em nossa coleção também recebem um [site de documentação que é renderizado e publicado automaticamente após cada envio](#docsropensci).
+- Os pacotes da rOpenSci **podem ser incluídos em uma lista cruzada** com outros repositórios, como o CRAN e o BioConductor.
+- Os pacotes da rOpenSci que estão no escopo do [Journal of Open-Source Software](https://joss.theoj.org/) e que tenham um artigo curto relacionado, poderão, a critério dos(as) editores(as) do JOSS, beneficiar-se de um processo de revisão acelerado (*fast-track*).
+- Se você escrever um, a rOpenSci irá **divulgar os livros relacionados ao seu pacote**: você pode transferir o código-fonte de tais livros para [a organização `ropensci-books` no GitHub](https://github.com/ropensci-books) para que os livros sejam listados em [books.ropensci.org](https://books.ropensci.org/).
+
+## Por que revisar pacotes para a rOpenSci? {#whyreview}
+
+- Como em qualquer processo de revisão por pares, esperamos que você opte por revisar **para que você retribua à rOpenSci e às comunidades científicas.** Nossa missão de expandir o acesso a dados científicos e promover uma cultura de pesquisa reprodutível só é possível por meio dos esforços voluntários de membros(as) da comunidade como você.
+- A revisão é uma conversa de mão dupla. Ao revisar os pacotes, você terá a chance de **continuar aprendendo as práticas de desenvolvimento com os(as) autores(as) e outros(as) revisores(as)**.
+- A natureza aberta do nosso processo de revisão permite que você **faça contatos e conheça colegas e colaboradores(as)** durante o processo de revisão. Nossa comunidade é acolhedora e composta por pessoas prestativas, especialistas em desenvolvimento em R e em diversas outras áreas da ciência e da computação científica.
+- Para se voluntariar para ser um(a) de nossos(as) revisores(as), preencha [este breve formulário](https://airtable.com/shrnfDI2S9uuyxtDw) fornecendo as suas informações de contato e áreas de especialização. Estamos sempre procurando mais revisores(as) com experiência geral em desenvolvimento de pacotes e com conhecimento especializado nas áreas em que os pacotes são usados.
+
+## Por que as avaliações são abertas? {#whyopen}
+
+Nossos tópicos (*issues*) de revisão são públicos. As pessoas autoras, revisoras e editoras conhecem as identidades umas das outras. A comunidade mais ampla pode visualizar ou até participar da conversa conforme ela acontece. Isso incentiva a atenção aos detalhes e o fornecimento de avaliações construtivas e não adversariais. Tanto autores(as) quanto [revisores(as) relatam](https://ropensci.org/tags/reviewer/) que apreciam e aprendem mais com essa troca aberta e direta. Também traz o benefício de fortalecer a comunidade. Participantes têm a oportunidade de estabelecer conexões significativas com colegas, e novas colaborações surgiram a partir de ideias geradas durante o processo de revisão.
+
+Estamos cientes de que sistemas abertos podem ter desvantagens. Por exemplo, na revisão acadêmica tradicional, [a revisão por pares duplo-cega pode aumentar a representação de autoras do gênero feminino](https://www.sciencedirect.com/science/article/pii/S0169534707002704), sugerindo viés em revisões não-cegas. Também é possível que revisores(as) sejam menos críticos em revisões abertas. No entanto, sustentamos que a abertura da conversa de revisão funciona como um controle de qualidade e viés; é mais difícil inserir comentários subjetivos ou sem embasamento em público e sem o manto do anonimato. Em última análise, acreditamos que a comunicação direta e pública entre autores(as) e revisores(as) melhora a qualidade e a equidade das revisões.
+
+Além disso, os(as) autores(as) e revisores(as) podem entrar em contato com os(as) editores(as) em particular se tiverem alguma dúvida ou questão.
+
+## Como os(as) usuários(as) saberão que um pacote foi revisado? {#how-will-users-know-a-package-has-been-reviewed}
+
+- O README do seu pacote apresentará um selo de revisão por pares com um link para o tópico de revisão do software.
+- Seu pacote terá um [site de documentação em `docs.ropensci.org`](#rodocsci) que você pode referenciar no DESCRIPTION.
+- Se você quiser, o repositório do seu pacote poderá ser transferido para a organização rOpenSci no GitHub.
+- Se os(as) revisores(as) [concordarem em ser listados(as) no DESCRIPTION](#authorship), os metadados do pacote mencionarão a revisão.
+
+## Editores(as) e revisores(as) {#editors-and-reviewers}
+
+O processo de revisão de software por pares da rOpenSci é conduzido pela nossa equipe dedicada de editores(as) e revisore(as). Informações sobre a equipe atual e o andamento da revisão de software por pares podem ser consultadas em nosso [painel interativo](https://dashboard.ropensci.org).
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-data.R"),
+    local = knitr::knit_global()
+  )
+}
+```
+
+### Editor(a)-Chefe
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-eic.pt.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+
+### Editores(as) associados(as) {#associateditors}
+
+O processo de revisão de software por pares da rOpenSci é conduzido por:
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-editors.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+### Revisores(as) e editores(as) passados(as)
+
+Agradecemos as seguintes pessoas que dedicaram o seu tempo e conhecimento para revisar os pacotes submetidos à rOpenSci.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  source(
+    file.path("scripts", "airtable-get-reviewers.R"),
+    local = knitr::knit_global()
+  )
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+
+Também agradecemos aos seguintes editores(as) que atuaram anteriormente.
+
+```{r editors_past, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(editors_past), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+E aos(as) seguintes que atuaram como editores(as) convidados(as).
+
+```{r guest-editors-out, echo=FALSE, results='asis'}
+if (nzchar(Sys.getenv("AIRTABLE_API_KEY"))) {
+  cat(gen_ed_out(guest_editors), sep = "")
+} else {
+  cat("_No Airtable data available._")
+}
+```
+
+

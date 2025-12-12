@@ -10,14 +10,14 @@ Please target your pull requests to the `main` branch.
 ### Technical details
 
 Deployment is done via [GitHub Actions](.github/workflows).
-The book has a [production version](https://devguide.ropensci.org/) and a [development version](https://devdevguide.netlify.com/).
+The book has a [production version](https://devguide.ropensci.org/) and a [development version](https://devdevguide.netlify.app/).
 Both are updated when there are changes in their sources but also once a day to ensure the reviewers list is up to date (data pulled from Airtable).
 
 * [prod.yml](.github/workflows/prod.yml): whenever there's a GitHub release, the book is built and its content is then pushed to the `gh-pages` branch. That branch serves ropensci.github.io/dev_guide which is redirected to https://devguide.ropensci.org/
 
 * [scheduled-manual-main.yml](scheduled-manual-main.yml): once a day the book is built with the source from the latest release (see "Checkout latest release tag" step) and pushed to the `gh-pages` branch.
 
-* [dev.yml](.github/workflows/dev.yml): whenever there's a push to the default branch `main`, and once a day, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.com/).
+* [dev.yml](.github/workflows/dev.yml): whenever there's a push to the default branch `main`, and once a day, the book is built and its content is then pushed to the `dev-site` branch that gets [deployed to Netlify](https://devdevguide.netlify.app/).
 
 * [pr.yml](.github/workflows/dev.yml): whenever there's a pull request to the default branch `main`, the book is built and its content is deployed via Netlify.
 
@@ -39,7 +39,7 @@ generate automated translations, or request translations from the maintenance te
 
 - For your own translations, follow the guidance in the [rOpenSci Localization and Translation Guidelines](https://translationguide.ropensci.org)
 
-- To generate automated translations, you can use the {babeldown} package, wheich requires an API key from [DeepL](https://www.deepl.com). [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) generates translations to edited sections of the `.Rmd` (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), and should be used once per translated langauge. 
+- To generate automated translations, you can use the {babeldown} package, which requires an API key from [DeepL](https://www.deepl.com). [`babeldown::deepl_update()`](https://docs.ropensci.org/babeldown/reference/deepl_update.html) generates translations to edited sections of the `.Rmd` (see this [blog post](https://ropensci.org/blog/2024/01/16/deepl-update-babeldown/)), and should be used once per translated language. 
 
 - If you are unable to provide your own or automated translations, for support for complex translations, or just tiny changes, (one sentence or so), tag the `@ropensci/dev-guide` team in your PR to request support from the maintainer team.
 

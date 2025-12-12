@@ -113,7 +113,7 @@ También tienes que dar acceso a Codecov a tu repositorio de GitHub, ver [la gu�
 Luego añade una etiqueta de estado de Codecov en la parte superior de tu README.md, puedes consultar [*Status Badges* (etiquetas de estado)](https://docs.codecov.com/docs/status-badges) en la documentación de Codecov.
 
 Actualmente, Codecov tiene acceso a todos los repositorios de GitHub de la organización ropensci por defecto.
-Cuando tu repositorio sea aceptado y transferido a ropensci, el acceso de Codecov debería transferirse automáticamente.
+Si tu repositorio es transferido a la organización ropensci en GitHub, el acceso de Codecov debería transferirse automáticamente.
 Tendrás que actualizar la URL de la etiqueta para que apunte al repositorio alojado en ropensci.
 
 Para más detalles, consulta el [README del paquete **covr**](https://github.com/r-lib/covr), así como la documentación de [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) y [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
@@ -128,10 +128,37 @@ Para más detalles sobre este servicio, consulta [la página de ayuda de OpenCPU
 
 ## Aún más servicios de CI: rOpenSci docs  {#rodocsci}
 
-Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada *push* al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown.
+Después de la transferencia a la organización GitHub "ropensci" de rOpenSci, cada *push* al repo de GitHub disparará la construcción (o actualización) del sitio web de tu paquete usando pkgdown:
+
+- Por cada nuevo _commit_ en la rama predeterminada (se comprueba aproximadamente una vez por hora).
+
+- Cuando alguna de las dependencias fuertes del mismo universo actualiza el número de versión.
+
+- Una vez al mes.
+
+
+
 Puedes encontrar el estado de este proceso en la URL `https://ropensci.r-universe.dev/ui#packages` y en el [estado del commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works).
 El sitio web estará en `https://docs.ropensci.org/package_name` (por ejemplo [para `magick`](https://docs.ropensci.org/magick)).
 Si tu paquete tiene un archivo de configuración de pkgdown, rOpenSci docs lo usará para crear el sitio web, excepto para el tema, que se utilizará [`rotemplate` paquete](https://github.com/ropensci-org/rotemplate/).
+
+Si tu documentación incluye código que depende, por ejemplo, de credenciales, aquí te explicamos cómo asegurarte de que los documentos pkgdown se representen de la mejor manera posible.
+
+- Para los ejemplos de funciones, utiliza la etiqueta roxygen2 `examplesIf` con la variable `IN_PKGDOWN`, por ejemplo, `#' @examplesIf identical(Sys.getenv("IN_PKGDOWN"), "true")`.
+- Para viñetas, precompila si se requieren herramientas/datos/credenciales especiales que no están disponibles en servidores de compilación genéricos (consulta https://ropensci.org/blog/2019/12/08/precompute-vignettes/), o utilice la variable `IN_PKGDOWN` con la opción knitr eval, por ejemplo
+
+```r
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = Sys.getenv("IN_PKGDOWN") == "true"
+)
+```
+
+Ejemplos:
+
+- `examplesIf`:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14 (véase también la documentación de la etiqueta roxygen2: https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)
+- Vignette, opción knitr eval:https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e
 
 Por favor, informa sobre errores, haz preguntas y solicita nuevas funcionalidades sobre este servicio y sobre la plantilla en [https://github.com/ropensci-org/rotemplate/](https://github.com/ropensci-org/rotemplate/).
 

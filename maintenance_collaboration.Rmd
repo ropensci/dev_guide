@@ -16,9 +16,12 @@ Besides these mostly technical tips, it is important to remember to be kind, and
 
 ## Make your repo contribution and collaboration friendly {#friendlyfiles}
 
+Making your repository collaboration-friendly is part of what might help it [outlive your job](https://arxiv.org/pdf/2505.06484).
+
 ### Code of conduct {#coc-file}
 
-After transfer to our GitHub organization, [rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/) will apply to your project.
+Once your package is listed into the [rOpenSci registry](https://ropensci.org/packages/all), 
+the [rOpenSci Code of Conduct](https://ropensci.org/code-of-conduct/) will apply to your project.
 Please add this text to the README
 
 ```markdown
@@ -28,7 +31,11 @@ By
 contributing to this project, you agree to abide by its terms.
 ```
 
-And delete the package current code of conduct if there was one.
+And 
+
+- If your package was transferred to the rOpenSci GitHub organization, please delete the current code of conduct of the repository if there was one as the default code of conduct of the GitHub organization will appear.
+
+- If your package was not transferred to the rOpenSci GitHub organization, please replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the rOpenSci GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ### Contributing guide {#contributing-guide}
 
@@ -40,7 +47,7 @@ These and other templates will generally need to be modified for use with an rOp
 Modifying a generic contributing guide to add a personal touch also tends to make it look less generic and more sincere.
 Personal preferences in a contributing guide include:
 
-- Style preferences? You might however prefer to make style a configuration (of [lintr](https://github.com/jimhester/lintr), [styler](https://styler.r-lib.org/)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
+- Style preferences? You might however prefer to make style a configuration (of [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [lintr](https://github.com/jimhester/lintr)) or to [fix code style yourself](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especially if you don't use a popular code style like the [tidyverse coding style](https://style.tidyverse.org/).
 
 - Infrastructure like roxygen2?
 
@@ -55,9 +62,9 @@ Statistical packages are required to have a lifecycle statement, as specified in
 That links provides a template for a simple lifecycle statement.
 CONTRIBUTING.md files can also describe how you acknowledge contributions (see [this section](#attributions)).
 
-We encourage you to direct feedback that is not a bug report or a feature request to [rOpenSci forum](https://discuss.ropensci.org/), after making sure you'd see such questions on the forum. Users can use the forum to ask questions about use and report their use cases, and you can subscribe to individual categories and tags to receive notifications about your package.  Feel free to mention this in the docs of your package and/or the contributing guidelines/issue template.  Please direct your users to tag posts with the package name.
+We encourage you to direct feedback that is not a bug report or a feature request to the discussion tools that your Git platform provides, like [GitHub Discussions](https://docs.github.com/en/discussions) for GitHub.
 
-Once a pull request is closer to being merged, you could use [a GitHub Actions PR workflow to style the code with styler](https://github.com/r-lib/actions/blob/master/examples/pr-commands.yaml).
+Once a pull request is closer to being merged, you could style the code using [Air](https://posit-dev.github.io/air/) or [styler](https://styler.r-lib.org).
 
 ### Issue management {#issue-management}
 
@@ -132,9 +139,12 @@ See also [Useful Git patterns for real life](https://happygitwithr.com/workflows
 
 ### Be generous with attributions {#attributions}
 
-If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. Traditionally when citing a package in a scientific publication only "aut" authors are listed, not "ctb" contributors; and on `pkgdown` websites only "aut" names are listed on the homepage, all authors being listed on the authors/ page.
+If someone contributes to your repository consider adding them in DESCRIPTION, as contributor ("ctb") for small contributions, author ("aut") for bigger contributions. 
+Traditionally when citing a package in a scientific publication only "aut" authors are listed, not "ctb" contributors; and on `pkgdown` websites only "aut" names are listed on the homepage, all authors being listed on the authors/ page.
 
 At a minimum consider adding the name of contributors near the feature/bug fix line in [NEWS.md](#news).
+
+You could also use the [allcontributors R package](https://docs.ropensci.org/allcontributors/) to acknowledge all contributors in the README file.
 
 We recommend your being generous with such acknowledgements, because it is a nice thing to do and because it will make folks more likely to contribute again to your package or other repos of the organization.
 

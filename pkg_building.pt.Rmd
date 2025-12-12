@@ -1,0 +1,569 @@
+---
+aliases:
+- building.html
+---
+
+# Guia de desenvolvimento de pacotes {#building}
+
+```{block, type="summaryblock"}
+A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um processo simplificado de [Revisão por Pares de Software](#whatissoftwarereview). Para garantir um estilo consistente em todas as nossas ferramentas, escrevemos este capítulo destacando nossas diretrizes para o desenvolvimento de pacotes. Leia e aplique também nosso [capítulo sobre integração contínua (CI)](#ci). Outras orientações para depois do processo de revisão são fornecidas na terceira seção deste livro, começando com [um capítulo sobre colaboração](#collaboration).
+
+Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de Hadley Wickham e Jenny Bryan sobre desenvolvimento de pacotes, que está disponível [gratuitamente on-line](https://r-pkgs.org/) (em inglês). Nosso guia é parcialmente redundante em relação a outros recursos, mas destaca as diretrizes da rOpenSci.
+
+ Para saber por que vale a pena enviar um pacote para a rOpenSci para atender às diretrizes, dê uma olhada em [motivos para submeter](#whysubmit). 
+
+```
+
+## Nome do pacote e metadados {#package-name-and-metadata}
+
+### Como nomear seu pacote {#naming-your-package}
+
+- Recomendamos fortemente nomes curtos e descritivos em letras minúsculas. Se o seu pacote tratar de um ou mais serviços comerciais, verifique se o nome não viola as diretrizes de marca. Você pode verificar se o nome do seu pacote está disponível, é informativo e não é ofensivo usando a função [`pak::pkg_name_check()`](https://pak.r-lib.org/reference/pkg_name_check.html); use também um mecanismo de pesquisa para ver se é ofensivo em um idioma diferente do inglês. Em particular, *não* escolha um nome de pacote que já esteja sendo usado no CRAN ou no Bioconductor.
+
+- Existe um equilíbrio entre as vantagens de um nome de pacote exclusivo e um nome de pacote menos original.
+  
+  - Um nome de pacote mais exclusivo pode ser mais fácil de rastrear (para você e nós avaliarmos o uso do pacote, por exemplo, menos falsos positivos ao digitar seu nome na pesquisa de código do GitHub) e pesquisar (para quando as pessoas usuárias perguntarem "como usar o pacote blah" em um mecanismo de pesquisa).
+  - Por outro lado, um nome único *demais* pode fazer com que o pacote seja menos detectável (ou seja, não seja possível encontrá-lo ao pesquisar "como fazer isso em R"). Isso pode ser um argumento para nomear seu pacote com algo muito próximo ao tópico, como [geojson](https://github.com/ropensci/geojson)).
+
+- Encontre outros aspectos interessantes sobre como nomear seu pacote [neste texto do blog do Nick Tierney (em inglês)](https://www.njtierney.com/post/2018/06/20/naming-things/) e, caso você mude de ideia, descubra [como renomear seu pacote nesta outra postagem do blog do Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
+
+### Criando metadados para seu pacote {#creating-metadata-for-your-package}
+
+Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/codemetar) para criar e atualizar um arquivo JSON [CodeMeta](https://codemeta.github.io/) para seu pacote por meio de `codemetar::write_codemeta()`. Ele incluirá automaticamente todas as informações úteis, incluindo [tópicos do GitHub](#grooming). O CodeMeta usa [termos do Schema.org](https://schema.org/), portanto, à medida que ganha popularidade, os metadados JSON do seu pacote podem ser usados por serviços de terceiros, talvez até por mecanismos de pesquisa.
+
+## Plataformas {#platforms}
+
+- Os pacotes devem funcionar em todas as principais plataformas (Windows, macOS, Linux).  Pode haver exceções para pacotes que interajam com funções específicas do sistema ou que adaptem utilitários que só funcionam em plataformas limitadas, mas deve-se fazer todo o possível para garantir a compatibilidade entre plataformas, incluindo a compilação específica em cada sistema ou a containerização de utilitários externos.
+
+## API do pacote {#package-api}
+
+### Nomeando funções e argumentos {#function-and-argument-naming}
+
+- A nomenclatura das funções e dos argumentos deve ser escolhida de modo a trabalhar em conjunto para formar uma API de programação comum e lógica que seja fácil de ler e de autocompletar.
+  
+  - Considere um esquema de nomenclatura `objeto_verbo()` para as funções do seu pacote que usam um tipo de dados comum ou interagem com uma API comum. `objeto` refere-se aos dados/API e `verbo` a ação principal.  Esse esquema ajuda a evitar conflitos de nome com pacotes que podem ter verbos semelhantes e torna o código legível e fácil de preencher automaticamente.  Por exemplo, em **stringi** as funções que começam com `stri_` manipulam strings (`stri_join()`, `stri_sort()`, e em **googlesheets** funções que começam com `gs_` são chamadas para a API do Google Sheets (`gs_auth()`, `gs_user()`, `gs_download()`).
+
+- Para funções que manipulam um objeto/dado e retornam um objeto/dado do mesmo tipo, faça com que o objeto/dado seja o primeiro argumento da função para aumentar a compatibilidade com o operador pipe (`|>` do R base, `%>%` do pacote magrittr).
+
+- Recomendamos fortemente usar `snake_case` em vez de todos os outros estilos, a menos que esteja fazendo a portabilidade de um pacote que já esteja sendo amplamente utilizado.
+
+- Evite conflitos de nomes de funções com pacotes básicos ou outros pacotes populares (por exemplo `ggplot2`, `dplyr`, `magrittr`, `data.table`)
+
+- A nomenclatura e a ordem dos argumentos devem ser consistentes entre as funções que usam entradas semelhantes.
+
+- As funções do pacote que importam dados não devem importar dados para o ambiente global, mas, em vez disso, devem retornar objetos. As atribuições ao ambiente global devem ser evitadas em geral.
+
+### Mensagens do console {#console-messages}
+
+- Use o [pacote cli](https://cli.r-lib.org/) ou as ferramentas do R básico (`message()` e `warning()`) para se comunicar com as pessoas que usam suas funções.
+
+- Os destaques do pacote cli incluem: empacotamento automático, respeito a [convenção NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color), muitos [elementos semânticos](https://cli.r-lib.org/articles/semantic-cli.html) e ampla documentação. Mais informações [neste texto em inglês](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+
+- Por favor, não use `print()` ou `cat()` a menos que seja para um `print.*()` ou `str.*()`, pois esses métodos de impressão de mensagens são mais difíceis de serem silenciados.
+
+- Forneça uma maneira de suprimir a verbosidade, de preferência em nível de pacote: torne a criação de mensagens dependente de uma variável ou opção de ambiente (como ["usethis.quiet"](https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output) no pacote usethis), em vez de um parâmetro da função. O controle das mensagens poderia ser feito em vários níveis ("nenhum", "informar", "debugar") em vez de ser lógico (nenhuma mensagem / todas as mensagens). O controle da verbosidade é útil para quem utiliza a função, mas também em testes. Você pode encontrar mais comentários interessantes [nesta issue do guia de design do tidyverse](https://github.com/tidyverse/design/issues/42)
+
+- Você pode fornecer traduções para as mensagens do seu pacote. O pacote [potools](https://michaelchirico.github.io/potools/) pode te ajudar com essa tarefa.
+
+### Interfaces interativas/gráficas {#interactive-graphical-interfaces}
+
+Se estiver fornecendo uma interface gráfica de usuário (GUI) (como um aplicativo Shiny), para facilitar o fluxo de trabalho, inclua um mecanismo para reproduzir automaticamente as etapas realizadas na GUI. Isso pode incluir a geração automática de código para reproduzir os mesmos resultados, a saída de valores intermediários produzidos na ferramenta interativa ou simplesmente um mapeamento claro e bem documentado entre as ações da GUI e as funções usadas. (Consulte também a seção ["Testes"](#testing) abaixo).
+
+O [pacote `tabulizer`](https://github.com/ropensci/tabulizer) por exemplo, tem um fluxo de trabalho interativo para extrair tabelas, mas também pode extrair apenas coordenadas para que seja possível executar novamente como um script. Além disso, dois exemplos de aplicativos brilhantes que geram código são <https://gdancik.shinyapps.io/shinyGEO/> e <https://github.com/wallaceEcoMod/wallace/>.
+
+### Verificação de entrada
+
+Recomendamos que seu pacote use um método consistente de sua escolha para [verificação de entradas (*inputs*)](https://blog.r-hub.io/2022/03/10/input-checking/) -- seja o R básico, um pacote em R ou ajudantes personalizados.
+
+### Pacotes que envolvem recursos da Web (clientes de API)
+
+Se o seu pacote acessar uma API da Web ou outro recurso da Web,
+
+- Certifique-se de que as solicitações enviem um [agente de usuário](https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent), ou seja, uma maneira de identificar o que (seu pacote) ou quem enviou a solicitação. Deve ser possível substituir o agente de usuário padrão do pacote. Idealmente, o agente de usuário deve ser diferente nos serviços de integração contínua e no desenvolvimento (com base, por exemplo, nos nomes de usuário do GitHub das pessoas desenvolvedoras).
+- Você pode escolher padrões diferentes (melhores) do que os da API e, nesse caso, deve documentá-los.
+- Seu pacote deve ajudar com a paginação, permitindo que os usuários não se preocupem com isso, pois o pacote faz todas as solicitações necessárias.
+- Seu pacote deve ajudar a limitar a taxa de acordo com as regras da API.
+- Seu pacote deve reproduzir erros de API e possivelmente explicá-los em mensagens de erro informativas.
+- Seu pacote pode exportar funções de alto nível e funções de baixo nível, sendo que estas últimas permitem que os usuários chamem os pontos de acesso (*endpoints*) da API diretamente com mais controle (como `gh::gh()`).
+
+Para obter mais informações, consulte a postagem do blog: [Por que você deve (ou não deve) criar um cliente de API](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no) (em inglês).
+
+### Pacotes que envolvem software externo {#external-software}
+
+- Documente claramente como instalar o pacote, incluindo todos os pacotes ou bibliotecas externas necessários, incluindo, quando aplicável, etapas explícitas em sistemas operacionais comuns.
+- Forneça uma função de relatório de situação (sitrep) para verificar se o software foi instalado, com dicas caso algo esteja faltando. [Exemplo do pacote greta](https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R).
+- Se possível, forneça uma função que ajude na instalação. [Exemplo no pacote hugodown](https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R).
+
+## Estilo de código e práticas recomendadas {#code-style}
+
+- Para obter mais informações sobre como estilizar seu código, nomear funções e scripts R dentro da seção `R/` recomendamos a leitura do [capítulo *R Code* do livro *R Packages*](https://r-pkgs.org/Code.html) (em inglês). Recomendamos o uso do [Air](https://posit-dev.github.io/air/) ou do [pacote styler](https://github.com/r-lib/styler) para automatizar parte do estilo do código. Também sugerimos a leitura do [Guia de estilo do Tidyverse (em inglês)](https://style.tidyverse.org/).
+
+- Você pode optar por usar `=` ao invés de `<-` desde que seja consistente com uma escolha em seu pacote. Recomendamos evitar o uso de `->` para atribuição em um pacote. Se você usar `<-` em seu pacote e também usar `R6` nesse pacote, você será forçado a usar `=` para atribuição em seu `R6Class` - isso não é considerado uma inconsistência porque você não pode usar `<-` nesse caso.
+
+- Você pode usar o [pacote lintr](https://lintr.r-lib.org/index.html) para identificar algumas possíveis áreas de melhoria. [Exemplo de fluxo de trabalho](https://masalmon.eu/2024/08/28/lintr-3-steps/).
+
+## Arquivo CITATION {#citation-file}
+
+- Se o seu pacote ainda não tiver um arquivo CITATION, você poderá criar um com `usethis::use_citation()` e preenchê-lo com os valores gerados pela função `citation()`.
+
+- O CRAN exige que os arquivos CITATION sejam declarados como [itens `bibentry`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html) e não na forma previamente aceita de [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
+
+- Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione a tag [DOI principal do Zenodo](https://help.zenodo.org/#versioning) ao arquivo CITATION.
+
+- Se um dia [**depois de** revisão na rOpenSci](#authors-guide) você publicar um artigo sobre seu pacote, adicione-o ao arquivo CITATION.
+
+- Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, `citHeader()`. [Talvez até mesmo adicione a referência do recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
+
+Como exemplo, veja [o arquivo CITATION do dynamite](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) que faz referência ao manual do R, bem como a outras publicações associadas.
+
+```r
+citHeader("To cite dynamite in publications use:")
+
+bibentry(
+  key = "dynamitepaper",
+  bibtype  = "Misc",
+  doi = "10.48550/ARXIV.2302.01607",
+  url = "https://arxiv.org/abs/2302.01607",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  title = "dynamite: An R Package for Dynamic Multivariate Panel Models",
+  publisher = "arXiv",
+  year = "2023"
+)
+
+bibentry(
+  key = "dmpmpaper",
+  bibtype  = "Misc",
+  title    = "Estimating Causal Effects from Panel Data with Dynamic 
+    Multivariate Panel Models",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  publisher = "SocArxiv",
+  year     = "2022",
+  url      = "https://osf.io/preprints/socarxiv/mdwu5/"
+)
+
+bibentry(
+  key = "dynamite",
+  bibtype  = "Manual",
+  title    = "Bayesian Modeling and Causal Inference for Multivariate
+    Longitudinal Data",
+  author = c(person("Santtu", "Tikka"), person("Jouni", "Helske")),
+  note  = "R package version 1.0.0",
+  year     = "2022",
+  url      = "https://github.com/ropensci/dynamite"
+)
+```
+
+- Você também pode criar e armazenar um `CITATION.cff` graças ao [pacote cffr](https://docs.ropensci.org/cffr/). Ele também fornece um [fluxo de trabalho do GitHub Action](https://docs.ropensci.org/cffr/reference/cff_gha_update.html) para manter o `CITATION.cff` atualizado.
+
+## README {#readme}
+
+- Todos os pacotes devem ter um arquivo README, denominado `README.md` na raiz do repositório. O README deve incluir, de cima para baixo:
+  
+  - O nome do pacote.
+  - Selos (*badges*) para integração contínua e cobertura de testes, o selo para revisão por pares da rOpenSci assim que ele for iniciado (veja abaixo), um selo do repostatus.org e quaisquer outros selos (por exemplo do [R-universe](https://docs.r-universe.dev/publish/set-up.html#document-install)).
+  - Uma breve descrição dos objetivos do pacote (o que ele faz? por que seria interessante usá-lo?), com links descritivos para todas as vinhetas (*vignettes*), a menos que o pacote seja pequeno e haja apenas uma vinheta repetindo o README.  Certifique-se também de que as vinhetas sejam renderizadas e legíveis, consulte [a seção "site de documentação"](#website)).
+  - Instruções de instalação usando, por exemplo, o [pacote remotes](https://remotes.r-lib.org/), [pacote pak](https://pak.r-lib.org/) ou [R-universe](https://docs.r-universe.dev/publish/set-up.html).
+  - Qualquer configuração adicional necessária (tokens de autenticação, etc.).
+  - Breve demonstração de uso.
+  - Se aplicável, como o pacote se compara a outros pacotes semelhantes e/ou como ele se relaciona com outros pacotes.
+  - Informações de citação, ou seja, direcione a forma de citação preferida no README adicionando o texto padrão "aqui está como citar meu pacote". Veja, por exemplo [o README do pacote ecmwfr](https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article).
+
+Se você usar outro selo de status de repositório, como o [ciclo de vida](https://www.tidyverse.org/lifecycle/), adicione também um selo do [repostatus.org](https://www.repostatus.org/). [Exemplo de um README de repositório com dois selos de status de repositório](https://github.com/ropensci/ijtiff#ijtiff-).
+
+- Depois de enviar um pacote e ele ter sido aprovado na verificação editorial, adicione um selo de revisão por pares por meio do
+
+```
+[![rOpenSci software peer-review](https://badges.ropensci.org/<issue_id>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_id>)
+```
+
+onde issue\_id é o número da *Issue* no repositório `software-review`. Por exemplo, o selo para [`rtimicropem`](https://github.com/ropensci/rtimicropem) usa o número 126, pois é o [número da Issue de revisão](https://github.com/ropensci/software-review/issues/126). O selo indicará primeiro "under review" (em revisão) e depois "peer-reviewed" (revisado por pares) assim que o seu pacote tiver sido integrado (Issue marcada como "approved" (aprovada) e fechada), e será vinculado à Issue de revisão.
+
+- Se o seu README tiver muitos selos, considere ordená-los em uma tabela HTML para facilitar a obtenção de informações. Veja exemplos no [repositórion`drake`](https://github.com/ropensci/drake) e no [repositório `qualtRics`](https://github.com/ropensci/qualtRics/). As seções possíveis são:
+  
+  - Desenvolvimento (status de integração contínua (CI), ver o [Capítulo sobre CI](#ci), canal do Slack para discussão, repostatus)
+  - Edição ou Publicação ([selos de versão do CRAN e data de lançamento do METACRAN](https://www.r-pkg.org/services#badges), [selo de checagem da API do CRAN](https://github.com/r-hub/cchecksbadges), selo do Zenodo)
+  - Estatísticas/Uso (downloads, por exemplo: [selos de quantidade de downloads do r-hub/cranlogs](https://github.com/r-hub/cranlogs.app#badges))
+    A tabela deve ser mais larga do que longa para não mascarar o restante do README.
+
+- Se o seu pacote se conectar a uma fonte de dados ou serviço on-line, ou envolver outro software, considere que o README do seu pacote pode ser o ponto de partida de quem usa o utiliza pela primeira vez.  Ele deve fornecer informações suficientes para entender a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes. Por exemplo,
+  um README não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir,
+  "..., um repositório on-line de avistamentos de Goober na América do Sul.  Mais
+  informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados
+  podem ser encontradas em *link*".
+
+- Recomendamos não criar o `README.md` diretamente, mas a partir de um `README.Rmd` (um arquivo R Markdown) se você tiver algum código de demonstração. A vantagem do `.Rmd` é que você pode combinar texto com código que pode ser facilmente atualizado sempre que seu pacote for atualizado.
+
+- Considere o uso da função `usethis::use_readme_rmd()` para obter um modelo para o arquivo `README.Rmd` e para configurar automaticamente uma verificação para garantir que o arquivo `README.md` seja sempre mais recente que o `README.Rmd` antes de fazer um commit.
+
+- Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
+
+- Adicionar um [código de conduta e as diretrizes de contribuição](#friendlyfiles).
+
+- Veja o [README do pacote `gistr`](https://github.com/ropensci/gistr#gistr) para um bom exemplo de README a ser seguido em um pacote pequeno, e [o README do pacote `bowerbird`](https://github.com/ropensci/bowerbird) para um bom exemplo de README para um pacote maior.
+
+## Documentação {#documentation}
+
+### Geral {#docs-general}
+
+- Todas as funções exportadas de pacote devem ser totalmente documentadas com exemplos.
+
+- Se houver possível sobreposição ou confusão com outros pacotes que forneçam funcionalidade semelhante ou que tenham um nome semelhante, adicione uma nota no README, na vinheta principal e, potencialmente, no campo Descrição do DESCRIPTION. Exemplos em [README do rtweet](https://docs.ropensci.org/rtweet/), [README do rebird](https://docs.ropensci.org/rebird/#auk-vs-rebird) e o pacote [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs) (que não é parte da rOpenSci).
+
+- O pacote deve conter documentação geral para `?pacote`(ou ``?`pacote-package` `` se houver um conflito de nomes). Opcionalmente, você pode usar ambos `?pacote e ``?`pacote-package` `` para o arquivo de manual do pacote, usando a etiqueta`@aliases` do roxygen. [`usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adiciona o modelo para a documentação geral.
+
+- O pacote deve conter pelo menos um **HTML** que ofereça uma cobertura substancial das funções do pacote, ilustrando casos de uso realistas e como as funções devem interagir. Se o pacote for pequeno, a vinheta e o README poderão ter conteúdo muito semelhante.
+
+- Como no caso de um README, a documentação geral ou as vinhetas podem ser o primeiro ponto de entrada para quem usa o pacote. Se o seu pacote se conectar a uma fonte de dados ou a um serviço on-line, ou envolver outro software, ele deverá fornecer informações suficientes para entender a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes. Por exemplo, a introdução ou a documentação de uma vinheta não deve se limitar a dizer: "Fornece acesso ao GooberDB", mas também incluir: "..., um repositório on-line de avistamentos de Goober na América do Sul.  Mais informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados podem ser encontradas no *link*". Qualquer vinheta deve descrever o conhecimento necessário para que seja possível entender a vinheta antecipadamente.
+
+A vinheta geral deve apresentar uma série de exemplos que progridam em complexidade, do uso básico ao avançado.
+
+- A funcionalidade que provavelmente será usada apenas para desenvolvimento mais avançado pode ser melhor colocada em uma vinheta separada (por exemplo, a programação usando NSE (*non-standard evaluation*) com dplyr).
+
+- O README, a documentação geral do pacote, as vinhetas, os sites etc. devem ter informações suficientes no início para obter uma visão geral de alto nível do pacote e dos serviços/dados aos quais ele se conecta e fornecer navegação para outras partes relevantes da documentação. Isso é para seguir o princípio de *vários pontos de entrada* ou seja, levar em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro que alguém tem com o pacote e/ou com a ferramenta/dados que ele envolve.
+
+- A(s) vinheta(s) deve(m) incluir citações de software e documentos, quando apropriado.
+
+- Se o seu pacote fornecer acesso a uma fonte de dados, exigimos que o arquivo DESCRIPTION contenha (1) uma breve identificação e/ou descrição da organização responsável pela emissão dos dados; e (2) o URL com link para uma página pública que forneça, descreva ou permita o acesso aos dados (que muitas vezes pode ser diferente do URL que leva diretamente à fonte de dados).
+
+- Use mensagens de inicialização de pacote somente quando necessário (mascaramento de função, por exemplo). Evite mensagens de inicialização de pacotes como "Esse é o pacote 2.4-0" ou orientação de citação, pois elas podem ser irritantes para quem o utiliza. Confie na documentação para obter essa orientação.
+
+- Você pode optar por ter uma seção README sobre casos de uso do seu pacote (outros pacotes, publicações em blogs etc.), [exemplo](https://github.com/ropensci/vcr#example-packages-using-vcr).
+
+### roxygen2 use {#roxygen-2-use}
+
+- Solicitamos que todos os envios usem o [roxygen2](https://roxygen2.r-lib.org/) para a documentação. O roxygen2 é um pacote R que compila automaticamente os arquivos `.Rd` para a pasta `man` em seu pacote a partir de etiquetas escritas acima de cada função. O roxygen2 tem [suporte à sintaxe Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Uma das principais vantagens de usar o roxygen2 é que seu `NAMESPACE` sempre será gerado automaticamente e estará atualizado.
+
+- Mais informações sobre o uso da documentação do roxygen2 estão disponíveis no [capítulo sobre documentação de funções do livro *R Packages* (em inglês)](https://r-pkgs.org/man.html) e no [próprio site do roxygen2](https://roxygen2.r-lib.org/).
+
+- Se você estivesse escrevendo o `.Rd` diretamente sem o roxygen2, o [Rd2roxygen](https://cran.r-project.org/web/packages/Rd2roxygen/index.html) contém funções para converter o `.Rd` em documentação do roxygen.
+
+- Todas as funções devem documentar o tipo de objeto retornado com a etiqueta `@return`.
+
+- O valor padrão de cada parâmetro deve ser claramente documentado. Por exemplo, em vez de escrever "Um valor lógico que determina se ...", você deve escrever "Um valor lógico (por padrão `TRUE`) que determina se ...".  Também é uma boa prática indicar os valores padrão diretamente na definição da função:
+
+```{r, eval=FALSE}
+f <- function(a = TRUE) {
+  # código da função
+}
+```
+
+- A documentação deve dar suporte à navegação, incluindo [links cruzados](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) úteis entre funções relacionadas e documentando funções relacionadas em grupos ou em páginas de ajuda comuns. Recomendamos o uso da etiqueta `@family` que cria automaticamente links do tipo *"See also"* e [podem ajudar a agrupar](https://pkgdown.r-lib.org/reference/build_reference.html) funções em sites com pkgdown. Veja [o capítulo sobre documentação de funções do livro *R Packages* (em inglês)](https://r-pkgs.org/man.html) e [a seção "agrupamento de funções" do presente capítulo](#function-grouping) para obter mais detalhes.
+
+- Você pode reutilizar partes da documentação (por exemplo, detalhes sobre autenticação, pacotes relacionados) nas páginas de vinhetas, README e de documentação. Consulte a [vinheta do roxygen2 sobre reutilização de documentação](https://roxygen2.r-lib.org/articles/reuse.html).
+
+- Para incluir exemplos, você pode usar o clássico `@examples` (no plural *"examples"*), mas também a tag `@example <path>` (no singular *"example"*) para armazenar o código de exemplo em um script R separado (de preferência na pasta `man/`), e a tag `@exampleIf` para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte a [documentação do roxygen2 sobre exemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
+
+- Adicionar `#' @noRd` às funções internas. Talvez você se interesse no [pacote experimental devtag](https://github.com/moodymudskipper/devtag) para obter páginas de manual locais ao usar `#' @noRd`.
+
+- A partir da versão 7.0.0 do roxygen2, as classes `R6` são oficialmente suportadas. Consulte a [documentação do roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para obter detalhes sobre como documentar classes `R6`.
+
+- Ainda não há suporte para o fornecimento de páginas de manual em diferentes idiomas, mas há um progresso interessante no projeto de [pacote em R rhelpi18n](https://github.com/eliocamp/rhelpi18n).
+
+### Exemplos de conjuntos de dados {#example-datasets}
+
+Para documentar a interface do seu pacote, talvez seja necessário usar conjuntos de dados de exemplo.
+Você pode usar conjuntos de dados básicos do R (no pacote datasets), como `penguins`, ou [redistribuir e documentar os dados](https://r-pkgs.org/data.html) com as devidas atribuições.
+Tenha o cuidado de escolher dados que estejam em conformidade com o [código de conduta da rOpenSci](https://ropensci.org/code-of-conduct/) e que, em geral, não sejam prejudiciais ou alienantes para ninguém.
+
+### URLs na documentação {#ur-ls-in-documentation}
+
+Esta subseção é particularmente relevante para quem deseja enviar seu pacote para o CRAN.
+O CRAN verificará os URLs em sua documentação e não permite códigos de status de redirecionamento, como 301.
+Você pode usar o pacote [urlchecker](https://github.com/r-lib/urlchecker) para reproduzir essas verificações e, em particular, substituir os URLs pelos URLs para os quais eles redirecionam.
+Outras pessoas já usaram a opção para escapar de alguns URLs (alterar `<https://ropensci.org/>` para `https://ropensci.org/`, ou `\url{https://ropensci.org/}` para `https://ropensci.org/`.), mas se você fizer isso, precisará implementar algum tipo de verificação de URL para evitar que eles sejam quebrados sem que você perceba. Além disso, os links não poderão ser clicados nos documentos locais.
+
+## Site de documentação {#website}
+
+Recomendamos a criação de um site de documentação para seu pacote usando o pacote [`pkgdown`](https://github.com/r-lib/pkgdown). O livro *R packages* (em inglês) apresenta um [capítulo sobre pkgdown](https://r-pkgs.org/website.html) e também o `pkgdown` tem [seu próprio site de documentação](https://pkgdown.r-lib.org/).
+
+Há alguns elementos que gostaríamos de destacar aqui.
+
+### Implementação automática do site de documentação {#docsropensci}
+
+Você só precisa se preocupar com a implementação automática (*automatic deployment*) do seu site até a aprovação e a transferência do repositório do seu pacote para a organização ropensci; de fato, depois disso, um site pkgdown será criado para o seu pacote após cada *push* para o repositório do GitHub. Você pode encontrar o status dessas compilações em `https://dev.ropensci.org/job/package_name` por exemplo [para `magick`](https://dev.ropensci.org/job/magick); e o site em `https://docs.ropensci.org/package_name` por exemplo [para `magick`](https://docs.ropensci.org/magick). A construção do site usará seu arquivo de configuração pkgdown, se você tiver um, exceto para o estilo que usará o arquivo [de modelo do pacote`rotemplate`](https://github.com/ropensci-org/rotemplate/). O site resultante terá uma barra de pesquisa local. Pedimos que informe erros, perguntas e solicitações de recursos sobre a implementação automática em <https://github.com/ropensci/docs/> e sobre o modelo em <https://github.com/ropensci/rotemplate/>.
+
+*Se as vinhetas do seu pacote precisarem de credenciais (chaves de API, tokens, etc.) para serem ativadas, talvez você queira [renderizar as vinhetas previamente](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/), já que as credenciais não podem ser usadas no servidor de documentos.*
+
+Antes do envio e da transferência do pacote, você pode usar a [abordagem documentada por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) ou o [pacote `tic`](https://docs.ropensci.org/tic/) para a implantação automática do site do pacote. Isso evitaria o incômodo de executar (e lembrar de executar) `pkgdown::build_site()` toda vez que o site precisar ser atualizado. Primeiro, consulte nosso [capítulo sobre integração contínua](#ci) se você não estiver familiarizado com a integração contínua. De qualquer forma, não se esqueça de atualizar todas as ocorrências do URL do site após a transferência para a organização ropensci.
+
+### Idioma
+
+Se a documentação do seu pacote estiver escrita em um idioma diferente do inglês (mas suportado pelo sistema de revisão por pares do software rOpenSci), você poderá declarar esse idioma para que o site do pkgdown [seja localizado](https://pkgdown.r-lib.org/articles/translations.html).
+
+Porém, [ainda não é possível obter um site pkgdown multilíngue](https://github.com/r-lib/pkgdown/issues/2258) diretamente.
+
+### Agrupamento de funções no índice {#function-grouping}
+
+Quando seu pacote tiver muitas funções, é conveniente que apareçam agrupadas no índice da documentação, o que pode ser feito de forma mais ou menos automática.
+
+Se você usa o roxygen2 acima da versão 6.1.1, deve usar a tag `@family` na documentação de suas funções para indicar o agrupamento. Isso lhe dará links entre as funções na documentação local do pacote instalado (seção *"See also"*) *e* permitirá que você use a função `has_concept` do pacote `pkgdown` no arquivo de configuração do seu site. Exemplo não relacionado a rOpenSci, cortesia de [`optiRum`](https://github.com/lockedata/optiRum): [tag family](https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17), [arquivo de configuração do `pkgdown`](https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml) e [seção no índice resultante](https://itsalocke.com/optirum/reference/).
+Para personalizar o texto do título da referência cruzada criada pelo roxygen2 (`Other {family}:`), consulte [a documentação do roxygen2 sobre como fornecer uma lista `rd_family_title` no arquivo `man/roxygen/meta.R`](https://roxygen2.r-lib.org/articles/rd.html#cross-references).
+
+De forma menos automática, veja o exemplo do [website do pacote `drake`](https://docs.ropensci.org/drake/) e [arquivo de configuração associado
+](https://github.com/ropensci/drake/blob/master/_pkgdown.yml).
+
+### Marca de autoria {#branding-of-authors}
+
+Você pode tornar os nomes de (algumas) das pessoas autoras clicáveis, adicionando um URL, e pode até mesmo substituir os nomes por um logotipo (pense na rOpenSci... ou na sua organização/empresa!). Veja [a documentação do `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors).
+
+### Ajustando a barra de navegação {#tweaking-the-navbar}
+
+Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a barra de navegação, consulte [a documentação do `pkgdown`](https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar). Em particular, observe que, se você nomear a vinheta principal de seu pacote como "pkg-name.Rmd", ela poderá ser acessada na barra de navegação como `Para começar` (*Get started*) em vez de via `Artigos > Título da vinheta` (*Articles > Vignette Title*).
+
+### Renderização matemática {#mathjax}
+
+Consulte a [documentação do pkgdown](https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering).
+Nosso modelo é compatível com essa configuração.
+
+### Logotipo do pacote {#package-logo}
+
+Para usar o logotipo de seu pacote na página inicial do pkgdown, consulte [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+Se o seu pacote não tiver um logotipo, o [construtor de documentos da rOpenSci](#docsropensci) usará o logotipo da rOpenSci em seu lugar.
+
+## Autoria {#authorship}
+
+O arquivo DESCRIPTION de um pacote deve listar as pessoas que participaram da autoria e que colaboraram com o pacote, usando o parâmetro `Authors@R` para indicar suas funções (*author*/*creator*/*contributor*, etc.) e usando o campo de comentário para indicar o [ID do ORCID](https://ropensci.org/technotes/2018/10/08/orcid/) de cada pessoa e o [ID ROR](https://ropensci.org/blog/2025/05/09/ror/) de cada organização, se houver.
+Veja [esta seção de "Escrevendo extensões R"](https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file) para obter detalhes.  
+Se você achar que as pessoas que revisaram fizeram uma contribuição substancial para o desenvolvimento do seu pacote, poderá listá-los na seção `Authors@R` com o tipo de contribuição `"rev"`, da seguinte forma:
+
+```
+    person("Bea", "Hernández", role = "rev",
+    comment = "Bea revisou o pacote (v. X.X.XX) para rOpenSci, veja <https://github.com/ropensci/software-review/issues/116>"),
+```
+
+Somente inclua revisores(as) depois de pedir seu consentimento.
+Leia mais nesta postagem do blog [*Thanking Your Reviewers: Gratitude through Semantic Metadata* ("Agradecendo as revisões: Gratidão por meio de metadados semânticos")](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/).
+Por favor, não liste pessoas editoras como colaboradoras.
+Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!
+
+### Autoria do código incluído no pacote {#authorship-included-code}
+
+Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou funções individuais forem incluídos de outros pacotes, os pacotes rOpenSci devem seguir [a *Política de Repositório* do CRAN](https://cran.r-project.org/web/packages/policies.html):
+
+> A propriedade dos direitos autorais e de propriedade intelectual de todos os componentes do pacote deve ser clara e inequívoca (inclusive a partir da especificação de autoria no arquivo DESCRIPTION). Quando o código for copiado (ou derivado) do trabalho de outros (inclusive do próprio R), deve-se tomar cuidado para que quaisquer declarações de direitos autorais/licenças sejam preservadas e a autoria não seja deturpada.
+> 
+> De preferência, um campo 'Authors@R' seria usado com funções 'ctb' para quem tem a autoria deste código. Como alternativa, o campo "Autor" deve listar essas pessoas como colaboradoras.
+> 
+> Quando os direitos autorais forem detidos por uma entidade que não seja as pessoas autoras do pacote, isso deve ser indicado preferencialmente por meio das funções 'cph' no campo 'Authors@R' ou usando um campo 'Copyright' (se necessário, referindo-se a um arquivo inst/COPYRIGHTS).
+> 
+> As marcas registradas devem ser respeitadas.
+
+## Licença {#licence}
+
+O pacote precisa ter uma licença aceita pelo [CRAN](https://svn.r-project.org/R/trunk/share/licenses/license.db) ou [OSI](https://opensource.org/licenses).
+O [livro *R packages* (em inglês)](https://r-pkgs.org/description.html#sec-description-authors-at-r) inclui uma seção útil [sobre licenças](https://r-pkgs.org/license.html).
+
+Se o seu pacote agrupar código de outras fontes, você também precisará reconhecer a autoria do código original no seu arquivo DESCIPTION, geralmente com uma função de detentor de direitos autorais: `role = "cph"`.
+Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages* (em inglês)](https://r-pkgs.org/description.html#sec-description-authors-at-r).
+
+## Testes {#testing}
+
+- Todos os pacotes devem passar nas verificações do `R CMD check`/`devtools::check()` em todas as principais plataformas.
+
+- Todos os pacotes devem ter um conjunto de testes que abranja a funcionalidade principal do pacote. Os testes também devem abranger o comportamento do pacote em caso de erros.
+
+- É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. Se a cobertura de testes em seu pacote está abaixo de 75%, provavelmente exigirá testes adicionais ou explicações antes de ser enviado para revisão.
+
+- Recomendamos o uso do [pacote testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é o [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
+
+- Se esforce para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e programe *defensivamente* contra essas falhas. [Mais informações sobre testes](https://r-pkgs.org/tests.html).
+
+- Os testes devem ser fáceis de entender e ser tão autocontidos quanto possível. Ao usar o testthat, evite usar código fora do `test_that()` (como etapas de pré-processamento). Recomendamos a leitura da seção [*"high-level principles for testing"* (princípios de alto nível para testes)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) no *livro R Packages*.
+
+- Os pacotes com aplicativos Shiny devem usar uma estrutura de testes unitários, como [`shinytest2`](https://rstudio.github.io/shinytest2/) ou [`shinytest`](https://rstudio.github.io/shinytest/articles/shinytest.html) para testar se as interfaces interativas se comportam conforme o esperado.
+
+- Para testar as funções que criam gráficos, sugerimos usar o [vdiffr](https://vdiffr.r-lib.org/), uma extensão do pacote testthat que se baseia em [testes com snapshots do testthat](https://testthat.r-lib.org/articles/snapshotting.html).
+
+- Se o seu pacote interagir com recursos da Web (APIs da Web e outras fontes de dados na Web), você poderá achar o livro [*HTTP testing in R*, de Scott Chamberlain e Maëlle Salmon](https://books.ropensci.org/http-testing/) relevante. Alguns pacotes que ajudam nos testes de HTTP (e seus clientes HTTP correspondentes) são:
+  
+  - [httptest2](https://enpiar.com/httptest2/) ([httr2](https://httr2.r-lib.org/));
+  - [httptest](https://enpiar.com/r/httptest/) ([httr](https://httr.r-lib.org/));
+  - [vcr](https://docs.ropensci.org/vcr/) ([httr](https://httr.r-lib.org/), [crul](https://docs.ropensci.org/crul));
+  - [webfakes](https://webfakes.r-lib.org/) ([httr](https://httr.r-lib.org/), [httr2](https://httr2.r-lib.org/), [crul](https://docs.ropensci.org/crul), [curl](https://jeroen.r-universe.dev/curl#)).
+
+- O pacote testthat tem uma função `skip_on_cran()` que você pode usar para não executar testes no CRAN. Recomendamos usar isso em todas as funções que são chamadas de API, pois é muito provável que elas falhem no CRAN. Esses testes ainda devem ser executados na integração contínua. Observe que a partir do testthat 3.1.2 `skip_if_offline()` chama automaticamente `skip_on_cran()`. Mais informações sobre em [*CRAN preparedness for API wrappers*  (Preparação do CRAN para utilização de APIs)](https://books.ropensci.org/http-testing/cran-preparedness.html).
+
+- Se o seu pacote interagir com um banco de dados, você poderá achar o pacote [dittodb](https://docs.ropensci.org/dittodb) útil.
+
+- Depois de configurar a [integração contínua (CI)](#ci) use o relatório de cobertura de código do seu pacote (veja [esta seção do nosso livro](#coverage)) para identificar linhas não testadas e adicionar mais testes.
+
+- Mesmo que você use a [integração contínua](#ci), recomendamos que você execute testes localmente antes de enviar seu pacote (talvez seja necessário definir `Sys.setenv(NOT_CRAN="true")`).
+
+## Exemplos {#examples}
+
+- Inclua exemplos abrangentes na documentação. Além de demonstrar como usar o pacote, eles podem funcionar como uma maneira fácil de testar a funcionalidade do pacote antes de haver testes adequados. No entanto, lembre-se de que exigimos testes em pacotes contribuídos.
+
+- Você pode executar exemplos com `devtools::run_examples()`. Observe que quando você executa o R CMD CHECK ou equivalente (por exemplo, `devtools::check()`), seus exemplos que não estão incluídos no `\dontrun{}` ou `\donttest{}` são executados. Consulte a seção [tabela de resumo](https://roxygen2.r-lib.org/articles/rd.html#functions) na documentação do roxygen2.
+
+- Para evitar que os exemplos sejam executados no CRAN (por exemplo, se requerem autenticação), você precisa usar `\dontrun{}`. No entanto, para uma primeira submissão, o CRAN não permitirá que você pule todos os exemplos. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo, ou envolver o código de exemplo com `try()`. Consulte também a etiqueta `@exampleIf` do roxygen2.
+
+- Além de executar exemplos localmente em seu próprio computador, é altamente recomendável que você execute exemplos em um dos [sistemas de integração contínua](#ci). Mais uma vez, os exemplos que não estão incluídos em `\dontrun{}` ou `\donttest{}` serão executados, mas para aqueles que estão, você pode configurar suas compilações de integração contínua para executá-los por meio dos argumentos de verificação do R CMD `--run-dontrun` e/ou `--run-donttest`.
+
+## Dependências de pacotes {#pkgdependencies}
+
+- Em geral, é melhor ter menos dependências.
+
+- Considere as vantagens e desvantagens envolvidas no fato de depender de um pacote. Por um lado,
+  o uso de dependências reduz o esforço de codificação e pode se basear em funcionalidades úteis desenvolvidas por
+  outras pessoas, especialmente se a dependência executar tarefas complexas e tiver alto desempenho,
+  e/ou for bem avaliada e testada. Por outro lado, ter muitas dependências
+  sobrecarrega a pessoa mantenedora ao ter que acompanhar as alterações nesses pacotes, arriscando
+a sustentabilidade de longo prazo do seu pacote.  Isso também
+  aumenta o tempo e o tamanho da instalação, o que leva em consideração principalmente o seu ciclo de desenvolvimento e o de outras pessoas, bem como os sistemas de compilação automatizados. Pacotes "pesados" - aqueles com muitas dependências e aqueles com grandes quantidades de código compilado - aumentam esse custo.
+
+- As abordagens para reduzir as dependências incluem:
+  
+  - Se você usar apenas algumas funções de uma dependência grande ou pesada, poderá copiá-las para seu próprio pacote.  (Consulte [a seção *Autoria*
+    acima](#authorship-included-code) para saber como reconhecer a autoria original
+    do código copiado). Por outro lado, funções complexas com muitos 
+    casos especiais (por exemplo, analisadores sintáticos) exigem testes e verificações consideráveis.
+    
+    - Um exemplo comum disso é o retorno de "tibbles" no estilo tidyverse 
+     em funções do pacote que fornecem dados.
+      É possível evitar o uso do pacote **tibble** retornando
+      um tibble criado pela modificação de um *data.frame* da seguinte forma:
+      
+      ```
+      class(df) <- c("tbl_df", "tbl", "data.frame") 
+      ```
+      
+      (Observe que essa abordagem deve ser usada e testada com muito cuidado, especialmente porque pode quebrar o comportamento esperado de objetos reclassificados).
+  
+  - Certifique-se de que esteja usando o pacote em que a função está definida,
+    e não aquele em que ela é reexportada. Por exemplo, muitas funções do **devtools** podem ser encontradas em pacotes especializados menores, como **sessioninfo**. A função `%>%`
+    deve ser importada do pacote **magrittr** onde ela é definida, em vez do mais pesado
+    **dplyr** , que a reexporta.
+  
+  - Algumas dependências são preferidas porque fornecem uma interpretação mais fácil de
+    nomes de funções e sintaxe mais fáceis do que as soluções básicas do R. Se esse for o principal
+    motivo para usar uma função em uma dependência pesada, considere a possibilidade de envolver
+    a abordagem do R básico em uma função interna bem nomeada em seu pacote. Veja, por exemplo, o [script em R do rlang que fornece funções com uma sintaxe semelhante às funções purrr](https://github.com/r-lib/rlang/blob/9b50b7a86698332820155c268ad15bc1ed71cc03/R/standalone-purrr.R).
+  
+  - Se as dependências tiverem funcionalidades sobrepostas, verifique se você pode confiar em apenas uma delas.
+  
+  - Mais dicas de gerenciamento de dependências podem ser encontradas no capítulo [*"Dependencies: Mindset and Background"* do livro *R packages* (em inglês)](https://r-pkgs.org/dependencies-mindset-background.html) e em um [post do
+    Scott Chamberlain](https://recology.info/2018/10/limiting-dependencies/).
+
+- Usar `Imports` em vez de `Depends` para pacotes que fornecem funções de outros pacotes. Certifique-se de listar os pacotes usados para o teste (`testthat`) e a documentação (`knitr`, roxygen2) em seu `Suggests` das dependências do pacote (se você usar `usethis` para adicionar a infraestrutura de teste via [`usethis::use_testthat()`](https://usethis.r-lib.org/reference/use_testthat.html) ou uma vinheta via [usethis::use\_vignette()](https://usethis.r-lib.org/reference/use_vignette.html), os pacotes necessários serão adicionados ao DESCRIPTION). Se você usar algum pacote nos exemplos ou testes do seu pacote, certifique-se de listá-lo em `Suggests` se ainda não estiver listado em `Imports`.
+
+- Verifique o status de desenvolvimento de todas as dependências que você adicionar.
+  Especialmente para pacotes hospedados no GitHub, é muito útil verificar se eles são mantidos ativamente e se [não foram arquivados](https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/).
+
+- Se o seu pacote (não do Bioconductor) depender de pacotes do Bioconductor, certifique-se de que as instruções de instalação no README e na vinheta sejam claras o suficiente, mesmo para uma pessoa não esteja familiarizada com o ciclo de publicação do Bioconductor.
+  
+  - É necessário usar o [`BiocManager`](https://www.bioconductor.org/install/index.html#why-biocmanagerinstall) (recomendado)? Documente isso.
+  
+  - A instalação automática de pacotes do Bioconductor usando `install.packages()` é suficiente? Nesse caso, mencione que é necessário executar `setRepositories()` se ainda não tiver definido os repositórios necessários do Bioconductor.
+  
+  - Se o seu pacote depender do Bioconductor após uma determinada versão, mencione isso na DESCRIPTION e nas instruções de instalação.
+
+- Especificar dependências mínimas (por exemplo `glue (>= 1.3.0)` em vez de apenas `glue`) deve ser uma escolha consciente. Se tiver certeza de que seu pacote quebrará abaixo de uma determinada versão de dependência, especifique-a explicitamente.
+  Mas se não souber, então não há necessidade de especificar uma dependência mínima. Nesse caso, quando um usuário relatar um bug que esteja explicitamente relacionado a uma versão mais antiga de uma dependência, resolva-o.
+  Um exemplo de prática ruim seria, ao desenvolver o pacote, considerar as versões atuais de suas dependências como sendo a versão mínima. Isso forçaria desnecessariamente todos a atualizar (causando problemas com outros pacotes) quando não há um bom motivo por trás dessa escolha de versão.
+
+- Na maioria dos casos em que é necessário expor as funções das dependências, você deve importar e reexportar essas funções individuais em vez de listá-las no campo `Depends`.  Por exemplo, se as funções do seu pacote produzem objetos do tipo `raster`, você pode reexportar do pacote **raster** apenas as funções de impressão e plotagem.
+
+- Se seu pacote usar uma dependência de *sistema*, você deve
+  
+  - Indicá-la no DESCRIPTION;
+  
+  - Verifique se ele está listado por [`sysreqsdb`](https://github.com/r-hub/sysreqsdb#sysreqs) para permitir que ferramentas automáticas o instalem, ou [envie uma contribuição](https://github.com/r-hub/sysreqsdb#contributing) caso contrário;
+  
+  - Verificar se está listado em um script `configure`  ([exemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) e que fornecerá uma mensagem de erro útil caso não seja encontrado ([exemplo](https://github.com/cran/webp/blob/master/configure)).
+    Os scripts `configure` podem ser desafiadores, pois geralmente exigem soluções improvisadas
+    para fazer com que as diversas dependências do sistema funcionem em todos os sistemas. Use exemplos ([mais aqui](https://github.com/search?q=org%3Acran+anticonf&type=Code)) como ponto de partida, mas observe que é comum encontrar bugs e casos extremos e, muitas vezes, violar as políticas do CRAN. Não hesite em [pedir ajuda em nosso fórum](https://discuss.ropensci.org/).
+
+## Estruturas recomendadas {#recommended-scaffolding}
+
+- Para solicitações HTTP, recomendamos o uso dos pacotes [httr2](https://httr2.r-lib.org), [httr](https://httr.r-lib.org), [curl](https://jeroen.r-universe.dev/curl#) ou [crul](http://docs.ropensci.org/crul/) ao invés do [RCurl](https://cran.rstudio.com/web/packages/RCurl/). Se você gosta de clientes de baixo nível para HTTP, o curl é melhor, enquanto o httr2, o httr e o crul são melhores para acesso de alto nível.
+
+- Para converter JSON (*parsing*) , use [jsonlite](https://github.com/jeroen/jsonlite) em vez de [rjson](https://cran.rstudio.com/web/packages/rjson/) ou [RJSONIO](https://cran.rstudio.com/web/packages/RJSONIO/).
+
+- Para converter, criar e manipular XML, recomendamos enfaticamente o pacote [xml2](https://cran.rstudio.com/web/packages/xml2/) para a maioria dos casos. [Você pode consultar as observações de Daniel Nüst sobre a migração de XML para xml2 (em inglês)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
+
+- Para dados espaciais, o pacote [sp](https://github.com/edzer/sp/) deve ser considerado obsoleto em favor do pacote [sf](https://r-spatial.github.io/sf/) e os pacotes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) e [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) foram aposentados em 2023. Recomendamos o uso do conjunto de ferramentas espaciais desenvolvidas pelas comunidades [r-spatial](https://github.com/r-spatial) e [rspatial](https://github.com/rspatial). Veja [esta edição do GitHub](https://github.com/ropensci/software-review-meta/issues/47) para discussões relevantes.
+
+## Controle de versão {#version-control}
+
+- Os arquivos de origem do seu pacote devem estar sob controle de versão, mais especificamente rastreados com [Git](https://happygitwithr.com/). Você pode achar o [pacote gert](https://docs.ropensci.org/gert/) relevante, bem como algumas das funções do [pacote usethis relacionadas ao Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); no entanto, você pode usar o git como quiser.
+
+- O nome da ramificação (*branch*) padrão não deve ser `master`, pois isso pode ser ofensivo para algumas pessoas. Consulte a seção [do projeto Git e da Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para obter mais contexto. É uma prática geral nomear uma ramificação padrão `main`, embora outros nomes também possam ser usados. Consulte a postagem do blog do tidyverse ["Renomeando a ramificação padrão"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para saber mais sobre como usar essa funcionalidade para ajudar a renomear as ramificações padrão.
+
+- Certifique-se de listar arquivos desnecessários, como `.DS_Store`, no arquivo .gitignore. Você pode achar a função [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html) e o [pacote gitignore](https://docs.ropensci.org/gitignore/) relevantes.
+
+- Uma seção posterior deste livro contém algumas [dicas de fluxo de trabalho com git](#gitflow).
+
+## Problemas diversos do CRAN {#crangotchas}
+
+Esta é uma coleção de problemas do CRAN que vale a pena evitar desde o início.
+
+- Certifique-se de que as palavras do título do seu pacote comecem com letra maiúscula (o que em inglês é chamado de *[Title Case](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)*.
+- Não coloque um ponto final no final do título.
+- Não coloque "no R" ou "com R" em seu título, pois isso é óbvio nos pacotes hospedados no CRAN. Se, mesmo assim, quiser que essas informações sejam exibidas em seu site, verifique a [documentação do `pkgdown`](https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home) para saber como substituir isso.
+- Evite iniciar a descrição com o nome do pacote ou "Este pacote ...".
+- Certifique-se de incluir links para sites se você envolver uma API da Web, extrair dados de um site etc. na seção `Description` do seu arquivo DESCRIPTION. Os URLs devem ser colocados entre colchetes angulares (`<>`), por exemplo `<https://www.r-project.org>`.
+- Em ambos os `Title` e `Description`, os nomes de pacotes ou outros softwares externos devem ser colocados entre aspas simples (por exemplo, *Integração do 'Rcpp' para a biblioteca de álgebra linear com modelo 'Armadillo'*).
+- Evite testes e exemplos que sejam demorados. Considere usar `testthat::skip_on_cran` nos testes para pular coisas que demoram muito, mas ainda assim testá-las localmente e em [integração contínua](#ci).
+- Inclua arquivos de nível superior, como `paper.md` e arquivos de configuração de integração contínua, no arquivo `.Rbuildignore`.
+
+Para obter mais dicas, consulte a lista colaborativa mantida pelo ThinkR, ["Prepare-se para o CRAN"](https://github.com/ThinkR-open/prepare-for-cran).
+
+### Verificações do CRAN {#cranchecks}
+
+Quando seu pacote estiver no CRAN, ele será [checado regularmente em diferentes plataformas](https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101). As falhas nessas verificações, quando não são falsos positivos, podem levar a equipe do CRAN a entrar em contato com você. Você pode monitorar o estado das verificações do CRAN por meio
+
+- do [`foghorn` pacote](https://fmichonneau.github.io/foghorn/).
+
+- das [etiquetas de checagem do CRAN (*"CRAN checks Badges"*)](https://github.com/r-hub/cchecksbadges).
+
+## Problemas do Bioconductor {#bioconductor-gotchas}
+
+Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote estiver no Bioconductor, consulte as [Diretrizes de empacotamento do Bioconductor](https://www.bioconductor.org/developers/package-guidelines/) e o [livro de desenvolvimento atualizado](https://contributions.bioconductor.org/).
+
+## Orientações adicionais {#further-guidance}
+
+- Se você estiver enviando um pacote para a rOpenSci por meio do [repositório de revisão de software](https://github.com/ropensci/software-review), poderá encaminhar outras perguntas à equipe da rOpenSci usando as *issues* ou em nosso [fórum de discussão](https://discuss.ropensci.org/).
+
+- Leia o [guia de autoria](#authors-guide).
+
+- Leia, incorpore e aja de acordo com os conselhos do [capítulo *Guia de Colaboração*](#collaboration).
+
+### Aprendendo sobre o desenvolvimento de pacotes {#learning-about-package-development}
+
+#### Livros {#books}
+
+- O livro [*R packages* (Pacotes em R) escrito por Hadley Wickham e Jenny Bryan](https://r-pkgs.org/) é um recurso excelente e de fácil leitura sobre o desenvolvimento de pacotes, está disponível [gratuitamente on-line](https://r-pkgs.org/) (e pode ser comprado [impresso](https://www.oreilly.com/library/view/r-packages/9781491910580/)).
+
+- [*Writing R Extensions* (Escrevendo extensões do R)](https://cran.r-project.org/doc/manuals/r-release/R-exts.html) (em inglês) é a referência canônica, geralmente a mais atualizada, para a criação de pacotes em R.
+
+- O livro [*Mastering Software Development in R* (Dominando o desenvolvimento de software em R) por Roger D. Peng, Sean Kross e Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/).
+
+- [*Advanced R* (R avançado) por Hadley Wickham](https://adv-r.hadley.nz/).
+
+- [*Tidyverse style guide* (Guia de estilo do Tidyverse)](https://style.tidyverse.org/).
+
+- [*Tidyverse design guide* (Guia de design do Tidyverse)](https://design.tidyverse.org/) (em elaboração) e o [boletim de notícias (*newsletter*)](http://tidydesign.substack.com/) que o acompanha.
+
+#### Tutoriais {#tutorials}
+
+- [*Your first R package in 1 hour* (Seu primeiro pacote R em 1 hora)](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) por Shannon Pileggi.
+
+- [essa descrição de fluxo de trabalho por Emil Hvitfeldt](https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/).
+
+- [Esta ilustração de Matthew J Denny](https://www.mjdenny.com/R_Package_Pictorial.html).
+
+#### Blogs {#blogs}
+
+- [Blog do R-hub](https://blog.r-hub.io/post).
+
+- Algumas postagens do [blog da rOpenSci](https://ropensci.org/archive/), por exemplo [*How to precompute package vignettes or pkgdown articles* ("Como pré-computar vinhetas de pacotes ou artigos pkgdown")](https://ropensci.org/blog/2019/12/08/precompute-vignettes/).
+
+- Seção *Package Development Corner* ("Espaço de desenvolvimento de pacotes") do [boletim informativo da rOpenSci](https://ropensci.org/news/).
+
+- Algumas postagens do [blog do tidyverse](https://www.tidyverse.org), por exemplo [*Upgrading to testthat edition 3* ("Atualizando para o testthat edition 3")](https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/).
+
+#### MOOCs {#moo-cs}
+
+Existe um [especialização do Coursera correspondente ao livro escrito por Roger Peng, Sean Kross e Brooke Anderson](https://fr.coursera.org/specializations/r), com um curso específico sobre pacotes R.
+
+
