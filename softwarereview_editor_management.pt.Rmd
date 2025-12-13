@@ -54,7 +54,7 @@ Atenciosamente,
 
 - Informe o gerente da comunidade rOpenSci para que
   
-  - O novo editor sejam adicionados ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
+  - Novos editores sejam adicionados ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
   - Você pode criar um novo post no blog da rOpenSci para introduzir os novos editores.
 
 - Se eles ainda não fizeram este passo como editores convidados, solicite aos novos editores que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
