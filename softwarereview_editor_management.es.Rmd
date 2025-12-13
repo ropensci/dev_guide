@@ -57,7 +57,7 @@ Te deseamos lo mejor,
 
 - Solicita al nuevo miembro que active [la autenticación de dos factores (2FA) en GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
 
-- Invítalo a la organización GitHub de rOpenSci y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda.
+- Invíta a esta persona a la organización GitHub de rOpenSci y a los equipos [`editors`](https://github.com/orgs/ropensci/teams/editors) y  [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) o [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board), según corresponda.
   Esto le dará los permisos adecuados y le permitirá recibir notificaciones específicas del equipo.
 
 - Dale acceso a la base de datos de revisión de software de AirTable (enlazada en la descripción del canal 'editors-only' en Slack).

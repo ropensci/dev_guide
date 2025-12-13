@@ -54,13 +54,13 @@ Atenciosamente,
 
 - Informe o gerente da comunidade rOpenSci para que
   
-  - Novos editores sejam adicionados ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
+  - Novo(a) editor(a) sejam adicionado ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
   - Você pode criar um novo post no blog da rOpenSci para introduzir os novos editores.
 
 - Se eles ainda não fizeram este passo como editores convidados, solicite aos novos editores que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-- Convide os novo editor para integrar a organização da rOpenSci no GitHub como membro da [equipe de editores da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.
-  Isso dará a eles as permissões apropriadas e vai permitir que eles recebam notificações específicas da equipe.
+- Convide os novo(a) editor(a) para integrar a organização da rOpenSci no GitHub como parte da [equipe editorial da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.
+  Isso dará as permissões apropriadas e permitirá receber notificações específicas da equipe.
 
 - Os editores precisam acessar o banco de dados sobre revisão de software no AirTable (o link está na descrição do canal `editors-only` no Slack).
 
