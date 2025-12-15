@@ -1,4 +1,4 @@
-# Guía para editores {#editorguide}
+# Guía para el equipo editorial {#editorguide}
 
 ```{block, type="summaryblock"}
 La revisión por pares de software en rOpenSci está gestionada por un equipo editorial.
