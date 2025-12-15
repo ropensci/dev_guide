@@ -136,15 +136,15 @@ An overview of all current software reviews is on [the *Software Review* page](h
 
 Tasks for reviews in the specific review stages include:
 
-- Look over submissions in "0\/presubmission" and "1\/editorial-team-prep", to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
+- Look over submissions in `0\/presubmission` and `1\/editorial-team-prep`, to check whether any action needs to be taken (such as polling editors, making decisions, putting issues on hold, pinging for updates, or finding and assigning editors).
 
-- Look over submissions in "2\/seeking-reviewer(s)" to ensure things are progressing quickly.
+- Look over submissions in `2\/seeking-reviewer(s)` to ensure things are progressing quickly.
   If the reviewer search has been going for unusually long (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Look over submissions in "3\/reviewer(s)-assigned".
+- Look over submissions in `3\/reviewer(s)-assigned`.
   If there are still missing reviews after an unusually long time (red color), check whether the submission is on hold, read the thread to gather context, and contact the editor in private to ask for more information.
 
-- Look over submissions in "4\/review(s)-in-awaiting-changes".
+- Look over submissions in `4\/review(s)-in-awaiting-changes`.
   If some are still lacking an author response after an unusually long time (red color), check whether the submission is on hold, read the thread, and contact the editor in private to ask for more information.
 
 ### Inviting a guest editor {#guesteditor}
@@ -261,7 +261,7 @@ When these sources of information are not enough,
 
 - Ping other editors in Slack for ideas,
 - Look for users of the package or of the data source/upstream service the package connects to (via their opening issues in the repository, starring it, citing it in papers, talking about it on social media).
-- You can also search for authors of related packages on [r-pkg.org](https://r-pkg.org/).
+- You can also search for authors of related packages on [r-universe.dev](https://r-universe.dev/).
 - R-Ladies has a [directory](https://rladies.org/directory/) specifying skills and interests of people listed.
 - You may post a request for reviewers in the #general and/or #software-review channels on the rOpenSci Slack, or on social media.
 
