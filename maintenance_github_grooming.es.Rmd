@@ -9,7 +9,7 @@ Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobr
 
 ### Áreas de repositorio en GitHub {#git-hub-repo-topics}
 
-Las [áreas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) de GitHub ayudan a navegar y buscar en los repositorios de GitHub, son usadas por [R-universe en paginas de paquetes y para resultados de busquedas](https://docs.r-universe.dev/publish/metadata.html#keywords). También son usadas por [`codemetar`](https://github.com/ropensci/codemetar) en las palabras clave del registro de rOpenSci.
+Las [áreas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) de GitHub ayudan a navegar y buscar en los repositorios de GitHub, son usadas por [R-universe en paginas de paquetes y para resultados de busquedas](https://docs.r-universe.dev/publish/metadata.html#keywords). 
 
 Recomendamos:
 

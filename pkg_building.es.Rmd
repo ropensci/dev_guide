@@ -26,12 +26,6 @@ Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recom
 - [Este artículo de Nick Tierney (en inglés)](https://www.njtierney.com/post/2018/06/20/naming-things/) lista otras consideraciones interesantes a tener en cuenta al nombrar paquetes de R.
   En caso de que cambies de opinión sobre el nombre de tu paquete, este segundo artículo de Nick explica [cómo cambiar el nombre de tu paquete](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
-### Crear metadatos para tu paquete {#creating-metadata-for-your-package}
-
-Recomendamos usar el [paquete `codemetar`](https://github.com/ropensci/codemetar) para crear y actualizar un archivo JSON [CodeMeta](https://codemeta.github.io/) para tu paquete usando `codemetar::write_codemeta()`.
-Incluirá automáticamente toda la información útil, incluyendo [temas de GitHub](#grooming).
-CodeMeta utiliza [términos de Schema.org](https://schema.org/) por lo que, a medida que gane popularidad, los metadatos JSON de tu paquete podrían ser utilizados por servicios de terceros, incluso por motores de búsqueda.
-
 ## Plataformas {#platforms}
 
 - Los paquetes deben funcionar en todas las plataformas principales (Windows, macOS, Linux). Puede haber excepciones para paquetes que interactúen con funciones específicas del sistema, o que adapten utilidades que sólo funcionan en plataformas limitadas, pero se debe hacer todo lo posible para garantizar la compatibilidad entre plataformas, incluyendo la compilación específica en cada sistema, o la contenerización de utilidades externas.
