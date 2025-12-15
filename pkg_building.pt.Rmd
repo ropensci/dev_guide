@@ -27,10 +27,6 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
 
 - Encontre outros aspectos interessantes sobre como nomear seu pacote [neste texto do blog do Nick Tierney (em inglês)](https://www.njtierney.com/post/2018/06/20/naming-things/) e, caso você mude de ideia, descubra [como renomear seu pacote nesta outra postagem do blog do Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
-### Criando metadados para seu pacote {#creating-metadata-for-your-package}
-
-Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/codemetar) para criar e atualizar um arquivo JSON [CodeMeta](https://codemeta.github.io/) para seu pacote por meio de `codemetar::write_codemeta()`. Ele incluirá automaticamente todas as informações úteis, incluindo [tópicos do GitHub](#grooming). O CodeMeta usa [termos do Schema.org](https://schema.org/), portanto, à medida que ganha popularidade, os metadados JSON do seu pacote podem ser usados por serviços de terceiros, talvez até por mecanismos de pesquisa.
-
 ## Plataformas {#platforms}
 
 - Os pacotes devem funcionar em todas as principais plataformas (Windows, macOS, Linux).  Pode haver exceções para pacotes que interajam com funções específicas do sistema ou que adaptem utilitários que só funcionam em plataformas limitadas, mas deve-se fazer todo o possível para garantir a compatibilidade entre plataformas, incluindo a compilação específica em cada sistema ou a containerização de utilitários externos.

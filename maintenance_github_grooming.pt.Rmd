@@ -10,7 +10,7 @@ Atualmente, os pacotes da rOpenSci são, em sua grande maioria, desenvolvidos no
 
 ### Áreas de repositório do GitHub {#git-hub-repo-topics}
 
-As [áreas de repositório](https://blog.github.com/2017-01-31-introducing-topics/) do GitHub ajudam a navegar e pesquisar repositórios do GitHub, são usadas pelo [R-universe em páginas de pacotes e para resultados de pesquisa](https://docs.r-universe.dev/publish/metadata.html#keywords). Também são processadas pelo [`codemetar`](https://github.com/ropensci/codemetar) nas palavras-chave de registro da rOpenSci.
+As [áreas de repositório](https://blog.github.com/2017-01-31-introducing-topics/) do GitHub ajudam a navegar e pesquisar repositórios do GitHub, são usadas pelo [R-universe em páginas de pacotes e para resultados de pesquisa](https://docs.r-universe.dev/publish/metadata.html#keywords). 
 
 Recomendamos:
 
