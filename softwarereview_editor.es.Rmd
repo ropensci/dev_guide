@@ -67,7 +67,7 @@ Para cada nuevoconsultas previas a la presentación o envío, debe:
   - Tras explicar una decisión fuera del ámbito de aplicación, escribe un comentario sobre la cuestión `@ropensci-review-bot out-of-scope`.
 
 - Si una consulta previa a la presentación se considera dentro del alcance, el EiC *puede* realizar comprobaciones preliminares.
-  En [*Plantilla de editores*](#editortemplate) puede utilizarse para ello.
+  La [*plantilla de editores*](#editortemplate) puede utilizarse para ello.
   Para ayudar a quién envió el paquete a responder a los comentarios editoriales, es útil utilizar una notación inequívoca para cada comentario, como por ejemplo
   
   ```
