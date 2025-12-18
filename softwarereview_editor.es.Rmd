@@ -235,7 +235,7 @@ Utiliza toda esta información para juzgar si:
 
 #### Comentarios editoriales iniciales
 
-- Después de contabilizar las comprobaciones automáticas, utiliza [plantilla del editor](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
+- Después de contabilizar las comprobaciones automáticas, utiliza la [plantilla para editores](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
   También puedes agilizar las comprobaciones editoriales utilizando la plantilla [`pkgreviewr` paquete creado por Anna Krystalli cuando era parte del equipo editorial](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
   Procura terminar las comprobaciones y empezar a buscar revisores en un plazo de 5 días laborables.
 - Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap). Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas. Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
