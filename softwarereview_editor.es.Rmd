@@ -8,8 +8,8 @@ La información sobre el estado actual del equipo editorial se presenta en nuest
 Este capítulo presenta las responsabilidades de [quién lidera el equipo editorial](#eicchecklist), y de [cualquiera a cargo de editar un envío](#editorchecklist).
 También describe [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse), y proporciona orientación sobre [cómo responder a las preguntas de quién revisa paquetes](#reviewersupport).
 
-Si estás en el rol de edición de forma invitada, ¡gracias por ayudar! 
-Ponte en contacto on la persona que te invitó a encargarte del proceso de revisión de un paquete.
+Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! 
+Si tienes alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
 
 **La comunidad de rOpenSci es lo más importante. 
 Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y con el objetivo de mejorar la calidad del software. 
