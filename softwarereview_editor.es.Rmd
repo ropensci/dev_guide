@@ -133,7 +133,7 @@ Los detalles completos para el tratamiento por parte del rol de LE de los envío
 
 El [*dashboard editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente extrayendo información de todos los issues de revisión de software en GitHub, junto con información adicional de Slack y de nuestra base de datos Airtable.
 El panel proporciona una visión general actualizada de nuestro equipo editorial, sus responsabilidades recientes y el estado actual de todos los problemas de revisión de software.
-Quien ocupa el rol de LE (o cualquier editor que esté interesado) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en [página sobre *editores*](https://dashboard.ropensci.org/editors.html).
+Quien ocupa el rol de LE (o cualquier editor que esté interesado) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en la [página sobre *editores*](https://dashboard.ropensci.org/editors.html).
 Debe utilizarse para encontrar y asignar editores para los nuevos temas de revisión de software.
 En la [página *Revisión de software*](https://dashboard.ropensci.org/reviews.html) se encuentran las entradas coloreadas por una medida de "urgencia", resumida en la sección [tabla al final de esa página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
