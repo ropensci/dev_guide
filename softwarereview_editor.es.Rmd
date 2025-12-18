@@ -361,8 +361,7 @@ Otros retos que pueden surgir durante la revisión son
 - Consulta la [sección siguiente]{#non-transferred-packages} para saber cómo permitir a autores mantener el paquete en su propia organización de GitHub si prefieren no transferirlo a rOpenSci.
 - Nombra un paquete para que aparezca en una entrada del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés.
   Por favor, anota en el tema de la revisión del software una o dos cosas que el autor podría destacar, y etiqueta `@ropensci/blog-editors` para su seguimiento.
-- Si quién envió el paquete mantiene un libro en línea que trata, al menos en parte, de su paquete, ponte en contacto con [alguién del personal de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con los autores sobre la transferencia a [la p `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
-
+- Si quién envió el paquete mantiene un libro en línea que trata, al menos en parte, de su paquete, ponte en contacto con [alguién del personal de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con quienes lo mantienen y hable sobre su transferencia a [la página `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
 #### Paquetes que permanecen en las organizaciones originales de GitHub {#non-transferred-packages}
 
 Para los autores de paquetes que deseen mantener sus repositorios en sus organizaciones originales de GitHub, en lugar de transferirlos a github.com/ropensci, los editores deben:
