@@ -34,7 +34,7 @@ Las responsabilidades del rol de LE incluyen las siguientes tareas generales:
 
 - Al comienzo de una rotación, debe revisar el estado de las revisiones abiertas actuales en el [dashboard editorial](https://dashboard.ropensci.org/reviews.html) y enviar recordatorios a editores o autores de paquetess según sea necesario.
 
-- Vigila todos los *issues* publicados en el repositorio de revisión del software, para lo cual debe suscribirse a las notificaciones del repositorio en GitHub, y también vigila el repositorio de revisión del software. `#editors-only` en Slack.
+- Vigila todos los *issues* publicados en el repositorio de revisión del software, para lo cual se suscribe a las notificaciones del repositorio en GitHub, y vigila la página `#editors-only` en Slack.
 
 - Supervisa regularmente (por ejemplo, semanalmente) el ritmo de todas las revisiones abiertas, echando un vistazo al [dashboard](https://dashboard.ropensci.org/reviews.html) y recordando a otros editores que muevan los paquetes según sea necesario.
 
