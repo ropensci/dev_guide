@@ -287,7 +287,8 @@ En caso afirmativo, utiliza la parte de tutoría de la plantilla de correo elect
 ##### Criterios para elegir a las personas que harán la revisión {#criteria-for-choosing-a-reviewer}
 
 
-Estos son los criterios que debes tener en cuenta a la hora de elegir a un revisor. Puede que tengas que reunir esta información buscando en [r-universo](https://r-universe.dev) y la página GitHub del posible revisor, así como su presencia general en Internet (sitio web personal, redes sociales).
+Estos son los criterios que debes tener en cuenta a la hora de elegir a alguien para realizar la revisión. 
+Puede que tengas que reunir esta información buscando en [r-universo](https://r-universe.dev) y la página GitHub del posible revisor, así como su presencia general en Internet (sitio web personal, redes sociales).
 
 - No ha revisado ningún paquete para rOpenSci en los últimos 6 meses.
 - Alguna experiencia en el desarrollo de paquetes.
