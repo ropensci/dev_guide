@@ -154,9 +154,9 @@ Guest editors may be desired or needed if specific domain expertise is needed, i
 
 To decide on a guest editor for a submission:
 
-- Create a private slack channel named #guest-editor-<package-name>.
+- Create a private Slack channel named #guest-editor-<package-name>.
 - Invite editors to it.
-- Look through similar archived slack channels for potential recommendations.
+- Look through similar archived Slack channels for potential recommendations.
 - After a decision has been reached and a guest editor has accepted, archive the channel.
 
 When inviting a guest editor,
