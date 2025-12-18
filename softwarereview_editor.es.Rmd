@@ -25,7 +25,7 @@ En caso afirmativo, se asigna alguién del equipo editorial, que tiene la respon
 ## Responsabilidades del rol de LE {#eicchecklist}
 
 Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
-El rol de LE es responsable de [la dirección general](#eic-general) del proceso de revisión, y de la [fases iniciales](#eic-submission) de todos los envíos.
+Quien ocupa el rol de LE es responsable de [la dirección general](#eic-general) del proceso de revisión, y de la [fases iniciales](#eic-submission) de todos los envíos.
 
 ### Funciones generales del rol de LE {#eic-general}
 
@@ -40,7 +40,7 @@ Las responsabilidades del rol de LE incluyen las siguientes tareas generales:
 
 ### Tareas del rol de LE para cada envío inicial {#eic-submission}
 
-El rol de LE es responsable de la tramitación inicial de todos los nuevos envíos.
+Quien ocupa el rol de LE es responsable de la tramitación inicial de todos los nuevos envíos.
 Sus funciones principales son
 
 1. Decidir si un envío debe considerarse o no dentro del alcance de rOpenSci y proceder a su revisión, y en caso afirmativo,
@@ -80,7 +80,7 @@ Para cada nuevoconsultas previas a la presentación o envío, debe:
   Por supuesto, puedes utilizar los prefijos que quieras, incluidas tus propias iniciales, como en [este ejemplo de Mauro Lepore del equipo editorial](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
 
 Las decisiones sobre el alcance pueden requerir más información por parte de quién envió el paquete.
-La persona con el rol de LE debe asegurarse mínimamente de que la documentación es suficiente para juzgar el alcance, incluido un sitio web adjunto.
+Quien ocupa el rol de LE debe asegurarse mínimamente de que la documentación es suficiente para juzgar el alcance, incluido un sitio web adjunto.
 En ese caso, por favor, pide más detalles: aunque el paquete se considere fuera de alcance, la documentación del paquete habrá mejorado, así que no nos molesta pedir estos esfuerzos.
 
 Ejemplo de texto
@@ -119,7 +119,7 @@ Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos q
 #### Envíos de software estadístico {#eic-stats-submissions}
 
 El software estadístico debe considerarse dentro del ámbito de aplicación siempre que cumpla > 50% de todos los [las normas aplicables](https://stats-devguide.ropensci.org/standards.html).
-Si una consulta previa a la presentación indica que ya se han cumplido las normas, la persona con el rol de LE debe:
+Si una consulta previa a la presentación indica que ya se han cumplido las normas, quien ocupa el rol de LE debe:
 
 - Usa `@ropensci-review-bot check srr` para confirmar que se han cumplido las normas.
 - Considera si el paquete está mejor situado en la categoría estadística designada, o si podrían ser adecuadas categorías alternativas o adicionales.
@@ -133,7 +133,7 @@ Los detalles completos para el tratamiento por parte del rol de LE de los envío
 
 En [*dashboard Editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente extrayendo información de todos los issues de revisión de software en GitHub, junto con información adicional de Slack y de nuestra base de datos Airtable.
 El panel proporciona una visión general actualizada de nuestro equipo editorial, sus responsabilidades recientes y el estado actual de todos los problemas de revisión de software.
-La persona con rol de LE (o cualquier editor que esté interesado) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en [página sobre *editores*](https://dashboard.ropensci.org/editors.html).
+Quien ocupa el rol de LE (o cualquier editor que esté interesado) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en [página sobre *editores*](https://dashboard.ropensci.org/editors.html).
 Debe utilizarse para encontrar y asignar editores para los nuevos temas de revisión de software.
 En la [página *Revisión de software*](https://dashboard.ropensci.org/reviews.html) se encuentran las entradas coloreadas por una medida de "urgencia", resumida en la sección [tabla al final de esa página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
@@ -235,7 +235,7 @@ Utiliza toda esta información para juzgar si:
 
 #### Comentarios editoriales iniciales
 
-- Después de contabilizar las comprobaciones automáticas, utiliza [plantilla del editor](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por la personal con el rol de LE) y registrar tu respuesta al envío.
+- Después de contabilizar las comprobaciones automáticas, utiliza [plantilla del editor](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
   También puedes agilizar las comprobaciones editoriales utilizando la plantilla [`pkgreviewr` paquete creado por Anna Krystalli cuando era parte del equipo editorial](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
   Procura terminar las comprobaciones y empezar a buscar revisores en un plazo de 5 días laborables.
 - Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap). Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas. Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
