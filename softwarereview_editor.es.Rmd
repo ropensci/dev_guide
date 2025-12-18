@@ -208,8 +208,8 @@ A cada persona del equipo editorial no se les debe asignar más de un número po
 #### Comprobaciones automáticas
 
 - El envío generará automáticamente una salida de comprobación de paquetes del robot de revisión ropensci.
-  Todos los fallos de comprobación (❌) deben rectificarse antes de continuar, aunque pueden justificarse excepciones a discreción del editor encargado de la tramitación.
-  Anima a quién envió a activar las comprobaciones llamando a `@ropensci-review-bot check package` para confirmar que todas las comprobaciones son correctas (✅).
+  Todos los fallos de comprobación (❌) deben rectificarse antes de continuar, aunque pueden justificarse excepciones a discreción de quién realiza la edición.
+  Anima a quién envió el paquete a activar las comprobaciones llamando a `@ropensci-review-bot check package` para confirmar que todas las comprobaciones son correctas (✅).
 - Examina todos los elementos marcados con 👀, y solicita más información o medidas al autor cuando proceda.
 - Para los envíos estadísticos (identificables como "Tipo de envío: Estadísticas" en la plantilla de edición), añade la etiqueta "estadísticas" a la edición (si no se ha añadido ya).
   - Si quién envió el paquete ha identificado que ha "incorporado la documentación de las normas ... a través del [srr](https://docs.ropensci.org/srr) entonces llama a `@ropensci-review-bot check srr` para confirmar que se han cumplido al menos el 50% de todas las normas.
