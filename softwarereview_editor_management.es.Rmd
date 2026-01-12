@@ -20,8 +20,6 @@ Estos son los pasos a seguir:
 
 - Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
 
-- Si una persona candidata ha realizado una edición invitada, evalúa cómo fue el proceso y solicita opiniones a otras personas del equipo editorial.
-
 - Envía un correo electrónico:
 
 ```

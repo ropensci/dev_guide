@@ -22,8 +22,6 @@ Etapas:
 
 - Um(a) candidato(a) pode começar como um(a) [editor(a) convidado(a)](#guesteditor).
 
-- Se um(a) candidato(a) atuou como editor(a) convidado(a), avalie como foi o processo e peça a opinião de outros editores.
-
 - Envie um e-mail.
 
 ```
