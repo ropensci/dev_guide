@@ -96,7 +96,7 @@ Después de leerlo alguien con poco conocimiento del dominio debería tener sufi
 <opcional>
 Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es único en comparacion con otros paquetes similares](https://devguide.ropensci.org/policies.html#overlap). Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
 </opcional>
-
+```
 
 #### Tareas iniciales de rol de LE para envíos completos
 
