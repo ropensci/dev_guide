@@ -19,7 +19,10 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 
 O EiC atua por 3 meses ou por um período combinado por todos os membros do conselho editorial. O EiC tem o direito de tomar decisões sobre escopo e sobreposição da forma mais independente possível (mas ainda pode solicitar ajuda/conselho). Em detalhe, o EiC desempenha as seguintes funções
 
+- Ao assumir a rotação do EiC, revisar o status das revisões abertas atuais, conforme detalhado na [*página do painel*](https://dashboard.ropensci.org/reviews.html), e enviar lembretes a outros editores ou autores de pacotes, conforme necessário. Consulte [a subseção a seguir para obter mais detalhes](#eic-dashboard).
+
 - Observa todas as _issues_ postadas no repositório de revisão do software (tanto assina as notificações do repositório no GitHub ou observa o canal `#software-peer-review-feed` no Slack).
+
 - Deve marcar toda nova submissão completa com `0/editorial-team-prep`
 - Requere `@ropensci-review-bot check srr` sobre solicitações de pré-submissão de software estatístico. Veja o capítulo do [_Stats Dev Guide_](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief), para mais detalhes.
 - Atribui submissões de pacotes a outros editores, inclusive a si mesmo, para que cuidem delas. Na maioria das vezes, isso é uma forma de rodízio entre os editores, a menos que o EiC considere que um editor seja particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de conflito de interesse. Para isso, use
