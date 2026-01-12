@@ -70,11 +70,13 @@ For each new pre-submission or submission, the EiC should:
 - If a pre-submission inquiry is considered within scope, the EiC _may_ perform preliminary checks.
   The [_Editors Template_](#editortemplate) may be used for this.
   To aid authors' responses to editorial comments, it helps to use unambiguous notation for each comment, like:
+
   ```
   My comments are tagged with "EIC" and a numbered sequence. Please refer to this notation in your responses."
 
   **EIC01** Please improve README
   ```
+
   It may also help to distinguish requirements from recommendations, for example through formatting requirements as checkboxes (`- [ ] **EIC01**`).
   You may of course use any prefixes you like, including your own initials like in [this example from one of our editors, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
 
@@ -108,9 +110,11 @@ Could you add a more detailed comparison to the packages you mention in the READ
   The EiC may also recruit a guest editor to handle any submission, as described in the [sub-section below](#guesteditor).
 
 - Assign the handling editor to the review issue by issuing the command:
+
   ```
   @ropensci-review-bot assign @username as editor
   ```
+
   This will also add the tag `1/editor-checks` to the issue.
 
 #### Statistical software submissions {#eic-stats-submissions}
@@ -223,7 +227,6 @@ Please use all of this information to judge whether:
 - A package is extremely large, in which case it may be too burdensome for reviewers.
   For example, [these initial checks](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
 
-
 #### Initial editorial comments
 
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.
@@ -277,7 +280,8 @@ If so, please use the mentorship portion of the email template and be prepared t
 
 ##### Criteria for choosing a reviewer {#criteria-for-choosing-a-reviewer}
 
-Here are criteria to keep in mind when choosing a reviewer. You might need to piece this information together by searching [r-universe](https://r-universe.dev) and the potential reviewer's GitHub page and general online presence (personal website, social media).
+Here are criteria to keep in mind when choosing a reviewer. 
+You might need to piece this information together by searching [r-universe](https://r-universe.dev) and the potential reviewer's GitHub page and general online presence (personal website, social media).
 
 - Has not reviewed a package for us within the last 6 months.
 - Some package development experience.
@@ -356,7 +360,6 @@ For package authors who wish to retain their repositories in their original GitH
 - Ask package authors to make a pull request to the [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) that lists all repositories that have not been transferred. [Example commit](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
 
 - Ask package to replace the content of the current code of conduct of the repository with the content of the [default code of conduct of the rOpenSci GitHub organization](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
-
 
 #### Package promotion {#package-promotion}
 
