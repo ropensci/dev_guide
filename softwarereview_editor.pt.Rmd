@@ -82,7 +82,8 @@ Olá <usuário> e muito obrigado por sua submissão.
 
 Estamos discutindo se o pacote está dentro do escopo e precisamos de um pouco mais de informações.
 
-Você se importaria de acrescentar mais detalhes e contexto ao LEIAME? Depois de lê-lo, alguém com pouco conhecimento do domínio deve ter sido informado sobre o objetivo, as metas e a funcionalidade do pacote.
+Você se importaria de acrescentar mais detalhes e contexto ao LEIAME? 
+Depois de lê-lo, alguém com pouco conhecimento do domínio deve ter sido informado sobre o objetivo, as metas e a funcionalidade do pacote.
 
 <opcional>
 Se um pacote tiver sobreposição de funcionalidade com outros pacotes, exigimos que ele seja demonstrado na documentação [como é o melhor da categoria](https://devguide.ropensci.org/policies.html#overlap). Você poderia adicionar uma comparação mais detalhada com os pacotes que mencionou no LEIAME para que possamos avaliar?
