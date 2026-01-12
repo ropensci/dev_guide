@@ -20,7 +20,10 @@ Se você for um editor convidado, obrigado por ajudar! Entre em contato com o ed
 
 ## Responsabilidades do EiC {#eicchecklist}
 
-O EiC atua por 3 meses ou por um período combinado por todos os membros do conselho editorial. O EiC tem o direito de tomar decisões sobre escopo e sobreposição da forma mais independente possível (mas ainda pode solicitar ajuda/conselho). Em detalhe, o EiC desempenha as seguintes funções
+O EiC atua por 3 meses ou por um período combinado por todos os membros do conselho editorial. 
+O EiC tem o direito de tomar decisões sobre escopo e sobreposição da forma mais independente possível (mas ainda pode solicitar ajuda/conselho). 
+As informações sobre o status atual de todos os membros da equipe editorial são apresentadas em nosso [*Painel Editorial*](https://dashboard.ropensci.org).
+Em detalhe, o EiC desempenha as seguintes funções
 
 - Ao assumir a rotação do EiC, revisar o status das revisões abertas atuais, conforme detalhado na [*página do painel*](https://dashboard.ropensci.org/reviews.html), e enviar lembretes a outros editores ou autores de pacotes, conforme necessário. Consulte [a subseção a seguir para obter mais detalhes](#eic-dashboard).
 
