@@ -6,9 +6,12 @@ aliases:
 # Guia para Editores {#editorguide}
 
 ```{block, type="summaryblock"}
-A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores. Estamos testando um sistema rotativo de Editor-Chefe (do inglês EiC).
+A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores. 
+Estamos testando um sistema rotativo de Editor-Chefe (do inglês EiC).
+Informações sobre os editores atuais e recentes e suas atividades podem ser visualizadas em nosso painel editorial em [dashboard.ropensci.org](https://dashboard.ropensci.org).
 
 Este capítulo apresenta as responsabilidades do [Editor-Chefe] (#eicchecklist), e de [qualquer editor responsável por uma submissão] (#editorchecklist), e sobre [como responder a uma submissão fora do escopo] (#outofscoperesponse).
+Ele também descreve [como responder a uma submissão fora do escopo](#outofscoperesponse) e fornece orientações sobre [como responder às perguntas dos revisores](#reviewersupport).
 
 Se você for um editor convidado, obrigado por ajudar! Entre em contato com o editor que o convidou para lidar com uma submissão para esclarecer qualquer dúvida que você possa ter.
 ```
@@ -24,7 +27,9 @@ O EiC atua por 3 meses ou por um período combinado por todos os membros do cons
 - Observa todas as _issues_ postadas no repositório de revisão do software (tanto assina as notificações do repositório no GitHub ou observa o canal `#software-peer-review-feed` no Slack).
 
 - Deve marcar toda nova submissão completa com `0/editorial-team-prep`
+
 - Requere `@ropensci-review-bot check srr` sobre solicitações de pré-submissão de software estatístico. Veja o capítulo do [_Stats Dev Guide_](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief), para mais detalhes.
+
 - Atribui submissões de pacotes a outros editores, inclusive a si mesmo, para que cuidem delas. Na maioria das vezes, isso é uma forma de rodízio entre os editores, a menos que o EiC considere que um editor seja particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de conflito de interesse. Para isso, use
   ```
   @ropensci-review-bot assign @username as editor
