@@ -33,7 +33,9 @@ Em detalhe, o EiC desempenha as seguintes funções
 
 - Requere `@ropensci-review-bot check srr` sobre solicitações de pré-submissão de software estatístico. Veja o capítulo do [_Stats Dev Guide_](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief), para mais detalhes.
 
-- Atribui submissões de pacotes a outros editores, inclusive a si mesmo, para que cuidem delas. Na maioria das vezes, isso é uma forma de rodízio entre os editores, a menos que o EiC considere que um editor seja particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de conflito de interesse. Para isso, use
+- Atribui submissões de pacotes a outros editores, inclusive a si mesmo, para que cuidem delas. Na maioria das vezes, isso é uma forma de rodízio entre os editores, a menos que o EiC considere que um editor seja particularmente adequado para um pacote ou que um editor se recuse a lidar com a submissão por estar muito ocupado ou por causa de conflito de interesse. 
+
+- Para isso, use
   ```
   @ropensci-review-bot assign @username as editor
   ```
