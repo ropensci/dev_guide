@@ -127,14 +127,14 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
 
 ### No momento do envio: {#upon-submission}
 
-- Se você for o EiC ou o primeiro editor a responder, designe um editor com um comentário `@ropensci-review-bot assign @username as editor`. Isso também adicionará a _tag_ `1/editor-checks` ao problema da edição (_issue_).
-- Para submissões estatísticas (identificadas como _"Submission Type: Stats"_ no modelo da _issue_), adicione o rótulo _"stats"_ à edição.
 - Uma submissão gerará automaticamente um relatório de verificação de pacote do ropensci-review-bot, que deve ser examinado para identificar se há problemas pendentes (a maioria das exceções deverá ser justificada pelo autor no contexto específico do seu pacote). Se você quiser executar novamente as verificações após qualquer alteração no pacote, poste o comentário `@ropensci-review-bot check package`.
+- Para submissões estatísticas (identificadas como _"Submission Type: Stats"_ no modelo da _issue_), adicione o rótulo _"stats"_ à edição.
+- Verifique se o modelo foi preenchido corretamente. As omissões e falhas mais comuns devem ser detectadas e anotadas pelo bot, mas uma verificação manual sempre ajuda. Os editores podem editar os modelos diretamente para pequenas correções ou podem orientar os autores a preencher quaisquer campos obrigatórios do modelo que possam estar faltando.
 - O sistema de verificação é reconstruído todas terças-feiras às 00:01 UTC, podendo levar algumas horas. Se verificações automáticas falharem nesse horário, aguarde algumas horas e tente novamente.
 - Depois que as verificações automáticas forem lançadas, use o [modelo de editor](#editortemplate) para orientar as verificações iniciais e registrar sua resposta a submissão. Você também pode simplificar suas verificações de editor usando a função [`pkgreviewr` pacote criado pela editora associada Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html). Por favor, tente concluir as verificações e começe a procurar revisores dentro de 5 dias úteis.
-- Verifique se o modelo foi preenchido corretamente.
-- Verifique as políticas em busca de possíveis [ajustes](#aims-and-scope) e [sobreposições](#overlap). Se necessário, inicie uma discussão por meio do canal #software-review do Slack para casos extremos que não tenham sido detectados por verificações anteriores do EiC. Se houver rejeições, consulte [esta seção](#outofscoperesponse) sobre como responder.
-- Verifique se as partes obrigatórias do modelo estão completas. Caso contrário, oriente os autores para as instruções apropriadas.
+- Verifique as políticas em busca de possíveis [ajustes](#aims-and-scope) e [sobreposições](#overlap). 
+  Se necessário, inicie uma discussão por meio do canal #software-review do Slack para casos extremos que não tenham sido detectados por verificações anteriores do EiC. 
+  Se houver rejeições, consulte [esta seção](#outofscoperesponse) sobre como responder.
 - Para pacotes que precisam de integração contínua em várias plataformas (cf [critérios nesta seção do capítulo sobre CI](#whichci)), certifique-se de que o pacote seja testado em várias plataformas (tendo o pacote criado em vários sistemas operacionais por meio do GitHub Actions, por exemplo).
 - Sempre que possível, ao solicitar alterações, direcione os autores para ferramentas automáticas, como [`usethis`](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/) e [`styler`](https://styler.r-lib.org/) e para recursos online (seções deste guia, seções do [livro de pacotes do R](https://r-pkgs.org/)) para facilitar o uso de seus comentários. [Exemplo de verificações de editor](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - O ideal é que você faça observações e estas sejam resolvidas antes que revisores comecem a revisar.
