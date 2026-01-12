@@ -72,7 +72,8 @@ Se a busca pelo revisor estiver demorando mais do que o normal (cor vermelha), v
 
 ### Solicitando mais detalhes {#asking-for-more-details}
 
-Em alguns casos, a documentação online é escassa. LEIAME simplificado e ausência de um site pkgdown dificultam a avaliação. Nesse caso, solicite mais detalhes; mesmo que o pacote seja considerado fora do escopo, a documentação do pacote terá melhorado, portanto, não há problema em adotar esses esforços.
+Em alguns casos, a documentação online é escassa. LEIAME simplificado e ausência de um site pkgdown dificultam a avaliação. 
+Nesse caso, solicite mais detalhes; mesmo que o pacote seja considerado fora do escopo, a documentação do pacote terá melhorado, portanto, não há problema em adotar esses esforços.
 
 Exemplo de texto
 
