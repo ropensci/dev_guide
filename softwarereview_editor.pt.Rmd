@@ -117,8 +117,6 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
 
 - Além de lidar com pacotes (cerca de 4 por ano), editores participam das decisões editoriais do grupo, como, por exemplo, se um pacote está dentro do escopo e determinam atualizações em nossas políticas. Geralmente, fazemos isso por meio do Slack, que esperamos que os editores possam verificar regularmente.
 
-- Também fazemos um rodízio de [responsabilidades do Editor-Chefe](#eicchecklist) (decisões de escopo de primeira instância e designação de editores) entre a diretoria trimestralmente.
-
 - Você não precisa acompanhar outras submissões, mas se notar um problema com um pacote que está sendo tratado por outro editor, sinta-se à vontade para levantar esse problema diretamente com o outro editor ou publicar sua observação no canal de editores no Slack. Exemplos:
   
   - Você sabe de um pacote que já resolve as mesmas dores/desafios de outro(s) pacote(s), que ainda não foi mencionado no processo.
@@ -148,7 +146,8 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
 #### Tarefas {#tasks}
 
 - Comente com `@ropensci-review-bot seeking reviewers`.
-- Use o [modelo de e-mail](#reviewrequesttemplate) se necessário, para convidar revisores. Ao convidar revisores, inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá fazer uma revisão", para dar um prazo claro no qual você irá procurar outra pessoa.
+- Use o [modelo de e-mail](#reviewrequesttemplate) se necessário, para convidar revisores. 
+  - Ao convidar revisores, inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá fazer uma revisão", para dar um prazo claro no qual você irá procurar outra pessoa.
 - Designe revisores com `@ropensci-review-bot assign @username as reviewer`. Em vez de `assign`, `add` também pode ser usado, assim como `to reviewers` (plural) em vez de `as reviewer` (singular). Portanto, o seguinte também é válido: `@ropensci-review-bot add @username to reviewers`. Um comando deve ser emitido para cada revisor. Se necessário posteriormente, remova revisores com `@ropensci-review-bot remove @username from reviewers`.
 - Se você quiser alterar a data de vencimento de uma revisão, use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
@@ -176,7 +175,9 @@ Você pode usar filtros, classificações e pesquisas para identificar revisores
 
 ![Captura de tela da interface em inglês de filtros do Airtable com um filtro de experiência de domínio que deve incluir química e áreas técnicas que devem incluir integração contínua](images/airtable.png)
 
-Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado para fornecer orientações adicionais.
+Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. 
+Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
+Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado para fornecer orientações adicionais.
 
 ##### Critérios para escolher um revisor {#criteria-for-choosing-a-reviewer}
 
