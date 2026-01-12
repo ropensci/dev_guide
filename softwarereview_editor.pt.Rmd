@@ -39,23 +39,36 @@ Em detalhe, o EiC desempenha as seguintes funções
   ```
   @ropensci-review-bot assign @username as editor
   ```
-- Monitora regularmente (por exemplo, semanalmente) o ritmo do processo de revisão graças ao [devguider](#eic-report) e lembra outros editores de mover os pacotes conforme necessário.
-- Ao assumir a rotação do EiC, revisa o status das revisões abertas atuais graças ao [devguider](#eic-report) e lembra os editores de responderem ou atualizarem o status conforme necessário.
+  Isso também adicionará a tag `1/editor-checks` à questão.
+
+- Monitorar regularmente (por exemplo, semanalmente) o andamento de todas as revisões em aberto, acompanhando a página [*Painel*](https://dashboard.ropensci.org/reviews.html) e lembrando outros editores de avançar os pacotes conforme necessário.
+
 - Responde a _issues_ postadas no repositório software-review-meta.
+
 - Toma decisões sobre escopo/sobreposição para consultas de pré-submissão, referências do JOSS ou de outros parceiros de publicação e submissões, se encontrar um caso ambíguo (este último caso também pode ser feito por editores em ação, veja abaixo). Para iniciar discussão, isso é postado no canal exclusivo para editores do Slack da rOpenSci, juntamente com um pequeno resumo do que se trata a submissão (pré-)submetida/referida, quais dúvidas o EiC tem, ou seja, digerindo um pouco as informações. Se, depois de um ou dois dias, o EiC achar que não recebeu respostas suficientes, ele poderá fazer um _ping_ em todos os editores.
+
   - Qualquer editor deve se sentir à vontade para intervir nesses casos. Veja [esta seção](#outofscoperesponse) sobre como responder a (pré-)subbmissões fora do escopo.
   - Depois de explicar a decisão fora do escopo, escreva um comentário sobre a _issue_ com `@ropensci-review-bot out-of-scope`.
-- Solicite um novo EiC quando sua rotação terminar (defina um lembrete no calendário antes da data prevista para o término e peça voluntários no canal Slack dos editores)
 
-### Usando `devguider::devguide_eic_report()` {#eic-report}
+### O Painel Editorial da rOpenSci {#eic-dashboard}
 
-Instale o devguider e execute `devguider::devguide_eic_report()`. Abra o relatório HTML em um navegador.
+O [*Painel Editorial da rOpenSci*](https://dashboard.ropensci.org) é atualizado diariamente, principalmente através da extração de informações sobre todas as questões relacionadas com a revisão de software no GitHub, juntamente com informações adicionais do Slack e da nossa base de dados Airtable.
+O painel fornece uma visão geral atualizada de nossa equipe editorial, suas responsabilidades recentes e o estado atual de todas as questões relacionadas à revisão de software.
+O EiC (ou qualquer editor interessado) pode obter uma visão geral do status da equipe editorial, disponibilidade e cargas de trabalho recentes na [página *editores*](https://dashboard.ropensci.org/editors.html).
+Isso deve ser usado para encontrar e designar editores para novas questões relacionadas à revisão de software.
+Uma visão geral de todas as revisões de software atuais está disponível na [página **Revisão de Software*](https://dashboard.ropensci.org/reviews.html).
+As entradas nesta página são coloridas de acordo com uma medida de “urgência”, resumida na [tabela na parte inferior da página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
-- Examine as submissões em "presubmission" (pré-submissão) e "editorial-team-prep" (preparação da equipe editorial). Verifique se alguma ação precisa ser tomada (sondar editores, tomar uma decisão, colocar a _issue_ em espera, enviar um _ping_ a pessoa que submeteu a proposta para uma atualização, encontrar e designar um editor).
-- As linhas em cada seção são coloridas por nível de "urgência", de branco (ignorar) a amarelo (não urgente) e vermelho (mais urgente).
-- Examine as submissões em "seeking-reviewer(s)". Se a busca de avaliadores estiver sendo realizada há muito tempo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão passou despercebida.
-- Examine as submissões em "reviewer(s)-assigne". Se ainda faltarem revisões após um período de tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações/se a submissão foi ignorada.
-- Examine as submissões em "review(s)-in-awaiting-changes". Se algumas ainda não tiverem uma resposta do autor após um tempo excepcionalmente longo (cor vermelha), verifique se a submissão está em espera, leia o tópico e entre em contato com o editor em particular para pedir mais informações/se a submissão foi ignorada.
+As tarefas específicas para revisões em estágios específicos de revisão incluem:
+
+- Analisar os envios em “0\/presubmission” e “1\/editorial-team-prep” para verificar se alguma ação precisa ser tomada (como consultar editores, tomar decisões, colocar questões em espera, solicitar atualizações ou encontrar e designar editores).
+
+- Analisar os envios em “2\/seeking-reviewer(s)” para garantir que as coisas estejam progredindo rapidamente.
+Se a busca pelo revisor estiver demorando mais do que o normal (cor vermelha), verifique se o envio está em espera, leia o tópico para entender o contexto e entre em contato com o editor em particular para pedir mais informações.
+
+- Analise os envios em “3 revisores atribuídos”. Se ainda houver revisões faltando após um tempo incomumente longo (cor vermelha), verifique se o envio está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações.
+
+- Analise os envios em “4 revisões em espera por alterações”. Se alguns ainda estiverem sem resposta do autor após um tempo incomumente longo (cor vermelha), verifique se o envio está em espera, leia o tópico e entre em contato com o editor em particular para solicitar mais informações. 
 
 ### Solicitando mais detalhes {#asking-for-more-details}
 
