@@ -64,7 +64,7 @@ Atenciosamente,
 
 - Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao(a) gerente da comunidade da rOpenSci).
 
-- Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todos os editores na mensagem.
+- Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todas as pessoas na mensagem.
 
 - No espaço de trabalho do Slack, os novos editores precisam ser adicionados à "equipe de editores" para que sejam notificados também quando alguém marcar uma mensagem com `@editors`.
 
