@@ -133,7 +133,7 @@ A postagem no blog deve mencionar todos os itens importantes do [changelog](#boo
 
 Para cada alteração feita por uma pessoa colaboradora externa, agradeça-a explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
 
-No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide os leitores a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
+No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide as pessoas leitoras a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
 
 ```markdown
 Nesta postagem, resumimos as alterações incorporadas em nosso livro [“rOpenSci Packages: Development, Maintenance, and Peer Review”] (https://devguide.ropensci.org/) nos últimos X meses.
