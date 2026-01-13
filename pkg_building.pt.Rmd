@@ -27,10 +27,6 @@ Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de
 
 - Encontre outros aspectos interessantes sobre como nomear seu pacote [neste texto do blog do Nick Tierney (em inglês)](https://www.njtierney.com/post/2018/06/20/naming-things/) e, caso você mude de ideia, descubra [como renomear seu pacote nesta outra postagem do blog do Nick](https://www.njtierney.com/post/2017/10/27/change-pkg-name/).
 
-### Criando metadados para seu pacote {#creating-metadata-for-your-package}
-
-Recomendamos que você use o [pacote `codemetar`](https://github.com/ropensci/codemetar) para criar e atualizar um arquivo JSON [CodeMeta](https://codemeta.github.io/) para seu pacote por meio de `codemetar::write_codemeta()`. Ele incluirá automaticamente todas as informações úteis, incluindo [tópicos do GitHub](#grooming). O CodeMeta usa [termos do Schema.org](https://schema.org/), portanto, à medida que ganha popularidade, os metadados JSON do seu pacote podem ser usados por serviços de terceiros, talvez até por mecanismos de pesquisa.
-
 ## Plataformas {#platforms}
 
 - Os pacotes devem funcionar em todas as principais plataformas (Windows, macOS, Linux).  Pode haver exceções para pacotes que interajam com funções específicas do sistema ou que adaptem utilitários que só funcionam em plataformas limitadas, mas deve-se fazer todo o possível para garantir a compatibilidade entre plataformas, incluindo a compilação específica em cada sistema ou a containerização de utilitários externos.
@@ -253,7 +249,7 @@ f <- function(a = TRUE) {
 
 - Para incluir exemplos, você pode usar o clássico `@examples` (no plural *"examples"*), mas também a tag `@example <path>` (no singular *"example"*) para armazenar o código de exemplo em um script R separado (de preferência na pasta `man/`), e a tag `@exampleIf` para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte a [documentação do roxygen2 sobre exemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
-- Adicionar `#' @noRd` às funções internas. Talvez você se interesse no [pacote experimental devtag](https://github.com/moodymudskipper/devtag) para obter páginas de manual locais ao usar `#' @noRd`.
+- Adicionar `#' @keywords internal` para marcar uma função como interna e, ao mesmo tempo, gerar documentação para ela. Se você não quiser que nenhuma documentação de função seja gerada, use `#' noRd`. Consulte [a documentação do `roxygen2` sobre tags para indexação e referência cruzada](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) e [tags para funções de documentação](https://roxygen2.r-lib.org/reference/tags-rd.html). Para fins de desenvolvimento, você pode se interessar pelo [pacote experimental devtag](https://github.com/moodymudskipper/devtag) para obter páginas de manual locais ao usar o `#' @noRd`.
 
 - A partir da versão 7.0.0 do roxygen2, as classes `R6` são oficialmente suportadas. Consulte a [documentação do roxygen2](https://roxygen2.r-lib.org/articles/rd-other.html#r6) para obter detalhes sobre como documentar classes `R6`.
 
@@ -282,7 +278,7 @@ Há alguns elementos que gostaríamos de destacar aqui.
 
 Você só precisa se preocupar com a implementação automática (*automatic deployment*) do seu site até a aprovação e a transferência do repositório do seu pacote para a organização ropensci; de fato, depois disso, um site pkgdown será criado para o seu pacote após cada *push* para o repositório do GitHub. Você pode encontrar o status dessas compilações em `https://dev.ropensci.org/job/package_name` por exemplo [para `magick`](https://dev.ropensci.org/job/magick); e o site em `https://docs.ropensci.org/package_name` por exemplo [para `magick`](https://docs.ropensci.org/magick). A construção do site usará seu arquivo de configuração pkgdown, se você tiver um, exceto para o estilo que usará o arquivo [de modelo do pacote`rotemplate`](https://github.com/ropensci-org/rotemplate/). O site resultante terá uma barra de pesquisa local. Pedimos que informe erros, perguntas e solicitações de recursos sobre a implementação automática em <https://github.com/ropensci/docs/> e sobre o modelo em <https://github.com/ropensci/rotemplate/>.
 
-*Se as vinhetas do seu pacote precisarem de credenciais (chaves de API, tokens, etc.) para serem ativadas, talvez você queira [renderizar as vinhetas previamente](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/), já que as credenciais não podem ser usadas no servidor de documentos.*
+*Se as vinhetas do seu pacote precisarem de credenciais (chaves de API, tokens, etc.) para serem ativadas, talvez você queira [renderizar as vinhetas previamente](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) ou [armazenar as respostas em cache](https://docs.ropensci.org/vcr/reference/setup_knitr.html), já que as credenciais não podem ser usadas no servidor que renderiza a documentação.*
 
 Antes do envio e da transferência do pacote, você pode usar a [abordagem documentada por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) ou o [pacote `tic`](https://docs.ropensci.org/tic/) para a implantação automática do site do pacote. Isso evitaria o incômodo de executar (e lembrar de executar) `pkgdown::build_site()` toda vez que o site precisar ser atualizado. Primeiro, consulte nosso [capítulo sobre integração contínua](#ci) se você não estiver familiarizado com a integração contínua. De qualquer forma, não se esqueça de atualizar todas as ocorrências do URL do site após a transferência para a organização ropensci.
 
