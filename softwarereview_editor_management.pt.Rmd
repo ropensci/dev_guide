@@ -57,7 +57,7 @@ Atenciosamente,
 
 - Se eles ainda não fizeram este passo como editores convidados, solicite que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-- Convide os novo(a) editor(a) para integrar a organização da rOpenSci no GitHub como parte da [equipe editorial da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.
+- Convide o(a) novo(a) editor(a) para integrar a organização da rOpenSci no GitHub como parte da [equipe editorial da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.
   Isso dará as permissões apropriadas e permitirá receber notificações específicas da equipe.
 
 - Os editores precisam acessar o banco de dados sobre revisão de software no AirTable (o link está na descrição do canal `editors-only` no Slack).
