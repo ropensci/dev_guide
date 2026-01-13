@@ -62,7 +62,7 @@ Atenciosamente,
 
 - Os editores precisam acessar o banco de dados sobre revisão de software no AirTable (o link está na descrição do canal `editors-only` no Slack).
 
-- Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao gerente da comunidade da rOpenSci).
+- Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao(a) gerente da comunidade da rOpenSci).
 
 - Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todos os editores na mensagem.
 
