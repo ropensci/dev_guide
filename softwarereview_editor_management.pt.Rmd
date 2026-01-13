@@ -131,7 +131,7 @@ Consulte a [orientação geral sobre blogs da rOpenSci](https://blogguide.ropens
 
 A postagem no blog deve mencionar todos os itens importantes do [changelog](#booknews), organizados em (sub)seções: e.g., uma seção sobre uma grande mudança A, outra sobre uma grande mudança B e uma sobre as mudanças menores agrupadas. Mencione as alterações mais importantes primeiro.
 
-Para cada alteração feita por um colaborador externo, agradeça-o explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
+Para cada alteração feita por uma pessoa colaboradora externa, agradeça-a explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
 
 No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide os leitores a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
 
