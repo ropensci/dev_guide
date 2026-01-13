@@ -21,9 +21,6 @@ Etapas:
 ## Convidando um(a) novo(a) editor(a) {#inviting-a-new-editor}
 
 - Um(a) candidato(a) pode começar como um(a) [editor(a) convidado(a)](#guesteditor).
-  Ao convidá-lo como um(a) editor(a) convidado(a), convide-o da mesma forma que você convidaria um(a) editor(a) convidado(a) por outros motivos.
-
-- Se um(a) candidato(a) começar como um(a) editor(a) convidado(a), avalie como foi o processo após a submissão. Peça novamente a opinião de outros editores.
 
 - Envie um e-mail.
 
@@ -53,20 +50,21 @@ Atenciosamente,
 
 ## Integrando um(a) novo(a) editor(a) ao time {#onboarding-a-new-editor}
 
-- Informe o gerente da comunidade rOpenSci para que
+- Informe o(a) gerente da comunidade rOpenSci para
   
-  - novos editores sejam adicionados ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
-  - Você pode criar um novo post no blog da rOpenSci para introduzir os novos editores.
+  - Novo(a) editor(a) seja adicionado ao [site da rOpenSci](https://github.com/ropensci/roweb3/#team-member).
+  - criar uma nova postagem no blog da rOpenSci para introduzir os(as) novos(as) editores(as).
 
-- Se eles ainda não fizeram este passo como editores convidados, solicite aos novos editores que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
+- Se eles ainda não fizeram este passo como editores convidados, solicite que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-- Convide os novos editores para integrar a organização da rOpenSci no GitHub como membro da [equipe de editores da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.  Isso dará a eles as permissões apropriadas e vai permitir que eles recebam notificações específicas da equipe.
+- Convide o(a) novo(a) editor(a) para integrar a organização da rOpenSci no GitHub como parte da [equipe editorial da rOpenSci](https://github.com/orgs/ropensci/teams/editors) e da equipe [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) ou [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) subequipe, conforme for apropriado.
+  Isso dará as permissões apropriadas e permitirá receber notificações específicas da equipe.
 
 - Os editores precisam acessar o banco de dados sobre revisão de software no AirTable (o link está na descrição do canal `editors-only` no Slack).
 
-- Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao gerente da comunidade da rOpenSci).
+- Os editores precisam ter acesso ao canal privado de editores no espaço de trabalho do Slack da rOpenSci (e ao espaço de trabalho do Slack em geral, caso não o tenham feito anteriormente; nesse caso, peça ao(a) gerente da comunidade da rOpenSci).
 
-- Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todos os editores na mensagem.
+- Publique uma mensagem de boas-vindas aos novos editores no canal, marcando todas as pessoas na mensagem.
 
 - No espaço de trabalho do Slack, os novos editores precisam ser adicionados à "equipe de editores" para que sejam notificados também quando alguém marcar uma mensagem com `@editors`.
 
@@ -133,9 +131,9 @@ Consulte a [orientação geral sobre blogs da rOpenSci](https://blogguide.ropens
 
 A postagem no blog deve mencionar todos os itens importantes do [changelog](#booknews), organizados em (sub)seções: e.g., uma seção sobre uma grande mudança A, outra sobre uma grande mudança B e uma sobre as mudanças menores agrupadas. Mencione as alterações mais importantes primeiro.
 
-Para cada alteração feita por um colaborador externo, agradeça-o explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
+Para cada alteração feita por uma pessoa colaboradora externa, agradeça-a explicitamente usando as informações do _changelog_. Por exemplo, `[Matt Fidler](https://github.com/mattfidler/) modificou nossa seção sobre mensagens de console [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178)`.
 
-No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide os leitores a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
+No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide as pessoas leitoras a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
 
 ```markdown
 Nesta postagem, resumimos as alterações incorporadas em nosso livro [“rOpenSci Packages: Development, Maintenance, and Peer Review”] (https://devguide.ropensci.org/) nos últimos X meses.
