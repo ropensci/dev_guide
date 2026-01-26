@@ -2,6 +2,8 @@
 
 ## dev version
 
+- 2026-01-26, update scope for data retrieval packages (#978).
+
 - 2025-12-15, remove codemeta.json requirement (#968).
 
 - 2025-10-17, clarify the use of Rd tags for internal functions (#918, `@cforgaci`).
