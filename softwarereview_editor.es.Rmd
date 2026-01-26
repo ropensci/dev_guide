@@ -148,7 +148,7 @@ Las tareas para las revisiones en las fases de revisión específicas incluyen:
 - Revisa los envíos en `3\/reviewer(s)-assigned`.
   Si siguen faltando revisiones después de un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo para recopilar el contexto y ponte en contacto con la persona editora responsable en privado para pedirle más información.
 
-- Revisa los envíos en 4\/review(s)-in-awaiting-changes`.
+- Revisa los envíos en `4\/review(s)-in-awaiting-changes`.
   Si algunos siguen sin respuesta de las autoras después de un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo y ponte en contacto con la persona encargada en privado para pedir más información.
 
 ### Invitar a una persona para la tarea de edición  {#guesteditor}
