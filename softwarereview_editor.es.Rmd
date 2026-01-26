@@ -174,7 +174,7 @@ Si la persona acepta (¡bien!),
 - invítala al equipo `ropensci/editors` y a la organización ropensci;
 - una vez que haya aceptado esta invitación al repositorio, asígnale el *issue*;
 - asegúrate de que la persona ya se encuentra en el espacio de trabajo en Slack de rOpenSci;
-- Pide a un miembro del personal que añada su nombre a la tabla de editores invitados de Airtable (para que sus nombres aparezcan en este libro y en el README de la revisión del software).
+- Pide a una persona del staff de rOpenSci que agregue su nombre a la tabla `guest-editors` en Airtable (para que los nombres aparezcan en este libro y en el README de la revisión del software).
 
 Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
 
