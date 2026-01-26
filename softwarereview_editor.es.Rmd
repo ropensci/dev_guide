@@ -363,4 +363,4 @@ Para aquellas personas que deseen mantener los repositorios de su paquete en sus
 
 #### Promoción de paquetes {#package-promotion}
 
-- Dirige a quién envió el paquete a los capítulos de la guía sobre [liberación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
+- Dirige a quién envió el paquete a los capítulos de la guía sobre [versionado y publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
