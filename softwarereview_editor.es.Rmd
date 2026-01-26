@@ -330,7 +330,7 @@ Aparte de estos principios generales, estas revisiones proporcionan ejemplos út
 
 Otros retos que pueden surgir durante la revisión son
 
-- **Si quién envió el paquete deja de responder** remítete a [las políticas](#policies) y/o ponte en contacto con el equipo editorial en el canal de Slack correspondiente para debatirlas.
+- **Si quien presentó el paquete deja de responder**, consulta [las políticas](#policies) y/o notifica al resto del equipo editorial en el canal de Slack para discutirlo. 
   Es importante que, si se asignó una persona revisora a un tema cerrado, te pongas en contacto con ella al cerrarlo para explicarle la decisión y agradecerle de nuevo su trabajo.
   Informa al equipo editorial en el canal de Slack que las tengan en cuenta para revisar un paquete en el futuro, con altas probabilidades de que la revisión del software sea sin contratiempos.
 - **Si alguién se retrasa en la revisión o deja de responder** envía un recordatorio al cabo de 1 semana, y de nuevo al cabo de 2 semanas.
