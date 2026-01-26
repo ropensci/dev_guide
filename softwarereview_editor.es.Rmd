@@ -293,7 +293,7 @@ Puede que tengas que reunir esta información buscando en [*r-universe*](https:/
 
 Cada envío debe ser revisado por *dos* personas.
 Aunque está bien que una de ellas tenga menos experiencia en el desarrollo de paquetes y más conocimientos del dominio, la revisión no debe dividirse en dos.
-Ambas deben revisar el paquete de forma exhaustiva, aunque desde su perspectiva particular.
+Ambas personas deben revisar el paquete de forma exhaustiva, aunque desde sus respectivas perspectivas.
 En general, al menos una debe tener experiencia previa en revisiones y, por supuesto, invitar gente nueva amplía nuestro grupo de revisión.
 
 #### Asignar revisores {#assign-reviewers}
