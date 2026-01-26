@@ -159,7 +159,7 @@ Los editores invitados pueden ser deseables o necesarios  si el volumen de enví
 Para decidir a quién invitar para un envío:
 
 - Crea un canal privado de Slack llamado #editor-invitado<nombre-paquete>.
-- Invita al equipo editorial es a él.
+- Invita al equipo editorial a ese canal.
 - Busca en canales Slack similares archivados posibles recomendaciones.
 - Cuando se haya tomado una decisión y una persona invitada haya aceptado, archiva el canal.
 
