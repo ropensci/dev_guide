@@ -132,7 +132,7 @@ Los detalles completos para el tratamiento por parte del rol de LE de los envío
 
 ### El tablero editorial de rOpenSci {#eic-dashboard}
 
-El [*dashboard editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente mediante la extracción de información de todos los _issues_ de software en GitHub, junto con información adicional de Slack y de nuestra base de datos en Airtable.
+El [*tablero editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente mediante la extracción de información de todos los _issues_ de software en GitHub, junto con información adicional de Slack y de nuestra base de datos en Airtable.
 El panel proporciona una visión general actualizada de nuestro equipo editorial, de sus responsabilidades recientes y del estado actual de todos los _issues_ de revisión de software.
 Quien ocupa el rol de LE (o cualquier persona que esté interesada) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en la [página sobre *equipo editorial*](https://dashboard.ropensci.org/editors.html).
 Debe utilizarse para encontrar y asignar editores/as para los nuevos temas de revisión de software.
