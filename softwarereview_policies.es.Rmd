@@ -77,7 +77,7 @@ Busca la etiqueta de revisión por pares (ver más abajo) para identificar los p
 ### Categorías de paquetes {#package-categories}
 
 - **obtención de datos**: Paquetes para acceder y descargar datos de fuentes en línea con usos científicos.
-  Nuestra definición de "usos científicos" es amplia, e incluye servicios de almacenamiento de datos, revistas y otros servidores remotos, ya que muchas fuentes de datos pueden ser de interés para los investigadores.
+  Nuestra definición de "usos científicos" es amplia, e incluye servicios de almacenamiento de datos, revistas y otros servidores remotos, ya que existe una gran variedad de fuentes de datos que pueden ser de interés para quienes hacen ciencia.
   Sin embargo, los paquetes de recuperación deben centrarse en los datos *fuentes* o *temas* en lugar de *servicios* y deben hacer [algo más que descargar datos](https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no).
   Por ejemplo, un cliente general para el almacenamiento de datos de Amazon Web Services no estaría incluido, como tampoco lo estaría un paquete que sólo ofreciera funciones de descarga sin ningún tipo de preprocesamiento o filtrado previo.
   Algunos ejemplos de paquetes de recuperación de datos incluidos en el ámbito de aplicación son [**rotl**](https://github.com/ropensci/software-review/issues/17) que ofrecen una [una amplia gama de funciones](https://docs.ropensci.org/rotl/reference/index.html) y [**gutenbergr**](https://github.com/ropensci/software-review/issues/41) que preprocesa un enorme conjunto de metadatos para que sea mucho más fácil interactuar con un [enorme y variada base de datos](https://docs.ropensci.org/gutenbergr/).
