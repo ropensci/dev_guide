@@ -163,7 +163,7 @@ Para decidir a quién invitar para un envío:
 - Busca en canales de Slack similares, archivados, posibles recomendaciones.
 - Cuando se haya tomado una decisión y una persona invitada haya aceptado, archiva el canal.
 
-Cuando invites a alguien para realizar una edición de forma invitada:
+En caso de recurrir a colaboración editorial externa:
 
 - Pregunta sobre los conflictos de intereses utilizando el [mismo texto que para quienes revisan paquetes](#coi),
 - Proporciona un enlace a la [guía para quines se encargan de la edición](#editorchecklist).
