@@ -298,7 +298,7 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
 
 #### Asignar revisores {#assign-reviewers}
 
-- Asigna a cada revisor `@ropensci-review-bot assign @username as reviewer`.
+- Para asignar a alguien para la revisión, usa `@ropensci-review-bot assign @username as reviewer`.
   Debe emitirse una orden para cada persona revisora.
   Si es necesario, puedes eliminar a las personas que revisan con `@ropensci-review-bot remove @username from reviewers`.
 - Las fechas de vencimiento de las revisiones se fijan por defecto en [21 días](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 semanas) después de la fecha de asignación.
