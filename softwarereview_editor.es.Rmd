@@ -130,7 +130,7 @@ Esto puede requerir un debate sobre la categoría o categorías adecuadas.
 Si las personas autoras no han cumplido las normas, pero están de acuerdo en hacerlo, por lo general, debe aplicarse una etiqueta de _"holding"_ hasta que `@ropensci-review-bot check srr` dé el visto bueno (✅).
 Los detalles completos para el tratamiento por parte del rol de LE de los envíos de software estadístico se facilitan en el correspondiente [*capítulo de la Guía de desarrollo de paquetes estadísticos*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
 
-### El dashboard editorial de rOpenSci {#eic-dashboard}
+### El tablero editorial de rOpenSci {#eic-dashboard}
 
 El [*dashboard editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente mediante la extracción de información de todos los _issues_ de software en GitHub, junto con información adicional de Slack y de nuestra base de datos en Airtable.
 El panel proporciona una visión general actualizada de nuestro equipo editorial, de sus responsabilidades recientes y del estado actual de todos los _issues_ de revisión de software.
