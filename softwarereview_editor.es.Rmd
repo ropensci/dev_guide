@@ -173,7 +173,7 @@ Si la persona acepta (¡bien!),
 - asegúrate de que [haya activado la autenticación de 2 factores en su cuenta de GitHub](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/);
 - invítala al equipo `ropensci/editors` y a la organización ropensci;
 - una vez que haya aceptado esta invitación al repositorio, asígnale el *issue*;
-- asegúrate de que esté invitada al espacio de trabajo en Slack de rOpenSci;
+- asegúrate de que la persona ya se encuentra en el espacio de trabajo en Slack de rOpenSci;
 - Pide a un miembro del personal que añada su nombre a la tabla de editores invitados de Airtable (para que sus nombres aparezcan en este libro y en el README de la revisión del software).
 
 Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
