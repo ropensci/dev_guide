@@ -314,11 +314,11 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
 - Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la [plantilla de aprobación de revisión]{#approval2template}.
 - Si quién presentó el paquete tiene la intención de presentar un [artículo científico](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) en [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicale que pueden presentarlo una vez finalizada la revisión. 
 
-#### Responder a las preguntas de los revisores {#reviewersupport}
+#### Responder a las preguntas del equipo de revisión {#reviewersupport}
 
-Tanto autores como revisores pueden pedir opiniones sobre aspectos del proceso de revisión, como por ejemplo el tono o el contenido de las revisiones o las respuestas de los autores.
+Todas las personas que participan pueden pedir opiniones sobre aspectos del proceso de revisión, como, por ejemplo, el tono o el contenido de las revisiones o de las respuestas de los autores y autoras.
 Aunque esta guía se esfuerza por ofrecer orientación suficiente para la mayoría de los casos, el equipo editorial está siempre disponible para cualquier pregunta.
-Si observas algo que pueda editarse o añadirse productivamente a esta *Guía de desarrollo* abre una issue o PR.
+Si observas algo que pueda editarse o añadirse productivamente a esta *Guía de desarrollo* abre una *issue* o *PR*.
 Aparte de estos principios generales, estas revisiones proporcionan ejemplos útiles:
 
 - Ejemplo duro pero constructivo: la parte de esta revisión que sugiere una reescritura de la viñeta: [ropensci/software-review#191 (comentario)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
@@ -330,27 +330,27 @@ Aparte de estos principios generales, estas revisiones proporcionan ejemplos út
 
 Otros retos que pueden surgir durante la revisión son
 
-- **Si quién envió el paquete deja de responder** remítete a [las políticas](#policies) y/o ponte en contacto con los demás editores en el canal Slack para debatirlas.
-  Es importante que, si se asignó una revisora a un tema cerrado, te pongas en contacto con esta esta persona al cerrar el tema para explicarle la decisión y agradecerle de nuevo su trabajo.
-  Informa al equipo editorial en el canal de Slack para que los tengan en cuenta como revisores para un paquete en el futuro con altas posibilidades de revisión de software sin problemas.
+- **Si quién envió el paquete deja de responder** remítete a [las políticas](#policies) y/o ponte en contacto con el equipo editorial en el canal de Slack correspondiente para debatirlas.
+  Es importante que, si se asignó una persona revisora a un tema cerrado, te pongas en contacto con ella al cerrarlo para explicarle la decisión y agradecerle de nuevo su trabajo.
+  Informa al equipo editorial en el canal de Slack que las tengan en cuenta para revisar un paquete en el futuro, con altas probabilidades de que la revisión del software sea sin contratiempos.
 - **Si alguién se retrasa en la revisión o deja de responder** envía un recordatorio al cabo de 1 semana, y de nuevo al cabo de 2 semanas.
   El primer recordatorio puede ser un `@tag` en GitHub.
   Después utiliza el correo electrónico u otra comunicación directa.
-  Si al cabo de 3 semanas sigue sin haber respuesta, determina cuál es la mejor manera de seguir adelante sin ellos:
+  Si al cabo de 3 semanas sigue sin haber respuesta, determina cuál es la mejor manera de seguir adelante sin estas personas:
   - Si esta persona ya ha enviado su revisión principal, y otro revisor está activo y proporcionando comentarios sustanciales, el o la editora puede seguir adelante con el proceso de revisión, y debe asumir el papel del revisor ausente para determinar si los cambios de los autores son suficientes.
-  - Si la persona ausente no ha enviado su revisión, el editor debe intentar encontrar un nuevo revisor, y proceder con el proceso de revisión una vez que haya dos revisiones.
-    En este punto, el editor debe dar prioridad a la búsqueda de revisores experimentados que puedan comprometerse a una entrega rápida.
-    Asegúrate de hacer ping a otros editores en Slack.
-    - A su discreción, el editor *puede* optar por actuar él mismo como segundo revisor, pero sólo debe hacerlo tras múltiples intentos fallidos de encontrar un nuevo revisor, y si el editor tiene experiencia suficiente para hacerlo.
-      Desaconsejamos a los editores que hagan esto con cierta frecuencia, ya que aumenta la carga de trabajo y reduce la diversidad de puntos de vista aportados a la comunidad por los revisores.
-    - Haz un comentario dando las gracias al revisor original en cualquier caso, y elimínalo con `@ropensci-review-bot remove @username from reviewers`.
+  - Si la persona ausente no ha enviado su revisión, se debe intentar encontrar una nueva persona revisora y proceder con el proceso de revisión una vez que haya dos revisiones.
+    En este punto, se debe dar prioridad a la búsqueda de personas experimentadas que puedan comprometerse con una entrega rápida.
+    Asegúrate de hacer ping al equipo editorial en Slack.
+A su discreción, quien edita *puede* actuar como segunda persona revisora, pero solo tras múltiples intentos fallidos de encontrar una nueva revisión y si cuenta con experiencia suficiente.
+      Desaconsejamos hacer esto con cierta frecuencia ya que aumenta la carga de trabajo y reduce la diversidad de puntos de vista aportados a la comunidad por quienes revisan.
+    - Haz un comentario agradeciendo a la persona revisora original en cualquier caso y elimínala con `@ropensci-review-bot remove @username from reviewers`.
 
 ### Después de la revisión {#after-review}
 
-- Aproba el paquete con `@ropensci-review-bot approve <package-name>`
-- Consulta la [sección siguiente]{#non-transferred-packages} para saber cómo permitir a autores mantener el paquete en su propia organización de GitHub si prefieren no transferirlo a rOpenSci.
-- Nombra un paquete para que aparezca en una entrada del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés.
-  Por favor, anota en el tema de la revisión del software una o dos cosas que el autor podría destacar, y etiqueta `@ropensci/blog-editors` para su seguimiento.
+- Aprueba el paquete con `@ropensci-review-bot approve <package-name>`
+- Consulta la [sección siguiente]{#non-transferred-packages} para saber cómo permitir que autores y autoras mantengan el paquete en su propia organización de GitHub si prefieren no transferirlo a rOpenSci.
+- Nombra un paquete para que aparezca en un artículo del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés.
+  Por favor, anota en el _issue_ de la revisión una o dos cosas que el/la autor/a podría destacar y etiqueta `@ropensci/blog-editors` para su seguimiento.
 - Si quién envió el paquete mantiene un libro en línea que trata, al menos en parte, de su paquete, ponte en contacto con [alguién del _staff_ de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con quienes lo mantienen y hable sobre su transferencia a [la página `ropensci-books` organización de GitHub](https://github.com/orgs/ropensci-books).
 
 #### Paquetes que permanecen en las organizaciones originales de GitHub {#non-transferred-packages}
