@@ -194,8 +194,8 @@ Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
 
 ## Lista de tareas para la edición de un paquete  {#editorchecklist}
 
-Las editoras encargadas son responsables de guiar cada envío asignado a lo largo de todo el proceso, desde la presentación inicial hasta la aceptación final.
-A cada persona del equipo editorial no se les debe asignar más de un número por trimestre, o un máximo de cuatro al año.
+Las personas asignadas como editoras son responsables de guiar cada envío asignado a lo largo de todo el proceso, desde la presentación inicial hasta la aceptación final.
+A cada persona del equipo editorial no se les debe asignar más de un _issue_ por trimestre, o un máximo de cuatro al año.
 
 ### En el momento del envío: {#upon-submission}
 
@@ -204,11 +204,11 @@ A cada persona del equipo editorial no se les debe asignar más de un número po
 - El envío generará automáticamente una salida de comprobación de paquetes del robot de revisión ropensci.
   Todos los fallos de comprobación (❌) deben rectificarse antes de continuar, aunque pueden justificarse excepciones a discreción de quién realiza la edición.
   Anima a quién envió el paquete a activar las comprobaciones llamando a `@ropensci-review-bot check package` para confirmar que todas las comprobaciones son correctas (✅).
-- Examina todos los elementos marcados con 👀, y solicita más información o medidas al autor cuando proceda.
+- Examina todos los elementos marcados con 👀, y solicita más información o medidas a las personas autoras del paquete cuando corresponda.
 - Para los envíos estadísticos (identificables como "Tipo de envío: Estadísticas" en la plantilla de edición), añade la etiqueta "estadísticas" a la edición (si no se ha añadido ya).
   - Si quién envió el paquete ha identificado que ha "incorporado la documentación de las normas ... a través del [srr](https://docs.ropensci.org/srr) entonces llama a `@ropensci-review-bot check srr` para confirmar que se han cumplido al menos el 50% de todas las normas.
-- Comprueba que la plantilla de incidencias se ha rellenado correctamente. Los descuidos y omisiones más comunes deberían ser detectados y anotados por el robot, pero una comprobación manual siempre ayuda.
-  Las editoras pueden editar las plantillas directamente para correcciones menores, o pueden indicar a los autores que rellenen los campos obligatorios de la plantilla que puedan faltar.
+- Comprueba que la plantilla de _issues_ se ha rellenado correctamente. Los descuidos y omisiones más comunes deberían ser detectados y anotados por el robot, pero una comprobación manual siempre ayuda.
+  Las personas editoras pueden editar las plantillas directamente para realizar correcciones menores, o bien indicar a los autores y autoras que rellenen los campos obligatorios de la plantilla que puedan faltar.
 - El sistema de comprobación se reconstruye cada martes a las 00:01 UTC, y puede tardar un par de horas.
   Si las comprobaciones automáticas fallan a esa hora, espera unas horas y vuelve a intentarlo.
 
@@ -219,21 +219,21 @@ Presta especial atención a:
 - Valores extremadamente grandes o pequeños de líneas de código ("loc").
 - Valores extremadamente grandes o pequeños para el número de funciones ("n\_fns\_...").
 
-El informe automatizado también incluirá un enlace a un *visualización interactiva en red de las llamadas entre objetos del paquete*.
-Esta visualización puede proporcionar una visión útil de cómo están estructuradas las funciones dentro de un paquete.
+El informe automatizado también incluirá un enlace a una *visualización interactiva en red de las llamadas entre objetos del paquete*.
+Esta visualización puede ofrecer una perspectiva útil sobre cómo están estructuradas las funciones dentro de un paquete.
 Utiliza toda esta información para juzgar si:
 
 - Un paquete tiene muy pocas funciones o líneas de código, en cuyo caso puede estar insuficientemente desarrollado para la revisión por pares.
-- Un paquete es extremadamente grande, en cuyo caso puede resultar demasiado pesado para los revisores.
-  Por ejemplo, [estas consultas iniciales](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revelaron un paquete con más de 8.500 líneas de código R (correspondientes al 97,6% de todos los paquetes), y 251 funciones R exportadas.
+- Un paquete es extremadamente grande, por lo que puede resultar demasiado pesado para quienes revisan.
+  Por ejemplo, [estas consultas iniciales](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revelaron un paquete con más de 8.500 líneas de código en R (correspondientes al 97,6% de todos los paquetes) y 251 funciones R exportadas.
 
 #### Comentarios editoriales iniciales
 
-- Después de contabilizar las comprobaciones automáticas, utiliza la [plantilla para editores](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
-  También puedes agilizar las comprobaciones editoriales utilizando la plantilla [`pkgreviewr` paquete creado por Anna Krystalli cuando era parte del equipo editorial](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
-  Procura terminar las comprobaciones y empezar a buscar revisores en un plazo de 5 días laborables.
-- Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap). Inicia un debate a través del canal Slack #software-review si es necesario en casos especiales que no hayan sido detectados por comprobaciones previas. Si se rechaza el paquete, ver [esta sección](#outofscoperesponse) sobre cómo responder.
-  Inicia el debate a través del canal Slack #software-review si es necesario para casos extremos que no hayan sido detectados por comprobaciones previas de LE.
+- Después de contabilizar las comprobaciones automáticas, utiliza la [plantilla editorial](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
+  También puedes agilizar las comprobaciones editoriales utilizando la plantilla del paquete [`pkgreviewr`, creado por Anna Krystalli cuando formaba parte del equipo editorial](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
+  Procura terminar las comprobaciones y empezar a buscar las personas para revisar en un plazo de 5 días laborables.
+- Comprueba las políticas [de alcance](#aims-and-scope) y [solapamiento](#overlap). Inicia un debate en el canal de Slack #software-review sobre si es necesario, en casos especiales no detectados por comprobaciones previas, que se realice una revisión. Si se rechaza el paquete, consulta [esta sección](#outofscoperesponse) para conocer cómo responder.
+  Inicia el debate a través del canal de Slack #software-review si es necesario para casos extremos que no hayan sido detectados en comprobaciones previas de LE.
   Si se rechaza, consulta [esta sección](#outofscoperesponse) sobre cómo responder.
 - Asegúrate de que el paquete se prueba en varias plataformas (haciendo que el paquete se construya en varios sistemas operativos a través de GitHub Actions, por ejemplo; véase [criterios en esta sección del capítulo CI](#whichci) para más detalles y opciones).
 - Siempre que sea posible, cuando pidas cambios, sugiere herramientas automáticas como [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/), [Jarl](https://jarl.etiennebacher.com/), [flirtea](https://flir.etiennebacher.com/), y recursos en línea (secciones de esta guía, secciones del [Libro *R Packages*](https://r-pkgs.org/)) para facilitar tu devolución.
