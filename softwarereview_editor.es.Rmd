@@ -52,23 +52,23 @@ Sus funciones principales son
 
 Tiene derecho a tomar decisiones de alcance y de solapamiento con la mayor independencia posible (puede solicitar ayuda/asesoramiento), pero se le recomienda que solicite opiniones en el canal `#editors-only` en Slack.
 Las decisiones sobre el alcance del software estadístico suelen ser más sencillas que las relativas a las propuestas generales (no estadísticas), tal y como se describe a continuación (#eic-stats-submissions).
-Para cada nuevoconsultas previas a la presentación o envío, debe:
+Para cada nuevo _issue_ de consulta preenvío o envío, debe:
 
-- Referirse a las categorías descritas en el [*Objetivos y ámbito de aplicación*](#aims-and-scope) para tomar decisiones sobre el alcance y el solapamiento de las consultas previas a la presentación, las remisiones de JOSS u otros socios de publicación, y las presentaciones.
-  - Inicia debates en el canal `#editors-only` del Slack de rOpenSci resumiendo el software (pre)presentado, junto con cualquier preocupación que pueda tener.
+- Referirse a las categorías descritas en [*Objetivos y ámbito de aplicación*](#aims-and-scope) para tomar decisiones sobre el alcance y el solapamiento de las consultas preenvío, las recomendaciones de JOSS y de otras organizaciones con las que tenemos acuerdos de publicación, y los envíos.
+  - Inicia debates en el canal `#editors-only` del Slack de rOpenSci, resumiendo los paquetes enviados o las consultas previas a los envíos, junto con cualquier preocupación que pueda tener.
   - Si considera que no ha recibido suficientes respuestas al cabo de uno o dos días, puede enviar un ping a todo el equipo editorial.
   - Debe buscar otras opiniones sobre los envíos que vayan más allá de sus propias áreas de experiencia.
-  - El software estadístico debe considerarse dentro del ámbito de aplicación siempre que pueda cumplir al menos la mitad de todos los [las normas aplicables (generales y al menos una categoría)](https://stats-devguide.ropensci.org/standards.html).
+  - El software estadístico debe considerarse dentro del ámbito de aplicación siempre que pueda cumplir al menos la mitad de las [normas aplicables (generales y al menos una categoría)](https://stats-devguide.ropensci.org/standards.html).
 
-- Si se considera que una consulta previa al envío o un envío está fuera de alcance de publicación, si procede.
-  Cuando proceda, utiliza el texto de [*Objetivos y alcance*](#aims-and-scope) sobre la evolución del ámbito de aplicación a lo largo del tiempo.
+- Si se considera que una consulta de preenvío o un envío está fuera del alcance de publicación, debe agradecer a las personas que enviaron el paquete, explicarles los motivos de la decisión y, si procede, mencionarles otros medios de publicación.
+  Cuando corresponda, usa el texto de [*Objetivos y alcance*](#aims-and-scope) sobre la evolución de los temas y el ámbito de aplicación a lo largo del tiempo.
   
   - [Ejemplos de envíos y respuestas fuera del ámbito de aplicación](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
   
-  - Tras explicar una decisión fuera del ámbito de aplicación, escribe un comentario sobre la cuestión `@ropensci-review-bot out-of-scope`.
+  - Tras explicar una decisión fuera del ámbito de aplicación, escribe un comentario en el _issue_ `@ropensci-review-bot out-of-scope`.
 
-- Si una consulta previa a la presentación se considera dentro del alcance, el EiC *puede* realizar comprobaciones preliminares.
-  La [*plantilla de editores*](#editortemplate) puede utilizarse para ello.
+- Si una consulta de preenvío se considera dentro del alcance, el LE *puede* realizar las comprobaciones preliminares.
+  La [*plantilla de edición*](#editortemplate) puede utilizarse para ello.
   Para ayudar a quién envió el paquete a responder a los comentarios editoriales, es útil utilizar una notación inequívoca para cada comentario, como por ejemplo
   
   ```
@@ -88,26 +88,26 @@ Ejemplo de texto:
 ```markdown
 Hola <nombre> y muchas gracias por su envío.
 
-Estamos discutiendo si el paquete está dentro del ámbito de aplicación y necesitamos un poco más de información.
+Estamos discutiendo si el paquete está dentro de nuestro alcance temático y necesitamos un poco más de información.
 
-¿Le importaría añadir más detalles y contexto al *README*?
+¿Te importaría añadir más detalles y contexto al *README*?
 Después de leerlo alguien con poco conocimiento del dominio debería tener suficiente información sobre el objetivo, las metas y la funcionalidad del paquete.
 
 <opcional>
 Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos que demuestre en la documentación [por qué es único en comparacion con otros paquetes similares](https://devguide.ropensci.org/policies.html#overlap). 
-Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
+¿Podrías añadir una comparación más detallada con los paquetes que mencionas en el *README* para que podamos evaluarlo?
 </opcional>
 ```
 
 #### Tareas iniciales de rol de LE para envíos completos
 
-- Una vez que esté convencido de que un paquete puede pasar a un envío completo, invita un envío completo y, a continuación, cierra la consulta previa a la presentación.
+- Una vez confirmado que un paquete puede pasar a un envío completo, se invita a realizarlo y, a continuación, se cierra el _issue_ con la consulta preenvío.
 
 - Etiqueta inicialmente cada nuevo envío completo con ` 0/editorial-team-prep`
 
-- Encuentra alguién del equipo editorial para que se encargue del envío (incluido tú mismo, potencialmente).
-  Quién es disponible actualmente se indica en la página [*Panel Editorial*](https://dashboard.ropensci.org), y las cargas de trabajo editoriales deben distribuirse de la forma más uniforme posible, remitiéndose al [*Cuadro de envios* gráficos de carga editorial reciente](https://dashboard.ropensci.org/editors.html#past-ed-load).
-  También se puede invitar a un editor invitado para que se encargue de cualquier envío, tal y como se describe en el [subsección siguiente](#guesteditor).
+- Encuentra alguién del equipo editorial para que se encargue del envío (incluido tú, potencialmente).
+  Quiénes están disponibles actualmente se indican en la página [*Panel Editorial*](https://dashboard.ropensci.org), y las cargas de trabajo editoriales deben distribuirse de la forma más uniforme posible, remitiéndose al [*Cuadro de envíos*, gráficos de carga editorial reciente](https://dashboard.ropensci.org/editors.html#past-ed-load).
+  También se puede designar a una persona editora invitada para encargarse de cualquier envío, tal como se describe en la [subsección siguiente](#guesteditor).
 
 - Asigna a una persona para la edición con un comentario de:
   
@@ -119,13 +119,13 @@ Podrías añadir una comparación más detallada con los paquetes que mencionas 
 
 #### Envíos de software estadístico {#eic-stats-submissions}
 
-El software estadístico debe considerarse dentro del ámbito de aplicación siempre que cumpla > 50% de todos los [las normas aplicables](https://stats-devguide.ropensci.org/standards.html).
+El software estadístico debe considerarse dentro del ámbito de aplicación siempre que cumpla con > 50% de todas las [normas aplicables](https://stats-devguide.ropensci.org/standards.html).
 Si una consulta previa a la presentación indica que ya se han cumplido las normas, quien ocupa el rol de LE debe:
 
-- Usa `@ropensci-review-bot check srr` para confirmar que se han cumplido las normas.
-- Considera si el paquete está mejor situado en la categoría estadística designada, o si podrían ser adecuadas categorías alternativas o adicionales.
+- Usar `@ropensci-review-bot check srr` para confirmar que se han cumplido las normas.
+- Considerar si el paquete está mejor situado en la categoría estadística designada o si podrían ser adecuadas categorías alternativas o adicionales.
 
-Si aún no se han cumplido las normas, se debe pedir a quién envió el paquete que juzguen si creen que su paquete podrá cumplir al menos la mitad de todas las normas generales y específicas de la categoría.
+Si aún no se han cumplido las normas, pedir a quien envió el paquete que juzgue si cree que su paquete podrá cumplir al menos la mitad de las normas generales y específicas de la categoría.
 Esto puede requerir un debate sobre la categoría o categorías adecuadas.
 Si las autoras no han cumplido las normas pero estan de acuerdo en hacerlo, por lo general debe aplicarse una etiqueta de "holding" hasta que `@ropensci-review-bot check srr` dé el visto bueno (✅).
 Los detalles completos para el tratamiento por parte del rol de LE de los envíos de software estadístico se facilitan en el correspondiente [*Guía de desarrollo de estadísticas* capítulo](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
