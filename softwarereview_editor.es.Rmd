@@ -311,7 +311,7 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
 - Una vez enviada cada revisión,
   - Escribe un comentario de agradecimiento a las personas que revisaron con tus propias palabras.
   - Registra la reseña escribiendo un nuevo comentario `@ropensci-review-bot submit review <review-url> time <time in hours>` como en [este ejemplo](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
-- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la \[plantilla de aprobación de revisión\]{#approval2template}.
+- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la [plantilla de aprobación de revisión]{#approval2template}.
 - Si quién presentó el paquete tiene la intención de presentar un [artículo científico](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) en [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicale que pueden presentarlo una vez finalizada la revisión. 
 
 #### Responder a las preguntas de los revisores {#reviewersupport}
