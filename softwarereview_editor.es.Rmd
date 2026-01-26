@@ -11,7 +11,7 @@ El rol de Líder Editorial (LE) va rotando.
 La información sobre el estado actual del equipo editorial se presenta en nuestro [*Editorial Dashboard*](#eic-dashboard).
 
 Este capítulo presenta las responsabilidades de [quién lidera el equipo editorial](#eicchecklist), y de [cualquiera a cargo de editar un envío](#editorchecklist).
-También describe [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse), y proporciona orientación sobre [cómo responder a las preguntas de quién revisa paquetes](#reviewersupport).
+También describe [cómo responder a un envío fuera del alcance de rOpenSci](#outofscoperesponse) y proporciona orientación sobre [cómo responder a las preguntas de quién revisa paquetes](#reviewersupport).
 
 Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si tienes alguna duda, ponte en contacto con la persona que te invitó a encargarte del proceso de revisión de un paquete.
 
@@ -26,32 +26,32 @@ En caso afirmativo, se asigna alguién del equipo editorial, que tiene la respon
 
 ## Responsabilidades del rol de LE {#eicchecklist}
 
-Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o el tiempo que acuerden todos los miembros del equipo editorial.
-Quien ocupa el rol de LE es responsable de [la dirección general](#eic-general) del proceso de revisión, y de la [fases iniciales](#eic-submission) de todos los envíos.
+Quien ocupa el rol de LE desempeña sus funciones durante 3 meses o durante el tiempo que acuerde el equipo editorial completo.
+Quien ocupa el rol de LE es responsable de [la dirección general](#eic-general) del proceso de revisión y de la [fases iniciales](#eic-submission) de todos los envíos.
 
 ### Funciones generales del rol de LE {#eic-general}
 
-Se encarga de la gestión general de todas las [cuestiones de revisión del software](https://github.com/ropensci/software-review/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen) con la ayuda de nuestro [panel editorial](https://dashboard.ropensci.org) como se describe a continuación [subsección del panelcontrol](#eic-dashboard).
+Se encarga de la gestión general de todos los [_issues_ de revisión del software](https://github.com/ropensci/software-review/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen) con la ayuda de nuestro [panel editorial](https://dashboard.ropensci.org), como se describe a continuación en la [subsección del panel de control](#eic-dashboard).
 Las responsabilidades del rol de LE incluyen las siguientes tareas generales:
 
-- Al comienzo de una rotación, debe revisar el estado de las revisiones abiertas actuales en el [dashboard editorial](https://dashboard.ropensci.org/reviews.html) y enviar recordatorios a editores o autores de paquetess según sea necesario.
+- Al comienzo de una rotación, debe revisar el estado de las revisiones abiertas actuales en el [dashboard editorial](https://dashboard.ropensci.org/reviews.html) y enviar recordatorios a editores/as o autores/as de paquetes según sea necesario.
 
 - Vigila todos los *issues* publicados en el repositorio de revisión del software, para lo cual se suscribe a las notificaciones del repositorio en GitHub, y vigila el canal `#editors-only` en Slack.
 
-- Supervisa regularmente (por ejemplo, semanalmente) el ritmo de todas las revisiones abiertas, echando un vistazo al [dashboard](https://dashboard.ropensci.org/reviews.html) y recordando a otros editores que muevan los paquetes según sea necesario.
+- Supervisa regularmente (por ejemplo, semanalmente) el ritmo de todas las revisiones abiertas, echando un vistazo al [dashboard](https://dashboard.ropensci.org/reviews.html) y recordando a los demás integrantes del equipo editorial que hagan avanzar los paquetes según sea necesario.
 
 ### Tareas del rol de LE para cada envío inicial {#eic-submission}
 
-Quien ocupa el rol de LE es responsable de la tramitación inicial de todos los nuevos envíos.
+Quien ocupa el rol de LE es responsable de tramitar inicialmente todos los nuevos envíos.
 Sus funciones principales son
 
 1. Decidir si un envío debe considerarse o no dentro del alcance de rOpenSci y proceder a su revisión, y en caso afirmativo,
-2. Proceder a un envío completo y asignar alguién del equipo editorial al envío.
+2. Proceder a un envío completo y asignar a alguien del equipo editorial al envío.
 
 #### Decidir el alcance y el solapamiento
 
-Tiene derecho a tomar decisiones de alcance y solapamiento con la mayor independencia posible (pero puede solicitar ayuda/asesoramiento), pero se le recomienda que solicite opiniones en el canal `#editors-only` en Slack.
-Las decisiones sobre el alcance del software estadístico suelen ser más fáciles que las de las propuestas generales (no estadísticas), ya que [se describe a continuación](#eic-stats-submissions).
+Tiene derecho a tomar decisiones de alcance y de solapamiento con la mayor independencia posible (puede solicitar ayuda/asesoramiento), pero se le recomienda que solicite opiniones en el canal `#editors-only` en Slack.
+Las decisiones sobre el alcance del software estadístico suelen ser más sencillas que las relativas a las propuestas generales (no estadísticas), tal y como se describe a continuación (#eic-stats-submissions).
 Para cada nuevoconsultas previas a la presentación o envío, debe:
 
 - Referirse a las categorías descritas en el [*Objetivos y ámbito de aplicación*](#aims-and-scope) para tomar decisiones sobre el alcance y el solapamiento de las consultas previas a la presentación, las remisiones de JOSS u otros socios de publicación, y las presentaciones.
