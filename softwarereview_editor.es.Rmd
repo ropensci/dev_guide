@@ -127,26 +127,26 @@ Si una consulta previa a la presentación indica que ya se han cumplido las norm
 
 Si aún no se han cumplido las normas, pedir a quien envió el paquete que juzgue si cree que su paquete podrá cumplir al menos la mitad de las normas generales y específicas de la categoría.
 Esto puede requerir un debate sobre la categoría o categorías adecuadas.
-Si las autoras no han cumplido las normas pero estan de acuerdo en hacerlo, por lo general debe aplicarse una etiqueta de "holding" hasta que `@ropensci-review-bot check srr` dé el visto bueno (✅).
-Los detalles completos para el tratamiento por parte del rol de LE de los envíos de software estadístico se facilitan en el correspondiente [*Guía de desarrollo de estadísticas* capítulo](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
+Si las personas autoras no han cumplido las normas, pero están de acuerdo en hacerlo, por lo general, debe aplicarse una etiqueta de _"holding"_ hasta que `@ropensci-review-bot check srr` dé el visto bueno (✅).
+Los detalles completos para el tratamiento por parte del rol de LE de los envíos de software estadístico se facilitan en el correspondiente [*capítulo de la Guía de desarrollo de paquetes estadísticos*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
 
 ### El dashboard editorial de rOpenSci {#eic-dashboard}
 
-El [*dashboard editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente extrayendo información de todos los issues de revisión de software en GitHub, junto con información adicional de Slack y de nuestra base de datos Airtable.
-El panel proporciona una visión general actualizada de nuestro equipo editorial, sus responsabilidades recientes y el estado actual de todos los problemas de revisión de software.
-Quien ocupa el rol de LE (o cualquier editor que esté interesado) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en la [página sobre *editores*](https://dashboard.ropensci.org/editors.html).
-Debe utilizarse para encontrar y asignar editores para los nuevos temas de revisión de software.
-En la [página *Revisión de software*](https://dashboard.ropensci.org/reviews.html) se encuentran las entradas coloreadas por una medida de "urgencia", resumida en la sección [tabla al final de esa página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
+El [*dashboard editorial de rOpenSci*](https://dashboard.ropensci.org) se actualiza a diario, principalmente mediante la extracción de información de todos los _issues_ de software en GitHub, junto con información adicional de Slack y de nuestra base de datos en Airtable.
+El panel proporciona una visión general actualizada de nuestro equipo editorial, de sus responsabilidades recientes y del estado actual de todos los _issues_ de revisión de software.
+Quien ocupa el rol de LE (o cualquier persona que esté interesada) puede obtener una visión general del estado del equipo editorial, su disponibilidad y las cargas de trabajo recientes en la [página sobre *equipo editorial*](https://dashboard.ropensci.org/editors.html).
+Debe utilizarse para encontrar y asignar editores/as para los nuevos temas de revisión de software.
+En la [página *Revisión de software*](https://dashboard.ropensci.org/reviews.html) se ofrece una visión general de todas las revisiones de software actuales, con entradas clasificadas por "urgencia", que se resumen en la [tabla al final de dicha página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
 Las tareas para las revisiones en las fases de revisión específicas incluyen:
 
-- Revisar los envíos en `0/editorial-team-prep` y `1\/editorial-team-prep`, para comprobar si hay que tomar alguna medida (como sondear al equipo editorial, tomar decisiones, dejar temas en suspenso, hacer ping para actualizaciones, o buscar y asignar editores).
+- Revisar los envíos en `0/editorial-team-prep` y `1\/editorial-team-prep`, para comprobar si hay que tomar alguna medida (como sondear al equipo editorial, tomar decisiones, dejar _issues_ en espera, hacer ping para actualizaciones, o buscar y asignar personas editoras).
 
 - Revisa los envíos en `2\/seeking-reviewer(s)` para asegurarte de que todo avanza con rapidez.
-  Si la búsqueda de revisores se prolonga durante un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo para reunir contexto y ponte en contacto con la persona encargada en privado para pedirle más información.
+  Si la búsqueda de personas que revisen se prolonga por un tiempo inusualmente largo (en color rojo), comprueba si el envío está en espera, lee el hilo para reunir contexto y ponte en contacto con la persona encargada en privado para pedirle más información.
 
 - Revisa los envíos en `3\/reviewer(s)-assigned`.
-  Si siguen faltando revisiones después de un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo para recopilar el contexto y ponte en contacto con el editor en privado para pedirle más información.
+  Si siguen faltando revisiones después de un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo para recopilar el contexto y ponte en contacto con la persona editora responsable en privado para pedirle más información.
 
 - Revisa los envíos en 4\/review(s)-in-awaiting-changes`.
   Si algunos siguen sin respuesta de las autoras después de un tiempo inusualmente largo (color rojo), comprueba si el envío está en espera, lee el hilo y ponte en contacto con la persona encargada en privado para pedir más información.
