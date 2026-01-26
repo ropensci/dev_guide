@@ -154,7 +154,7 @@ Las tareas para las revisiones en las fases de revisión específicas incluyen:
 ### Invitar a una persona para la tarea de edición  {#guesteditor}
 
 Tras debatirlo con otros integrantes del equipo, quien sea LE puede invitar a una persona externa para que se encargue de un envío.
-Los editores invitados pueden ser deseables o necesarios  si el volumen de envíos es grande, si todos los miembros del equipo de edición tienen un conflicto de intereses, si se necesitan conocimientos específicos, o como prueba antes de enviar una invitación a formar parte del equipo de edición.
+Las invitaciones a colaborar en la edición pueden ser deseables o necesarias si el volumen de envíos es grande, si todo el equipo editorial tiene un conflicto de intereses, si se requieren conocimientos específicos o como prueba antes de enviar una invitación a formar parte del equipo editorial.
 
 Para decidir a quién invitar para un envío:
 
