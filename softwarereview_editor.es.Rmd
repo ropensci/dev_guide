@@ -333,7 +333,7 @@ Otros retos que pueden surgir durante la revisión son
 - **Si quien presentó el paquete deja de responder**, consulta [las políticas](#policies) y/o notifica al resto del equipo editorial en el canal de Slack para discutirlo. 
  Es importante que, si se asignó a una persona para revisar un *issue* que se cerró, te contactes con esa persona al cerrarlo para explicarle la decisión y agradecerle una vez más su trabajo.
   Informa al equipo editorial en el canal de Slack para que, la próxima vez, se le asigne un envío con altas probabilidades de que la revisión se realice sin problemas.
-- **Si alguién se retrasa en la revisión o deja de responder** envía un recordatorio al cabo de 1 semana, y de nuevo al cabo de 2 semanas.
+- **Si alguien se retrasa en la revisión o deja de responder**, envía un recordatorio al cabo de 1 semana y de nuevo al cabo de 2 semanas.
   El primer recordatorio puede ser un `@tag` en GitHub.
   Después utiliza el correo electrónico u otra comunicación directa.
   Si al cabo de 3 semanas sigue sin haber respuesta, determina cuál es la mejor manera de seguir adelante sin estas personas:
