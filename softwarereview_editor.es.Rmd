@@ -341,7 +341,7 @@ Otros retos que pueden surgir durante la revisión son
   - Si la persona revisora ausente no ha enviado su revisión, la persona responsable de la edición debe intentar encontrar a una nueva persona para realizarla y proceder con el proceso de revisión una vez que haya dos revisiones.
     En este punto, se debe dar prioridad a la búsqueda de personas experimentadas que puedan comprometerse con una entrega rápida.
     Asegúrate de hacer ping al equipo editorial en Slack.
-A su discreción, quien edita *puede* actuar como segunda persona revisora, pero solo tras múltiples intentos fallidos de encontrar una nueva revisión y si cuenta con experiencia suficiente.
+A su discreción, quien edita *puede* actuar como segunda persona revisora, pero solo tras múltiples intentos fallidos de encontrar una nueva persona revisora y si cuenta con experiencia suficiente.
       Desaconsejamos hacer esto con cierta frecuencia ya que aumenta la carga de trabajo y reduce la diversidad de puntos de vista aportados a la comunidad por quienes revisan.
     - Haz un comentario agradeciendo a la persona revisora original en cualquier caso y elimínala con `@ropensci-review-bot remove @username from reviewers`.
 
