@@ -337,7 +337,7 @@ Otros retos que pueden surgir durante la revisión son
   El primer recordatorio puede ser un `@tag` en GitHub.
   Después utiliza el correo electrónico u otro tipo de comunicación directa.
   Si al cabo de 3 semanas sigue sin haber respuesta, determina cuál es la mejor manera de seguir adelante sin esa personas:
-  - Si esta persona ya ha enviado su revisión principal, y otro revisor está activo y proporcionando comentarios sustanciales, el o la editora puede seguir adelante con el proceso de revisión, y debe asumir el papel del revisor ausente para determinar si los cambios de los autores son suficientes.
+  - Si una persona ya ha enviado su revisión principal y la otra persona revisora está activa y proporcionando comentarios sustanciales, el/la editor/a puede seguir adelante con el proceso de revisión y debe asumir la tarea de revisión complementaria para determinar si los cambios realizados por los y las autoras son suficientes.
   - Si la persona ausente no ha enviado su revisión, se debe intentar encontrar una nueva persona revisora y proceder con el proceso de revisión una vez que haya dos revisiones.
     En este punto, se debe dar prioridad a la búsqueda de personas experimentadas que puedan comprometerse con una entrega rápida.
     Asegúrate de hacer ping al equipo editorial en Slack.
