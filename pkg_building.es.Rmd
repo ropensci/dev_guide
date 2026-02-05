@@ -110,7 +110,7 @@ Para más información, consulta el artículo del blog [Por qué deberías (o no
 
 - Si tu paquete aún no tiene un archivo CITATION, puedes crear uno con `usethis::use_citation()`y llenarlo con los valores generados por la función `citation()`.
 - CRAN exige que los archivos CITATION se declaren como [items `bibentry`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html) y no en la forma aceptada previamente de [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
-- Si archivas cada versión de tu repositorio de GitHub en Zenodo, añade el [DOI principal de Zenodo](https://help.zenodo.org/#versioning) al archivo CITATION.
+- Si archivas cada versión de tu repositorio de GitHub en Zenodo, añade el [DOI _concept_ de Zenodo](https://zenodo.org/help/versioning) al archivo CITATION.
 - Si un día [**luego de** la revisión en rOpenSci](#authors-guide) publicas un artículo sobre tu paquete, añádelo al archivo CITATION.
 - Menos relacionado con tu paquete en sí mismo, pero con lo que lo soporta: si tu paquete incluye un recurso concreto, como una fuente de datos o, por ejemplo, un algoritmo estadístico, recuérdale a quien lo use cómo citar ese recurso mediante, por ejemplo, `citHeader()`. [Quizás incluso añade la referencia a ese recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
 
