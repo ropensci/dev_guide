@@ -283,7 +283,7 @@ Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado
 Aqui estão os critérios que você deve ter em mente ao escolher alguém para revisar um pacote.
 Talvez você precise reunir essas informações pesquisando no [*r-universe*](https://r-universe.dev), no perfil do GitHub do(a) possível revisor(a) e na presença on-line em geral (site pessoal, redes sociais).
 
-- Revisou um pacote para nós nos últimos 6 meses.
+- Não revisou um pacote para nós nos últimos 6 meses.
 - Tem alguma experiência em desenvolvimento de pacotes.
 - Tem alguma experiência de domínio no campo do pacote ou da fonte de dados.
 - Não tem [conflitos de interesse](#coi).
