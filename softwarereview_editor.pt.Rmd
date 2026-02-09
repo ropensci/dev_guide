@@ -325,7 +325,7 @@ Além desses princípios gerais, essas análises fornecem exemplos úteis:
 - Os [`slopes` pacote](https://github.com/ropensci/software-review/issues/420) que acabou sendo fundamentalmente redesenhado em resposta às avaliações.
   Todas as revisões foram sempre totalmente construtivas, o que parece ter desempenhado um papel importante na motivação dos(as) autores(as) para embarcar em uma revisão tão grande.
   Comentários como, *"este pacote não ..."* ou *"não tem ..."* eram invariavelmente seguidos de sugestões construtivas sobre o que poderia ser feito (há, por exemplo, o [várias em uma das primeiras análises](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
-- Resenhas do livro [pacote tic](https://docs.ropensci.org/tic/) você expressou educadamente suas reservas: <https://github.com/ropensci/software-review/issues/305#issuecomment-504762517> e <https://github.com/ropensci/software-review/issues/305#issuecomment-508271766>
+- As revisões do [pacote tic](https://docs.ropensci.org/tic/) apresentaram algumas ressalvas educadamente: <https://github.com/ropensci/software-review/issues/305#issuecomment-504762517> e <https://github.com/ropensci/software-review/issues/305#issuecomment-508271766>
 - O pacote [bowerbird](https://docs.ropensci.org/bowerbird) recebeu uma ["pré-revisão"](https://github.com/ropensci/software-review/issues/139#issuecomment-322713737) útil, que resultou na divisão do pacote antes das revisões propriamente ditas.
 
 Outros desafios que podem surgir durante a revisão incluem:
