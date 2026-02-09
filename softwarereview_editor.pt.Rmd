@@ -6,12 +6,12 @@ aliases:
 # Guia para a Equipe Editorial {#editorguide}
 
 ```{block, type="summaryblock"}
-A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores.
-A função de Editor-chefe (EiC) é alternada trimestralmente entre os membros experientes do nosso conselho editorial.
-As informações sobre o status atual de todos os membros da equipe editorial são apresentadas em nosso [*Editorial Dashboard*] (#eic-dashboard).
+A revisão por pares de software na rOpenSci é gerenciada por uma equipe editorial.
+A função de Editor(a)-chefe (do inglês EiC) é alternada trimestralmente entre os(as) membros(as) experientes do nosso conselho editorial.
+As informações sobre o status atual de todas as pessoas da equipe editorial estão disponíveis em nosso [*Painel Editorial*] (#eic-dashboard).
 
-Este capítulo apresenta as responsabilidades do [Editor-chefe] (#eicchecklist) e dos [editores responsáveis pelos envios] (#editorchecklist).
-Ele também descreve [como responder a uma submissão fora do escopo] (#outofscoperesponse) e fornece orientação sobre [responder às perguntas dos revisores] (#reviewersupport).
+Este capítulo apresenta as responsabilidades do(a) [Editor(a)-chefe](#eicchecklist) e dos(as) [editores(as) responsáveis pelas submissões](#editorchecklist).
+Ele também descreve [como responder a uma submissão fora do escopo](#outofscoperesponse) e fornece orientação sobre [responder às perguntas dos(as) revisores(as)](#reviewersupport).
 
 Se você for um editor convidado, obrigado por ajudar! Entre em contato com o editor que o convidou para lidar com uma submissão para esclarecer qualquer dúvida que você possa ter.
 
