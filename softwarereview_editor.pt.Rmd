@@ -132,40 +132,40 @@ Os detalhes completos sobre o acompanhamento de submissões de software estatís
 
 ### O Painel Editorial da rOpenSci {#eic-dashboard}
 
-s [*Painel Editorial do rOpenSci*](https://dashboard.ropensci.org) é atualizado diariamente, principalmente pela extração de informações sobre todos os problemas de revisão de software no GitHub, juntamente com informações adicionais do Slack e do nosso banco de dados Airtable.
-O painel fornece uma visão geral atualizada da nossa equipe editorial, suas responsabilidades recentes e o estado atual de todos os problemas de revisão de software.
-O EiC (ou qualquer editor interessado) pode obter uma visão geral do status, da disponibilidade e das cargas de trabalho recentes da equipe editorial em [o *editores* página](https://dashboard.ropensci.org/editors.html).
-Ela deve ser usada para encontrar e designar editores para novas edições de revisão de software.
-Uma visão geral de todas as revisões de software atuais está em [o *Análise de software* página](https://dashboard.ropensci.org/reviews.html) A página de revisão de software, com entradas coloridas por uma medida de "urgência", resumida no [tabela na parte inferior da página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
+O [*Painel Editorial da rOpenSci*](https://dashboard.ropensci.org) é atualizado diariamente, principalmente pela extração de informações sobre todas as *issues* de revisão de software no GitHub, juntamente com informações adicionais do Slack e do nosso banco de dados no Airtable.
+O painel fornece uma visão geral atualizada da nossa equipe editorial, suas responsabilidades recentes e o estado atual de todas as *issues* de revisão de software.
+Quem ocupa o papel de EiC (ou qualquer pessoa interessada) pode obter uma visão geral do status, da disponibilidade e das cargas de trabalho recentes da equipe editorial na [página sobre a *equipe editorial*](https://dashboard.ropensci.org/editors.html).
+Ela deve ser usada para encontrar e designar editores(as) para novas edições de revisão de software.
+Uma visão geral de todas as revisões de software atuais está disponível na [página de *Revisão de Software*](https://dashboard.ropensci.org/reviews.html), com linhas coloridas por "urgência", resumida na [tabela na parte inferior da página](https://dashboard.ropensci.org/reviews.html#urgency-of-reviews).
 
 As tarefas para revisões nos estágios específicos de revisão incluem:
 
-- Examine os envios em `0\/presubmission` e `1\/editorial-team-prep` para verificar se alguma ação precisa ser tomada (como sondar editores, tomar decisões, colocar edições em espera, fazer ping para atualizações ou encontrar e designar editores).
+- Revise os envios em `0\/presubmission` e `1\/editorial-team-prep` para verificar se alguma ação precisa ser tomada (como sondar a equipe editorial, tomar decisões, colocar edições em espera, mencionar pessoas para solicitar atualizações ou encontrar e designar pessoas editoras).
 
-- Examine os envios em `2\/seeking-reviewer(s)` para garantir que as coisas estejam progredindo rapidamente.
-  Se a busca de avaliadores estiver demorando muito (cor vermelha), verifique se o envio está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para solicitar mais informações.
+- Revise os envios em `2\/seeking-reviewer(s)` para garantir que as coisas estejam progredindo rapidamente.
+  Se a busca de revisores(as) estiver demorando muito (cor vermelha), verifique se o envio está em espera, leia a conversa da *issue* para obter o contexto e entre em contato com a pessoa editora responsável no privado para pedir mais informações.
 
-- Examine os envios em `3\/reviewer(s)-assigned`.
-  Se ainda faltarem avaliações depois de um tempo muito longo (cor vermelha), verifique se o envio está em espera, leia o tópico para obter o contexto e entre em contato com o editor em particular para pedir mais informações.
+- Revise os envios em `3\/reviewer(s)-assigned`.
+  Se ainda faltarem avaliações depois de um tempo muito longo (cor vermelha), verifique se o envio está em espera, leia a conversa da *issue* para obter o contexto e entre em contato com a pessoa editora responsável no privado para pedir mais informações.
 
-- Examine os envios em `4\/review(s)-in-awaiting-changes`.
-  Se alguns ainda não tiverem uma resposta do autor depois de um tempo excepcionalmente longo (cor vermelha), verifique se o envio está em espera, leia o tópico e entre em contato com o editor em particular para pedir mais informações.
+- Revise os envios em `4\/review(s)-in-awaiting-changes`.
+  Se alguns ainda não tiverem uma resposta do(a) autor(a) depois de um tempo excepcionalmente longo (cor vermelha), verifique se o envio está em espera, leia a conversa da *issue* e entre em contato com a pessoa editora responsável no privado para pedir mais informações.
 
-### Convidando um editor convidado {#guesteditor}
+### Convidando uma pessoa para a tarefa de edição {#guesteditor}
 
-Depois de discutir com outros editores, o EiC pode convidar um editor convidado para cuidar de um envio.
-Os editores convidados podem ser desejados ou necessários se houver necessidade de especialização em um domínio específico, se o volume atual de envios for grande, se os possíveis editores tiverem conflitos de interesse ou como um teste antes de convidar uma pessoa para fazer parte do conselho editorial.
+Depois de discutir com a equipe editorial, o(a) EiC pode convidar uma pessoa externa para acompanhar uma submissão.
+Pode ser desejado ou necessário convidar pessoas para a tarefa de edição se houver necessidade de especialização em um domínio específico, se o volume atual de envios for grande, se potenciais editores(as) tiverem conflitos de interesse ou como um teste antes de convidar uma pessoa para fazer parte da equipe editorial.
 
-Para decidir sobre um editor convidado para um envio:
+Para decidir sobre convidar alguém para a tarefa de edição de uma submissão:
 
 - Crie um canal privado do Slack chamado #guest-editor-<nome do pacote>.
-- Convide editores para isso.
-- Examine os canais arquivados semelhantes do Slack para obter possíveis recomendações.
-- Depois que uma decisão for tomada e um editor convidado aceitar, arquive o canal.
+- Convide a equipe editorial para este canal.
+- Busque os canais arquivados semelhantes do Slack para obter possíveis recomendações.
+- Depois que uma decisão for tomada e a pessoa convidada tenha aceitado, arquive o canal.
 
-Quando você convidar um editor convidado,
+Quando você convidar uma pessoa externa para a edição,
 
-- Pergunte sobre conflitos de interesse usando [a mesma formulação usada para os revisores](#coi).
+- Pergunte sobre conflitos de interesse usando [o mesmo texto usado para revisores(as)](#coi).
 - Forneça o link para o [guia para editores](#editorchecklist).
 
 Se um editor convidado aceitar o convite (eba!),
