@@ -287,7 +287,7 @@ Talvez você precise reunir essas informações pesquisando no [*r-universe*](ht
 - Tem alguma experiência em desenvolvimento de pacotes.
 - Tem alguma experiência de domínio no campo do pacote ou da fonte de dados.
 - Não tem [conflitos de interesse](#coi).
-- Tente equilibrar sua percepção da experiência do possível revisor com a complexidade do pacote.
+- Tente equilibrar sua percepção da experiência do(a) possível revisor(a) com a complexidade do pacote.
 - Diversidade - com duas pessoas revisoras, ambas não devem ser homens brancos cis.
 - Alguma evidência de que a pessoa tenha interesse em práticas abertas ou em atividades da comunidade de R, embora o contato direto via e-mail seja válido.
 
