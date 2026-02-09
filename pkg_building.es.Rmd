@@ -235,7 +235,7 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 
 - La(s) viñeta(s) debe(n) incluir citas a software y de artículos cuando corresponda.
 
-- Si tu paquete proporciona acceso a una fuente de datos, requerimos que la DESCRIPCIÓN contenga (1) nna breve identificación y/o descripción de la organización responsable de generar datos; y (2) un URL con la página pública que proporciona, describe o permite el acceso a los datos (que a menudo puede diferir de la URL que conduce directamente a la fuente de datos).
+- Si tu paquete proporciona acceso a una fuente de datos, requerimos que la DESCRIPCIÓN contenga (1) una breve identificación y/o descripción de la organización responsable de generar datos; y (2) un URL con la página pública que proporciona, describe o permite el acceso a los datos (que a menudo puede diferir de la URL que conduce directamente a la fuente de datos).
 
 - Utiliza mensajes de inicio en el paquete sólo cuando sea necesario (cuando algunas funciones son enmascaradas, por ejemplo).
   Evita los mensajes de inicio del paquete tales como "Esto es paquete 2.4-0" o la guía de cómo citarlo porque pueden ser molestos quien lo usa.
