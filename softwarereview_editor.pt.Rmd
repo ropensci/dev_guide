@@ -343,7 +343,7 @@ Outros desafios que podem surgir durante a revisão incluem:
     Não se esqueça de enviar mensagens para outros editores no Slack.
     - A seu critério, o editor *pode* optar por atuar ele mesmo como segundo revisor, mas só deve fazê-lo após várias tentativas fracassadas de encontrar um novo revisor e se o editor tiver experiência suficiente para fazê-lo.
       Não recomendamos que os editores façam isso com frequência, pois isso aumenta a carga de trabalho e reduz a diversidade de pontos de vista trazidos à comunidade pelos revisores.
-    - Em qualquer caso, faça um comentário agradecendo ao revisor original e remova-o com `@ropensci-review-bot remove @username from reviewers`.
+    - Em qualquer caso, escreva um comentário agradecendo a pessoa revisora original e a remova com o comando `@ropensci-review-bot remove @username from reviewers`.
 
 ### Após a revisão {#after-review}
 
