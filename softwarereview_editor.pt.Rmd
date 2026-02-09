@@ -50,29 +50,29 @@ Suas principais funções são:
 
 #### Decidir sobre o escopo e a sobreposição
 
-A EiC tem o direito de tomar decisões sobre o escopo e a sobreposição da forma mais independente possível, mas recomenda-se que solicite opiniões sobre `#editors-only` no Slack.
-As decisões de escopo para software estatístico geralmente são mais fáceis do que para envios gerais (não estatísticos), pois [descrito abaixo](#eic-stats-submissions).
-Para cada nova pré-submissão ou submissão, a EiC deve:
+A pessoa que exerce o papel de EiC tem o direito de tomar decisões sobre o escopo e a sobreposição da forma mais independente possível, mas é recomendado solicitar opiniões no canal `#editors-only` no Slack.
+As decisões de escopo para software estatístico geralmente são mais fáceis do que para submissões gerais (não estatísticas), como [descrito abaixo](#eic-stats-submissions).
+Para cada nova pré-submissão ou submissão, a pessoa que exerce o papel de EiC deve:
 
-- Consulte as categorias descritas na seção [*Objetivos e escopo*](#aims-and-scope) seção para tomar decisões sobre o escopo e a sobreposição para consultas pré-submissão, indicações do JOSS ou de outros parceiros de publicação e envios.
-  - Inicie discussões no Slack do rOpenSci `#editors-only` por meio do resumo do software (pré-)enviado, juntamente com quaisquer preocupações que o EiC possa ter.
-  - Se o EiC achar que não recebeu respostas suficientes após um ou dois dias, ele poderá enviar um ping para todos os editores.
-  - A EiC deve buscar outras opiniões sobre envios que estejam além de suas próprias áreas de especialização.
-  - O software estatístico deve ser considerado dentro do escopo, desde que cumpra pelo menos metade de todos os requisitos de segurança do software. [normas aplicáveis (gerais e pelo menos uma categoria)](https://stats-devguide.ropensci.org/standards.html).
+- Consultar as categorias descritas na seção [*Objetivos e escopo*](#aims-and-scope) para tomar decisões sobre o escopo e a sobreposição para consultas de pré-submissão, indicações do JOSS ou de outros parceiros de publicação e submissões.
+  - Inicie discussões no canal `#editors-only` do Slack da rOpenSci, escrevendo um resumo do software (pré-)submetido, juntamente com quaisquer preocupações que possa ter.
+  - Se achar que não recebeu respostas suficientes após um ou dois dias, pode enviar uma mensagem no Slack mencionando toda a equipe editorial.
+  - Deve buscar outras opiniões sobre as submissões que estejam além de suas próprias áreas de especialização.
+  - O software estatístico deve ser considerado dentro do escopo, desde que cumpra pelo menos metade de todas as [normas aplicáveis (gerais e pelo menos uma categoria)](https://stats-devguide.ropensci.org/standards.html).
 
-- Se uma pré-submissão ou submissão for considerada fora do escopo, o EiC deverá agradecer aos autores pela submissão, explicar os motivos da decisão e direcioná-los a outros locais de publicação, se for o caso.
+- Se uma pré-submissão ou submissão for considerada fora do escopo, a pessoa que exerce o papel de EiC deverá agradecer as pessoas que submeteram o pacote, explicar os motivos da decisão e direcionar a outros locais de publicação, se for o caso.
   Quando for relevante, use o texto de [*Objetivos e escopo*](#aims-and-scope) com relação à evolução do escopo ao longo do tempo.
   
-  - [Exemplos de envios e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
+  - [Exemplos de submissões e respostas fora do escopo](https://github.com/ropensci/software-review/issues?q=is%3Aissue+is%3Aclosed+label%3Aout-of-scope).
   
-  - Depois de explicar uma decisão fora do escopo, escreva um comentário sobre o problema `@ropensci-review-bot out-of-scope`.
+  - Depois de explicar uma decisão fora do escopo, comente na *issue*: `@ropensci-review-bot out-of-scope`.
 
-- Se uma consulta pré-submissão for considerada dentro do escopo, a EiC *pode* realizar verificações preliminares.
-  Os [*Modelo de editores*](#editortemplate) pode ser usado para isso.
-  Para auxiliar as respostas dos autores aos comentários editoriais, é útil usar uma notação inequívoca para cada comentário, como:
+- Se uma consulta de pré-submissão for considerada dentro do escopo, a pessoa que exerce o papel de EiC *pode* realizar verificações preliminares.
+  O [*modelo de editores*](#editortemplate) pode ser usado para isso.
+  Para auxiliar as respostas dos(as) autores(as) aos comentários editoriais, é útil usar uma notação inequívoca para cada comentário, como:
   
   ```
-  My comments are tagged with "EIC" and a numbered sequence. Please refer to this notation in your responses."
+  Meus comentários estão etiquetados com "EIC" e uma sequência numérica. Por favor, use esta notação em suas respostas."
   
   **EIC01** Please improve README
   ```
