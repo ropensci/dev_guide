@@ -18,6 +18,7 @@ Si estás en el rol de edición de forma invitada, ¡gracias por tu ayuda! Si ti
 **La comunidad de rOpenSci es lo más importante. 
 Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y con el objetivo de mejorar la calidad del software. 
 ¡Sé amable! y comportate con respeto.
+Consulta nuestra guía para quienes realizan una revisión y el [código de conducta] (https://ropensci.org/code-of-conduct/) para más información.**
 ```
 
 Este capítulo está estructurado para reflejar la progresión típica de una revisión de software de rOpenSci.

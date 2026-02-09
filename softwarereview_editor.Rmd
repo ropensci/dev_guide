@@ -17,7 +17,8 @@ If you're a guest editor, thanks for helping! Please contact the editor who invi
 
 **rOpenSci's community is our best asset.
 We aim for reviews to be open, non-adversarial, and focused on improving software quality.
-Be respectful and kind!**
+Be respectful and kind!
+See our reviewers' guide and [code of conduct](https://ropensci.org/code-of-conduct/) for more.**
 ```
 
 This chapter is structured to reflect the typical progression of an rOpenSci software review.
