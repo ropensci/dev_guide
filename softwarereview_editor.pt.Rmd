@@ -332,7 +332,7 @@ Outros desafios que podem surgir durante a revisão incluem:
 
 - **Se o autor parar de responder** consulte [as políticas](#policies) e/ou envie um ping para os outros editores no canal do Slack para discussão.
   É importante ressaltar que, se um revisor foi atribuído a um problema fechado, entre em contato com ele ao fechar o problema para explicar a decisão e agradecê-lo mais uma vez pelo trabalho.
-  Informe os outros editores no canal Slack para que eles sejam considerados revisores de um pacote no futuro com grandes chances de uma revisão de software tranquila.
+  Informe a equipe editorial no canal Slack para que eles(as) sejam considerados revisores(as) de um pacote no futuro, com grandes chances de uma revisão de software tranquila.
 - **Se um(a) revisor(a) estiver em atraso com a revisão ou parar de responder**, envie um lembrete após uma semana e novamente após duas semanas.
   O primeiro lembrete pode ser uma menção (`@tag`) no GitHub.
   Depois disso, use o e-mail ou outra forma de comunicação direta.
