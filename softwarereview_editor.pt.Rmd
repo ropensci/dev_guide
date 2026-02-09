@@ -119,16 +119,16 @@ Você poderia adicionar ao README uma comparação mais detalhada em relação a
 
 #### Submissões de software estatístico {#eic-stats-submissions}
 
-O software estatístico deve ser considerado no escopo, desde que esteja em conformidade com > 50% de todos os [normas aplicáveis](https://stats-devguide.ropensci.org/standards.html).
-Se uma consulta pré-submissão indicar que os padrões já foram cumpridos, a EiC deverá:
+O software estatístico deve ser considerado no escopo, desde que esteja em conformidade com > 50% de todas as [normas aplicáveis](https://stats-devguide.ropensci.org/standards.html).
+Se uma consulta pré-submissão indicar que os padrões já foram cumpridos, a pessoa que ocupa o papel de EiC deverá:
 
-- Chamada `@ropensci-review-bot check srr` para confirmar que os padrões foram cumpridos.
+- Use `@ropensci-review-bot check srr` para confirmar que as normas foram cumpridas.
 - Considere se o pacote é melhor colocado na categoria estatística indicada ou se categorias alternativas ou adicionais podem ser apropriadas.
 
-Se os padrões ainda não tiverem sido cumpridos, a EiC deve pedir aos autores que avaliem se eles acham que seu pacote será capaz de cumprir pelo menos metade de todos os padrões gerais e específicos da categoria.
+Se as normas ainda não tiverem sido cumpridas, a pessoa que ocupa o papel de EiC deve pedir para os(as) autores(as) que avaliem se acham que o pacote será capaz de cumprir pelo menos metade de todos os normas gerais e específicas da categoria.
 Isso pode exigir uma discussão sobre a categoria ou categorias apropriadas.
-Se o autor não tiver cumprido os padrões, mas concordar em fazê-lo, geralmente deverá ser aplicado um rótulo "Holding" até que `@ropensci-review-bot check srr` você dê uma aprovação (✅).
-Os detalhes completos sobre o tratamento de envios de software estatístico pelo EiC são fornecidos na seção correspondente [*Guia de desenvolvimento de estatísticas* capítulo](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
+Se o(a) autor(a) não tiver cumprido as normas, mas concordar em fazê-lo, geralmente deverá ser aplicado uma etiqueta de "Holding" na *issue*, até que o `@ropensci-review-bot check srr` dê uma aprovação (✅).
+Os detalhes completos sobre o acompanhamento de submissões de software estatístico pelo(a) EiC são fornecidos no capítulo correspondente do [*Guia de desenvolvimento de pacotes estatísticos*](https://stats-devguide.ropensci.org/pkgsubmission.html#editor-in-chief).
 
 ### O Painel Editorial da rOpenSci {#eic-dashboard}
 
