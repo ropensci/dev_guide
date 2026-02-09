@@ -362,6 +362,6 @@ Para autores de pacotes que desejam manter seus repositórios em suas organizaç
 - Pedir aos autores do pacote que substituam o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci no GitHub](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 
-#### Promoção de pacotes {#package-promotion}
+#### Divulgação de pacotes {#package-promotion}
 
 - Direcione o(a) autor(a) para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [como melhorar a performance no GitHub](#grooming).
