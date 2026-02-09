@@ -319,7 +319,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 Tanto os autores quanto os revisores podem solicitar feedback sobre aspectos de um processo de revisão, incluindo, por exemplo, o tom ou a substância das revisões ou das respostas dos autores.
 Embora este guia se esforce para fornecer orientação suficiente para a maioria dos casos, outros editores estão sempre à disposição para esclarecer dúvidas.
 Se você observar algo que possa ser editado de forma produtiva neste guia ou que possa ser adicionado a ele *Guia de desenvolvimento* você poderá abrir um problema ou uma solicitação pull.
-Além desses princípios gerais, essas análises fornecem exemplos úteis:
+Além desses princípios gerais, essas revisões fornecem exemplos úteis:
 
 - Um exemplo difícil, mas construtivo, que sugere uma reescrita da *vignette*: [ropensci/software-review#191 (comentário)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
 - O [pacote `slopes`](https://github.com/ropensci/software-review/issues/420), que acabou sendo fundamentalmente redesenhado em resposta às revisões.
