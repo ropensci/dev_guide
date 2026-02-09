@@ -338,7 +338,7 @@ Outros desafios que podem surgir durante a revisão incluem:
   Depois disso, use e-mail ou outra forma de comunicação direta.
   Se após três semanas ainda não houver resposta, determine a melhor maneira de seguir em frente sem essas pessoas:
   - Se o revisor já tiver enviado sua revisão primária e outro revisor estiver ativo e fornecendo feedback substancial, o editor poderá prosseguir com o processo de revisão e deverá assumir o papel do revisor ausente para determinar se as alterações dos autores são suficientes.
-  - Se o revisor ausente não tiver enviado sua revisão, o editor deverá tentar encontrar um novo revisor e prosseguir com o processo de revisão quando houver duas revisões.
+  - Se o(a) revisor(a) ausente não tiver enviado sua revisão, o(a) editor(a) deverá tentar encontrar uma nova pessoa para fazer a revisão e prosseguir com o processo quando houver duas revisões.
     Nesse ponto, o(a) editor(a) deve priorizar a busca de revisores(as) experientes que possam se comprometer com uma resposta rápida.
     Não se esqueça de enviar mensagens para a equipe editorial no Slack.
     - A seu critério, o(a) editor(a) *pode* optar por realizar a segunda revisão, mas só deve fazê-lo após várias tentativas fracassadas de encontrar um(a) novo(a) revisor(a) e se o(a) editor(a) tiver experiência suficiente para fazê-lo.
