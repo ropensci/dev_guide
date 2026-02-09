@@ -321,7 +321,7 @@ Embora este guia se esforce para fornecer orientação suficiente para a maioria
 Se você observar algo que possa ser editado de forma produtiva neste guia ou que possa ser adicionado a ele *Guia de desenvolvimento* você poderá abrir um problema ou uma solicitação pull.
 Além desses princípios gerais, essas análises fornecem exemplos úteis:
 
-- Um exemplo difícil, mas construtivo, que sugere uma reescrita da vinheta: [ropensci/software-review#191 (comentário)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
+- Um exemplo difícil, mas construtivo, que sugere uma reescrita da *vignette*: [ropensci/software-review#191 (comentário)](https://github.com/ropensci/software-review/issues/191#issuecomment-368254623).
 - O [pacote `slopes`](https://github.com/ropensci/software-review/issues/420), que acabou sendo fundamentalmente redesenhado em resposta às revisões.
   Todas as revisões foram sempre totalmente construtivas, o que parece ter desempenhado um papel importante na motivação dos(as) autores(as) para embarcar em uma revisão tão grande.
   Comentários como, *"este pacote não ..."* ou *"não tem ..."* eram invariavelmente seguidos de sugestões construtivas sobre o que poderia ser feito (há, por exemplo, [várias sugestões em uma das primeiras revisões](https://github.com/ropensci/software-review/issues/420#issuecomment-858231647)).
