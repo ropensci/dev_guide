@@ -292,11 +292,11 @@ Talvez você precise reunir essas informações pesquisando no [*r-universe*](ht
 - Alguma evidência de que a pessoa tenha interesse em práticas abertas ou em atividades da comunidade de R, embora o contato direto via e-mail seja válido.
 
 Cada submissão deve ser analisada por *duas* pessoas revisoras de pacotes.
-Embora seja bom que um deles tenha menos experiência em desenvolvimento de pacotes e mais conhecimento do domínio, a revisão não deve ser dividida em dois.
-Ambos os revisores precisam revisar o pacote de forma abrangente, embora sob suas perspectivas específicas.
-Em geral, pelo menos um revisor deve ter experiência prévia em revisão e, é claro, convidar um novo revisor amplia nosso grupo de revisores.
+Embora seja bom que um(a) deles tenha menos experiência em desenvolvimento de pacotes e mais conhecimento do domínio, a revisão não deve ser dividida em dois.
+Ambos(as) os(as) revisores(as) precisam revisar o pacote de forma abrangente, embora sob suas perspectivas específicas.
+Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão e, é claro, convidar uma nova pessoa amplia nosso grupo de revisores(as).
 
-#### Atribuir revisores {#assign-reviewers}
+#### Atribuir revisores(as) {#assign-reviewers}
 
 - Atribua a cada revisor `@ropensci-review-bot assign @username as reviewer`.
   Um comando deve ser emitido para cada revisor.
