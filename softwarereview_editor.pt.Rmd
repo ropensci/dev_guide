@@ -336,7 +336,7 @@ Outros desafios que podem surgir durante a revisão incluem:
 - **Se um revisor estiver atrasado na revisão ou parar de responder** envie um lembrete após uma semana e novamente após duas semanas.
   O primeiro lembrete pode ser uma menção (`@tag`) no GitHub.
   Depois disso, use e-mail ou outra forma de comunicação direta.
-  Se após três semanas ainda não houver resposta, determine a melhor maneira de seguir em frente sem eles:
+  Se após três semanas ainda não houver resposta, determine a melhor maneira de seguir em frente sem essas pessoas:
   - Se o revisor já tiver enviado sua revisão primária e outro revisor estiver ativo e fornecendo feedback substancial, o editor poderá prosseguir com o processo de revisão e deverá assumir o papel do revisor ausente para determinar se as alterações dos autores são suficientes.
   - Se o revisor ausente não tiver enviado sua revisão, o editor deverá tentar encontrar um novo revisor e prosseguir com o processo de revisão quando houver duas revisões.
     Nesse ponto, o editor deve priorizar a busca de revisores experientes que possam se comprometer com uma resposta rápida.
