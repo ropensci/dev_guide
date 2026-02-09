@@ -74,29 +74,29 @@ Para cada nova pré-submissão ou submissão, a pessoa que exerce o papel de EiC
   ```
   Meus comentários estão etiquetados com "EIC" e uma sequência numérica. Por favor, use esta notação em suas respostas."
   
-  **EIC01** Please improve README
+  **EIC01** Por favor, melhore o README
   ```
   
   Também pode ser útil distinguir requisitos de recomendações, por exemplo, formatando os requisitos como caixas de seleção (`- [ ] **EIC01**`).
-  É claro que você pode usar os prefixos que quiser, inclusive suas próprias iniciais, como em [este exemplo de um de nossos editores, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
+  É claro que você pode usar os prefixos que quiser, inclusive suas próprias iniciais, como [neste exemplo de um de nossos editores, Mauro Lepore](https://github.com/ropensci/software-review/issues/673#issuecomment-2559753922).
 
-As decisões sobre o escopo podem exigir informações adicionais dos autores que enviam os artigos.
-A EiC deve garantir, no mínimo, que a documentação seja suficiente para julgar o escopo, incluindo um site que a acompanhe.
+As decisões sobre o escopo podem exigir informações adicionais de quem submeteu o pacote.
+A pessoa que ocupa o papel de EiC deve garantir, no mínimo, que a documentação seja suficiente para julgar o escopo, incluindo um site que a acompanhe.
 Se não for o caso, solicite mais detalhes; mesmo que um pacote seja considerado fora do escopo, solicitar melhorias na documentação do pacote só ajudará outras pessoas a entenderem o pacote.
 Este é um exemplo de solicitação:
 
 ```markdown
-Hello <username> and many thanks for your submission.
+Olá <username>, agradecemos muito por sua submissão.
 
-We are discussing whether the package is in scope and need a bit more information.
+Estamos discutindo se o pacote está dentro do escopo e precisamos de um pouco mais de informações.
 
-Would you mind adding more details and context to the README?
-After reading it someone with little domain knowledge should have been informed about the aim, goals and functionality of the package.
+Você poderia adicionar mais detalhes e contexto ao README?
+Após a leitura do README, alguém com pouco conhecimento específico sobre o tema deve ser capaz de compreender o propósito, os objetivos e a funcionalidade do pacote.
 
-<optional>
-If a package has overlapping functionality with other packages, we require it to demonstrate in the documentation [how it is unique in comparison to similar packages](https://devguide.ropensci.org/policies.html#overlap).
-Could you add a more detailed comparison to the packages you mention in the README so we can evaluate?
-</optional>
+<opcional>
+Se um pacote possui funcionalidades que se sobrepõem às de outros pacotes, solicitamos que seja demonstrado na documentação [como ele se diferencia em comparação a pacotes semelhantes](https://devguide.ropensci.org/policies.html#overlap).
+Você poderia adicionar ao README uma comparação mais detalhada em relação aos pacotes mencionados, para que possamos avaliar?
+</opcional>
 ```
 
 #### Deveres iniciais de EiC para envios completos
