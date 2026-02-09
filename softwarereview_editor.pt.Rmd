@@ -15,19 +15,19 @@ Ele também descreve [como responder a uma submissão fora do escopo](#outofscop
 
 Se você for um editor convidado, obrigado por ajudar! Entre em contato com o editor que o convidou para lidar com uma submissão para esclarecer qualquer dúvida que você possa ter.
 
-A comunidade do **rOpenSci é o nosso melhor patrimônio.
-Nosso objetivo é que as revisões sejam abertas, não contraditórias e focadas na melhoria da qualidade do software.
-Seja respeitoso e gentil com você!
+**A comunidade da rOpenSci é o nosso melhor patrimônio.
+Nosso objetivo é que as revisões sejam abertas, não conflituosas e focadas na melhoria da qualidade do software.
+Seja respeitoso(a) e gentil!**
 ```
 
-Este capítulo está estruturado para refletir a progressão típica de uma análise de software do rOpenSci.
-Todos os envios são inicialmente considerados pelo Editor-chefe, que toma a decisão inicial sobre se um pacote está no escopo.
-Em caso afirmativo, é designado um editor responsável por orientar o processo de revisão propriamente dito.
+Este capítulo está estruturado para refletir a progressão típica de uma revisão de software na rOpenSci.
+Todas as submissões são inicialmente consideradas pelo(a) Editor(a)-chefe, que toma a decisão inicial sobre a adequação do pacote ao escopo.
+Em caso positivo, é designado um(a) editor(a) responsável por guiar o processo de revisão propriamente dito.
 
-## Responsabilidades do EiC {#eicchecklist}
+## Responsabilidades do papel de Editoria-Chefe (EiC) {#eicchecklist}
 
-Os Editores-chefes rotativos (EiCs) geralmente servem por 3 meses ou por um período acordado por todos os membros do conselho editorial.
-O EiC é responsável por [gerenciamento geral](#eic-general) do processo de revisão e pela [estágios iniciais](#eic-submission) de todos os envios.
+As pessoas que exercem o papel de Editoria-Chefe rotativo (EiCs) geralmente servem por 3 meses ou por um período acordado por toda a equipe do conselho editorial.
+Quem ocupa o papel de EiC é responsável pelo [gerenciamento geral](#eic-general) do processo de revisão e pelos [estágios iniciais](#eic-submission) de todas as submissões.
 
 ### Deveres gerais da EiC {#eic-general}
 
