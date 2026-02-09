@@ -209,7 +209,7 @@ A cada persona del equipo editorial no se les debe asignar más de un _issue_ po
   - Si quién envió el paquete ha identificado que ha "incorporado la documentación de las normas ... a través del [srr](https://docs.ropensci.org/srr) entonces llama a `@ropensci-review-bot check srr` para confirmar que se han cumplido al menos el 50% de todas las normas.
 - Comprueba que la plantilla de _issues_ se ha rellenado correctamente. Los descuidos y omisiones más comunes deberían ser detectados y anotados por el robot, pero una comprobación manual siempre ayuda.
   Las personas editoras pueden editar las plantillas directamente para realizar correcciones menores, o bien indicar a los autores y autoras que rellenen los campos obligatorios de la plantilla que puedan faltar.
-- El sistema de comprobación se reconstruye cada martes a las 00:01 UTC, y puede tardar un par de horas.
+- El sistema de comprobación se reconstruye cada martes a las 00:01 UTC (una accion de GitHub que se ejecuta semanalmente los martes a la madrugada), y puede tardar un par de horas.
   Si las comprobaciones automáticas fallan a esa hora, espera unas horas y vuelve a intentarlo.
 
 Las comprobaciones automáticas también incluyen un *Propiedades estadísticas* con un desplegable con información detallada.
