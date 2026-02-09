@@ -334,7 +334,7 @@ Outros desafios que podem surgir durante a revisão incluem:
   É importante ressaltar que, se um revisor foi atribuído a um problema fechado, entre em contato com ele ao fechar o problema para explicar a decisão e agradecê-lo mais uma vez pelo trabalho.
   Informe os outros editores no canal Slack para que eles sejam considerados revisores de um pacote no futuro com grandes chances de uma revisão de software tranquila.
 - **Se um revisor estiver atrasado na revisão ou parar de responder** envie um lembrete após uma semana e novamente após duas semanas.
-  O primeiro lembrete pode ser um `@tag` no GitHub.
+  O primeiro lembrete pode ser uma menção (`@tag`) no GitHub.
   Depois disso, use e-mail ou outra forma de comunicação direta.
   Se após três semanas ainda não houver resposta, determine a melhor maneira de seguir em frente sem eles:
   - Se o revisor já tiver enviado sua revisão primária e outro revisor estiver ativo e fornecendo feedback substancial, o editor poderá prosseguir com o processo de revisão e deverá assumir o papel do revisor ausente para determinar se as alterações dos autores são suficientes.
