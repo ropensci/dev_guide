@@ -252,21 +252,21 @@ Use todas essas informações para avaliar se:
 - Use o [modelo de e-mail](#reviewrequesttemplate), se necessário, para convidar pessoas para a revisão
   - Ao convidar revisores(as), inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá revisar", para dar um prazo claro para que você procure outra pessoa.
   - Você pode enviar vários convites ao mesmo tempo, especialmente porque isso geralmente ajuda a encontrar revisores(as) mais rapidamente.
-    Você sempre pode responder dizendo que um revisor já foi encontrado e agradecer às pessoas por se oferecerem.
+    Você sempre pode responder dizendo que uma pessoa já foi encontrada para fazer a revisão, e agradecer às pessoas por se oferecerem.
 
-As fontes de informação para encontrar revisores incluem:
+As fontes de informação para encontrar revisores(as) incluem:
 
-- Sugestões possíveis feitas pelo(s) remetente(s), (embora os remetentes possam ter uma visão restrita dos tipos de especialização necessários.  Sugerimos que você não use mais de um dos revisores sugeridos);
-- Nosso banco de dados Airtable de revisores e voluntários (consulte a próxima subseção);
-- Autores de livros semelhantes [pacotes rOpenSci](https://ropensci.org/packages/).
+- Sugestões possíveis feitas por quem submeteu o pacote, (embora possam ter uma visão restrita dos tipos de conhecimentos necessários; sugerimos que você não use mais que um dos nomes indicados);
+- Nosso banco de dados Airtable de revisores(as) e voluntários(as) (consulte a próxima subseção);
+- Autores de [pacotes rOpenSci](https://ropensci.org/packages/) semelhantes.
 
 Quando essas fontes de informação não forem suficientes,
 
-- peça ideias a outros editores no Slack.
-- Procure usuários do pacote ou da fonte de dados/serviço de upstream ao qual o pacote se conecta (por meio da abertura de problemas no repositório, marcando-o como estrela, citando-o em artigos, falando sobre ele nas mídias sociais).
-- Você também pode procurar autores de pacotes relacionados em [r-universe.dev](https://r-universe.dev/).
-- R-Ladies tem um [diretório](https://rladies.org/directory/) especificando as habilidades e os interesses das pessoas listadas.
-- Você pode publicar uma solicitação de revisores nos canais #general e/ou #software-review no Slack da rOpenSci ou nas mídias sociais.
+- peça ideias para a equipe editorial no Slack.
+- Busque pessoas que usam o pacote ou o serviço/fonte de dados ao qual o pacote se conecta (verificando quem abriu *issues* no repositório, marcou o repositório com estrela, citou em artigos ou mencionou o pacote nas redes sociais).
+- Você também pode procurar autores(as) de pacotes relacionados em [r-universe.dev](https://r-universe.dev/).
+- A R-Ladies tem um [diretório](https://rladies.org/directory/) especificando as habilidades e os interesses das pessoas listadas.
+- Você pode publicar uma busca por revisores(as) nos canais #general e/ou #software-review no Slack da rOpenSci ou nas redes sociais.
 
 ##### Dicas para a pesquisa de revisores(as) no Airtable {#tips-for-reviewer-search-in-airtable}
 
@@ -278,7 +278,7 @@ Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer p
 Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
 Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado para fornecer orientações adicionais.
 
-##### Critérios para escolher um revisor {#criteria-for-choosing-a-reviewer}
+##### Critérios para escolher um(a) revisor(a) {#criteria-for-choosing-a-reviewer}
 
 Aqui estão os critérios que você deve ter em mente ao escolher alguém para revisar um pacote.
 Talvez você precise reunir essas informações pesquisando no [*r-universe*](https://r-universe.dev), no perfil do GitHub do(a) possível revisor(a) e na presença on-line em geral (site pessoal, redes sociais).
@@ -288,10 +288,10 @@ Talvez você precise reunir essas informações pesquisando no [*r-universe*](ht
 - Tem alguma experiência de domínio no campo do pacote ou da fonte de dados.
 - Não tem [conflitos de interesse](#coi).
 - Tente equilibrar sua percepção da experiência do possível revisor com a complexidade do pacote.
-- Diversidade - com dois revisores, ambos não devem ser homens brancos cis.
-- Há evidências de que o possível revisor esteja aberto a opiniões e interessado em atividades da comunidade de R, embora não tenha problema em enviar e-mails frios.
+- Diversidade - com duas pessoas revisoras, ambas não devem ser homens brancos cis.
+- Alguma evidência de que a pessoa tenha interesse em práticas abertas ou em atividades da comunidade de R, embora o contato direto via e-mail seja válido.
 
-Cada envio deve ser analisado por *dois* revisores de pacotes.
+Cada submissão deve ser analisada por *duas* pessoas revisoras de pacotes.
 Embora seja bom que um deles tenha menos experiência em desenvolvimento de pacotes e mais conhecimento do domínio, a revisão não deve ser dividida em dois.
 Ambos os revisores precisam revisar o pacote de forma abrangente, embora sob suas perspectivas específicas.
 Em geral, pelo menos um revisor deve ter experiência prévia em revisão e, é claro, convidar um novo revisor amplia nosso grupo de revisores.
