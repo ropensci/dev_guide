@@ -3,7 +3,7 @@ aliases:
    - editorguide.html
 ---
 
-# Guia para Editores {#editorguide}
+# Guia para a Equipe Editorial {#editorguide}
 
 ```{block, type="summaryblock"}
 A revisão por pares de software na rOpenSci é gerenciada por uma equipe de editores.
