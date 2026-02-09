@@ -178,42 +178,42 @@ Se a pessoa aceitar o convite (eba!),
 
 Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fechada),
 
-- Agradeça novamente ao editor convidado.
-- Remova-o da equipe `ropensci/editors` (mas não da organização rOpenSci).
+- Agradeça novamente à pessoa convidada,
+- Remova-o da equipe `ropensci/editors` no GitHub (mas não da organização ropensci).
 
-## Responsabilidades gerais dos editores {#editors-responsibilities}
+## Responsabilidades gerais dos(as) editores {#editors-responsibilities}
 
-- Além de lidar com os envios, conforme descrito na seção a seguir, os editores opinam sobre as decisões editoriais do grupo, como, por exemplo, se os envios estão dentro do escopo, e orientam as atualizações de nossas políticas.
-  Geralmente, fazemos isso por meio do Slack, que esperamos que os editores possam verificar regularmente.
+- Além de lidar com as submissões, conforme descrito na seção a seguir, os(as) editores opinam sobre as decisões editoriais do grupo, como, por exemplo, se as submissões estão dentro do escopo, e orientam as atualizações de nossas políticas.
+  Geralmente, fazemos isso por meio do Slack, que esperamos que os(as) editores possam verificar regularmente.
 
-- Você só precisa acompanhar seus próprios envios, mas se notar um problema com um pacote que está sendo tratado por outro editor, sinta-se à vontade para levantar esse problema diretamente com o outro editor ou publicar a preocupação no canal somente para editores no Slack.
-  Os exemplos podem incluir:
+- Você só precisa acompanhar suas próprias submissões, mas se notar um problema com um pacote que está sendo acompanhado por outra pessoa, sinta-se à vontade para levantar esse problema diretamente com a pessoa responsável pela edição, ou escrever uma mensagem com a preocupação no canal exclusivo para a equipe editorial no Slack (`editors-only`).
+  Por exemplo:
 
-  - Você sabe de um pacote sobreposto que ainda não foi mencionado no processo.
+  - Você sabe de um pacote que gere uma sobreposição, e que ainda não foi mencionado no processo.
   - Você vê uma pergunta para a qual tem uma resposta especializada que não foi dada depois de alguns dias (como um link para uma publicação de blog que pode responder a uma pergunta).
 
-  ## Lidar com as responsabilidades dos editores {#editorchecklist}
+  ## Responsabilidades de edição de um pacote {#editorchecklist}
 
-  Os editores de manuseio são responsáveis por orientar cada envio designado durante todo o processo, desde o envio inicial até a aceitação final.
-Os editores não devem ser designados para mais de uma edição por trimestre, ou no máximo quatro por ano.
+  As pessoas designadas como editoras de um pacote (*handling editors*) são responsáveis por orientar cada submissão designada durante todo o processo, desde o envio inicial até o aceite final.
+Cada pessoa da equipe editorial não deve ser designada para mais de uma edição por trimestre, ou no máximo quatro por ano.
 
-### Após o envio {#upon-submission}
+### Após a submissão {#upon-submission}
 
-#### Verificações automáticas
+#### Checagens automáticas
 
-- O envio gerará automaticamente a saída de verificação de pacote do ropensci-review-bot.
-  Todas as falhas de verificação (❌) devem ser corrigidas antes de prosseguir, embora exceções possam ser justificadas a critério do editor responsável.
-  Incentive os próprios autores a acionar as verificações chamando `@ropensci-review-bot check package` para confirmar que todas as verificações foram aprovadas (✅).
-  - Examine todos os itens marcados com 👀 e solicite mais informações ou ações do autor, quando apropriado.
-- Para envios estatísticos (identificáveis como "Submission Type: Stats" no modelo da edição), adicione o rótulo "stats" à edição (se ainda não tiver sido adicionado).
-  - Se o autor tiver identificado que "incorporou a documentação de padrões... por meio do [srr](https://docs.ropensci.org/srr) ", então chame `@ropensci-review-bot check srr` para confirmar que pelo menos 50% de todos os padrões foram cumpridos.
-- Verifique se o modelo de problema foi preenchido corretamente. Os erros e omissões mais comuns devem ser detectados e anotados pelo bot, mas uma verificação manual sempre ajuda.
-  Os editores podem editar os modelos diretamente para pequenas correções ou podem orientar os autores a preencher os campos obrigatórios do modelo que possam estar faltando.
-- O sistema de verificação é reconstruído toda terça-feira, às 00:01 UTC, e pode levar algumas horas.
-  Se as verificações automáticas falharem nesse horário, aguarde algumas horas e tente novamente.
+- A submissão gerará automaticamente o resultado da checagem de pacotes do robô de revisão da rOpenSci (`ropensci-review-bot`).
+  Todas as falhas de checagem (❌) devem ser corrigidas antes de prosseguir, embora exceções possam ser justificadas a critério da pessoa responsável pela edição.
+  Incentive a pessoa que submeteu o pacote a acionar as checagens chamando `@ropensci-review-bot check package` para confirmar que todas as verificações foram aprovadas (✅).
+  - Examine todos os itens marcados com 👀 e solicite mais informações ou ações da pessoa que submeteu o pacote, quando apropriado.
+- Para submissões estatísticas (identificáveis como "Submission Type: Stats" no modelo da edição), adicione a etiqueta "stats" à *issue* de edição (se ainda não tiver sido adicionada).
+  - Se a pessoa que submeteu o pacote apontar que "incorporou a documentação de normas... por meio do pacote [srr](https://docs.ropensci.org/srr)", então chame `@ropensci-review-bot check srr` para confirmar que pelo menos 50% de todas as normas foram cumpridas.
+- Verifique se o modelo de *issue* foi preenchido corretamente. Os erros e omissões mais comuns devem ser detectados e anotados pelo robô, mas uma verificação manual sempre ajuda.
+  As pessoas editoras podem editar os modelos diretamente para fazer pequenas correções ou podem orientar os(as) autores(as) a preencher os campos obrigatórios do modelo que possam estar faltando.
+- O sistema de checagem passa por um rebuild toda terça-feira, às 00:01 UTC, e pode levar algumas horas.
+  Se as checagens automáticas falharem nesse horário, aguarde algumas horas e tente novamente.
 
-As verificações automatizadas também incluem um *Propriedades estatísticas* com um desdobramento que fornece detalhes.
-A seção de desdobramento sinaliza quaisquer propriedades "dignas de nota", definidas como aspectos situados no quinto percentil superior ou inferior em comparação com os valores de todos os pacotes atuais do CRAN.
+As chegagens automáticas também incluem uma seção expansível de *Propriedades estatísticas* que fornece detalhes.
+A seção expansível sinaliza quaisquer propriedades "notáveis", definidas como aspectos que se encontram no quinto percentil superior ou inferior em comparação com os valores de todos os pacotes atuais do CRAN.
 Preste atenção especial a:
 
 - Valores extremamente grandes ou pequenos para linhas de código ("loc").
