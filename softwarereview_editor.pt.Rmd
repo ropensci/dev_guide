@@ -270,7 +270,7 @@ Quando essas fontes de informação não forem suficientes,
 
 ##### Dicas para a pesquisa de revisores(as) no Airtable {#tips-for-reviewer-search-in-airtable}
 
-Você pode usar filtros, classificações e pesquisas para identificar revisores com experiência específica:
+Você pode usar filtros, classificações e pesquisas para identificar revisores(as) com experiência específica:
 
 ![Captura de tela da interface em inglês de filtros do Airtable com um filtro de experiência de domínio que deve incluir química e áreas técnicas que devem incluir integração contínua](images/airtable.png)
 
