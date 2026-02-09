@@ -192,9 +192,9 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
   - Você sabe de um pacote que gere uma sobreposição, e que ainda não foi mencionado no processo.
   - Você vê uma pergunta para a qual tem uma resposta especializada que não foi dada depois de alguns dias (como um link para uma publicação de blog que pode responder a uma pergunta).
 
-  ## Responsabilidades de edição de um pacote {#editorchecklist}
+## Responsabilidades de edição de um pacote {#editorchecklist}
 
-  As pessoas designadas como editoras de um pacote (*handling editors*) são responsáveis por orientar cada submissão designada durante todo o processo, desde o envio inicial até o aceite final.
+As pessoas designadas como editoras de um pacote (*handling editors*) são responsáveis por orientar cada submissão designada durante todo o processo, desde o envio inicial até o aceite final.
 Cada pessoa da equipe editorial não deve ser designada para mais de uma edição por trimestre, ou no máximo quatro por ano.
 
 ### Após a submissão {#upon-submission}
@@ -204,7 +204,7 @@ Cada pessoa da equipe editorial não deve ser designada para mais de uma ediçã
 - A submissão gerará automaticamente o resultado da checagem de pacotes do robô de revisão da rOpenSci (`ropensci-review-bot`).
   Todas as falhas de checagem (❌) devem ser corrigidas antes de prosseguir, embora exceções possam ser justificadas a critério da pessoa responsável pela edição.
   Incentive a pessoa que submeteu o pacote a acionar as checagens chamando `@ropensci-review-bot check package` para confirmar que todas as verificações foram aprovadas (✅).
-  - Examine todos os itens marcados com 👀 e solicite mais informações ou ações da pessoa que submeteu o pacote, quando apropriado.
+- Examine todos os itens marcados com 👀 e solicite mais informações ou ações da pessoa que submeteu o pacote, quando apropriado.
 - Para submissões estatísticas (identificáveis como "Submission Type: Stats" no modelo da edição), adicione a etiqueta "stats" à *issue* de edição (se ainda não tiver sido adicionada).
   - Se a pessoa que submeteu o pacote apontar que "incorporou a documentação de normas... por meio do pacote [srr](https://docs.ropensci.org/srr)", então chame `@ropensci-review-bot check srr` para confirmar que pelo menos 50% de todas as normas foram cumpridas.
 - Verifique se o modelo de *issue* foi preenchido corretamente. Os erros e omissões mais comuns devem ser detectados e anotados pelo robô, mas uma verificação manual sempre ajuda.
@@ -231,7 +231,7 @@ Use todas essas informações para avaliar se:
 
 - Depois que as checagens automáticas forem postadas, use o [modelo de edição](#editortemplate) para orientar as verificações iniciais (se ainda não estiverem cobertas pelo(a) EiC) e registre sua resposta na *issue* de submissão.
   Você também pode simplificar as verificações de editor(a) usando o [pacote `pkgreviewr`, criado pela ex-editora Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
-    Por favor, tente concluir as verificações e começar a buscar revisores(as) dentro de 5 dias úteis.
+  Por favor, tente concluir as verificações e começar a buscar revisores(as) dentro de 5 dias úteis.
 - Verifique as políticas em busca de possíveis [ajustes](#aims-and-scope) e [sobreposições](#overlap). 
   Se necessário, inicie uma discussão por meio do canal #software-review do Slack para casos extremos que não tenham sido detectados por verificações anteriores do EiC. 
   Se houver rejeições, consulte [esta seção](#outofscoperesponse) sobre como responder.
@@ -314,7 +314,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 - Quando as alterações forem feitas, altere a etiqueta de status da revisão para `5/awaiting-reviewer-response` e solicite que os(as) revisores(as) indiquem a aprovação usando o [modelo de aprovação de revisão](#approval2template).
 - Se as pessoas autoras tiverem a intenção de enviar um manuscrito de acompanhamento do tipo [*Applications*](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) no periódico [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indique que o envio do manuscrito pode ser feito após a conclusão da revisão. 
 
-## Respondendo às perguntas dos(as) revisores(as) {#reviewersupport}
+#### Respondendo às perguntas dos(as) revisores(as) {#reviewersupport}
 
 Tanto os(as) autores(as) quanto os(as) revisores(as) podem solicitar feedback sobre aspectos de um processo de revisão, incluindo, por exemplo, o tom ou a substância das revisões ou das respostas dos(as) autores(as).
 Embora este guia se esforce para fornecer orientação suficiente para a maioria dos casos, outras pessoas da equipe editorial estão sempre à disposição para esclarecer dúvidas.
@@ -360,7 +360,6 @@ Para autores(as) de pacotes que desejam manter seus repositórios em suas organi
 - Pedir aos autores de pacotes que façam um pull request para o [arquivo JSON](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) que lista todos os repositórios que não foram transferidos. [Exemplo de commit](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
 
 - Pedir aos autores do pacote que substituam o conteúdo do código de conduta atual do repositório pelo conteúdo do [código de conduta padrão da organização rOpenSci no GitHub](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
-
 
 #### Divulgação de pacotes {#package-promotion}
 
