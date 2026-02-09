@@ -99,25 +99,25 @@ Você poderia adicionar ao README uma comparação mais detalhada em relação a
 </opcional>
 ```
 
-#### Deveres iniciais de EiC para envios completos
+#### Deveres iniciais de EiC para submissões completas
 
-- Quando a EiC estiver convencida de que um pacote pode prosseguir para uma submissão completa, convide os autores a abrir um problema de submissão completa e, em seguida, encerre a consulta de pré-submissão.
+- Quando a pessoa que ocupa o papel de EiC estiver convencida de que um pacote pode prosseguir para uma submissão completa, convide as pessoas que submeteram o pacote a abrir uma *issue* de submissão completa e, em seguida, feche a *issue* de consulta de pré-submissão.
 
 - Inicialmente, marque cada novo envio completo com ` 0/editorial-team-prep`
 
-- Encontre um editor de manuseio (possivelmente incluindo você mesmo).
-  Os editores atualmente disponíveis estão indicados na seção [*Painel de controle editorial*](https://dashboard.ropensci.org) As cargas de trabalho editoriais devem ser distribuídas da maneira mais uniforme possível, consultando o [*Painel de controle* gráficos de cargas editoriais recentes](https://dashboard.ropensci.org/editors.html#past-ed-load).
-  O CEC também pode recrutar um editor convidado para lidar com qualquer submissão, conforme descrito na seção [subseção abaixo](#guesteditor).
+- Encontre alguém da equipe editorial para que fique responsável pelo envio (incluindo você, potencialmente).
+  As pessoas da equipe editorial atualmente disponíveis estão indicadas no [*Painel editorial*](https://dashboard.ropensci.org) As cargas de trabalho editoriais devem ser distribuídas da maneira mais uniforme possível, consultando os [gráficos de cargas editoriais recentes no *Painel editorial* ](https://dashboard.ropensci.org/editors.html#past-ed-load).
+  A pessoa que ocupa o papel de EiC também pode recrutar alguém como editora convidada para acompanhar alguma submissão, conforme descrito na [subseção abaixo](#guesteditor).
 
-- Atribua o editor de tratamento ao problema de revisão, emitindo o comando:
+- Atribua uma pessoa para realizar a edição, escrevendo um comentário na *issue* de revisão:
   
   ```
   @ropensci-review-bot assign @username as editor
   ```
   
-  Isso também adicionará a tag `1/editor-checks` ao problema.
+  Isso também adicionará na *issue* a etiqueta `1/editor-checks`.
 
-#### Envios de software estatístico {#eic-stats-submissions}
+#### Submissões de software estatístico {#eic-stats-submissions}
 
 O software estatístico deve ser considerado no escopo, desde que esteja em conformidade com > 50% de todos os [normas aplicáveis](https://stats-devguide.ropensci.org/standards.html).
 Se uma consulta pré-submissão indicar que os padrões já foram cumpridos, a EiC deverá:
