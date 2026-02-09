@@ -212,7 +212,7 @@ A cada persona del equipo editorial no se les debe asignar más de un _issue_ po
 - El sistema de comprobación se reconstruye cada martes a las 00:01 UTC (una accion de GitHub que se ejecuta semanalmente los martes a la madrugada), y puede tardar un par de horas.
   Si las comprobaciones automáticas fallan a esa hora, espera unas horas y vuelve a intentarlo.
 
-Las comprobaciones automáticas también incluyen un *Propiedades estadísticas* con un desplegable con información detallada.
+Las comprobaciones automáticas también incluyen un *Statistical properties* (*Propiedades estadísticas*) con un desplegable con información detallada.
 La sección desplegable señala todas las propiedades "notables", definidas como aspectos que se encuentran en el percentil quinto superior o inferior en comparación con los valores de todos los paquetes CRAN actuales.
 Presta especial atención a:
 
