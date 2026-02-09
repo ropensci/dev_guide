@@ -347,7 +347,7 @@ Outros desafios que podem surgir durante a revisão incluem:
 
 ### Após a revisão {#after-review}
 
-- Aprovar o pacote com `@ropensci-review-bot approve <package-name>`
+- Aprove o pacote com `@ropensci-review-bot approve <package-name>`
 - Consulte a [seção a seguir]{#non-transferred-packages} para saber como permitir que os(as) autores(as) mantenham o pacote em sua própria organização do GitHub se preferirem não transferir para a rOpenSci.
 - Indique o pacote para que seja apresentado em uma publicação ou nota técnica do blog da rOpenSci, se você achar que ele pode ser de grande interesse.
   Anote na *issue* de revisão do software uma ou duas coisas que o(a) autor(a) poderia destacar e marque `@ropensci/blog-editors` para acompanhamento.
