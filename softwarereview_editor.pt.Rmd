@@ -280,7 +280,7 @@ Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado
 
 ##### Critérios para escolher um revisor {#criteria-for-choosing-a-reviewer}
 
-Aqui estão os critérios que você deve ter em mente ao escolher um revisor.
+Aqui estão os critérios que você deve ter em mente ao escolher alguém para revisar um pacote.
 Talvez você precise reunir essas informações pesquisando [r-universo](https://r-universe.dev) e na página do GitHub do possível revisor e na presença on-line em geral (site pessoal, mídia social).
 
 - Revisou um pacote para nós nos últimos 6 meses.
