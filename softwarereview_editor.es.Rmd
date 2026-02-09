@@ -237,11 +237,11 @@ Utiliza toda esta información para juzgar si:
   Si se rechaza, consulta [esta sección](#outofscoperesponse) sobre cómo responder.
 - Asegúrate de que el paquete se prueba en varias plataformas (haciendo que el paquete se construya en varios sistemas operativos a través de GitHub Actions, por ejemplo; véase [criterios en esta sección del capítulo CI](#whichci) para más detalles y opciones).
 - Siempre que sea posible, cuando pidas cambios, sugiere herramientas automáticas como [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/), [Jarl](https://jarl.etiennebacher.com/), [flirtea](https://flir.etiennebacher.com/), y recursos en línea (secciones de esta guía, secciones del [Libro *R Packages*](https://r-pkgs.org/)) para facilitar tu devolución.
- [Ejemplo de comprobaciones de una editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+  [Ejemplo de comprobaciones de una editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
-- Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión. 
-Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess). 
-Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+- Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión.
+  Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
+  Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
 - Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack.
 
 ### Busca y asigna dos personas para revisar el paquete {#look-for-and-assign-two-reviewers}
@@ -300,7 +300,7 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
 
 - Para asignar a alguien para la revisión, usa `@ropensci-review-bot assign @username as reviewer`.
   Debe emitirse una orden para cada persona revisora.
-Si es necesario sacar a alguien de la revisión, usa `@ropensci-review-bot remove @username from reviewers`.
+  Si es necesario sacar a alguien de la revisión, usa `@ropensci-review-bot remove @username from reviewers`.
 - Las fechas de vencimiento de las revisiones se fijan por defecto en [21 días](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 semanas) después de la fecha de asignación.
 - Si quieres cambiar la fecha de vencimiento de una revisión utiliza `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
 
@@ -331,7 +331,7 @@ Aparte de estos principios generales, estas revisiones proporcionan ejemplos út
 Otros retos que pueden surgir durante la revisión son
 
 - **Si quien presentó el paquete deja de responder**, consulta [las políticas](#policies) y/o notifica al resto del equipo editorial en el canal de Slack para discutirlo. 
- Es importante que, si se asignó a una persona para revisar un *issue* que se cerró, te contactes con esa persona al cerrarlo para explicarle la decisión y agradecerle una vez más su trabajo.
+  Es importante que, si se asignó a una persona para revisar un *issue* que se cerró, te contactes con esa persona al cerrarlo para explicarle la decisión y agradecerle una vez más su trabajo.
   Informa al equipo editorial en el canal de Slack para que, la próxima vez, se le asigne un envío con altas probabilidades de que la revisión se realice sin problemas.
 - **Si alguien se retrasa en la revisión o deja de responder**, envía un recordatorio al cabo de 1 semana y de nuevo al cabo de 2 semanas.
   El primer recordatorio puede ser un `@tag` en GitHub.
@@ -341,7 +341,7 @@ Otros retos que pueden surgir durante la revisión son
   - Si la persona revisora ausente no ha enviado su revisión, la persona responsable de la edición debe intentar encontrar a una nueva persona para realizarla y proceder con el proceso de revisión una vez que haya dos revisiones.
     En este punto, se debe dar prioridad a la búsqueda de personas experimentadas que puedan comprometerse con una entrega rápida.
     Asegúrate de hacer ping al equipo editorial en Slack.
-A su discreción, quien edita *puede* actuar como segunda persona revisora, pero solo tras múltiples intentos fallidos de encontrar una nueva persona revisora y si cuenta con experiencia suficiente.
+    - A su discreción, quien edita *puede* actuar como segunda persona revisora, pero solo tras múltiples intentos fallidos de encontrar una nueva persona revisora y si cuenta con experiencia suficiente.
       Desaconsejamos hacer esto con cierta frecuencia ya que aumenta la carga de trabajo y reduce la diversidad de puntos de vista aportados a la comunidad por quienes revisan.
     - Haz un comentario agradeciendo a la persona revisora original en cualquier caso y elimínala con `@ropensci-review-bot remove @username from reviewers`.
 
@@ -350,7 +350,7 @@ A su discreción, quien edita *puede* actuar como segunda persona revisora, pero
 - Aprueba el paquete con `@ropensci-review-bot approve <package-name>`
 - Consulta la [sección siguiente]{#non-transferred-packages} para saber cómo permitir que autores y autoras mantengan el paquete en su propia organización de GitHub si prefieren no transferirlo a rOpenSci.
 - Nomina el paquete para que aparezca en un artículo del blog de rOpenSci o en una nota técnica si crees que puede ser de gran interés.
- Por favor, anota en el *issue* de revisión una o dos cosas destacables y etiqueta a `@ropensci/blog-editors` para su seguimiento.
+  Por favor, anota en el *issue* de revisión una o dos cosas destacables y etiqueta a `@ropensci/blog-editors` para su seguimiento.
 - Si el paquete tiene un libro asociado (aunque sólo sea parcialmente), ponte en contacto con [alguien del equipo de rOpenSci](https://ropensci.org/about/#team) para que se ponga en contacto con quienes lo mantienen y hable sobre su transferencia a [la página `ropensci-books` de la organización de GitHub](https://github.com/orgs/ropensci-books).
 
 #### Paquetes que permanecen en las organizaciones originales de GitHub {#non-transferred-packages}
