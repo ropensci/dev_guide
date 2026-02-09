@@ -314,7 +314,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 - Quando as alterações forem feitas, altere a _tag_ de status da revisão para `5/awaiting-reviewer-response` e solicite que os revisores indiquem a aprovação usando o [modelo de aprovação do revisor](#approval2template).
 - Se as pessoas autoras tiverem a intenção de enviar um manuscrito de acompanhamento do tipo [*Applications*](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) no periódico [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indique que o envio do manuscrito pode ser feito após a conclusão da revisão. 
 
-## Respondendo às perguntas dos revisores {#reviewersupport}
+## Respondendo às perguntas dos(as) revisores(as) {#reviewersupport}
 
 Tanto os autores quanto os revisores podem solicitar feedback sobre aspectos de um processo de revisão, incluindo, por exemplo, o tom ou a substância das revisões ou das respostas dos autores.
 Embora este guia se esforce para fornecer orientação suficiente para a maioria dos casos, outros editores estão sempre à disposição para esclarecer dúvidas.
