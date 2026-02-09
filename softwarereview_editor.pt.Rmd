@@ -309,7 +309,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 - Consulte ocasionalmente com as pessoas revisoras e autoras do pacote. Ofereça esclarecimentos e ajuda conforme necessário.
 - Em geral, tente estabelecer um prazo de 3 semanas para a revisão, 2 semanas para os ajustes solicitados, e 1 semana para que os(as) revisores(as) aprovem as mudanças.
 - Após o envio de cada revisão,
-  - Escreva um comentário agradecendo ao avaliador com suas próprias palavras.
+  - Escreva um comentário agradecendo o(a) revisor(a), com suas próprias palavras.
   - Registre a avaliação digitando um novo comentário `@ropensci-review-bot submit review <review-url> time <time in hours>` como em [este exemplo](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
 - Quando as alterações forem feitas, altere a _tag_ de status da revisão para `5/awaiting-reviewer-response` e solicite que os revisores indiquem a aprovação usando o [modelo de aprovação do revisor](#approval2template).
 - Se as pessoas autoras tiverem a intenção de enviar um manuscrito de acompanhamento do tipo [*Applications*](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) no periódico [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indique que o envio do manuscrito pode ser feito após a conclusão da revisão. 
