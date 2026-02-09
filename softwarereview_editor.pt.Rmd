@@ -268,7 +268,7 @@ Quando essas fontes de informação não forem suficientes,
 - R-Ladies tem um [diretório](https://rladies.org/directory/) especificando as habilidades e os interesses das pessoas listadas.
 - Você pode publicar uma solicitação de revisores nos canais #general e/ou #software-review no Slack da rOpenSci ou nas mídias sociais.
 
-##### Dicas para a pesquisa de revisores no Airtable {#tips-for-reviewer-search-in-airtable}
+##### Dicas para a pesquisa de revisores(as) no Airtable {#tips-for-reviewer-search-in-airtable}
 
 Você pode usar filtros, classificações e pesquisas para identificar revisores com experiência específica:
 
