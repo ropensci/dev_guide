@@ -307,7 +307,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 ### Durante a revisão {#during-review}
 
 - Consulte ocasionalmente com as pessoas revisoras e autoras do pacote. Ofereça esclarecimentos e ajuda conforme necessário.
-- Em geral, você deve esperar 3 semanas para a revisão, 2 semanas para as alterações subsequentes e 1 semana para a aprovação das alterações pelo revisor.
+- Em geral, tente estabelecer um prazo de 3 semanas para a revisão, 2 semanas para os ajustes solicitados, e 1 semana para que os(as) revisores(as) aprovem as mudanças.
 - Após o envio de cada revisão,
   - Escreva um comentário agradecendo ao avaliador com suas próprias palavras.
   - Registre a avaliação digitando um novo comentário `@ropensci-review-bot submit review <review-url> time <time in hours>` como em [este exemplo](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
