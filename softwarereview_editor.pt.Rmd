@@ -221,37 +221,37 @@ Preste atenção especial a:
 
 O relatório automatizado também incluirá um link para uma página de *visualização de rede interativa de chamadas entre objetos no pacote*.
 Essa visualização pode fornecer informações úteis sobre como as funções em um pacote são estruturadas.
-Use todas essas informações para avaliar se você:
+Use todas essas informações para avaliar se:
 
 - Um pacote tem muito poucas funções ou linhas de código e, nesse caso, pode não estar suficientemente desenvolvido para a revisão por pares.
-- Um pacote é extremamente grande e, nesse caso, pode ser muito pesado para os revisores.
-  Por exemplo, [essas verificações iniciais](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revelaram um pacote com mais de 8.500 linhas de código R (correspondendo a 97,6% de todos os pacotes) e 251 funções R exportadas.
+- Um pacote é extremamente grande e, nesse caso, pode acabar sobrecarregando os(as) revisores.
+  Por exemplo, [essa checagem inicial](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revelou um pacote com mais de 8.500 linhas de código R (correspondendo a 97,6% de todos os pacotes) e 251 funções em R exportadas.
 
 #### Comentários editoriais iniciais
 
-- Depois que as verificações automáticas forem lançadas, use a opção [modelo de editor](#editortemplate) para orientar as verificações iniciais (se ainda não estiverem cobertas pela EiC) e registre sua resposta ao envio.
-  Você também pode simplificar as verificações do editor usando o [`pkgreviewr` pacote criado pela ex-editora Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
-    Esforce-se para concluir as verificações e começar a procurar revisores dentro de 5 dias úteis.
+- Depois que as checagens automáticas forem postadas, use o [modelo de edição](#editortemplate) para orientar as verificações iniciais (se ainda não estiverem cobertas pelo(a) EiC) e registre sua resposta na *issue* de submissão.
+  Você também pode simplificar as verificações de editor(a) usando o [pacote `pkgreviewr`, criado pela ex-editora Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
+    Por favor, tente concluir as verificações e começar a buscar revisores(as) dentro de 5 dias úteis.
 - Verifique as políticas em busca de possíveis [ajustes](#aims-and-scope) e [sobreposições](#overlap). 
   Se necessário, inicie uma discussão por meio do canal #software-review do Slack para casos extremos que não tenham sido detectados por verificações anteriores do EiC. 
   Se houver rejeições, consulte [esta seção](#outofscoperesponse) sobre como responder.
-- Para pacotes que precisam de integração contínua em várias plataformas (cf [critérios nesta seção do capítulo sobre CI](#whichci)), certifique-se de que o pacote seja testado em várias plataformas (tendo o pacote criado em vários sistemas operacionais por meio do GitHub Actions, por exemplo).
-- Sempre que possível, ao solicitar alterações, direcione os autores para ferramentas automáticas, como [usethis](https://usethis.r-lib.org/), [Ar](https://posit-dev.github.io/air/), [Jarl](https://jarl.etiennebacher.com/), [paquera](https://flir.etiennebacher.com/) e para recursos on-line (seções deste guia, seções do [livro de pacotes do R](https://r-pkgs.org/)) para facilitar o uso de seus comentários.
-  Você pode ver isso [exemplo de verificações do editor](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
+- Para pacotes que precisam de integração contínua em várias plataformas (veja os [critérios nesta seção do capítulo sobre CI](#whichci)), certifique-se de que o pacote seja testado em várias plataformas (tendo o pacote criado em vários sistemas operacionais por meio do GitHub Actions, por exemplo).
+- Sempre que possível, ao solicitar alterações, sugira ferramentas automáticas, como [usethis](https://usethis.r-lib.org/), [Air](https://posit-dev.github.io/air/), [Jarl](https://jarl.etiennebacher.com/), [flir](https://flir.etiennebacher.com/), e para recursos on-line (como seções deste guia, seções do [livro *R Packages*](https://r-pkgs.org/)) para facilitar o uso do seu feedback.
+  Veja este [exemplo de verificações de uma editora](https://github.com/ropensci/software-review/issues/207#issuecomment-379909739).
 - O ideal é que você faça observações e estas sejam resolvidas antes que revisores comecem a revisar.
 - Se as verificações iniciais mostrarem grandes lacunas, solicite alterações antes de designar revisores.
-  Se o autor mencionar que as alterações podem levar tempo, [aplique o rótulo de retenção chamando `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  Você receberá um lembrete na edição a cada 90 dias para verificar com o(s) autor(es) do pacote.
-- Se o pacote levantar um novo problema para a política da rOpenSci, inicie uma conversa no Slack.
+  Se o(a) autor(a) mencionar que as alterações podem levar tempo, [aplique a etiqueta de espera escrevendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
+  Você receberá um lembrete a cada 90 dias na *issue* de edição para verificar com os(as) autores(as) do pacote.
+- Se o pacote levantar uma nova questão em relação às políticas da rOpenSci, inicie uma conversa no Slack.
 
-### Procure e designe dois revisores {#look-for-and-assign-two-reviewers}
+### Busque e atribua duas pessoas para revisar o pacote {#look-for-and-assign-two-reviewers}
 
-#### Encontrar revisores {#finding-reviewers}
+#### Encontrar revisores(as) {#finding-reviewers}
 
-- Comente com `@ropensci-review-bot seeking reviewers`.
-- Use o [modelo de e-mail](#reviewrequesttemplate) se necessário, para convidar os revisores
-  - Ao convidar revisores, inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá revisar", para dar um prazo claro para que você procure outra pessoa.
-  - Você pode enviar vários convites ao mesmo tempo, especialmente porque isso geralmente ajuda a encontrar revisores mais rapidamente.
+- Escreva na *issue* `@ropensci-review-bot seeking reviewers`.
+- Use o [modelo de e-mail](#reviewrequesttemplate), se necessário, para convidar pessoas para a revisão
+  - Ao convidar revisores(as), inclua algo como "se eu não tiver notícias suas em uma semana, presumirei que você não poderá revisar", para dar um prazo claro para que você procure outra pessoa.
+  - Você pode enviar vários convites ao mesmo tempo, especialmente porque isso geralmente ajuda a encontrar revisores(as) mais rapidamente.
     Você sempre pode responder dizendo que um revisor já foi encontrado e agradecer às pessoas por se oferecerem.
 
 As fontes de informação para encontrar revisores incluem:
