@@ -349,7 +349,7 @@ Outros desafios que podem surgir durante a revisão incluem:
 
 - Aprovar o pacote com `@ropensci-review-bot approve <package-name>`
 - Consulte a [seção a seguir]{#non-transferred-packages} para saber como permitir que os autores mantenham o pacote em sua própria organização do GitHub se preferirem não transferir para o rOpenSci.
-- Indique um pacote para ser apresentado em uma publicação de blog ou nota técnica do rOpenSci se você achar que ele pode ser de grande interesse.
+- Indique o pacote para que seja apresentado em uma publicação ou nota técnica do blog da rOpenSci, se você achar que ele pode ser de grande interesse.
   Anote na *issue* de revisão do software uma ou duas coisas que o(a) autor(a) poderia destacar e marque `@ropensci/blog-editors` para acompanhamento.
 - Se os(as) autores(as) mantiverem um livro on-line que seja, pelo menos em parte, sobre o pacote, entre em contato com [alguém da equipe da rOpenSci](https://ropensci.org/about/#team) para que possam entrar em contato com os(as) autores(as) sobre a transferência para [a organização do GitHub `ropensci-books`](https://github.com/orgs/ropensci-books).
 
