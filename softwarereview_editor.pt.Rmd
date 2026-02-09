@@ -29,24 +29,24 @@ Em caso positivo, é designado um(a) editor(a) responsável por guiar o processo
 As pessoas que exercem o papel de Editoria-Chefe rotativo (EiCs) geralmente servem por 3 meses ou por um período acordado por toda a equipe do conselho editorial.
 Quem ocupa o papel de EiC é responsável pelo [gerenciamento geral](#eic-general) do processo de revisão e pelos [estágios iniciais](#eic-submission) de todas as submissões.
 
-### Deveres gerais da EiC {#eic-general}
+### Deveres gerais do papel de EiC {#eic-general}
 
-A EiC fornece gerenciamento geral de todos os [questões de revisão de software](https://github.com/ropensci/software-review/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen) com a ajuda de nossa equipe de [painel editorial](https://dashboard.ropensci.org) conforme descrito a seguir [subseção do painel](#eic-dashboard).
-As responsabilidades da EiC incluem as seguintes tarefas gerais:
+A pessoa que exerce o papel de EiC gerencia todas as [*issues* de revisão de software](https://github.com/ropensci/software-review/issues?q=sort%3Aupdated-desc%20is%3Aissue%20is%3Aopen) com a ajuda do nosso [painel editorial](https://dashboard.ropensci.org) conforme descrito a seguir na [subseção sobre o painel](#eic-dashboard).
+As responsabilidades de EiC incluem as seguintes tarefas gerais:
 
-- No início de um rodízio, o EiC deve revisar o status das revisões abertas atuais no [painel editorial](https://dashboard.ropensci.org/reviews.html) e emitir lembretes para outros editores ou autores de pacotes, conforme necessário.
+- No início de um rodízio, deve revisar o status das revisões abertas atuais no [painel editorial](https://dashboard.ropensci.org/reviews.html) e emitir lembretes para outros(as) editores(as) ou autores(as) de pacotes, conforme necessário.
 
-- Assista a todos os novos problemas postados no repositório de revisão de software, para os quais o EiC deve assinar as notificações de repositório no GitHub, e também assista ao `#editors-only` no Slack.
+- Acompanhar todas as novas *issues* postados no repositório de revisão de software (`software-review`), para os quais deve ativar as notificações de repositório no GitHub, e também acompanhar o canal `#editors-only` no Slack.
 
-- Monitore regularmente (por exemplo, semanalmente) o ritmo de todas as revisões abertas, observando a [*Painel de controle* página](https://dashboard.ropensci.org/reviews.html) e lembrar outros editores de mover pacotes conforme necessário.
+- Monitorar regularmente (por exemplo, semanalmente) o ritmo de todas as revisões abertas, observando o [*Painel de controle*](https://dashboard.ropensci.org/reviews.html) e lembrar outros(as) editores(as) de mover pacotes conforme o necessário.
 
-### Deveres da EiC para cada envio inicial {#eic-submission}
+### Deveres de EiC para cada submissão inicial {#eic-submission}
 
-O EiC é responsável pelo processamento inicial de todos os novos envios.
+A pessoa que exerce o papel de EiC é responsável pelo processamento inicial de todas as novas submissões.
 Suas principais funções são:
 
-1. Decidir se um envio deve ou não ser considerado no escopo e prosseguir com a análise e, se for o caso,
-2. Para prosseguir com o envio completo e designar um editor responsável.
+1. Decidir se uma submissão deve ou não ser considerado no escopo e prosseguir com a análise e, se for o caso,
+2. Prosseguir com a submissão completa e designar um(a) editor(a) responsável.
 
 #### Decidir sobre o escopo e a sobreposição
 
