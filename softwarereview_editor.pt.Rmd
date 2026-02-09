@@ -330,7 +330,7 @@ Além desses princípios gerais, essas análises fornecem exemplos úteis:
 
 Outros desafios que podem surgir durante a revisão incluem:
 
-- **Se o autor parar de responder** consulte [as políticas](#policies) e/ou envie um ping para os outros editores no canal do Slack para discussão.
+- **Se o(a) autor(a) parar de responder** consulte [as políticas](#policies) e/ou envie uma mensagem para a equipe editorial no canal do Slack para discussão.
   É importante ressaltar que, se um(a) revisor(a) foi atribuído(a) a uma *issue* fechada, entre em contato com ele(a) quando fechar a *issue* para explicar a decisão e agradecer mais uma vez pelo trabalho.
   Informe a equipe editorial no canal Slack para que eles(as) sejam considerados revisores(as) de um pacote no futuro, com grandes chances de uma revisão de software tranquila.
 - **Se um(a) revisor(a) estiver em atraso com a revisão ou parar de responder**, envie um lembrete após uma semana e novamente após duas semanas.
