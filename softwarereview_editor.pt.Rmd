@@ -316,7 +316,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
 
 ## Respondendo às perguntas dos(as) revisores(as) {#reviewersupport}
 
-Tanto os autores quanto os revisores podem solicitar feedback sobre aspectos de um processo de revisão, incluindo, por exemplo, o tom ou a substância das revisões ou das respostas dos autores.
+Tanto os(as) autores(as) quanto os(as) revisores(as) podem solicitar feedback sobre aspectos de um processo de revisão, incluindo, por exemplo, o tom ou a substância das revisões ou das respostas dos(as) autores(as).
 Embora este guia se esforce para fornecer orientação suficiente para a maioria dos casos, outras pessoas da equipe editorial estão sempre à disposição para esclarecer dúvidas.
 Se você notar algo que possa ser editado ou adicionado de forma produtiva neste *Guia de desenvolvimento*, por favor, abra uma *issue* ou um *pull request*.
 Além desses princípios gerais, essas revisões fornecem exemplos úteis:
