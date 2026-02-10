@@ -64,6 +64,7 @@ Best,
   This will give them appropriate permissions, and ensure that they appear in [the editors dashboard](https://dashboard.ropensci.org/editors).
 
 - Invite them to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
+  Ensure invitation is "Read only".
 
 - Invite them to the private "editors-only" channel in rOpenSci's Slack workspace (and to the Slack workspace in general if they're not yet there).
 
