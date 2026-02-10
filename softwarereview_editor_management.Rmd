@@ -75,7 +75,7 @@ Best,
 
 - Inform rOpenSci community manager or other staff members.
 
-- Remove them from the editors-only channel and the editors Slack team.
+- Remove them from the "editors-only" channel and the editors Slack team.
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
