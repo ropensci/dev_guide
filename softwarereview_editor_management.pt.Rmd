@@ -66,9 +66,9 @@ Atenciosamente,
 - Convide-os para o banco de dados AirTable de análise de software (vinculado na descrição do canal somente para editores no Slack).
   Certifique-se de que o convite seja "Somente leitura".
 
-- Convide-os para o canal privado "somente para editores" no espaço de trabalho Slack da rOpenSci (e para o espaço de trabalho Slack em geral, se eles ainda não estiverem lá).
+- Convide-os para o canal privado "editors-only" no espaço de trabalho Slack da rOpenSci (e para o espaço de trabalho Slack em geral, se eles ainda não estiverem lá).
 
-- Quando eles estiverem no canal "somente para editores", publique uma mensagem de boas-vindas informando todos os editores.
+- Quando eles estiverem no canal "editors-only", publique uma mensagem de boas-vindas informando todos os editores.
 
 ## Desvincular um(a) editor(a) {#offboarding-an-editor}
 
@@ -76,7 +76,7 @@ Atenciosamente,
 
 - Informe o gerente da comunidade rOpenSci ou outros membros da equipe.
 
-- Remova-os do canal "somente para editores" e da equipe de editores do Slack.
+- Remova-os do canal "editors-only" e da equipe de editores do Slack.
 
 - Remova este(a) editor(a) de [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) e da subequipe.
 
