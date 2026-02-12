@@ -53,52 +53,43 @@ Best,
 
 ## Onboarding a new editor {#onboarding-a-new-editor}
 
-- Inform rOpenSci community manager so that
-  
-  - The new editor is added to the [rOpenSci website](https://github.com/ropensci/roweb3/#team-member).
-  - An introductory blog post can be put together.
+- Add to ["team.json" file of website](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) with `"editor": true`, and also `"stats": true` for stats editors.
+  That will automatically add new editors to the editorial team shown on the [rOpenSci website](https://ropensci.org/software-review/).
+
+- Inform rOpenSci community manager so that an introductory blog post can be put together.
 
 - If they haven't already done so as guest editors, request that the new editor turn on [two-factor authentication (2FA) for GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
-- Invite them to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors) and the [`data-pkg-editors`](https://github.com/orgs/ropensci/teams/data-pkg-editors) or [`stats-board`](https://github.com/orgs/ropensci/teams/stats-board) sub-team, as appropriate.
-  This will give them appropriate permissions and allow them to get team-specific notifications.
+- Invite them to the rOpenSci GitHub organization as member, as a member of the [`editors` team](https://github.com/orgs/ropensci/teams/editors), and also [`stats-editors`](https://github.com/orgs/ropensci/teams/stats-editors) team for stats editors.
+  This will give them appropriate permissions, and ensure that they appear in [the editors dashboard](https://dashboard.ropensci.org/editors).
 
-- Editors need access to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
+- Invite them to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
+  Ensure invitation is "Read only".
 
-- Editors need access to the private editors channel in rOpenSci Slack workspace (and to the Slack workspace in general if they didn't previously, in that case ask rOpenSci community manager).
+- Invite them to the private "editors-only" channel in rOpenSci's Slack workspace (and to the Slack workspace in general if they're not yet there).
 
-- Post a welcome message in the channel, pinging all editors.
-
-- In the Slack workspace they need to be added to the editors team so that `@editors` will ping them too.
-
-- We add editors' names to
-  
-  - [dev\_guide authors list](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
-  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-    Both the dev\_guide and software-review README are automatically knit via continuous integration.
-
-- Add editors to [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
+- Once they're in the "editors-only" channel, post a welcome message pinging all editors.
 
 ## Offboarding an editor {#offboarding-an-editor}
 
 - Thank them for their work!
 
-- Remove them from the editors-only channel and the editors Slack team.
+- Inform rOpenSci community manager or other staff members.
+
+- Remove them from the "editors-only" channel and the editors Slack team.
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
-- Inform rOpenSci community manager or some other staff member so that they might be moved to the alumni team members on the website.
+- Update ["team.json" on website](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) by replacing "roles" with "past_roles", and adding new field, `alumnus: "true"`.
 
 - Remove their access to the Airtable workspace.
+  - From the "interface" view, pull down main menu at top-left and enter "View Data"
+  - Click "Share" button on top right, and then "People with access"
+  - Click checkbox on left on editor to be removed, and "Remove 1 collaborator".
 
-- Remove them from
+- The (past-)editors lists in both the [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) and the [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) are automatically populated from the AirTable data.
+  Updates are run daily, so check a day after AirTable updates to ensure both have been updated.
   
-  - [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (at two locations in this file, as editors and a bit below to remove them from the reviewers list)
-  - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (in two places in this file as well)
-
-Both the dev\_guide and software-review README are automatically knit via continuous integration.
-
 ## Putting the system on pause {#vacation}
 
 If you want to put the system on a break for instance over the holidays, before leaving:
