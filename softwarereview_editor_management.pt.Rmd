@@ -1,4 +1,7 @@
- 
+---
+aliases:
+  - editorialmanagement.html
+---
 
 # Gerenciamento editorial {#editorialmanagement}
 
@@ -73,11 +76,9 @@ Atenciosamente,
   - [lista de autores do Guia Dev](https://github.com/ropensci/dev_guide/blob/main/index.Rmd)
   - [capítulo do Guia Dev que introduz a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (em dois locais neste arquivo, como editores e um pouco abaixo para removê-los da lista de revisores)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
-
-Tanto o Guia Dev quanto o README são automaticamente renderizados por meio do processo de integração contínua.
+    Tanto o Guia Dev quanto o README são automaticamente renderizados por meio do processo de integração contínua.
 
 - Adicione os novos editores à [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members)
-
 
 ## Desvincular um(a) editor(a) {#offboarding-an-editor}
 
@@ -95,7 +96,8 @@ Tanto o Guia Dev quanto o README são automaticamente renderizados por meio do p
   
   - [capítulo do Guia Dev que apresenta a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) (em dois locais neste arquivo, como editores e um pouco abaixo para removê-los da lista de revisores)
   - [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) (em dois lugares nesse arquivo também)
-    Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
+
+Tanto o Guia Dev quanto o README da revisão de software são automaticamente compilados por meio do processo de integração contínua.
 
 ## Colocando o sistema em pausa {#vacation}
 
@@ -136,14 +138,10 @@ Para cada alteração feita por uma pessoa colaboradora externa, agradeça-a exp
 No final da postagem, mencione as próximas alterações vinculando-as a problemas abertos no rastreador de problemas e convide as pessoas leitoras a contribuir com o guia de desenvolvimento abrindo _issues_ e participando de discussões abertas. Modelo de conclusão:
 
 ```markdown
-Nesta postagem, resumimos as alterações incorporadas em nosso livro [“rOpenSci Packages: Development, Maintenance, and Peer Review”] (https://devguide.ropensci.org/) nos últimos X meses.
-
+Nesta postagem, resumimos as alterações incorporadas em nosso livro ["rOpenSci Packages: Development, Maintenance, and Peer Review"] (https://devguide.ropensci.org/) nos últimos X meses.
 Somos gratos por todas as contribuições que tornaram possível esse lançamento.
-
 Já estamos trabalhando em atualizações para a nossa próxima versão, como _issue1_, _issue2_.
-
 Confira o [issue tracker] (https://github.com/ropensci/dev_guide/issues/) se você quiser contribuir.
-
 ```
 
 #### Autoria {#authorship}
