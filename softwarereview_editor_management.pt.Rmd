@@ -2,6 +2,7 @@
 aliases:
   - editorialmanagement.html
 ---
+
 # Gerenciamento editorial {#editorialmanagement}
 
 ```{block, type="summaryblock"}
@@ -54,30 +55,41 @@ Atenciosamente,
 
 - Adicionar a [ Arquivo "team.json" do site](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) com `"editor": true` e também `"stats": true` para editores de estatísticas.
   Isso adicionará automaticamente novos editores à equipe editorial mostrada na página [site da rOpenSci](https://ropensci.org/software-review/).
+
 - Informe o gerente da comunidade rOpenSci para que você possa preparar uma postagem introdutória no blog.
+
 - Se eles ainda não fizeram este passo como editores convidados, solicite que ativem [a autenticação de dois fatores (2FA) para o GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa).
 
 - Convide-os para a organização do rOpenSci no GitHub como membro, como membro do grupo [`editors` equipe](https://github.com/orgs/ropensci/teams/editors) e também [`stats-editors`](https://github.com/orgs/ropensci/teams/stats-editors) equipe para editores de estatísticas.
   Isso dará a eles as permissões apropriadas e garantirá que apareçam em [painel de controle dos editores](https://dashboard.ropensci.org/editors).
+
 - Convide-os para o banco de dados AirTable de análise de software (vinculado na descrição do canal somente para editores no Slack).
   Certifique-se de que o convite seja "Somente leitura".
+
 - Convide-os para o canal privado "somente para editores" no espaço de trabalho Slack da rOpenSci (e para o espaço de trabalho Slack em geral, se eles ainda não estiverem lá).
+
 - Quando eles estiverem no canal "somente para editores", publique uma mensagem de boas-vindas informando todos os editores.
+
 ## Desvincular um(a) editor(a) {#offboarding-an-editor}
 
 - Agradeça o(a) editor(a) por seu trabalho!
 
 - Informe o gerente da comunidade rOpenSci ou outros membros da equipe.
+
 - Remova-os do canal "somente para editores" e da equipe de editores do Slack.
+
 - Remova este(a) editor(a) de [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) e da subequipe.
 
 - Atualizar ["team.json" no site](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) substituindo "roles" por "past\_roles" e adicionando um novo campo, `alumnus: "true"`.
+
 - Remova seu acesso ao espaço de trabalho do Airtable.
   - Na exibição "interface", abra o menu principal no canto superior esquerdo e digite "View Data" (Exibir dados)
   - Clique no botão "Share" (Compartilhar) no canto superior direito e, em seguida, em "People with access" (Pessoas com acesso)
   - Clique na caixa de seleção à esquerda do editor a ser removido e em "Remove 1 collaborator" (Remover 1 colaborador).
+
 - As listas de editores (anteriores) em ambos os [capítulo do dev\_guide que apresenta a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) e no capítulo [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) são preenchidos automaticamente a partir dos dados do AirTable.
   As atualizações são executadas diariamente, portanto, verifique um dia após as atualizações do AirTable para garantir que ambos tenham sido atualizados.
+
 ## Colocando o sistema em pausa {#vacation}
 
 Se você quiser colocar o sistema em uma pausa, por exemplo, durante as férias, antes de sair:
