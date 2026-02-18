@@ -9,7 +9,7 @@ Consulte también la entrada del blog [«Ideas de marketing para su paquete»](h
 ```{block, type="summaryblock"}
 Te ayudaremos a promocionar tu paquete, pero aquí hay algunas cosas más para tener en cuenta.
 
-- Si te enteras de un caso de uso de tu paquete, anima a quien lo escribió a publicar el enlace en nuestro [foro de debate en la categoría Casos de uso](https://discuss.ropensci.org/c/usecases), [para recibir un toot (mensaje en Mastodon) de rOpenSci y su posible inclusión en el boletín mensual de rOpenSci](https://discuss.ropensci.org/t/about-the-usecases-category/33).
+- Si te enteras de un caso de uso de tu paquete, anima a quien lo escribió a publicar el enlace en nuestro [sitio](https://ropensci.org/es/usecases/), para recibir un toot (mensaje en Mastodon) de rOpenSci y su posible inclusión en el boletín mensual de rOpenSci.
   También te recomendamos que añadas un enlace al caso de uso en la sección "casos de uso reales" de tu archivo *README*.
 
 - Cuando [publiques](#releasing) una nueva versión de tu paquete o lo publiques en CRAN por primera vez,

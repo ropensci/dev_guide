@@ -186,7 +186,6 @@ Lo anterior es un poco impreciso, por lo que a continuación se presentan alguno
 
 Instamos a quienes mantienen paquetes a asegurarse de que reciben las notificaciones de GitHub, y de que los correos electrónicos del equipo de rOpenSci y de CRAN no van a su bandeja de correo no deseado.
 Invitaremos al Slack de rOpenSci a quienes hayan desarrollado paquetes que son incorporados a rOpenSci para charlar con el equipo y la comunidad de rOpenSci en general.
-Cualquier persona puede sumarse a la conversación con la comunidad rOpenSci en el [foro de discusión de rOpenSci](https://discuss.ropensci.org/).
 
 Si quienes desarrollaron un paquete abandonan su mantenimiento y se trata de un paquete utilizado activamente, consideraremos la posibilidad de solicitar a CRAN que transfiera el estatus de mantenedor del paquete a rOpenSci.
 

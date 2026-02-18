@@ -131,7 +131,7 @@ O que foi dito acima é um pouco vago, portanto, a seguir estão alguns aspectos
   - Pacote `hello` está ou não está no CRAN, porém não tem dependências reversas
   - Pacote `world` precisa de algumas correções. A pessoa que mantém o pacote respondeu, mas simplesmente está muito ocupada, porém atenderá a solicitação em breve
 
-Pedimos aos(as) mantenedores(as) de pacotes que se certifiquem de que estão recebendo notificações do GitHub, bem como que os e-mails da equipe da rOpenSci e dos mantenedores do CRAN não estejam indo para a caixa de _spam_. Os(as) autores(as) de pacotes integrados à rOpenSci serão convidados ao Slack da rOpenSci para poder conversar com a equipe da rOpenSci e com a comunidade em geral. Qualquer pessoa também pode discutir com a comunidade rOpenSci no site [Fórum de discussão da rOpenSci](https://discuss.ropensci.org/).
+Pedimos aos(as) mantenedores(as) de pacotes que se certifiquem de que estão recebendo notificações do GitHub, bem como que os e-mails da equipe da rOpenSci e dos mantenedores do CRAN não estejam indo para a caixa de _spam_. Os(as) autores(as) de pacotes integrados à rOpenSci serão convidados ao Slack da rOpenSci para poder conversar com a equipe da rOpenSci e com a comunidade em geral.
 
 Se os(as) autores(as) abandonarem a manutenção de um pacote usado ativamente na rOpenSci, consideraremos a possibilidade de solicitar ao CRAN a transferência do status de mantenedor do pacote para a rOpenSci.
 

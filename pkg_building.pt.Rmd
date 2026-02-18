@@ -108,7 +108,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - Se um dia [**depois de** revisão na rOpenSci](#authors-guide) você publicar um artigo sobre seu pacote, adicione-o ao arquivo CITATION.
 
-- Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, `citHeader()`. [Talvez até mesmo adicione a referência do recurso](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
+- Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, `citHeader()`. Talvez até mesmo adicione a referência do recurso.
 
 Como exemplo, veja [o arquivo CITATION do dynamite](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) que faz referência ao manual do R, bem como a outras publicações associadas.
 
@@ -467,7 +467,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
   
   - Verificar se está listado em um script `configure`  ([exemplo](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) e que fornecerá uma mensagem de erro útil caso não seja encontrado ([exemplo](https://github.com/cran/webp/blob/master/configure)).
     Os scripts `configure` podem ser desafiadores, pois geralmente exigem soluções improvisadas
-    para fazer com que as diversas dependências do sistema funcionem em todos os sistemas. Use exemplos ([mais aqui](https://github.com/search?q=org%3Acran+anticonf&type=Code)) como ponto de partida, mas observe que é comum encontrar bugs e casos extremos e, muitas vezes, violar as políticas do CRAN. Não hesite em [pedir ajuda em nosso fórum](https://discuss.ropensci.org/).
+    para fazer com que as diversas dependências do sistema funcionem em todos os sistemas. Use exemplos ([mais aqui](https://github.com/search?q=org%3Acran+anticonf&type=Code)) como ponto de partida, mas observe que é comum encontrar bugs e casos extremos e, muitas vezes, violar as políticas do CRAN. 
 
 ## Estruturas recomendadas {#recommended-scaffolding}
 
@@ -518,7 +518,7 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 
 ## Orientações adicionais {#further-guidance}
 
-- Se você estiver enviando um pacote para a rOpenSci por meio do [repositório de revisão de software](https://github.com/ropensci/software-review), poderá encaminhar outras perguntas à equipe da rOpenSci usando as *issues* ou em nosso [fórum de discussão](https://discuss.ropensci.org/).
+- Se você estiver enviando um pacote para a rOpenSci por meio do [repositório de revisão de software](https://github.com/ropensci/software-review), poderá encaminhar outras perguntas à equipe da rOpenSci usando as *issues*.
 
 - Leia o [guia de autoria](#authors-guide).
 

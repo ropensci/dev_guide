@@ -40,7 +40,7 @@ This concise guide presents the software peer review process for you as a packag
 
 ### Asking for help
 
-- Feel free to ask any questions about the process, or your specific package, in our [Discussion Forum](https://discuss.ropensci.org).
+- Feel free to ask any questions about the process, or your specific package, in https://github.com/ropensci/software-review-meta/issues.
 
 ### Guidelines
 

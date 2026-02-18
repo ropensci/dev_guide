@@ -13,7 +13,7 @@ Nosso objetivo é que as revisões sejam abertas, colaborativas e focadas na mel
 Seja respeitoso e gentil! 
 Consulte o nosso guia para revisores e também o [código de conduta] (https://ropensci.org/code-of-conduct/) para obter mais informações.**
 
-_Se você usar nossos processos,  guias, listas de verificação, etc., ao revisar um software em outra plataforma, por favor, notifique os envolvidos (e.g., editores(as) de periódicos, estudantes ou equipes de revisão interna de código) que esses processos, padrões e materiais são provenientes da rOpenSci, e nos informe em nosso [fórum público] (https://discuss.ropensci.org/c/usecases) ou em [particular por e-mail] (https://ropensci.org/contact/)._
+_Se você usar nossos processos,  guias, listas de verificação, etc., ao revisar um software em outra plataforma, por favor, notifique os envolvidos (e.g., editores(as) de periódicos, estudantes ou equipes de revisão interna de código) que esses processos, padrões e materiais são provenientes da rOpenSci, e nos informe em nosso [fórum público] (https://ropensci.org/usecases) ou em [particular por e-mail] (https://ropensci.org/contact/)._
 ```
 
 ## Se voluntariando como revisor(a) {#volunteering-as-a-reviewer}
@@ -100,7 +100,7 @@ Como resultado:
 
 ### Comentários sobre o processo {#feedback-on-the-process}
 
-Incentivamos você a fazer perguntas e fornecer feedbacks sobre o processo de revisão em nosso [fórum](https://discuss.ropensci.org).
+Incentivamos você a fazer perguntas e fornecer feedbacks sobre o processo de revisão em https://github.com/ropensci/software-review-meta/issues
 
 ## Envio da revisão {#submitreview}
 

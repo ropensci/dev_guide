@@ -109,7 +109,7 @@ For more information refer to the blog post [Why You Should (or Shouldn't) Build
 
 - If one day [**after** review at rOpenSci](#authors-guide) you publish a software publication about your package, add it to the CITATION file.
 
-- Less related to your package itself but to what supports it: if your package wraps a particular resource such as data source or, say, statistical algorithm, remind users of how to cite that resource via e.g. `citHeader()`. [Maybe even add the reference for the resource](https://discuss.ropensci.org/t/citation-of-original-article-when-implementing-specific-methods/2312).
+- Less related to your package itself but to what supports it: if your package wraps a particular resource such as data source or, say, statistical algorithm, remind users of how to cite that resource via e.g. `citHeader()`. Maybe even add the reference for the resource.
 
 As an example see [the dynamite CITATION file](https://github.com/ropensci/dynamite/blob/main/inst/CITATION) which refers to the R manual as well as other associated publications.
 
@@ -470,7 +470,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
   
   - Check for it in a `configure` script ([example](https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19)) and give a helpful error message if it cannot be found ([example](https://github.com/cran/webp/blob/master/configure)).
     `configure` scripts can be challenging as they often require hacky solutions
-    to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies. Do not hesitate to [ask for help on our forum](https://discuss.ropensci.org/).
+    to make diverse system dependencies work across systems. Use examples ([more here](https://github.com/search?q=org%3Acran+anticonf&type=Code)) as a starting point but note that it is common to encounter bugs and edge cases and often violate CRAN policies.
 
 ## Recommended scaffolding {#recommended-scaffolding}
 
@@ -521,7 +521,7 @@ If you intend your package to be submitted to, or if your package is on, Biocond
 
 ## Further guidance {#further-guidance}
 
-- If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker, or in our [discussion forum](https://discuss.ropensci.org/).
+- If you are submitting a package to rOpenSci via the [software-review repo](https://github.com/ropensci/software-review), you can direct further questions to the rOpenSci team in the issue tracker.
 
 - Read the [authors guide](#authors-guide).
 
