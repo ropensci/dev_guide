@@ -104,7 +104,7 @@ Para obter mais informações, consulte a postagem do blog: [Por que você deve 
 
 - O CRAN exige que os arquivos CITATION sejam declarados como [itens `bibentry`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html) e não na forma previamente aceita de [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
 
-- Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione a tag [DOI principal do Zenodo](https://help.zenodo.org/#versioning) ao arquivo CITATION.
+- Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione o [_concept_ DOI do Zenodo](https://zenodo.org/help/versioning) ao arquivo CITATION.
 
 - Se um dia [**depois de** revisão na rOpenSci](#authors-guide) você publicar um artigo sobre seu pacote, adicione-o ao arquivo CITATION.
 
