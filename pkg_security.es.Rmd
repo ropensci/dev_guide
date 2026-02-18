@@ -50,8 +50,6 @@ Durante el desarrollo del paquete tendrás que proteger tus credenciales igual q
 Si utilizas [`vcr`](https://docs.ropensci.org/vcr/) o [`httptest`](https://enpiar.com/r/httptest/) en los test para almacenar las respuestas de la API en caché, tienes que asegurarte de que las consultas grabadas o fixtures no contengan credenciales.
 Consulta la [guía de seguridad de `vcr`](https://books.ropensci.org/http-testing/security-chapter.html) y [la guía *Redacting and Modifying Recorded Requests* (Censurando y modificando consultas grabadas) de `httptest`](https://enpiar.com/r/httptest/articles/redacting.html) e inspecciona tus consultas grabadas y *fixtures* antes de hacer un primer *commit* para asegurarte de que tienes la configuración correcta.
 
-Como `vcr` es un paquete de rOpenSci, puedes hacer cualquier pregunta que tengas en el [foro de rOpenSci](https://discuss.ropensci.org/).
-
 #### Compartir credenciales con servicios de integración contínua {#share-secrets-with-ci-services}
 
 Si utilizas un [servicio de integración continua](#ci) (CI por sus siglas en inglés), es posible que necesites compartir credenciales con el mismo.

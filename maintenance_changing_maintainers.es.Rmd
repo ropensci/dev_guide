@@ -29,9 +29,7 @@ Nuestro newsletter quincenal tiene una sección de pedidos de colaboración deno
   
   - Si se puede contactar con la persona anterior, contáctate con ella y pídele ayuda.
   - Consulta el canal #package-maintenance en el Slack de rOpenSci. Este es un buen lugar para obtener ayuda sobre problemas específicos o generales.
-  - Siéntete libre de hacer cualquier pregunta en [el foro de discusión de rOpenSci](https://discuss.ropensci.org/c/package-development/29).
   - No dudes en contactarte con cualquier integrande del [equipo de rOpenSci](https://ropensci.org/about/#team) por correo electrónico o enviando *issues* a GitHub; nos encantará ayudarte.
-  - Por supuesto, también hay ayuda general de R en el [Foro de la comunidad de Posit](https://community.rstudio.com/), StackOverflow, Mastodon #rstats, etc. si eso se ajusta a tus necesidades.
 
 - ¿Cuánto puedes o debes cambiar en el paquete?
   

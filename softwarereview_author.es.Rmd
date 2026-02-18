@@ -34,7 +34,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 
 ### Pedir ayuda
 
-- No dudes en hacer cualquier pregunta sobre el proceso en general, o sobre tu paquete en particular en nuestro [foro de discusión](https://discuss.ropensci.org).
+- No dudes en hacer cualquier pregunta sobre el proceso en general, o sobre tu paquete en particular en https://github.com/ropensci/software-review-meta/issues.
 
 ### Directrices
 

@@ -6,7 +6,7 @@ El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en 
 
 Si aceptas, ten en cuenta que te pediremos completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
-Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme o enviar un mensaje a la sección  del [foro de rOpenSci][foro de rOpenSci].
+Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme.
 
 La comunidad de rOpenSci es nuestro mejor activo.
 Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centradas en mejorar la calidad del software.
@@ -28,7 +28,6 @@ Atentamente,
 [guía de revisión]: https://devguide.ropensci.org/reviewerguide.html
 [guía de empaquetado]: https://devguide.ropensci.org/building.html
 [plantilla]: https://devguide.ropensci.org/reviewtemplate.html
-[foro de rOpenSci]: https://discuss.ropensci.org/
 
 
 
