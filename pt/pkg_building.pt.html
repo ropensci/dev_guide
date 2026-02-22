@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+<link rel="alternate" hreflang="en" href="https://devdevguide.netlify.app/pkg_building.html" />
+<link rel="alternate" hreflang="es" href="https://devdevguide.netlify.app/es/pkg_building.es.html" />
+<link rel="alternate" hreflang="pt" href="https://devdevguide.netlify.app/pt/pkg_building.pt.html" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.23">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="description" content="Guia para pessoas autoras, responsáveis, revisoras e editoras de pacotes no sistema de revisão por pares da rOpenSci. A primeira seção do livro contém as nossas recomendações para criar e testar pacotes do R. A segunda seção é dedicada ao processo de revisão de software por pares da rOpenSci: o que é, nossas políticas e guias específicos para orientar quem cria, mantém, revisa e edita ao longo do processo. A terceira e última seção apresenta as nossas boas práticas para fazer crescer o seu pacote depois que ele for incorporado a rOpenSci: como colaborar com outras pessoas desenvolvedoras, como documentar cada versão do seu pacote e como aproveitar o GitHub como plataforma de desenvolvimento. A terceira seção também inclui um capítulo para quem deseja começar a contribuir com os pacotes da rOpenSci.">
+<title>1  Guia de desenvolvimento de pacotes – Pacotes rOpenSci: Desenvolvimento, manutenção e revisão por pares</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script><script src="site_libs/quarto-nav/headroom.min.js"></script><script src="site_libs/clipboard/clipboard.min.js"></script><script src="site_libs/quarto-search/autocomplete.umd.js"></script><script src="site_libs/quarto-search/fuse.min.js"></script><script src="site_libs/quarto-search/quarto-search.js"></script><meta name="quarto:offset" content="./">
+<link href="./pkg_ci.pt.html" rel="next">
+<link href="./preface.pt.html" rel="prev">
+<link href="./images/apple-touch-icon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script><script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script><script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script><script src="site_libs/quarto-html/popper.min.js"></script><script src="site_libs/quarto-html/tippy.umd.min.js"></script><script src="site_libs/quarto-html/anchor.min.js"></script><link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-076ecbd647e1f0418c5051713cd9b730.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script><link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e1a44bf7e9737b128debdde7c55157a6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script><!-- Matomo --><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script><script src="https://ropensci.org/scripts/matomo.js"></script><noscript></noscript>
+</head>
+<body class="nav-sidebar floating quarto-light">
+<p><img src="https://ropensci.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""></p>
+<!-- End Matomo Code -->
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./pkg_building.pt.html">Construindo seu pacote</a></li>
+<li class="breadcrumb-item"><a href="./pkg_building.pt.html"><span class="chapter-number">1</span>  <span class="chapter-title">Guia de desenvolvimento de pacotes</span></a></li>
+</ol></nav><a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Pacotes rOpenSci: Desenvolvimento, manutenção e revisão por pares</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/ropensci/dev_guide/" title="Código fonte" class="quarto-navigation-tool px-1" aria-label="Código fonte"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="dropdown" id="languages-links-parent">
+<button class="btn btn-primary dropdown-toggle babelquarto-languages-button" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="languages-button"><i class="bi bi-globe2"></i> Português</button><ul class="dropdown-menu" id="languages-links">
+<li><a class="dropdown-item" href="https://devdevguide.netlify.app/es/pkg_building.es.html" id="language-link-es">Español</a></li>
+<li><a class="dropdown-item" href="https://devdevguide.netlify.app/pkg_building.html" id="language-link-en">English</a></li>
+</ul>
+</div>
+<div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">rOpenSci - Guia para desenvolvedores</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefácio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Construindo seu pacote</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_building.pt.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>  <span class="chapter-title">Guia de desenvolvimento de pacotes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_ci.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>  <span class="chapter-title">Práticas Recomendadas de Integração Contínua</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pkg_security.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>  <span class="chapter-title">Práticas de segurança recomendadas no desenvolvimento de pacotes</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Revisão por pares de software de pacotes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_intro.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>  <span class="chapter-title">Revisão de software por pares, por quê? O que é?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_policies.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>  <span class="chapter-title">Políticas de revisão de software por pares</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_author.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>  <span class="chapter-title">Guia para Autores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_reviewer.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>  <span class="chapter-title">Guia para revisores</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>  <span class="chapter-title">Guia para a Equipe Editorial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./softwarereview_editor_management.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>  <span class="chapter-title">Gerenciamento editorial</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Mantendo pacotes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_cheatsheet.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>  <span class="chapter-title">Folha de dicas de manutenção do pacote rOpenSci</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_collaboration.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>  <span class="chapter-title">Guia de colaboração</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_changing_maintainers.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>  <span class="chapter-title">Mudando os(as) mantenedores(as) de um pacote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_releases.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>  <span class="chapter-title">Publicação de um pacote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_marketing.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>  <span class="chapter-title">Marketing do seu pacote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_github_grooming.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>  <span class="chapter-title">Preparação do GitHub</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_evolution.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>  <span class="chapter-title">Evolução do pacote - alteração de itens em seu pacote</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_curation.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>  <span class="chapter-title">Política de curadoria de pacotes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./maintenance_contributing.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>  <span class="chapter-title">Guia de contribuição</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Apêndice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Alternar seção">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./booknews.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>  <span class="chapter-title">NEWS</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewtemplate.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>  <span class="chapter-title">Modelo de revisão</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./editortemplate.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>  <span class="chapter-title">Modelo para o(a) editor(a)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reviewrequesttemplate.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>  <span class="chapter-title">Modelo de solicitação de revisão</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./approval2template.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>  <span class="chapter-title">Modelo de comentário de aprovação do(a) revisor(a)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./newstemplate.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>  <span class="chapter-title">Modelo de notícias</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bookreleaseissue.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>  <span class="chapter-title">Orientação para o lançamento de livros</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./redirect.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>  <span class="chapter-title">Como definir um redirecionamento</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bot_cheatsheet.pt.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>  <span class="chapter-title">Comandos do bot</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Apêndices</span></span>
+  </li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Índice</h2>
+   
+  <ul>
+<li>
+<a href="#package-name-and-metadata" id="toc-package-name-and-metadata" class="nav-link active" data-scroll-target="#package-name-and-metadata"><span class="header-section-number">1.1</span> Nome do pacote e metadados</a>
+  <ul class="collapse">
+<li><a href="#naming-your-package" id="toc-naming-your-package" class="nav-link" data-scroll-target="#naming-your-package"><span class="header-section-number">1.1.1</span> Como nomear seu pacote</a></li>
+  </ul>
+</li>
+  <li><a href="#platforms" id="toc-platforms" class="nav-link" data-scroll-target="#platforms"><span class="header-section-number">1.2</span> Plataformas</a></li>
+  <li>
+<a href="#package-api" id="toc-package-api" class="nav-link" data-scroll-target="#package-api"><span class="header-section-number">1.3</span> API do pacote</a>
+  <ul class="collapse">
+<li><a href="#function-and-argument-naming" id="toc-function-and-argument-naming" class="nav-link" data-scroll-target="#function-and-argument-naming"><span class="header-section-number">1.3.1</span> Nomeando funções e argumentos</a></li>
+  <li><a href="#console-messages" id="toc-console-messages" class="nav-link" data-scroll-target="#console-messages"><span class="header-section-number">1.3.2</span> Mensagens do console</a></li>
+  <li><a href="#interactive-graphical-interfaces" id="toc-interactive-graphical-interfaces" class="nav-link" data-scroll-target="#interactive-graphical-interfaces"><span class="header-section-number">1.3.3</span> Interfaces interativas/gráficas</a></li>
+  <li><a href="#verifica%C3%A7%C3%A3o-de-entrada" id="toc-verificação-de-entrada" class="nav-link" data-scroll-target="#verificação-de-entrada"><span class="header-section-number">1.3.4</span> Verificação de entrada</a></li>
+  <li><a href="#pacotes-que-envolvem-recursos-da-web-clientes-de-api" id="toc-pacotes-que-envolvem-recursos-da-web-clientes-de-api" class="nav-link" data-scroll-target="#pacotes-que-envolvem-recursos-da-web-clientes-de-api"><span class="header-section-number">1.3.5</span> Pacotes que envolvem recursos da Web (clientes de API)</a></li>
+  <li><a href="#external-software" id="toc-external-software" class="nav-link" data-scroll-target="#external-software"><span class="header-section-number">1.3.6</span> Pacotes que envolvem software externo</a></li>
+  </ul>
+</li>
+  <li><a href="#code-style" id="toc-code-style" class="nav-link" data-scroll-target="#code-style"><span class="header-section-number">1.4</span> Estilo de código e práticas recomendadas</a></li>
+  <li><a href="#citation-file" id="toc-citation-file" class="nav-link" data-scroll-target="#citation-file"><span class="header-section-number">1.5</span> Arquivo CITATION</a></li>
+  <li><a href="#readme" id="toc-readme" class="nav-link" data-scroll-target="#readme"><span class="header-section-number">1.6</span> README</a></li>
+  <li>
+<a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation"><span class="header-section-number">1.7</span> Documentação</a>
+  <ul class="collapse">
+<li><a href="#docs-general" id="toc-docs-general" class="nav-link" data-scroll-target="#docs-general"><span class="header-section-number">1.7.1</span> Geral</a></li>
+  <li><a href="#roxygen-2-use" id="toc-roxygen-2-use" class="nav-link" data-scroll-target="#roxygen-2-use"><span class="header-section-number">1.7.2</span> roxygen2 use</a></li>
+  <li><a href="#example-datasets" id="toc-example-datasets" class="nav-link" data-scroll-target="#example-datasets"><span class="header-section-number">1.7.3</span> Exemplos de conjuntos de dados</a></li>
+  <li><a href="#ur-ls-in-documentation" id="toc-ur-ls-in-documentation" class="nav-link" data-scroll-target="#ur-ls-in-documentation"><span class="header-section-number">1.7.4</span> URLs na documentação</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website"><span class="header-section-number">1.8</span> Site de documentação</a>
+  <ul class="collapse">
+<li><a href="#docsropensci" id="toc-docsropensci" class="nav-link" data-scroll-target="#docsropensci"><span class="header-section-number">1.8.1</span> Implementação automática do site de documentação</a></li>
+  <li><a href="#idioma" id="toc-idioma" class="nav-link" data-scroll-target="#idioma"><span class="header-section-number">1.8.2</span> Idioma</a></li>
+  <li><a href="#function-grouping" id="toc-function-grouping" class="nav-link" data-scroll-target="#function-grouping"><span class="header-section-number">1.8.3</span> Agrupamento de funções no índice</a></li>
+  <li><a href="#branding-of-authors" id="toc-branding-of-authors" class="nav-link" data-scroll-target="#branding-of-authors"><span class="header-section-number">1.8.4</span> Marca de autoria</a></li>
+  <li><a href="#tweaking-the-navbar" id="toc-tweaking-the-navbar" class="nav-link" data-scroll-target="#tweaking-the-navbar"><span class="header-section-number">1.8.5</span> Ajustando a barra de navegação</a></li>
+  <li><a href="#mathjax" id="toc-mathjax" class="nav-link" data-scroll-target="#mathjax"><span class="header-section-number">1.8.6</span> Renderização matemática</a></li>
+  <li><a href="#package-logo" id="toc-package-logo" class="nav-link" data-scroll-target="#package-logo"><span class="header-section-number">1.8.7</span> Logotipo do pacote</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#authorship" id="toc-authorship" class="nav-link" data-scroll-target="#authorship"><span class="header-section-number">1.9</span> Autoria</a>
+  <ul class="collapse">
+<li><a href="#authorship-included-code" id="toc-authorship-included-code" class="nav-link" data-scroll-target="#authorship-included-code"><span class="header-section-number">1.9.1</span> Autoria do código incluído no pacote</a></li>
+  </ul>
+</li>
+  <li><a href="#licence" id="toc-licence" class="nav-link" data-scroll-target="#licence"><span class="header-section-number">1.10</span> Licença</a></li>
+  <li><a href="#testing" id="toc-testing" class="nav-link" data-scroll-target="#testing"><span class="header-section-number">1.11</span> Testes</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">1.12</span> Exemplos</a></li>
+  <li><a href="#pkgdependencies" id="toc-pkgdependencies" class="nav-link" data-scroll-target="#pkgdependencies"><span class="header-section-number">1.13</span> Dependências de pacotes</a></li>
+  <li><a href="#recommended-scaffolding" id="toc-recommended-scaffolding" class="nav-link" data-scroll-target="#recommended-scaffolding"><span class="header-section-number">1.14</span> Estruturas recomendadas</a></li>
+  <li><a href="#version-control" id="toc-version-control" class="nav-link" data-scroll-target="#version-control"><span class="header-section-number">1.15</span> Controle de versão</a></li>
+  <li>
+<a href="#crangotchas" id="toc-crangotchas" class="nav-link" data-scroll-target="#crangotchas"><span class="header-section-number">1.16</span> Problemas diversos do CRAN</a>
+  <ul class="collapse">
+<li><a href="#cranchecks" id="toc-cranchecks" class="nav-link" data-scroll-target="#cranchecks"><span class="header-section-number">1.16.1</span> Verificações do CRAN</a></li>
+  </ul>
+</li>
+  <li><a href="#bioconductor-gotchas" id="toc-bioconductor-gotchas" class="nav-link" data-scroll-target="#bioconductor-gotchas"><span class="header-section-number">1.17</span> Problemas do Bioconductor</a></li>
+  <li>
+<a href="#further-guidance" id="toc-further-guidance" class="nav-link" data-scroll-target="#further-guidance"><span class="header-section-number">1.18</span> Orientações adicionais</a>
+  <ul class="collapse">
+<li><a href="#learning-about-package-development" id="toc-learning-about-package-development" class="nav-link" data-scroll-target="#learning-about-package-development"><span class="header-section-number">1.18.1</span> Aprendendo sobre o desenvolvimento de pacotes</a></li>
+  </ul>
+</li>
+  </ul>
+<div class="toc-actions"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/pkg_building.pt.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li>
+</ul></div></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="./pkg_building.pt.html">Construindo seu pacote</a></li>
+<li class="breadcrumb-item"><a href="./pkg_building.pt.html"><span class="chapter-number">1</span>  <span class="chapter-title">Guia de desenvolvimento de pacotes</span></a></li>
+</ol></nav><div class="quarto-title">
+<h1 class="title"><span id="building" class="quarto-section-identifier"><span class="chapter-number">1</span>  <span class="chapter-title">Guia de desenvolvimento de pacotes</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><div class="cell" type="summaryblock">
+<div class="summaryblock">
+<p>
+A rOpenSci aceita pacotes que atendam às nossas diretrizes por meio de um processo simplificado de <a href="softwarereview_intro.pt.html#whatissoftwarereview">Revisão por Pares de Software</a>. Para garantir um estilo consistente em todas as nossas ferramentas, escrevemos este capítulo destacando nossas diretrizes para o desenvolvimento de pacotes. Leia e aplique também nosso <a href="pkg_ci.pt.html">capítulo sobre integração contínua (CI)</a>. Outras orientações para depois do processo de revisão são fornecidas na terceira seção deste livro, começando com <a href="maintenance_collaboration.pt.html">um capítulo sobre colaboração</a>.
+</p>
+<p>
+Recomendamos que as pessoas desenvolvedoras de pacotes leiam o livro completo de Hadley Wickham e Jenny Bryan sobre desenvolvimento de pacotes, que está disponível <a href="https://r-pkgs.org/">gratuitamente on-line</a> (em inglês). Nosso guia é parcialmente redundante em relação a outros recursos, mas destaca as diretrizes da rOpenSci.
+</p>
+<p>
+Para saber por que vale a pena enviar um pacote para a rOpenSci para atender às diretrizes, dê uma olhada em <a href="softwarereview_intro.pt.html#whysubmit">motivos para submeter</a>.
+</p>
+</div>
+</div>
+<section id="package-name-and-metadata" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="package-name-and-metadata">
+<span class="header-section-number">1.1</span> Nome do pacote e metadados</h2>
+<section id="naming-your-package" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="naming-your-package">
+<span class="header-section-number">1.1.1</span> Como nomear seu pacote</h3>
+<ul>
+<li><p>Recomendamos fortemente nomes curtos e descritivos em letras minúsculas. Se o seu pacote tratar de um ou mais serviços comerciais, verifique se o nome não viola as diretrizes de marca. Você pode verificar se o nome do seu pacote está disponível, é informativo e não é ofensivo usando a função <a href="https://pak.r-lib.org/reference/pkg_name_check.html"><code>pak::pkg_name_check()</code></a>; use também um mecanismo de pesquisa para ver se é ofensivo em um idioma diferente do inglês. Em particular, <em>não</em> escolha um nome de pacote que já esteja sendo usado no CRAN ou no Bioconductor.</p></li>
+<li>
+<p>Existe um equilíbrio entre as vantagens de um nome de pacote exclusivo e um nome de pacote menos original.</p>
+<ul>
+<li>Um nome de pacote mais exclusivo pode ser mais fácil de rastrear (para você e nós avaliarmos o uso do pacote, por exemplo, menos falsos positivos ao digitar seu nome na pesquisa de código do GitHub) e pesquisar (para quando as pessoas usuárias perguntarem “como usar o pacote blah” em um mecanismo de pesquisa).</li>
+<li>Por outro lado, um nome único <em>demais</em> pode fazer com que o pacote seja menos detectável (ou seja, não seja possível encontrá-lo ao pesquisar “como fazer isso em R”). Isso pode ser um argumento para nomear seu pacote com algo muito próximo ao tópico, como <a href="https://github.com/ropensci/geojson">geojson</a>).</li>
+</ul>
+</li>
+<li><p>Encontre outros aspectos interessantes sobre como nomear seu pacote <a href="https://www.njtierney.com/post/2018/06/20/naming-things/">neste texto do blog do Nick Tierney (em inglês)</a> e, caso você mude de ideia, descubra <a href="https://www.njtierney.com/post/2017/10/27/change-pkg-name/">como renomear seu pacote nesta outra postagem do blog do Nick</a>.</p></li>
+</ul></section></section><section id="platforms" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="platforms">
+<span class="header-section-number">1.2</span> Plataformas</h2>
+<ul>
+<li>Os pacotes devem funcionar em todas as principais plataformas (Windows, macOS, Linux). Pode haver exceções para pacotes que interajam com funções específicas do sistema ou que adaptem utilitários que só funcionam em plataformas limitadas, mas deve-se fazer todo o possível para garantir a compatibilidade entre plataformas, incluindo a compilação específica em cada sistema ou a containerização de utilitários externos.</li>
+</ul></section><section id="package-api" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="package-api">
+<span class="header-section-number">1.3</span> API do pacote</h2>
+<section id="function-and-argument-naming" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="function-and-argument-naming">
+<span class="header-section-number">1.3.1</span> Nomeando funções e argumentos</h3>
+<ul>
+<li>
+<p>A nomenclatura das funções e dos argumentos deve ser escolhida de modo a trabalhar em conjunto para formar uma API de programação comum e lógica que seja fácil de ler e de autocompletar.</p>
+<ul>
+<li>Considere um esquema de nomenclatura <code>objeto_verbo()</code> para as funções do seu pacote que usam um tipo de dados comum ou interagem com uma API comum. <code>objeto</code> refere-se aos dados/API e <code>verbo</code> a ação principal. Esse esquema ajuda a evitar conflitos de nome com pacotes que podem ter verbos semelhantes e torna o código legível e fácil de preencher automaticamente. Por exemplo, em <strong>stringi</strong> as funções que começam com <code>stri_</code> manipulam strings (<code>stri_join()</code>, <code>stri_sort()</code>, e em <strong>googlesheets</strong> funções que começam com <code>gs_</code> são chamadas para a API do Google Sheets (<code>gs_auth()</code>, <code>gs_user()</code>, <code>gs_download()</code>).</li>
+</ul>
+</li>
+<li><p>Para funções que manipulam um objeto/dado e retornam um objeto/dado do mesmo tipo, faça com que o objeto/dado seja o primeiro argumento da função para aumentar a compatibilidade com o operador pipe (<code>|&gt;</code> do R base, <code>%&gt;%</code> do pacote magrittr).</p></li>
+<li><p>Recomendamos fortemente usar <code>snake_case</code> em vez de todos os outros estilos, a menos que esteja fazendo a portabilidade de um pacote que já esteja sendo amplamente utilizado.</p></li>
+<li><p>Evite conflitos de nomes de funções com pacotes básicos ou outros pacotes populares (por exemplo <code>ggplot2</code>, <code>dplyr</code>, <code>magrittr</code>, <code>data.table</code>)</p></li>
+<li><p>A nomenclatura e a ordem dos argumentos devem ser consistentes entre as funções que usam entradas semelhantes.</p></li>
+<li><p>As funções do pacote que importam dados não devem importar dados para o ambiente global, mas, em vez disso, devem retornar objetos. As atribuições ao ambiente global devem ser evitadas em geral.</p></li>
+</ul></section><section id="console-messages" class="level3" data-number="1.3.2"><h3 data-number="1.3.2" class="anchored" data-anchor-id="console-messages">
+<span class="header-section-number">1.3.2</span> Mensagens do console</h3>
+<ul>
+<li><p>Use o <a href="https://cli.r-lib.org/">pacote cli</a> ou as ferramentas do R básico (<code>message()</code> e <code>warning()</code>) para se comunicar com as pessoas que usam suas funções.</p></li>
+<li><p>Os destaques do pacote cli incluem: empacotamento automático, respeito a <a href="https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color">convenção NO_COLOR</a>, muitos <a href="https://cli.r-lib.org/articles/semantic-cli.html">elementos semânticos</a> e ampla documentação. Mais informações <a href="https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/">neste texto em inglês</a>.</p></li>
+<li><p>Por favor, não use <code>print()</code> ou <code>cat()</code> a menos que seja para um <code>print.*()</code> ou <code>str.*()</code>, pois esses métodos de impressão de mensagens são mais difíceis de serem silenciados.</p></li>
+<li><p>Forneça uma maneira de suprimir a verbosidade, de preferência em nível de pacote: torne a criação de mensagens dependente de uma variável ou opção de ambiente (como <a href="https://usethis.r-lib.org/reference/ui.html?q=usethis.quiet#silencing-output">“usethis.quiet”</a> no pacote usethis), em vez de um parâmetro da função. O controle das mensagens poderia ser feito em vários níveis (“nenhum”, “informar”, “debugar”) em vez de ser lógico (nenhuma mensagem / todas as mensagens). O controle da verbosidade é útil para quem utiliza a função, mas também em testes. Você pode encontrar mais comentários interessantes <a href="https://github.com/tidyverse/design/issues/42">nesta issue do guia de design do tidyverse</a></p></li>
+<li><p>Você pode fornecer traduções para as mensagens do seu pacote. O pacote <a href="https://michaelchirico.github.io/potools/">potools</a> pode te ajudar com essa tarefa.</p></li>
+</ul></section><section id="interactive-graphical-interfaces" class="level3" data-number="1.3.3"><h3 data-number="1.3.3" class="anchored" data-anchor-id="interactive-graphical-interfaces">
+<span class="header-section-number">1.3.3</span> Interfaces interativas/gráficas</h3>
+<p>Se estiver fornecendo uma interface gráfica de usuário (GUI) (como um aplicativo Shiny), para facilitar o fluxo de trabalho, inclua um mecanismo para reproduzir automaticamente as etapas realizadas na GUI. Isso pode incluir a geração automática de código para reproduzir os mesmos resultados, a saída de valores intermediários produzidos na ferramenta interativa ou simplesmente um mapeamento claro e bem documentado entre as ações da GUI e as funções usadas. (Consulte também a seção <a href="#testing">“Testes”</a> abaixo).</p>
+<p>O <a href="https://github.com/ropensci/tabulizer">pacote <code>tabulizer</code></a> por exemplo, tem um fluxo de trabalho interativo para extrair tabelas, mas também pode extrair apenas coordenadas para que seja possível executar novamente como um script. Além disso, dois exemplos de aplicativos brilhantes que geram código são <a href="https://gdancik.shinyapps.io/shinyGEO/" class="uri">https://gdancik.shinyapps.io/shinyGEO/</a> e <a href="https://github.com/wallaceEcoMod/wallace/" class="uri">https://github.com/wallaceEcoMod/wallace/</a>.</p>
+</section><section id="verificação-de-entrada" class="level3" data-number="1.3.4"><h3 data-number="1.3.4" class="anchored" data-anchor-id="verificação-de-entrada">
+<span class="header-section-number">1.3.4</span> Verificação de entrada</h3>
+<p>Recomendamos que seu pacote use um método consistente de sua escolha para <a href="https://blog.r-hub.io/2022/03/10/input-checking/">verificação de entradas (<em>inputs</em>)</a> – seja o R básico, um pacote em R ou ajudantes personalizados.</p>
+</section><section id="pacotes-que-envolvem-recursos-da-web-clientes-de-api" class="level3" data-number="1.3.5"><h3 data-number="1.3.5" class="anchored" data-anchor-id="pacotes-que-envolvem-recursos-da-web-clientes-de-api">
+<span class="header-section-number">1.3.5</span> Pacotes que envolvem recursos da Web (clientes de API)</h3>
+<p>Se o seu pacote acessar uma API da Web ou outro recurso da Web,</p>
+<ul>
+<li>Certifique-se de que as solicitações enviem um <a href="https://httr2.r-lib.org/articles/wrapping-apis.html#user-agent">agente de usuário</a>, ou seja, uma maneira de identificar o que (seu pacote) ou quem enviou a solicitação. Deve ser possível substituir o agente de usuário padrão do pacote. Idealmente, o agente de usuário deve ser diferente nos serviços de integração contínua e no desenvolvimento (com base, por exemplo, nos nomes de usuário do GitHub das pessoas desenvolvedoras).</li>
+<li>Você pode escolher padrões diferentes (melhores) do que os da API e, nesse caso, deve documentá-los.</li>
+<li>Seu pacote deve ajudar com a paginação, permitindo que os usuários não se preocupem com isso, pois o pacote faz todas as solicitações necessárias.</li>
+<li>Seu pacote deve ajudar a limitar a taxa de acordo com as regras da API.</li>
+<li>Seu pacote deve reproduzir erros de API e possivelmente explicá-los em mensagens de erro informativas.</li>
+<li>Seu pacote pode exportar funções de alto nível e funções de baixo nível, sendo que estas últimas permitem que os usuários chamem os pontos de acesso (<em>endpoints</em>) da API diretamente com mais controle (como <code>gh::gh()</code>).</li>
+</ul>
+<p>Para obter mais informações, consulte a postagem do blog: <a href="https://ropensci.org/blog/2022/06/16/publicize-api-client-yes-no">Por que você deve (ou não deve) criar um cliente de API</a> (em inglês).</p>
+</section><section id="external-software" class="level3" data-number="1.3.6"><h3 data-number="1.3.6" class="anchored" data-anchor-id="external-software">
+<span class="header-section-number">1.3.6</span> Pacotes que envolvem software externo</h3>
+<ul>
+<li>Documente claramente como instalar o pacote, incluindo todos os pacotes ou bibliotecas externas necessários, incluindo, quando aplicável, etapas explícitas em sistemas operacionais comuns.</li>
+<li>Forneça uma função de relatório de situação (sitrep) para verificar se o software foi instalado, com dicas caso algo esteja faltando. <a href="https://github.com/greta-dev/greta/blob/50ef770a79f8c6d8b9090e94f15953f2ba155a18/R/greta-sitrep.R">Exemplo do pacote greta</a>.</li>
+<li>Se possível, forneça uma função que ajude na instalação. <a href="https://github.com/r-lib/hugodown/blob/main/R/hugo-install.R">Exemplo no pacote hugodown</a>.</li>
+</ul></section></section><section id="code-style" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="code-style">
+<span class="header-section-number">1.4</span> Estilo de código e práticas recomendadas</h2>
+<ul>
+<li><p>Para obter mais informações sobre como estilizar seu código, nomear funções e scripts R dentro da seção <code>R/</code> recomendamos a leitura do <a href="https://r-pkgs.org/Code.html">capítulo <em>R Code</em> do livro <em>R Packages</em></a> (em inglês). Recomendamos o uso do <a href="https://posit-dev.github.io/air/">Air</a> ou do <a href="https://github.com/r-lib/styler">pacote styler</a> para automatizar parte do estilo do código. Também sugerimos a leitura do <a href="https://style.tidyverse.org/">Guia de estilo do Tidyverse (em inglês)</a>.</p></li>
+<li><p>Você pode optar por usar <code>=</code> ao invés de <code>&lt;-</code> desde que seja consistente com uma escolha em seu pacote. Recomendamos evitar o uso de <code>-&gt;</code> para atribuição em um pacote. Se você usar <code>&lt;-</code> em seu pacote e também usar <code>R6</code> nesse pacote, você será forçado a usar <code>=</code> para atribuição em seu <code>R6Class</code> - isso não é considerado uma inconsistência porque você não pode usar <code>&lt;-</code> nesse caso.</p></li>
+<li><p>Você pode usar o <a href="https://lintr.r-lib.org/index.html">pacote lintr</a> para identificar algumas possíveis áreas de melhoria. <a href="https://masalmon.eu/2024/08/28/lintr-3-steps/">Exemplo de fluxo de trabalho</a>.</p></li>
+</ul></section><section id="citation-file" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="citation-file">
+<span class="header-section-number">1.5</span> Arquivo CITATION</h2>
+<ul>
+<li><p>Se o seu pacote ainda não tiver um arquivo CITATION, você poderá criar um com <code>usethis::use_citation()</code> e preenchê-lo com os valores gerados pela função <code>citation()</code>.</p></li>
+<li><p>O CRAN exige que os arquivos CITATION sejam declarados como <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html">itens <code>bibentry</code></a> e não na forma previamente aceita de <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html"><code>citEntry()</code></a>.</p></li>
+<li><p>Se você arquivar cada versão de seu repositório do GitHub no Zenodo, adicione a tag <a href="https://help.zenodo.org/#versioning">DOI principal do Zenodo</a> ao arquivo CITATION.</p></li>
+<li><p>Se um dia <a href="softwarereview_author.pt.html"><strong>depois de</strong> revisão na rOpenSci</a> você publicar um artigo sobre seu pacote, adicione-o ao arquivo CITATION.</p></li>
+<li><p>Menos relacionado ao seu pacote em si, mas ao que o apoia: se o seu pacote envolve um recurso específico, como uma fonte de dados ou, digamos, um algoritmo estatístico, lembre as pessoas que utilizam o software sobre como citar esse recurso por meio de, por exemplo, <code>citHeader()</code>. Talvez até mesmo adicione a referência do recurso.</p></li>
+</ul>
+<p>Como exemplo, veja <a href="https://github.com/ropensci/dynamite/blob/main/inst/CITATION">o arquivo CITATION do dynamite</a> que faz referência ao manual do R, bem como a outras publicações associadas.</p>
+<div class="code-copy-outer-scaffold">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citHeader</span>(<span class="st">"To cite dynamite in publications use:"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bibentry</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">key =</span> <span class="st">"dynamitepaper"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">bibtype  =</span> <span class="st">"Misc"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">doi =</span> <span class="st">"10.48550/ARXIV.2302.01607"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">"https://arxiv.org/abs/2302.01607"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">author =</span> <span class="fu">c</span>(<span class="fu">person</span>(<span class="st">"Santtu"</span>, <span class="st">"Tikka"</span>), <span class="fu">person</span>(<span class="st">"Jouni"</span>, <span class="st">"Helske"</span>)),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"dynamite: An R Package for Dynamic Multivariate Panel Models"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">publisher =</span> <span class="st">"arXiv"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"2023"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">bibentry</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">key =</span> <span class="st">"dmpmpaper"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">bibtype  =</span> <span class="st">"Misc"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">title    =</span> <span class="st">"Estimating Causal Effects from Panel Data with Dynamic </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">    Multivariate Panel Models"</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">author =</span> <span class="fu">c</span>(<span class="fu">person</span>(<span class="st">"Santtu"</span>, <span class="st">"Tikka"</span>), <span class="fu">person</span>(<span class="st">"Jouni"</span>, <span class="st">"Helske"</span>)),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">publisher =</span> <span class="st">"SocArxiv"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">year     =</span> <span class="st">"2022"</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">url      =</span> <span class="st">"https://osf.io/preprints/socarxiv/mdwu5/"</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">bibentry</span>(</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">key =</span> <span class="st">"dynamite"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="at">bibtype  =</span> <span class="st">"Manual"</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">title    =</span> <span class="st">"Bayesian Modeling and Causal Inference for Multivariate</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="st">    Longitudinal Data"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">author =</span> <span class="fu">c</span>(<span class="fu">person</span>(<span class="st">"Santtu"</span>, <span class="st">"Tikka"</span>), <span class="fu">person</span>(<span class="st">"Jouni"</span>, <span class="st">"Helske"</span>)),</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">note  =</span> <span class="st">"R package version 1.0.0"</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">year     =</span> <span class="st">"2022"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">url      =</span> <span class="st">"https://github.com/ropensci/dynamite"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button>
+</div>
+<ul>
+<li>Você também pode criar e armazenar um <code>CITATION.cff</code> graças ao <a href="https://docs.ropensci.org/cffr/">pacote cffr</a>. Ele também fornece um <a href="https://docs.ropensci.org/cffr/reference/cff_gha_update.html">fluxo de trabalho do GitHub Action</a> para manter o <code>CITATION.cff</code> atualizado.</li>
+</ul></section><section id="readme" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="readme">
+<span class="header-section-number">1.6</span> README</h2>
+<ul>
+<li>
+<p>Todos os pacotes devem ter um arquivo README, denominado <code>README.md</code> na raiz do repositório. O README deve incluir, de cima para baixo:</p>
+<ul>
+<li>O nome do pacote.</li>
+<li>Selos (<em>badges</em>) para integração contínua e cobertura de testes, o selo para revisão por pares da rOpenSci assim que ele for iniciado (veja abaixo), um selo do repostatus.org e quaisquer outros selos (por exemplo do <a href="https://docs.r-universe.dev/publish/set-up.html#document-install">R-universe</a>).</li>
+<li>Uma breve descrição dos objetivos do pacote (o que ele faz? por que seria interessante usá-lo?), com links descritivos para todas as vinhetas (<em>vignettes</em>), a menos que o pacote seja pequeno e haja apenas uma vinheta repetindo o README. Certifique-se também de que as vinhetas sejam renderizadas e legíveis, consulte <a href="#website">a seção “site de documentação”</a>).</li>
+<li>Instruções de instalação usando, por exemplo, o <a href="https://remotes.r-lib.org/">pacote remotes</a>, <a href="https://pak.r-lib.org/">pacote pak</a> ou <a href="https://docs.r-universe.dev/publish/set-up.html">R-universe</a>.</li>
+<li>Qualquer configuração adicional necessária (tokens de autenticação, etc.).</li>
+<li>Breve demonstração de uso.</li>
+<li>Se aplicável, como o pacote se compara a outros pacotes semelhantes e/ou como ele se relaciona com outros pacotes.</li>
+<li>Informações de citação, ou seja, direcione a forma de citação preferida no README adicionando o texto padrão “aqui está como citar meu pacote”. Veja, por exemplo <a href="https://github.com/bluegreen-labs/ecmwfr#how-to-cite-this-package-in-your-article">o README do pacote ecmwfr</a>.</li>
+</ul>
+</li>
+</ul>
+<p>Se você usar outro selo de status de repositório, como o <a href="https://www.tidyverse.org/lifecycle/">ciclo de vida</a>, adicione também um selo do <a href="https://www.repostatus.org/">repostatus.org</a>. <a href="https://github.com/ropensci/ijtiff#ijtiff-">Exemplo de um README de repositório com dois selos de status de repositório</a>.</p>
+<ul>
+<li>Depois de enviar um pacote e ele ter sido aprovado na verificação editorial, adicione um selo de revisão por pares por meio do</li>
+</ul>
+<pre><code>[![rOpenSci software peer-review](https://badges.ropensci.org/&lt;issue_id&gt;_status.svg)](https://github.com/ropensci/software-review/issues/&lt;issue_id&gt;)</code></pre>
+<p>onde issue_id é o número da <em>Issue</em> no repositório <code>software-review</code>. Por exemplo, o selo para <a href="https://github.com/ropensci/rtimicropem"><code>rtimicropem</code></a> usa o número 126, pois é o <a href="https://github.com/ropensci/software-review/issues/126">número da Issue de revisão</a>. O selo indicará primeiro “under review” (em revisão) e depois “peer-reviewed” (revisado por pares) assim que o seu pacote tiver sido integrado (Issue marcada como “approved” (aprovada) e fechada), e será vinculado à Issue de revisão.</p>
+<ul>
+<li>
+<p>Se o seu README tiver muitos selos, considere ordená-los em uma tabela HTML para facilitar a obtenção de informações. Veja exemplos no <a href="https://github.com/ropensci/drake">repositórion<code>drake</code></a> e no <a href="https://github.com/ropensci/qualtRics/">repositório <code>qualtRics</code></a>. As seções possíveis são:</p>
+<ul>
+<li>Desenvolvimento (status de integração contínua (CI), ver o <a href="pkg_ci.pt.html">Capítulo sobre CI</a>, canal do Slack para discussão, repostatus)</li>
+<li>Edição ou Publicação (<a href="https://www.r-pkg.org/services#badges">selos de versão do CRAN e data de lançamento do METACRAN</a>, <a href="https://github.com/r-hub/cchecksbadges">selo de checagem da API do CRAN</a>, selo do Zenodo)</li>
+<li>Estatísticas/Uso (downloads, por exemplo: <a href="https://github.com/r-hub/cranlogs.app#badges">selos de quantidade de downloads do r-hub/cranlogs</a>) A tabela deve ser mais larga do que longa para não mascarar o restante do README.</li>
+</ul>
+</li>
+<li><p>Se o seu pacote se conectar a uma fonte de dados ou serviço on-line, ou envolver outro software, considere que o README do seu pacote pode ser o ponto de partida de quem usa o utiliza pela primeira vez. Ele deve fornecer informações suficientes para entender a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes. Por exemplo, um README não deve se limitar a dizer: “Fornece acesso ao GooberDB”, mas também incluir, “…, um repositório on-line de avistamentos de Goober na América do Sul. Mais informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados podem ser encontradas em <em>link</em>”.</p></li>
+<li><p>Recomendamos não criar o <code>README.md</code> diretamente, mas a partir de um <code>README.Rmd</code> (um arquivo R Markdown) se você tiver algum código de demonstração. A vantagem do <code>.Rmd</code> é que você pode combinar texto com código que pode ser facilmente atualizado sempre que seu pacote for atualizado.</p></li>
+<li><p>Considere o uso da função <code>usethis::use_readme_rmd()</code> para obter um modelo para o arquivo <code>README.Rmd</code> e para configurar automaticamente uma verificação para garantir que o arquivo <code>README.md</code> seja sempre mais recente que o <code>README.Rmd</code> antes de fazer um commit.</p></li>
+<li><p>Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos <a href="#website">criar um site para seu pacote</a>.</p></li>
+<li><p>Adicionar um <a href="maintenance_collaboration.pt.html#friendlyfiles">código de conduta e as diretrizes de contribuição</a>.</p></li>
+<li><p>Veja o <a href="https://github.com/ropensci/gistr#gistr">README do pacote <code>gistr</code></a> para um bom exemplo de README a ser seguido em um pacote pequeno, e <a href="https://github.com/ropensci/bowerbird">o README do pacote <code>bowerbird</code></a> para um bom exemplo de README para um pacote maior.</p></li>
+</ul></section><section id="documentation" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="documentation">
+<span class="header-section-number">1.7</span> Documentação</h2>
+<section id="docs-general" class="level3" data-number="1.7.1"><h3 data-number="1.7.1" class="anchored" data-anchor-id="docs-general">
+<span class="header-section-number">1.7.1</span> Geral</h3>
+<ul>
+<li><p>Todas as funções exportadas de pacote devem ser totalmente documentadas com exemplos.</p></li>
+<li><p>Se houver possível sobreposição ou confusão com outros pacotes que forneçam funcionalidade semelhante ou que tenham um nome semelhante, adicione uma nota no README, na vinheta principal e, potencialmente, no campo Descrição do DESCRIPTION. Exemplos em <a href="https://docs.ropensci.org/rtweet/">README do rtweet</a>, <a href="https://docs.ropensci.org/rebird/#auk-vs-rebird">README do rebird</a> e o pacote <a href="https://uscbiostats.github.io/slurmR/index.html#vs">slurmR</a> (que não é parte da rOpenSci).</p></li>
+<li><p>O pacote deve conter documentação geral para <code>?pacote</code>(ou <code>?`pacote-package`</code> se houver um conflito de nomes). Opcionalmente, você pode usar ambos <code>?pacote e ``?</code>pacote-package<code>`` para o arquivo de manual do pacote, usando a etiqueta</code><span class="citation" data-cites="aliases">@aliases</span><code>do roxygen. [</code>usethis::use_package_doc()`](https://usethis.r-lib.org/reference/use_package_doc.html) adiciona o modelo para a documentação geral.</p></li>
+<li><p>O pacote deve conter pelo menos um <strong>HTML</strong> que ofereça uma cobertura substancial das funções do pacote, ilustrando casos de uso realistas e como as funções devem interagir. Se o pacote for pequeno, a vinheta e o README poderão ter conteúdo muito semelhante.</p></li>
+<li><p>Como no caso de um README, a documentação geral ou as vinhetas podem ser o primeiro ponto de entrada para quem usa o pacote. Se o seu pacote se conectar a uma fonte de dados ou a um serviço on-line, ou envolver outro software, ele deverá fornecer informações suficientes para entender a natureza dos dados, do serviço ou do software e fornecer links para outros dados e documentação relevantes. Por exemplo, a introdução ou a documentação de uma vinheta não deve se limitar a dizer: “Fornece acesso ao GooberDB”, mas também incluir: “…, um repositório on-line de avistamentos de Goober na América do Sul. Mais informações sobre o GooberDB e a documentação da estrutura e dos metadados do banco de dados podem ser encontradas no <em>link</em>”. Qualquer vinheta deve descrever o conhecimento necessário para que seja possível entender a vinheta antecipadamente.</p></li>
+</ul>
+<p>A vinheta geral deve apresentar uma série de exemplos que progridam em complexidade, do uso básico ao avançado.</p>
+<ul>
+<li><p>A funcionalidade que provavelmente será usada apenas para desenvolvimento mais avançado pode ser melhor colocada em uma vinheta separada (por exemplo, a programação usando NSE (<em>non-standard evaluation</em>) com dplyr).</p></li>
+<li><p>O README, a documentação geral do pacote, as vinhetas, os sites etc. devem ter informações suficientes no início para obter uma visão geral de alto nível do pacote e dos serviços/dados aos quais ele se conecta e fornecer navegação para outras partes relevantes da documentação. Isso é para seguir o princípio de <em>vários pontos de entrada</em> ou seja, levar em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro que alguém tem com o pacote e/ou com a ferramenta/dados que ele envolve.</p></li>
+<li><p>A(s) vinheta(s) deve(m) incluir citações de software e documentos, quando apropriado.</p></li>
+<li><p>Se o seu pacote fornecer acesso a uma fonte de dados, exigimos que o arquivo DESCRIPTION contenha (1) uma breve identificação e/ou descrição da organização responsável pela emissão dos dados; e (2) o URL com link para uma página pública que forneça, descreva ou permita o acesso aos dados (que muitas vezes pode ser diferente do URL que leva diretamente à fonte de dados).</p></li>
+<li><p>Use mensagens de inicialização de pacote somente quando necessário (mascaramento de função, por exemplo). Evite mensagens de inicialização de pacotes como “Esse é o pacote 2.4-0” ou orientação de citação, pois elas podem ser irritantes para quem o utiliza. Confie na documentação para obter essa orientação.</p></li>
+<li><p>Você pode optar por ter uma seção README sobre casos de uso do seu pacote (outros pacotes, publicações em blogs etc.), <a href="https://github.com/ropensci/vcr#example-packages-using-vcr">exemplo</a>.</p></li>
+</ul></section><section id="roxygen-2-use" class="level3" data-number="1.7.2"><h3 data-number="1.7.2" class="anchored" data-anchor-id="roxygen-2-use">
+<span class="header-section-number">1.7.2</span> roxygen2 use</h3>
+<ul>
+<li><p>Solicitamos que todos os envios usem o <a href="https://roxygen2.r-lib.org/">roxygen2</a> para a documentação. O roxygen2 é um pacote R que compila automaticamente os arquivos <code>.Rd</code> para a pasta <code>man</code> em seu pacote a partir de etiquetas escritas acima de cada função. O roxygen2 tem <a href="https://roxygen2.r-lib.org/articles/rd-formatting.html">suporte à sintaxe Markdown</a>. Uma das principais vantagens de usar o roxygen2 é que seu <code>NAMESPACE</code> sempre será gerado automaticamente e estará atualizado.</p></li>
+<li><p>Mais informações sobre o uso da documentação do roxygen2 estão disponíveis no <a href="https://r-pkgs.org/man.html">capítulo sobre documentação de funções do livro <em>R Packages</em> (em inglês)</a> e no <a href="https://roxygen2.r-lib.org/">próprio site do roxygen2</a>.</p></li>
+<li><p>Se você estivesse escrevendo o <code>.Rd</code> diretamente sem o roxygen2, o <a href="https://cran.r-project.org/web/packages/Rd2roxygen/index.html">Rd2roxygen</a> contém funções para converter o <code>.Rd</code> em documentação do roxygen.</p></li>
+<li><p>Todas as funções devem documentar o tipo de objeto retornado com a etiqueta <code>@return</code>.</p></li>
+<li><p>O valor padrão de cada parâmetro deve ser claramente documentado. Por exemplo, em vez de escrever “Um valor lógico que determina se …”, você deve escrever “Um valor lógico (por padrão <code>TRUE</code>) que determina se …”. Também é uma boa prática indicar os valores padrão diretamente na definição da função:</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">a =</span> <span class="cn">TRUE</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># código da função</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button>
+</div>
+</div>
+<ul>
+<li><p>A documentação deve dar suporte à navegação, incluindo <a href="https://roxygen2.r-lib.org/reference/tags-index-crossref.html">links cruzados</a> úteis entre funções relacionadas e documentando funções relacionadas em grupos ou em páginas de ajuda comuns. Recomendamos o uso da etiqueta <code>@family</code> que cria automaticamente links do tipo <em>“See also”</em> e <a href="https://pkgdown.r-lib.org/reference/build_reference.html">podem ajudar a agrupar</a> funções em sites com pkgdown. Veja <a href="https://r-pkgs.org/man.html">o capítulo sobre documentação de funções do livro <em>R Packages</em> (em inglês)</a> e <a href="#function-grouping">a seção “agrupamento de funções” do presente capítulo</a> para obter mais detalhes.</p></li>
+<li><p>Você pode reutilizar partes da documentação (por exemplo, detalhes sobre autenticação, pacotes relacionados) nas páginas de vinhetas, README e de documentação. Consulte a <a href="https://roxygen2.r-lib.org/articles/reuse.html">vinheta do roxygen2 sobre reutilização de documentação</a>.</p></li>
+<li><p>Para incluir exemplos, você pode usar o clássico <code>@examples</code> (no plural <em>“examples”</em>), mas também a tag <code>@example &lt;path&gt;</code> (no singular <em>“example”</em>) para armazenar o código de exemplo em um script R separado (de preferência na pasta <code>man/</code>), e a tag <code>@exampleIf</code> para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte a <a href="https://roxygen2.r-lib.org/articles/rd.html#examples">documentação do roxygen2 sobre exemplos</a>.</p></li>
+<li><p>Adicionar <code>#' @keywords internal</code> para marcar uma função como interna e, ao mesmo tempo, gerar documentação para ela. Se você não quiser que nenhuma documentação de função seja gerada, use <code>#' noRd</code>. Consulte <a href="https://roxygen2.r-lib.org/reference/tags-index-crossref.html">a documentação do <code>roxygen2</code> sobre tags para indexação e referência cruzada</a> e <a href="https://roxygen2.r-lib.org/reference/tags-rd.html">tags para funções de documentação</a>. Para fins de desenvolvimento, você pode se interessar pelo <a href="https://github.com/moodymudskipper/devtag">pacote experimental devtag</a> para obter páginas de manual locais ao usar o <code>#' @noRd</code>.</p></li>
+<li><p>A partir da versão 7.0.0 do roxygen2, as classes <code>R6</code> são oficialmente suportadas. Consulte a <a href="https://roxygen2.r-lib.org/articles/rd-other.html#r6">documentação do roxygen2</a> para obter detalhes sobre como documentar classes <code>R6</code>.</p></li>
+<li><p>Ainda não há suporte para o fornecimento de páginas de manual em diferentes idiomas, mas há um progresso interessante no projeto de <a href="https://github.com/eliocamp/rhelpi18n">pacote em R rhelpi18n</a>.</p></li>
+</ul></section><section id="example-datasets" class="level3" data-number="1.7.3"><h3 data-number="1.7.3" class="anchored" data-anchor-id="example-datasets">
+<span class="header-section-number">1.7.3</span> Exemplos de conjuntos de dados</h3>
+<p>Para documentar a interface do seu pacote, talvez seja necessário usar conjuntos de dados de exemplo. Você pode usar conjuntos de dados básicos do R (no pacote datasets), como <code>penguins</code>, ou <a href="https://r-pkgs.org/data.html">redistribuir e documentar os dados</a> com as devidas atribuições. Tenha o cuidado de escolher dados que estejam em conformidade com o <a href="https://ropensci.org/code-of-conduct/">código de conduta da rOpenSci</a> e que, em geral, não sejam prejudiciais ou alienantes para ninguém.</p>
+</section><section id="ur-ls-in-documentation" class="level3" data-number="1.7.4"><h3 data-number="1.7.4" class="anchored" data-anchor-id="ur-ls-in-documentation">
+<span class="header-section-number">1.7.4</span> URLs na documentação</h3>
+<p>Esta subseção é particularmente relevante para quem deseja enviar seu pacote para o CRAN. O CRAN verificará os URLs em sua documentação e não permite códigos de status de redirecionamento, como 301. Você pode usar o pacote <a href="https://github.com/r-lib/urlchecker">urlchecker</a> para reproduzir essas verificações e, em particular, substituir os URLs pelos URLs para os quais eles redirecionam. Outras pessoas já usaram a opção para escapar de alguns URLs (alterar <code>&lt;https://ropensci.org/&gt;</code> para <code>https://ropensci.org/</code>, ou <code>\url{https://ropensci.org/}</code> para <code>https://ropensci.org/</code>.), mas se você fizer isso, precisará implementar algum tipo de verificação de URL para evitar que eles sejam quebrados sem que você perceba. Além disso, os links não poderão ser clicados nos documentos locais.</p>
+</section></section><section id="website" class="level2" data-number="1.8"><h2 data-number="1.8" class="anchored" data-anchor-id="website">
+<span class="header-section-number">1.8</span> Site de documentação</h2>
+<p>Recomendamos a criação de um site de documentação para seu pacote usando o pacote <a href="https://github.com/r-lib/pkgdown"><code>pkgdown</code></a>. O livro <em>R packages</em> (em inglês) apresenta um <a href="https://r-pkgs.org/website.html">capítulo sobre pkgdown</a> e também o <code>pkgdown</code> tem <a href="https://pkgdown.r-lib.org/">seu próprio site de documentação</a>.</p>
+<p>Há alguns elementos que gostaríamos de destacar aqui.</p>
+<section id="docsropensci" class="level3" data-number="1.8.1"><h3 data-number="1.8.1" class="anchored" data-anchor-id="docsropensci">
+<span class="header-section-number">1.8.1</span> Implementação automática do site de documentação</h3>
+<p>Você só precisa se preocupar com a implementação automática (<em>automatic deployment</em>) do seu site até a aprovação e a transferência do repositório do seu pacote para a organização ropensci; de fato, depois disso, um site pkgdown será criado para o seu pacote após cada <em>push</em> para o repositório do GitHub. Você pode encontrar o status dessas compilações em <code>https://dev.ropensci.org/job/package_name</code> por exemplo <a href="https://dev.ropensci.org/job/magick">para <code>magick</code></a>; e o site em <code>https://docs.ropensci.org/package_name</code> por exemplo <a href="https://docs.ropensci.org/magick">para <code>magick</code></a>. A construção do site usará seu arquivo de configuração pkgdown, se você tiver um, exceto para o estilo que usará o arquivo <a href="https://github.com/ropensci-org/rotemplate/">de modelo do pacote<code>rotemplate</code></a>. O site resultante terá uma barra de pesquisa local. Pedimos que informe erros, perguntas e solicitações de recursos sobre a implementação automática em <a href="https://github.com/ropensci/docs/" class="uri">https://github.com/ropensci/docs/</a> e sobre o modelo em <a href="https://github.com/ropensci/rotemplate/" class="uri">https://github.com/ropensci/rotemplate/</a>.</p>
+<p><em>Se as vinhetas do seu pacote precisarem de credenciais (chaves de API, tokens, etc.) para serem ativadas, talvez você queira <a href="https://ropensci.org/technotes/2019/12/08/precompute-vignettes/">renderizar as vinhetas previamente</a> ou <a href="https://docs.ropensci.org/vcr/reference/setup_knitr.html">armazenar as respostas em cache</a>, já que as credenciais não podem ser usadas no servidor que renderiza a documentação.</em></p>
+<p>Antes do envio e da transferência do pacote, você pode usar a <a href="https://pkgdown.r-lib.org/reference/deploy_site_github.html">abordagem documentada por <code>pkgdown</code></a> ou o <a href="https://docs.ropensci.org/tic/">pacote <code>tic</code></a> para a implantação automática do site do pacote. Isso evitaria o incômodo de executar (e lembrar de executar) <code>pkgdown::build_site()</code> toda vez que o site precisar ser atualizado. Primeiro, consulte nosso <a href="pkg_ci.pt.html">capítulo sobre integração contínua</a> se você não estiver familiarizado com a integração contínua. De qualquer forma, não se esqueça de atualizar todas as ocorrências do URL do site após a transferência para a organização ropensci.</p>
+</section><section id="idioma" class="level3" data-number="1.8.2"><h3 data-number="1.8.2" class="anchored" data-anchor-id="idioma">
+<span class="header-section-number">1.8.2</span> Idioma</h3>
+<p>Se a documentação do seu pacote estiver escrita em um idioma diferente do inglês (mas suportado pelo sistema de revisão por pares do software rOpenSci), você poderá declarar esse idioma para que o site do pkgdown <a href="https://pkgdown.r-lib.org/articles/translations.html">seja localizado</a>.</p>
+<p>Porém, <a href="https://github.com/r-lib/pkgdown/issues/2258">ainda não é possível obter um site pkgdown multilíngue</a> diretamente.</p>
+</section><section id="function-grouping" class="level3" data-number="1.8.3"><h3 data-number="1.8.3" class="anchored" data-anchor-id="function-grouping">
+<span class="header-section-number">1.8.3</span> Agrupamento de funções no índice</h3>
+<p>Quando seu pacote tiver muitas funções, é conveniente que apareçam agrupadas no índice da documentação, o que pode ser feito de forma mais ou menos automática.</p>
+<p>Se você usa o roxygen2 acima da versão 6.1.1, deve usar a tag <code>@family</code> na documentação de suas funções para indicar o agrupamento. Isso lhe dará links entre as funções na documentação local do pacote instalado (seção <em>“See also”</em>) <em>e</em> permitirá que você use a função <code>has_concept</code> do pacote <code>pkgdown</code> no arquivo de configuração do seu site. Exemplo não relacionado a rOpenSci, cortesia de <a href="https://github.com/lockedata/optiRum"><code>optiRum</code></a>: <a href="https://github.com/lockedata/optiRum/blob/master/R/APR.R#L17">tag family</a>, <a href="https://github.com/lockedata/optiRum/blob/master/_pkgdown.yml">arquivo de configuração do <code>pkgdown</code></a> e <a href="https://itsalocke.com/optirum/reference/">seção no índice resultante</a>. Para personalizar o texto do título da referência cruzada criada pelo roxygen2 (<code>Other {family}:</code>), consulte <a href="https://roxygen2.r-lib.org/articles/rd.html#cross-references">a documentação do roxygen2 sobre como fornecer uma lista <code>rd_family_title</code> no arquivo <code>man/roxygen/meta.R</code></a>.</p>
+<p>De forma menos automática, veja o exemplo do <a href="https://docs.ropensci.org/drake/">website do pacote <code>drake</code></a> e <a href="https://github.com/ropensci/drake/blob/master/_pkgdown.yml">arquivo de configuração associado</a>.</p>
+</section><section id="branding-of-authors" class="level3" data-number="1.8.4"><h3 data-number="1.8.4" class="anchored" data-anchor-id="branding-of-authors">
+<span class="header-section-number">1.8.4</span> Marca de autoria</h3>
+<p>Você pode tornar os nomes de (algumas) das pessoas autoras clicáveis, adicionando um URL, e pode até mesmo substituir os nomes por um logotipo (pense na rOpenSci… ou na sua organização/empresa!). Veja <a href="https://pkgdown.r-lib.org/reference/build_home.html?q=authors#yaml-config-authors">a documentação do <code>pkgdown</code></a>.</p>
+</section><section id="tweaking-the-navbar" class="level3" data-number="1.8.5"><h3 data-number="1.8.5" class="anchored" data-anchor-id="tweaking-the-navbar">
+<span class="header-section-number">1.8.5</span> Ajustando a barra de navegação</h3>
+<p>Você pode tornar o conteúdo do seu site mais fácil de navegar ajustando a barra de navegação, consulte <a href="https://pkgdown.r-lib.org/articles/pkgdown.html#navigation-bar">a documentação do <code>pkgdown</code></a>. Em particular, observe que, se você nomear a vinheta principal de seu pacote como “pkg-name.Rmd”, ela poderá ser acessada na barra de navegação como <code>Para começar</code> (<em>Get started</em>) em vez de via <code>Artigos &gt; Título da vinheta</code> (<em>Articles &gt; Vignette Title</em>).</p>
+</section><section id="mathjax" class="level3" data-number="1.8.6"><h3 data-number="1.8.6" class="anchored" data-anchor-id="mathjax">
+<span class="header-section-number">1.8.6</span> Renderização matemática</h3>
+<p>Consulte a <a href="https://pkgdown.r-lib.org/dev/articles/customise.html#math-rendering">documentação do pkgdown</a>. Nosso modelo é compatível com essa configuração.</p>
+</section><section id="package-logo" class="level3" data-number="1.8.7"><h3 data-number="1.8.7" class="anchored" data-anchor-id="package-logo">
+<span class="header-section-number">1.8.7</span> Logotipo do pacote</h3>
+<p>Para usar o logotipo de seu pacote na página inicial do pkgdown, consulte <a href="https://usethis.r-lib.org/reference/use_logo.html"><code>usethis::use_logo()</code></a>. Se o seu pacote não tiver um logotipo, o <a href="#docsropensci">construtor de documentos da rOpenSci</a> usará o logotipo da rOpenSci em seu lugar.</p>
+</section></section><section id="authorship" class="level2" data-number="1.9"><h2 data-number="1.9" class="anchored" data-anchor-id="authorship">
+<span class="header-section-number">1.9</span> Autoria</h2>
+<p>O arquivo DESCRIPTION de um pacote deve listar as pessoas que participaram da autoria e que colaboraram com o pacote, usando o parâmetro <code>Authors@R</code> para indicar suas funções (<em>author</em>/<em>creator</em>/<em>contributor</em>, etc.) e usando o campo de comentário para indicar o <a href="https://ropensci.org/technotes/2018/10/08/orcid/">ID do ORCID</a> de cada pessoa e o <a href="https://ropensci.org/blog/2025/05/09/ror/">ID ROR</a> de cada organização, se houver. Veja <a href="https://cran.rstudio.com/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file">esta seção de “Escrevendo extensões R”</a> para obter detalhes.<br>
+Se você achar que as pessoas que revisaram fizeram uma contribuição substancial para o desenvolvimento do seu pacote, poderá listá-los na seção <code>Authors@R</code> com o tipo de contribuição <code>"rev"</code>, da seguinte forma:</p>
+<pre><code>    person("Bea", "Hernández", role = "rev",
+    comment = "Bea revisou o pacote (v. X.X.XX) para rOpenSci, veja &lt;https://github.com/ropensci/software-review/issues/116&gt;"),</code></pre>
+<p>Somente inclua revisores(as) depois de pedir seu consentimento. Leia mais nesta postagem do blog <a href="https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/"><em>Thanking Your Reviewers: Gratitude through Semantic Metadata</em> (“Agradecendo as revisões: Gratidão por meio de metadados semânticos”)</a>. Por favor, não liste pessoas editoras como colaboradoras. Sua participação e contribuição para a rOpenSci já são agradecimentos suficientes!</p>
+<section id="authorship-included-code" class="level3" data-number="1.9.1"><h3 data-number="1.9.1" class="anchored" data-anchor-id="authorship-included-code">
+<span class="header-section-number">1.9.1</span> Autoria do código incluído no pacote</h3>
+<p>Muitos pacotes incluem códigos de outros softwares. Se arquivos inteiros ou funções individuais forem incluídos de outros pacotes, os pacotes rOpenSci devem seguir <a href="https://cran.r-project.org/web/packages/policies.html">a <em>Política de Repositório</em> do CRAN</a>:</p>
+<blockquote class="blockquote">
+<p>A propriedade dos direitos autorais e de propriedade intelectual de todos os componentes do pacote deve ser clara e inequívoca (inclusive a partir da especificação de autoria no arquivo DESCRIPTION). Quando o código for copiado (ou derivado) do trabalho de outros (inclusive do próprio R), deve-se tomar cuidado para que quaisquer declarações de direitos autorais/licenças sejam preservadas e a autoria não seja deturpada.</p>
+<p>De preferência, um campo ‘Authors@R’ seria usado com funções ‘ctb’ para quem tem a autoria deste código. Como alternativa, o campo “Autor” deve listar essas pessoas como colaboradoras.</p>
+<p>Quando os direitos autorais forem detidos por uma entidade que não seja as pessoas autoras do pacote, isso deve ser indicado preferencialmente por meio das funções ‘cph’ no campo ‘Authors@R’ ou usando um campo ‘Copyright’ (se necessário, referindo-se a um arquivo inst/COPYRIGHTS).</p>
+<p>As marcas registradas devem ser respeitadas.</p>
+</blockquote>
+</section></section><section id="licence" class="level2" data-number="1.10"><h2 data-number="1.10" class="anchored" data-anchor-id="licence">
+<span class="header-section-number">1.10</span> Licença</h2>
+<p>O pacote precisa ter uma licença aceita pelo <a href="https://svn.r-project.org/R/trunk/share/licenses/license.db">CRAN</a> ou <a href="https://opensource.org/licenses">OSI</a>. O <a href="https://r-pkgs.org/description.html#sec-description-authors-at-r">livro <em>R packages</em> (em inglês)</a> inclui uma seção útil <a href="https://r-pkgs.org/license.html">sobre licenças</a>.</p>
+<p>Se o seu pacote agrupar código de outras fontes, você também precisará reconhecer a autoria do código original no seu arquivo DESCIPTION, geralmente com uma função de detentor de direitos autorais: <code>role = "cph"</code>. Para saber como atualizar seu arquivo DESCRIPTION, consulte <a href="https://r-pkgs.org/description.html#sec-description-authors-at-r">o livro <em>R packages</em> (em inglês)</a>.</p>
+</section><section id="testing" class="level2" data-number="1.11"><h2 data-number="1.11" class="anchored" data-anchor-id="testing">
+<span class="header-section-number">1.11</span> Testes</h2>
+<ul>
+<li><p>Todos os pacotes devem passar nas verificações do <code>R CMD check</code>/<code>devtools::check()</code> em todas as principais plataformas.</p></li>
+<li><p>Todos os pacotes devem ter um conjunto de testes que abranja a funcionalidade principal do pacote. Os testes também devem abranger o comportamento do pacote em caso de erros.</p></li>
+<li><p>É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. Se a cobertura de testes em seu pacote está abaixo de 75%, provavelmente exigirá testes adicionais ou explicações antes de ser enviado para revisão.</p></li>
+<li><p>Recomendamos o uso do <a href="https://testthat.r-lib.org/">pacote testthat</a> para escrever testes. Uma alternativa é o <a href="https://journal.r-project.org/archive/2021/RJ-2021-056/index.html">tinytest</a>.</p></li>
+<li><p>Se esforce para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e programe <em>defensivamente</em> contra essas falhas. <a href="https://r-pkgs.org/tests.html">Mais informações sobre testes</a>.</p></li>
+<li><p>Os testes devem ser fáceis de entender e ser tão autocontidos quanto possível. Ao usar o testthat, evite usar código fora do <code>test_that()</code> (como etapas de pré-processamento). Recomendamos a leitura da seção <a href="https://r-pkgs.org/testing-design.html#sec-testing-design-principles"><em>“high-level principles for testing”</em> (princípios de alto nível para testes)</a> no <em>livro R Packages</em>.</p></li>
+<li><p>Os pacotes com aplicativos Shiny devem usar uma estrutura de testes unitários, como <a href="https://rstudio.github.io/shinytest2/"><code>shinytest2</code></a> ou <a href="https://rstudio.github.io/shinytest/articles/shinytest.html"><code>shinytest</code></a> para testar se as interfaces interativas se comportam conforme o esperado.</p></li>
+<li><p>Para testar as funções que criam gráficos, sugerimos usar o <a href="https://vdiffr.r-lib.org/">vdiffr</a>, uma extensão do pacote testthat que se baseia em <a href="https://testthat.r-lib.org/articles/snapshotting.html">testes com snapshots do testthat</a>.</p></li>
+<li>
+<p>Se o seu pacote interagir com recursos da Web (APIs da Web e outras fontes de dados na Web), você poderá achar o livro <a href="https://books.ropensci.org/http-testing/"><em>HTTP testing in R</em>, de Scott Chamberlain e Maëlle Salmon</a> relevante. Alguns pacotes que ajudam nos testes de HTTP (e seus clientes HTTP correspondentes) são:</p>
+<ul>
+<li>
+<a href="https://enpiar.com/httptest2/">httptest2</a> (<a href="https://httr2.r-lib.org/">httr2</a>);</li>
+<li>
+<a href="https://enpiar.com/r/httptest/">httptest</a> (<a href="https://httr.r-lib.org/">httr</a>);</li>
+<li>
+<a href="https://docs.ropensci.org/vcr/">vcr</a> (<a href="https://httr.r-lib.org/">httr</a>, <a href="https://docs.ropensci.org/crul">crul</a>);</li>
+<li>
+<a href="https://webfakes.r-lib.org/">webfakes</a> (<a href="https://httr.r-lib.org/">httr</a>, <a href="https://httr2.r-lib.org/">httr2</a>, <a href="https://docs.ropensci.org/crul">crul</a>, <a href="https://jeroen.r-universe.dev/curl#">curl</a>).</li>
+</ul>
+</li>
+<li><p>O pacote testthat tem uma função <code>skip_on_cran()</code> que você pode usar para não executar testes no CRAN. Recomendamos usar isso em todas as funções que são chamadas de API, pois é muito provável que elas falhem no CRAN. Esses testes ainda devem ser executados na integração contínua. Observe que a partir do testthat 3.1.2 <code>skip_if_offline()</code> chama automaticamente <code>skip_on_cran()</code>. Mais informações sobre em <a href="https://books.ropensci.org/http-testing/cran-preparedness.html"><em>CRAN preparedness for API wrappers</em> (Preparação do CRAN para utilização de APIs)</a>.</p></li>
+<li><p>Se o seu pacote interagir com um banco de dados, você poderá achar o pacote <a href="https://docs.ropensci.org/dittodb">dittodb</a> útil.</p></li>
+<li><p>Depois de configurar a <a href="pkg_ci.pt.html">integração contínua (CI)</a> use o relatório de cobertura de código do seu pacote (veja <a href="pkg_ci.pt.html#coverage">esta seção do nosso livro</a>) para identificar linhas não testadas e adicionar mais testes.</p></li>
+<li><p>Mesmo que você use a <a href="pkg_ci.pt.html">integração contínua</a>, recomendamos que você execute testes localmente antes de enviar seu pacote (talvez seja necessário definir <code>Sys.setenv(NOT_CRAN="true")</code>).</p></li>
+</ul></section><section id="examples" class="level2" data-number="1.12"><h2 data-number="1.12" class="anchored" data-anchor-id="examples">
+<span class="header-section-number">1.12</span> Exemplos</h2>
+<ul>
+<li><p>Inclua exemplos abrangentes na documentação. Além de demonstrar como usar o pacote, eles podem funcionar como uma maneira fácil de testar a funcionalidade do pacote antes de haver testes adequados. No entanto, lembre-se de que exigimos testes em pacotes contribuídos.</p></li>
+<li><p>Você pode executar exemplos com <code>devtools::run_examples()</code>. Observe que quando você executa o R CMD CHECK ou equivalente (por exemplo, <code>devtools::check()</code>), seus exemplos que não estão incluídos no <code>\dontrun{}</code> ou <code>\donttest{}</code> são executados. Consulte a seção <a href="https://roxygen2.r-lib.org/articles/rd.html#functions">tabela de resumo</a> na documentação do roxygen2.</p></li>
+<li><p>Para evitar que os exemplos sejam executados no CRAN (por exemplo, se requerem autenticação), você precisa usar <code>\dontrun{}</code>. No entanto, para uma primeira submissão, o CRAN não permitirá que você pule todos os exemplos. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo, ou envolver o código de exemplo com <code>try()</code>. Consulte também a etiqueta <code>@exampleIf</code> do roxygen2.</p></li>
+<li><p>Além de executar exemplos localmente em seu próprio computador, é altamente recomendável que você execute exemplos em um dos <a href="pkg_ci.pt.html">sistemas de integração contínua</a>. Mais uma vez, os exemplos que não estão incluídos em <code>\dontrun{}</code> ou <code>\donttest{}</code> serão executados, mas para aqueles que estão, você pode configurar suas compilações de integração contínua para executá-los por meio dos argumentos de verificação do R CMD <code>--run-dontrun</code> e/ou <code>--run-donttest</code>.</p></li>
+</ul></section><section id="pkgdependencies" class="level2" data-number="1.13"><h2 data-number="1.13" class="anchored" data-anchor-id="pkgdependencies">
+<span class="header-section-number">1.13</span> Dependências de pacotes</h2>
+<ul>
+<li><p>Em geral, é melhor ter menos dependências.</p></li>
+<li><p>Considere as vantagens e desvantagens envolvidas no fato de depender de um pacote. Por um lado, o uso de dependências reduz o esforço de codificação e pode se basear em funcionalidades úteis desenvolvidas por outras pessoas, especialmente se a dependência executar tarefas complexas e tiver alto desempenho, e/ou for bem avaliada e testada. Por outro lado, ter muitas dependências sobrecarrega a pessoa mantenedora ao ter que acompanhar as alterações nesses pacotes, arriscando a sustentabilidade de longo prazo do seu pacote. Isso também aumenta o tempo e o tamanho da instalação, o que leva em consideração principalmente o seu ciclo de desenvolvimento e o de outras pessoas, bem como os sistemas de compilação automatizados. Pacotes “pesados” - aqueles com muitas dependências e aqueles com grandes quantidades de código compilado - aumentam esse custo.</p></li>
+<li>
+<p>As abordagens para reduzir as dependências incluem:</p>
+<ul>
+<li>
+<p>Se você usar apenas algumas funções de uma dependência grande ou pesada, poderá copiá-las para seu próprio pacote. (Consulte <a href="#authorship-included-code">a seção <em>Autoria</em> acima</a> para saber como reconhecer a autoria original do código copiado). Por outro lado, funções complexas com muitos casos especiais (por exemplo, analisadores sintáticos) exigem testes e verificações consideráveis.</p>
+<ul>
+<li>
+<p>Um exemplo comum disso é o retorno de “tibbles” no estilo tidyverse em funções do pacote que fornecem dados. É possível evitar o uso do pacote <strong>tibble</strong> retornando um tibble criado pela modificação de um <em>data.frame</em> da seguinte forma:</p>
+<pre><code>class(df) &lt;- c("tbl_df", "tbl", "data.frame") </code></pre>
+<p>(Observe que essa abordagem deve ser usada e testada com muito cuidado, especialmente porque pode quebrar o comportamento esperado de objetos reclassificados).</p>
+</li>
+</ul>
+</li>
+<li><p>Certifique-se de que esteja usando o pacote em que a função está definida, e não aquele em que ela é reexportada. Por exemplo, muitas funções do <strong>devtools</strong> podem ser encontradas em pacotes especializados menores, como <strong>sessioninfo</strong>. A função <code>%&gt;%</code> deve ser importada do pacote <strong>magrittr</strong> onde ela é definida, em vez do mais pesado <strong>dplyr</strong> , que a reexporta.</p></li>
+<li><p>Algumas dependências são preferidas porque fornecem uma interpretação mais fácil de nomes de funções e sintaxe mais fáceis do que as soluções básicas do R. Se esse for o principal motivo para usar uma função em uma dependência pesada, considere a possibilidade de envolver a abordagem do R básico em uma função interna bem nomeada em seu pacote. Veja, por exemplo, o <a href="https://github.com/r-lib/rlang/blob/9b50b7a86698332820155c268ad15bc1ed71cc03/R/standalone-purrr.R">script em R do rlang que fornece funções com uma sintaxe semelhante às funções purrr</a>.</p></li>
+<li><p>Se as dependências tiverem funcionalidades sobrepostas, verifique se você pode confiar em apenas uma delas.</p></li>
+<li><p>Mais dicas de gerenciamento de dependências podem ser encontradas no capítulo <a href="https://r-pkgs.org/dependencies-mindset-background.html"><em>“Dependencies: Mindset and Background”</em> do livro <em>R packages</em> (em inglês)</a> e em um <a href="https://recology.info/2018/10/limiting-dependencies/">post do Scott Chamberlain</a>.</p></li>
+</ul>
+</li>
+<li><p>Usar <code>Imports</code> em vez de <code>Depends</code> para pacotes que fornecem funções de outros pacotes. Certifique-se de listar os pacotes usados para o teste (<code>testthat</code>) e a documentação (<code>knitr</code>, roxygen2) em seu <code>Suggests</code> das dependências do pacote (se você usar <code>usethis</code> para adicionar a infraestrutura de teste via <a href="https://usethis.r-lib.org/reference/use_testthat.html"><code>usethis::use_testthat()</code></a> ou uma vinheta via <a href="https://usethis.r-lib.org/reference/use_vignette.html">usethis::use_vignette()</a>, os pacotes necessários serão adicionados ao DESCRIPTION). Se você usar algum pacote nos exemplos ou testes do seu pacote, certifique-se de listá-lo em <code>Suggests</code> se ainda não estiver listado em <code>Imports</code>.</p></li>
+<li><p>Verifique o status de desenvolvimento de todas as dependências que você adicionar. Especialmente para pacotes hospedados no GitHub, é muito útil verificar se eles são mantidos ativamente e se <a href="https://ropensci.org/blog/2022/07/01/evaluating-github-activity-for-contributors/">não foram arquivados</a>.</p></li>
+<li>
+<p>Se o seu pacote (não do Bioconductor) depender de pacotes do Bioconductor, certifique-se de que as instruções de instalação no README e na vinheta sejam claras o suficiente, mesmo para uma pessoa não esteja familiarizada com o ciclo de publicação do Bioconductor.</p>
+<ul>
+<li><p>É necessário usar o <a href="https://www.bioconductor.org/install/index.html#why-biocmanagerinstall"><code>BiocManager</code></a> (recomendado)? Documente isso.</p></li>
+<li><p>A instalação automática de pacotes do Bioconductor usando <code>install.packages()</code> é suficiente? Nesse caso, mencione que é necessário executar <code>setRepositories()</code> se ainda não tiver definido os repositórios necessários do Bioconductor.</p></li>
+<li><p>Se o seu pacote depender do Bioconductor após uma determinada versão, mencione isso na DESCRIPTION e nas instruções de instalação.</p></li>
+</ul>
+</li>
+<li><p>Especificar dependências mínimas (por exemplo <code>glue (&gt;= 1.3.0)</code> em vez de apenas <code>glue</code>) deve ser uma escolha consciente. Se tiver certeza de que seu pacote quebrará abaixo de uma determinada versão de dependência, especifique-a explicitamente. Mas se não souber, então não há necessidade de especificar uma dependência mínima. Nesse caso, quando um usuário relatar um bug que esteja explicitamente relacionado a uma versão mais antiga de uma dependência, resolva-o. Um exemplo de prática ruim seria, ao desenvolver o pacote, considerar as versões atuais de suas dependências como sendo a versão mínima. Isso forçaria desnecessariamente todos a atualizar (causando problemas com outros pacotes) quando não há um bom motivo por trás dessa escolha de versão.</p></li>
+<li><p>Na maioria dos casos em que é necessário expor as funções das dependências, você deve importar e reexportar essas funções individuais em vez de listá-las no campo <code>Depends</code>. Por exemplo, se as funções do seu pacote produzem objetos do tipo <code>raster</code>, você pode reexportar do pacote <strong>raster</strong> apenas as funções de impressão e plotagem.</p></li>
+<li>
+<p>Se seu pacote usar uma dependência de <em>sistema</em>, você deve</p>
+<ul>
+<li><p>Indicá-la no DESCRIPTION;</p></li>
+<li><p>Verifique se ele está listado por <a href="https://github.com/r-hub/sysreqsdb#sysreqs"><code>sysreqsdb</code></a> para permitir que ferramentas automáticas o instalem, ou <a href="https://github.com/r-hub/sysreqsdb#contributing">envie uma contribuição</a> caso contrário;</p></li>
+<li><p>Verificar se está listado em um script <code>configure</code> (<a href="https://github.com/ropensci/magick/blob/c116b2b8505f491db72a139b61cd543b7a2ce873/DESCRIPTION#L19">exemplo</a>) e que fornecerá uma mensagem de erro útil caso não seja encontrado (<a href="https://github.com/cran/webp/blob/master/configure">exemplo</a>). Os scripts <code>configure</code> podem ser desafiadores, pois geralmente exigem soluções improvisadas para fazer com que as diversas dependências do sistema funcionem em todos os sistemas. Use exemplos (<a href="https://github.com/search?q=org%3Acran+anticonf&amp;type=Code">mais aqui</a>) como ponto de partida, mas observe que é comum encontrar bugs e casos extremos e, muitas vezes, violar as políticas do CRAN.</p></li>
+</ul>
+</li>
+</ul></section><section id="recommended-scaffolding" class="level2" data-number="1.14"><h2 data-number="1.14" class="anchored" data-anchor-id="recommended-scaffolding">
+<span class="header-section-number">1.14</span> Estruturas recomendadas</h2>
+<ul>
+<li><p>Para solicitações HTTP, recomendamos o uso dos pacotes <a href="https://httr2.r-lib.org">httr2</a>, <a href="https://httr.r-lib.org">httr</a>, <a href="https://jeroen.r-universe.dev/curl#">curl</a> ou <a href="http://docs.ropensci.org/crul/">crul</a> ao invés do <a href="https://cran.rstudio.com/web/packages/RCurl/">RCurl</a>. Se você gosta de clientes de baixo nível para HTTP, o curl é melhor, enquanto o httr2, o httr e o crul são melhores para acesso de alto nível.</p></li>
+<li><p>Para converter JSON (<em>parsing</em>) , use <a href="https://github.com/jeroen/jsonlite">jsonlite</a> em vez de <a href="https://cran.rstudio.com/web/packages/rjson/">rjson</a> ou <a href="https://cran.rstudio.com/web/packages/RJSONIO/">RJSONIO</a>.</p></li>
+<li><p>Para converter, criar e manipular XML, recomendamos enfaticamente o pacote <a href="https://cran.rstudio.com/web/packages/xml2/">xml2</a> para a maioria dos casos. <a href="https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66">Você pode consultar as observações de Daniel Nüst sobre a migração de XML para xml2 (em inglês)</a>.</p></li>
+<li><p>Para dados espaciais, o pacote <a href="https://github.com/edzer/sp/">sp</a> deve ser considerado obsoleto em favor do pacote <a href="https://r-spatial.github.io/sf/">sf</a> e os pacotes <a href="https://cran.r-project.org/web/packages/rgdal/index.html">rgdal</a>, <a href="https://cran.r-project.org/web/packages/maptools/index.html">maptools</a> e <a href="https://cran.r-project.org/web/packages/rgeos/index.html">rgeos</a> foram aposentados em 2023. Recomendamos o uso do conjunto de ferramentas espaciais desenvolvidas pelas comunidades <a href="https://github.com/r-spatial">r-spatial</a> e <a href="https://github.com/rspatial">rspatial</a>. Veja <a href="https://github.com/ropensci/software-review-meta/issues/47">esta edição do GitHub</a> para discussões relevantes.</p></li>
+</ul></section><section id="version-control" class="level2" data-number="1.15"><h2 data-number="1.15" class="anchored" data-anchor-id="version-control">
+<span class="header-section-number">1.15</span> Controle de versão</h2>
+<ul>
+<li><p>Os arquivos de origem do seu pacote devem estar sob controle de versão, mais especificamente rastreados com <a href="https://happygitwithr.com/">Git</a>. Você pode achar o <a href="https://docs.ropensci.org/gert/">pacote gert</a> relevante, bem como algumas das funções do <a href="https://usethis.r-lib.org/reference/index.html#section-git-and-github">pacote usethis relacionadas ao Git/GitHub</a>; no entanto, você pode usar o git como quiser.</p></li>
+<li><p>O nome da ramificação (<em>branch</em>) padrão não deve ser <code>master</code>, pois isso pode ser ofensivo para algumas pessoas. Consulte a seção <a href="https://sfconservancy.org/news/2020/jun/23/gitbranchname/">do projeto Git e da Software Freedom Conservancy</a> para obter mais contexto. É uma prática geral nomear uma ramificação padrão <code>main</code>, embora outros nomes também possam ser usados. Consulte a postagem do blog do tidyverse <a href="https://www.tidyverse.org/blog/2021/10/renaming-default-branch/">“Renomeando a ramificação padrão”</a> para saber mais sobre como usar essa funcionalidade para ajudar a renomear as ramificações padrão.</p></li>
+<li><p>Certifique-se de listar arquivos desnecessários, como <code>.DS_Store</code>, no arquivo .gitignore. Você pode achar a função <a href="https://usethis.r-lib.org/reference/git_vaccinate.html"><code>usethis::git_vaccinate()</code></a> e o <a href="https://docs.ropensci.org/gitignore/">pacote gitignore</a> relevantes.</p></li>
+<li><p>Uma seção posterior deste livro contém algumas <a href="#gitflow">dicas de fluxo de trabalho com git</a>.</p></li>
+</ul></section><section id="crangotchas" class="level2" data-number="1.16"><h2 data-number="1.16" class="anchored" data-anchor-id="crangotchas">
+<span class="header-section-number">1.16</span> Problemas diversos do CRAN</h2>
+<p>Esta é uma coleção de problemas do CRAN que vale a pena evitar desde o início.</p>
+<ul>
+<li>Certifique-se de que as palavras do título do seu pacote comecem com letra maiúscula (o que em inglês é chamado de <em><a href="https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case">Title Case</a></em>.</li>
+<li>Não coloque um ponto final no final do título.</li>
+<li>Não coloque “no R” ou “com R” em seu título, pois isso é óbvio nos pacotes hospedados no CRAN. Se, mesmo assim, quiser que essas informações sejam exibidas em seu site, verifique a <a href="https://pkgdown.r-lib.org/reference/build_home.html#yaml-config-home">documentação do <code>pkgdown</code></a> para saber como substituir isso.</li>
+<li>Evite iniciar a descrição com o nome do pacote ou “Este pacote …”.</li>
+<li>Certifique-se de incluir links para sites se você envolver uma API da Web, extrair dados de um site etc. na seção <code>Description</code> do seu arquivo DESCRIPTION. Os URLs devem ser colocados entre colchetes angulares (<code>&lt;&gt;</code>), por exemplo <code>&lt;https://www.r-project.org&gt;</code>.</li>
+<li>Em ambos os <code>Title</code> e <code>Description</code>, os nomes de pacotes ou outros softwares externos devem ser colocados entre aspas simples (por exemplo, <em>Integração do ‘Rcpp’ para a biblioteca de álgebra linear com modelo ‘Armadillo’</em>).</li>
+<li>Evite testes e exemplos que sejam demorados. Considere usar <code>testthat::skip_on_cran</code> nos testes para pular coisas que demoram muito, mas ainda assim testá-las localmente e em <a href="pkg_ci.pt.html">integração contínua</a>.</li>
+<li>Inclua arquivos de nível superior, como <code>paper.md</code> e arquivos de configuração de integração contínua, no arquivo <code>.Rbuildignore</code>.</li>
+</ul>
+<p>Para obter mais dicas, consulte a lista colaborativa mantida pelo ThinkR, <a href="https://github.com/ThinkR-open/prepare-for-cran">“Prepare-se para o CRAN”</a>.</p>
+<section id="cranchecks" class="level3" data-number="1.16.1"><h3 data-number="1.16.1" class="anchored" data-anchor-id="cranchecks">
+<span class="header-section-number">1.16.1</span> Verificações do CRAN</h3>
+<p>Quando seu pacote estiver no CRAN, ele será <a href="https://blog.r-hub.io/2019/04/25/r-devel-linux-x86-64-debian-clang/#cran-checks-101">checado regularmente em diferentes plataformas</a>. As falhas nessas verificações, quando não são falsos positivos, podem levar a equipe do CRAN a entrar em contato com você. Você pode monitorar o estado das verificações do CRAN por meio</p>
+<ul>
+<li><p>do <a href="https://fmichonneau.github.io/foghorn/"><code>foghorn</code> pacote</a>.</p></li>
+<li><p>das <a href="https://github.com/r-hub/cchecksbadges">etiquetas de checagem do CRAN (<em>“CRAN checks Badges”</em>)</a>.</p></li>
+</ul></section></section><section id="bioconductor-gotchas" class="level2" data-number="1.17"><h2 data-number="1.17" class="anchored" data-anchor-id="bioconductor-gotchas">
+<span class="header-section-number">1.17</span> Problemas do Bioconductor</h2>
+<p>Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote estiver no Bioconductor, consulte as <a href="https://www.bioconductor.org/developers/package-guidelines/">Diretrizes de empacotamento do Bioconductor</a> e o <a href="https://contributions.bioconductor.org/">livro de desenvolvimento atualizado</a>.</p>
+</section><section id="further-guidance" class="level2" data-number="1.18"><h2 data-number="1.18" class="anchored" data-anchor-id="further-guidance">
+<span class="header-section-number">1.18</span> Orientações adicionais</h2>
+<ul>
+<li><p>Se você estiver enviando um pacote para a rOpenSci por meio do <a href="https://github.com/ropensci/software-review">repositório de revisão de software</a>, poderá encaminhar outras perguntas à equipe da rOpenSci usando as <em>issues</em>.</p></li>
+<li><p>Leia o <a href="softwarereview_author.pt.html">guia de autoria</a>.</p></li>
+<li><p>Leia, incorpore e aja de acordo com os conselhos do <a href="maintenance_collaboration.pt.html">capítulo <em>Guia de Colaboração</em></a>.</p></li>
+</ul>
+<section id="learning-about-package-development" class="level3" data-number="1.18.1"><h3 data-number="1.18.1" class="anchored" data-anchor-id="learning-about-package-development">
+<span class="header-section-number">1.18.1</span> Aprendendo sobre o desenvolvimento de pacotes</h3>
+<section id="books" class="level4" data-number="1.18.1.1"><h4 data-number="1.18.1.1" class="anchored" data-anchor-id="books">
+<span class="header-section-number">1.18.1.1</span> Livros</h4>
+<ul>
+<li><p>O livro <a href="https://r-pkgs.org/"><em>R packages</em> (Pacotes em R) escrito por Hadley Wickham e Jenny Bryan</a> é um recurso excelente e de fácil leitura sobre o desenvolvimento de pacotes, está disponível <a href="https://r-pkgs.org/">gratuitamente on-line</a> (e pode ser comprado <a href="https://www.oreilly.com/library/view/r-packages/9781491910580/">impresso</a>).</p></li>
+<li><p><a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html"><em>Writing R Extensions</em> (Escrevendo extensões do R)</a> (em inglês) é a referência canônica, geralmente a mais atualizada, para a criação de pacotes em R.</p></li>
+<li><p>O livro <a href="https://bookdown.org/rdpeng/RProgDA/"><em>Mastering Software Development in R</em> (Dominando o desenvolvimento de software em R) por Roger D. Peng, Sean Kross e Brooke Anderson</a>.</p></li>
+<li><p><a href="https://adv-r.hadley.nz/"><em>Advanced R</em> (R avançado) por Hadley Wickham</a>.</p></li>
+<li><p><a href="https://style.tidyverse.org/"><em>Tidyverse style guide</em> (Guia de estilo do Tidyverse)</a>.</p></li>
+<li><p><a href="https://design.tidyverse.org/"><em>Tidyverse design guide</em> (Guia de design do Tidyverse)</a> (em elaboração) e o <a href="http://tidydesign.substack.com/">boletim de notícias (<em>newsletter</em>)</a> que o acompanha.</p></li>
+</ul></section><section id="tutorials" class="level4" data-number="1.18.1.2"><h4 data-number="1.18.1.2" class="anchored" data-anchor-id="tutorials">
+<span class="header-section-number">1.18.1.2</span> Tutoriais</h4>
+<ul>
+<li><p><a href="https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/"><em>Your first R package in 1 hour</em> (Seu primeiro pacote R em 1 hora)</a> por Shannon Pileggi.</p></li>
+<li><p><a href="https://www.emilhvitfeldt.com/post/2018-09-02-usethis-workflow-for-package-development/">essa descrição de fluxo de trabalho por Emil Hvitfeldt</a>.</p></li>
+<li><p><a href="https://www.mjdenny.com/R_Package_Pictorial.html">Esta ilustração de Matthew J Denny</a>.</p></li>
+</ul></section><section id="blogs" class="level4" data-number="1.18.1.3"><h4 data-number="1.18.1.3" class="anchored" data-anchor-id="blogs">
+<span class="header-section-number">1.18.1.3</span> Blogs</h4>
+<ul>
+<li><p><a href="https://blog.r-hub.io/post">Blog do R-hub</a>.</p></li>
+<li><p>Algumas postagens do <a href="https://ropensci.org/archive/">blog da rOpenSci</a>, por exemplo <a href="https://ropensci.org/blog/2019/12/08/precompute-vignettes/"><em>How to precompute package vignettes or pkgdown articles</em> (“Como pré-computar vinhetas de pacotes ou artigos pkgdown”)</a>.</p></li>
+<li><p>Seção <em>Package Development Corner</em> (“Espaço de desenvolvimento de pacotes”) do <a href="https://ropensci.org/news/">boletim informativo da rOpenSci</a>.</p></li>
+<li><p>Algumas postagens do <a href="https://www.tidyverse.org">blog do tidyverse</a>, por exemplo <a href="https://www.tidyverse.org/blog/2022/02/upkeep-testthat-3/"><em>Upgrading to testthat edition 3</em> (“Atualizando para o testthat edition 3”)</a>.</p></li>
+</ul></section><section id="moo-cs" class="level4" data-number="1.18.1.4"><h4 data-number="1.18.1.4" class="anchored" data-anchor-id="moo-cs">
+<span class="header-section-number">1.18.1.4</span> MOOCs</h4>
+<p>Existe um <a href="https://fr.coursera.org/specializations/r">especialização do Coursera correspondente ao livro escrito por Roger Peng, Sean Kross e Brooke Anderson</a>, com um curso específico sobre pacotes R.</p>
+
+
+</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/devdevguide\.netlify\.app\/pt");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./preface.pt.html" class="pagination-link" aria-label="Prefácio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefácio</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./pkg_ci.pt.html" class="pagination-link" aria-label="Práticas Recomendadas de Integração Contínua">
+        <span class="nav-page-text"><span class="chapter-number">2</span>  <span class="chapter-title">Práticas Recomendadas de Integração Contínua</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul>
+<li><a href="https://github.com/ropensci/dev_guide/edit/main/pkg_building.pt.Rmd" class="toc-action"><i class="bi bi-github"></i>Editar essa página</a></li>
+<li><a href="https://github.com/ropensci/dev_guide/issues/new" class="toc-action"><i class="bi empty"></i>Criar uma issue</a></li>
+</ul></div></div></div></footer>
+</body>
+</html>
