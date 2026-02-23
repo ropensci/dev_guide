@@ -56,7 +56,7 @@ Te deseamos lo mejor,
 - Añadir a [ archivo "team.json" del sitio web](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) con `"editor": true` y también `"stats": true` para editores de estadísticas.
   Eso añadirá automáticamente nuevos editores al equipo editorial que se muestra en la página [sitio web de rOpenSci](https://ropensci.org/software-review/).
 
-- Informa al gestor de la comunidad rOpenSci para que pueda preparar una entrada introductoria en el blog.
+- Informa a quien gestiona la comunidad de rOpenSci para que pueda preparar una entrada introductoria en el blog.
 
 - Solicita a la nueva persona que active [la autenticación de dos factores (2FA) en GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
 
