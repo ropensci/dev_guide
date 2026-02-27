@@ -74,7 +74,7 @@ Te deseamos lo mejor,
 
 - Agradece su trabajo.
 
-- Informa a quien maneja la comunidad de rOpenSci o a algún otro miembro del personal.
+- Informa a quien maneja la comunidad de rOpenSci o a algún otro miembro del personal para anunciarlo en nuestro newsletter mensual y agradecerle.
 
 - Remueve a esta persona del canal "editors-only" y del equipo Slack de personas editoras.
 
