@@ -74,7 +74,7 @@ Best,
 
 - Thank them for their work!
 
-- Inform rOpenSci community manager or other staff members.
+- Inform rOpenSci community manager or other staff members, to ensure our newsletter will announce their departure, and thank them.
 
 - Remove them from the "editors-only" channel and the editors Slack team.
 
