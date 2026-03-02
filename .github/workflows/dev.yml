@@ -48,7 +48,7 @@ jobs:
         run: Rscript -e 'file.copy(from = "_book/es/Paquetes-de-rOpenSci--Desarrollo,-mantenimiento-y-revisión-por-pares.pdf", to = "_book/es/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/es/images")'
 
       - name: Move Portuguese files
-        run: Rscript -e 'file.copy(from = dir("_book/pt", pattern = "*.pdf")[1], to = "_book/pt/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/pt/images")'
+        run: Rscript -e 'file.copy(from = "_book/pt/Pacotes-rOpenSci--Desenvolvimento,-manutenção-e-revisão-por-pares.pdf", to = "_book/pt/ropensci-dev-guide.pdf")' -e 'purrr::walk(list.files("images", full.names = TRUE), file.copy, to = "_book/pt/images")'
 
       - name: git config
         run: |
