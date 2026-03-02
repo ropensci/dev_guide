@@ -74,7 +74,7 @@ Atenciosamente,
 
 - Agradeça o(a) editor(a) por seu trabalho!
 
-- Informe o(a) gerente da comunidade rOpenSci ou outros membros da equipe.
+- Informe o(a) gerente da comunidade rOpenSci ou outros membros da equipe, para garantir que nossa newsletter anuncie sua saída, e para agradecer a essa pessoa.
 
 - Remova-os do canal "editors-only" e da equipe de editores do Slack.
 
