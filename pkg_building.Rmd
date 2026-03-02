@@ -105,7 +105,7 @@ For more information refer to the blog post [Why You Should (or Shouldn't) Build
 
 - CRAN requires CITATION files to be declared as [`bibentry` items](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/bibentry.html), and not in the previously-accepted form of [`citEntry()`](https://stat.ethz.ch/R-manual/R-devel/library/utils/html/citEntry.html).
 
-- If you archive each release of your GitHub repo on Zenodo, add the [Zenodo top-level DOI](https://help.zenodo.org/#versioning) to the CITATION file.
+- If you archive each release of your GitHub repo on Zenodo, add the [Zenodo concept DOI](https://zenodo.org/help/versioning) to the CITATION file.
 
 - If one day [**after** review at rOpenSci](#authors-guide) you publish a software publication about your package, add it to the CITATION file.
 
