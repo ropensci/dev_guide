@@ -12,7 +12,7 @@ Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y con el o
 ¡Sé amable! y comportate con respeto.
 Consulta nuestra guía para quienes realizan una revisión y el [código de conducta] (https://ropensci.org/code-of-conduct/) para más información.**
 
-_Si utilizas nuestros estándares, listas de tareas, etc. al revisar software en otro lugar, cuenta que estos materiales proceden de rOpenSci a quienes reciben la revisión (por ejemplo, quien edita la revista, estudiantes, colegas durante una revisión interna de código), y también cuéntanoslo en [nuestro foro público](https://discuss.ropensci.org/c/usecases), o [por correo electrónico](https://ropensci.org/contact/) si prefieres comentarlo en forma privada._
+_Si utilizas nuestros estándares, listas de tareas, etc. al revisar software en otro lugar, cuenta que estos materiales proceden de rOpenSci a quienes reciben la revisión (por ejemplo, quien edita la revista, estudiantes, colegas durante una revisión interna de código), y también cuéntanoslo en [nuestro foro público](https://ropensci.org/es/usecases/), o [por correo electrónico](https://ropensci.org/contact/) si prefieres comentarlo en forma privada._
 ```
 
 ## Voluntariarte para revisar {#volunteering-as-a-reviewer}
@@ -101,7 +101,7 @@ Ten en cuenta que si el paquete no se envía a través de la *branch* principal 
 
 ### Devoluciones sobre el proceso {#feedback-on-the-process}
 
-Te animamos a que preguntes y opines sobre el proceso de revisión en nuestro [foro](https://discuss.ropensci.org).
+Te animamos a que preguntes y opines sobre el proceso de revisión en https://github.com/ropensci/software-review-meta/issues
 
 ## Enviar la revisión  {#submitreview}
 

@@ -12,7 +12,7 @@ Consulte também a postagem do blog [*Marketing Ideas For Your Package*](https:/
 Ajudaremos você a promover o seu pacote, mas aqui estão mais algumas coisas que você deve ter em mente.
 ```
 
-- Se você souber de um caso de uso de seu pacote, incentive o autor a publicar o link em nosso [fórum de discussão na categoria *Use Cases*](https://discuss.ropensci.org/c/usecases), [para um post no Mastodon da rOpenSci e possível inclusão no boletim quinzenal da rOpenSci](https://discuss.ropensci.org/t/about-the-usecases-category/33). Também recomendamos que você adicione um link para o caso de uso em uma seção "use cases in the wild" do seu README.
+- Se você souber de um caso de uso de seu pacote, incentive o autor a publicar o link em nosso [site](https://ropensci.org/usecases/), para um post no Mastodon da rOpenSci e possível inclusão no boletim quinzenal da rOpenSci. Também recomendamos que você adicione um link para o caso de uso em uma seção "use cases in the wild" do seu README.
 
 - Quando você [liberar](#releasing) uma nova versão do seu pacote ou você lançá-lo pela primeira vez no CRAN,
   

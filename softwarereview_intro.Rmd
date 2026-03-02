@@ -5,7 +5,7 @@ This chapter contains a [general intro](#whatissoftwarereview) to our software p
 
 Our system has recently been expanded to [statistical software peer-review](https://ropensci.org/stat-software-review/).
 
-_If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in [our public forum](https://discuss.ropensci.org/c/usecases), or [privately by email](https://ropensci.org/contact/)._ 
+_If you use our standards/checklists etc. when reviewing software elsewhere, do tell the recipients (e.g. journal editors, students, internal code review) that they came from rOpenSci, and tell us in [our public forum](https://ropensci.org/usecases/), or [privately by email](https://ropensci.org/contact/)._ 
 ```
 
 ## What is rOpenSci Software Peer Review? {#whatissoftwarereview}

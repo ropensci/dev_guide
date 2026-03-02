@@ -6,7 +6,7 @@ The package, [PACKAGE] by [AUTHOR(S)], does [FUNCTION]. You can find it on GitHu
 
 If you accept, note that we ask reviewers to complete reviews in three weeks. (We’ve found it takes a similar amount of time to review a package as an academic paper.)
 
-Our [reviewers guide] details what we look for in a package review, and includes links to example reviews. Our standards are detailed in our [packaging guide], and we provide a reviewer [template] for you to use. Please make sure you do not have a [conflict of interest](https://devguide.ropensci.org/policies.html#coi) preventing you from reviewing this package. If you have questions or feedback, feel free to ask me or post to the [rOpenSci forum].
+Our [reviewers guide] details what we look for in a package review, and includes links to example reviews. Our standards are detailed in our [packaging guide], and we provide a reviewer [template] for you to use. Please make sure you do not have a [conflict of interest](https://devguide.ropensci.org/policies.html#coi) preventing you from reviewing this package. If you have questions or feedback, feel free to ask me.
 
 rOpenSci’s community is our best asset. 
 We aim for reviews to be open, non-adversarial, and focused on improving software quality. 
@@ -30,4 +30,3 @@ Sincerely,
 [reviewers guide]: https://devguide.ropensci.org/reviewerguide.html
 [packaging guide]: https://devguide.ropensci.org/building.html
 [template]: https://devguide.ropensci.org/reviewtemplate.html
-[rOpenSci forum]: https://discuss.ropensci.org/

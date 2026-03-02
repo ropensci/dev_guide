@@ -34,9 +34,7 @@ We have a call for contributors section in our newsletter that comes out every t
   
   - if the old maintainer can be contacted: reach out to them, and ask for help;
   - rOpenSci slack: good for getting help on specific or general problems, see the #package-maintenance channel;
-  - [rOpenSci discussion forum](https://discuss.ropensci.org/c/package-development/29): this forum is a good option, feel free to ask any questions there;
-  - [rOpenSci staff](https://ropensci.org/about/#team): feel free to get in touch with one of us via email/pinging us on GitHub issues, we'll be happy to help;
-  - of course there's general R help too if that suits your needs: [Posit community forum](https://community.rstudio.com/), StackOverflow, Mastodon (#rstats), etc.
+  - [rOpenSci staff](https://ropensci.org/about/#team): feel free to get in touch with one of us via email/pinging us on GitHub issues, we'll be happy to help.
 
 - How much can/should you change in the package?
   

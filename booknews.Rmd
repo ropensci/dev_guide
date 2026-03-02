@@ -4,6 +4,8 @@
 
 - 2026-02-05, clarify the Zenodo DOI recommentation (#985, `@Rafnuss`). 
 
+- 2026-02-12, updates checklists for onboarding and offboarding editors (#989).
+
 - 2026-02-09, huge improvements to editor chapter (#981).
 
 - 2026-01-26, update scope for data retrieval packages (#978).

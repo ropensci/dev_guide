@@ -2,7 +2,7 @@
 
 This book contains our guidelines for packages contributed to [the rOpenSci suite of packages](https://ropensci.org/packages/). 
 They are always a work in progress - corrections, suggestions and general improvements are welcome as [issue submissions in this repository](https://github.com/ropensci/dev_guide/issues/new). 
-Open discussions are welcome in our [forum](https://discuss.ropensci.org/). 
+Open discussions are welcome in https://github.com/ropensci/software-review-meta/issues
 You can also suggest changes by editing the `.Rmd` files that are at the root of this repository and submitting a pull request.  
 An "edit" button in all book chapters will take you directly to the relevant page on GitHub to make such changes. 
 Please target your pull requests to the `main` branch.

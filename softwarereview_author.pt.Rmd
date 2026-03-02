@@ -39,7 +39,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 
 ### Solicitação de ajuda
 
-- Fique à vontade para fazer perguntas sobre o processo ou sobre seu pacote em específico no nosso [Fórum de discussão](https://discuss.ropensci.org).
+- Fique à vontade para fazer perguntas sobre o processo ou sobre seu pacote em específico no https://github.com/ropensci/software-review-meta/issues.
 
 ### Diretrizes
 

@@ -45,8 +45,6 @@ Você precisará proteger as suas credenciais da mesma forma que protege as cred
 
 Se você utiliza [`vcr`](https://docs.ropensci.org/vcr/) ou [`httptest`](https://enpiar.com/r/httptest/) em testes para armazenar as respostas da API em cache, é importante garantir que as requisições ou configurações registradas não contenham credenciais. Consulte [o guia de segurança do pacote `vcr`](https://books.ropensci.org/http-testing/security-chapter.html) e [o guia do pacote `httptest` "Redigindo e modificando requisições registradas"](https://enpiar.com/r/httptest/articles/redacting.html). Além disso, inspecione as suas requisições ou configurações registradas antes de realizar o primeiro commit para garantir que você fez a configuração correta.
 
-Como o `vcr` é um pacote da rOpenSci, você pode postar qualquer dúvida que tiver no [Fórum da rOpenSci](https://discuss.ropensci.org/).
-
 #### Compartilhe credenciais com os serviços de CI {#share-secrets-with-ci-services}
 
 Agora, você pode precisar compartilhar credenciais com os [serviços de integração contínua](#ci).

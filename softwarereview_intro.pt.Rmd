@@ -5,7 +5,7 @@ Este capítulo contém uma [introdução geral](#whatissoftwarereview) ao nosso 
 
 Nosso sistema foi recentemente ampliado para a [revisão de software estatístico por pares](https://ropensci.org/stat-software-review/).
 
-_Se você usar os nossos padrões/checklists/etc ao revisar um software em outro lugar, informe as pessoas destinatárias (por exemplo, editores(as) de periódicos, estudantes, revisores(as) internos(as) de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público](https://discuss.ropensci.org/c/usecases) ou [em particular por e-mail](https://ropensci.org/contact/). 
+_Se você usar os nossos padrões/checklists/etc ao revisar um software em outro lugar, informe as pessoas destinatárias (por exemplo, editores(as) de periódicos, estudantes, revisores(as) internos(as) de código) que eles vieram da rOpenSci e nos informe em [nosso fórum público](https://ropensci.org/usecases/) ou [em particular por e-mail](https://ropensci.org/contact/). 
 ```
 
 ## O que é a revisão de software por pares da rOpenSci? {#whatissoftwarereview}
