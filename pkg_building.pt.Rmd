@@ -67,11 +67,11 @@ Se estiver fornecendo uma interface gráfica de usuário (GUI) (como um aplicati
 
 O [pacote `tabulizer`](https://github.com/ropensci/tabulizer) por exemplo, tem um fluxo de trabalho interativo para extrair tabelas, mas também pode extrair apenas coordenadas para que seja possível executar novamente como um script. Além disso, dois exemplos de aplicativos brilhantes que geram código são <https://gdancik.shinyapps.io/shinyGEO/> e <https://github.com/wallaceEcoMod/wallace/>.
 
-### Verificação de entrada
+### Verificação de entrada {#input-checking}
 
 Recomendamos que seu pacote use um método consistente de sua escolha para [verificação de entradas (*inputs*)](https://blog.r-hub.io/2022/03/10/input-checking/) -- seja o R básico, um pacote em R ou ajudantes personalizados.
 
-### Pacotes que envolvem recursos da Web (clientes de API)
+### Pacotes que envolvem recursos da Web (clientes de API) {#api-clients}
 
 Se o seu pacote acessar uma API da Web ou outro recurso da Web,
 
