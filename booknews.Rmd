@@ -1,6 +1,6 @@
 # NEWS {#booknews}
 
-## dev version
+## 1.0.0
 
 - 2026-02-05, clarify the Zenodo DOI recommentation (#985, `@Rafnuss`). 
 
