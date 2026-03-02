@@ -15,6 +15,16 @@
             "affiliation": "Colorado State University"
         },
         {
+            "name": "Bellini Saibene, Yanina",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-4522-7466"
+        },
+        {
+            "name": "Butland, Stefanie",
+            "affiliation": "Openscapes",
+            "orcid": "0000-0002-5427-8951"
+        },
+        {
             "name": "Chamberlain, Scott",
             "affiliation": "rOpenSci",
             "orcid": "0000-0003-1444-9135"
@@ -35,6 +45,11 @@
             "orcid": "0000-0002-2378-4915"
         },
         {
+            "name": "LaZerte, Steffi",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-7690-8360"
+        },
+        {
             "name": "Lepore, Mauro",
             "affiliation": "2 Degrees Investing Initiative",
             "orcid": "0000-0002-1986-7988"
@@ -43,6 +58,11 @@
             "name": "Mullen, Lincoln",
             "affiliation": "George Mason University",
             "orcid": "0000-0001-5103-6917"
+        },
+        {
+            "name": "Padgham, Mark",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0003-2172-5265"
         },
         {
             "name": "Ram, Karthik",
