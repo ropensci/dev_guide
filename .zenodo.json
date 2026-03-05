@@ -96,6 +96,46 @@
             "name": "Hollister, Jeff",
             "affiliation": "US Environmental Protection Agency",
             "orcid": "0000-0002-9254-9740"
+        },
+        {
+            "name": "Toby Hocking",
+            "affiliation": "Northern Arizona University",
+            "orcid": "0000-0002-3146-0865"
+        },
+        {
+            "name": "Emi Tanaka",
+            "affiliation": "Biological Data Science Institute, Australian National University",
+            "orcid": "0000-0002-1455-259X"
+        },
+        {
+            "name": "Jouni Helske",
+            "affiliation": "University of Jyväskylä, Finland",
+            "orcid": "0000-0001-7130-793X"
+        },
+        {
+            "name": "Beatriz Milz",
+            "affiliation": "Federal University of ABC (UFABC), Brazil",
+            "orcid": "0000-0002-3064-4486"
+        },
+        {
+            "name": "Margaret Siple",
+            "affiliation": "NOAA AFSC Groundfish Assessment Program - RACE division",
+            "orcid": "0000-0002-4260-9856"
+        },
+        {
+            "name": "Nima Hejazi",
+            "affiliation": "Harvard Chan School of Public Health",
+            "orcid": "0000-0002-7127-2789"
+        },
+        {
+            "name": "Andrew Heiss",
+            "affiliation": "Georgia State University",
+            "orcid": "0000-0002-3948-3914"
+        },
+        {
+            "name": "Lucy D'Agostino McGowan",
+            "affiliation": "Wake Forest University",
+            "orcid": "0000-0001-7297-9359"
         }
     ],
   "access_right": "open",
