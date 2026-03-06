@@ -2,9 +2,7 @@
     "description": "Guide for package authors, maintainers, reviewers and editors in rOpenSci software peer-review system. The first section of the book contains our guidelines for creating and testing R packages. The second section is dedicated to rOpenSci's software peer review process: what it is, our policies, and specific guides for authors, editors and reviewers throughout the process. The third and last section features our best practice for nurturing your package once it has been onboarded: how to collaborate with other developers, how to document releases, how to promote your package and how to leverage GitHub as a development platform. The third section also features a chapter for anyone wishing to start contributing to rOpenSci packages.",
     "license": {"id":"CC-BY-4.0"},
     "title": "rOpenSci Packages: Development, Maintenance, and Peer Review",
-    "version": "0.7.0",
     "upload_type": "software",
-    "publication_date": "2021-11-16",
     "publication_type": "book",
     "creators": [
         {
@@ -13,6 +11,16 @@
         {
             "name": "Anderson, Brooke",
             "affiliation": "Colorado State University"
+        },
+        {
+            "name": "Bellini Saibene, Yanina",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-4522-7466"
+        },
+        {
+            "name": "Butland, Stefanie",
+            "affiliation": "Openscapes",
+            "orcid": "0000-0002-5427-8951"
         },
         {
             "name": "Chamberlain, Scott",
@@ -35,6 +43,11 @@
             "orcid": "0000-0002-2378-4915"
         },
         {
+            "name": "LaZerte, Steffi",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0002-7690-8360"
+        },
+        {
             "name": "Lepore, Mauro",
             "affiliation": "2 Degrees Investing Initiative",
             "orcid": "0000-0002-1986-7988"
@@ -43,6 +56,11 @@
             "name": "Mullen, Lincoln",
             "affiliation": "George Mason University",
             "orcid": "0000-0001-5103-6917"
+        },
+        {
+            "name": "Padgham, Mark",
+            "affiliation": "rOpenSci",
+            "orcid": "0000-0003-2172-5265"
         },
         {
             "name": "Ram, Karthik",
@@ -78,6 +96,46 @@
             "name": "Hollister, Jeff",
             "affiliation": "US Environmental Protection Agency",
             "orcid": "0000-0002-9254-9740"
+        },
+        {
+            "name": "Toby Hocking",
+            "affiliation": "Northern Arizona University",
+            "orcid": "0000-0002-3146-0865"
+        },
+        {
+            "name": "Emi Tanaka",
+            "affiliation": "Biological Data Science Institute, Australian National University",
+            "orcid": "0000-0002-1455-259X"
+        },
+        {
+            "name": "Jouni Helske",
+            "affiliation": "University of Jyväskylä, Finland",
+            "orcid": "0000-0001-7130-793X"
+        },
+        {
+            "name": "Beatriz Milz",
+            "affiliation": "Federal University of ABC (UFABC), Brazil",
+            "orcid": "0000-0002-3064-4486"
+        },
+        {
+            "name": "Margaret Siple",
+            "affiliation": "NOAA AFSC Groundfish Assessment Program - RACE division",
+            "orcid": "0000-0002-4260-9856"
+        },
+        {
+            "name": "Nima Hejazi",
+            "affiliation": "Harvard Chan School of Public Health",
+            "orcid": "0000-0002-7127-2789"
+        },
+        {
+            "name": "Andrew Heiss",
+            "affiliation": "Georgia State University",
+            "orcid": "0000-0002-3948-3914"
+        },
+        {
+            "name": "Lucy D'Agostino McGowan",
+            "affiliation": "Wake Forest University",
+            "orcid": "0000-0001-7297-9359"
         }
     ],
   "access_right": "open",
