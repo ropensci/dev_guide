@@ -1,7 +1,7 @@
 foobar 0.2.0 (2016-04-01)
 =========================
 
-### Nueva functionalidad
+### Nueva funcionalidad
 
   * Nueva función `hacer_algo()` para hacer cosas. (#5)
 
@@ -15,7 +15,7 @@ foobar 0.2.0 (2016-04-01)
 
 ### Obsoleto y caucado
 
-  * `hola_mundo()` ahora es una función obsoleta y se eliminará en un en una versión futura, utiliza `hola_marte()`.
+  * `hola_mundo()` ahora es una función obsoleta y se eliminará en una versión futura, utiliza `hola_marte()`.
 
 ### Correcciones a la documentación
 
@@ -28,6 +28,6 @@ foobar 0.2.0 (2016-04-01)
 foobar 0.1.0 (2016-01-01)
 =========================
 
-### Nueva functionalidad
+### Nueva funcionalidad
 
   * publicado en CRAN.
