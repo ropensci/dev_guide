@@ -247,7 +247,7 @@ f <- function(a = TRUE) {
 
 - Você pode reutilizar partes da documentação (por exemplo, detalhes sobre autenticação, pacotes relacionados) nas páginas de vinhetas, README e de documentação. Consulte a [vinheta do roxygen2 sobre reutilização de documentação](https://roxygen2.r-lib.org/articles/reuse.html).
 
-- Para incluir exemplos, você pode usar o clássico `@examples` (no plural *"examples"*), mas também a tag `@example <path>` (no singular *"example"*) para armazenar o código de exemplo em um script R separado (de preferência na pasta `man/`), e a tag `@exampleIf` para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte a [documentação do roxygen2 sobre exemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
+- Para incluir exemplos, você pode usar o clássico `@examples` (no plural *"examples"*), mas também a tag `@example <path>` (no singular *"example"*) para armazenar o código de exemplo em um script R separado (de preferência na pasta `man/`), e a tag `@examplesIf` para executar exemplos condicionalmente e evitar falhas na verificação do R CMD. Consulte a [documentação do roxygen2 sobre exemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
 - Adicionar `#' @keywords internal` para marcar uma função como interna e, ao mesmo tempo, gerar documentação para ela. Se você não quiser que nenhuma documentação de função seja gerada, use `#' noRd`. Consulte [a documentação do `roxygen2` sobre tags para indexação e referência cruzada](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) e [tags para funções de documentação](https://roxygen2.r-lib.org/reference/tags-rd.html). Para fins de desenvolvimento, você pode se interessar pelo [pacote experimental devtag](https://github.com/moodymudskipper/devtag) para obter páginas de manual locais ao usar o `#' @noRd`.
 
@@ -391,7 +391,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - Você pode executar exemplos com `devtools::run_examples()`. Observe que quando você executa o R CMD CHECK ou equivalente (por exemplo, `devtools::check()`), seus exemplos que não estão incluídos no `\dontrun{}` ou `\donttest{}` são executados. Consulte a seção [tabela de resumo](https://roxygen2.r-lib.org/articles/rd.html#functions) na documentação do roxygen2.
 
-- Para evitar que os exemplos sejam executados no CRAN (por exemplo, se requerem autenticação), você precisa usar `\dontrun{}`. No entanto, para uma primeira submissão, o CRAN não permitirá que você pule todos os exemplos. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo, ou envolver o código de exemplo com `try()`. Consulte também a etiqueta `@exampleIf` do roxygen2.
+- Para evitar que os exemplos sejam executados no CRAN (por exemplo, se requerem autenticação), você precisa usar `\dontrun{}`. No entanto, para uma primeira submissão, o CRAN não permitirá que você pule todos os exemplos. Nesse caso, você pode adicionar alguns pequenos exemplos de brinquedo, ou envolver o código de exemplo com `try()`. Consulte também a etiqueta `@examplesIf` do roxygen2.
 
 - Além de executar exemplos localmente em seu próprio computador, é altamente recomendável que você execute exemplos em um dos [sistemas de integração contínua](#ci). Mais uma vez, os exemplos que não estão incluídos em `\dontrun{}` ou `\donttest{}` serão executados, mas para aqueles que estão, você pode configurar suas compilações de integração contínua para executá-los por meio dos argumentos de verificação do R CMD `--run-dontrun` e/ou `--run-donttest`.
 
