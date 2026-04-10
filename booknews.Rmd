@@ -1,5 +1,9 @@
 # NEWS {#booknews}
 
+## Dev version
+
+- 2026-04-10, two fixes to roxygen2 tags mentions (#1000, #1001, `@Pakillo`). Now 4 digits for PRs and issues!
+
 ## 1.0.0
 
 - 2026-02-05, clarify the Zenodo DOI recommentation (#985, `@Rafnuss`). 
