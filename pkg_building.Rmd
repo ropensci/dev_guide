@@ -192,7 +192,7 @@ where issue\_id is the number of the issue in the software-review repository. Fo
 
 - Consider using `usethis::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
-- Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website).
+- Extensive examples should be kept for a vignette. If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website). All packages submitted for software review must have a website.
 
 - Add a [code of conduct and contribution guidelines](#friendlyfiles).
 
@@ -271,13 +271,20 @@ Others have used the option to escape some URLs (change `<https://ropensci.org/>
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
+All packages submitted for software review must have a documentation website clearly linked in the source repository.
+We recommend using [`pkgdown`](https://github.com/r-lib/pkgdown) to create your website.
+The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
 
 ### Automatic deployment of the documentation website {#docsropensci}
 
-You only need to worry about automatic deployment of your website until approval and transfer of your package repo to the ropensci organization; indeed, after that a pkgdown website will be built for your package after each push to the GitHub repo. You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick). The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/). The resulting website will have a local search bar. Please report bugs, questions and feature requests about the central builds at <https://github.com/ropensci/docs/> and about the template at <https://github.com/ropensci/rotemplate/>.
+After a your package has been approved and transferred to the ropensci organization, you should delete any pkgdown workflows from your repository.
+From that point on, our own document building system will update your package website after each push to the GitHub repo.
+You can find the status of these builds at `https://dev.ropensci.org/job/package_name`, e.g. [for `magick`](https://dev.ropensci.org/job/magick); and the website at `https://docs.ropensci.org/package_name`, e.g. [for `magick`](https://docs.ropensci.org/magick).
+The website build will use your pkgdown config file if you have one, except for the styling that will use the [`rotemplate` package](https://github.com/ropensci-org/rotemplate/).
+The resulting website will have a local search bar.
+Please report bugs, questions and feature requests about the central builds at <https://github.com/ropensci/docs/> and about the template at <https://github.com/ropensci/rotemplate/>.
 
 *If your package vignettes need credentials (API keys, tokens, etc.) to knit, you might want to [precompute them](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) or to [cache responses](https://docs.ropensci.org/vcr/reference/setup_knitr.html) since credentials cannot be used on the docs server.*
 
