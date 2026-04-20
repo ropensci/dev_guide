@@ -281,6 +281,16 @@ and reviewers in addressing ethical questions related to privacy and research so
   research in Facebook. Ethics and Information Technology, 12(4), 313--325.
   [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
+## Use of generative AI tools {#policies-ai]}
+
+Authors must disclose any use of generative AI tools in our submission forms, where we also ask you to,
+
+> please describe usage, and include links to any relevant aspects of your repository.
+
+As described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/), our policies on the use of generative AI tools are expected to develop alongside development in both tools themselves, as well as the way their contribute to software development.
+We expect all submitting authors to transparently disclose how generative AI tools may have contributed to any software submitted for peer review.
+Details are provided in both the [_Guide for Authors_](#authors-guide) and [_Guide for Reviewers_](#reviewerguide).
+
 ## Code of Conduct {#code-of-conduct}
 
 rOpenSci's community is our best asset. Whether you're a regular contributor or a newcomer, we care about making this a safe place for you and we've got your back. We have a Code of Conduct that applies to all people participating in the rOpenSci community, including rOpenSci staff and leadership and to all modes of interaction online or in person. The [Code of Conduct](https://ropensci.org/code-of-conduct/) is maintained on the rOpenSci website.
