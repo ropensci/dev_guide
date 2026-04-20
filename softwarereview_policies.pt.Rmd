@@ -165,7 +165,7 @@ Embora a melhor resposta às preocupações éticas seja específica para cada c
   
   Observe que o consentimento não é concedido implicitamente apenas pelo fato de os dados estarem acessíveis. Dados acessíveis não são necessariamente públicos, já que diferentes pessoas e contextos têm diferentes expectativas normativas de privacidade (consulte o trabalho do [Social Data Lab](http://socialdatalab.net/ethics-resources)).
 
-- Os pacotes que acessam informações pessoais identificáveis devem ter um cuidado especial para seguir as práticas recomendadas de segurança (por exemplo, uso exclusivo de protocolos de internet seguros, mecanismos fortes para armazenamento de credenciais, etc.)
+- Os pacotes que acessam informações pessoais identificáveis devem ter um cuidado especial para seguir as [práticas recomendadas de segurança](#package-development-security-best-practices) (por exemplo, uso exclusivo de protocolos de internet seguros, mecanismos fortes para armazenamento de credenciais, etc.)
 
 - Pacotes que acessam ou manipulam dados pessoais identificáveis ou dados sensíveis devem permitir, documentar e demonstrar fluxos de trabalho para desidentificação, armazenamento seguro e outras práticas recomendadas para minimizar o risco de danos.
 

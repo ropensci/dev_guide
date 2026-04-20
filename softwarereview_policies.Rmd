@@ -221,7 +221,7 @@ general guidelines should be followed by packages where the challenges above ari
   Lab](http://socialdatalab.net/ethics-resources)).
 
 - Packages accessing personally identifiable information should take special
-  care to follow \[security best practices\]\[Package Development Security Best Practices\]
+  care to follow [security best practices](#package-development-security-best-practices)
   (e.g., exclusive use of secure internet protocols, strong mechanisms for
   storing credentials, etc.).
 
