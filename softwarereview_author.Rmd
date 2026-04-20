@@ -31,9 +31,10 @@ This concise guide presents the software peer review process for you as a packag
 
 ### Documentation
 
-- For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. Even better, set up a pkgdown website for allowing more detailed assessment of functionality online.
+- For any submission or pre-submission inquiry the README of your package should provide enough information about your package (goals, usage, similar packages) for the editors to assess its scope without having to install the package. 
   - At the submission stage, all major functions should be stable enough to be fully documented and tested; the README should make a strong case for the package.
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
+- All packages require a website, with a URL specified in the "About" section of the GitHub repository. See the [Documentation website section](#website) for details.
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ## Preparing for Submission {#preparing-for-submission}
