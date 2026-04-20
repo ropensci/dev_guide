@@ -104,6 +104,13 @@ and
 - a review project will be created, containing a notebook for you to fill, and the review template.
 - note that if the package is not submitted via the default/main branch, you need to switch to the submitted branch before starting your review.
 
+### Use of generative AI tools
+
+The use of generative AI tools is acceptable both for submitting authors and reviewers, but such may not be used by reviewers to directly inform any decisions or recommendations.
+As with our expectations for authors, we require reviewers to disclose any usage of generative AI tools with as much detail as possible.
+Examples of acceptable usage include generating an overview of package functionality, or iterating through a Git history to provide an overview of development decisions.
+We ask reviewers to be as transparent as possible.
+
 ### Feedback on the process {#feedback-on-the-process}
 
 We encourage you to ask questions and provide feedback on the review process on https://github.com/ropensci/software-review-meta/issues
