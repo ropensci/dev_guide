@@ -66,6 +66,8 @@ Best,
 - Invite them to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
   Ensure invitation is "Read only".
 
+- Update the "editor" field in the Airtable "reviewers-prod" table (this is used to identify and list current editors within this _Dev Guide_).
+
 - Invite them to the private "editors-only" channel in rOpenSci's Slack workspace (and to the Slack workspace in general if they're not yet there).
 
 - Once they're in the "editors-only" channel, post a welcome message pinging all editors.
