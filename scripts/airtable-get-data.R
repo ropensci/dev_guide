@@ -24,13 +24,13 @@ at_guest <- airtabler::airtable(base = "app8dssb6a7PG6Vwj",
                                  table = "guest-editors")
 
 
-editor_index_all <- purrr::map_lgl(reviewers$editor, ~!is.null(.))
+editor_index_all <- purrr::map_lgl(reviewers$editor, ~!is.null(.) && !anyNA(.))
 editors_all <- reviewers[which(editor_index_all), c("name", "github", "Affiliation", "editor")]
 editors_all <- editors_all [which(!editors_all$name == eic_name), ]
 last_names <- humaniformat::last_name(trimws(editors_all$name))
 editors_all <- editors_all[order(last_names), ]
 
-editors_past <- editors_all[grep("Emeritus", editors_all$editor), ]
+editors_past <- editors_all[grep("Emeritus|On\\sLeave", editors_all$editor), ]
 editors <- editors_all[which(!editors_all$name %in% editors_past$name), ]
 
 guest_editors <- at_guest$`guest-editors`$select_all()

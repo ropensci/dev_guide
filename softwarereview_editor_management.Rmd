@@ -66,6 +66,8 @@ Best,
 - Invite them to the AirTable database of software review (linked in the description of the editors-only channel on Slack).
   Ensure invitation is "Read only".
 
+- Update the "editor" field in the Airtable "reviewers-prod" table (this is used to identify and list current editors within this _Dev Guide_).
+
 - Invite them to the private "editors-only" channel in rOpenSci's Slack workspace (and to the Slack workspace in general if they're not yet there).
 
 - Once they're in the "editors-only" channel, post a welcome message pinging all editors.
@@ -86,6 +88,8 @@ Best,
   - From the "interface" view, pull down main menu at top-left and enter "View Data"
   - Click "Share" button on top right, and then "People with access"
   - Click checkbox on left on editor to be removed, and "Remove 1 collaborator".
+
+- Change their "editor" label in the Airtable "reviewers-prod" data to "Emeritus"
 
 - The (past-)editors lists in both the [dev\_guide chapter introducing software review](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) and the [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) are automatically populated from the AirTable data.
   Updates are run daily, so check a day after AirTable updates to ensure both have been updated.
