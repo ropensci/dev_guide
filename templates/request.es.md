@@ -4,7 +4,7 @@ Hola, soy [EDITOR/A]. [COMENTARIO AMISTOSO]. Te escribo para preguntarte si te i
 
 El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en GitHub aquí: [ENLACE REPO]. Hacemos nuestro proceso de revisión abierta a través de GitHub, aquí: [ISSUE DE REVISIÓN]
 
-Si aceptas, ten en cuenta que te pediremos completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
+Si aceptas, ten en cuenta que te pediremos que completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
 Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme.
 
