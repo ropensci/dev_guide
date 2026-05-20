@@ -273,7 +273,7 @@ Quando essas fontes de informação não forem suficientes,
 
 Você pode usar filtros, classificações e pesquisas para identificar revisores(as) com experiência específica:
 
-![Captura de tela da interface em inglês de filtros do Airtable com um filtro de experiência de domínio que deve incluir química e áreas técnicas que devem incluir integração contínua](images/airtable.png)
+![Captura de tela da interface em inglês de filtros do Airtable com um filtro de experiência de domínio que deve incluir química e áreas técnicas que devem incluir integração contínua](images/airtable-filters.png)
 
 Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. 
 Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 

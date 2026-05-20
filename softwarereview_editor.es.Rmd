@@ -273,7 +273,7 @@ Cuando estas fuentes de información no sean suficientes,
 
 Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
 
 Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
 Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo`require_mentorship`.
