@@ -201,7 +201,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
 - Considera utilizar `usethis::use_readme_rmd()` para generar una plantilla para el archivo `README.Rmd` y para configurar automáticamente un chequeo que garantice que `README.md` sea siempre más reciente que `README.Rmd` antes de hacer un commit.
 
 - Los ejemplos largos deben incluirse sólo en las viñetas.
-  Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website).
+  Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website). Todos los paquetes presentados para su revisión deben contar con un sitio web.
 
 - Añade un [código de conducta y una guía de contribución](#friendlyfiles).
 
@@ -297,6 +297,7 @@ Además, no se podrá hacer click en los enlaces desde la documentación local.
 
 ## Sitio web de documentación  {#website}
 
+Todos los paquetes enviados para su revisión de software deben incluir un enlace claro a la página web de documentación en el repositorio de código fuente.
 Te recomendamos que crees un sitio web con la documentación de tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown).
 Hay un [capítulo sobre pkgdown (en inglés)](https://r-pkgs.org/website.html) en libro "R packages", y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
 
