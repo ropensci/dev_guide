@@ -1,3 +1,8 @@
+---
+aliases:
+  - policies.html
+---
+
 # Políticas de la Revisión por Pares de Software  {#policies}
 
 ```{block, type="summaryblock"}
@@ -12,25 +17,19 @@ Por último, pero no menos importante, encontrarás el [código de conducta de l
 ## Proceso de revisión  {#policiesreviewprocess}
 
 - Para que un paquete sea considerado para ingresar a rOpenSci, quienes crearon el paquete deben iniciar una solicitud en el repositorio [ropensci/software-review](https://github.com/ropensci/software-review).
-
 - Los paquetes se revisan en su calidad, adecuación, documentación y claridad.
   El proceso de revisión es bastante similar al de la revisión de un artículo científico (véase nuestra [guía de empaquetado](#building) y [guía de revisión](#reviewerguide) para más detalles).
   A diferencia de la revisión de un artículo científico, este proceso será una conversación continua.
-
 - Una vez resueltas todas las cuestiones y preguntas importantes que puedan solucionarse con un esfuerzo razonable, la persona responsable de la edición tomará una decisión (aceptar, esperar o rechazar).
   Los rechazos suelen hacerse pronto (antes de que comience el proceso de revisión; ver [la sección de objetivos y alcance](#aims-and-scope)), pero en raras ocasiones un paquete puede no ser aceptado después de la revisión.
   En última instancia, es decisión de quien hace la edición rechazar o no el paquete en función de cómo se aborden las revisiones.
-
 - La comunicación entre quienes enviaron el paquete, quienes lo revisan y editan tendrá lugar principalmente en GitHub, aunque puedes optar por ponerte en contacto con quien hace la edición por correo electrónico o por Slack para algunas cuestiones.
   Cuando envíes un paquete, asegúrate de que tu configuración de notificaciones de GitHub sea correcta para que no te pierdas un comentario.
-
 - Quien envía el paquete puede elegir que su envío se ponga en espera (en cuyo caso se le aplica la etiqueta *holding*).
   El estado de espera se revisará cada 3 meses, y después de un año el *issue* se cerrará.
-
 - Si quien envió el paquete no ha solicitado una etiqueta de espera, pero no responde a las consultas, podremos cerrar el *issue* en el plazo de un mes desde el último intento de contacto.
   Este intento incluirá un comentario etiquetando a la persona, pero también un correo electrónico utilizando la dirección de correo electrónico que aparece en el archivo *DESCRIPTION* del paquete.
   Este es uno de los raros casos en los que quien hace la edición intentará ponerse en contacto con el autor por correo electrónico.
-
 - Para volver a enviar un paquete cuyo envío fue cerrado hay que iniciar un nuevo envío.
   Si el paquete sigue siendo relevante, habrá que responder a las revisiones iniciales antes de que la persona encargada de la edición empiece a buscar nuevas personas para la revisarlo.
 
@@ -39,7 +38,6 @@ Por último, pero no menos importante, encontrarás el [código de conducta de l
 - Te recomendamos fuertemente que envíes tu paquete para su revisión *antes de* publicarlo en CRAN o enviar un artículo de software que describa el paquete a una revista.
   Las devoluciones de las revisiones pueden dar pie a importantes mejoras y actualizaciones de tu paquete, incluso cambiar el nombre o modificaciones incompatibles con versiones previas.
   Consideramos que la publicación previa en CRAN o en otros lugares no es razón suficiente para rechazar las recomendaciones surgidas del proceso de revisión.
-
 - No envíes tu paquete para su revisión mientras éste o un artículo científico asociado también esté siendo revisado en otro lugar, ya que esto puede dar lugar a recomendaciones incompatibles.
 
 ### Conflicto de intereses de quienes revisan o editan  {#coi}
@@ -129,7 +127,9 @@ Además, tenemos algunos *temas especializados* con un alcance algo más amplio.
 - **datos geoespaciales**: Aceptamos paquetes centrados en el acceso, manipulación y conversión entre formatos de datos geoespaciales.
   (Ejemplos: [**osmplotr**](https://github.com/ropensci/software-review/issues/27), [**tidync**](https://github.com/ropensci/software-review/issues/174)).
 
-- **traducción**: Como parte de nuestro trabajo en [publicación multilingüe](https://ropensci.org/multilingual-publishing/) tenemos especial interés en paquetes que faciliten la traducción y publicación de recursos científicos y de programación a múltiples lenguages (humanos) para que sean accesibles a públicos más amplios y diversos. Podría tratarse de interfaces para programas de traducción automática, infraestructura para gestionar la documentación en varios lenguages o programas que accedan a recursos lingüísticos especializados.  Se trata de un ámbito nuevo y experimental, por lo que te rogamos que abras un [issue para preguntar si el software está dentro del alcance de rOpenSci](https://github.com/ropensci/software-review/issues/new/choose) si te interesa presentar un paquete en esta categoría.
+- **traducción**: Como parte de nuestro trabajo en [publicación multilingüe](https://ropensci.org/multilingual-publishing/) tenemos especial interés en paquetes que faciliten la traducción y publicación de recursos científicos y de programación a múltiples lenguages (humanos) para que sean accesibles a públicos más amplios y diversos. 
+  Podría tratarse de interfaces para programas de traducción automática, infraestructura para gestionar la documentación en varios lenguages o programas que accedan a recursos lingüísticos especializados.  
+  Se trata de un ámbito nuevo y experimental, por lo que te rogamos que abras un [issue para preguntar si el software está dentro del alcance de rOpenSci](https://github.com/ropensci/software-review/issues/new/choose) si te interesa presentar un paquete en esta categoría.
 
 - **Herramientas internas de rOpenSci** paquetes creados y/o utilizados por el equipo de rOpenSci como herramientas para la revisión por pares del software y otras iniciativas relacionadas.
 
