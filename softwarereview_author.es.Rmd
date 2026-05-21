@@ -1,3 +1,8 @@
+---
+aliases:
+  - authors-guide.html
+---
+
 # Guía para quienes crean paquetes  {#authors-guide}
 
 ```{block, type="summaryblock"}
@@ -9,7 +14,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 ### Alcance
 
 - Consulta nuestras [políticas](#policies) para evaluar si tu paquete cumple los criterios para ser incluido en nuestro conjunto de paquetes y no se superpone con otros.
-- Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un _issue_ para consultarlo.
+  - Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un _issue_ para consultarlo.
   - [Ejemplo de respuesta sobre solapamiento](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considera también añadir información sobre paquetes similares a tu [documentación de paquetes](#docs-general).
 
 ### Ciclo de desarrollo
