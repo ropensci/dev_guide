@@ -11,7 +11,6 @@ This concise guide presents the software peer review process for you as a packag
 
 ## Planning a Submission (or a Pre-Submission Enquiry) {#planning-a-submission-or-a-pre-submission-enquiry}
 
-
 ### Scope
 
 - Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
