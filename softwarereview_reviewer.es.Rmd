@@ -114,6 +114,6 @@ Te animamos a que preguntes y opines sobre el proceso de revisión en https://gi
 
 Las personas que enviaron el paquete a revisón deben responder en un plazo de 2 semanas con sus cambios en el paquete en respuesta a tu revisión. En esta fase, te pedimos que respondas si los cambios abordan suficientemente las cuestiones planteadas en tu revisión. Fomentamos el debate continuo entre quienes enviaron el paquete y quienes lo revisan, y también puedes pedir que quienes están a cargo de la edición aclaren cosas en el mismo hilo.
 
-- Utilizarás la [plantilla de aprobación](#approval2template).
+Utilizarás la [plantilla de aprobación](#approval2template).
 
 
