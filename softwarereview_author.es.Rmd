@@ -2,7 +2,6 @@
 aliases:
   - authors-guide.html
 ---
-
 # Guía para quienes crean paquetes  {#authors-guide}
 
 ```{block, type="summaryblock"}
@@ -16,6 +15,9 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 - Consulta nuestras [políticas](#policies) para evaluar si tu paquete cumple los criterios para ser incluido en nuestro conjunto de paquetes y no se superpone con otros.
   - Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un _issue_ para consultarlo.
   - [Ejemplo de respuesta sobre solapamiento](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considera también añadir información sobre paquetes similares a tu [documentación de paquetes](#docs-general).
+
+- Los programas informáticos estadísticos deben cumplir los requisitos adicionales que se detallan en nuestra separata [*Guía del software estadístico*](https://stats-devguide.ropensci.org/).
+  - Software estadístico *debe* comenzar también con una investigación previa a la presentación.
 
 ### Ciclo de desarrollo
 
@@ -85,5 +87,3 @@ Si tiene intención de enviar un artículo científico sobre tu paquete, rOpenSc
 - Una vez que tu paquete sea aceptado, te proporcionaremos más instrucciones sobre la transferencia de tu repositorio al repositorio de rOpenSci.
 
 Nuestro [código de conducta](#code-of-conduct) es obligatorio para la participación en nuestro proceso de revisión.
-
-

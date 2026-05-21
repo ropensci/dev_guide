@@ -2,7 +2,6 @@
 aliases: 
   - authors-guide.html
 ---
-
 # Guia para Autores {#authors-guide}
 
 ```{block, type="summaryblock"}
@@ -16,6 +15,9 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Consulte nossas [políticas de uso](#policies) para ver se o seu pacote atende aos nossos critérios e se encaixa em nossa coleção, não se sobrepondo a outros pacotes já existentes.
   - Se você não tiver certeza de que um pacote atende aos nossos critérios, sinta-se à vontade para abrir um  _issue_ no GitHub como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
   - [Exemplo de resposta a sobreposição](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Também considere adicionar alguns pontos sobre pacotes semelhantes ao seu na sua [documentação do pacote](#docs-general).
+
+- O software estatístico deve atender aos requisitos adicionais detalhados em nosso [*Guia de software estatístico*](https://stats-devguide.ropensci.org/).
+  - Software estatístico *deve* também deve começar com uma consulta pré-submissão.
 
 ### Ciclo de vida
 
@@ -85,5 +87,3 @@ Se você pretende enviar um manuscrito de acompanhamento para seu o pacote, a rO
 - Assim que seu pacote for aprovado, forneceremos mais instruções sobre a transferência do seu repositório para o repositório da rOpenSci.
 
 Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de revisão.
-
-
