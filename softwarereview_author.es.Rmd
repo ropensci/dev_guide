@@ -16,7 +16,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
   - Si no sabes si un paquete cumple con nuestros criterios, no dudes en abrir un _issue_ para consultarlo.
   - [Ejemplo de respuesta sobre solapamiento](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Considera también añadir información sobre paquetes similares a tu [documentación de paquetes](#docs-general).
 
-- Los programas informáticos estadísticos deben cumplir los requisitos adicionales que se detallan en nuestra separata [*Guía del software estadístico*](https://stats-devguide.ropensci.org/).
+- Los paquetes estadísticos deben cumplir los requisitos adicionales que se detallan en nuestra otra [*Guía de desarrollo de software estadístico*](https://stats-devguide.ropensci.org/).
   - Software estadístico *debe* comenzar también con una investigación previa a la presentación.
 
 ### Ciclo de desarrollo
