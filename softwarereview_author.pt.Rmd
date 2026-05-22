@@ -2,7 +2,6 @@
 aliases: 
   - authors-guide.html
 ---
-
 # Guia para Autores {#authors-guide}
 
 ```{block, type="summaryblock"}
@@ -34,6 +33,15 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
   - No estágio de envio da submissão, todas as principais funções devem ser estáveis o suficiente para serem totalmente documentadas e testadas; o README deve apresentar uma base segura para o pacote.
   - Seu arquivo README deve assegurar-se em explicar a funcionalidade e os objetivos do seu pacote, presumindo que os leitores tenham pouco ou nenhum conhecimento do domínio. Todos os termos técnicos, inclusive as referências a outros softwares, devem ser esclarecidos.
 - Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
+
+### Uso de ferramentas de IA generativas
+
+O uso de ferramentas de IA generativas é aceitável em pacotes enviados para revisão por pares, conforme descrito em [nossa publicação inicial no blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+Conforme declarado em [nossas políticas gerais](#policies-ai) exigimos que todos os autores que enviam artigos descrevam como essas ferramentas podem ter sido usadas e incluam links para quaisquer aspectos relevantes dos repositórios.
+Uma regra geral é que, quanto maior for o uso de ferramentas de IA generativas em uma submissão do rOpenSci, mais documentação será esperada e mais esperamos que essas ferramentas tenham sido usadas *sistematicamente*.
+O uso sistemático de ferramentas inclui qualquer abordagem que detalhe de forma transparente e progressiva a contribuição das ferramentas de IA generativas para a produção de software.
+Exemplos de ferramentas sistemáticas de IA generativa variam de [O "spec-kit" do GitHub para desenvolvimento orientado por especificações](https://github.com/github/spec-kit) ao [nossa própria ferramenta experimental para documentar decisões de design de software](https://github.com/ropensci-review-tools/designlens).
+Todas elas compartilham o padrão comum de produzir artefatos adicionais que documentam as decisões de design de software. *processo* de desenvolvimento juntamente com o próprio software.
 
 ## Preparando para Submissão {#preparing-for-submission}
 
@@ -85,5 +93,3 @@ Se você pretende enviar um manuscrito de acompanhamento para seu o pacote, a rO
 - Assim que seu pacote for aprovado, forneceremos mais instruções sobre a transferência do seu repositório para o repositório da rOpenSci.
 
 Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de revisão.
-
-

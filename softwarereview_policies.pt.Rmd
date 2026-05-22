@@ -2,7 +2,6 @@
 aliases:
   - policies.html
 ---
-
 # Políticas de revisão de software por pares {#policies}
 
 ```{block, type="summaryblock"}
@@ -261,11 +260,19 @@ Os recursos a seguir podem ser úteis para pesquisadores(as), autores(as) de pac
 - Taylor, J., \& Pagliari, C. (2018). Mining social media data: How are research sponsors and researchers addressing the ethical challenges? Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
 - Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313--325 [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
+## Uso de ferramentas de IA generativas {#policies-ai\]}
+
+Os autores devem divulgar qualquer uso de ferramentas de IA generativas em nossos formulários de envio, onde também pedimos que você o faça,
+
+> descreva o uso e inclua links para quaisquer aspectos relevantes do seu repositório.
+
+Conforme descrito em [nossa postagem inicial no blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/) nossas políticas sobre o uso de ferramentas de IA generativa devem se desenvolver juntamente com o desenvolvimento das ferramentas em si, bem como a maneira como elas contribuem para o desenvolvimento de software.
+Esperamos que todos os autores que enviam artigos divulguem de forma transparente como as ferramentas de IA generativas podem ter contribuído para qualquer software enviado para revisão por pares.
+Os detalhes são fornecidos na seção [*Guia para autores*](#authors-guide) e [*Guia para revisores*](#reviewerguide).
+
 ## Código de Conduta {#code-of-conduct}
 
 A comunidade da rOpenSci é o nosso melhor patrimônio.
 Seja você uma pessoa colaboradora assídua ou recém-chegada, nós nos preocupamos em fazer deste um lugar seguro para você, por isso te apoiamos. 
 Temos um Código de Conduta que se aplica a todas as pessoas que participam da comunidade rOpenSci, incluindo a equipe e a liderança da rOpenSci, e a todos os modos de interação online ou pessoalmente. 
 O [Código de Conduta](https://ropensci.org/pt/c%C3%B3digo-de-conduta/) é mantido no site da rOpenSci.
-
-
