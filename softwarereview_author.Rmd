@@ -39,8 +39,10 @@ This concise guide presents the software peer review process for you as a packag
 
 The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
 As stated in [our general policies](#policies-ai), we require all submitting authors to describe how such tools may have been used, and to include links to any relevant aspects of repositories.
-A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect, and the more we will expect such tools to have been used _systematically_.
-Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production.
+
+- Please provide easy-to-find details or links on any usage of generative AI tools in your documentation, like in [this package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai).
+- A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect, and the more we will expect such tools to have been used _systematically_.
+- Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production.
 Examples of systematic generative AI tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) to [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
 These all share the common pattern of producing additional artefacts which document the _process_ of development alongside the software itself.
 
