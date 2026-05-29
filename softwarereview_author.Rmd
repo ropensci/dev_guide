@@ -42,7 +42,7 @@ As stated in [our general policies](#policies-ai), we require all submitting aut
 
 - Please provide easy-to-find details or links on any usage of generative AI tools in your documentation, like in [this package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai).
 - A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect, and the more we will expect such tools to have been used _systematically_.
-- Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production.
+- Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production, such as [GitHub's "spec-kit"](https://github.github.com/spec-kit/).
 Examples of systematic generative AI tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) to [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
 These all share the common pattern of producing additional artefacts which document the _process_ of development alongside the software itself.
 
