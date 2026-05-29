@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-05-29, link in reviewer guide to stats template for stats reviews (#1012)
 - 2026-04-10, two fixes to roxygen2 tags mentions (#1000, #1001, `@Pakillo`). Now 4 digits for PRs and issues!
 
 ## 1.0.0
