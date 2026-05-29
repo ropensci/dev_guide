@@ -266,7 +266,7 @@ Las personas autoras del paquete deben informar cualquier uso de herramientas de
 
 > por favor, describe el uso, e incluye enlaces a cualquier aspecto relevante de tu repositorio.
 
-Como se describe en [nuestra entrada inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/) se espera que nuestras políticas sobre el uso de herramientas de IA generativa evolucionen paralelamente al desarrollo tanto de las propias herramientas como de la forma en que contribuyen al desarrollo del software.
+Como se describe en [nuestro artículo en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/) se espera que nuestras políticas sobre el uso de herramientas de IA generativa evolucionen paralelamente al desarrollo tanto de herramientas propias, como de la forma en que contribuyen al desarrollo de software.
 Esperamos que todos los autores que envíen trabajos revelen de forma transparente cómo han contribuido las herramientas de IA generativa a cualquier software enviado para su revisión por pares.
 Los detalles de como informar este uso se facilitan tanto en la [*Guía para personas autoras*](#authors-guide) como en la [*Guía para el equipo de revisión*](#reviewerguide).
 
