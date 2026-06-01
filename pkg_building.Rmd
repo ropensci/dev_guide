@@ -207,7 +207,7 @@ The badge will first indicated "under review" and then "peer-reviewed" once your
 - Consider using `usethis::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
 - Extensive examples should be kept for a vignette. 
-  If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website).
+  If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website). All packages submitted for software review must have a website.
 
 - Add a [code of conduct and contribution guidelines](#friendlyfiles).
 
@@ -305,7 +305,8 @@ Furthermore, links would not be clickable from local docs.
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). 
+All packages submitted for software review must have a documentation website clearly linked in the source repository.
+We recommend using [`pkgdown`](https://github.com/r-lib/pkgdown) to create your website.
 The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
