@@ -13,7 +13,7 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 ### Escopo
 
 - Consulte nossas [políticas de uso](#policies) para ver se o seu pacote atende aos nossos critérios e se encaixa em nossa coleção, não se sobrepondo a outros pacotes já existentes.
-  - Se você não tiver certeza de que um pacote atende aos nossos critérios, sinta-se à vontade para abrir um  _issue_ no GitHub como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
+  - Caso não tenha certeza se um pacote atende aos nossos critérios, sinta-se à vontade para abrir uma _issue_ no GitHub como uma consulta de pré-submissão para perguntar se o pacote é apropriado.
   - [Exemplo de resposta a sobreposição](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Também considere adicionar alguns pontos sobre pacotes semelhantes ao seu na sua [documentação do pacote](#docs-general).
 
 - O software estatístico deve atender aos requisitos adicionais detalhados em nosso [*Guia de software estatístico*](https://stats-devguide.ropensci.org/).
