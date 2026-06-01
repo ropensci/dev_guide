@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-05-21, add comment on updating Airtable rev-prod for new editors (#1005).
 - 2026-05-21, update docs to require pkg websites at submission (#1004).
 - 2026-04-10, two fixes to roxygen2 tags mentions (#1000, #1001, `@Pakillo`). Now 4 digits for PRs and issues!
 
