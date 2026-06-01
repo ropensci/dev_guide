@@ -41,7 +41,7 @@ All submissions trigger a detailed report on package structure and functionality
 ### General guidelines {#general-guidelines}
 
 To review a package, please begin by copying our [review template](#reviewtemplate), or the the [statistics review template](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) for statistical software.
-These templates should be used as high-level checklists.
+These templates should be used as high-level checklists to guide initial review structure.
 In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the package comply with the [rOpenSci packaging guide](#building)?
