@@ -276,7 +276,7 @@ Você pode usar filtros, classificações e pesquisas para identificar revisores
 ![Captura de tela da interface de filtros do Airtable com um filtro sobre a experiência em disciplinas que devem incluir química e áreas técnicas que devem incluir a integração contínua](images/airtable-filters.png)
 
 Por favor, verifique a avaliação mais recente do(a) revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. 
-Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
+Além disso, verifique se um(a) revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
 Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado para fornecer orientações adicionais.
 
 ##### Critérios para escolher um(a) revisor(a) {#criteria-for-choosing-a-reviewer}
