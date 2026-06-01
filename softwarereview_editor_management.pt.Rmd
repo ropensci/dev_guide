@@ -87,7 +87,7 @@ Atenciosamente,
   - Clique no botão "Share" (Compartilhar) no canto superior direito e, em seguida, em "People with access" (Pessoas com acesso)
   - Clique na caixa de seleção à esquerda do(a) editor(a) a ser removido(a) e em "Remove 1 collaborator" (Remover 1 colaborador/a).
 
-- Alterar o rótulo "editor" nos dados "reviewers-prod" do Airtable para "Emérito"
+- Alterar o rótulo "editor" para "Emérito" nos dados "reviewers-prod" do Airtable 
 - As listas de editores (anteriores) em ambos os capítulos do [dev\_guide que apresenta a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) e do [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) são preenchidos automaticamente a partir dos dados do AirTable.
   As atualizações são executadas diariamente, portanto, verifique um dia após as atualizações do AirTable para garantir que ambos tenham sido atualizados.
 
