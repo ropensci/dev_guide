@@ -1,3 +1,8 @@
+---
+aliases:
+  - building.html
+---
+
 # Guía de empaquetado  {#building}
 
 ```{block, type="summaryblock"}
@@ -53,8 +58,8 @@ Para leer por qué vale la pena enviar un paquete a rOpenSci siguiendo las recom
 
 - Utiliza el [paquete cli](https://cli.r-lib.org/) o las herramientas de R base (`message()` y `warning()`) para comunicarte con las personas que usen tus funciones.
 
-- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. Más información en [este
-  artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
+- Lo más destacado del paquete cli incluye: empaquetado automático, respeto de la [convención NO\_COLOR](https://cli.r-lib.org/articles/cli-config-user.html?q=no#no_color) muchos [elementos semánticos](https://cli.r-lib.org/articles/semantic-cli.html) y amplia documentación. 
+  Más información en este [artículo](https://blog.r-hub.io/2023/11/30/cliff-notes-about-cli/).
 
 - No utilices `print()` o `cat()` a menos que sea para un método `print.*()` o `str.*()` ya que estos métodos de impresión de mensajes son más difíciles de silenciar.
 
@@ -129,6 +134,7 @@ bibentry(
   publisher = "arXiv",
   year = "2023"
 )
+
 bibentry(
   key = "dmpmpaper",
   bibtype  = "Misc",
@@ -201,7 +207,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
 - Considera utilizar `usethis::use_readme_rmd()` para generar una plantilla para el archivo `README.Rmd` y para configurar automáticamente un chequeo que garantice que `README.md` sea siempre más reciente que `README.Rmd` antes de hacer un commit.
 
 - Los ejemplos largos deben incluirse sólo en las viñetas.
-  Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website).
+  Si quieres que las viñetas sean más accesibles antes de instalar el paquete, te sugerimos [crear un sitio web para tu paquete](#website). Todos los paquetes presentados para su revisión deben contar con un sitio web.
 
 - Añade un [código de conducta y una guía de contribución](#friendlyfiles).
 
@@ -247,7 +253,9 @@ La viñeta general debe presentar una serie de ejemplos que progresen en complej
 ### Uso de roxygen2 {#roxygen-2-use}
 
 - Pedimos que todos los paquetes que se presenten para revisión utilicen [roxygen2](https://roxygen2.r-lib.org/) para generar la documentación.
-  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.  roxygen2 tiene [soporte para la sintaxis Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
+  roxygen2 es un paquete de R que compila automáticamente archivos `.Rd` en la carpeta `man` del paquete utilizando etiquetas incluidas antes de cada función.  
+  roxygen2 tiene [soporte para la sintaxis Markdown](https://roxygen2.r-lib.org/articles/rd-formatting.html). 
+  Una ventaja clave de utilizar roxygen2 es que tu archivo `NAMESPACE` siempre se generará automáticamente y estará actualizado.
 
 - Más información sobre el uso de roxygen2 para generar documentación está disponible [en el libro *R Packages*](https://r-pkgs.org/man.html) y en [el sitio web de roxygen2](https://roxygen2.r-lib.org/).
 
@@ -272,7 +280,8 @@ f <- function(a = TRUE) {
 - Puedes reutilizar partes de la documentación (por ejemplo, detalles sobre la autenticación, paquetes relacionados) en las viñetas, *README* y páginas de manual.
   Consulta la [viñeta de roxygen2 sobre la reutilización de documentación](https://roxygen2.r-lib.org/articles/reuse.html).
 
-- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural *"examples"*), pero también la etiqueta `@example <path>` (en singular *"example"*) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@examplesIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
+- Para incluir ejemplos, puedes utilizar el clásico `@examples` (en plural *"examples"*), pero también la etiqueta `@example <path>` (en singular *"example"*) para almacenar el código de ejemplo en un script R independiente (idealmente en `man/`), y la etiqueta `@examplesIf` para ejecutar ejemplos condicionalmente y evitar fallos de `R CMD check`. 
+  Consulta [la documentación de roxygen2 sobre ejemplos](https://roxygen2.r-lib.org/articles/rd.html#examples).
 
 - Añade `#' @keywords internal` para marcar una función como interna sin dejar de generar su documentación. Si no quieres que se genere documentación de la función, utiliza `#' @noRd` en su lugar. Consulta la documentación de [`roxygen2`  sobre etiquetas para indexación y referencias cruzadas](https://roxygen2.r-lib.org/reference/tags-index-crossref.html) y [etiquetas para documentar funciones](https://roxygen2.r-lib.org/reference/tags-rd.html). Para fines de desarrollo, puede que te interese la etiqueta [paquete experimental devtag](https://github.com/moodymudskipper/devtag) para obtener páginas de manual locales al utilizar `#' @noRd`.
 - A partir de la versión 7.0.0 de roxygen2, las clases `R6` son oficialmente compatibles.
@@ -283,8 +292,7 @@ f <- function(a = TRUE) {
 ### Datos de ejemplo {#example-datasets}
 
 Para documentar la interfaz de tu paquete, es posible que necesites utilizar datos de ejemplo.
-Puedes utilizar datos de R base (en el paquete datasets), como penguins, o [redistribuir y documentar datos](https://r-pkgs.org/data.html), con las atribuciones adecuadas.
-Si quieres usar conjuntos de datos en español, puedes utilizar el paquete [datos](https://cran.r-project.org/web/packages/datos/readme/README.html) que provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R, como pinguinos.
+Puedes utilizar datos de R base (en el paquete datasets), como penguins, o [redistribuir y documentar datos](https://r-pkgs.org/data.html), con las atribuciones adecuadas. Si quieres usar conjuntos de datos en español, puedes utilizar el paquete [datos](https://cran.r-project.org/web/packages/datos/readme/README.html) que provee la traducción al español de conjuntos de datos en inglés originalmente disponibles en otros paquetes de R, como pinguinos.
 Ten cuidado de elegir datos que cumplan con el [código de conducta de rOpenSci](https://ropensci.org/code-of-conduct/) y que, en general, no sean perjudiciales ni alienantes para nadie.
 
 ### URLs en la documentación {#ur-ls-in-documentation}
@@ -297,6 +305,7 @@ Además, no se podrá hacer click en los enlaces desde la documentación local.
 
 ## Sitio web de documentación  {#website}
 
+Todos los paquetes enviados para su revisión de software deben incluir un enlace claro a la página web de documentación en el repositorio de código fuente.
 Te recomendamos que crees un sitio web con la documentación de tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown).
 Hay un [capítulo sobre pkgdown (en inglés)](https://r-pkgs.org/website.html) en libro "R packages", y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
 
@@ -309,7 +318,9 @@ Puedes encontrar el estado de estas acciones en `https://dev.ropensci.org/job/no
 La construcción del sitio web utilizará el archivo de configuración de pkgdown si tienes uno, excepto para el estilo, ya que utilizará el [paquete `rotemplate`](https://github.com/ropensci-org/rotemplate/).
 El sitio web resultante tendrá una barra de búsqueda local.
 Por favor, informa de los errores, y haz preguntas o pedidos de nuevas características sobre la construcción del sitio centralizada en <https://github.com/ropensci/docs/> y sobre la plantilla en <https://github.com/ropensci/rotemplate/>.
+
 *Si las viñetas de tus paquetes necesitan credenciales (claves API, tokens, etc.) para generarse, puede que quieras [pregenerar las viñetas](https://ropensci.org/technotes/2019/12/08/precompute-vignettes/) o bien [almacenar en caché las respuestas](https://docs.ropensci.org/vcr/reference/setup_knitr.html) ya que las credenciales no se pueden utilizar en el servidor que genera la documentación.*
+
 Antes de presentar y transferir tu paquete, puedes utilizar el [enfoque documentado por `pkgdown`](https://pkgdown.r-lib.org/reference/deploy_site_github.html) o el [paquete `tic`](https://docs.ropensci.org/tic/) para construir el sitio web de tu paquete automáticamente.
 Esto te ahorrará el trabajo de ejecutar (y acordarte de ejecutar) `pkgdown::build_site()` cada vez que haya que actualizar el sitio.
 Consulta nuestro [capítulo sobre integración continua](#ci) si ésto no te resulta familiar.
@@ -537,8 +548,7 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [*R packag
 - Para parsear, crear y manipular XML, recomendamos fuertemente [xml2](https://cran.rstudio.com/web/packages/xml2/) en la mayoría de los casos.
   [Puedes consultar las notas de Daniel Nüst sobre la migración de XML a xml2 (en Inglés)](https://gist.github.com/nuest/3ed3b0057713eb4f4d75d11bb62f2d66).
 
-- Para datos espaciales, el paquete [sp](https://github.com/edzer/sp/) debe considerarse obsoleto en favor de [sf](https://r-spatial.github.io/sf/).
-  Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retiraron en 2023.
+- Para datos espaciales, el paquete [sp](https://github.com/edzer/sp/) debe considerarse obsoleto en favor de [sf](https://r-spatial.github.io/sf/). Los paquetes [rgdal](https://cran.r-project.org/web/packages/rgdal/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/index.html) y [rgeos](https://cran.r-project.org/web/packages/rgeos/index.html) se retiraron en 2023.
   Recomendamos el uso de las suites espaciales desarrolladas por las comunidades [r-spatial](https://github.com/r-spatial) y [rspatial](https://github.com/rspatial).
   Consulta [este issue de GitHub](https://github.com/ropensci/software-review-meta/issues/47) para ver las discusiones pertinentes.
 

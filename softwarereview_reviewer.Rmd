@@ -102,7 +102,8 @@ and
 
 - the GitHub repo of the `refnet` package will be cloned.
 - a review project will be created, containing a notebook for you to fill, and the review template.
-- note that if the package is not submitted via the default/main branch, you need to switch to the submitted branch before starting your review.
+
+Note that if the package is not submitted via the default/main branch, you need to switch to the submitted branch before starting your review.
 
 ### Feedback on the process {#feedback-on-the-process}
 

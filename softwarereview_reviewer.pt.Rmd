@@ -96,7 +96,8 @@ Como resultado:
 
 - o repositório do GitHub do pacote `refnet` será clonado.
 - um projeto de revisão será criado, contendo um bloco de notas para você preencher, já usando o modelo de revisão recomendado.
-- observe que, se o pacote não for enviado por meio da *branch* padrão/principal, você precisará mudar para a *branch* enviada antes de iniciar a revisão.
+
+Observe que, se o pacote não for enviado por meio da *branch* padrão/principal, você precisará mudar para a *branch* enviada antes de iniciar a revisão.
 
 ### Comentários sobre o processo {#feedback-on-the-process}
 

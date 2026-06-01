@@ -2,7 +2,6 @@
 aliases:
   - editorialmanagement.html
 ---
-
 # Gerenciamento editorial {#editorialmanagement}
 
 ```{block, type="summaryblock"}
@@ -66,6 +65,7 @@ Atenciosamente,
 - Convide-os para o banco de dados AirTable de análise de software (vinculado na descrição do canal, somente para editores, no Slack).
   Certifique-se de que o convite seja "Somente leitura".
 
+- Atualize o campo "editor" na tabela "reviewers-prod" do Airtable (isso é usado para identificar e listar os editores atuais nessa tabela). *Guia do desenvolvedor*).
 - Convide-os para o canal privado "editors-only" no espaço de trabalho Slack da rOpenSci (e para o espaço de trabalho Slack em geral, se eles ainda não estiverem lá).
 
 - Quando eles estiverem no canal "editors-only", publique uma mensagem de boas-vindas informando todos os editores.
@@ -87,6 +87,7 @@ Atenciosamente,
   - Clique no botão "Share" (Compartilhar) no canto superior direito e, em seguida, em "People with access" (Pessoas com acesso)
   - Clique na caixa de seleção à esquerda do(a) editor(a) a ser removido(a) e em "Remove 1 collaborator" (Remover 1 colaborador/a).
 
+- Alterar o rótulo "editor" para "Emérito" nos dados "reviewers-prod" do Airtable 
 - As listas de editores (anteriores) em ambos os capítulos do [dev\_guide que apresenta a revisão de software](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) e do [software-review README](https://github.com/ropensci/software-review/blob/main/README.Rmd) são preenchidos automaticamente a partir dos dados do AirTable.
   As atualizações são executadas diariamente, portanto, verifique um dia após as atualizações do AirTable para garantir que ambos tenham sido atualizados.
 
