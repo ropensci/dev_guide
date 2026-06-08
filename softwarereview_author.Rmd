@@ -41,10 +41,13 @@ This concise guide presents the software peer review process for you as a packag
 
 The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
 As stated in [our general policies](#policies-ai), we require all submitting authors to describe how such tools may have been used, and to include links to any relevant aspects of repositories.
-A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect, and the more we will expect such tools to have been used _systematically_.
-Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production.
-Examples of systematic generative AI tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) to [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
-These all share the common pattern of producing additional artefacts which document the _process_ of development alongside the software itself.
+A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect.
+While we currenly have no formal requirements for how tool usage should be documented, examples include tools which produce systematic records of design decisions and histories, such as [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) or [our own experimental 'designlens' tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
+Both of these create an additional `specs/` directory intended to be committed within a repository.
+That directory records individual development phases, generally under sequentially-numbered sub-directories, with each containing several documents like "plan.md", "tasks.md", and "report.md" or some equivalent summary of that step.
+A `specs/` folder can then contain a comprehensive history of software design, and provide an informative basis for review.
+This kind of information can also be automatically extracted from sufficiently detailed Git logs (and our [designlans tool](https://github.com/ropensci-review-tools/designlens) includes functionality to do just that).
+The Git log remains the ultimate source of insight into design history, and a minimal requirement for all submissions remains 
 
 ## Preparing for Submission {#preparing-for-submission}
 
