@@ -107,14 +107,6 @@ De la misma manera que les solicitamos a las personas autoras de los paquetes, p
 Algunos ejemplos de uso aceptable son la generación de una visión general de la funcionalidad del paquete, o la iteración a través de un historial Git para proporcionar una visión general de las decisiones de desarrollo.
 Pedimos a quienes revisan que sean lo más transparentes posible.
 
-### Uso de herramientas de IA generativa
-
-El uso de herramientas de IA generativa es aceptable tanto para los autores como para los revisores, pero los revisores no pueden utilizarlas para fundamentar directamente sus decisiones o recomendaciones.
-Por lo general, los revisores deben solicitar la aprobación de los autores y editores antes de utilizar herramientas de IA generativa, y hacerlo públicamente en el hilo de la revisión.
-Al igual que esperamos de los autores, exigimos a los revisores que revelen cualquier uso de herramientas de IA generativa con el mayor detalle posible.
-Algunos ejemplos de uso aceptable son la generación de una visión general de la funcionalidad del paquete, o la iteración a través de un historial Git para proporcionar una visión general de las decisiones de desarrollo.
-Pedimos a los revisores que sean lo más transparentes posible.
-
 ### Devoluciones sobre el proceso {#feedback-on-the-process}
 
 Te animamos a que preguntes y opines sobre el proceso de revisión en https://github.com/ropensci/software-review-meta/issues
