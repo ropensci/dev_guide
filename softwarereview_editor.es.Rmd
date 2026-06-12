@@ -271,7 +271,8 @@ Cuando estas fuentes de información no sean suficientes,
 
 ##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
-Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:
+Nuestra base de datos de Airtable aparece enlazada en la parte superior de nuestro canal de Slack «solo para editores».
+Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*Base de datos de reseñas de software de rOpenSci*» con la opción «*Buscar revisores*» en la parte superior izquierda:
 
 ![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
 
