@@ -2,7 +2,6 @@
 aliases:
 - building.html
 ---
-
 # Guia de desenvolvimento de pacotes {#building}
 
 ```{block, type="summaryblock"}
@@ -361,8 +360,7 @@ Para saber como atualizar seu arquivo DESCRIPTION, consulte [o livro *R packages
 
 - É uma boa prática escrever testes unitários para todas as funções e para todo o código do pacote em geral, garantindo que a funcionalidade principal seja coberta. Se a cobertura de testes em seu pacote está abaixo de 75%, provavelmente exigirá testes adicionais ou explicações antes de ser enviado para revisão.
 
-- Recomendamos o uso do [pacote testthat](https://testthat.r-lib.org/) para escrever testes. Uma alternativa é o [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
-
+- Recomendamos  o uso do [         testthat](https://testthat.r-lib.org/) para escrever testes. Outras opções incluem [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html) ou [testit](https://yihui.org/en/2026/05/testthat-to-testit/).
 - Se esforce para escrever testes ao escrever cada nova função. Isso atende à necessidade óbvia de ter um teste adequado para o pacote, mas permite que você pense sobre as várias maneiras pelas quais uma função pode falhar e programe *defensivamente* contra essas falhas. [Mais informações sobre testes](https://r-pkgs.org/tests.html).
 
 - Os testes devem ser fáceis de entender e ser tão autocontidos quanto possível. Ao usar o testthat, evite usar código fora do `test_that()` (como etapas de pré-processamento). Recomendamos a leitura da seção [*"high-level principles for testing"* (princípios de alto nível para testes)](https://r-pkgs.org/testing-design.html#sec-testing-design-principles) no *livro R Packages*.
@@ -562,5 +560,3 @@ Se você pretende que seu pacote seja enviado para o Bioconductor ou se o pacote
 #### MOOCs {#moo-cs}
 
 Existe um [especialização do Coursera correspondente ao livro escrito por Roger Peng, Sean Kross e Brooke Anderson](https://fr.coursera.org/specializations/r), com um curso específico sobre pacotes R.
-
-
