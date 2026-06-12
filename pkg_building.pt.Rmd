@@ -191,7 +191,7 @@ onde issue\_id é o número da *Issue* no repositório `software-review`. Por ex
 
 - Considere o uso da função `usethis::use_readme_rmd()` para obter um modelo para o arquivo `README.Rmd` e para configurar automaticamente uma verificação para garantir que o arquivo `README.md` seja sempre mais recente que o `README.Rmd` antes de fazer um commit.
 
-- Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website).
+- Exemplos extensos devem ser mantidos em uma vinheta. Se você quiser tornar as vinhetas mais acessíveis antes de instalar o pacote, sugerimos [criar um site para seu pacote](#website). Todos os pacotes enviados para a revisão de software devem ter um site.
 
 - Adicionar um [código de conduta e as diretrizes de contribuição](#friendlyfiles).
 
@@ -270,6 +270,7 @@ Outras pessoas já usaram a opção para escapar de alguns URLs (alterar `<https
 
 ## Site de documentação {#website}
 
+Todos os pacotes enviados para a revisão de software devem ter um site de documentação claramente indicado no repositório de código-fonte.
 Recomendamos a criação de um site de documentação para seu pacote usando o pacote [`pkgdown`](https://github.com/r-lib/pkgdown). O livro *R packages* (em inglês) apresenta um [capítulo sobre pkgdown](https://r-pkgs.org/website.html) e também o `pkgdown` tem [seu próprio site de documentação](https://pkgdown.r-lib.org/).
 
 Há alguns elementos que gostaríamos de destacar aqui.
