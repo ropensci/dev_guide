@@ -11,12 +11,13 @@ This concise guide presents the software peer review process for you as a packag
 
 ## Planning a Submission (or a Pre-Submission Enquiry) {#planning-a-submission-or-a-pre-submission-enquiry}
 
-
 ### Scope
 
 - Consult our [policies](#policies) see if your package meets our criteria for fitting into our suite and does not overlap with other packages.
   - If you are unsure whether a package meets our criteria, feel free to open an issue as a pre-submission inquiry to ask if the package is appropriate.
   - [Example response regarding overlap](https://github.com/ropensci/software-review/issues/199#issuecomment-375358362). Also consider adding some points about similar packages to your [package documentation](#docs-general).
+- Statistical software must comply with additional requirements detailed in our separate [*Statistical Software Guide*](https://stats-devguide.ropensci.org/).
+  - Statistical software *must* also start with a pre-submission inquiry.
 
 ### Lifecycle
 
