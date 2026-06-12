@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-06-12, add mention of testit (#1014).
 - 2026-05-21, clarify that stats must start with a pre-sub (#1011).
 - 2026-05-21, add comment on updating Airtable rev-prod for new editors (#1005).
 - 2026-05-21, update docs to require pkg websites at submission (#1004).
