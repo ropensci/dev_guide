@@ -34,9 +34,11 @@ Todos los envíos generan un informe detallado sobre la estructura y funcionalid
 
 ### Directrices generales {#general-guidelines}
 
-Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) y utilízala como lista de verificación general. Además de marcar los criterios mínimos, te pedimos que hagas comentarios generales sobre lo siguiente:
+Para revisar un paquete, empieza por copiar nuestro [plantilla de revisión](#reviewtemplate) o la plantilla [plantilla de examen estadístico](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) para software estadístico.
+Estas plantillas deben utilizarse como listas de comprobación de alto nivel para orientar la estructura de la revisión inicial.
+Además de marcar los criterios mínimos, te pedimos que aportes comentarios generales sobre lo siguiente:
 
-- ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
+- ¿Cumple el paquete con la [guía de desarrollo de paquetes de rOpenSci](#building)?
 - ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
 - ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones auxiliares del paquete?
