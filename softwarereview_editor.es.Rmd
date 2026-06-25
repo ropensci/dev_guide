@@ -271,9 +271,10 @@ Cuando estas fuentes de información no sean suficientes,
 
 ##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
-Puedes utilizar filtros, clasificación y búsqueda para identificar personas para la revisión con una experiencia concreta:
+Nuestra base de datos de Airtable aparece enlazada en la parte superior de nuestro canal de Slack «*editors-only (solo equipo editorial)».
+Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*rOpenSci Software Review Database (Base de datos de reseñas de software de rOpenSci)*» con la opción «*Search Reviewers (buscar revisores)*» en la parte superior izquierda:
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
 
 Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
 Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo`require_mentorship`.
@@ -365,4 +366,4 @@ Para aquellas personas que deseen mantener los repositorios de su paquete en sus
 
 #### Promoción de paquetes {#package-promotion}
 
-- Dirige a quién envió el paquete a los capítulos de la guía sobre [versionado y publicación de paquetes](#releases), [marketing](#marketing) y [preparación para GitHub](#grooming).
+- Dirige a quién envió el paquete a los capítulos de la guía sobre [versionado y publicación de paquetes](#releases), [promocionando tu paquete](#marketing) y [gestión de GitHub](#grooming).
