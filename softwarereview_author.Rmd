@@ -28,7 +28,7 @@ This concise guide presents the software peer review process for you as a packag
   - Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
 - Please also consider the time and effort needed to respond to reviews: think about your availability or that of your collaborators in the next weeks and months following a submission. Note that reviewers are volunteers, and we ask that you respect their time and effort by responding in a timely and respectful manner.
 - If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an *Active* instead of *WIP* badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is *Stable*.
-- You should not make any change to your package while it is under review, to allow reviewers to review a stable latest version of your package. Do not submit your package if you want to make changes to it in the short term!
+- You should not make any changes to your package while it is under review, so that all reviewers are looking at the same software. Do not submit your package until it is in a stable form!
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ### Documentation
