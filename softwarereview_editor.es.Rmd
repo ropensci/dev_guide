@@ -272,7 +272,7 @@ Cuando estas fuentes de información no sean suficientes,
 ##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
 Nuestra base de datos de Airtable aparece enlazada en la parte superior de nuestro canal de Slack «*editors-only*» (solo equipo editorial).
-Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*rOpenSci Software Review Database (Base de datos de reseñas de software de rOpenSci)*» con la opción «*Search Reviewers (buscar revisores)*» en la parte superior izquierda:
+Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*rOpenSci Software Review Database (Base de datos de revisiónes de software de rOpenSci)*» con la opción «*Search Reviewers*» (buscar personas revisores) en la parte superior izquierda:
 
 ![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
 
