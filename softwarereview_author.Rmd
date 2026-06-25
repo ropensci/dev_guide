@@ -28,6 +28,7 @@ This concise guide presents the software peer review process for you as a packag
   - Do not submit your package for review while it or an associated manuscript is also under review at another venue, as this may result in conflicting requests for changes.
 - Please also consider the time and effort needed to respond to reviews: think about your availability or that of your collaborators in the next weeks and months following a submission. Note that reviewers are volunteers, and we ask that you respect their time and effort by responding in a timely and respectful manner.
 - If you use [repostatus.org badges](https://www.repostatus.org/) (which we recommend), submit when you're ready to get an *Active* instead of *WIP* badge. Similarly, if you use [lifecycle badges](https://www.tidyverse.org/lifecycle/), submission should happen when the package is *Stable*.
+- You should not make any change to your package while it is under review, to allow reviewers to review a stable latest version of your package. Do not submit your package if you want to make changes to it in the short term!
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
 ### Documentation
@@ -81,6 +82,7 @@ If you intend to submit an accompanying manuscript for your package, rOpenSci ha
 
 - An [editor](#editors) will review your submission within 5 business days and respond with next steps. The editor may assign the package to reviewers, request that the package be updated to meet minimal criteria before review, or reject the package due to lack of fit or overlap.
 - If your package meets minimal criteria, the editor will assign  1-3 reviewers. They will be asked to provide reviews as comments on your issue within 3 weeks.
+- While your package is under review, please refrain from making any change, apart from hot fixes. Indeed, reviewers should be able to review the latest (best until now) version of your software, and that version should not be changing. 
 - We ask that you respond to reviewers' comments within 2 weeks of the last-submitted review, but you may make updates to your package or respond at any time. Your response should include a link to the updated [NEWS.md](#news) of your package. Here is [an author response example](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656). Once the response is commited, [submit it using the bot](bot_cheatsheet.html#submit-response-to-reviewers). We encourage ongoing conversations between authors and reviewers. See the [reviewing guide](#reviewerguide) for more details.
 - Any time package changes are likely to alter the results of [the automated `pkgcheck` checks](https://docs.ropensci.org/pkgcheck), authors can request a re-check with the command, `@ropensci-review-bot check package`.
 - Please notify us immediately if you are no longer able to maintain your package or to respond to reviews. You will then be expected to either retract a submission, or to find alternative package maintainers. You can also discuss maintenance issues in the rOpenSci slack workspace.
