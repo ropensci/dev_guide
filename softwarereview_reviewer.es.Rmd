@@ -34,9 +34,11 @@ Todos los envíos generan un informe detallado sobre la estructura y funcionalid
 
 ### Directrices generales {#general-guidelines}
 
-Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) y utilízala como lista de verificación general. Además de marcar los criterios mínimos, te pedimos que hagas comentarios generales sobre lo siguiente:
+Para revisar un paquete, empieza por copiar nuestro [plantilla de revisión](#reviewtemplate) o la plantilla [plantilla de examen estadístico](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) para software estadístico.
+Estas plantillas deben utilizarse como listas de comprobación de alto nivel para orientar la estructura de la revisión inicial.
+Además de marcar los criterios mínimos, te pedimos que aportes comentarios generales sobre lo siguiente:
 
-- ¿Cumple el paquete con la [guía de empaquetado de rOpenSci](#building)?
+- ¿Cumple el paquete con la [guía de desarrollo de paquetes de rOpenSci](#building)?
 - ¿Pueden mejorarse el estilo y los patrones del código? Por ejemplo, ¿es necesario dividir las funciones en funciones auxiliares más pequeñas y está claro el papel de cada función auxiliar?
 - ¿Puede reducirse el código duplicado, de haberlo?
 - ¿Existen funciones en R base o en dependencias ligeras que proporcionen la misma interfaz que algunas funciones auxiliares del paquete?
@@ -115,5 +117,3 @@ Te animamos a que preguntes y opines sobre el proceso de revisión en https://gi
 Las personas que enviaron el paquete a revisón deben responder en un plazo de 2 semanas con sus cambios en el paquete en respuesta a tu revisión. En esta fase, te pedimos que respondas si los cambios abordan suficientemente las cuestiones planteadas en tu revisión. Fomentamos el debate continuo entre quienes enviaron el paquete y quienes lo revisan, y también puedes pedir que quienes están a cargo de la edición aclaren cosas en el mismo hilo.
 
 Utilizarás la [plantilla de aprobación](#approval2template).
-
-
