@@ -274,7 +274,7 @@ Cuando estas fuentes de información no sean suficientes,
 Nuestra base de datos de Airtable aparece enlazada en la parte superior de nuestro canal de Slack «*editors-only*» (solo equipo editorial).
 Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*rOpenSci Software Review Database (Base de datos de revisiónes de software de rOpenSci)*» con la opción «*Search Reviewers*» (buscar personas revisores) en la parte superior izquierda:
 
-![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
+![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir 'química' y en conocimientos técnicos que tienen que tener 'integración continua'](images/airtable-filters.png)
 
 Comprueba la revisión más reciente de la persona y evita a cualquiera que haya revisado en los últimos seis meses.
 Asimismo, comprueba si una persona que es nueva revisando ha indicado que requiere tutoría en el campo`require_mentorship`.
