@@ -413,7 +413,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 - It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. 
   Test coverage below 75% will likely require additional tests or explanation before being sent for review.
 
-- We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. An alternative is [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
+- We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Alternatives includes [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html) or [testit](https://yihui.org/en/2026/05/testthat-to-testit/).
 
 - Strive to write tests as you write each new function. 
   This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to *defensively* code against those. 
