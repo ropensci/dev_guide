@@ -207,7 +207,7 @@ The badge will first indicated "under review" and then "peer-reviewed" once your
 - Consider using `usethis::use_readme_rmd()` to get a template for a `README.Rmd` file and to automatically set up a pre-commit hook to ensure that `README.md` is always newer than `README.Rmd`.
 
 - Extensive examples should be kept for a vignette. 
-  If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website).
+  If you want to make the vignettes more accessible before installing the package, we suggest [creating a website for your package](#website). All packages submitted for software review must have a website.
 
 - Add a [code of conduct and contribution guidelines](#friendlyfiles).
 
@@ -305,7 +305,8 @@ Furthermore, links would not be clickable from local docs.
 
 ## Documentation website {#website}
 
-We recommend creating a documentation website for your package using [`pkgdown`](https://github.com/r-lib/pkgdown). 
+All packages submitted for software review must have a documentation website clearly linked in the source repository.
+We recommend using [`pkgdown`](https://github.com/r-lib/pkgdown) to create your website.
 The R packages book features a [chapter on pkgdown](https://r-pkgs.org/website.html), and of course `pkgdown` has [its own documentation website](https://pkgdown.r-lib.org/).
 
 There are a few elements we'd like to underline here.
@@ -412,7 +413,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 - It is good practice to write unit tests for all functions, and all package code in general, ensuring key functionality is covered. 
   Test coverage below 75% will likely require additional tests or explanation before being sent for review.
 
-- We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. An alternative is [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html).
+- We recommend using [testthat](https://testthat.r-lib.org/) for writing tests. Alternatives includes [tinytest](https://journal.r-project.org/archive/2021/RJ-2021-056/index.html) or [testit](https://yihui.org/en/2026/05/testthat-to-testit/).
 
 - Strive to write tests as you write each new function. 
   This serves the obvious need to have proper testing for the package, but allows you to think about various ways in which a function can fail, and to *defensively* code against those. 

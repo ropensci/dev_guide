@@ -2,7 +2,13 @@
 
 ## Dev version
 
-- 2026-05-22, document current AI policies.
+- 2026-06-30, document current AI policies.
+- 2026-05-21, better document reviewer search in Airtable (#1009, #1010).
+- 2026-06-12, add mention of testit (#1014).
+- 2026-05-29, link in reviewer guide to stats template for stats reviews (#1012)
+- 2026-05-21, clarify that stats must start with a pre-sub (#1011).
+- 2026-05-21, add comment on updating Airtable rev-prod for new editors (#1005).
+- 2026-05-21, update docs to require pkg websites at submission (#1004).
 - 2026-04-10, two fixes to roxygen2 tags mentions (#1000, #1001, `@Pakillo`). Now 4 digits for PRs and issues!
 
 ## 1.0.0
