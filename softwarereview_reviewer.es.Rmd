@@ -26,7 +26,7 @@ Sin embargo, ten en cuenta que las invitaciones a revisar quedan a discreción q
 Por favor, no te ofrezcas para revisar en todos los *issues* y no te presentes a través de la interfaz de GitHub.
 
 Invitamos a todas las personas que lean esto a completar nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer) en cualquier momento.
-Si ya te has comprometido a revisar, una vez que se te asigne un número de revisión, nuestro bot también te proporcionará el enlace y te pedirá automáticamente que llenes el formulario.
+Si ya aceptaste revisar con rOpenSci, una vez que se te asigne un número de revisión, nuestro bot también te proporcionará el enlace y te pedirá automáticamente que llenes el formulario.
 
 ## Preparar tu revisión  {#preparereview}
 
