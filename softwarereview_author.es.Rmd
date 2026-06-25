@@ -39,9 +39,9 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 
 ### Uso de herramientas de IA generativa
 
-El uso de herramientas de IA generativa es aceptable en los paquetes enviados para revisión por pares, como se describe en [nuestra entrada inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
-Como se indica en [nuestras políticas generales](#policies-ai) exigimos a todos los autores que envíen propuestas que describan cómo se han utilizado dichas herramientas, y que incluyan enlaces a cualquier aspecto relevante de los repositorios.
-Una regla muy general es que cuanto mayor sea el uso de herramientas de IA generativa en un envío a rOpenSci, más documentación esperaremos y más esperaremos que se hayan utilizado dichas herramientas. *sistemáticamente*.
+El uso de herramientas de IA generativa es aceptable en los paquetes enviados para revisión por pares, como se describe en [nuestro artículo en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+Como se indica en [nuestras políticas generales](#policies-ai) exigimos a todas las personas autoras que envíen propuestas que describan cómo se han utilizado dichas herramientas, y que incluyan enlaces a cualquier aspecto relevante de los repositorios.
+Una regla general es que, cuanto más se utilicen herramientas de IA generativa en en un paquete enviado a rOpenSci, más documentación esperaremos recibir. Además esperaremos que dichas herramientas se hayan utilizado *sistemáticamente*.
 El uso sistemático de herramientas incluye cualquier enfoque que detalle de forma transparente y progresiva la contribución de las herramientas de IA generativa a la producción de software.
 Los ejemplos de herramientas sistemáticas de IA generativa van desde [el "spec-kit" de GitHub para el desarrollo basado en especificaciones](https://github.com/github/spec-kit) a [nuestra propia herramienta experimental para documentar las decisiones de diseño de software](https://github.com/ropensci-review-tools/designlens).
 Todas ellas comparten el patrón común de producir artefactos adicionales que documentan el *proceso* de desarrollo junto con el propio software.
