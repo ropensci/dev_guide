@@ -26,7 +26,7 @@ _If you use our standards/checklists etc. when reviewing software elsewhere, do 
 Thank you for your desire to participate in rOpenSci software peer-review as a reviewer!
 
 Anybody reading this is encouraged to fill our [volunteering form](https://ropensci.org/software-reviewer) at any time.
-If you've already volunteered to review, once you're assigned in a review issue, our bot will also provide the link and automatically ask you to fill out the form.
+If you've already agreed to review, once you're assigned in a review issue, our bot will also provide the link and automatically ask you to fill out the form.
 
 If you see a current submission that is particularly relevant to your interests please email `info@ropensci.org`, including the name of the package, the URL to the submission issue and the name of the assigned editor.
 However, keep in mind that reviewer invitations are kept at the editor's discretion, and the editor might well have already emailed people.
