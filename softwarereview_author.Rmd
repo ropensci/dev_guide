@@ -42,12 +42,16 @@ This concise guide presents the software peer review process for you as a packag
 The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
 As stated in [our general policies](#policies-ai), we require all submitting authors to describe how such tools may have been used, and to include links to any relevant aspects of repositories.
 
-- Please provide easy-to-find details or links on any usage of generative AI tools in your documentation, like in [this package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai).
-- A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect, and the more we will expect such tools to have been used _systematically_.
-- Systematic tool usage includes any approach which transparently and progressively details the contribution of generative AI tools to software production, such as [GitHub's "spec-kit"](https://github.github.com/spec-kit/).
+- Please provide easy-to-find details or links on any usage of generative AI tools in your documentation, like in [this package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai), which helpfully includes the following statements:
+  > For a detailed disclosure of AI usage, please refer to the [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) file.
+  > For architectural rationale and design tradeoffs, please refer to the [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html) file.
+  Both files are linked to directly from the main README, and included within the repository itself.
+- A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more we will expect tool use to be documented within the software itself.
+- We request AI tools be used in systematic ways that record decisions guiding tool processes and outputs within the software itself.
+  - Systemtic tool usage contrasts with use through series of reactive prompts which commonly leave no trace within the software itself.
 
 Examples of systematic generative AI tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) to [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
-These all share the common pattern of producing additional artefacts which document the _process_ of development alongside the software itself.
+These all share the common pattern of producing additional artefacts which document decisions and processes of development alongside the software itself.
 
 #### How to use generative AI tools in preparing software for review
 
