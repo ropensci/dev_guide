@@ -100,6 +100,22 @@ Como resultado:
 
 Observe que, se o pacote não for enviado por meio da *branch* padrão/principal, você precisará mudar para a *branch* enviada antes de iniciar a revisão.
 
+### Uso de ferramentas de IA generativas
+
+O uso de ferramentas de IA generativas é aceitável tanto para os autores que enviam quanto para os revisores, mas elas não podem ser usadas pelos revisores para informar diretamente quaisquer decisões ou recomendações.
+Em geral, os revisores devem solicitar a aprovação dos autores e editores que enviam os artigos antes de usar ferramentas de IA generativas, e fazê-lo publicamente no tópico de revisão.
+Assim como esperamos dos autores, exigimos que os revisores divulguem qualquer uso de ferramentas de IA generativas com o máximo de detalhes possível.
+Exemplos de uso aceitável incluem a geração de uma visão geral da funcionalidade do pacote ou a iteração em um histórico do Git para fornecer uma visão geral das decisões de desenvolvimento.
+Pedimos aos revisores que sejam o mais transparentes possível.
+
+### Uso de ferramentas de IA generativas
+
+O uso de ferramentas de IA generativas é aceitável tanto para autores que enviam quanto para revisores, mas elas não podem ser usadas pelos revisores para informar diretamente quaisquer decisões ou recomendações.
+Em geral, os revisores devem solicitar a aprovação dos autores e editores que enviam os artigos antes de usar ferramentas de IA generativas, e fazê-lo publicamente no tópico de revisão.
+Assim como esperamos dos autores, exigimos que os revisores divulguem qualquer uso de ferramentas de IA generativas com o máximo de detalhes possível.
+Exemplos de uso aceitável incluem a geração de uma visão geral da funcionalidade do pacote ou a iteração em um histórico do Git para fornecer uma visão geral das decisões de desenvolvimento.
+Pedimos aos revisores que sejam o mais transparentes possível.
+
 ### Comentários sobre o processo {#feedback-on-the-process}
 
 Incentivamos você a fazer perguntas e fornecer feedbacks sobre o processo de revisão em https://github.com/ropensci/software-review-meta/issues

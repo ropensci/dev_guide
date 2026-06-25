@@ -37,6 +37,27 @@ This concise guide presents the software peer review process for you as a packag
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
+### Use of generative AI tools
+
+- The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+- As stated in [our general policies](#policies-ai), we require all submitting authors to describe how such tools may have been used, and to include links to any relevant aspects of repositories.
+- A very general rule-of-thumb is the greater the use of generative AI tools in an rOpenSci submission, the more documentation we will expect.
+
+#### How to use generative AI tools in preparing software for review
+
+Software review must be able to focus on design decisions and design history.
+Generative AI tools should be used in ways that best enable that.
+
+- We encourage the use of tools which produce systematic records of design decisions and histories, such as [GitHub's "spec-kit"](https://github.com/github/spec-kit) or [our own experimental 'designlens' tool](https://github.com/ropensci-review-tools/designlens).
+- Both of these create an additional `specs/` directory intended to be committed within a repository, and that records individual development phases, generally under sequentially-numbered sub-directories, with each containing several documents like "plan.md", "tasks.md", and "report.md".
+- A `specs/` folder can also be produced and maintained by hand, or by directly instructing a generative AI tool, but however produced it should contain a comprehensive history of software design, and provide an informative basis for review.
+- For alternative approaches, consider JOSS's requirement for statements of [_Scope and significance_](https://joss.readthedocs.io/en/latest/submitting.html#scope-and-significance), and see [recently accepted papers](https://joss.theoj.org/papers/published) for examples of such statements.
+
+#### The importance of Git logs
+
+- The Git log remains the ultimate source of insight into design history, and a minimal requirement for all submissions remains an ability to grasp design history through a sufficiently extensive Git log.
+- While we place no current minimal limits on Git log size, we do note that [JOSS now requires at least six months of public commit history](https://joss.readthedocs.io/en/latest/submitting.html#:~:text=six%20months), and will defer to such requirements when considered necessary.
+
 ## Preparing for Submission {#preparing-for-submission}
 
 ### Asking for help

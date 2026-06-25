@@ -34,6 +34,17 @@ El paquete incluye todos los siguientes tipos de documentación:
 - [ ] **Pruebas automáticas:** Hay *tests* unitarios que cubren las funciones esenciales dentro del paquete con un rango razonable de entradas y condiciones. Todas las pruebas corren correctamente en la computadora local.
 - [ ] **Directrices de empaquetado:** El paquete cumple las directrices de empaquetado de rOpenSci.
 
+
+#### Uso de herramientas de IA generativa
+
+
+- [ ] Se utilizaron herramientas de IA generativa para realizar esta revisión
+
+Solo si marca esa casilla: explique la contribución de dichas herramientas a su revisión.
+
+---
+
+
 Estimación de horas dedicadas a la revisión:
 
 - [ ] Si quienes son responsables del paquete lo consideran apropiado, estoy de acuerdo en que se me reconozca en el archivo *DESCRIPTION* del paquete con rol de revisión ("rev").
