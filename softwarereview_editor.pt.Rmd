@@ -271,7 +271,7 @@ Quando essas fontes de informação não forem suficientes,
 
 ##### Dicas para a pesquisa de revisores(as) no Airtable {#tips-for-reviewer-search-in-airtable}
 
-Nosso banco de dados do Airtable está vinculado na parte superior do nosso canal do Slack "exclusivo para editores".
+Nosso banco de dados do Airtable está vinculado na parte superior do nosso canal do Slack «*editors-only (exclusivo para equipe editorial)*».
 Depois de acessar o Airtable por meio desse link, você deverá ver "*Banco de dados de revisões de software da rOpenSci*" com a opção "*Pesquisar revisores*" no canto superior esquerdo:
 
 ![Captura de tela da interface de filtros do Airtable com um filtro sobre a experiência em disciplinas que devem incluir química e áreas técnicas que devem incluir a integração contínua](images/airtable-filters.png)
