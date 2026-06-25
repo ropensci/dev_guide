@@ -304,7 +304,7 @@ Además, no se podrá hacer click en los enlaces desde la documentación local.
 
 ## Sitio web de documentación  {#website}
 
-Todos los paquetes enviados para su revisión de software deben incluir un enlace claro a la página web de documentación en el repositorio de código fuente.
+Todos los paquetes enviados para su revisión deben incluir un enlace claro a la página web de documentación en el repositorio de código fuente.
 Te recomendamos que crees un sitio web con la documentación de tu paquete utilizando [`pkgdown`](https://github.com/r-lib/pkgdown).
 Hay un [capítulo sobre pkgdown (en inglés)](https://r-pkgs.org/website.html) en libro "R packages", y, cómo no es de extrañar, el paquete `pkgdown` tiene [su propio sitio web de documentación](https://pkgdown.r-lib.org/).
 

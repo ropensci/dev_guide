@@ -34,7 +34,7 @@ Todos los envíos generan un informe detallado sobre la estructura y funcionalid
 
 ### Directrices generales {#general-guidelines}
 
-Para revisar un paquete, empieza por copiar nuestro [plantilla de revisión](#reviewtemplate) o la plantilla [plantilla de examen estadístico](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) para software estadístico.
+Para revisar un paquete, empieza por copiar nuestra [plantilla de revisión](#reviewtemplate) o la [plantilla de revisión estadística](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) para software estadístico.
 Estas plantillas deben utilizarse como listas de comprobación de alto nivel para orientar la estructura de la revisión inicial.
 Además de marcar los criterios mínimos, te pedimos que aportes comentarios generales sobre lo siguiente:
 
