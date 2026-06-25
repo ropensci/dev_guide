@@ -2,6 +2,8 @@
 
 ## Dev version
 
+
+- 2026-05-21, better document reviewer search in Airtable (#1009, #1010).
 - 2026-06-12, add mention of testit (#1014).
 - 2026-05-29, link in reviewer guide to stats template for stats reviews (#1012)
 - 2026-05-21, clarify that stats must start with a pre-sub (#1011).
