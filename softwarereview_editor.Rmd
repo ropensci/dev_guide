@@ -106,7 +106,17 @@ Could you add a more detailed comparison to the packages you mention in the READ
 
 - Initially tag each new full submission with ` 0/editorial-team-prep`
 
-- Find a handling editor (potentially including yourself).
+- Issue the following command to email all editors a notification that we're seeking volunteers for the submission:
+
+  ```
+  @ropensci-review-bot ping editors
+  ```
+
+  Editors can express interest by clicking on a link in their email.
+  Each click will automatically send a notification email to the EiC informing them who has clicked.
+  EiC's may automatically assign editors to issues, but may first like to ask directly via Slack to ensure editors are willing to be assigned.
+
+- If nobody responds, more active solicitation may be necessary.
   Currently available editors are indicated on the [*Editorial Dashboard*](https://dashboard.ropensci.org), and editorial workloads should be distributed as evenly as possible, through referring to the [*Dashboard* charts of recent editorial load](https://dashboard.ropensci.org/editors.html#past-ed-load).
   The EiC may also recruit a guest editor to handle any submission, as described in the [sub-section below](#guesteditor).
 

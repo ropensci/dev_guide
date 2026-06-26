@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-06-26, describe new EiC 'ping editors' bot command (#1018).
 - 2026-06-12, clarify expections for volunteer form for eds and revs (#1015; thansk to @joelnitta)
 - 2026-06-25, clarify manual removal of holding label (#1020, `@robitalec`).
 
