@@ -242,7 +242,7 @@ Utiliza toda esta información para juzgar si:
 - Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
 - Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión.
   Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+  Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete. La etiqueta de «en espera» se puede eliminar manualmente en la barra lateral del _issue_.
 - Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack.
 
 ### Busca y asigna dos personas para revisar el paquete {#look-for-and-assign-two-reviewers}
