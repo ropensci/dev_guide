@@ -252,7 +252,7 @@ Please use all of this information to judge whether:
 - Ideally, any remarks you make as editor should be addressed before assigning reviewers.
 - If initial checks show major gaps, request changes before assigning reviewers.
   If the author mentions changes might take time, [apply the holding label by calling `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  You'll get a reminder in the issue every 90 days to check in with the package author(s).
+  You'll get a reminder in the issue every 90 days to check in with the package author(s). The holding label can be manually removed in the issue's sidebar. 
 - If the package raises a new issue for rOpenSci policy, start a conversation in Slack.
 
 ### Look for and assign two reviewers {#look-for-and-assign-two-reviewers}
@@ -281,11 +281,16 @@ When these sources of information are not enough,
 
 ##### Tips for reviewer search in Airtable {#tips-for-reviewer-search-in-airtable}
 
-You can use filters, sorting, and search to identify reviewers with particular experience:
+Our Airtable database is linked at the top of our Slack 'editors-only' channel.
+Once you log in to Airtable via that link, you should see "*rOpenSci Software Review Database*" with "*Search Reviewers*" at the top left:
 
-![Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration](images/airtable.png)
+![Screenshot of the main Airtable interface with 'Search Reviewers' link](images/airtable.png)
 
-Please check the reviewer's most recent review and avoid anyone who has reviewed anyone in the past six months.
+At the top right, there is a "Filter" button to filter, sort, and search reviewers with particular experience:
+
+![Screenshot of the Airtable filters interface with a filter on domain expertise that has to include chemistry and technical areas that have to include continuous integration](images/airtable-filters.png)
+
+Please check potential reviewers' most recent review and avoid anyone who has reviewed anyone in the past six months.
 Also, please check if a first-time reviewer has indicated that they `require_mentorship`.
 If so, please use the mentorship portion of the email template and be prepared to provide additional guidance.
 
@@ -314,6 +319,7 @@ In general, at least one reviewer should have prior reviewing experience, and of
   If needed later, remove reviewers with `@ropensci-review-bot remove @username from reviewers`.
 - Due dates for reviews are set by default to [21 days](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 weeks) after the date of assignment.
 - If you want to change the due date for a review use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+- The bot will automatically ask each reviewer to fill out our [volunteering form](https://ropensci.org/software-reviewer) to ensure they're in the Airtable database.
 
 ### During review {#during-review}
 
