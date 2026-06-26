@@ -242,7 +242,7 @@ Use todas essas informações para avaliar se:
 - O ideal é que você faça observações e estas sejam resolvidas antes que revisores comecem a revisar.
 - Se as verificações iniciais mostrarem grandes lacunas, solicite alterações antes de designar revisores.
   Se o(a) autor(a) mencionar que as alterações podem levar tempo, [aplique a etiqueta de espera escrevendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  Você receberá um lembrete a cada 90 dias na *issue* de edição para verificar com os(as) autores(as) do pacote.  A etiqueta de espera pode ser removida manualmente na barra lateral da issue.
+  Você receberá um lembrete a cada 90 dias na *issue* de edição para verificar com os(as) autores(as) do pacote.  A etiqueta de espera (`holding`) pode ser removida manualmente na barra lateral da *issue*.
 - Se o pacote levantar uma nova questão em relação às políticas da rOpenSci, inicie uma conversa no Slack.
 
 ### Busque e atribua duas pessoas para revisar o pacote {#look-for-and-assign-two-reviewers}
