@@ -25,7 +25,8 @@ Si ves una presentación vigente que te sea particularmente interesante, por fav
 Sin embargo, ten en cuenta que las invitaciones a revisar quedan a discreción quien se encuentra a cargo de la edición, y es muy posible que ya haya realizado invitaciones.
 Por favor, no te ofrezcas para revisar en todos los *issues* y no te presentes a través de la interfaz de GitHub.
 
-Para otras formas de contribuir, consulta la [Guía de contribución de rOpenSci](https://contributing.ropensci.org/).
+Invitamos a todas las personas que lean esto a completar nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer) en cualquier momento.
+Si ya aceptaste revisar con rOpenSci, una vez que se te asigne un número de revisión, nuestro bot también te proporcionará el enlace y te pedirá automáticamente que llenes el formulario.
 
 ## Preparar tu revisión  {#preparereview}
 
