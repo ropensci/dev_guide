@@ -318,7 +318,7 @@ In general, at least one reviewer should have prior reviewing experience, and of
 - Upon each review being submitted,
   - Write a comment thanking the reviewer in your own words.
   - Record the review by typing a new comment `@ropensci-review-bot submit review <review-url> time <time in hours>`, like in [this example](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
-- Upon changes being made, change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
+- Upon changes being made, ensure the author [submits their response using the bot](#submit-response-to-reviewers), change the review status tag to `5/awaiting-reviewer-response`, and request that reviewers indicate approval with the [reviewer approval template](#approval2template).
 - If the authors intend to submit an accompanying [Applications](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) manuscript at [Methods in Ecology and Evolution](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indicate to the authors can submit their manuscript after the review has been completed. 
 
 #### Answering reviewers' questions {#reviewersupport}

@@ -2,9 +2,9 @@
 
 ## Dev version
 
+- 2026-06-25, add note for editors that authors should record their responses (#1021, `@robitalec`)
 - 2026-06-12, clarify expections for volunteer form for eds and revs (#1015; thansk to @joelnitta)
 - 2026-06-25, clarify manual removal of holding label (#1020, `@robitalec`).
-
 - 2026-05-21, better document reviewer search in Airtable (#1009, #1010).
 - 2026-06-12, add mention of testit (#1014).
 - 2026-05-29, link in reviewer guide to stats template for stats reviews (#1012)
