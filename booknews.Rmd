@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-06-25, clarify manual removal of holding label (#1020, `@robitalec`).
 
 - 2026-05-21, better document reviewer search in Airtable (#1009, #1010).
 - 2026-06-12, add mention of testit (#1014).
