@@ -19,7 +19,7 @@ _Se você usar nossos processos,  guias, listas de verificação, etc., ao revis
 
 Obrigado pelo seu desejo de participar como revisor(a) da revisão por pares de software da rOpenSci!
 
-Incentivamos todos que estiverem lendo isto a preencher nosso [formulário de voluntariado](https://ropensci.org/software-reviewer) a qualquer momento.
+Convidamos qualquer pessoa que esteja lendo isto a preencher nosso [formulário de voluntariado](https://ropensci.org/software-reviewer) a qualquer momento.
 Se você já aceitou o convite de realizar uma revisão, assim que for designado(a) para uma *issue* de revisão, nosso bot também fornecerá o link e solicitará automaticamente que você preencha o formulário.
 
 Se você encontrar alguma submissão que seja particularmente relevante para seus interesses, envie um e-mail para `info@ropensci.org`, incluindo o nome do pacote, a URL da *issue* que corresponde a este envio e o nome do(a) editor(a) responsável.
