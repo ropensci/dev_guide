@@ -242,7 +242,7 @@ Use todas essas informações para avaliar se:
 - O ideal é que você faça observações e estas sejam resolvidas antes que revisores comecem a revisar.
 - Se as verificações iniciais mostrarem grandes lacunas, solicite alterações antes de designar revisores.
   Se o(a) autor(a) mencionar que as alterações podem levar tempo, [aplique a etiqueta de espera escrevendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  Você receberá um lembrete a cada 90 dias na *issue* de edição para verificar com os(as) autores(as) do pacote.
+  Você receberá um lembrete a cada 90 dias na *issue* de edição para verificar com os(as) autores(as) do pacote.  A etiqueta de espera (`holding`) pode ser removida manualmente na barra lateral da *issue*.
 - Se o pacote levantar uma nova questão em relação às políticas da rOpenSci, inicie uma conversa no Slack.
 
 ### Busque e atribua duas pessoas para revisar o pacote {#look-for-and-assign-two-reviewers}
@@ -271,12 +271,13 @@ Quando essas fontes de informação não forem suficientes,
 
 ##### Dicas para a pesquisa de revisores(as) no Airtable {#tips-for-reviewer-search-in-airtable}
 
-Você pode usar filtros, classificações e pesquisas para identificar revisores(as) com experiência específica:
+Nosso banco de dados do Airtable está vinculado na parte superior do nosso canal do Slack «*editors-only (exclusivo para equipe editorial)*».
+Depois de acessar o Airtable por meio desse link, você deverá ver o «*rOpenSci Software Review Database (Banco de dados de revisões de software da rOpenSci)*» com a opção «*Search Reviewers (Pesquisar revisores)*» no canto superior esquerdo:
 
-![Captura de tela da interface em inglês de filtros do Airtable com um filtro de experiência de domínio que deve incluir química e áreas técnicas que devem incluir integração contínua](images/airtable.png)
+![Captura de tela da interface de filtros do Airtable com um filtro sobre a experiência em disciplinas que devem incluir química e áreas técnicas que devem incluir a integração contínua](images/airtable-filters.png)
 
-Por favor, verifique a avaliação mais recente do revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. 
-Além disso, verifique se um revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
+Por favor, verifique a avaliação mais recente do(a) revisor(a) e evite qualquer pessoa que tenha avaliado alguém nos últimos seis meses. 
+Além disso, verifique se um(a) revisor(a) iniciante indicou que precisou de mentoria (`require_mentorship`). 
 Nestes casos, use a parte de orientação do modelo de e-mail e esteja preparado para fornecer orientações adicionais.
 
 ##### Critérios para escolher um(a) revisor(a) {#criteria-for-choosing-a-reviewer}
@@ -304,6 +305,7 @@ Em geral, pelo menos um(a) revisor(a) deve ter experiência prévia em revisão 
   Se necessário remover alguém da revisão, use o comando `@ropensci-review-bot remove @username from reviewers`.
 - As datas de vencimento das revisões são definidas por padrão como [21 dias](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 semanas) após a data da atribuição.
 - Se você quiser alterar a data de vencimento de uma revisão, use `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+- O bot solicitará automaticamente a cada pessoa revisora que preencha nosso [formulário de voluntariado](https://ropensci.org/software-reviewer) para garantir que estejam no banco de dados do Airtable.
 
 ### Durante a revisão {#during-review}
 
