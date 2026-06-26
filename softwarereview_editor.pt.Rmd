@@ -106,7 +106,17 @@ Você poderia adicionar ao README uma comparação mais detalhada em relação a
 
 - Inicialmente, marque cada novo envio completo com ` 0/editorial-team-prep`
 
-- Encontre alguém da equipe editorial para que fique responsável pelo envio (incluindo você, potencialmente).
+- Execute o seguinte comando para enviar por e-mail a todos os editores uma notificação informando que estamos buscando voluntários para a edição:
+
+  ```
+  @ropensci-review-bot ping editors
+  ```
+
+  Os editores podem manifestar interesse clicando em um link no e-mail recebido.
+  Cada clique enviará automaticamente um e-mail de notificação ao editor-chefe (EiC), informando quem clicou.
+  Os editores-chefes podem designar editores para as edições automaticamente, mas talvez prefiram perguntar diretamente pelo Slack primeiro, para garantir que os editores estejam dispostos a aceitar a designação.Expandir comentárioComentário na linha R117Resolvido
+
+- Se ninguém responder, pode ser necessário fazer uma solicitação mais ativa.
   As pessoas da equipe editorial atualmente disponíveis estão indicadas no [*Painel editorial*](https://dashboard.ropensci.org) As cargas de trabalho editoriais devem ser distribuídas da maneira mais uniforme possível, consultando os [gráficos de cargas editoriais recentes no *Painel editorial* ](https://dashboard.ropensci.org/editors.html#past-ed-load).
   A pessoa que ocupa o papel de EiC também pode recrutar alguém como editora convidada para acompanhar alguma submissão, conforme descrito na [subseção abaixo](#guesteditor).
 
