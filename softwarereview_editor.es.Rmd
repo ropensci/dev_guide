@@ -106,15 +106,15 @@ Si un paquete tiene funcionalidad que se solapa con otros paquetes, requerimos q
 
 - Etiqueta inicialmente cada nuevo envío completo con ` 0/editorial-team-prep`
 
-- Ejecuta el siguiente comando para enviar por correo electrónico a todos los editores una notificación indicando que estamos buscando voluntarios para la edición:
+- Ejecuta el siguiente comando para enviar por correo electrónico a todas las personas editoras una notificación indicando que estamos buscando quien se haga cargo de la edición:
 
   ```
   @ropensci-review-bot ping editors
   ```
 
-  Los editores pueden manifestar su interés haciendo clic en un enlace que aparece en su correo electrónico.
-  Cada clic enviará automáticamente un correo electrónico de notificación al editor en jefe (EiC) informándole quién ha hecho clic.
-  Los EiC pueden asignar automáticamente editores a los números, pero tal vez prefieran preguntarles primero directamente a través de Slack para asegurarse de que los editores estén dispuestos a ser asignados.Expandir comentarioComentario en la línea R117Resuelto
+  Quienes integran el equipo editorial pueden manifestar su interés haciendo clic en un enlace que aparece en su correo electrónico.
+  Cada clic enviará automáticamente un correo electrónico de notificación al editor o editora en jefe (EiC) informándole quién ha hecho clic.
+  Quienes desempeñan el rol de EiC pueden asignar automáticamente a integrantes del equipo editorial a los _issues_, pero quizá prefieran consultarles primero por Slack para confirmar que aceptan la asignación.
 
 - Si nadie responde, podría ser necesario realizar una convocatoria más activa.
   Quiénes están disponibles actualmente se indican en la página [*Panel Editorial*](https://dashboard.ropensci.org), y las cargas de trabajo editoriales deben distribuirse de la forma más uniforme posible, remitiéndose al [*Cuadro de envíos*, gráficos de carga editorial reciente](https://dashboard.ropensci.org/editors.html#past-ed-load).
