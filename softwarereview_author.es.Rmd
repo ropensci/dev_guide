@@ -28,7 +28,7 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
   - No envíes tu paquete para su revisión mientras éste o un artículo científico asociado también esté siendo revisado en otro lugar, ya que esto puede dar lugar a recomendaciones incompatibles.
 - Ten en cuenta también el tiempo y el esfuerzo necesarios para responder a las revisiones: piensa en tu disponibilidad o en la de quienes colaboran con tu paquete en las semanas y meses siguientes al envío. Ten en cuenta que las revisiones son realizadas por personas voluntarias, y te pedimos que respetes su tiempo y esfuerzo respondiendo puntual y respetuosamente.
 - Si utilizas [etiquetas de repostatus.org](https://www.repostatus.org/) (que recomendamos), envía tu paquete cuando esté listo para obtener la etiqueta *Active* en vez de *WIP*. Si utilizas [etiquetas de ciclo de vida](https://www.tidyverse.org/lifecycle/), el envío debe producirse cuando el paquete esté al menos en el estado *Maturing*.
-- No debes hacer ningún cambio en tu paquete mientras esté en proceso de revisión, para que todos los revisores puedan evaluar el mismo software. ¡No envíes tu paquete hasta que esté en una versión estable!
+- No debes hacer ningún cambio en tu paquete mientras esté en proceso de revisión, para que todas las personas que lo revisan puedan evaluar el mismo software. ¡No envíes tu paquete hasta que esté en una versión estable!
 - Tu paquete seguirá evolucionando después de la revisión, el capítulo sobre *Evolución de paquetes* [proporciona orientación sobre el tema](#evolution).
 
 ### Documentación
