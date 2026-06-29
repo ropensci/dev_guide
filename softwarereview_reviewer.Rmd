@@ -25,7 +25,8 @@ _If you use our standards/checklists etc. when reviewing software elsewhere, do 
 
 Thank you for your desire to participate in rOpenSci software peer-review as a reviewer!
 
-Please fill our [volunteering form](https://ropensci.org/software-reviewer).
+Anybody reading this is encouraged to fill our [volunteering form](https://ropensci.org/software-reviewer) at any time.
+If you've already agreed to review, once you're assigned in a review issue, our bot will also provide the link and automatically ask you to fill out the form.
 
 If you see a current submission that is particularly relevant to your interests please email `info@ropensci.org`, including the name of the package, the URL to the submission issue and the name of the assigned editor.
 However, keep in mind that reviewer invitations are kept at the editor's discretion, and the editor might well have already emailed people.
@@ -40,7 +41,9 @@ All submissions trigger a detailed report on package structure and functionality
 
 ### General guidelines {#general-guidelines}
 
-To review a package, please begin by copying our [review template](#reviewtemplate) and using it as a high-level checklist.  In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
+To review a package, please begin by copying our [review template](#reviewtemplate), or the the [statistics review template](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) for statistical software.
+These templates should be used as high-level checklists to guide initial review structure.
+In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the package comply with the [rOpenSci packaging guide](#building)?
 - Are there improvements that could be made to the code style and to code patterns? For instance, do functions need to be broken down into smaller helper functions and is the role of each helper function clear?
