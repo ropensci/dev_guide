@@ -33,6 +33,16 @@ O pacote inclui todas as seguintes formas de documentação:
 - [ ] **Testes automatizados:**Os testes unitários cobrem funções essenciais do pacote e uma gama razoável de *inputs* e condições. Todos os testes passam na máquina local.
 - [ ] **Diretrizes de empacotamento**: O pacote está em conformidade com as diretrizes de empacotamento da rOpenSci.
 
+#### Uso de ferramentas de IA generativa
+
+
+- [ ] Foram utilizadas ferramentas de IA generativa para auxiliar nesta revisão
+
+Somente se você marcar essa opção: Explique a contribuição dessas ferramentas para a sua revisão.
+
+---
+
+
 Horas estimadas gastas na revisão:
 
 - [ ] Caso as pessoas autoras do pacote considerem apropriado, concordo em ser reconhecido(a) como revisor(a) do pacote (função "rev") no arquivo DESCRIPTION do pacote.
