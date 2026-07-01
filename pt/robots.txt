@@ -1,0 +1,1 @@
+Sitemap: https://devdevguide.netlify.app/pt/sitemap.xml
