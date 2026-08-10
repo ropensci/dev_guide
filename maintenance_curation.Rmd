@@ -31,8 +31,7 @@ part to prioritize work on these components.
 
 ## The package registry {#the-package-registry}
 
-- The rOpenSci package
-  [registry](https://github.com/ropensci/roregistry)
+- The rOpenSci [R-universe](https://ropensci.r-universe.dev/builds)
   is a central listing of R packages currently or formerly
   maintained or reviewed by rOpenSci. It contains essential package
   metadata including development and review status, and will be the
@@ -90,7 +89,7 @@ at the time of submission to be reviewed.
 
 - Upon acceptance, these peer-reviewed packages are transferred from
   the author's GitHub to the "ropensci" GitHub organization 
-  or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json).
+  or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/ropensci.r-universe.dev/blob/gh-pages/info/not_transferred.json).
 
 - Peer-reviewed packages will be in the registry tagged as
   "peer-reviewed" and have a peer-reviewed badge in their README.
