@@ -31,7 +31,7 @@ parte para priorizar o trabalho nesses componentes.
 
 ## O registro de pacotes {#the-package-registry}
 
-- O [R-Universe](https://ropensci.r-universe.dev/builds) do rOpenSci
+- O [R-Universe](https://ropensci.r-universe.dev/builds) da rOpenSci
   é uma lista centralizada dos pacotes R que são mantidos atualmente (ou que foram
   mantidos anteriormente) pela rOpenSci.
   Ele contém metadados essenciais sobre os pacotes, incluindo o status de desenvolvimento e de revisão,
