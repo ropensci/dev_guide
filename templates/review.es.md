@@ -32,7 +32,7 @@ El paquete incluye todos los siguientes tipos de documentación:
 - [ ] **Funcionalidad:** Se confirmaron todas las afirmaciones de funcionalidad.
 - [ ] **Desempeño:** Se confirmaron todas las afirmaciones de desempeño.
 - [ ] **Pruebas automáticas:** Hay *tests* unitarios que cubren las funciones esenciales dentro del paquete con un rango razonable de entradas y condiciones. Todas las pruebas corren correctamente en la computadora local.
-- [ ] **Directrices de empaquetado:** El paquete cumple la [guía de empaquetado de rOpenSci(https://devdevguide.netlify.app/es/pkg_building.es).
+- [ ] **Directrices de empaquetado:** El paquete cumple la [guía de empaquetado de rOpenSci](https://devdevguide.netlify.app/es/pkg_building.es).
 
 Estimación de horas dedicadas a la revisión:
 
