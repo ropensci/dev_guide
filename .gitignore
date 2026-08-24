@@ -12,3 +12,4 @@ pdfbook
 
 /.quarto/
 .vscode
+**/*.quarto_ipynb

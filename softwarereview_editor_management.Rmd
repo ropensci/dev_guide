@@ -139,6 +139,6 @@ We are already working on updates for our next version, such as ISSUE1, ISSUE2.
 Check out the [the issue tracker](https://github.com/ropensci/dev_guide/issues/) if you'd like to contribute.
 ```
 
-#### Authorship {#authorship}
+#### Authorship
 
 The editor writing the post is the first author, other editors are listed in alphabetical order.

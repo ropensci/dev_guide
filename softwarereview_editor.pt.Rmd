@@ -49,7 +49,7 @@ Suas principais funções são:
 1. Decidir se uma submissão deve ou não ser considerado no escopo e prosseguir com a análise e, se for o caso,
 2. Prosseguir com a submissão completa e designar um(a) editor(a) responsável.
 
-#### Decidir sobre o escopo e a sobreposição
+#### Decidir sobre o escopo e a sobreposição {#outofscoperesponse}
 
 A pessoa que exerce o papel de EiC tem o direito de tomar decisões sobre o escopo e a sobreposição da forma mais independente possível, mas é recomendado solicitar opiniões no canal `#editors-only` no Slack.
 As decisões de escopo para software estatístico geralmente são mais fáceis do que para submissões gerais (não estatísticas), como [descrito abaixo](#eic-stats-submissions).
@@ -366,4 +366,4 @@ Para autores(as) de pacotes que desejam manter seus repositórios em suas organi
 
 #### Divulgação de pacotes {#package-promotion}
 
-- Direcione o(a) autor(a) para os capítulos do guia sobre [lançamento de pacotes](#releases), [marketing](#marketing) e [como melhorar a performance no GitHub](#grooming).
+- Direcione o(a) autor(a) para os capítulos do guia sobre [lançamento de pacotes](#releasing), [marketing](#marketing) e [como melhorar a performance no GitHub](#grooming).
