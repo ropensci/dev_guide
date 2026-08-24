@@ -13,7 +13,7 @@ jobs:
     name: Render-Book
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -29,8 +29,6 @@ jobs:
           version: pre-release
 
       - uses: r-lib/actions/setup-pandoc@v2
-
-      - uses: r-lib/actions/setup-tinytex@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:

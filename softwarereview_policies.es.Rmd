@@ -52,7 +52,7 @@ Existe un conflicto de intereses si:
 - quien potencialmente revisará o editará ha contribuido significativamente a un proyecto que se considera competencia;
 - también hay un conflicto de interés de por vida para familiares, personas con relaciones comerciales y estudiantes o personas que asesoran o mentorean.
 
-En el caso de que ninguno de los miembros del [equipo editorial](#associateditors) pueda realizar la edición, se invitará a una persona externa para que la realice.
+En el caso de que ninguno de los miembros del [equipo editorial](#editors) pueda realizar la edición, se invitará a una persona externa para que la realice.
 
 ## Objetivos y alcance  {#aims-and-scope}
 

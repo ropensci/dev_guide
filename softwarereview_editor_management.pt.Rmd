@@ -136,6 +136,6 @@ Já estamos trabalhando em atualizações para a nossa próxima versão, como _i
 Confira o [issue tracker] (https://github.com/ropensci/dev_guide/issues/) se você quiser contribuir.
 ```
 
-#### Autoria {#authorship}
+#### Autoria
 
 O editor que está escrevendo a postagem é o primeiro autor, os outros editores estão listados em ordem alfabética.
