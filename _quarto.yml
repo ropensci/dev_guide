@@ -114,6 +114,19 @@ format:
     include-in-header: "matomo.html"
   typst:
     output-file: "ropensci-dev-guide"
+    filters:
+      - response.lua
+    include-before-body:
+      - text: |
+          #let summaryblock(body) = [
+            #set text(
+             style: "italic"
+            )
+        
+            #block(inset: (x: 2em, y: 1em))[
+              #body
+            ]
+          ]
 babelquarto:
   languagecodes:
   - name: es
