@@ -221,7 +221,7 @@ La etiqueta indicará primero "en revisión" y luego "revisado" una vez que tu p
 - Si existe un posible solapamiento o confusión con otros paquetes que ofrezcan una funcionalidad similar o tengan un nombre parecido, añade una nota en el *README*, en la viñeta principal y, potencialmente, en el campo descripción de archivo DESCRIPTION.
   Por ejemlo, el *README* de [rebird README](https://docs.ropensci.org/rebird/#auk-vs-rebird) o del paquete [slurmR](https://uscbiostats.github.io/slurmR/index.html#vs) (que no es parte de rOpensci).
 
-- El paquete debe contener la documentación general del paquete para `?paquete` (o ````?`paquete-package``` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?paquete` como ````?````paquete-package``` para el archivo del manual del paquete utilizando la etiqueta ````@aliases` de roxygen. [`usethis::use\_package\_doc()\`\](<https://usethis.r-lib.org/reference/use_package_doc.html>) añade la plantilla para generar la documentación general.
+- El paquete debe contener la documentación general del paquete para `?paquete` (o ``?`paquete-package` `` si hay un conflicto de nombres). Opcionalmente, puedes utilizar tanto `?paquete` como ``?`paquete-package` `` para el archivo del manual del paquete utilizando la etiqueta `@aliases` de roxygen. [`usethis::use_package_doc()`](<https://usethis.r-lib.org/reference/use_package_doc.html>) añade la plantilla para generar la documentación general.
 
 - El paquete debe contener al menos una viñeta en formato **HTML** que cubra una parte importante de las funciones del paquete, ilustrando casos de uso realistas y cómo se supone que las funciones interactúen entre ellas.
   Si el paquete es pequeño, la viñeta y el *README* pueden tener un contenido muy similar.
