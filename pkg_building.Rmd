@@ -564,6 +564,10 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 
 - A later section of this book contains some [git workflow tips](#git-workflow).
 
+## Changelog
+
+Your package should contain a [`NEWS.md` file](#news).
+
 ## Miscellaneous CRAN gotchas {#crangotchas}
 
 This is a collection of CRAN gotchas that are worth avoiding at the outset.
