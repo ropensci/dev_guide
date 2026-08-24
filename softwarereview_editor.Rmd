@@ -49,7 +49,7 @@ The primary duties are:
 1. To decide whether or not a submission should be considered in scope and proceed to review, and if so,
 2. To proceed to a full submission and assign a handling editor.
 
-#### Deciding on scope and overlap
+#### Deciding on scope and overlap {#outofscoperesponse}
 
 The EiC is entitled to take scope and overlap decisions as independently as possible, but is recommended to request opinions on the `#editors-only` channel on Slack.
 Scope decisions for statistical software are generally easier than for general (non-statistical) submissions, as [described below](#eic-stats-submissions).
@@ -370,4 +370,4 @@ For package authors who wish to retain their repositories in their original GitH
 
 #### Package promotion {#package-promotion}
 
-- Direct the author to the chapters of the guide about [package releases](#releases), [marketing](#marketing) and [GitHub grooming](#grooming).
+- Direct the author to the chapters of the guide about [package releases](#releasing), [marketing](#marketing) and [GitHub grooming](#grooming).

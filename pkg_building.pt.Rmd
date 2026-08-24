@@ -486,7 +486,7 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 
 - Certifique-se de listar arquivos desnecessários, como `.DS_Store`, no arquivo .gitignore. Você pode achar a função [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html) e o [pacote gitignore](https://docs.ropensci.org/gitignore/) relevantes.
 
-- Uma seção posterior deste livro contém algumas [dicas de fluxo de trabalho com git](#gitflow).
+- Uma seção posterior deste livro contém algumas [dicas de fluxo de trabalho com git](#git-workflow).
 
 ## Problemas diversos do CRAN {#crangotchas}
 

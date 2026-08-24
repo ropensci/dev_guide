@@ -140,6 +140,6 @@ Ya estamos trabajando en actualizaciones para nuestra próxima versión, como *I
 Echa un vistazo a [la lista de *issues*](https://github.com/ropensci/dev_guide/issues/) si quieres contribuir.
 ```
 
-#### Autoría {#authorship}
+#### Autoría
 
 Quien escribe el post lidera la lista de autoría, el resto del equipo de edición aparecen en orden alfabético.

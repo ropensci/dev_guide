@@ -112,9 +112,7 @@ format:
     theme: [cosmo, custom.scss]
     code-link: true
     include-in-header: "matomo.html"
-  pdf:
-    documentclass: book
-    include-in-header: "preamble.tex"
+  typst:
     output-file: "ropensci-dev-guide"
 babelquarto:
   languagecodes:

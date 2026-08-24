@@ -15,7 +15,7 @@ Note that you could streamline the process of updating NEWS and versioning your 
 
 - We strongly recommend that rOpenSci packages use semantic versioning. A detailed explanation is available in the [lifecycle chapter of the R packages book](https://r-pkgs.org/lifecycle.html).
 
-## Releasing {#releasing}
+## Releasing
 
 - Using `usethis::use_release_issue()` and `devtools::release()` will help you remember about more checks.
 
