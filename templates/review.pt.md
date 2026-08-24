@@ -31,7 +31,7 @@ O pacote inclui todas as seguintes formas de documentação:
 - [ ] **Funcionalidade:** Qualquer funcionalidade que foi assumida pelo software foi confirmada.
 - [ ] **Desempenho:** Qualquer desempenho a mais que foi assumido pelo software foi confirmado.
 - [ ] **Testes automatizados:**Os testes unitários cobrem funções essenciais do pacote e uma gama razoável de *inputs* e condições. Todos os testes passam na máquina local.
-- [ ] **Diretrizes de empacotamento**: O pacote está em conformidade com as diretrizes de empacotamento da rOpenSci.
+- [ ] **Diretrizes de empacotamento**: O pacote está em conformidade com as [diretrizes de empacotamento da rOpenSci](#building).
 
 Horas estimadas gastas na revisão:
 
