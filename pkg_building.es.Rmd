@@ -562,6 +562,10 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [*R packag
 
 - Una sección posterior de este libro incluye algunos [consejos sobre el flujo de trabajo con git](#git-workflow).
 
+## Registro de cambios
+
+Tu paquete debería contener un [archivo`NEWS.md`](#news).
+
 ## Problemas comunes en CRAN  {#crangotchas}
 
 Esta es una colección de problemas en CRAN que vale la pena evitar desde el principio.
