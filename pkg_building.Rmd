@@ -562,7 +562,7 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 - Make sure to list "scrap" such as `.DS_Store` files in .gitignore. 
   You might find the [`usethis::git_vaccinate()` function](https://usethis.r-lib.org/reference/git_vaccinate.html), and the [gitignore package](https://docs.ropensci.org/gitignore/) relevant.
 
-- A later section of this book contains some [git workflow tips](#gitflow).
+- A later section of this book contains some [git workflow tips](#git-workflow).
 
 ## Miscellaneous CRAN gotchas {#crangotchas}
 

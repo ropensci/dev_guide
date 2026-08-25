@@ -3,8 +3,10 @@
 ## Dev version
 
 - 2026-06-26, describe new EiC 'ping editors' bot command (#1018).
+- 2026-08-24, fix lifecycle badge (`@joelnitta`, #1030).
+- 2026-06-26, explicitely state that authors should not change their package while it is under review (#1022).
 - 2026-06-25, add note for editors that authors should record their responses (#1021, `@robitalec`)
-- 2026-06-12, clarify expections for volunteer form for eds and revs (#1015; thansk to @joelnitta)
+- 2026-06-12, clarify expections for volunteer form for eds and revs (#1015; thanks to `@joelnitta`)
 - 2026-06-25, clarify manual removal of holding label (#1020, `@robitalec`).
 - 2026-05-21, better document reviewer search in Airtable (#1009, #1010).
 - 2026-06-12, add mention of testit (#1014).
@@ -112,7 +114,7 @@
 
 - 2023-02-14, add package maintainer cheatsheet (#608).
 
-- 2023-01-25, add Mastodon as social media (#592, by @yabellini).
+- 2023-01-25, add Mastodon as social media (#592, by `@yabellini`).
 
 - 2023-01-25, add Mastodon as social media (#592, by `@yabellini`).
 
@@ -204,9 +206,9 @@
 
 * 2021-11-04, add mentions of stat software review to software review intro and to the first book page (#342).
 
-* 2021-11-04, mention pkgcheck in the author guide (@mpadge, #343).
+* 2021-11-04, mention pkgcheck in the author guide (`@mpadge`, #343).
 
-* 2021-11-04, add editors' responsibilities including  Editor etiquette for commenting on packages on which you aren't handling/reviewing (@jhollist, #354). 
+* 2021-11-04, add editors' responsibilities including  Editor etiquette for commenting on packages on which you aren't handling/reviewing (`@jhollist`, #354). 
 
 * 2021-11-04, give precise examples of tools for installation instructions (remotes, pak, R-universe).
 
@@ -216,9 +218,9 @@
 
 * 2021-09-14, add a requirement that there is at least one _HTML_ vignette.
 
-* 2021-09-03, add some recommendations around git. (@annakrystalli, #341)
+* 2021-09-03, add some recommendations around git. (`@annakrystalli`, #341)
 
-* 2021-07-14, clarify the categories data extraction and munging by adding examples. (@noamross, #337)
+* 2021-07-14, clarify the categories data extraction and munging by adding examples. (`@noamross`, #337)
 
 * 2021-05-20, add guidance around setting up your package to foster a community, inspired by the recent rOpenSci community call. (with help from `@Bisaloo`, #289, #308)
 
