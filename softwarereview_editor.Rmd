@@ -231,7 +231,7 @@ Please use all of this information to judge whether:
 #### Initial editorial comments
 
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.
-  Prefix all your comments with numbered codes e.g. ml01, ml02, etc.
+  Prefix all your comments with [numbered codes](#prefixing) e.g. ml01, ml02, etc.
   You can also streamline your editor checks by using the [`pkgreviewr` package created by  former editor Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
   Please strive to finish the checks and start looking for reviewers within 5 working days.
 - Check against policies for [fit](#aims-and-scope) and [overlap](#overlap).
