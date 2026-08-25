@@ -488,6 +488,10 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 
 - Uma seção posterior deste livro contém algumas [dicas de fluxo de trabalho com git](#git-workflow).
 
+## Registro de alterações
+
+Seu pacote deve conter um [arquivo `NEWS.md`](#news).
+
 ## Problemas diversos do CRAN {#crangotchas}
 
 Esta é uma coleção de problemas do CRAN que vale a pena evitar desde o início.
