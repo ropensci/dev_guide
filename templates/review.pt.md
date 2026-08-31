@@ -40,3 +40,5 @@ Horas estimadas gastas na revisão:
 ---
 
 ### Comentários da revisão
+
+_Inicie todos os seus comentários com um identificador composto por suas iniciais e um número, por exemplo, ml01, ml02, etc._
