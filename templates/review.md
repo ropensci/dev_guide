@@ -41,4 +41,4 @@ Estimated hours spent reviewing:
 
 ### Review Comments
 
-_Prefix all your comments with numbered codes e.g. ml01, ml02, etc._
+_Prefix all your comments with an identifier consisting of your initials and a number e.g. ml01, ml02, etc._
