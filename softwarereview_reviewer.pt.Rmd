@@ -37,6 +37,9 @@ Todos os envios criam um relatório detalhado, gerado pelo nosso pacote [`pkgche
 
 Para revisar um pacote, comece copiando nosso [modelo de revisão](#reviewtemplate) ou o [modelo de revisão para software estatístico](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template).
 Esses modelos devem ser usados como listas de verificação de alto nível para guiar a estrutura da revisão inicial.
+
+#### Lista de verificação
+
 Além de marcar os critérios mínimos na checklist, pedimos que você forneça comentários gerais abordando os seguintes pontos:
 
 - O pacote está de acordo com os requisitos do [Guia de pacotes da rOpenSci](#building)?
@@ -49,7 +52,9 @@ Além de marcar os critérios mínimos na checklist, pedimos que você forneça 
 - As funções e os argumentos foram nomeados para trabalharem juntos e formarem uma API de programação comum e lógica que seja fácil de ler e de autocompletar?
 - Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você pode acabar encontrando casos de uso extremos nos quais o autor não pensou.
 
-Seja respeitoso e gentil com os(as) autores(as) em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 (três) semanas, de acordo com o prazo estabelecido pelo(a) editor(a). Entre em contato com o(a) editor(a) diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
+Alguns elementos de nossa lista de verificação são inspirados no [guia de revisão de código da Mozilla] (https://mozillascience.github.io/codeReview/review.html).
+
+#### Ferramentas automáticas
 
 Incentivamos você a usar ferramentas automatizadas para facilitar a revisão. Isso inclui:
 
@@ -61,7 +66,35 @@ Incentivamos você a usar ferramentas automatizadas para facilitar a revisão. I
 
 Os(as) revisores(as) também podem gerar novamente os resultados da verificação de pacotes a partir de `@ropensci-review-bot` a qualquer momento, emitindo um único comentário em um *issue* de revisão: `@ropensci-review-bot check package`.
 
-Alguns elementos de nossa lista de verificação são inspirados no [guia de revisão de código da Mozilla] (https://mozillascience.github.io/codeReview/review.html).
+#### Tom
+
+Seja respeitoso e gentil com os(as) autores(as) em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 (três) semanas, de acordo com o prazo estabelecido pelo(a) editor(a). Entre em contato com o(a) editor(a) diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
+
+#### Formatação {#prefixing}
+
+Você pode estar escrevendo muitos comentários individuais como parte da sua revisão.
+Para facilitar a comunicação em torno deles, por favor, coloque um prefixo nas suas respostas da seguinte forma: suas iniciais — a menos que você as compartilhe com outra pessoa no tópico — e um número:
+
+
+```
+- ml01: seu pacote não possui um teste para bla.
+- ml02: o agrupamento do índice de referência não está claro.
+....
+``` 
+
+Dessa forma, o autor pode responder assim:
+
+```
+> - ml01: seu pacote não possui um teste para bla.
+
+Boa observação, adicionei dois testes, veja [commit](link-para-commit).
+
+> - ml02: o agrupamento do índice de referência não está claro.
+
+Obrigado, as funções agora estão agrupadas em ingestão de dados, verificação de dados e análise de dados. Veja o [novo índice de referência](pkgdown-link).
+
+....
+```
 
 ### Interações feitas fora dos canais oficiais {#off-thread-interactions}
 

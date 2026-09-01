@@ -231,6 +231,7 @@ Use todas essas informações para avaliar se:
 #### Comentários editoriais iniciais
 
 - Depois que as checagens automáticas forem postadas, use o [modelo de edição](#editortemplate) para orientar as verificações iniciais (se ainda não estiverem cobertas pelo(a) EiC) e registre sua resposta na *issue* de submissão.
+  Inicie todos os seus comentários com um identificador composto por suas iniciais e um número, por exemplo, ml01, ml02, etc.
   Você também pode simplificar as verificações de editor(a) usando o [pacote `pkgreviewr`, criado pela ex-editora Anna Krystalli](https://docs.ropensci.org/pkgreviewr/articles/editors.html).
   Por favor, tente concluir as verificações e começar a buscar revisores(as) dentro de 5 dias úteis.
 - Verifique as políticas em busca de possíveis [ajustes](#aims-and-scope) e [sobreposições](#overlap). 
