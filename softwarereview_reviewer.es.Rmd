@@ -72,7 +72,7 @@ Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en
 Por favor, en tus revisiones dirígete con respeto y amabilidad hacia las personas que presentaron el paquete. Nuestro [código de conducta](#code-of-conduct) es obligatorio para quienes participan en nuestro proceso de revisión. Esperamos que envíes tu revisión en un plazo de 3 semanas, según el plazo establecido por la persona a cargo de la edición. Por favor, ponte en contacto con esta persona directamente o mediante el *issue* de envío para informarle de posibles retrasos.
 
 
-#### Formato {#prefijo}
+#### Formato {#prefixing}
 
 Es posible que escribas muchos comentarios individuales como parte de tu revisión.
 Para facilitar la comunicación en torno a ellos, por favor, antepone a tus respuestas un prefijo como el siguiente, con tus iniciales —a menos que las compartas con alguien más en el hilo— y un número:

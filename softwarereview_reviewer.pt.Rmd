@@ -70,7 +70,7 @@ Os(as) revisores(as) também podem gerar novamente os resultados da verificaçã
 
 Seja respeitoso e gentil com os(as) autores(as) em suas avaliações. Nosso [código de conduta](#code-of-conduct) é obrigatório para todos os envolvidos em nosso processo de avaliação. Esperamos que você envie sua avaliação em até 3 (três) semanas, de acordo com o prazo estabelecido pelo(a) editor(a). Entre em contato com o(a) editor(a) diretamente ou no tópico de envio para informá-lo sobre possíveis atrasos.
 
-#### Formatação {#prefixo}
+#### Formatação {#prefixing}
 
 Você pode estar escrevendo muitos comentários individuais como parte da sua revisão.
 Para facilitar a comunicação em torno deles, por favor, coloque um prefixo nas suas respostas da seguinte forma: suas iniciais — a menos que você as compartilhe com outra pessoa no tópico — e um número:
