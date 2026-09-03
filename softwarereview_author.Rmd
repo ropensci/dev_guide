@@ -53,7 +53,7 @@ This concise guide presents the software peer review process for you as a packag
 
 #### The importance of Git logs
 
-- The Git log remains the ultimate source of insight into design history, and a minimal requirement for all submissions remains an ability to grasp design history through a sufficiently extensive Git log.
+- The Git log is an important source of insight into design history, and a minimal requirement for all submissions remains an ability to grasp design history through a sufficiently extensive Git log.
 - While we place no current minimal limits on Git log size, we do note that [JOSS now requires at least six months of public commit history](https://joss.readthedocs.io/en/latest/submitting.html#:~:text=six%20months), and will defer to such requirements when considered necessary.
 
 ## Preparing for Submission {#preparing-for-submission}
