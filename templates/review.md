@@ -31,7 +31,7 @@ The package includes all the following forms of documentation:
 - [ ] **Functionality:** Any functional claims of the software have been confirmed.
 - [ ] **Performance:** Any performance claims of the software have been confirmed.
 - [ ] **Automated tests:** Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.
-- [ ] **Packaging guidelines**: The package conforms to the rOpenSci packaging guidelines.
+- [ ] **Packaging guidelines**: The package conforms to the [rOpenSci packaging guide](#building).
 
 #### Use of generative AI tools
 

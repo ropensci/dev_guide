@@ -52,7 +52,7 @@ The potential editor or reviewer has a conflict of interest if:
 - The potential reviewer/editor has significantly contributed to a competitor project.
 - There is also a lifetime COI for the family members, business partners, and thesis student/advisor or mentor.
 
-In the case where none of the [associate editors](#associateditors) can serve as editor, an external guest editor will be recruited.
+In the case where none of the [associate editors](#editors) can serve as editor, an external guest editor will be recruited.
 
 ## Aims and Scope {#aims-and-scope}
 

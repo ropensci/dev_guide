@@ -49,7 +49,7 @@ Sus funciones principales son
 1. Decidir si un envío debe considerarse o no dentro del alcance de rOpenSci y proceder a su revisión, y en caso afirmativo,
 2. Proceder a un envío completo y asignar a alguien del equipo editorial al envío.
 
-#### Decidir el alcance y el solapamiento
+#### Decidir el alcance y el solapamiento {#outofscoperesponse}
 
 Tiene derecho a tomar decisiones de alcance y de solapamiento con la mayor independencia posible (puede solicitar ayuda/asesoramiento), pero se le recomienda que solicite opiniones en el canal `#editors-only` en Slack.
 Las decisiones sobre el alcance del software estadístico suelen ser más sencillas que las relativas a las propuestas generales (no estadísticas), tal y como se describe a continuación (#eic-stats-submissions).
@@ -242,7 +242,7 @@ Utiliza toda esta información para juzgar si:
 - Lo ideal es que las observaciones que hagas se aborden antes de que las personas a cargo de la revisión comiencen su trabajo.
 - Si los chequeos iniciales muestran falencias importantes, solicita cambios antes de asignar personas para la revisión.
   Si quien envió el paquete menciona que los cambios pueden llevar tiempo, [usa la etiqueta de espera escribiendo `@ropensci-review-bot put on hold`](#policiesreviewprocess).
-  Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete.
+  Recibirás un recordatorio cada 90 días (en el *issue*) para que te pongas en contacto con las personas a cargo del paquete. La etiqueta de «en espera» se puede eliminar manualmente en la barra lateral del _issue_.
 - Si el paquete plantea un problema inesperado relacionado con la política de rOpenSci, inicia una conversación en Slack.
 
 ### Busca y asigna dos personas para revisar el paquete {#look-for-and-assign-two-reviewers}
@@ -305,6 +305,7 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
   Si es necesario sacar a alguien de la revisión, usa `@ropensci-review-bot remove @username from reviewers`.
 - Las fechas de vencimiento de las revisiones se fijan por defecto en [21 días](https://github.com/ropensci-org/buffy/blob/20c5ac630ce436a9cd7b698d217a0f680f368aa0/app/responders/ropensci/reviewers_due_date_responder.rb#L162-L164) (3 semanas) después de la fecha de asignación.
 - Si quieres cambiar la fecha de vencimiento de una revisión utiliza `@ropensci-review-bot set due date for @username to YYYY-MM-DD`.
+- El bot le pedirá automáticamente a cada persona que esté revisando que complete nuestro [formulario de voluntariado](https://ropensci.org/software-reviewer) para asegurarse de que figure en la base de datos de Airtable.
 
 ### Durante la revisión {#during-review}
 
@@ -313,7 +314,7 @@ En general, al menos una debe tener experiencia previa en revisiones y, por supu
 - Una vez enviada cada revisión,
   - Escribe un comentario de agradecimiento a las personas que revisaron con tus propias palabras.
   - Registra la reseña escribiendo un nuevo comentario `@ropensci-review-bot submit review <review-url> time <time in hours>` como en [este ejemplo](https://github.com/ropensci/software-review/issues/705#issuecomment-2984012477).
-- Una vez realizados los cambios, cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la [plantilla de aprobación de revisión]{#approval2template}.
+- Una vez realizados los cambios, asegurate de que quien presentó el paquete [envíe su respuesta mediante el bot](#submit-response-to-reviewers), cambia la etiqueta de estado de revisión a `5/awaiting-reviewer-response` y pide a las personas a cargo de la revisión que indiquen su aprobación con la [plantilla de aprobación de revisión](#approval2template).
 - Si quien presentó el paquete tiene la intención de presentar un [artículo científico](https://besjournals.onlinelibrary.wiley.com/hub/journal/2041210X/features/applicationpapers) en [*Methods in Ecology and Evolution*](https://besjournals.onlinelibrary.wiley.com/journal/2041210X), indícale que pueden presentarlo una vez finalizada la revisión. 
 
 #### Responder a las preguntas del equipo de revisión {#reviewersupport}
@@ -359,10 +360,10 @@ Otros retos que pueden surgir durante la revisión son
 
 Para aquellas personas que deseen mantener los repositorios de su paquete en sus organizaciones originales de GitHub, en lugar de transferirlos a github.com/ropensci, la persona editora debe:
 
-- Pedir que hagan un pull request a la organización con el [archivo JSON](https://github.com/ropensci/roregistry/blob/gh-pages/info/not_transferred.json) que enumera todos los repositorios que no han sido transferidos. [Ejemplo de transferencia](https://github.com/ropensci/roregistry/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
+- Pedir que hagan un pull request a la organización con el [archivo JSON](https://github.com/ropensci/ropensci.r-universe.dev/blob/gh-pages/info/not_transferred.json) que enumera todos los repositorios que no han sido transferidos. [Ejemplo de transferencia](https://github.com/ropensci/ropensci.r-universe.dev/commit/9568a77c2081f89d58406efcc9089ef83d09fe59).
 
 - Pedir al paquete que sustituya el contenido del código de conducta actual del repositorio por el del [código de conducta por defecto de la organización rOpenSci en GitHub](https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
 
 #### Promoción de paquetes {#package-promotion}
 
-- Dirige a quién envió el paquete a los capítulos de la guía sobre [versionado y publicación de paquetes](#releases), [promocionando tu paquete](#marketing) y [gestión de GitHub](#grooming).
+- Dirige a quién envió el paquete a los capítulos de la guía sobre [versionado y publicación de paquetes](#releasing), [promocionando tu paquete](#marketing) y [gestión de GitHub](#grooming).

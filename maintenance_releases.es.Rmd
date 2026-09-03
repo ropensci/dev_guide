@@ -17,7 +17,7 @@ Ten en cuenta que el proceso de actualización de *NEWS* y de versionado de tu p
 
 - Recomendamos encarecidamente que los paquetes de rOpenSci utilicen el versionado semántico. Hay una explicación detallada en el [capitulo "lifecyle" del libro "R packages" (en inglés)](https://r-pkgs.org/lifecycle.html).
 
-## Publicar {#releasing}
+## Publicar
 
 - Utiliza las funciones `usethis::use_release_issue()` y `devtools::release()` para recordar mejor los pasos a seguir.
 
