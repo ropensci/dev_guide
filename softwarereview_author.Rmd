@@ -38,6 +38,22 @@ This concise guide presents the software peer review process for you as a packag
   - Your README file should strive to explain your package's functionality and aims, assuming readers have little to no domain knowledge. All technical tems, including references to other software, should be clarified.
 - Your package will continue to evolve after review, the chapter on *Package evolution* [provides guidance about the topic](#evolution).
 
+### Use of generative AI tools
+
+- The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+- As stated in [our general policies](#policies-ai), we require all submitting authors to provide details on any usage of generative AI tools in package documentation, generally in either README files or contributing guides.
+  - Extended descriptions of AI tool usage or design decisions may also be held in separate documents, in which case these should be linked directly from README files or contributing guides.
+  - An example is [the `HydraR` package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai), which provides link in the main README to [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) and [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html) files.
+- A very general rule-of-thumb is the greater the use of generative AI tools in a package, the more we will expect tool use to be documented within the software itself.
+- We encourage the use of AI tools that record decisions guiding development processes and outputs within the software itself.
+  - Examples of such tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) and [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
+  - These all share the common pattern of producing additional artefacts which document decisions and processes of development alongside the software itself.
+
+#### The importance of Git logs
+
+- The Git log is an important source of insight into design history, and a minimal requirement for all submissions remains an ability to grasp design history through a sufficiently extensive Git log.
+- While we place no current minimal limits on Git log size, we do note that [JOSS now requires at least six months of public commit history](https://joss.readthedocs.io/en/latest/submitting.html#:~:text=six%20months), and will defer to such requirements when considered necessary.
+
 ## Preparing for Submission {#preparing-for-submission}
 
 ### Asking for help
