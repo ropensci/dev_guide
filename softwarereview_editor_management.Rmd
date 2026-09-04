@@ -81,6 +81,9 @@ To pause an editor:
 
 - Set their Airtable "vacation" status, including an approximate date when they might return.
 
+- Update the [`team.json` file on the website](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) to add `"alumnus": true`.
+  This will update the [ropensci.org website](https://ropensci.org/software-review) by moving them from "Our Editorial Team" to "Former editors and advisory board".
+
 - To "unpause" them, simply revert these changes.
 
 ## Offboarding an editor {#offboarding-an-editor}
