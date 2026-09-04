@@ -193,6 +193,8 @@ After the review process is finished (package approved, issue closed),
   - You know of an overlapping package that hasn't been mentioned in the process yet.
   - You see a question to which you have an expert answer that hasn't been given after a few days (such as linking to a blog post which may answer a question).
 
+- If you want to step back from editorial duties, either temporarily or permanently, please contact the software peer-review lead.
+
 ## Handling editors' responsibilities {#editorchecklist}
 
 Handling editors are responsible for guiding each assigned submission through the entire process from initial submission to final acceptance.
