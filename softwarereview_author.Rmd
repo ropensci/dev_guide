@@ -45,7 +45,7 @@ This concise guide presents the software peer review process for you as a packag
   - Extended descriptions of AI tool usage or design decisions may also be held in separate documents, in which case these should be linked directly from README files or contributing guides.
   - An example is [the `HydraR` package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai), which provides link in the main README to [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) and [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html) files.
 - A very general rule-of-thumb is the greater the use of generative AI tools in a package, the more we will expect tool use to be documented within the software itself.
-- We strongly recommend the use of AI tools that record decisions guiding development processes and outputs within the software itself.
+- We encourage the use of AI tools that record decisions guiding development processes and outputs within the software itself.
   - Examples of such tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) and [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
   - These all share the common pattern of producing additional artefacts which document decisions and processes of development alongside the software itself.
 
