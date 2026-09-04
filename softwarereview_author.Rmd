@@ -48,7 +48,6 @@ This concise guide presents the software peer review process for you as a packag
 - We strongly recommend the use of AI tools that record decisions guiding development processes and outputs within the software itself.
   - Examples of such tools range from [GitHub's "spec-kit" for specification-driven development](https://github.com/github/spec-kit) and [our own experimental tool to document software design decisions](https://github.com/ropensci-review-tools/designlens).
   - These all share the common pattern of producing additional artefacts which document decisions and processes of development alongside the software itself.
-- For alternative approaches to documenting usage of generative AI tools, consider JOSS's requirement for statements of [_Scope and significance_](https://joss.readthedocs.io/en/latest/submitting.html#scope-and-significance), and see [recently accepted papers](https://joss.theoj.org/papers/published) for examples of such statements.
 
 #### The importance of Git logs
 
