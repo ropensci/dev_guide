@@ -112,9 +112,9 @@ Você poderia adicionar ao README uma comparação mais detalhada em relação a
   @ropensci-review-bot ping editors
   ```
 
-  Os editores podem manifestar interesse clicando em um link no e-mail recebido.
-  Cada clique enviará automaticamente um e-mail de notificação ao editor-chefe (EiC), informando quem clicou.
-  Os editores-chefes podem designar editores para as edições automaticamente, mas talvez prefiram perguntar diretamente pelo Slack primeiro, para garantir que os editores estejam dispostos a aceitar a designação.
+  Os integrantes da equipe editorial podem manifestar interesse clicando em um link no e-mail recebido.
+  Cada clique enviará automaticamente um e-mail de notificação ao editor ou editora-chefe (EiC), informando quem clicou.
+  Os editores-chefes podem atribuir editores para as *issues* automaticamente, mas talvez prefiram perguntar primeiro diretamente pelo Slack, para garantir que estejam dispostos a aceitar a atribuição.
 
 - Se ninguém responder, pode ser necessário fazer uma solicitação mais ativa.
   As pessoas da equipe editorial atualmente disponíveis estão indicadas no [*Painel editorial*](https://dashboard.ropensci.org) As cargas de trabalho editoriais devem ser distribuídas da maneira mais uniforme possível, consultando os [gráficos de cargas editoriais recentes no *Painel editorial* ](https://dashboard.ropensci.org/editors.html#past-ed-load).
