@@ -4,6 +4,7 @@
 
 - 2026-09-07, add recommendations and resources about Git commits (#1006).
 - 2026-09-07, add first AI policies (#1006).
+- 2026-06-26, describe new EiC 'ping editors' bot command (#1018).
 - 2026-08-24, mention `NEWS.md` file in packaging guide (#1027).
 - 2026-08-24, fix lifecycle badge (`@joelnitta`, #1030).
 - 2026-06-26, explicitely state that authors should not change their package while it is under review (#1022).
