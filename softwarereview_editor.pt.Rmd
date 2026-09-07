@@ -106,7 +106,7 @@ Você poderia adicionar ao README uma comparação mais detalhada em relação a
 
 - Inicialmente, marque cada novo envio completo com ` 0/editorial-team-prep`
 
-- Execute o seguinte comando para enviar por e-mail a todos os editores uma notificação informando que estamos buscando voluntários para a edição:
+- Execute o seguinte comando para enviar por e-mail a todas as pessoas da equipe editorial uma notificação informando que estamos procurando alguém para assumir a edição:
 
   ```
   @ropensci-review-bot ping editors
