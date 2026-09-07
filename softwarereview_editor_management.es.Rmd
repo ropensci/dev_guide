@@ -73,13 +73,13 @@ Te deseamos lo mejor,
 ## Poner en pausa a un editor {#pause-editor}
 
 A veces, las personas que editan también necesitan un descanso.
-Para poner en pausa a un editor:
+Para poner en pausa a un integrante del equipo editorial:
 
-- Elimínalo del [equipo «editors» de GitHub](https://github.com/orgs/ropensci/teams/editors), junto con el [equipo «stats-editors»](https://github.com/orgs/ropensci/teams/stats-editors) si corresponde.
+- Remueve su usuario del [equipo «editors» de GitHub](https://github.com/orgs/ropensci/teams/editors), junto con el [equipo «stats-editors»](https://github.com/orgs/ropensci/teams/stats-editors) si corresponde.
 
 - Establece su estado de «vacaciones» en Airtable, incluyendo una fecha aproximada de cuándo podrían regresar.
 
-- Para «reactivarlos», simplemente revierte estos cambios.
+- Para «reactivar» su estado, simplemente revierte estos cambios.
 
 ## Dar de baja a un integrante del equipo editorial {#offboarding-an-editor}
 
