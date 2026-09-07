@@ -72,7 +72,7 @@ Te deseamos lo mejor,
 
 ## Poner en pausa a un editor {#pause-editor}
 
-A veces, los editores también necesitan un descanso.
+A veces, las personas que editan también necesitan un descanso.
 Para poner en pausa a un editor:
 
 - Elimínalo del [equipo «editors» de GitHub](https://github.com/orgs/ropensci/teams/editors), junto con el [equipo «stats-editors»](https://github.com/orgs/ropensci/teams/stats-editors) si corresponde.
