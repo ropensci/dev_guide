@@ -203,6 +203,8 @@ Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
   - Sabes de un paquete que se solapa, que aún no se ha mencionado en el proceso.
   - Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de un artículo en el blog que aborda cómo añadir imágenes a los documentos del paquete).
 
+- Si deseas alejarte de las tareas editoriales, ya sea de manera temporal o permanente, por favor ponte en contacto con el responsable de la revisión por pares del software.
+
 ## Lista de tareas para la edición de un paquete  {#editorchecklist}
 
 Las personas asignadas como editoras son responsables de guiar cada envío asignado a lo largo de todo el proceso, desde la presentación inicial hasta la aceptación final.
