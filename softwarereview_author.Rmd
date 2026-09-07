@@ -42,7 +42,7 @@ This concise guide presents the software peer review process for you as a packag
 
 - The use of generative AI tools is acceptable in packages submitted for peer review, as described in [our initial blog post](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
 - As stated in [our general policies](#policies-ai), we require all submitting authors to provide details on any usage of generative AI tools in package documentation, generally in either README files or contributing guides.
-  - Extended descriptions of AI tool usage or design decisions may also be held in separate documents, in which case these should be linked directly from README files or contributing guides.
+  - Extended descriptions of AI tool usage or design decisions may also be held in separate documents, in which case these should be linked directly from the README or contributing guide.
   - An example is [the `HydraR` package](https://apaf-bioinformatics.github.io/HydraR/#robot-use-of-generative-ai), which provides link in the main README to [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) and [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html) files.
 - A very general rule-of-thumb is the greater the use of generative AI tools in a package, the more we will expect tool use to be documented within the software itself.
 - We suggest using AI tools in ways that record decisions guiding development processes and outputs within the software itself.
