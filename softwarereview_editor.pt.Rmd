@@ -203,7 +203,7 @@ Depois que o processo de revisão for concluído (pacote aprovado, _issue_ fecha
   - Você sabe de um pacote que gere uma sobreposição, e que ainda não foi mencionado no processo.
   - Você vê uma pergunta para a qual tem uma resposta especializada que não foi dada depois de alguns dias (como um link para uma publicação de blog que pode responder a uma pergunta).
 
-- Caso deseje se afastar das funções editoriais, seja temporária ou permanentemente, entre em contato com o coordenador da revisão por pares do software.
+- Caso deseje se afastar das funções editoriais, seja temporária ou permanentemente, entre em contato com a pessoa responsável pela revisão por pares do software.
 
 ## Responsabilidades de edição de um pacote {#editorchecklist}
 

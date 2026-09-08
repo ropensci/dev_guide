@@ -72,14 +72,14 @@ Atenciosamente,
 
 ## Colocando um editor em pausa {#pause-editor}
 
-Às vezes, os editores também precisam de uma pausa.
-Para colocar um editor em pausa:
+Às vezes, as pessoas editoras também precisam de uma pausa.
+Para colocar um integrante da equipe editorial em pausa:
 
-- Remova-o da [equipe “editors” do GitHub](https://github.com/orgs/ropensci/teams/editors), juntamente com a [equipe “stats-editors”](https://github.com/orgs/ropensci/teams/stats-editors), se for o caso.
+- Remova o usuário da [equipe “editors” do GitHub](https://github.com/orgs/ropensci/teams/editors), juntamente com a [equipe “stats-editors”](https://github.com/orgs/ropensci/teams/stats-editors), se for o caso.
 
-- Defina o status “férias” no Airtable, incluindo uma data aproximada de quando eles possam retornar.
+- Defina o status “férias” no Airtable, incluindo uma data aproximada de quando possam retornar.
 
-- Para “retomar” o status deles, basta reverter essas alterações.
+- Para “retomar” o status, basta reverter essas alterações.
 
 ## Desvincular um(a) editor(a) {#offboarding-an-editor}
 
