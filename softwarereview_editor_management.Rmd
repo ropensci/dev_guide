@@ -72,6 +72,17 @@ Best,
 
 - Once they're in the "editors-only" channel, post a welcome message pinging all editors.
 
+## Pausing an editor {#pause-editor}
+
+Editors sometimes need breaks too.
+To pause an editor:
+
+- Remove them from the [GitHub "editors" team](https://github.com/orgs/ropensci/teams/editors), along with the ["stats-editors" team](https://github.com/orgs/ropensci/teams/stats-editors) if appropriate.
+
+- Set their Airtable "vacation" status, including an approximate date when they might return.
+
+- To "unpause" them, simply revert these changes.
+
 ## Offboarding an editor {#offboarding-an-editor}
 
 - Thank them for their work!
