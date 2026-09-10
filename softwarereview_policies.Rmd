@@ -261,7 +261,7 @@ The following resources may be helpful for researchers, package authors, editors
 - Taylor, J., \& Pagliari, C. (2018). Mining social media data: How are research sponsors and researchers addressing the ethical challenges? Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
 - Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313--325. [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
-## Use of generative AI tools {#policies-ai]}
+## Use of generative AI tools {#policies-ai}
 
 Authors must disclose any use of generative AI tools in our submission forms, where we also ask you to,
 
