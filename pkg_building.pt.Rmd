@@ -482,6 +482,14 @@ a sustentabilidade de longo prazo do seu pacote.  Isso também
 
 - Os arquivos de origem do seu pacote devem estar sob controle de versão, mais especificamente rastreados com [Git](https://happygitwithr.com/). Você pode achar o [pacote gert](https://docs.ropensci.org/gert/) relevante, bem como algumas das funções do [pacote usethis relacionadas ao Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); no entanto, você pode usar o git como quiser.
 
+
+- Commits pequenos e informativos no Git permitem compreender melhor e depurar um projeto. Não agrupe muitas alterações não relacionadas em um único commit; evite usar mensagens de commit sem sentido, como “atualização” ou “commit”. Não exigimos um histórico de Git impecável, mas recomendamos fortemente que você se esforce para mantê-lo organizado. Recursos úteis:
+    - [“Escreva commits melhores, construa projetos melhores”](https://github.blog/developer-skills/github/write-better-commits-build-better-projects/);
+    - [“Por que você precisa de commits pequenos e informativos no Git”](https://masalmon.eu/2024/06/03/small-commits/);
+    - [“Descubra seu jeito de criar um bom histórico do Git”](https://masalmon.eu/2024/06/11/rewrite-git-history/);
+    - [O pacote R saperlipopette para praticar o uso do Git](https://docs.ropensci.org/saperlipopette/).
+
+
 - O nome da ramificação (*branch*) padrão não deve ser `master`, pois isso pode ser ofensivo para algumas pessoas. Consulte a seção [do projeto Git e da Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para obter mais contexto. É uma prática geral nomear uma ramificação padrão `main`, embora outros nomes também possam ser usados. Consulte a postagem do blog do tidyverse ["Renomeando a ramificação padrão"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para saber mais sobre como usar essa funcionalidade para ajudar a renomear as ramificações padrão.
 
 - Certifique-se de listar arquivos desnecessários, como `.DS_Store`, no arquivo .gitignore. Você pode achar a função [`usethis::git_vaccinate()`](https://usethis.r-lib.org/reference/git_vaccinate.html) e o [pacote gitignore](https://docs.ropensci.org/gitignore/) relevantes.

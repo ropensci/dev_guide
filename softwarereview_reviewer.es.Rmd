@@ -102,6 +102,17 @@ Esto
 
 Ten en cuenta que si el paquete no se envía a través de la *branch* principal o por defecto, tienes que cambiar a la *branch* usada para enviar antes de comenzar tu revisión.
 
+
+
+### Uso de herramientas de IA generativa
+
+
+El uso de herramientas de IA generativa es aceptable tanto para los autores que envían sus trabajos como para los revisores; sin embargo, los revisores no pueden utilizar estas herramientas para fundamentar ninguna decisión o recomendación sin supervisión humana.
+
+Al igual que con nuestras expectativas para los autores, exigimos a los revisores que revelen cualquier uso de herramientas de IA generativa con el mayor detalle posible.
+Algunos ejemplos de uso aceptable incluyen la generación de una descripción general de la funcionalidad del paquete o el análisis del historial de Git para ofrecer una visión general de las decisiones de desarrollo.
+Pedimos a los revisores que sean lo más transparentes posible.
+
 ### Devoluciones sobre el proceso {#feedback-on-the-process}
 
 Te animamos a que preguntes y opines sobre el proceso de revisión en https://github.com/ropensci/software-review-meta/issues

@@ -31,6 +31,17 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Você não deve fazer nenhuma alteração no seu pacote enquanto ele estiver em análise, para que todas as pessoas revisoras estejam avaliando o mesmo software. Não envie seu pacote até que ele esteja em uma versão estável!
 - Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
 
+### Uso de ferramentas de IA generativa
+
+- O uso de ferramentas de IA generativa é aceitável em pacotes enviados para revisão por pares, conforme descrito em [nossa postagem inicial no blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+- Conforme estabelecido em [nossas políticas gerais](#policies-ai), exigimos que todos os autores que enviam trabalhos forneçam detalhes sobre qualquer uso de ferramentas de IA generativa na documentação do pacote, geralmente em arquivos README ou em guias de contribuição.
+  - Descrições mais detalhadas sobre o uso de ferramentas de IA ou decisões de projeto também podem ser apresentadas em documentos separados; nesse caso, devem ser vinculadas diretamente a partir do arquivo README ou do guia de contribuição.
+  - Um exemplo é [o pacote `HydraR`](https://apaf-bioinformatics.github.io/HydraR/# robot-use-of-generative-ai), que fornece um link no README principal para os arquivos [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) e [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html).
+- Uma regra geral é que, quanto maior for o uso de ferramentas de IA generativa em um pacote, mais esperaremos que o uso dessas ferramentas seja documentado dentro do próprio software.
+- Sugerimos o uso de ferramentas de IA de forma que as decisões que orientam os processos de desenvolvimento e os resultados sejam registradas dentro do próprio software.
+  - Exemplos dessas ferramentas vão desde o [“spec-kit” do GitHub para desenvolvimento orientado por especificações](https://github.com/github/spec-kit) até [nossa própria ferramenta experimental para documentar decisões de projeto de software](https://github.com/ropensci-review-tools/designlens).
+  - Todas elas compartilham o padrão comum de produzir artefatos adicionais que documentam as decisões e os processos de desenvolvimento juntamente com o próprio software.
+
 ### Documentação
 
 - Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um website pkgdown para permitir uma avaliação mais detalhada da funcionalidade online.
