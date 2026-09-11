@@ -29,7 +29,7 @@ To search for a new editor, the Software Review Lead should:
 
   - Use that channel to ask for general nominations, or for opinions on potential candidates.
 
-- Focus on new members who will sustain the diversity and global representativeness of the editorial team.
+- Focus on new members who will sustain the [diversity](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) and global representativeness of the editorial team.
 
 - Wait for a majority of editors to chime in before inviting someone. Leave around one week to respond.
 
