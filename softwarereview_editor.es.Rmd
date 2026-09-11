@@ -203,6 +203,8 @@ Una vez finalizado el proceso de revisión (paquete aprobado, issue cerrado),
   - Sabes de un paquete que se solapa, que aún no se ha mencionado en el proceso.
   - Ves una pregunta para la que tienes una respuesta experta que no se ha dado al cabo de unos días (por ejemplo, sabes de un artículo en el blog que aborda cómo añadir imágenes a los documentos del paquete).
 
+- Si deseas alejarte de las tareas editoriales, ya sea de manera temporal o permanente, por favor ponte en contacto con el responsable de la revisión por pares de software.
+
 ## Lista de tareas para la edición de un paquete  {#editorchecklist}
 
 Las personas asignadas como editoras son responsables de guiar cada envío asignado a lo largo de todo el proceso, desde la presentación inicial hasta la aceptación final.
@@ -283,6 +285,9 @@ Cuando estas fuentes de información no sean suficientes,
 ##### Consejos para la búsqueda en Airtable {#tips-for-reviewer-search-in-airtable}
 
 Nuestra base de datos de Airtable aparece enlazada en la parte superior de nuestro canal de Slack «*editors-only (solo equipo editorial)».
+
+![Captura de pantalla de la interfaz de Airtable con el enlace 'Search Reviewers'](images/airtable.png)
+
 Una vez que inicies sesión en Airtable a través de ese enlace, deberías ver «*rOpenSci Software Review Database (Base de datos de reseñas de software de rOpenSci)*» con la opción «*Search Reviewers (buscar revisores)*» en la parte superior izquierda:
 
 ![Captura de pantalla de la interfaz de filtros de Airtable con un filtro sobre experiencia en disciplinas que debe incluir química y en conocimientos técnicos que tienen que incluir integración continua](images/airtable-filters.png)
