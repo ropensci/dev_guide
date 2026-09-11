@@ -261,6 +261,16 @@ Los siguientes recursos pueden ser útiles para quienes investigan, desarrollan 
 - Taylor, J., y Pagliari, C. (2018).Mining social media data: How are research sponsors and researchers addressing the ethical challenges? Research Ethics, 14(2), 1--39. [https://doi.org/10.1177/1747016117738559](https://doi.org/10.1177/1747016117738559)
 - Zimmer, M. (2010). "But the data is already public": on the ethics of research in Facebook. Ethics and Information Technology, 12(4), 313--325. [https://dx.doi.org/10.1007/s10676-010-9227-5](https://dx.doi.org/10.1007/s10676-010-9227-5)
 
+## Uso de herramientas de IA generativa {#policies-ai}
+
+Los autores deben declarar cualquier uso de herramientas de IA generativa en nuestros formularios de envío, donde también les pedimos que:
+
+> describan el uso e incluyan enlaces a cualquier aspecto relevante de su repositorio.
+
+Tal como se describe en [nuestra publicación inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/), se espera que nuestras políticas sobre el uso de herramientas de IA generativa evolucionen a la par del desarrollo de las propias herramientas, así como de la forma en que estas contribuyen al desarrollo de software.
+Esperamos que todos los autores que envíen trabajos revelen de manera transparente cómo las herramientas de IA generativa pueden haber contribuido a cualquier software enviado para revisión por pares.
+Los detalles se proporcionan tanto en la [_Guía para autores_](#authors-guide) como en la [_Guía para revisores_](#reviewerguide).
+
 ## Código de conducta  {#code-of-conduct}
 
 La comunidad de rOpenSci es nuestro mejor recurso.

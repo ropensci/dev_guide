@@ -555,6 +555,13 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [*R packag
 - Los archivos fuente de tu paquete tienen que estar bajo control de versiones, más concretamente versionados con [Git](https://happygitwithr.com/).
   Puede que el paquete [gert](https://docs.ropensci.org/gert/) te resulte útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
 
+
+- Las confirmaciones de Git breves e informativas permiten comprender y depurar mejor un proyecto. No agrupes demasiados cambios no relacionados en una sola confirmación; evita usar mensajes de confirmación sin sentido, como «actualización» o «confirmación». No exigimos un historial de Git impecable, pero recomendamos encarecidamente que te esfuerces por lograrlo. Recursos útiles:
+    - ["Escribe mejores confirmaciones, crea mejores proyectos"](https://github.blog/developer-skills/github/write-better-commits-build-better-projects/);
+    - ["Por qué necesitas confirmaciones de Git pequeñas e informativas"](https://masalmon.eu/2024/06/03/small-commits/);
+    - ["Cómo lograr un buen historial de Git"](https://masalmon.eu/2024/06/11/rewrite-git-history/);
+    - [El paquete R saperlipopette para practicar con Git](https://docs.ropensci.org/saperlipopette/).
+
 - El nombre de rama por defecto no debe ser `master` ya que puede resultar ofensivo para algunas personas. Consulta la [declaración del proyecto Git y de la Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) para más contexto. Es práctica general nombrar a la rama por defecto `main` aunque también pueden utilizarse otros nombres. Consulta el artículo de tidyverse ["Cambiar el nombre de la rama por defecto"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) para aprender a utilizar esta funcionalidad para renombrar las ramas por defecto.
 
 - Asegúrate de listar archivos innecesarios, como `.DS_Store`, en .gitignore.
