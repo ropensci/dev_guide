@@ -19,9 +19,15 @@ Recruiting new editors and maintaining a sufficient and well-balanced editorial 
 
 ### Searching for a new editor {#searching-for-new-editors}
 
-To search for a new editor, the Software Review Lead should:
+Places for the Software Review Lead to start looking for new editors include:
 
-- Look in the [_Community Leaderboard_ page of our editorial dashboard](https://dashboard.ropensci.org/community.html) to identify people who have contributed a lot yet not helped as editors.
+- The [_Community Leaderboard_ page of our editorial dashboard](https://dashboard.ropensci.org/community.html), to help identify people who have contributed a lot yet not helped as editors.
+
+- The list of [_Reviewers and former editors_](https://devguide.ropensci.org/softwarereview_intro.html#reviewers-and-former-editors) on our website.
+
+- Alternatively, ask the current editorial board for suggestions and nominations.
+
+Decisions on new editors should generally be made by the entire team, by following this general procedure:
 
 - Start a private Slack channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
 
