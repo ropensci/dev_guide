@@ -56,7 +56,7 @@ In addition to checking off the minimum criteria, we ask that you provide genera
 - Are there performance improvements that could be made?
 - Is the documentation (installation instructions/vignettes/examples/demos) clear and sufficient? Does it use the principle of *multiple points of entry* i.e. takes into account the fact that any piece of documentation may be the first encounter the user has with the package and/or the tool/data it wraps?
 - Were functions and arguments named to work together to form a common, logical programming API that is easy to read, and autocomplete?
-- Could the design of the package be simplified to help future maintenance?
+- Could the design of the package be simplified to make it easier for others to understand and contribute?
 - If you have your own relevant data/problem, work through it with the package. You may find rough edges and use-cases the author didn't think about.
 
 Some items in our checklist were inspired by the [Mozilla code review guide](https://mozillascience.github.io/codeReview/review.html).
