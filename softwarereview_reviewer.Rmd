@@ -43,6 +43,9 @@ All submissions trigger a detailed report on package structure and functionality
 
 To review a package, please begin by copying our [review template](#reviewtemplate), or the the [statistics review template](https://stats-devguide.ropensci.org/pkgreview.html#pkgrev-template) for statistical software.
 These templates should be used as high-level checklists to guide initial review structure.
+
+#### Checklist
+
 In addition to checking off the minimum criteria, we ask that you provide general comments addressing the following:
 
 - Does the package comply with the [rOpenSci packaging guide](#building)?
@@ -55,8 +58,9 @@ In addition to checking off the minimum criteria, we ask that you provide genera
 - Were functions and arguments named to work together to form a common, logical programming API that is easy to read, and autocomplete?
 - If you have your own relevant data/problem, work through it with the package. You may find rough edges and use-cases the author didn't think about.
 
+Some items in our checklist were inspired by the [Mozilla code review guide](https://mozillascience.github.io/codeReview/review.html).
 
-Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review within 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
+#### Automatic tools
 
 We encourage you to use automated tools to facilitate your review.  These include:
 
@@ -68,7 +72,36 @@ We encourage you to use automated tools to facilitate your review.  These includ
 
 Reviewers may also re-generate package check results from `@ropensci-review-bot` at any time by issuing the single comment in a review issue: `@ropensci-review-bot check package`.
 
-Some items in our checklist were inspired by the [Mozilla code review guide](https://mozillascience.github.io/codeReview/review.html).
+#### Tone
+
+Please be respectful and kind to the authors in your reviews. Our [code of conduct](#code-of-conduct) is mandatory for everyone involved in our review process. We expect you to submit your review within 3 weeks, depending on the deadline set by the editor. Please contact the editor directly or in the submission thread to inform them about possible delays.
+
+
+#### Formatting {#prefixing}
+
+You might be writing many individual comments as part of your review.
+To facilitate communication around them, please prefix your answers like so, with your initials unless you share them with anyone else in the thread, and a number:
+
+```
+- ml01: your package lacks a test for bla.
+- ml02: the reference index's grouping is unclear.
+....
+``` 
+
+This way the author can respond like so:
+
+```
+> - ml01: your package lacks a test for bla.
+
+Good catch, I added two tests, see [commit](link-to-commit).
+
+> - ml02: the reference index's grouping is unclear.
+
+Thank you, the functions are now grouped into data ingestion, data checking and data analysis. See [new reference index](pkgdown-link).
+
+....
+```
+
 
 ### Off-thread interactions {#off-thread-interactions}
 
