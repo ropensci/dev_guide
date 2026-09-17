@@ -6,7 +6,9 @@ aliases:
 # Guide for Reviewers {#reviewerguide}
 
 ```{block, type="summaryblock"}
-Thanks for agreeing to review a package for rOpenSci! This chapter consists of our guidelines to [prepare](#preparereview), [submit](#submitreview) and [follow up](#followupreviewer) on your review.
+Thanks for agreeing to review a package for rOpenSci! 
+We're excited for your unique perspective and expertise to benefit a package under review.
+This chapter consists of our guidelines to [prepare](#preparereview), [submit](#submitreview) and [follow up](#followupreviewer) on your review.
 
 You might contact the editor in charge of the submission for any questions you might have about the process or your review.
 
@@ -147,6 +149,8 @@ The use of generative AI tools is acceptable both for submitting authors and rev
 As with our expectations for authors, we require reviewers to disclose any usage of generative AI tools with as much detail as possible.
 Examples of acceptable usage include generating an overview of package functionality, or iterating through a Git history to provide an overview of development decisions.
 We ask reviewers to be as transparent as possible.
+
+Please remember we asked for your review to get *your* unique perspective and for the package to benefit from *your* expertise.
 
 ### Feedback on the process {#feedback-on-the-process}
 
