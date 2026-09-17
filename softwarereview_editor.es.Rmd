@@ -2,7 +2,6 @@
 aliases:
   - editorguide.html
 ---
-
 # Guía para el equipo editorial {#editorguide}
 
 ```{block, type="summaryblock"}
@@ -240,6 +239,16 @@ Utiliza toda esta información para juzgar si:
 - Un paquete es extremadamente grande, por lo que puede resultar demasiado pesado para quienes revisan.
   Por ejemplo, [estas consultas iniciales](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revelaron un paquete con más de 8.500 líneas de código en R (correspondientes al 97,6% de todos los paquetes) y 251 funciones R exportadas.
 
+#### Universo de pruebas de rOpenSci
+
+Una vez que el paquete reciba la etiqueta «editor-checks», deberías ver su compilación en el 
+ [R-universe «ropensci-staging»](https://ropensci-staging.r-universe.dev/builds)   .
+   Esto puede resultarte útil, ya que te permite evaluar:
+- (en la tabla principal) si se puede compilar en distintos sistemas operativos;
+- (en la tabla principal) si se puede crear una página web con pkgdown a través del icono del libro (las páginas web no se publican hasta que se aprueban los paquetes);
+- (en la página del paquete en cuestión) sus dependencias y otra información. Puedes hacer el recorrido por la web (el botón de la barra de navegación) si no estás familiarizado con 
+ [R-universe](https://docs.r-universe.dev/)   
+     .
 #### Comentarios editoriales iniciales
 
 - Después de contabilizar las comprobaciones automáticas, utiliza la [plantilla editorial](#editortemplate) para guiar las comprobaciones iniciales (si no están ya cubiertas por quien ocupa el rol de LE) y registrar tu respuesta al envío.
