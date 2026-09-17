@@ -39,11 +39,11 @@ Decisions on new editors should generally be made by the entire team, by followi
 
 - You can copy and adapt the following message to start the channel:
 
-  ```
+  ```md
   You've all been invited to this channel to discuss a new member of our editorial board.
   This channel is private and will be deleted as soon as we have sufficient agreement.
   The discussion is intended to be constructive and non-adversarial.
-  Please do not share any images, and try to refrain from overtly negative opinions.
+  Please do not take any screenshot, and try to refrain from overtly negative opinions.
   Then either:
     - Name and briefly describe any particular candidate(s); or
     - State that you're looking for nominations, along with any particular
