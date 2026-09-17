@@ -23,7 +23,7 @@ Places for the Software Review Lead to start looking for new editors include:
 
 - The [_Community Leaderboard_ page of our editorial dashboard](https://dashboard.ropensci.org/community.html), to help identify people who have contributed a lot yet not helped as editors.
 
-- The list of [_Reviewers and former editors_](https://devguide.ropensci.org/softwarereview_intro.html#reviewers-and-former-editors) on our website.
+- The list of [_Reviewers and former editors_](#reviewers).
 
 - Alternatively, ask the current editorial board for suggestions and nominations.
 
