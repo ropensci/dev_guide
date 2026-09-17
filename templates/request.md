@@ -11,7 +11,7 @@ If you accept, note that we ask reviewers to complete reviews in three weeks. (W
 
 Our [reviewers guide] details what we look for in a package review, and includes links to example reviews. Our standards are detailed in our [packaging guide], and we provide a reviewer [template] for you to use. Please make sure you do not have a [conflict of interest](https://devguide.ropensci.org/policies.html#coi) preventing you from reviewing this package. If you have questions or feedback, feel free to ask me.
 In case you use AI for your review, please disclose how you use it in your review.
-Do not forget your human insights and suggestions are what give the most value to your review.
+Be aware that your human insights and suggestions are what give the most value to your review.
 
 rOpenSci’s community is our best asset. 
 We aim for reviews to be open, non-adversarial, and focused on improving software quality. 
