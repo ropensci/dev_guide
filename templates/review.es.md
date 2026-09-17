@@ -42,4 +42,4 @@ Estimación de horas dedicadas a la revisión:
 
 ### Comentarios de la revisión
 
-
+_Empieza todos tus comentarios con un identificador formado por tus iniciales y un número, por ejemplo: ml01, ml02, etc._
