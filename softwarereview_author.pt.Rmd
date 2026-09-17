@@ -31,6 +31,17 @@ Este guia conciso apresenta o processo de revisão de software por pares, para v
 - Você não deve fazer nenhuma alteração no seu pacote enquanto ele estiver em análise, para que todas as pessoas revisoras estejam avaliando o mesmo software. Não envie seu pacote até que ele esteja em uma versão estável!
 - Seu pacote continuará a evoluir após a revisão. O capítulo sobre *Evolução do pacote* [fornece mais orientações sobre este tópico](#evolution).
 
+### Uso de ferramentas de IA generativa
+
+- O uso de ferramentas de IA generativa é aceitável em pacotes enviados para a revisão por pares, conforme descrito em [nossa postagem inicial no blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
+- Conforme estabelecido em [nossas políticas gerais](#policies-ai), exigimos que todos as pessoas autoras que enviam trabalhos forneçam detalhes sobre qualquer uso de ferramentas de IA generativa na documentação do pacote, geralmente em arquivos README ou em guias de contribuição.
+  - Descrições mais detalhadas sobre o uso de ferramentas de IA ou decisões de projeto também podem ser apresentadas em documentos separados; nesse caso, devem ser vinculadas diretamente a partir do arquivo README ou do guia de contribuição.
+  - Um exemplo é [o pacote `HydraR`](https://apaf-bioinformatics.github.io/HydraR/# robot-use-of-generative-ai), que fornece um link no README principal para os arquivos [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) e [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html).
+- Uma regra geral é que, quanto maior for o uso de ferramentas de IA generativa em um pacote, mais esperaremos que o uso dessas ferramentas seja documentado dentro do próprio software.
+- Sugerimos o uso de ferramentas de IA de forma que as decisões que orientam os processos de desenvolvimento e os resultados sejam registradas dentro do próprio software.
+  - Exemplos dessas ferramentas vão desde o [“spec-kit” do GitHub para desenvolvimento orientado por especificações](https://github.com/github/spec-kit) até a [nossa própria ferramenta experimental para documentar decisões de projeto de software](https://github.com/ropensci-review-tools/designlens).
+  - Todas elas compartilham o padrão comum de produzir artefatos adicionais que documentam as decisões e os processos de desenvolvimento juntamente com o próprio software.
+
 ### Documentação
 
 - Para qualquer envio ou consulta de pré-submissão, o README do seu pacote deve fornecer informações suficientes sobre o pacote (objetivos, uso, pacotes semelhantes) para que os editores avaliem seu escopo sem precisar instalar o pacote. Melhor ainda, crie um website pkgdown para permitir uma avaliação mais detalhada da funcionalidade online.
@@ -80,10 +91,11 @@ Se você pretende enviar um manuscrito de acompanhamento para seu o pacote, a rO
 
 ## O Processo de Revisão {#the-review-process}
 
-- Um [editor](#editors) analisará sua submissão em até 5 dias úteis e responderá com as próximas etapas. O editor poderá atribuir o pacote a revisores, solicitar que o pacote seja atualizado para atender aos critérios mínimos antes da revisão ou rejeitar o pacote devido à falta de adequação ou sobreposição.
-- Se o seu pacote atender aos critérios mínimos, o editor designará de 1 a 3 revisores. Eles serão solicitados a fornecer revisões como comentários sobre a sua _issue_ (submissão) dentro de 3 semanas.
-- Enquanto seu pacote estiver em análise, por favor, não faça nenhuma alteração, exceto correções de emergência. Afinal, os(as) revisores(as) precisam poder analisar a versão mais recente (a melhor até o momento) do seu software, e essa versão não deve sofrer alterações.
-- Pedimos que você responda aos comentários dos revisores em até 2 semanas após a última revisão enviada, mas você pode fazer atualizações no seu pacote ou responder a qualquer momento. Sua resposta deve incluir um link para a versão atualizada da sua [NEWS.md](#news) do seu pacote. Aqui está um [exemplo de resposta de autor](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656).  Quando sua resposta for enviada, [submeta-a utilizando o bot](#submit-response-to-reviewers). Incentivamos conversas contínuas entre autores e revisores. Consulte a seção [guia de revisão](#reviewerguide) para obter mais detalhes.
+- A pessoa [editora](#editors) analisará sua a submissão em até 5 dias úteis e responderá ao longo das próximas etapas. Ela poderá atribuir o pacote a revisores, solicitar que ele seja atualizado para atender aos critérios mínimos antes da revisão ou rejeitá-lo devido à falta de adequação ou sobreposição.
+- Se o seu pacote atender aos critérios mínimos, o(a) editor(a) designará de 1 a 3 revisores. As pessoas revisoras serão solicitadas a fornecer revisões como comentários sobre a sua *issue* dentro de 3 semanas.
+- Enquanto o seu pacote estiver em análise, por favor, não faça nenhuma alteração, exceto correções de emergência. Afinal, os(as) revisores(as) precisam analisar a versão mais recente (a melhor até o momento) do seu software e essa versão não deve sofrer alterações.
+- Pedimos que você responda aos comentários dos revisores em até 2 semanas após o envio da última revisão, mas você pode fazer atualizações no seu pacote ou responder a qualquer momento. A sua resposta deve incluir um link para a versão atualizada da [NEWS.md](#news) do seu pacote. Aqui está um [exemplo de resposta de autor](https://github.com/ropensci/software-review/issues/160#issuecomment-355043656). Quando a sua resposta for enviada, [submeta-a utilizando o bot](#submit-response-to-reviewers). Se os revisores [usarem prefixos](#prefixing) antes dos seus comentários, por exemplo, ml01, ml02, use-os também em sua resposta.
+- Incentivamos as pessoas autoras e revisoras a utilizarem os comentários da issue para manter o diálogo sempre que necessário. Não é preciso limitar a discussão ao ciclo formal de revisão e respostas. Consulte a seção [guia de revisão](#reviewerguide) para obter mais detalhes.
 - Frequentemente, mudanças no pacote podem alterar os resultados automatizados [das verificações `pkgcheck`](https://docs.ropensci.org/pkgcheck). Para avaliar isso, autores podem solicitar uma nova verificação do pacote com o comando `@ropensci-review-bot check package`.
 - Notifique-nos imediatamente se você não puder mais manter o seu pacote ou responder às revisões. Nestes casos, se espera que você retire a submissão ou que encontre mantenedores alternativos para o pacote. Você também pode discutir questões de manutenção na área de trabalho da rOpenSci no Slack.
 - Assim que seu pacote for aprovado, forneceremos mais instruções sobre a transferência do seu repositório para o repositório da rOpenSci.

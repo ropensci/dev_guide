@@ -557,6 +557,12 @@ For how to update your DESCRIPTION file, see the [R packages book](https://r-pkg
 - Your package source files have to be under version control, more specifically tracked with [Git](https://happygitwithr.com/). 
   You might find the [gert package](https://docs.ropensci.org/gert/) relevant, as well as some of [usethis Git/GitHub related functionality](https://usethis.r-lib.org/reference/index.html#section-git-and-github); you can however use git as you want.
 
+- Small, informative Git commits allow to better understand and debug a project. Do not group too many unrelated changes in a single commit; avoid using meaningless commit messages such as "update" or "commit". We do not require a clean Git history, but we highly recommend making an effort. Useful resources:
+    - ["Write Better Commits, Build Better Projects"](https://github.blog/developer-skills/github/write-better-commits-build-better-projects/);
+    - ["Why you need small, informative Git commits"](https://masalmon.eu/2024/06/03/small-commits/);
+    - ["Hack your way to a good Git history"](https://masalmon.eu/2024/06/11/rewrite-git-history/);
+    - [The saperlipopette R package for practicing Git](https://docs.ropensci.org/saperlipopette/).
+
 - The default branch name should not be `master`, as this can be offensive to some people. Refer to the [statement of the Git project and the Software Freedom Conservancy](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) for more context. It is general practice to name a default branch `main`, although other names may also be used. See the tidyverse blog post ["Renaming the default branch"](https://www.tidyverse.org/blog/2021/10/renaming-default-branch/) to learn about usethis functionality to help with renaming default branches.
 
 - Make sure to list "scrap" such as `.DS_Store` files in .gitignore. 

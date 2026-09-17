@@ -15,5 +15,7 @@
 
 #### Comentários do(a) editor(a)
 
+_Inicie todos os seus comentários com um identificador composto por suas iniciais e um número, por exemplo, ml01, ml02, etc._
+
 ---
 

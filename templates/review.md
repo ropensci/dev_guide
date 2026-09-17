@@ -33,6 +33,15 @@ The package includes all the following forms of documentation:
 - [ ] **Automated tests:** Unit tests cover essential functions of the package and a reasonable range of inputs and conditions. All tests pass on the local machine.
 - [ ] **Packaging guidelines**: The package conforms to the [rOpenSci packaging guide](#building).
 
+#### Use of generative AI tools
+
+
+- [ ] Generative AI tools were used to assist this review
+
+Only if you tick that box: Explain the contribution of such tools to your review.
+
+---
+
 Estimated hours spent reviewing:
 
 - [ ] Should the author(s) deem it appropriate, I agree to be acknowledged as a package reviewer ("rev" role) in the package DESCRIPTION file.
@@ -40,3 +49,5 @@ Estimated hours spent reviewing:
 ---
 
 ### Review Comments
+
+_Prefix all your comments with an identifier consisting of your initials and a number e.g. ml01, ml02, etc._
