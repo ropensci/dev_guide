@@ -29,7 +29,9 @@ Places for the Software Review Lead to start looking for new editors include:
 
 Decisions on new editors should generally be made by the entire team, by following this general procedure:
 
-- Start a private Slack channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
+- Start a private Slack channel for discussion and add all editors.
+
+  - A new, private channels is important to separate discussions from the general editors channel that future editors will join.
 
   - Ping in general editors channel to ensure all get notified of new private channel.
 
