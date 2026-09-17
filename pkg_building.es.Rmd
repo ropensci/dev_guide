@@ -556,7 +556,7 @@ Para saber cómo actualizar tu archivo DESCRIPTION, consulta el libro [*R packag
   Puede que el paquete [gert](https://docs.ropensci.org/gert/) te resulte útil, así como algunas de las [funciones de usethis relacionadas con Git/GitHub](https://usethis.r-lib.org/reference/index.html#section-git-and-github); sin embargo, puedes utilizar git como quieras.
 
 
-- Las confirmaciones de Git breves e informativas permiten comprender y depurar mejor un proyecto. No agrupes demasiados cambios no relacionados en una sola confirmación; evita usar mensajes de confirmación sin sentido, como «actualización» o «confirmación». No exigimos un historial de Git impecable, pero recomendamos encarecidamente que te esfuerces por lograrlo. Recursos útiles:
+- Los  _commits_ de Git breves e informativos permiten comprender y depurar mejor un proyecto. No agrupes demasiados cambios no relacionados en un solo _commit_, evita usar mensajes sin sentido en tus _commits_, como «actualización» o «confirmación». No exigimos un historial de Git impecable, pero recomendamos encarecidamente que te esfuerces por lograrlo. Recursos útiles:
     - ["Escribe mejores confirmaciones, crea mejores proyectos"](https://github.blog/developer-skills/github/write-better-commits-build-better-projects/);
     - ["Por qué necesitas confirmaciones de Git pequeñas e informativas"](https://masalmon.eu/2024/06/03/small-commits/);
     - ["Cómo lograr un buen historial de Git"](https://masalmon.eu/2024/06/11/rewrite-git-history/);
