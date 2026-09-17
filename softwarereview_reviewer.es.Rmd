@@ -107,11 +107,11 @@ Ten en cuenta que si el paquete no se envía a través de la *branch* principal 
 ### Uso de herramientas de IA generativa
 
 
-El uso de herramientas de IA generativa es aceptable tanto para los autores que envían sus trabajos como para los revisores; sin embargo, los revisores no pueden utilizar estas herramientas para fundamentar ninguna decisión o recomendación sin supervisión humana.
+El uso de herramientas de IA generativa es aceptable tanto para las personas que envían sus paquetes como para las personas que revisan; sin embargo, los integrantes del equipo revisor no pueden utilizar estas herramientas para fundamentar ninguna decisión o recomendación sin supervisión humana.
 
-Al igual que con nuestras expectativas para los autores, exigimos a los revisores que revelen cualquier uso de herramientas de IA generativa con el mayor detalle posible.
+Al igual que con nuestras expectativas para las personas autoras, exigimos a quienes revisan que revelen cualquier uso de herramientas de IA generativa con el mayor detalle posible.
 Algunos ejemplos de uso aceptable incluyen la generación de una descripción general de la funcionalidad del paquete o el análisis del historial de Git para ofrecer una visión general de las decisiones de desarrollo.
-Pedimos a los revisores que sean lo más transparentes posible.
+Pedimos a quienes revisan que sean lo más transparentes posible.
 
 ### Devoluciones sobre el proceso {#feedback-on-the-process}
 

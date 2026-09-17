@@ -34,13 +34,13 @@ Esta guía condensa el proceso de revisión por pares desde el punto de vista de
 ### Uso de herramientas de IA generativa
 
 - El uso de herramientas de IA generativa es aceptable en los paquetes enviados para revisión por pares, tal como se describe en [nuestra publicación inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/).
-- Tal como se indica en [nuestras políticas generales](#policies-ai), exigimos a todos los autores que envíen trabajos que proporcionen detalles sobre cualquier uso de herramientas de IA generativa en la documentación del paquete, generalmente en los archivos README o en las guías de contribución.
+- Tal como se indica en [nuestras políticas generales](#policies-ai), exigimos a todas las personas que envíen trabajos que proporcionen detalles sobre cualquier uso de herramientas de IA generativa. Esperamos que para ello usen la documentación del paquete, generalmente en los archivos README o en las guías de contribución.
   - Las descripciones detalladas sobre el uso de herramientas de IA o las decisiones de diseño también pueden incluirse en documentos separados; en ese caso, deben enlazarse directamente desde el archivo README o la guía de contribución.
-  - Un ejemplo es [el paquete `HydraR`](https://apaf-bioinformatics.github.io/HydraR/# uso-de-ia-generativa-por-robots), que incluye un enlace en el archivo README principal a los archivos [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) y [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html).
+  - Un ejemplo es [el paquete `HydraR`](https://apaf-bioinformatics.github.io/HydraR/#uso-de-ia-generativa-por-robots), que incluye un enlace en el archivo README principal a los archivos [agents.md](https://apaf-bioinformatics.github.io/HydraR/agents.html) y [DESIGN.md](https://apaf-bioinformatics.github.io/HydraR/DESIGN.html).
 - Una regla general muy básica es que, cuanto mayor sea el uso de herramientas de IA generativa en un paquete, más esperaremos que el uso de dichas herramientas esté documentado dentro del propio software.
 - Sugerimos utilizar las herramientas de IA de manera que se registren las decisiones que guían los procesos de desarrollo y los resultados dentro del propio software.
-  - Entre los ejemplos de este tipo de herramientas se encuentran desde [el «spec-kit» de GitHub para el desarrollo basado en especificaciones](https://github.com/github/spec-kit) hasta [nuestra propia herramienta experimental para documentar las decisiones de diseño de software](https://github.com/ropensci-review-tools/designlens).
-  - Todas ellas comparten el patrón común de generar artefactos adicionales que documentan las decisiones y los procesos de desarrollo junto con el software en sí.
+  - Entre los ejemplos de este tipo de herramientas se encuentran [el «spec-kit» de GitHub para el desarrollo basado en especificaciones](https://github.com/github/spec-kit) y [nuestra propia herramienta experimental para documentar las decisiones de diseño de software](https://github.com/ropensci-review-tools/designlens).
+  - Estas herramientas comparten el patrón común de generar artefactos adicionales que documentan las decisiones y los procesos de desarrollo junto con el software en sí.
 
 ### Documentación
 

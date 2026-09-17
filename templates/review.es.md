@@ -40,7 +40,7 @@ El paquete incluye todos los siguientes tipos de documentación:
 
 - [ ] Se utilizaron herramientas de IA generativa para realizar esta revisión
 
-Solo si marca esa casilla: explique la contribución de dichas herramientas a su revisión.
+Solo si marcas esta casilla: explica la contribución de dichas herramientas a tu revisión.
 
 ---
 

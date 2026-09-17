@@ -263,13 +263,13 @@ Los siguientes recursos pueden ser útiles para quienes investigan, desarrollan 
 
 ## Uso de herramientas de IA generativa {#policies-ai}
 
-Los autores deben declarar cualquier uso de herramientas de IA generativa en nuestros formularios de envío, donde también les pedimos que:
+Las personas responsables del paquete deben declarar cualquier uso de herramientas de IA generativa en nuestro formulario de envío, donde también les pedimos que:
 
-> describan el uso e incluyan enlaces a cualquier aspecto relevante de su repositorio.
+> describan el uso de IA generativa e incluyan enlaces a cualquier aspecto relevante de su repositorio.
 
-Tal como se describe en [nuestra publicación inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/), se espera que nuestras políticas sobre el uso de herramientas de IA generativa evolucionen a la par del desarrollo de las propias herramientas, así como de la forma en que estas contribuyen al desarrollo de software.
-Esperamos que todos los autores que envíen trabajos revelen de manera transparente cómo las herramientas de IA generativa pueden haber contribuido a cualquier software enviado para revisión por pares.
-Los detalles se proporcionan tanto en la [_Guía para autores_](#authors-guide) como en la [_Guía para revisores_](#reviewerguide).
+Tal como se describe en [nuestra publicación inicial en el blog](https://ropensci.org/blog/2026/02/26/ropensci-ai-policy/), esperamos que nuestras políticas sobre el uso de herramientas de IA generativa evolucionen a la par del desarrollo de las propias herramientas, así como de la forma en que estas contribuyen al desarrollo de software.
+Esperamos que todas las personas que envíen paquetes a nuestra revisión de software por pares revelen de manera transparente cómo las herramientas de IA generativa contribuyeron al desarrollo de su paquete.
+Los detalles para describir el uso de IA generativa se proporcionan tanto en la [_Guía para autores_](#authors-guide) como en la [_Guía para revisores_](#reviewerguide).
 
 ## Código de conducta  {#code-of-conduct}
 
