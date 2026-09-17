@@ -12,17 +12,53 @@ Orientações para gerenciar a equipe editorial e também sobre [como gerenciar 
 
 O recrutamento de novos editores e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da [Líder de Revisão de Software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
 
-Etapas:
+- Novos editores são geralmente recrutados sempre que não há editores suficientes para lidar com os artigos enviados no momento, embora editores convidados também possam ser convidados para artigos específicos.
 
-- Inicie um canal privado para discussão (para que você não tenha um histórico no canal de editores no qual futuros editores entrarão, o que pode ser incômodo).
+- A carga editorial atual pode ser consultada na [página _Editors_ do nosso painel de controle](https://dashboard.ropensci.org/editors.html).
 
-- Marque os editores na conversa para garantir que eles recebam uma notificação, pois este é um tópico importante.
+### Procurando um novo editor {#searching-for-new-editors}
 
-- Espere que a maioria dos editores se manifeste antes de convidar alguém. Dê a eles uma semana para responder.
+Alguns lugares onde o Líder de Revisão de Software pode começar a procurar novos editores incluem:
 
-## Convidando um(a) novo(a) editor(a) {#inviting-a-new-editor}
+- A [página _Community Leaderboard_ o nosso painel editorial](https://dashboard.ropensci.org/community.html), para ajudar a identificar pessoas que contribuíram bastante, mas ainda não atuaram como editores.
 
-- Um(a) candidato(a) pode começar como um(a) [editor(a) convidado(a)](#guesteditor).
+- A lista de [*revisores e ex-editores*](#reviewers).
+
+- Como alternativa, peça sugestões e indicações ao atual conselho editorial.
+
+As decisões sobre novos editores devem, em geral, ser tomadas por toda a equipe, seguindo este procedimento geral:
+
+- Crie um canal privado no Slack para discussão e adicione todos os editores.
+  
+  - É importante criar um novo canal privado para separar as discussões do canal geral dos editores, ao qual os futuros editores irão se juntar.
+  
+  - Envie uma menção no canal geral dos editores para garantir que todos sejam notificados sobre o novo canal privado.
+  
+  - Use esse canal para solicitar indicações gerais ou opiniões sobre possíveis candidatos.
+
+- Você pode copiar e adaptar a seguinte mensagem para iniciar o canal:
+  
+  ````md
+Todos vocês foram convidados para este canal a fim de discutir a inclusão de um novo membro em nosso conselho editorial.
+   Este canal é privado e será excluído assim que chegarmos a um consenso suficiente.
+   A discussão deve ser construtiva e não conflituosa.
+Por favor, não façam capturas de tela e procurem evitar opiniões abertamente negativas.
+   Em seguida, façam uma das seguintes opções:
+   - Indiquem e descrevam brevemente qualquer candidato específico; ou
+\- Indique que você está buscando indicações, juntamente com quaisquer
+   preferências específicas (como conhecimentos especializados)
+  
+  ````
+
+- Concentre-se em novos membros que irão sustentar a [diversidade](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) e a representatividade global da equipe editorial.
+
+- Aguarde até que a maioria dos editores se manifeste antes de convidar alguém. Dê cerca de uma semana para que respondam.
+
+- Exclua o canal privado do Slack assim que o novo editor tiver aceitado o convite.
+
+### Convidando um novo editor {#inviting-a-new-editor}
+
+- Os membros do comitê editorial geralmente começam atuando como [editores convidados](#guesteditor) para uma submissão inicial de teste.
 
 - Envie um e-mail.
 
@@ -49,6 +85,8 @@ Por favor, reflita sobre a nossa oferta e faça perguntas se algo não estiver c
 Atenciosamente,
 [EDITOR], em nome do Conselho Editorial da rOpenSci
 ```
+
+- Ao término do mandato como editor convidado, geralmente lhes é perguntado se gostariam de se tornar membros efetivos.
 
 ## Integrando um(a) novo(a) editor(a) ao time {#onboarding-a-new-editor}
 
