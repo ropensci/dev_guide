@@ -125,7 +125,7 @@ Para poner en pausa a un integrante del equipo editorial:
 
 - Informa a quien maneja la comunidad de rOpenSci o a algún otro miembro del personal para anunciarlo en nuestro newsletter mensual y agradecerle.
 
-- Remueve a esta persona del canal "editors-only" y del equipo Slack de personas editoras.
+- Remueve a esta persona del canal "editors-only" de Slack.
 
 - Remueve a la persona del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors/members) y del sub-equipo correspondiente en GitHub.
 
