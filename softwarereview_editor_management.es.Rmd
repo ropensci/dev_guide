@@ -12,17 +12,53 @@ Guía para gestionar el equipo editorial y [cómo gestionar la publicación de u
 
 Reclutar nuevas personas y mantener un equipo editorial funcional y equilibrado es responsabilidad de quien [Lidere la Revisión de Software](https://ropensci.org/about/#team) con el apoyo y asesoramiento del comité editorial.
 
-Estos son los pasos a seguir:
+- Por lo general, se buscan nuevas personas para integrar el equipo editorial cuando no hay suficientes para gestionar las propuestas actuales, aunque también se puede convocar a personas como editores o editoras invitadas para propuestas concretas.
 
-- Crea un canal privado para discutir la invitación; de este modo, el historial de conversación no queda disponible en el canal al que luego se unirán los nuevos miembros del equipo, lo que podría ser incómodo.
+- La carga editorial actual se puede consultar en la [ página «*Editors*» de nuestro panel de control](https://dashboard.ropensci.org/editors.html)       .
 
-- Haz un *ping* a las personas del equipo editorial para asegurarte de que reciban una notificación, ya que se trata de un tema importante.
+### Buscando nuevos integrantes para el equipo editorial {#searching-for-new-editors}
+   
+Algunos lugares donde el responsable de _Software Review_ puede buscar nuevas personas editoras son:
 
-- Espera a que la mayoría de del equipo intervenga antes de realizar la invitación. Dales una semana para que respondan.
+- La [página [_Community Leaderboard_ de nuestro panel de control editorial](https://dashboard.ropensci.org/community.html), que ayuda a identificar a personas que han contribuido mucho pero aún no han colaborado en el rol editorial.
 
-## Invitar a una nueva persona al equipo {#inviting-a-new-editor}
+- La lista de personas que ya han [*revisado o editado*](#reviewers).
 
-- Los posibles nuevos miembros pueden empezar realizando una [edición de forma invitada](#guesteditor).
+- Como alternativa, se puede pedir al equipo editorial actual que aporte sugerencias y proponga personas candidatas.
+
+Generalmente, las decisiones sobre la inclusión de las nuevas personas deben tomarlas todo el equipo, siguiendo este procedimiento general:
+
+- Crea un canal privado de Slack para el debate e incluye al equipo editorial.
+  
+  - Es importante crear un nuevo canal privado para separar estos debates del canal general del equipo editorial al que se unirán los futuros integrantes.
+  
+  - Envía un mensaje en el canal general del equipo editorial para asegurarte de que todas las personas reciban una notificación sobre el nuevo canal privado.
+  
+  - Utiliza ese canal para solicitar candidaturas generales u opiniones sobre posibles personas candidatas.
+
+- Puedes copiar y adaptar el siguiente mensaje para iniciar el canal:
+  
+  ````md
+Invitamos a todo el equipo editorial a este canal para debatir sobre una nueva incorporación a nuestro equipo.
+   Este canal es privado y se eliminará tan pronto como alcancemos un consenso suficiente.
+   El debate debe ser constructivo y no conflictivo.
+Por favor, no tomen capturas de pantalla e intenten abstenerse de expresar opiniones abiertamente negativas.
+   A continuación, pueden:
+   - Nombrar y describir brevemente a alguna persona candidata o
+\- Indica que estás buscando candidaturas, junto con cualquier
+   requisito concreto(como conocimientos especializados específicos)
+  
+  ````
+
+- Céntrate en nuevos integrantes que contribuyan a mantener la [diversidad](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) y la representatividad global del equipo editorial.
+
+- Espera a que la mayoría de las personas editoras se pronuncien antes de invitar a alguien. Deja aproximadamente una semana para responder.
+
+- Elimina el canal privado de Slack una vez que la nueva persona haya aceptado la invitación.
+
+### Invitar a una nueva persona al equipo {#inviting-a-new-editor}
+  
+- Los integrantes del comité editorial suelen empezar como [invitadas/os](#guesteditor) para una primera presentación a modo de prueba.
 
 - Envía un correo electrónico:
 
@@ -50,7 +86,9 @@ Te deseamos lo mejor,
 [NOMBRE], en nombre del equipo editorial de rOpenSci.
 ```
 
-## Incorporar un nuevo miembro al equipo {#onboarding-a-new-editor}
+- Una vez finalizado su mandato como personas invitadas, por lo general se les pregunta si desean convertirse en integrantes de pleno derecho.
+
+## Incorporar un nuevo integrante al equipo {#onboarding-a-new-editor}
 
 - Añadir al [archivo "team.json" del sitio web](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) las propiedades `"editor": true` y para editores/as de paquetes estadísticos, también `"stats": true`.
   Eso añadirá automáticamente a las nuevas personas al equipo editorial que se muestra en la página del [sitio web de rOpenSci](https://ropensci.org/software-review/).

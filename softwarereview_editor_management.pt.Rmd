@@ -10,19 +10,55 @@ Orientações para gerenciar a equipe editorial e também sobre [como gerenciar 
 
 ## Recrutamento de novos editores {#recruiting-new-editors}
 
-O recrutamento de novos editores e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da [Líder de Revisão de Software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
+O recrutamento de novos(as) editores(as) e a manutenção de um conselho editorial suficiente e equilibrado é responsabilidade da pessoa [Líder de Revisão de Software](https://ropensci.org/about/#team) com o apoio e a orientação do conselho editorial.
 
-Etapas:
+- Novos(as) editores(as) são geralmente recrutados(as) sempre que não há pessoas editoras suficientes para lidar com os artigos enviados no momento, embora editores(as) convidados(as) também possam ser convidados(as) para artigos específicos.
 
-- Inicie um canal privado para discussão (para que você não tenha um histórico no canal de editores no qual futuros editores entrarão, o que pode ser incômodo).
+- A carga editorial atual pode ser consultada na [página _Editors_ do nosso painel de controle](https://dashboard.ropensci.org/editors.html).
 
-- Marque os editores na conversa para garantir que eles recebam uma notificação, pois este é um tópico importante.
+### Procurando um(a) novo(a) editor(a) {#searching-for-new-editors}
 
-- Espere que a maioria dos editores se manifeste antes de convidar alguém. Dê a eles uma semana para responder.
+Alguns lugares onde o/a Líder de Revisão de Software pode começar a procurar novos(as) editores(as) incluem:
 
-## Convidando um(a) novo(a) editor(a) {#inviting-a-new-editor}
+- A [página _Community Leaderboard_ do nosso painel editorial](https://dashboard.ropensci.org/community.html), para ajudar a identificar pessoas que contribuíram bastante, mas ainda não atuaram como editoras.
 
-- Um(a) candidato(a) pode começar como um(a) [editor(a) convidado(a)](#guesteditor).
+- A lista de pessoas [*revisoras e ex-editoras*](#reviewers).
+
+- Como alternativa, peça sugestões e indicações ao atual conselho editorial.
+
+As decisões sobre novos(as) editores(as) devem, em geral, ser tomadas por toda a equipe, seguindo este procedimento geral:
+
+- Crie um canal privado no Slack para a discussão e adicione todas as pessoas editoras.
+  
+  - É importante criar um novo canal privado para separar as discussões do canal geral dos(as) editores(as), ao qual os(as) futuros(as) editores(as) irão se juntar.
+  
+  - Envie uma menção no canal geral de editores(as) para garantir que todas as pessoas sejam notificadas sobre o novo canal privado.
+  
+  - Use esse canal para solicitar indicações gerais ou opiniões sobre possíveis candidatos(as).
+
+- Você pode copiar e adaptar a seguinte mensagem para iniciar o canal:
+  
+  ````md
+Vocês foram convidados(as) para este canal a fim de discutir a inclusão de um(a) novo(a) membro em nosso conselho editorial.
+   Este canal é privado e será excluído assim que chegarmos a um consenso suficiente.
+   A discussão deve ser construtiva e não conflituosa.
+Por favor, não faça capturas de tela e evite dar opiniões abertamente negativas.
+   Em seguida, faça uma das seguintes opções:
+   - Indique e descreva brevemente qualquer candidato(a) específico(a); ou
+\- Indique que você está buscando indicações, juntamente com quaisquer
+   preferências específicas (como conhecimentos especializados)
+  
+  ````
+
+- Concentre-se em novos(as) membros que irão sustentar a [diversidade](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) e a representatividade global da equipe editorial.
+
+- Aguarde até que a maioria das pessoas editoras se manifeste antes de convidar alguém. Dê cerca de uma semana para que respondam.
+
+- Exclua o canal privado do Slack assim que o(a) novo(a) editor(a) tiver aceitado o convite.
+
+### Convidando um(a) novo(a) editor(a) {#inviting-a-new-editor}
+
+- As pessoas membros do comitê editorial geralmente começam atuando como [editoras convidadas](#guesteditor) para uma submissão inicial de teste.
 
 - Envie um e-mail.
 
@@ -50,9 +86,11 @@ Atenciosamente,
 [EDITOR], em nome do Conselho Editorial da rOpenSci
 ```
 
+- Ao término do mandato como editor(a) convidado(a), geralmente lhes é perguntado se gostariam de se tornar membros efetivos.
+
 ## Integrando um(a) novo(a) editor(a) ao time {#onboarding-a-new-editor}
 
-- Adicionar ao [arquivo "team.json" do site](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) com `"editor": true` e também `"stats": true` para editores de estatísticas.
+- Adicionar ao [arquivo "team.json" do site](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) com `"editor": true` e também `"stats": true` para editores(as) de estatísticas.
   Isso adicionará automaticamente novos editores à equipe editorial mostrada na página do [site da rOpenSci](https://ropensci.org/software-review/).
 
 - Informe o(a) gerente da comunidade rOpenSci para que você possa preparar uma postagem introdutória no blog.
@@ -70,14 +108,14 @@ Atenciosamente,
 
 - Quando eles estiverem no canal "editors-only", publique uma mensagem de boas-vindas informando todos os editores.
 
-## Colocando um editor em pausa {#pause-editor}
+## Colocando um(a) editor(a) em pausa {#pause-editor}
 
 Às vezes, as pessoas editoras também precisam de uma pausa.
-Para colocar um integrante da equipe editorial em pausa:
+Para colocar uma pessoa integrante da equipe editorial em pausa:
 
 - Remova o usuário da [equipe “editors” do GitHub](https://github.com/orgs/ropensci/teams/editors), juntamente com a [equipe “stats-editors”](https://github.com/orgs/ropensci/teams/stats-editors), se for o caso.
 
-- Defina o status “férias” no Airtable, incluindo uma data aproximada de quando possam retornar.
+- Defina o status “férias” no Airtable, incluindo uma data aproximada de quando possa retornar.
 
 - Para “retomar” o status, basta reverter essas alterações.
 
