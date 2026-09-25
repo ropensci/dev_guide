@@ -3,6 +3,7 @@
 ## Dev version
 
 - 2026-09-17, document staging R-universe (#1040).
+- 2026-09-17, Improve description of how to recruit new editors (#998)
 - 2026-09-07, add recommendations and resources about Git commits (#1006).
 - 2026-09-07, add first AI policies (#1006).
 - 2026-08-24, enforce the prefixing of comments more (#1024).
