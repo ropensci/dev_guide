@@ -1,0 +1,19 @@
+# 14  Promocionando tu paquete
+
+Consulte también la entrada del blog [«Ideas de marketing para su paquete»](https://ropensci.org/blog/2024/03/07/package-marketing/).
+
+Te ayudaremos a promocionar tu paquete, pero aquí hay algunas cosas más para tener en cuenta.
+
+- Si te enteras de un caso de uso de tu paquete, anima a quien lo escribió a publicar el enlace en nuestro [sitio](https://ropensci.org/es/usecases/), para recibir un toot (mensaje en Mastodon) de rOpenSci y su posible inclusión en el boletín mensual de rOpenSci. También te recomendamos que añadas un enlace al caso de uso en la sección “casos de uso reales” de tu archivo *README*.
+
+- Cuando [publiques](#releasing) una nueva versión de tu paquete o lo publiques en CRAN por primera vez,
+
+- Comparte sobre el paquete en tus redes sociales (Mastodon, Bluesky, LinkedIn…) utilizando el hashtag “#rstats” y etiqueta a rOpenSci si rOpenSci esta presente en esa red! Esto puede ayudar llegar a gente que pueda colaborar o usar el paquete. Ejemplos enviados desde rOpenSci mismo: [“A package a day” (un paquete al dia)](hachyderm.io/@rOpenSci/111611705648653729), [Help wanted (se necesita ayuda)](hachyderm.io/@rOpenSci/111460729804231877), [Use case (caso de uso)](hachyderm.io/@rOpenSci/111371091053569287), [Welcome post (mensaje de bienvenida)](hachyderm.io/@rOpenSci/111342069863172097).
+
+  - haz un *pull request* a [R Weekly](https://github.com/rweekly/rweekly.org) con una mensaje sobre la versión en la sección “*New Releases*” (o “*New Packages*” para la primera versión de GitHub/CRAN).
+
+  - Considera enviar un breve artículo sobre el lanzamiento a [rOpenSci tech notes](https://ropensci.org/technotes/). Ponte en contacto con la persona encargada de gestionar la comunidad de rOpenSci, (por ejemplo, a través de Slack o <info@ropensci.org>). Consulta [las recomendaciones sobre cómo contribuir con un artículo en el blog](https://blogguide.ropensci.org)).
+
+  - Envía tu paquete a listas de paquetes como [*CRAN Task Views*](https://cran.r-project.org/web/views/).
+
+- Si decides promocionar tu paquete dando una charla sobre él en una reunión o conferencia (¡excelente idea!) lee en [este artículo de Jenny Bryan y Mara Averick (en inglés)](https://www.tidyverse.org/articles/2018/07/carpe-talk/).

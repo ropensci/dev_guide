@@ -1,0 +1,19 @@
+# 14  Marketing do seu pacote
+
+Consulte também a postagem do blog [*Marketing Ideas For Your Package*](https://ropensci.org/blog/2024/03/07/package-marketing/).
+
+Ajudaremos você a promover o seu pacote, mas aqui estão mais algumas coisas que você deve ter em mente.
+
+- Se você souber de um caso de uso de seu pacote, incentive o autor a publicar o link em nosso [site](https://ropensci.org/usecases/), para um post no Mastodon da rOpenSci e possível inclusão no boletim quinzenal da rOpenSci. Também recomendamos que você adicione um link para o caso de uso em uma seção “use cases in the wild” do seu README.
+
+- Quando você [liberar](#releasing) uma nova versão do seu pacote ou você lançá-lo pela primeira vez no CRAN,
+
+  - Faça um *pull request* para a [R Weekly](https://github.com/rweekly/rweekly.org) com uma linha sobre essa nova versão na seção “New Releases” (ou “New Packages” para a primeira versão do GitHub/CRAN).
+
+  - Publique sobre seu pacote nas mídias sociais (Mastodon, Bluesky, LinkedIn…) usando a hashtag “#rstats” e marque a rOpenSci se ela estiver presente nessa plataforma! Isso pode ajudar no engajamento de pessoas colaboradoras e usuárias. [Exemplo](https://twitter.com/opencpu/status/1003934871830622208).
+
+  - Considere a possibilidade de enviar um breve post sobre o lançamento para as [Notas técnicas da rOpenSci](https://ropensci.org/technotes/). Entre em contato com o/a gerente da comunidade do rOpenSci (por exemplo, via Slack ou <info@ropensci.org>). Consulte [as diretrizes sobre como contribuir com um *blog post*](https://blogguide.ropensci.org)).
+
+  - Envie seu pacote para listas de pacotes, como a [Visão de tarefas do CRAN](https://cran.r-project.org/web/views/).
+
+- Se você optar por divulgar o seu pacote dando uma palestra sobre ele em um encontro ou conferência (excelente ideia!) leia [este artigo de Jenny Bryan e Mara Averick](https://www.tidyverse.org/articles/2018/07/carpe-talk/).

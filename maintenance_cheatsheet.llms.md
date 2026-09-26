@@ -1,0 +1,39 @@
+# 10  rOpenSci package maintenance cheatsheet
+
+A reminder of infrastructure and contact channels for maintainers of rOpenSci packages.
+
+## 10.1 Help needed?
+
+If you need punctual help (say, a PR review; or some CI troubleshooting), or help looking for co-maintainers or a new maintainer, or if you need us to retire your package, ping us in GitHub via `@ropensci/admin` or email `info@ropensci.org`. You can also use our Slack package maintenance channel.
+
+Never hesitate to ask for help.
+
+## 10.2 GitHub repository access
+
+You should have administrative access to your package’s GitHub repository. If that is no longer the case (say, the automated process failed; or you lost access after having to temporarily deactivate two-factor authentication), please contact us via `info@ropensci.org`.
+
+## 10.3 Other GitHub topics
+
+If you have any GitHub questions or requests (adding a collaborator to the GitHub organization for instance) you can use a public channel of the rOpenSci Slack workspace or ping `@ropensci/admin` on GitHub.
+
+## 10.4 pkgdown documentation
+
+See [rOpenSci docs](#rodocsci).
+
+## 10.5 Access to rOpenSci slack workspace
+
+Package maintainers and developers should get access to [rOpenSci Slack](https://contributing.ropensci.org/resources.html#channels). If you did not get the invitation or did not accept it in time, or if you want a new regular contributor to receive an invitation please email `info@ropensci.org`, indicating to which email address you wish to receive the invitation.
+
+You might find the \#package-maintenance channel relevant for Q&A as well as friendly commiseration when needed.
+
+## 10.6 Package blog posts
+
+Refer to our [blog guide](https://blogguide.ropensci.org/).
+
+## 10.7 Package issues promotion
+
+Label issues with “help wanted” to get them [broadcasted to the community](https://ropensci.org/help-wanted/).
+
+## 10.8 Package use cases promotion
+
+You can report use cases of your package or encourage users to report them via our forum to get them [published on our website](https://ropensci.org/usecases/) and in our newsletter.

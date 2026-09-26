@@ -1,0 +1,20 @@
+# Prefácio
+
+Boas vindas! Este livro é um guia para autores, mantenedores, revisores e editores da rOpenSci.
+
+A [primeira seção do livro](#building) contém as nossas diretrizes para criar e testar pacotes do R.
+
+A [segunda seção](#softwarereviewintro) é dedicada ao processo de revisão por pares de software da rOpenSci: o que é esse processo, quais são as nossas políticas e guias específicos para autores, editores e revisores durante todo o processo. Para *revisão de software estatístico*, consulte a [página da Web e os recursos do projeto](https://ropensci.org/stat-software-review/).
+
+A [terceira e última seção](#collaboration) apresenta as nossas práticas recomendadas para você cuidar do seu pacote depois que ele tiver sido integrado: como colaborar com outros desenvolvedores, como documentar lançamentos, como promover o seu pacote e como aproveitar o GitHub como uma plataforma de desenvolvimento. A terceira seção também apresenta um [capítulo para quem deseja começar a contribuir com os pacotes do rOpenSci](#contributingguide).
+
+Esperamos que você ache o guia útil e claro, e agradecemos suas sugestões no [*issue tracker* do livro](https://github.com/ropensci/dev_guide/issues). Feliz embalagem R!
+
+A equipe editorial da rOpenSci.
+
+Este livro é um documento vivo. Você pode ver as atualizações das nossas práticas recomendadas e políticas nas [notas de versão](#booknews).\
+Você pode citar este livro usando [os metadados Zenodo e DOI](https://doi.org/10.5281/zenodo.2553043).
+
+*Se você quiser contribuir com este livro (sugestões, correções), consulte [o repositório do GitHub](https://github.com/ropensci/dev_guide) em particular [as diretrizes de contribuição](https://github.com/ropensci/dev_guide#contributing). Obrigado!*
+
+*Agradecemos a todos os autores, revisores e editores convidados por nos ajudarem a aprimorar o sistema e este guia ao longo dos anos. Agradecemos também às seguintes pessoas que fizeram contribuições para este guia e suas versões anteriores: [Katrin Leinweber](https://github.com/katrinleinweber),, [John Baumgartner](https://github.com/johnbaums),, [François Michonneau](https://github.com/fmichonneau),, [Christophe Dervieux](https://github.com/cderv),, [Lorenzo Busetto](https://github.com/lbusett),, [Ben Marwick](https://github.com/benmarwick),, [Nicholas Horton](https://github.com/nicholasjhorton),, [Chris Kennedy](https://github.com/ck37),, [Mark Padgham](https://github.com/mpadge),, [Jeroen Ooms](https://github.com/jeroen),, [Sean Hughes](https://github.com/seaaan),, [Jan Gorecki](https://github.com/jangorecki),, [Jemma Stachelek](https://github.com/jsta),, [Dean Attali](https://github.com/daattali),, [Julia Gustavsen](https://github.com/jooolia),, [Nicholas Tierney](https://github.com/njtierney),, [Rich FitzJohn](https://github.com/richfitz),, [Tiffany Timbers](https://github.com/ttimbers),, [Hilmar Lapp](https://github.com/hlapp),, [Miles McBain](https://github.com/milesmcbain),, [Bryce Mecum](https://github.com/amoeba),, [Jonathan Carroll](https://github.com/jonocarroll/),, [Carl Boettiger](https://github.com/cboettig/),, [Florian Privé](https://github.com/privefl),, [Stefanie Butland](https://github.com/stefaniebutland),, [Daniel Possenriede](https://github.com/dpprdan/),, [Hadley Wickham](https://github.com/hadley/),, [Mauro Lepore](https://github.com/maurolepore/),, [Matthew Fidler](https://github.com/mattfidler),, [Luke McGuinness](https://github.com/mcguinlu),, [Aaron Wolen](https://github.com/aaronwolen),, [Indrajeet Patil](https://github.com/IndrajeetPatil),, [Kevin Wright](https://github.com/kwstat),, [Will Landau](https://github.com/wlandau),, [Hugo Gruson](https://github.com/Bisaloo),, [Hao Ye](https://github.com/ha0ye),, [Sébastien Rochette](https://github.com/statnmap),, [Edward Wallace](https://github.com/ewallace/),, [Alexander Fischer](https://github.com/s3alfisc/),, [Maxime Jaunatre](https://github.com/gowachin),, [Thomas Zwagerman](https://github.com/thomaszwagerman). Informe-nos se esquecemos de reconhecer a sua contribuição!*

@@ -1,0 +1,23 @@
+# 18  Guia de contribuição
+
+Este capítulo apresenta o nosso Guia de Contribuição, que descreve como você pode fazer contribuições com código e sem código para a rOpenSci.
+
+- Então você quer contribuir para a rOpenSci? Fantástico! Nós desenvolvemos o [Guia de contribuição da comunidade rOpenSci](https://contributing.ropensci.org/) para dar as boas-vindas a você na rOpenSci e te ajudar a se reconhecer como um(a) colaborador(a) em potencial. O guia ajudará você a descobrir o que você pode ganhar doando seu tempo, conhecimento e experiência, combinando suas necessidades com coisas que ajudarão a missão da rOpenSci, e conectando você a recursos que podem te ajudar ao longo do caminho.
+
+Nossa equipe e comunidade promovem ativamente um ambiente acolhedor em que pessoas usuárias e desenvolvedoras de diferentes origens e níveis de habilidade aprendem, compartilham ideias e inovam juntas abertamente por meio de normas e software compartilhados. A participação em todas as atividades da rOpenSci é apoiada por [nosso Código de Conduta](https://ropensci.org/code-of-conduct).
+
+Aceitamos contribuições com código e sem código de pessoas programadoras novas ou experientes em qualquer estágio da carreira e em qualquer setor. Você não precisa ser um(a) desenvolvedor(a)! Talvez você queira **passar 30 minutos** compartilhando o caso de uso do seu pacote em nosso fórum público ou relatando um bug, **uma hora** aprendendo e participando de uma chamada da comunidade, **cinco horas** revisando um pacote de R enviado para revisão aberta por pares, **ou talvez você queira assumir um compromisso contínuo** para ajudar a manter um pacote.
+
+Quais são alguns dos benefícios de contribuir?
+
+- Conectar-se com uma comunidade que compartilha do seu interesse em tornar a ciência mais aberta
+- Aprenda com pessoas de fora de seu domínio que usam o R com desafios semelhantes aos seus
+- Faça e responda a novas perguntas de pesquisa conhecendo novas ferramentas de software e aliados
+- Sentir-se confiante e com apoio em seus esforços para escrever código e desenvolver software
+- Ganhar visibilidade para seu trabalho de código aberto
+- Melhorar o software que você usa ou constrói
+- Aprimore suas habilidades em R e ajude outras pessoas a aprimorarem as delas
+- Aumente o nível de suas habilidades de escrita
+- Obter mais exposição para o seu pacote
+
+Consulte nosso [Guia de contribuição](https://contributing.ropensci.org/) e navegue pela seção “O que traz você aqui?” para saber quais são os *Eu quero …* que se encaixam melhor em você e escolha o seu caminho! Para ajudar você a se reconhecer, nós as agrupamos em: Descobrir; Conectar; Aprender; Construir; Ajudar. Para cada categoria, listamos exemplos de como essas contribuições podem ser e colocamos links para os nossos recursos para obter os detalhes de que você precisa.

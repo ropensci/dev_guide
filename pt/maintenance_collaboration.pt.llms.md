@@ -1,0 +1,143 @@
+# 11  Guia de colaboração
+
+Ter pessoas colaborando vai trazer melhorias para o seu pacote e, se você integrar algumas delas como autoras do pacotes com [permissões de escrita no repositório](https://help.github.com/articles/repository-permission-levels-for-an-organization/), seu pacote será desenvolvido de forma mais sustentável. Também pode ser muito agradável trabalhar em equipe!
+
+Este capítulo contém nossa orientação para colaboração, em uma [seção sobre como tornar o seu repositório amigável para contribuições e colaborações](#friendlyfiles) por infraestrutura (código de conduta, diretrizes de contribuição, rótulos de problemas); e [uma seção sobre como colaborar com novos colaboradores](#workingcollaborators), em particular no contexto da organização da rOpenSci no GitHub.
+
+Além dessas dicas técnicas, é importante lembrar-se de ser gentil e levar em conta a perspectiva das outras pessoas, especialmente quando as prioridades delas forem diferentes das suas.
+
+## 11.1 Torne a contribuição e a colaboração do seu repositório amigáveis
+
+Tornar seu repositório fácil de colaborar é parte do que pode ajudar a garantir que ele [perdure para além do seu trabalho](https://arxiv.org/pdf/2505.06484).
+
+### 11.1.1 Código de conduta
+
+Depois que o seu pacote for listado na [rOpenSci registry](https://ropensci.org/packages/all) (a lista oficial de pacotes da rOpenSci), o [Código de Conduta da rOpenSci](https://ropensci.org/code-of-conduct/) será aplicado ao seu projeto. Você deve adicionar este texto ao README:
+
+``` markdown
+Please note that this package is released with a [Contributor
+Code of Conduct](https://ropensci.org/code-of-conduct/). 
+By
+contributing to this project, you agree to abide by its terms.
+```
+
+E
+
+- Se o seu pacote foi transferido para a organização da rOpenSci no GitHub, exclua o código de conduta atual do repositório, se houver um, pois o código de conduta padrão da organização GitHub será exibido.
+
+- Se o seu pacote não for transferido para a organização da rOpenSci no GitHub, substitua o conteúdo do código de conduta atual do repositório pelo conteúdo do \[código de conduta padrão da organização rOpenSci no GitHub\] (https://github.com/ropensci/.github/blob/main/CODE_OF_CONDUCT.md).
+
+### 11.1.2 Guia de contribuição
+
+Você pode usar a *issue*, a solicitação de *pull request* e as diretrizes de contribuição. Ter um arquivo sobre contribuição como `.github/CONTRIBUTING.md` ou `docs/CONTRIBUTING.md` é obrigatório. Uma maneira fácil de inserir um modelo para um guia de contribuição é usar a função [`use_tidy_contributing()` do pacote `usethis`](https://usethis.r-lib.org/reference/tidyverse.html) que insere [este modelo](https://github.com/r-lib/usethis/blob/main/inst/templates/tidy-contributing.md) como `.github/CONTRIBUTING.md`. Um exemplo mais completo é [este modelo de Peter Desmet](https://gist.github.com/peterdesmet/e90a1b0dc17af6c12daf6e8b2f044e7c) ou as abrangentes [páginas da wiki do pacote `mlr3` no GitHub](https://github.com/mlr-org/mlr3/wiki). Em geral, esses e outros modelos precisarão ser modificados para serem usados com um pacote da rOpenSci, principalmente por meio de referências e links para o nosso [Código de Conduta](https://ropensci.org/code-of-conduct/) conforme descrito em um outro lugar [neste livro](#code-of-conduct). Modificar um guia de contribuição genérico para adicionar um toque pessoal também tende a fazer com que ele pareça menos genérico e mais sincero. As preferências pessoais em um guia de contribuição incluem:
+
+- Preferências de estilo? No entanto, você pode preferir tornar o estilo uma configuração (de [Air](https://posit-dev.github.io/air/), [styler](https://styler.r-lib.org/), [lintr](https://github.com/jimhester/lintr), ) ou para [corrigir você mesmo o estilo de código](https://github.com/rstudio/blogdown/pull/432#pullrequestreview-368391904) especialmente se você não usar um estilo de código popular como o [estilo de código do tidyverse](https://style.tidyverse.org/).
+
+- Infraestrutura como a do `roxygen2`?
+
+- Preferências de fluxo de trabalho? *Issue* antes de um PR?
+
+- Uma declaração de escopo, como [no pacote skimr](https://github.com/ropensci/skimr/blob/main/.github/CONTRIBUTING.md#understanding-the-scope-of-skimr)?
+
+- Criação de contas de sandbox? *Mocking* em testes? Links para documentos externos?
+
+A rOpenSci também incentiva os guias de contribuição a incluírem uma declaração de ciclo de vida que esclareça as visões e expectativas para o desenvolvimento futuro do seu pacote, como [neste exemplo](https://github.com/ecohealthalliance/fasterize/blob/master/CONTRIBUTING.md#roadmap). É necessário que os pacotes estatísticos tenham uma declaração de ciclo de vida, conforme especificado em [*Padrões estatísticos gerais* G1.2](https://stats-devguide.ropensci.org/standards.html#documentation). Esses links fornecem um modelo para uma declaração de ciclo de vida simples. Os arquivos `CONTRIBUTING.md` também podem descrever como você reconhece as contribuições (consulte [esta seção](#attributions)).
+
+Recomendamos que você envie comentários que não sejam um relatório de bug ou uma solicitação de *feature* para as ferramentas de discussão que sua plataforma Git oferece, como [Discussões do GitHub](https://docs.github.com/en/discussions) para o GitHub.
+
+Quando uma pull request estiver mais perto de ser mesclada, você poderá estilizar o código com [Air](https://posit-dev.github.io/air/) ou [styler](https://styler.r-lib.org/).
+
+### 11.1.3 Gerenciamento de *issues*
+
+Ao usar os recursos do GitHub em torno dos *issues*, você pode ajudar os possíveis colaboradores a encontrá-los e tornar público o seu roteiro.
+
+#### 11.1.3.1 Modelos de *issues*
+
+Você pode usar um ou vários [modelo(s) de *issue(s)*](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-templates=) para ajudar as pessoas usuárias a preencherem os relatórios de bugs ou as solicitações de *feature*. Quando há vários modelos de *issues*, os usuários que clicam em abrir uma nova *issue* veem um menu que orienta as suas escolhas.
+
+Você pode até [configurar uma das opções](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#configuring-the-template-chooser=) para apontar para algum lugar fora do seu repositório (por exemplo, um fórum de discussão).
+
+Consulte a [Documentação do GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
+
+#### 11.1.3.2 Rotulagem de *issues*
+
+Você pode usar rótulos como “help wanted” (procura-se ajuda) e “good first issue” (bom primeiro problema) para ajudar colaboradores em potencial, inclusive novatos, a encontrar o seu repositório. [Consulte o artigo do GitHub](https://help.github.com/articles/helping-new-contributors-find-your-project-with-labels/). Você também pode usar o rótulo “Beginner” (Iniciante). Você pode ver [exemplos de problemas para iniciantes em todos os repositórios da rOpenSci](https://github.com/search?q=user%3Aropensci+user%3Aropenscilabs+label%3ABeginner+state%3Aopen&type=Issues).
+
+#### 11.1.3.3 Fixando *issues*
+
+Você pode [fixar até 3 *issues* por repositório](https://docs.github.com/en/articles/pinning-an-issue-to-your-repository) que aparecerão na parte superior do seu rastreador de *issues* como cartões de *issues* bonitos. Isso pode ajudar a divulgar quais são suas prioridades.
+
+#### 11.1.3.4 Marcos
+
+Você pode [criar marcos](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) e atribuir problemas a eles, o que ajuda outras pessoas a verem o que você planeja para a próxima versão do seu pacote, por exemplo.
+
+### 11.1.4 Comunicação com as pessoas usuárias
+
+Você pode indicar para as pessoas usuárias o fórum da rOpenSci se você monitorar ou ativar as [Discussões no GitHub](https://docs.github.com/en/discussions) para o repositório do seu pacote. Cada discussão do GitHub pode ser convertida em um *issue*, se necessário (e vice-versa, os *issues* podem ser convertidos em discussões).
+
+## 11.2 Trabalhando com colaboradores
+
+Em primeiro lugar: mantenha contato com o seu repositório do GitHub!
+
+- Não se esqueça de [**observar o seu repositório do GitHub**](https://docs.github.com/en/github/managing-subscriptions-and-notifications-on-github/managing-subscriptions-for-activity-on-github) para receber notificações sobre *issues* ou *pull requests* (como alternativa, se você trabalha de forma concentrada em certas épocas, talvez adicione essas informações ao guia de contribuição).
+
+- não se esqueça de enviar as atualizações que você tem localmente.
+
+- desative os testes com falha se você não puder corrigí-los, pois eles criam ruído nos PRs que podem confundir colaboradores iniciantes.
+
+### 11.2.1 Integração de pessoas colaboradoras
+
+Não existe uma regra geral da rOpenSci sobre como você deve integrar pessoas colaboradoras. Você deve aumentar os direitos delas sobre o repositório à medida que ganhar confiança e, sem dúvida, deve reconhecer as contribuições que fizerem (consulte [esta seção](#attributions)).
+
+Você pode pedir a um novo colaborador que crie PRs (consulte a seção a seguir para avaliar um PR localmente, ou seja, além das verificações de CI) para dev/main e avalie-os antes de mesclá-los e, depois de algum tempo, deixe-os enviar para o main, embora você possa querer manter um sistema de revisões de PRs… mesmo para si mesmo quando tiver colegas de equipe!
+
+Um modelo possível para a integração de pessoas colaboradoras é fornecido por Jim Hester em [seu `lintr` repo](https://github.com/jimhester/lintr/issues/318).
+
+Se o seu problema for o recrutamento de pessoas colaboradoras, você pode publicar uma chamada aberta como a de Jim Hester [no Twitter](https://twitter.com/jimhester_/status/997109466674819074), ou no [GitHub](https://github.com/jimhester/lintr/issues/318) e, como autor(a) de um pacote da rOpenSci, você pode pedir ajuda no slack da rOpenSci e pedir à equipe da rOpenSci por ideias para recrutar novas pessoas colaboradoras.
+
+### 11.2.2 Trabalhando com colaboradores (incluindo você)
+
+[*Branchs* (ou ramificações)](https://happygitwithr.com/git-branches.html) são baratas. Use-as extensivamente ao desenvolver recursos, testar novas ideias e corrigir problemas.
+
+Uma das *branches* é a *branch* `main` (que é a ramificação padrão/principal), na qual, se você seguir [desenvolvimento baseado no tronco](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) você “faz *merge* de atualizações pequenas e frequentes”. Veja também as documentações do [Fluxo do GitHub](https://docs.github.com/en/get-started/quickstart/github-flow) e do [fluxo do GitLab](https://docs.gitlab.com/ee/topics/gitlab_flow.html). Talvez você também queira incrementar frequentemente os números da versão de seu pacote (em `DESCRIPTION`). Um aspecto específico do trabalho com colaboradores é a revisão de *Pull requests*, com algumas orientações úteis em:
+
+- [The Art of Giving and Receiving Code Reviews (Gracefully) (A arte de dar e receber revisões de código (graciosamente)), de Alex Hill](https://www.alexandra-hill.com/2018/06/25/the-art-of-giving-and-receiving-code-reviews/);
+- [Documentação do GitHub sobre revisões de PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews).
+
+Você pode querer mexer nas configurações do seu repositório do GitHub para, por exemplo, [exigir revisões de *pull request* antes de fazer o *merge*](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches#require-pull-request-reviews-before-merging=). Consulte também os documentos do GitHub sobre [“proprietários de código”](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+
+Para fazer e revisar *pull requests*, recomendamos que você [que você explore essas funções](https://usethis.r-lib.org/articles/pr-functions.html).
+
+Para que você configure o “git remote”, consulte [Happy Git and GitHub for the useR](https://happygitwithr.com/common-remote-setups.html). Veja também a seção [Useful Git patterns for real life](https://happygitwithr.com/workflows-intro.html) no mesmo livro.
+
+### 11.2.3 Seja generoso(a) com as atribuições
+
+Se alguém contribuir para o seu repositório, considere adicioná-la em `DESCRIPTION`, como contribuinte (“ctb”) para pequenas contribuições, e autor (“aut”) para contribuições maiores. Tradicionalmente, ao citar um pacote em uma publicação científica, apenas as pessoas autoras “aut” são listados, e não as contribuidores “ctb”; e em `pkgdown` e, nos sites, somente os nomes “aut” são listados na página inicial, e todas as pessoas autoras são listados na página de autores.
+
+No mínimo, considere adicionar o nome das pessoas colaboradoras próximo à linha de correção de *feature*/*bugs* em [NEWS.md](#news).
+
+Você também pode usar o pacote R [allcontributors](https://docs.ropensci.org/allcontributors/) para agradecer a todos os colaboradores no arquivo README.
+
+Recomendamos que você seja generoso(a) com esses agradecimentos, porque é uma coisa boa de se fazer e porque isso aumentará a probabilidade de as pessoas contribuírem novamente com o seu pacote ou com outros repositórios da organização.
+
+Como um lembrete de [nossas diretrizes de empacotamento](#building), se o seu pacote foi revisado e você acha que as pessoas revisoras fizeram uma contribuição substancial para o desenvolvimento dele, você pode listá-las na seção `Authors@R` com um tipo de contribuinte “Revisor(a)” (`"rev"`), da seguinte forma:
+
+        person("Bea", "Hernández", role = "rev",
+        comment = "Bea reviewed the package (v. X.X.XX) for rOpenSci, see <https://github.com/ropensci/software-review/issues/116>"),
+
+Inclua as pessoas revisoras somente após solicitar o consentimento delas. Leia mais [nesta postagem do blog “Agradecendo seus revisores: Gratidão por meio de metadados semânticos”](https://ropensci.org/blog/2018/03/16/thanking-reviewers-in-metadata/). Observe que ‘rev’ gerará uma CRAN NOTE, a menos que o pacote seja criado usando o R v3.5. Certifique-se de que você use `roxygen2` na versão mais recente disponível no CRAN.
+
+Por favor, não liste os editores como colaboradores. Sua participação e contribuição para a rOpenSci são agradecimentos suficientes!
+
+### 11.2.4 Dando as boas-vindas aos colaboradores da rOpenSci
+
+Se você conceder a alguém permissões de escrita no repositório,
+
+- entre em contato com um [membro da equipe](https://ropensci.org/about#team) para que esse novo colaborador possa receber **um convite para a organização da rOpenSci no GitHub** (em vez de ser [um colaborador externo](https://help.github.com/articles/repository-permission-levels-for-an-organization/#outside-collaborators))
+
+- entre em contato com a equipe da rOpenSci [ou um outro membro da equipe](https://ropensci.org/about#team) para que esse novo colaborador possa receber **um convite para o *workspace* do Slack da rOpenSci**.
+
+## 11.3 Outros recursos
+
+- Chamada da comunidade rOpenSci: [Configure seu pacote para promover uma comunidade](https://ropensci.org/commcalls/apr2021-pkg-community/).
+- Para reutilizar respostas gentis e usuais, considere a funcionalidade de [respostas salvas](https://docs.github.com/en/github/writing-on-github/working-with-saved-replies/using-saved-replies) do GitHub.
