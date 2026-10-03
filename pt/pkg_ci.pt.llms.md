@@ -1,0 +1,119 @@
+# 2  Práticas Recomendadas de Integração Contínua
+
+Este capítulo resume as nossas diretrizes sobre a integração contínua, depois de explicar o que o termo integração contínua significa.
+
+Juntamente com o \[capítulo anterior\] (#construção), ele forma as nossas diretrizes para a revisão de software por pares.
+
+## 2.1 O que é a integração contínua?
+
+A integração contínua (do inglês, CI) se refere a execução de testes automáticos em software. No caso da rOpenSci, a CI significa praticamente que um conjunto de testes será executado automaticamente por meio do GitHub, sempre que você fizer um *commit* ou um *pull request* ao GitHub.
+
+A CI automatiza a execução de verificações gerais de pacotes, como `R CMD check`; Veja [testando](building.llms.md#testing). É possível configurar a CI antes que os testes sejam escritos, assim a CI executará os testes quando você os enviar para o repositório por meio de *commits*.
+
+## 2.2 Por que usar a integração contínua (CI)?
+
+Todos os pacotes da rOpenSci devem usar uma forma de integração contínua. Isso garante que todos os commits, pull requests e novas ramificações sejam executados pelo `R CMD check`. Os resultados de todos os testes são exibidos na página de *pull requests* no GitHub, fornecendo outra camada de informações sobre os problemas e a proteção contra a quebra do seu pacote antes de fazer a fusão das alterações. A integração contínua dos pacotes da rOpenSci também deve ser vinculada a um serviço de cobertura de código, indicando quantas linhas são cobertas por testes de unidade.
+
+Tanto o status do teste quanto a cobertura do código devem ser relatados por meio de distintivos no README do seu pacote.
+
+Os pacotes R devem ter CI para todos os sistemas operacionais (Linux, Mac OSX, Windows) quando contiverem:
+
+- Código compilado
+- Dependências em Java
+- Dependências em outras linguagens
+- Pacotes com chamadas de sistema
+- Processamento de texto, como obter os nomes das pessoas (para encontrar problemas de codificação)
+- Qualquer coisa com sistema de arquivos/chamadas de diretório
+
+Em caso de dúvida sobre a aplicabilidade desses critérios ao seu pacote, é melhor adicionar CI para todos os sistemas operacionais. A maioria das configurações de padrões de serviços de CI para pacotes R permite que isso seja feito sem muito trabalho.
+
+## 2.3 Qual(is) serviço(s) de integração contínua?
+
+Há vários serviços de integração contínua, incluindo serviços autônomos (CircleCI, AppVeyor) e outros integrados à hospedagem de código ou a serviços relacionados (GitHub Actions, GitLab, AWS Code Pipeline). Diferentes serviços oferecem suporte a diferentes configurações de sistema operacional.
+
+[Ações do GitHub](https://github.com/features/actions) é uma opção conveniente para muitas pessoas desenvolvedoras de R que já usam o GitHub, pois está integrada à plataforma e oferece suporte a todos os sistemas operacionais necessários. Existem [ações compatíveis com o ecossistema R](https://github.com/r-lib/actions/) bem como suporte de primeira classe no pacote [{usethis}](https://usethis.r-lib.org/reference/github_actions.html). Todos os pacotes enviados à rOpenSci para revisão por pares são verificados por nosso [sistema `pkgcheck`](https://docs.ropensci.org/pkgcheck), descrito mais detalhadamente na seção [Guia para Autores](#authors-guide). Essas verificações também são fornecidas como uma ação do GitHub no repositório [`ropensci-review-tools/pkgcheck-action`](https://github.com/ropensci-review-tools/pkgcheck-action). Os autores e as autoras de pacotes são incentivados a usar essa ação para confirmar, antes do envio, que um pacote passa em todas as nossas verificações. Consulte [nossa publicação no blog](https://ropensci.org/blog/2022/02/01/pkgcheck-action/) para obter mais informações.
+
+[usethis oferece suporte a configuração de CI para outros sistemas](https://usethis.r-lib.org/reference/ci.html) embora essas funções estejam levemente obsoletas. A rOpenSci também oferece suporte ao pacote [círculo](https://docs.ropensci.org/circle/), que auxilia na configuração de pipelines CircleCI, e ao pacote [tic](https://docs.ropensci.org/tic/) para criar pipelines de CI mais complicadas.
+
+#### 2.3.0.1 Testes usando diferentes versões do R
+
+Exigimos que os pacotes da rOpenSci sejam testados nas versões mais recentes, porém também nas versões anteriores e de desenvolvimento do R, para garantir a compatibilidade retroativa e progressiva com o R básico.
+
+Detalhes sobre como executar testes/verificações usando diferentes versões do R localmente podem ser encontrados na vinheta do R-hub ao executar [Verificações locais do Linux com Docker](https://r-hub.github.io/rhub/articles/local-debugging.html).
+
+Você pode ajustar a implementação de testes com cada versão usando uma matriz de testes.
+
+Se você desenvolver um pacote que dependa ou seja destinado ao Bioconductor, esta informação [biocthis](https://lcolladotor.github.io/biocthis/index.html) pode ser relevante.
+
+#### 2.3.0.2 Minimizando o tempo de compilação na CI
+
+Você pode usar estas dicas para minimizar o tempo de compilação na CI:
+
+- Instalar os pacotes em um cache que possa ser reutilizado no processo de CI quando necessário (*cache installation of packages*). O padrão faz isso [r-lib/actions workflows](https://github.com/r-lib/actions).
+
+#### 2.3.0.3 Dependências do sistema
+
+Você pode achar a postagem de Hugo Gruson útil [Dependências do sistema em pacotes R e testes automáticos](https://blog.r-hub.io/2023/09/26/system-dependency/).
+
+### 2.3.1 Travis CI (Linux e Mac OSX)
+
+Recomendamos que você [afaste-se de Travis](https://ropensci.org/technotes/2020/11/19/moving-away-travis/).
+
+### 2.3.2 AppVeyor CI (Windows)
+
+Para a integração contínua no Windows, consulte [R + AppVeyor](https://github.com/krlmlr/r-appveyor). Configure-o usando `usethis::use_appveyor()`.
+
+Aqui estão algumas dicas para você minimizar o tempo de compilação do AppVeyor:
+
+- Instale os seus pacotes em algum tipo de cache. [Exemplo de um arquivo de configuração](https://github.com/r-lib/usethis/blob/2c52c06373849d52f78a26c5a0e080f518a2f825/inst/templates/appveyor.yml#L13). Ele já estará no arquivo de configuração se você configurar o AppVeyor CI usando `usethis::use_appveyor()`.
+
+- Ativar [compilações contínuas](https://www.appveyor.com/docs/build-configuration/#rolling-builds).
+
+Não transferimos mais projetos AppVeyor para a conta “ropensci” no AppVeyor, portanto, após a transferência do seu repositório para a conta “ropensci” no GitHub, o distintivo será `[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ropensci/pkgname?branch=master&svg=true)](https://ci.appveyor.com/project/individualaccount/pkgname)`.
+
+### 2.3.3 Circle CI (Linux e Mac OSX)
+
+[Circle CI](https://circleci.com/) é usado, por exemplo, pelo pacote [`bomrang`](https://github.com/ropensci/bomrang) da rOpenSci como serviço de integração contínua.
+
+## 2.4 Cobertura de testes
+
+A integração contínua também deve incluir relatórios de cobertura de teste por meio de um serviço de teste, como o [Codecov](https://codecov.io/) ou [Coveralls](https://coveralls.io/).
+
+Recomendamos que você use Codecov. Para ativar Codecov em seu repositório, execute `usethis::use_github_action("test-coverage")` para criar um arquivo `.github/workflows/test-coverage.yaml`. Você também precisa dar ao Codecov acesso ao seu repositório do GitHub, consulte [Guia de início rápido do Codecov](https://docs.codecov.com/docs/quick-start) para saber como configurar o acesso. Em seguida, adicione um distintivo de status do Codecov à parte superior do seu README.md, consulte [Distintivos de status do Codecov](https://docs.codecov.com/docs/status-badges).
+
+Se o seu repositório for transferido para a organização GitHub ropensci, o acesso ao Codecov deverá ser transferido automaticamente. Você precisará atualizar o URL do distintivo para apontar ao repositório hospedado na rOpenSci.
+
+Para mais detalhes e instruções, consulte a seção [README do pacote **covr**](https://github.com/r-lib/covr), bem como [`usethis::use_coverage()`](https://usethis.r-lib.org/reference/use_coverage.html) e [`usethis::use_github_action()`](https://usethis.r-lib.org/reference/github_actions.html).
+
+Se você executar a cobertura em vários serviços de CI [os resultados serão fundidos](https://docs.codecov.io/docs/merging-reports).
+
+## 2.5 Ainda mais CI: OpenCPU
+
+Após a transferência para a organização “ropensci” no GitHub pertencente a rOpenSci, cada envio para o repositório será contruido no OpenCPU e a pessoa que fizer o *commit* receberá um e-mail de notificação. Esse é um serviço de CI adicional para autores e autoras de pacotes que permite que as funções do R em pacotes sejam chamadas remotamente via <https://ropensci.ocpu.io/>, usando o [API opencpu](https://www.opencpu.org/api.html#api-json). Para obter mais detalhes sobre esse serviço, consulte a [página de ajuda do OpenCPU](https://www.opencpu.org/help.html) que também indica onde você pode fazer perguntas.
+
+## 2.6 Ainda mais CI: documentos da rOpenSci
+
+Após a transferência para a organização “ropensci” no GitHub pertencente a rOpenSci, um site pkgdown será criado para o seu pacote:
+
+- Para cada novo commit no ramo padrão (verificado aproximadamente uma vez por hora).
+
+- Quando qualquer uma das dependências fortes no mesmo universo atualiza o número da versão.
+
+- Uma vez por mês.
+
+Você pode encontrar o status dessas compilações em `https://ropensci.r-universe.dev/ui#packages` e na seção [status do commit](https://ropensci.org/blog/2021/09/03/runiverse-docs/#how-it-works). A compilação do site usará o seu arquivo config do pkgdown, se você tiver um, exceto para o estilo que usará o pacote [`rotemplate`](https://github.com/ropensci-org/rotemplate/). Se sua documentação incluir código que dependa, por exemplo, de credenciais, veja aqui como garantir que os documentos pkgdown sejam renderizados da melhor maneira possível.
+
+- Para exemplos de funções, use a tag `examplesIf` do roxygen2 com a variável `IN_PKGDOWN`, por exemplo, `#' @examplesIf identical(Sys.getenv(“IN_PKGDOWN”), “true”)`. Exemplo: [gtexr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/R/get_service_info.R#L14) (consulte também a [documentação da tag do roxygen2](https://roxygen2.r-lib.org/articles/rd.html?q=examplesIf#examples)).
+- Para vinhetas, pré-compile se forem necessárias ferramentas/dados/credenciais especiais que não estão disponíveis em servidores de compilação genéricos (consulte https://ropensci.org/blog/2019/12/08/precompute-vignettes/) ou use a variável `IN_PKGDOWN` com a opção knitr eval. Exemplo: [gtextr](https://github.com/ropensci/gtexr/blob/592ac781672f07eb67e935d4155570c5960d1fdb/vignettes/gtexr.Rmd#L16) ou:
+
+``` r
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = “#>”,
+  eval = Sys.getenv(“IN_PKGDOWN”) == “true”
+)
+```
+
+- No caso de vinhetas/artigos que executam requisições HTTP, você pode usar pacotes específicos do R, como o [vcr](https://docs.ropensci.org/vcr/reference/setup_knitr.html) para armazenar as respostas em cache. Exemplo: [nettskjemar](https://github.com/capro-uio/nettskjemar/blob/261260e2510f51d8dc0af5e4c9c386a7e459de4b/vignettes/metadata.Rmd#L22).
+
+Por favor, informe bugs, faça perguntas e solicitações de recursos sobre as compilações centrais e sobre o modelo em <https://github.com/ropensci-org/rotemplate/>.

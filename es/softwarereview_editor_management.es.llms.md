@@ -1,0 +1,179 @@
+# 9  Gestión editorial
+
+Guía para gestionar el equipo editorial y [cómo gestionar la publicación de una nueva versión de la guía de desarrollo](#bookrelease).
+
+## 9.1 Reclutar nuevas personas para la edición
+
+Reclutar nuevas personas y mantener un equipo editorial funcional y equilibrado es responsabilidad de quien [Lidere la Revisión de Software](https://ropensci.org/about/#team) con el apoyo y asesoramiento del comité editorial.
+
+- Por lo general, se buscan nuevas personas para integrar el equipo editorial cuando no hay suficientes para gestionar las propuestas actuales, aunque también se puede convocar a personas como editores o editoras invitadas para propuestas concretas.
+
+- La carga editorial actual se puede consultar en la [página «*Editors*» de nuestro panel de control](https://dashboard.ropensci.org/editors.html) .
+
+### 9.1.1 Buscando nuevos integrantes para el equipo editorial
+
+Algunos lugares donde el responsable de *Software Review* puede buscar nuevas personas editoras son:
+
+- La \[página [*Community Leaderboard* de nuestro panel de control editorial](https://dashboard.ropensci.org/community.html), que ayuda a identificar a personas que han contribuido mucho pero aún no han colaborado en el rol editorial.
+
+- La lista de personas que ya han [*revisado o editado*](#reviewers).
+
+- Como alternativa, se puede pedir al equipo editorial actual que aporte sugerencias y proponga personas candidatas.
+
+Generalmente, las decisiones sobre la inclusión de las nuevas personas deben tomarlas todo el equipo, siguiendo este procedimiento general:
+
+- Crea un canal privado de Slack para el debate e incluye al equipo editorial.
+
+  - Es importante crear un nuevo canal privado para separar estos debates del canal general del equipo editorial al que se unirán los futuros integrantes.
+
+  - Envía un mensaje en el canal general del equipo editorial para asegurarte de que todas las personas reciban una notificación sobre el nuevo canal privado.
+
+  - Utiliza ese canal para solicitar candidaturas generales u opiniones sobre posibles personas candidatas.
+
+- Puedes copiar y adaptar el siguiente mensaje para iniciar el canal:
+
+      Invitamos a todo el equipo editorial a este canal para debatir sobre una nueva incorporación a nuestro equipo.
+       Este canal es privado y se eliminará tan pronto como alcancemos un consenso suficiente.
+       El debate debe ser constructivo y no conflictivo.
+      Por favor, no tomen capturas de pantalla e intenten abstenerse de expresar opiniones abiertamente negativas.
+       A continuación, pueden:
+       - Nombrar y describir brevemente a alguna persona candidata o
+      \- Indica que estás buscando candidaturas, junto con cualquier
+       requisito concreto(como conocimientos especializados específicos)
+
+- Céntrate en nuevos integrantes que contribuyan a mantener la [diversidad](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) y la representatividad global del equipo editorial.
+
+- Espera a que la mayoría de las personas editoras se pronuncien antes de invitar a alguien. Deja aproximadamente una semana para responder.
+
+- Elimina el canal privado de Slack una vez que la nueva persona haya aceptado la invitación.
+
+### 9.1.2 Invitar a una nueva persona al equipo
+
+- Los integrantes del comité editorial suelen empezar como [invitadas/os](#guesteditor) para una primera presentación a modo de prueba.
+
+- Envía un correo electrónico:
+
+&nbsp;
+
+    Nos gustaría invitarte a formar parte del consejo editorial de rOpenSci como miembro en pleno derecho. [RAZONES ESPECÍFICAS PARA LA INVITACIÓN (MENCIONA LAS CONTRIBUCIONES A ROPENSCI)]. 
+    Creemos que serías una magnífica incorporación al equipo.
+
+    [SI REALIZÓ EDICIÓN DE FORMA INVITADA: Ya conoces el rol de edición ya que has sido editora/o invitada/o]. Nuestro objetivo es que los miembros del comité editorial se encarguen de cuatro paquetes al año ([SI REALIZÓ EDICIÓN DE FORMA INVITADA: ¡incluyendo el que acabas de terminar!]).  
+    Pedimos a los miembros del comité editorial que se comprometan de manera informal a prestar servicio durante dos años, y que reevalúen su participación luego de ese periodo.
+    A corto plazo, cualquier persona puede rechazar encargarse de un paquete o decir: "Tengo mi agenda completa, no puedo encargarme de un nuevo paquete hasta dentro de unas semanas".
+
+    Además de encargarse de los paquetes, los miembros del equipo editorial opinan sobre las decisiones editoriales del grupo, como por ejemplo si un paquete está dentro de nuestro alcance, y determinan las actualizaciones de nuestras políticas. 
+    Generalmente usamos Slack, donde esperamos que los miembros del equipo participen regularmente. 
+    Tenemos reuniones anuales del equipo editorial.  
+    También rotamos las responsabilidades de Lider Editorial (quien toma decisiones de alcance en primera instancia y asigna personas para editar envíos) entre el equipo aproximadamente cada trimestre. 
+    Tendrás la oportunidad de entrar en esta rotación cuando lleves un tiempo en el equipo, normalmente al menos seis meses. 
+    Algunos mimebros del equipo también asumimos proyectos más grandes para mejorar el proceso de revisión por pares, aunque esto es totalmente opcional. 
+
+    ¡Esperamos que te unas al equipo!  
+    Es un momento emocionante para la revisión por pares en rOpenSci.
+
+    Por favor, reflexiónalo, pregúntanos cualquier duda que tengas y haznos saber si puedes unirte.
+
+    Te deseamos lo mejor,
+    [NOMBRE], en nombre del equipo editorial de rOpenSci.
+
+- Una vez finalizado su mandato como personas invitadas, por lo general se les pregunta si desean convertirse en integrantes de pleno derecho.
+
+## 9.2 Incorporar un nuevo integrante al equipo
+
+- Añadir al [archivo “team.json” del sitio web](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) las propiedades `"editor": true` y para editores/as de paquetes estadísticos, también `"stats": true`. Eso añadirá automáticamente a las nuevas personas al equipo editorial que se muestra en la página del [sitio web de rOpenSci](https://ropensci.org/software-review/).
+
+- Informa a quien gestiona la comunidad de rOpenSci para que pueda preparar un artículo introductorio para el blog y realice los anuncios en redes sociales.
+
+- Solicita a la nueva persona que active [la autenticación de dos factores (2FA) en GitHub](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa) si aún no lo han hecho.
+
+- Invita a esta persona a la organización rOpenSci en GitHub como integrante, tanto del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors) como del equipo editorial de paquetes estadísticos [`stats-editors`](https://github.com/orgs/ropensci/teams/stats-editors). Esto le dará los permisos adecuados y garantizará que aparezcan en [el panel editorial](https://dashboard.ropensci.org/editors).
+
+- Envíale una invitación a la base de datos de Airtable de revisión de software (enlazada en la descripción del canal sólo para editores en Slack). Asegúrate de que la invitación es “Sólo lectura”.
+
+- Actualiza el campo “editor” en la tabla “reviewers-prod” de Airtable (se utiliza para identificar y listar a las personas que son parte del equipo editorial actual dentro de esta *Guía de desarrollo*).
+
+- Dale acceso al canal privado “editors-only” del espacio de trabajo Slack de rOpenSci (y al espacio de trabajo Slack en general si aún no están allí).
+
+- Una vez que esté en el canal “editors-only”, envía un mensaje de bienvenida con un ping a todas las personas editoras.
+
+## 9.3 Poner en pausa a un editor
+
+A veces, las personas que editan también necesitan un descanso. Para poner en pausa a un integrante del equipo editorial:
+
+- Remueve su usuario del [equipo «editors» de GitHub](https://github.com/orgs/ropensci/teams/editors), junto con el [equipo «stats-editors»](https://github.com/orgs/ropensci/teams/stats-editors) si corresponde.
+
+- Establece su estado de «vacaciones» en Airtable, incluyendo una fecha aproximada de cuándo podrían regresar.
+
+- Para «reactivar» su estado, simplemente revierte estos cambios.
+
+## 9.4 Dar de baja a un integrante del equipo editorial
+
+- Agradece su trabajo.
+
+- Informa a quien maneja la comunidad de rOpenSci o a algún otro miembro del personal para anunciarlo en nuestro newsletter mensual y agradecerle.
+
+- Remueve a esta persona del canal “editors-only” de Slack.
+
+- Remueve a la persona del equipo [`editors`](https://github.com/orgs/ropensci/teams/editors/members) y del sub-equipo correspondiente en GitHub.
+
+- Actualiza [“team.json” en el sitio web](https://github.com/ropensci/roweb3/blob/main/data/team/team.json) sustituyendo “roles” por “past_roles”, y añadiendo un nuevo campo, `alumnus: "true"`.
+
+- Remueve su acceso al espacio de trabajo de AirTable.
+
+  - Desde la vista “interfaz”, despliega el menú principal en la parte superior izquierda y entra en “*View Data* (ver datos)”
+  - Haz clic en el botón “*Share* (compartir)” de la parte superior derecha, y luego en “*People with access* (personas con acceso)”
+  - Haz clic en la casilla de la izquierda de la persona que quieras remover y luego en “*Remove 1 collaborator* (remover 1 colaborador/a)”.
+
+- Cambia su etiqueta “editor” a “Emérito”, en los datos “reviewers-prod” de Airtable
+
+- Las listas de integrantes del equipo editorial, tanto en el [capítulo de introducción a la revisión del software en la guía](https://github.com/ropensci/dev_guide/blob/main/softwarereview_intro.Rmd) como en el [README del repo de revisión de software](https://github.com/ropensci/software-review/blob/main/README.Rmd), se completan automáticamente a partir de los datos de AirTable. Las actualizaciones se ejecutan diariamente, así que compruébalo un día después de actualizar AirTable para asegurarte de que ambos se hayan actualizado.
+
+## 9.5 Poner el sistema en pausa
+
+Si quieres poner el sistema en pausa, por ejemplo durante las vacaciones, antes de irte:
+
+- Añade un mensaje de vacaciones al `about` de las plantillas de *issues*. [PR de ejemplo](https://github.com/ropensci/software-review/pull/679/files).
+- Añade un mensaje de vacaciones a la respuesta de bienvenida estándar del bot. [PR de ejemplo](https://github.com/ropensci-org/buffy/pull/108).
+
+Al reanudar las actividades:
+
+- Elimina el mensaje de vacaciones de las plantillas de *issues*. [PR de ejemplo](https://github.com/ropensci/software-review/pull/680).
+- Elimina el mensaje de vacaciones de la respuesta de bienvenida estándar del bot. [PR de Ejemplo](https://github.com/ropensci-org/buffy/commit/500cfa07ca9dbaa138ca63eb255996e6f7331088).
+
+## 9.6 Gestión de la publicación de la guía de desarrollo
+
+Si te encargas de gestionar una versión de este mismo libro que estás leyendo, utiliza [la guía para la publicación de libros](#bookreleaseissue) como plantilla de issue para publicar [en el gestor de *issues* de la guía de desarrollo](https://github.com/ropensci/dev_guide/issues) y no dudes en hacer preguntas al resto del equipo de edición.
+
+### 9.6.1 Gobernanza de la guía de desarrollo
+
+Para modificaciones muy pequeñas de la guía de desarrollo, no es necesaria la revisión del PR. Para enmiendas mayores, solicita la revisión de al menos varios miembros del equipo de edición (si ninguno participó en la discusión relacionada con la enmienda, solicita una revisión de todos en GitHub, y en ausencia de cualquier reacción aprueba el PR después de una semana).
+
+Dos semanas antes del lanzamiento de una nueva versión de la guía de desarrollo, una vez que el PR de dev a master **y la publicación en el blog** estén listos para su revisión, todos los miembros del equipo de edición deben recibir una notificación de GitHub (“solicitud de revisión” en el PR de dev a main) y Slack, pero no es necesario que todos aprueben explícitamente la publicación.
+
+### 9.6.2 Artículo de blog sobre una publicación
+
+El artículo del blog sobre una nueva edición será revisado [por el equipo de edición](#devguidegov) y por alguien de `@ropensci/blog-editors`.
+
+#### 9.6.2.1 Contenido
+
+Consulta la [guía general para blogs rOpenSci](https://blogguide.ropensci.org/) y las orientaciones más específicas a continuación.
+
+[Primer ejemplo de un artículo de este tipo](https://ropensci.org/blog/2019/05/16/dev-guide-update/); [segundo ejemplo](https://ropensci.org/blog/2019/10/08/dev-guide-update-fall19/).
+
+El artículo del blog debe mencionar todos los elementos importantes del [registro de cambios](#booknews) organizados en (sub)secciones: por ejemplo, una sección sobre el gran cambio A, otra sobre el gran cambio B, y otra sobre cambios menores agrupados. Menciona primero los cambios más importantes.
+
+Por cada cambio realizado por una persona que colabora de manera externa, agradéceselo explícitamente utilizando la información del registro de cambios. Por ejemplo `[Matt Fidler](https://github.com/mattfidler/) arregló nuestra sección sobre mensajes en la Consola [ropensci/dev_guide#178](https://github.com/ropensci/dev_guide/pull/178).`.
+
+Al final del post, menciona los próximos cambios enlazando a los *issues* abiertos en el repositorio, e invita a quienes leen a contribuir a la guía de desarrollo abriendo *issues* y participando en los debates abiertos. Plantilla de conclusiones:
+
+``` markdown
+En este post resumimos los cambios incorporados a nuestro libro ["rOpenSci Packages: Development, Maintenance, and Peer Review"](https://devguide.ropensci.org/) en los últimos X meses.
+Agradecemos todas las personas cuyas contribuciones han hecho posible esta versión.
+Ya estamos trabajando en actualizaciones para nuestra próxima versión, como *ISSUE1*, *ISSUE2.*
+Echa un vistazo a [la lista de *issues*](https://github.com/ropensci/dev_guide/issues/) si quieres contribuir.
+```
+
+#### 9.6.2.2 Autoría
+
+Quien escribe el post lidera la lista de autoría, el resto del equipo de edición aparecen en orden alfabético.
