@@ -1,0 +1,229 @@
+# 16  Evolução do pacote - alteração de itens em seu pacote
+
+Este capítulo apresenta nossa orientação para alterar coisas em seu pacote: alterar nomes de parâmetros, alterar nomes de funções, descontinuar funções e até mesmo retirar e arquivar pacotes.
+
+*Este capítulo foi inicialmente contribuído como uma nota técnica no site da rOpenSci por [Scott Chamberlain](https://github.com/sckott); você pode ler a [versão original em inglês](https://ropensci.org/technotes/2017/01/05/package-evolution/).*
+
+## 16.1 Filosofia das alterações
+
+Todos são livres para ter sua própria opinião sobre a liberdade com que parâmetros/funções/etc. são alterados em uma biblioteca - as regras sobre alterações de pacotes não são impostas pelo CRAN ou de outra forma. Em geral, à medida que uma biblioteca se torna mais madura, as alterações nos métodos voltados para o usuário (ou seja, funções exportadas em um pacote R) devem se tornar muito raras. As bibliotecas que são dependências de muitas outras bibliotecas provavelmente serão mais cuidadosas com as alterações, e devem ser.
+
+## 16.2 O pacote lifecycle
+
+Este capítulo apresenta soluções que não requerem o pacote lifecycle, mas que você ainda pode considerar úteis. Recomendamos que você [leia a documentação do lifecycle](https://lifecycle.r-lib.org/articles/stages.html).
+
+## 16.3 Parâmetros: alteração dos nomes dos parâmetros
+
+Às vezes, os nomes dos parâmetros precisam ser alterados para maior clareza ou por algum outro motivo.
+
+Uma abordagem possível é verificar se os argumentos descontinuados não estão faltando e parar de fornecer uma mensagem significativa.
+
+``` r
+foo_bar <- function(x, y) {
+    if (!missing(x)) {
+        stop("use 'y' instead of 'x'")
+    }
+    y^2
+}
+
+foo_bar(x = 5)
+#> Error in foo_bar(x = 5) : use 'y' instead of 'x' 
+```
+
+Se quiser que a função seja mais útil, você pode fazê-la emitir um aviso e tomar automaticamente a ação necessária:
+
+``` r
+foo_bar <- function(x, y) {
+    if (!missing(x)) {
+        warning("use 'y' instead of 'x'")
+        y <- x
+    }
+    y^2
+}
+
+foo_bar(x = 5)
+#> 25
+```
+
+Esteja ciente do parâmetro `...`. Se sua função tiver `...` e você já tiver removido um parâmetro (vamos chamá-lo de `z`), um usuário pode ter um código mais antigo que usa `z`. Quando você passa o parâmetro `z` ele não é um parâmetro na definição da função e provavelmente será ignorado silenciosamente – não é o que você deseja. Em vez disso, deixe o argumento presente, lançando um erro se ele for usado.
+
+## 16.4 Funções: alteração de nomes de funções
+
+Se você precisar alterar o nome de uma função, faça-o gradualmente, como em qualquer outra alteração em seu pacote.
+
+Digamos que você tenha uma função `foo`.
+
+``` r
+foo <- function(x) x + 1
+```
+
+No entanto, você deseja alterar o nome da função para `bar`.
+
+Em vez de simplesmente alterar o nome da função e `foo` deixar de existir imediatamente, na primeira versão do pacote em que o `bar` aparecer, crie um alias como:
+
+``` r
+#' foo - add 1 to an input
+#' @export
+foo <- function(x) x + 1
+
+#' @export
+#' @rdname foo
+bar <- foo
+```
+
+Com a solução acima, o usuário pode usar `foo()` ou `bar()` – ambos farão a mesma coisa, pois são a mesma função.
+
+Também é útil ter uma mensagem, mas você só vai querer lançar essa mensagem quando eles usarem a função antiga, por exemplo,
+
+``` r
+#' foo - add 1 to an input
+#' @export
+foo <- function(x) {
+    warning("please use bar() instead of foo()", call. = FALSE)
+    bar(x)
+}
+
+#' @export
+#' @rdname foo
+bar <- function(x) x + 1
+```
+
+Depois que os usuários tiverem usado a versão do pacote por algum tempo (com ambos os `foo` e `bar`), na próxima versão você poderá remover o nome da função antiga (`foo`), e você terá apenas `bar`.
+
+``` r
+#' bar - add 1 to an input
+#' @export
+bar <- function(x) x + 1
+```
+
+## 16.5 Dados: descontinuar
+
+Se você precisar descontinuar (*deprecate*) um conjunto de dados fornecido pelo seu pacote, leia a [solução proposta por Matthijs Berends no Stack Overflow](https://stackoverflow.com/questions/33304651/data-deprecation-in-r-package/75192818#75192818), com link para \[um método de três etapas na orientação do Bioconductor\] (https://contributions.bioconductor.org/deprecation.html#deprecate-dataset). O ponto principal é o uso de [`delayedAssign()`](https://stat.ethz.ch/R-manual/R-patched/library/base/html/delayedAssign.html) para criar uma *promise* que servirá tanto para emitir um aviso (*warning*) quanto para fornecer os dados. \## Funções: descontinuadas e removidas {#functions-deprecate-defunct}
+
+Para remover uma função de um pacote (digamos que o nome do seu pacote seja `helloworld`), você pode usar o seguinte protocolo:
+
+- Marque a função como descontinuada na versão do pacote `x` (por exemplo, `v0.2.0`)
+
+Na própria função, use `.Deprecated()` para apontar para a função de substituição:
+
+``` r
+foo <- function() {
+    .Deprecated("bar")
+}
+```
+
+Há opções em `.Deprecated` para especificar um novo nome de função, bem como um novo nome de pacote, o que faz sentido quando você move funções para pacotes diferentes.
+
+A mensagem que é dada por `.Deprecated` é um aviso, portanto, pode ser suprimida por usuários com `suppressWarnings()` se você desejar.
+
+Crie uma página de manual para funções descontinuadas, como:
+
+``` r
+#' Deprecated functions in helloworld
+#' 
+#' These functions still work but will be removed (defunct) in the next version.
+#' 
+#' \itemize{
+#'  \item \code{\link{foo}}: This function is deprecated, and will
+#'  be removed in the next version of this package.
+#' }
+#' 
+#' @name helloworld-deprecated
+NULL
+```
+
+Isso cria uma página de manual que os usuários podem acessar como `` ?`helloworld-deprecated` `` e que você verá no índice da documentação. Adicione quaisquer funções a essa página conforme necessário e remova-as quando uma função se tornar “defunct” (veja abaixo).
+
+- Na próxima versão (`v0.3.0`), você pode tornar a função “defunct” (ou seja, completamente removida do pacote, exceto por uma página de manual com uma nota sobre ela).
+
+Na própria função, use `.Defunct()` como:
+
+``` r
+foo <- function() {
+    .Defunct("bar")
+}
+```
+
+Observe que a mensagem em `.Defunct` é um erro para que a função pare, enquanto `.Deprecated` usa um aviso que permite que a função continue.
+
+Além disso, é bom adicionar `...` a todas as funções removidas para que, se os usuários passarem algum parâmetro, recebam a mesma mensagem de “defunct” em vez de um `unused argument` assim, por exemplo:
+
+``` r
+foo <- function(...) {
+    .Defunct("bar")
+}
+```
+
+Sem `...` o resultado é:
+
+``` r
+foo(x = 5)
+#> Error in foo(x = 5) : unused argument (x = 5)
+```
+
+E com `...` o resultado é:
+
+``` r
+foo(x = 5)
+#> Error: 'foo' has been removed from this package
+```
+
+Faça uma página de manual para funções “defunct”, como:
+
+``` r
+#' Defunct functions in helloworld
+#' 
+#' These functions are gone, no longer available.
+#' 
+#' \itemize{
+#'  \item \code{\link{foo}}: This function is defunct.
+#' }
+#' 
+#' @name helloworld-defunct
+NULL
+```
+
+Isso cria uma página de manual que os usuários podem acessar como `` ?`helloworld-defunct` `` e que você verá no índice da documentação. Você pode adicionar quaisquer funções a essa página, conforme necessário. Você provavelmente desejará manter essa página de manual indefinidamente.
+
+### 16.5.1 Testando funções descontinuadas
+
+Você não precisa alterar os testes de funções descontinuadas até que elas se tornem “defunct”.
+
+- Considere todas as alterações feitas em uma função descontinuada. Além de usar `.Deprecated` dentro da função, você alterou os parâmetros na função descontinuada ou criou uma nova função que substitui a função descontinuada, etc.? Essas alterações devem ser testadas, caso você as tenha feito.
+- Em relação ao que foi dito acima, se a função descontinuada estiver apenas recebendo uma alteração de nome, talvez você possa testar se as funções antiga e nova retornam resultados idênticos.
+- [`suppressWarnings()` poderia ser usado](https://community.rstudio.com/t/unit-testing-of-a-deprecated-function/42837/2) para suprimir o aviso lançado pelo `.Deprecated`, mas os testes não são voltados para o usuário e, portanto, não é tão ruim se o aviso for lançado nos testes, e o aviso pode até ser usado como um lembrete para o mantenedor.
+
+Quando uma função se torna “defunct”, seus testes são simplesmente removidos.
+
+## 16.6 Renomeando pacotes
+
+Não há problema em renomear um pacote que está em desenvolvimento inicial. Pode ser a oportunidade, antes da revisão, de estar em conformidade com os nossos [conselhos de nomenclatura](#naming-your-package).
+
+Renomear um pacote que já foi amplamente adotado e/ou lançado no CRAN é problemático. O CRAN tem uma [política](https://cran.r-project.org/web/packages/policies.html) que afirma que os nomes de pacotes no CRAN são persistentes e, em geral, não é permitido alterar o nome de um pacote. O pacote com seu nome antigo pode ser uma dependência de outros pacotes, scripts e recursos em documentações, publicações científicas, postagens em blogs, entre outros.
+
+Ao mudar radicalmente a interface, é melhor começar um novo pacote do zero, como o [httr2, que é a segunda geração do httr](https://www.tidyverse.org/blog/2023/11/httr2-1-0-0/); ou criar edições de um pacote, como o [testthat](https://testthat.r-lib.org/articles/third-edition.html). Se você também mantiver o pacote antigo, poderá fazer uma depreciação suave com uma mensagem de inicialização, como no pacote httr. Isso permite que as pessoas usuárias e autores(as) de pacotes escolham quando/se devem atualizar sua base de código para o novo pacote ou edição. Se você copiar o código de outro pacote, certifique-se de reconhecer os(as) autores(as) do código que você reutiliza, listando seus nomes no arquivo DESCRIPTION com um comentário que declare que essas pessoas foram autoras do pacote original. [Exemplo](https://github.com/ropensci/agroclimatico/blob/2bc820cee201e27977a8a3ffa24cf7fedefe6bbd/DESCRIPTION#L25).
+
+## 16.7 Arquivamento de pacotes
+
+Software geralmente tem uma vida útil finita, e os pacotes podem precisar ser arquivados. Os pacotes arquivados são [arquivados](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) e movidos para uma organização dedicada no GitHub, [ropensci-archive](https://github.com/ropensci-archive). Antes do arquivamento, o conteúdo do arquivo README deve ser movido para um local alternativo (como “README-OLD.md”) e substituído por um conteúdo mínimo, incluindo algo como o seguinte:
+
+    # <package name>
+
+    [![Project Status: Unsupported](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
+    [![Peer-review badge](https://badges.ropensci.org/<issue_number>_status.svg)](https://github.com/ropensci/software-review/issues/<issue_number>)
+
+    This package has been archived. The former README is now in [README-old](<link-to-README-old>).
+
+O *badge* de status do repositório deve estar como “unsupported” (sem suporte) para pacotes lançados anteriormente ou como “abandoned” (abandonado) para pacotes de conceito anterior ou WIP (trabalho em progresso), caso em que o código do *badge* acima deve ser substituído por:
+
+    [![Project Status: Abandoned](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+
+Um exemplo de um README mínimo em um pacote arquivado está em [ropensci-archive/monkeylearn](https://github.com/ropensci-archive/monkeylearn/blob/master/README.md). Depois que o README tiver sido copiado em outro lugar e reduzido à forma mínima, você deverá seguir as etapas a seguir:
+
+Encerre os *issues* com uma frase que explique a situação e faça um link para este guia.
+
+Arquive o repositório no GitHub (também nas configurações do repositório).
+
+Transfira o repositório para [ropensci-archive](https://github.com/ropensci-archive) ou solicite um [membro da equipe do rOpenSci](https://ropensci.org/about/#team) para transferi-lo (você pode enviar um e-mail para `info@ropensci.org`).
+
+Os pacotes arquivados podem ser desarquivados se os autores ou uma nova pessoa optarem por retomar a manutenção. Para isso, entre em contato com a rOpenSci.

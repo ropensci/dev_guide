@@ -1,0 +1,36 @@
+# 13  Publicação de um pacote
+
+Seu pacote deve ter versões diferentes ao longo do tempo: *snapshots* de um estado do pacote que você pode publicar no CRAN, por exemplo. Essas versões devem ser devidamente *numeradas*, *publicadas* e *descritas em um arquivo NEWS*. Mais detalhes abaixo.
+
+Observe que você pode simplificar o processo de atualização do NEWS e do controle de versão do seu pacote usando \[o pacote `fledge`\] (https://github.com/cynkra/fledge).
+
+## 13.1 Controle de versão
+
+- Recomendamos enfaticamente que os pacotes rOpenSci usem controle de versão semântico. Uma explicação detalhada está disponível no [capítulo de ciclo de vida do livro *R Packages*](https://r-pkgs.org/lifecycle.html).
+
+## 13.2 Publicação
+
+- Usando `usethis::use_release_issue()` e `devtools::release()` ajudará você a se lembrar de mais verificações.
+
+- Marque cada versão no Git após cada envio ao CRAN. [Mais informações](https://help.github.com/articles/creating-releases/)
+
+- O CRAN não gosta de atualizações muito frequentes. Dito isso, se você notar um grande problema uma semana após o lançamento do CRAN, explique-o no cran-comments.md e tente lançar uma versão mais recente.
+
+## 13.3 Arquivo de notícias
+
+Um arquivo NEWS descrevendo as alterações associadas a cada versão facilita a visualização do que está sendo alterado no pacote e como isso pode afetar o fluxo de trabalho. Você deve adicionar um para o seu pacote e torná-lo de fácil leitura.
+
+- É obrigatório usar um arquivo `NEWS` ou `NEWS.md` na raiz do seu pacote. Recomendamos que você use o arquivo `NEWS.md` para tornar o arquivo [mais navegável](https://happygitwithr.com/workflows-browsability.html).
+- Você pode usar nosso exemplo [arquivo NEWS](#newstemplate) como modelo. Você pode encontrar um bom arquivo NEWS em uso real \[no repositório do pacote `targets`\] (https://github.com/ropensci/targets/blob/main/NEWS.md) ), por exemplo.
+- Se você usar `NEWS` adicione-o a `.Rbuildignore` mas não se você usar `NEWS.md`
+- Atualize o arquivo de notícias antes de cada envio para o CRAN, com uma seção com o nome do pacote, a versão e a data de lançamento, (como visto em nosso exemplo [arquivo NEWS](#newstemplate)):
+
+&nbsp;
+
+    foobar 0.2.0 (2016-04-01)
+    =========================
+
+- Sob esse cabeçalho, coloque as seções conforme necessário, incluindo: `NEW FEATURES`, `MINOR IMPROVEMENTS`, `BUG FIXES`, `DEPRECATED AND DEFUNCT`, `DOCUMENTATION FIXES` e qualquer título especial que agrupe um grande número de alterações. Em cada cabeçalho, liste os itens conforme necessário (como visto em nosso exemplo [Arquivo NEWS](#newstemplate)). Para cada item, forneça uma descrição do novo recurso, melhoria, correção de bug ou função/característica obsoleta. Link para qualquer problema relacionado no GitHub, como `(#12)`. O problema `(#12)` será resolvido no GitHub em Releases para um link para esse problema no repositório.
+- Depois que você tiver adicionado um `git tag` e enviado para o GitHub, adicione os itens de notícias para essa versão marcada às notas de versão de uma versão no seu repositório do GitHub com um título como `pkgname v0.1.0`. Você pode ver [Documentos do GitHub sobre a criação de uma versão](https://help.github.com/articles/creating-releases/).
+- Novos lançamentos do CRAN serão escritos sobre [em nosso boletim informativo](https://news.ropensci.org/) mas veja [próximo capítulo sobre marketing](#marketing) sobre como informar mais usuários em potencial sobre o lançamento.
+- Para obter mais orientações sobre o arquivo NEWS, sugerimos que você leia o documento [guia de estilo do tidyverse NEWS](https://style.tidyverse.org/news.html).
