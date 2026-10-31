@@ -1,0 +1,21 @@
+# 26  Cómo configurar una redirección
+
+## 26.1 Si el sitio no está en GitHub pages (p.e. Netlify)
+
+Reemplaza el contenido del sitio web actual con sendos archivos `index.html` y `404.html`. Ambos deben contener:
+
+``` html
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<nombrepaquete>/">  
+</head>
+</html>
+```
+
+## 26.2 Si el sitio está en GitHub pages
+
+Puedes configurar la redirección desde tu repositorio principal de GitHub Pages.
+
+- Crea un nuevo repositorio (si no tienes uno). `https://github.com/<usuario>/<usuario>.github.io`.
+- En este repositorio, crea un directorio llamado `<nombrepaquete>` con dos archivos: `index.html` y `404.html`. Ambos deben redireccionar a la nueva ubicación según lo visto en la sección anterior.
+- Comprueba que `https://<usuario>.github.io/<nombrepaquete>/index.html` redirecciona a la dirección correcta.
