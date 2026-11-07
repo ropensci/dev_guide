@@ -1,0 +1,39 @@
+# 15  Gestión de GitHub
+
+Actualmente la gran mayoría de los paquetes de rOpenSci se desarrollan en GitHub. Aquí tienes algunos consejos para aprovechar la plataforma en una sección sobre [hacer que tu repo sea más fácil de descubrir](#repodiscoverability) y una sección sobre [publicitar tu propia cuenta de GitHub después de pasar por la revisión por pares](#marketown).
+
+## 15.1 Haz que tu repositorio sea fácil de descubrir
+
+### 15.1.1 Áreas de repositorio en GitHub
+
+Las [áreas del repositorio](https://blog.github.com/2017-01-31-introducing-topics/) de GitHub ayudan a navegar y buscar en los repositorios de GitHub, son usadas por [R-universe en paginas de paquetes y para resultados de busquedas](https://docs.r-universe.dev/publish/metadata.html#keywords).
+
+Recomendamos:
+
+- Añadir “r”, “r-package” y “rstats” como áreas al repositorio de tus paquetes.
+
+- Añadir cualquier otra área relevante al repositorio de tus paquetes.
+
+Es posible que te hagamos sugerencias una vez que tu paquete esté incorporado.
+
+### 15.1.2 Lingüista de GitHub
+
+[El lingüista de GitHub](https://github.com/github/linguist) asignará un lenguaje a tu repo en función de los archivos que contenga. Algunos paquetes que contienen mucho código en C++ pueden ser clasificados como paquetes de C++ en lugar de R, lo cual está bien y muestra la necesidad de las áreas “r”, “r-package” y “rstats”.
+
+Recomendamos anular el lingüista de GitHub añadiendo o modificando un archivo .gitattributes a tu repositorio en dos casos:
+
+- Si almacenas archivos html en lugares no estándar (fuera en docs/, por ejemplo, en vignettes/) omite los archivos de documentación. Añade `*.html linguist-documentation=true` a .gitattributes (como en [este ejemplo](https://github.com/ropensci/ecoengine/blob/56b64d8d29dfae430a776d1dd440b240452eb1bf/.gitattributes#L5)).
+
+- Si tu repo contiene código que no es de tu autoría, por ejemplo, código JavaScript, añade `inst/js/* linguist-vendored` a .gitattributes (como en [este ejemplo](https://github.com/ropensci/wellknown/blob/4435eb620eeae346d2cab7d62276c29dee29a898/.gitattributes#L1)).
+
+De este modo, la clasificación lingüística y las estadísticas de tu repositorio reflejarán mejor el código fuente que contiene, además de hacerlo más descubrible. En particular, si el lingüista no reconoce correctamente que tu repositorio contiene principalmente código R, tu paquete no aparecerá en los resultados de búsqueda con el filtro `language:R`. Del mismo modo, tu repositorio no podrá aparecer entre los [repos de R populares](https://github.com/trending/r).
+
+Más información sobre las [anulaciones del lingüista de GitHub](https://github.com/github/linguist#overrides).
+
+## 15.2 Publicita tu propia cuenta
+
+- Como responsable de un paquete incorporado, ahora eres miembro de la organización GitHub “ropensci” de rOpenSci. Por defecto, la pertenencia a la organización es privada; consulta [cómo hacerla pública en la documentación de GitHub](https://help.github.com/articles/publicizing-or-hiding-organization-membership/).
+
+- Incluso si el repositorio de tu paquete ha sido transferido a rOpenSci, puedes [destacarlo en tu propia cuenta](https://help.github.com/articles/pinning-repositories-to-your-profile/).
+
+- En general, recomendamos añadir al menos una imagen de perfil (¡que no tiene por qué ser tu cara!) y tu nombre [a tu perfil de GitHub](https://help.github.com/articles/customizing-your-profile/).

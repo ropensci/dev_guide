@@ -1,0 +1,21 @@
+# 26  How to set a redirect
+
+## 26.1 Non GitHub pages site (e.g. Netlify)
+
+Replace the content of the current website with an `index.html` and `404.html` files both containing:
+
+``` html
+<html>
+<head>
+<meta http-equiv="refresh" content="0;URL=https://docs.ropensci.org/<pkgname>/">  
+</head>
+</html>
+```
+
+## 26.2 GitHub pages
+
+You can set up the redirect from your main user gh-pages repository:
+
+- create a new repository (if you don’t have one yet): `https://github.com/<username>/<username>.github.io`.
+- In this repository create a directory `<pkgname>` containing 2 files: a `index.html` and `404.html` file, which both redirect to the new location (see previous subsection).
+- Test that `https://<username>.github.io/<pkgname>/index.html` now redirects.
