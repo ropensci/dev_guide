@@ -8,6 +8,18 @@ Os editores podem usar o modelo de e-mail abaixo para recrutar revisores.
 
 ::: {.content-hidden when-format="pdf"}
 
+::: {.callout-note icon=false}
+## E-mail, pronto para copiar no seu cliente de e-mail
+
+```{r}
+#| child: "templates/request.pt.md"
+```
+
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## Fonte em Markdown
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -15,6 +27,8 @@ Os editores podem usar o modelo de e-mail abaixo para recrutar revisores.
 #| child: "templates/request.pt.md"
 ```
 ````
+
+:::
 
 :::
 
