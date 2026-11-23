@@ -4,9 +4,17 @@ Olá, aqui é [EDITOR(A)]. [BRINCADEIRA AMIGÁVEL]. Estou escrevendo para pergun
 
 O pacote, [PACOTE] de [AUTOR(ES)], faz [FUNÇÃO]. Você pode encontrá-lo no GitHub aqui: [LINK PARA REPOSITÓRIO]. Também conduzimos nosso processo de revisão aberta via GitHub, aqui: [ISSUE DE ONBOARDING]
 
+Estou escrevendo para você porque [COMO VOCÊ ESCOLHEU ESTE REVISOR].
+Acredito que o pacote se beneficiaria da sua perspectiva única e da sua experiência.
+
 Se você aceitar, observe que pedimos aos revisores que concluam as avaliações em três semanas. (Descobrimos que a revisão de um pacote leva um tempo semelhante ao de um trabalho acadêmico.)
 
 Nosso [guia para revisores] detalha o que procuramos em uma revisão de pacote e inclui links para exemplos de revisão. Nossos padrões estão detalhados em nosso [guia de pacotes] e fornecemos um [modelo] de revisão para você usar. Certifique-se de que não haja um [conflito de interesses](https://devguide.ropensci.org/policies.html#coi) que lhe impeça de revisar este pacote. Se você tiver dúvidas ou comentários, sinta-se à vontade para me perguntar.
+
+Caso você utilize IA para sua resenha, por favor, informe e descreva como a utilizou na resenha, por uma questão de transparência.
+Não deixe que a IA produza uma resenha que você depois tenha que revisar.
+Use a IA, no máximo, como uma ferramenta complementar.
+Esteja ciente de que são suas percepções e sugestões humanas que agregam mais valor à sua resenha.
 
 A comunidade da rOpenSci é o nosso melhor ativo. Nosso objetivo é que as revisões sejam abertas, não adversas e focadas na melhoria da qualidade do software. Seja respeitoso(a) e gentil! Consulte nosso guia para revisores e o nosso [código de conduta](https://ropensci.org/code-of-conduct/) para mais informações.
 
