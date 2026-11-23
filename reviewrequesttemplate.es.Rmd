@@ -8,6 +8,18 @@ Quienes estén a cargo de la edición pueden utilizar la siguiente plantilla de 
 
 ::: {.content-hidden when-format="pdf"}
 
+::: {.callout-note icon=false}
+## Correo electrónico, listo para copiar en tu cliente de correo
+
+```{r}
+#| child: "templates/request.es.md"
+```
+
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## Fuente en Markdown
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -15,6 +27,8 @@ Quienes estén a cargo de la edición pueden utilizar la siguiente plantilla de 
 #| child: "templates/request.es.md"
 ```
 ````
+
+:::
 
 :::
 

@@ -8,6 +8,18 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 
 ::: {.content-hidden when-format="pdf"}
 
+::: {.callout-note icon=false}
+## Email, ready to copy into your email client
+
+```{r}
+#| child: "templates/request.md"
+```
+
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## Markdown source
+
 ````markdown
 ```{r}
 #| results: 'asis'
@@ -15,6 +27,8 @@ Editors may make use of the e-mail template below in recruiting reviewers.
 #| child: "templates/request.md"
 ```
 ````
+
+:::
 
 :::
 

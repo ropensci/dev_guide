@@ -6,12 +6,12 @@ El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en 
 
 Si aceptas, ten en cuenta que te pediremos que completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
-Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme.
+Nuestra [guía de revisión](https://devguide.ropensci.org/es/softwarereview_reviewer.es.html) detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado](https://devguide.ropensci.org/es/pkg_building.es.html) y proporcionamos una [plantilla](https://devguide.ropensci.org/es/reviewtemplate.es.html) para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/es/softwarereview_policies.es.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme.
 
 La comunidad de rOpenSci es nuestro mejor activo.
 Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centradas en mejorar la calidad del software.
 ¡Sé amable!
-Consulta nuestra guía de revisión y el [código de conducta](https://ropensci.org/code-of-conduct/) para más información.
+Consulta nuestra guía de revisión y el [código de conducta](https://ropensci.org/es/c%C3%B3digo-de-conducta/) para más información.
 
 [SI SE SOLICITÓ TUTORÍA: Has indicado en tu formulario que te gustaría tener tutoría para tu primera revisión.  
 Sientete libre de contactarme cuando lo necesites durante este proceso, lo que incluye hacer preguntas por correo electrónico y Slack (recibirás una invitación al Slack de rOpenSci), y compartir borradores de revisiones para recibir devoluciones antes de publicarlas. 
@@ -24,10 +24,3 @@ Gracias por tu tiempo.
 Atentamente,
 
 [EDITOR/A]
-
-[guía de revisión]: https://devguide.ropensci.org/reviewerguide.html
-[guía de empaquetado]: https://devguide.ropensci.org/building.html
-[plantilla]: https://devguide.ropensci.org/reviewtemplate.html
-
-
-

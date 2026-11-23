@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-11-23, improve formatting of review request email template (#1064).
 - 2026-09-17, add item about simplicity (#1039).
 - 2026-09-17, document staging R-universe (#1040).
 - 2026-09-17, Improve description of how to recruit new editors (#998)
