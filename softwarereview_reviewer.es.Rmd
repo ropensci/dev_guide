@@ -1,7 +1,9 @@
 # Guía para quienes hacen una revisión  {#reviewerguide}
 
 ```{block, type="summaryblock"}
-¡Gracias por aceptar revisar un paquete para rOpenSci! Este capítulo incluye nuestras recomendaciones para [preparar](#preparereview), [enviar](#submitreview) y [realizar un seguimiento](#followupreviewer) de  tu revisión.
+¡Gracias por aceptar revisar un paquete para rOpenSci!
+Nos entusiasma la idea de que tu perspectiva única y tu experiencia contribuyan a mejorar un paquete que se encuentra en proceso de revisión.
+Este capítulo incluye nuestras recomendaciones para [preparar](#preparereview), [enviar](#submitreview) y [realizar un seguimiento](#followupreviewer) de  tu revisión.
 
 Puedes ponerte en contacto con la persona encargada de la edición del paquete si tienes dudas sobre el proceso en general o tu revisión en particular. 
 
@@ -146,6 +148,11 @@ El uso de herramientas de IA generativa es aceptable tanto para las personas que
 Al igual que con nuestras expectativas para las personas autoras, exigimos a quienes revisan que revelen cualquier uso de herramientas de IA generativa con el mayor detalle posible.
 Algunos ejemplos de uso aceptable incluyen la generación de una descripción general de la funcionalidad del paquete o el análisis del historial de Git para ofrecer una visión general de las decisiones de desarrollo.
 Pedimos a quienes revisan que sean lo más transparentes posible.
+
+No dejes que la IA genere una reseña que luego tengas que corregir.
+Usa la IA, como mucho, como una herramienta complementaria.
+
+Por favor, recuerda que te pedimos tu reseña para conocer *tu* perspectiva única y para que el paquete se beneficie de *tu* experiencia.Expandir comentario
 
 ### Devoluciones sobre el proceso {#feedback-on-the-process}
 
