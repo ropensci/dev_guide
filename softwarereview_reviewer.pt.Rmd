@@ -50,6 +50,7 @@ Além de marcar os critérios mínimos na checklist, pedimos que você forneça 
 - Existem melhorias de desempenho que podem ser feitas?
 - A documentação (instruções de instalação, *vignettes*, exemplos e demonstrações) é clara e suficiente? O princípio de *vários pontos de entrada* está sendo usado? Ou seja, a documentação leva em conta o fato de que qualquer parte da documentação pode ser o primeiro encontro do usuário com o pacote e/ou com as ferramentas e os dados que ele contém?
 - As funções e os argumentos foram nomeados para trabalharem juntos e formarem uma API de programação comum e lógica que seja fácil de ler e de autocompletar?
+- Seria possível simplificar a estrutura do pacote para facilitar a compreensão e a contribuição de outras pessoas?
 - Se você tiver seus próprios dados/problemas relevantes, analise-os com o pacote. Você pode acabar encontrando casos de uso extremos nos quais o autor não pensou.
 
 Alguns elementos de nossa lista de verificação são inspirados no [guia de revisão de código da Mozilla] (https://mozillascience.github.io/codeReview/review.html).
