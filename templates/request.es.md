@@ -1,12 +1,20 @@
 Estimado/a [REVISOR/A]
 
-Hola, soy [EDITOR/A]. [COMENTARIO AMISTOSO]. Te escribo para preguntarte si te interesa revisar un paquete para rOpenSci. Como probablemente sepas, rOpenSci lleva a cabo la revisión por pares de los paquetes de R aportados a nuestra colección de forma similar a las revistas científicas.
+Hola, soy [EDITOR/A]. Te escribo para preguntarte si te interesa revisar un paquete para rOpenSci. Como probablemente sepas, rOpenSci lleva a cabo la revisión por pares de los paquetes de R aportados a nuestra colección de forma similar a las revistas científicas.
 
 El paquete, [PAQUETE] de [AUTOR(ES)], realiza [FUNCIÓN]. Puedes encontrarlo en GitHub aquí: [ENLACE REPO]. Hacemos nuestro proceso de revisión abierta a través de GitHub, aquí: [ISSUE DE REVISIÓN]
+
+Te escribo porque [¿CÓMO SELECCIONASTE A ESTE REVISOR?].
+Creo que tu perspectiva única y tu experiencia serían muy valiosas para este proyecto.
 
 Si aceptas, ten en cuenta que te pediremos que completes las revisiones en tres semanas. (Hemos comprobado que lleva un tiempo similar revisar un paquete que un artículo académico).
 
 Nuestra [guía de revisión][guía de revisión] detalla lo que buscamos en la revisión de un paquete, e incluye enlaces a ejemplos de revisiones. Nuestras normas se detallan en nuestra [guía de empaquetado][guía de empaquetado] y proporcionamos una [plantilla][plantilla] para que la utilices en revisión. Por favor, asegúrate de que no tienes un [conflicto de intereses](https://devguide.ropensci.org/policies.html#coi) que te impida revisar este paquete. Si tienes alguna pregunta o comentario, no dudes en preguntarme.
+
+En caso de que utilices inteligencia artificial (IA) para tu reseña, por favor, indica y describe cómo la utilizaste en tu reseña, en aras de la transparencia.
+No dejes que la IA genere una reseña que luego tú revises.
+Utiliza la IA, como mucho, como una herramienta complementaria.
+Ten en cuenta que tus opiniones y sugerencias como persona son las que aportan más valor a tu reseña.
 
 La comunidad de rOpenSci es nuestro mejor activo.
 Nuestro objetivo es que las revisiones sean abiertas, no conflictivas y centradas en mejorar la calidad del software.
