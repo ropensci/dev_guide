@@ -89,7 +89,7 @@ at the time of submission to be reviewed.
 
 - Upon acceptance, these peer-reviewed packages are transferred from
   the author's GitHub to the "ropensci" GitHub organization 
-  or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/ropensci.r-universe.dev/blob/gh-pages/info/not_transferred.json).
+  or alternatively tracked by adding them to a [JSON file](https://github.com/ropensci/ropensci.r-universe.dev/blob/gh-pages/inst/info/not_transferred.json).
 
 - Peer-reviewed packages will be in the registry tagged as
   "peer-reviewed" and have a peer-reviewed badge in their README.
