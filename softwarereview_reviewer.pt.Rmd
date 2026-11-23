@@ -150,7 +150,7 @@ Pedimos aos revisores que sejam o mais transparentes possível.
 Não deixe que a IA produza uma resenha que você depois tenha que revisar.
 Use a IA, no máximo, como uma ferramenta complementar.
 
-Lembre-se de que solicitamos sua resenha para obter *sua* perspectiva única e para que o pacote se beneficie de *sua* experiência.Expandir comentário
+Lembre-se de que solicitamos sua resenha para obter *sua* perspectiva única e para que o pacote se beneficie de *sua* experiência.
 
 
 ### Comentários sobre o processo {#feedback-on-the-process}
