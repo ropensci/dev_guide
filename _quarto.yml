@@ -35,6 +35,7 @@ description-pt: |
 book:
   favicon: images/apple-touch-icon.png
   title: "rOpenSci Packages: Development, Maintenance, and Peer Review"
+  llms-txt: true
   author: "rOpenSci software review editorial team (current and alumni)"
   description: |
     Guide for package authors, maintainers, reviewers and editors in rOpenSci

@@ -240,6 +240,14 @@ Please use all of this information to judge whether:
 - A package is extremely large, in which case it may be too burdensome for reviewers.
   For example, [these initial checks](https://github.com/ropensci/software-review/issues/725#issuecomment-3326436119) revealed a package with over 8,500 lines of R code (corresponding to 97.6% of all packages), and 251 exported R functions.
 
+#### rOpenSci staging universe
+
+Once the package gets the editor-checks label, you should see its build on the [ropensci-staging R-universe](https://ropensci-staging.r-universe.dev/builds).
+This might be helpful as it allows you to gauge:
+- (in the main table) whether it can be built on various OSs;
+- (in the main table) whether a pkgdown website can be built for it via the book icon (websites are not actually deployed until packages are approved);
+- (on the individual package page) its dependencies and other info. You can take the website tour (button in the navbar) if you are not familiar with [R-universe](https://docs.r-universe.dev/).
+
 #### Initial editorial comments
 
 - After automatic checks are posted, use the [editor template](#editortemplate) to guide initial checks (if not already covered by the EiC) and record your response to the submission.

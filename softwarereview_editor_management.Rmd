@@ -13,17 +13,51 @@ Guidance for managing the editorial team and the [dev guide](#bookrelease).
 
 Recruiting new editors and maintaining a sufficient and well-balanced editorial board is a responsibility of the [Software Review Lead](https://ropensci.org/about/#team), with support and advice from the editorial board.
 
-Steps:
+- New editors are generally recruited whenever there aren't enough editors to handle current submissions, although guest editors may also be invited for specific submissions.
 
-- Start a private channel for discussion (so that it does not have a history in the editors channel that future editors will join, which could be awkward).
+- Current editorial load can be seen on the ["_Editors_" page of our dashboard](https://dashboard.ropensci.org/editors.html).
 
-- Ping editors to be sure they get a notification as this is an important topic.
+### Searching for a new editor {#searching-for-new-editors}
 
-- Wait for a majority of editors to chime in before inviting someone. Leave them one week to respond.
+Places for the Software Review Lead to start looking for new editors include:
 
-## Inviting a new editor {#inviting-a-new-editor}
+- The [_Community Leaderboard_ page of our editorial dashboard](https://dashboard.ropensci.org/community.html), to help identify people who have contributed a lot yet not helped as editors.
 
-- Editorial committee members generally start by being [guest editors](#guesteditor).
+- The list of [_Reviewers and former editors_](#reviewers).
+
+- Alternatively, ask the current editorial board for suggestions and nominations.
+
+Decisions on new editors should generally be made by the entire team, by following this general procedure:
+
+- Start a private Slack channel for discussion and add all editors.
+
+  - A new, private channels is important to separate discussions from the general editors channel that future editors will join.
+
+  - Ping in general editors channel to ensure all get notified of new private channel.
+
+  - Use that channel to ask for general nominations, or for opinions on potential candidates.
+
+- You can copy and adapt the following message to start the channel:
+
+  ```md
+  You've all been invited to this channel to discuss a new member of our editorial board.
+  This channel is private and will be deleted as soon as we have sufficient agreement.
+  The discussion is intended to be constructive and non-adversarial.
+  Please do not take any screenshot, and try to refrain from overtly negative opinions.
+  Then either:
+    - Name and briefly describe any particular candidate(s); or
+    - State that you're looking for nominations, along with any particular
+      wishes (such as specific expertise) ```
+
+- Focus on new members who will sustain the [diversity](https://ropensci.org/blog/2025/02/05/no-science-without-deia/) and global representativeness of the editorial team.
+
+- Wait for a majority of editors to chime in before inviting someone. Leave around one week to respond.
+
+- Delete the private Slack channel once new editor has accepted invitation.
+
+### Inviting a new editor {#inviting-a-new-editor}
+
+- Editorial committee members generally start by being [guest editors](#guesteditor) for an initial, trial submission.
 
 - Send an email.
 
@@ -50,6 +84,8 @@ Please give this some thought, ask us any questions you have, and let us know wh
 Best,
 [EDITOR], on behalf of the rOpenSci Editorial Board
 ```
+
+- On completion of guest editorship, they are generally asked whether they would like to become full members.
 
 ## Onboarding a new editor {#onboarding-a-new-editor}
 
@@ -89,7 +125,7 @@ To pause an editor:
 
 - Inform rOpenSci community manager or other staff members, to ensure our newsletter will announce their departure, and thank them.
 
-- Remove them from the "editors-only" channel and the editors Slack team.
+- Remove them from the "editors-only" channel.
 
 - Remove them from [https://github.com/orgs/ropensci/teams/editors/members](https://github.com/orgs/ropensci/teams/editors/members) and sub-team.
 
