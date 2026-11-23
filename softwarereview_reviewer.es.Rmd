@@ -50,6 +50,7 @@ Además de marcar los criterios mínimos, te pedimos que aportes comentarios gen
 - ¿Podría mejorarse el rendimiento?
 - ¿La documentación (instrucciones de instalación, viñetas, ejemplos, demos) es clara y suficiente? ¿Utiliza el principio de *múltiples puntos de entrada*? Es decir, ¿tiene en cuenta que cualquier parte de la documentación puede ser la primera exposición de una persona con el paquete y/o la herramienta o datos que utiliza?
 - ¿Los nombres de funciones y argumentos forman una API de programación común y lógica que sea fácil de leer y que se beneficie de herramientas de automcompletado?
+- ¿Se podría simplificar el diseño del paquete para que a los demás les resulte más fácil entenderlo y contribuir?
 - Si tienes datos propios relevantes o un problema relacionado, trabaja con el paquete. Puede que encuentres asperezas y/o casos de uso no contemplados.
 
 Algunos elementos de nuestra lista de verificación se inspiran en la [guía de revisión de código de Mozilla](https://mozillascience.github.io/codeReview/review.html).
@@ -63,6 +64,7 @@ Te recomendamos usar herramientas automatizadas para facilitar tu revisión. És
 - Ejecutar `devtools::check()` y `devtools::test()` en el paquete para encontrar cualquier error que haya
   pasado desapercibido en la computadora de quien desarrolló el paquete.
 - Revisar si los tests salteados son justificados (por ejemplo usar `skip_on_cran()` en tests que usan una API versus saltearse todos los tests en un determinado sistema operativo).
+- ¿Se podría simplificar el diseño del paquete para que a los demás les resulte más fácil entenderlo y contribuir?
 - Si el paquete no se envía a través de la *branch* principal o por defecto, recuerda cambiar a la *branch* enviada para revisar antes de comenzar tu revisión. En este caso, tendrás que usar la búsqueda local para revisar el código, ya que la búsqueda en GitHub está limitada a la *branch* por defecto. Además, la documentación alojada en un sitio web de `pkgdown` no va a estar necesariamente actualizada, por lo que recomendamos revisar la documentación del paquete localmente ejecutando `pkgdown::build_site()`.
 
 Puedes volver a correr la comprobación del paquete de `@ropensci-review-bot` en cualquier momento enviando un comentario en el *issue* de revisión con el contenido "`@ropensci-review-bot check package`".
