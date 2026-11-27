@@ -58,7 +58,7 @@ Si se venció el plazo de una semana para aceptar la invitación a la organizaci
 
 ### Enviar notificaciones al equipo editor {#ping-editors}
 
-Envía un correo electrónico al equipo de editores para que se ofrezcan como voluntarios.
+Envía un correo electrónico al equipo editorial para que se ofrezcan a gestionar la revisión de un paquete.
 
 ```markdown
 @ropensci-review-bot ping editors
