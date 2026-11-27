@@ -2,6 +2,7 @@
 
 ## Dev version
 
+- 2026-11-23, add 2 commands to bot cheatsheet (ping editors, similar packages) (#1054).
 - 2026-09-17, add item about simplicity (#1039).
 - 2026-09-17, document staging R-universe (#1040).
 - 2026-09-17, Improve description of how to recruit new editors (#998)

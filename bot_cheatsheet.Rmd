@@ -56,6 +56,15 @@ If you missed the one-week window to accept the invitation to the rOpenSci GitHu
 
 ## For the editor-in-chief {#for-the-editor-in-chief}
 
+
+### Ping editors {#ping-editors}
+
+Email editors for them to volunteer.
+
+```markdown
+@ropensci-review-bot ping editors
+```
+
 ### Assign an editor {#assign-an-editor}
 
 ```markdown
@@ -102,6 +111,14 @@ Generally only on pre-submission inquiries, or when authors otherwise indicate t
 
 ```markdown
 @ropensci-review-bot check srr
+```
+
+### Find similar packages {#pkgmatch}
+
+Using [pkgmatch](https://docs.ropensci.org/pkgmatch)
+
+```markdown
+@ropensci-review-bot similar packages
 ```
 
 ### Check that README has software review badge {#check-that-readme-has-software-review-badge}
