@@ -56,7 +56,7 @@ Si se venció el plazo de una semana para aceptar la invitación a la organizaci
 
 ## Para la persona encargada de la edición {#for-the-editor-in-chief}
 
-### Enviar notificaciones al equipo de editores {#ping-editors}
+### Enviar notificaciones al equipo editor {#ping-editors}
 
 Envía un correo electrónico al equipo de editores para que se ofrezcan como voluntarios.
 
