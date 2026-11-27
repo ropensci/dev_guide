@@ -57,6 +57,15 @@ Se você perdeu o prazo de uma semana para aceitar o convite para a organizaçã
 
 ## Para o editor-chefe {#for-the-editor-in-chief}
 
+### Notificar editores {#ping-editors}
+
+Envie um e-mail aos editores para que se ofereçam como voluntários.
+
+
+```markdown
+@ropensci-review-bot ping editors
+```
+
 ### Atribua um (a) editor (a) {#assign-an-editor}
 
 ```markdown
@@ -103,6 +112,14 @@ Geralmente, apenas em consultas pré-submissão ou quando os autores indicam que
 
 ```markdown
 @ropensci-review-bot check srr
+```
+
+### Encontrar pacotes semelhantes {#pkgmatch}
+
+Usando o [pkgmatch](https://docs.ropensci.org/pkgmatch)
+
+```markdown
+@ropensci-review-bot similar packages
 ```
 
 ### Verifique se o README tem o selo de revisão de software {#check-that-readme-has-software-review-badge}

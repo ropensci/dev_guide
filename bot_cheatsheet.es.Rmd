@@ -56,6 +56,14 @@ Si se venció el plazo de una semana para aceptar la invitación a la organizaci
 
 ## Para la persona encargada de la edición {#for-the-editor-in-chief}
 
+### Enviar notificaciones al equipo de editores {#ping-editors}
+
+Envía un correo electrónico al equipo de editores para que se ofrezcan como voluntarios.
+
+```markdown
+@ropensci-review-bot ping editors
+```
+
 ### Asignar la persona para editar esta revisión {#assign-an-editor}
 
 ```markdown
@@ -102,6 +110,14 @@ Generalmente se hace sólo en consultas previas al envío para revisión, o cuan
 
 ```markdown
 @ropensci-review-bot check srr
+```
+
+### Buscar paquetes similares {#pkgmatch}
+
+Uso de [pkgmatch](https://docs.ropensci.org/pkgmatch)
+
+```markdown
+@ropensci-review-bot similar packages
 ```
 
 ### Comprueba que el README tiene la etiqueta de revisión de software {#check-that-readme-has-software-review-badge}
